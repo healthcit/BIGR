@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="//gulfstreambio/gboss/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gb="//gulfstreambio/gboss/">
+	<xs:include schemaLocation="./common.xsd"/>
+	<!-- 
+	adesType 
+	-->
+	<xs:complexType name="adesType">
+		<xs:annotation>
+			<xs:documentation>The ades section contains a sequence of one or more ade elements.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ade" type="gb:adeType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- 
+	adeType 
+	-->
+	<xs:complexType name="adeType">
+		<xs:annotation>
+			<xs:documentation>A type of concept that has a systemName and includes 
+			one or more choices between different adeElements.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:conceptType">
+				<xs:choice maxOccurs="unbounded">
+					<xs:element name="adeElementInt" type="gb:adeElementIntType"/>
+					<xs:element name="adeElementFloat" type="gb:adeElementFloatType"/>
+					<xs:element name="adeElementDate" type="gb:adeElementDateType"/>
+					<xs:element name="adeElementVpd" type="gb:adeElementDateType"/>
+					<xs:element name="adeElementText" type="gb:adeElementTextType"/>
+					<xs:element name="adeElementReport" type="gb:adeElementReportType"/>
+					<xs:element name="adeElementCv" type="gb:adeElementCvType"/>
+				</xs:choice>
+				<xs:attribute name="systemName" type="gb:systemNameType"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	adeElementType 
+	-->
+	<xs:complexType name="adeElementType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A type of element.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:elementType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	adeElementIntType 
+	-->
+	<xs:complexType name="adeElementIntType">
+		<xs:annotation>
+			<xs:documentation>A type of adeElement that includes a group of properties
+			common to int elements.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:adeElementType">
+				<xs:group ref="gb:intGroup"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	adeElementFloatType 
+	-->
+	<xs:complexType name="adeElementFloatType">
+		<xs:annotation>
+			<xs:documentation>A type of adeElement that includes a group of properties
+			common to float elements.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:adeElementType">
+				<xs:group ref="gb:floatGroup"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	adeElementDateType 
+	-->
+	<xs:complexType name="adeElementDateType">
+		<xs:annotation>
+			<xs:documentation>A type of adeElement that includes a group of properties
+			common to date elements.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:adeElementType">
+				<xs:group ref="gb:dateGroup"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	adeElementVpdType 
+	-->
+	<xs:complexType name="adeElementVpdType">
+		<xs:annotation>
+			<xs:documentation>A type of adeElement that includes a group of properties
+			common to vpd elements.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:adeElementType">
+				<xs:group ref="gb:dateGroup"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	adeElementTextType 
+	-->
+	<xs:complexType name="adeElementTextType">
+		<xs:annotation>
+			<xs:documentation>A type of adeElement with no special properties.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:adeElementType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	adeElementReportType 
+	-->
+	<xs:complexType name="adeElementReportType">
+		<xs:annotation>
+			<xs:documentation>A type of adeElement with no special properties.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:adeElementType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	adeElementCvType 
+	-->
+	<xs:complexType name="adeElementCvType">
+		<xs:annotation>
+			<xs:documentation>A type of adeElement that contains a group of element properties 
+			and a group of attribute properties that are common to cv elements.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:adeElementType">
+				<xs:group ref="gb:cvGroup"/>
+				<xs:attributeGroup ref="gb:cvAttributeGroup"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

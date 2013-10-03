@@ -1,0 +1,17 @@
+#
+# ***** DO NOT INVOKE this directly, use startBIGR.sh instead. *****
+#
+# Start the BIGR Enterprise Application.  This only starts the BIGR
+# application, not the entire WebSphere application server that BIGR
+# runs inside.
+#
+
+set appName $env(BIGR_APPNAME)
+
+if {[isBigrRunning]} {
+  puts "**** $appName is already running."
+  exit
+}
+
+set appManager [$AdminControl queryNames type=ApplicationManager,*]
+$AdminControl invoke $appManager startApplication $appName

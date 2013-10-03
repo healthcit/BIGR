@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labelPrintingConfiguration>
+	<account 
+            id="Beaumont" 
+		bartenderCommandLine="%BTW% /AF=&quot;{labelTemplate}&quot; /D=&quot;&lt;Trigger File Name&gt;&quot; /PRN=&quot;{labelPrinter}&quot; /R=3 /P &#13;&#10;%END%">
+		<resultsFormDefinition name="default sample view">
+			<formElements>
+				<hostElement hostId="SAMPLE_ID">
+					<tag type="order" value="1"/>
+				</hostElement>
+			</formElements>
+		</resultsFormDefinition>
+		<resultsFormDefinition name="case view">
+  			<formElements>
+    				<hostElement hostId="CASE_ID">
+      				<tag type="order" value="1"/>
+    				</hostElement>
+    				<hostElement hostId="CASE_ALIAS">
+      				<tag type="order" value="2"/>
+    				</hostElement>
+  			</formElements>
+		</resultsFormDefinition>
+		<resultsFormDefinition name="donor view">
+  			<formElements>
+    				<hostElement hostId="DONOR_ID">
+      				<tag type="order" value="1"/>
+    				</hostElement>
+    				<hostElement hostId="DONOR_ALIAS">
+      				<tag type="order" value="2"/>
+    				</hostElement>
+  			</formElements>
+		</resultsFormDefinition>
+		<labelTemplateDefinition name="Tube Label" displayName="Tube Label" objectType="sample" resultsFormDefinitionName="default sample view"/>
+		<labelTemplateDefinition name="3 Up Label" displayName="3 Up Label" objectType="sample" resultsFormDefinitionName="default sample view"/>
+		<labelTemplateDefinition name="Vial Wraparound Label" displayName="Vial Wraparound Label" objectType="sample" resultsFormDefinitionName="default sample view"/>
+		<labelTemplateDefinition name="Case Label" displayName="Case Label" objectType="case" resultsFormDefinitionName="case view"/>
+		<labelTemplateDefinition name="Donor Label" displayName="Donor Label" objectType="donor" resultsFormDefinitionName="donor view"/>
+		<labelPrinter 
+			name="Zebra_1" 
+			displayName="Zebra printer 1"
+			emailBasedPrintingEnabled="true" 
+            	emailAddress="bartender@beaumont.edu" 
+			emailSubject="Label printing Zebra_1">
+			<labelTemplate 
+				labelTemplateDefinitionName="3 Up Label" 
+				fullyQualifiedName="C:\BartenderTemplates\Working Version - Registration 3Up ID.btw"/>
+		</labelPrinter>
+		<labelPrinter 
+			name="Zebra_2" 
+			displayName="Zebra printer 2"
+			emailBasedPrintingEnabled="true" 
+            	emailAddress="bartender@beaumont.edu" 
+			emailSubject="Label Printing Zebra_2">
+			<labelTemplate 
+				labelTemplateDefinitionName="Tube Label" 
+				fullyQualifiedName="C:\BartenderTemplates\Template - Tube Labels.btw"/>
+		</labelPrinter>
+		<labelPrinter 
+			name="Zebra_3" 
+			displayName="Zebra printer 3"
+			emailBasedPrintingEnabled="true" 
+            	emailAddress="bartender@beaumont.edu" 
+			emailSubject="Label Printing Zebra_3">
+			<labelTemplate 
+				labelTemplateDefinitionName="Vial Wraparound Label" 
+				fullyQualifiedName="C:\BartenderTemplates\Test Vial wraparound.btw"/>
+			<labelTemplate 
+				labelTemplateDefinitionName="Case Label" 
+				fullyQualifiedName="C:\BartenderTemplates\CaseLabel.btw"/>
+			<labelTemplate 
+				labelTemplateDefinitionName="Donor Label" 
+				fullyQualifiedName="C:\BartenderTemplates\DonorLabel.btw"/>
+		</labelPrinter>
+	</account>
+</labelPrintingConfiguration>

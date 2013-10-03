@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<!-- FileName: kcQueryFormDefinitionXML1.dtd-->
+<!-- -->
+<!ELEMENT queryFormDefinition (formElements, rollupValueSets?)>
+<!ATTLIST queryFormDefinition
+	name CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT formElements (category+ | dataElement+)>
+<!-- -->
+<!ELEMENT category (category+ | dataElement+)>
+<!ATTLIST category
+	displayName CDATA #REQUIRED
+	categoryType (page | heading) #REQUIRED
+>
+<!-- -->
+<!ELEMENT dataElement (adeElement*, valueSet?, tag*)>
+<!ATTLIST dataElement
+	cui CDATA #REQUIRED
+	displayName CDATA #IMPLIED
+	rollupValueSetId IDREF #IMPLIED
+>
+<!-- -->
+<!ELEMENT adeElement (valueSet?)>
+<!ATTLIST adeElement
+	cui CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT tag EMPTY>
+<!ATTLIST tag
+	type CDATA #REQUIRED
+	value CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT valueSet (valueComparison+ | valueAny)>
+<!ATTLIST valueSet
+	operator (and | or) #IMPLIED
+>
+<!-- -->
+<!ELEMENT valueComparison EMPTY>
+<!ATTLIST valueComparison
+	value CDATA #REQUIRED
+	operator (eq | ne | gt | ge | lt | le) #REQUIRED
+>
+<!-- -->
+<!ELEMENT valueAny EMPTY>
+<!-- -->
+<!ELEMENT rollupValueSets (rollupValueSet+)>
+<!-- -->
+<!ELEMENT rollupValueSet (rollupValue+)>
+<!ATTLIST rollupValueSet
+	id ID #REQUIRED
+>
+<!-- -->
+<!ELEMENT rollupValue (valueSet)>
+<!ATTLIST rollupValue
+	displayName CDATA #REQUIRED
+>

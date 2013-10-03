@@ -1,0 +1,195 @@
+CREATE OR REPLACE package Age_At_Collection as
+
+  procedure init_collec_date_changes;
+
+  procedure append_collec_date_change(ip_operation in char,
+  			ip_barcode_id in varchar2,
+			ip_ardais_id in varchar2,
+			ip_new_collec_date in date);
+
+  procedure process_collec_date_changes;
+
+  procedure sample_age_at_collection (ip_barcode_id in varchar2, ip_ardais_id in varchar2, ip_collect_date in date);
+
+  procedure init_yyyy_dob_changes;
+
+  procedure append_yyyy_dob_change(ip_operation in char, ip_old_ardais_id in varchar2, ip_new_ardais_id in varchar2, ip_old_yob in char, ip_new_yob in char);
+
+  procedure process_yyyy_dob_changes;
+
+  procedure age_at_collection_by_dob(ip_ardais_id in varchar2, ip_yyyy_dob in char);
+
+end Age_At_Collection;
+/
+
+
+CREATE OR REPLACE package body Age_At_Collection as
+
+  type collection_date is record(
+   	operation 		   	   char(1),
+    sample_barcode_id 	   varchar2(12),
+	ardais_id			   varchar2(12),
+	new_collec_date_time   date);
+
+  type collection_dates is table of collection_date
+    index by binary_integer;
+
+  v_collec_date_changes		 	collection_dates;
+  v_collec_date_changes_empty	collection_dates;
+
+
+  type yyyy_dob is record(
+   		operation char(1),
+		old_ardais_id 	 varchar2(12),
+		new_ardais_id	 varchar2(12),
+		old_yob 		 char(4),
+   		new_yob 		 char(4)
+   		);
+
+  type yyyy_dobs is table of yyyy_dob
+   index by binary_integer;
+
+  v_yyyy_dob_changes        yyyy_dobs;
+  v_yyyy_dob_changes_empty  yyyy_dobs;
+
+
+  procedure init_collec_date_changes is
+  begin
+    v_collec_date_changes := v_collec_date_changes_empty;
+  end init_collec_date_changes;
+
+
+  procedure append_collec_date_change(ip_operation in char,
+  			ip_barcode_id in varchar2,
+			ip_ardais_id in varchar2,
+			ip_new_collec_date in date) is
+       v_collec_date_rec collection_date;
+  begin
+       v_collec_date_rec.operation := ip_operation;
+       v_collec_date_rec.sample_barcode_id := ip_barcode_id;
+       v_collec_date_rec.ardais_id := ip_ardais_id;
+       v_collec_date_rec.new_collec_date_time := ip_new_collec_date;
+       v_collec_date_changes(nvl(v_collec_date_changes.last, 0) + 1) := v_collec_date_rec;
+  end append_collec_date_change;
+
+  procedure process_collec_date_changes is
+
+	i                            binary_integer;
+    v_collec_date_rec  			 collection_date;
+	begin
+      i := v_collec_date_changes.first;
+      while i is not null loop
+        v_collec_date_rec  := v_collec_date_changes(i);
+		sample_age_at_collection(v_collec_date_rec.sample_barcode_id, v_collec_date_rec.ardais_id, v_collec_date_rec.new_collec_date_time);
+        i := v_collec_date_changes.next(i);
+
+      end loop;
+      v_collec_date_changes := v_collec_date_changes_empty;
+  end process_collec_date_changes;
+
+
+  procedure init_yyyy_dob_changes is
+  begin
+    v_yyyy_dob_changes := v_yyyy_dob_changes_empty;
+  end init_yyyy_dob_changes;
+
+  procedure append_yyyy_dob_change(ip_operation in char, ip_old_ardais_id in varchar2, ip_new_ardais_id in varchar2, ip_old_yob in char, ip_new_yob in char) is
+       v_yyyy_dob_rec yyyy_dob;
+  begin
+       v_yyyy_dob_rec.operation := ip_operation;
+       v_yyyy_dob_rec.old_ardais_id := ip_old_ardais_id;
+       v_yyyy_dob_rec.new_ardais_id := ip_new_ardais_id;
+       v_yyyy_dob_rec.old_yob := ip_old_yob;
+       v_yyyy_dob_rec.new_yob := ip_new_yob;
+       v_yyyy_dob_changes(nvl(v_yyyy_dob_changes.last, 0) + 1) := v_yyyy_dob_rec;
+  end append_yyyy_dob_change;
+
+
+  procedure process_yyyy_dob_changes is
+	i                            binary_integer;
+    v_yyyy_dob_rec  			 yyyy_dob;
+
+	begin
+      i := v_yyyy_dob_changes.first;
+      while i is not null loop
+        v_yyyy_dob_rec := v_yyyy_dob_changes(i);
+
+		if (v_yyyy_dob_rec.operation = 'I') then
+		  age_at_collection_by_dob(v_yyyy_dob_rec.new_ardais_id, v_yyyy_dob_rec.new_yob);
+		elsif (v_yyyy_dob_rec.operation = 'U') then
+		  age_at_collection_by_dob(v_yyyy_dob_rec.new_ardais_id, v_yyyy_dob_rec.new_yob);
+		  if (v_yyyy_dob_rec.new_ardais_id <> v_yyyy_dob_rec.old_ardais_id) then
+            update iltds_sample set age_at_collection = null where ardais_id = v_yyyy_dob_rec.old_ardais_id;
+		  end if;
+		elsif (v_yyyy_dob_rec.operation = 'D') then
+            update iltds_sample set age_at_collection = null where ardais_id = v_yyyy_dob_rec.old_ardais_id;
+	    end if;
+        i := v_yyyy_dob_changes.next(i);
+
+      end loop;
+      v_yyyy_dob_changes := v_yyyy_dob_changes_empty;
+  end process_yyyy_dob_changes;
+
+
+
+procedure age_at_collection_by_dob(
+  ip_ardais_id in varchar2,
+  ip_yyyy_dob in char) is
+
+    CURSOR samples_cur IS
+      SELECT SAMPLE_BARCODE_ID FROM ILTDS_SAMPLE WHERE ARDAIS_ID = ip_ardais_id AND collection_datetime is not null;
+
+    sample samples_cur%ROWTYPE;
+	collectionDate Date;
+	formEntryDate  Date;
+
+
+  begin
+    open samples_cur;
+    LOOP
+      FETCH samples_cur INTO sample;
+      EXIT WHEN samples_cur%NOTFOUND;
+
+      if (ip_yyyy_dob is null) then
+        update iltds_sample
+        set age_at_collection = null
+        where sample_barcode_id = sample.sample_barcode_id;
+      else
+        update iltds_sample set age_at_collection = to_char(collection_datetime, 'YYYY') - ip_yyyy_dob
+        where sample_barcode_id = sample.sample_barcode_id;
+      end if;
+    END LOOP;
+    close samples_cur;
+
+
+end age_at_collection_by_dob;
+
+
+procedure sample_age_at_collection (ip_barcode_id in varchar2, ip_ardais_id in varchar2, ip_collect_date in date) is
+  yyyy_dob char(4) := null;
+
+  begin
+  if (ip_ardais_id is null) then
+      update iltds_sample set age_at_collection = null
+      where sample_barcode_id = ip_barcode_id;
+  else
+    begin
+      select yyyy_dob into yyyy_dob from pdc_ardais_donor where ardais_id = ip_ardais_id;
+	  if (ip_collect_date is not null) then
+        update iltds_sample set age_at_collection = to_char(ip_collect_date, 'YYYY') - yyyy_dob
+        where sample_barcode_id = ip_barcode_id;
+      else
+        update iltds_sample set age_at_collection = null
+        where sample_barcode_id = ip_barcode_id;
+      end if;
+	  exception
+	    when no_data_found then
+		  update iltds_sample set age_at_collection = null
+          where sample_barcode_id = ip_barcode_id;
+	end;
+  end if;
+
+end sample_age_at_collection;
+
+End Age_At_Collection;
+/

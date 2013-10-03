@@ -1,0 +1,20 @@
+# sed script to edit the httpd.conf.prod template file to produce an httpd.conf
+# that is appropriate for maintenance mode.  See IHS_maint.sh for details.
+# The sed call that uses this is in that script.
+#
+# You can't tell by looking at it, but all of the "[ 	]"s that appear
+# below contain a space character and a tab character.  When changing this
+# file, please preserve this convention so that the rules will match regardless
+# of whether the whitespace characters in the source file are spaces to tabs.
+# The easiest way to do this is to copy the [ 	] from an existing line
+# to the new line.
+#
+# The LoadModule line to load the WAS plugin is different in WAS5/WAS5
+# and the edits below look for both.  Also, the AddModule line is no
+# longer present in WAS6 (Apache 2 web servers), but including the edit
+# for it below does no harm in WAS6.
+#
+s/^\([ 	]*LoadModule[ 	]\{1,\}ibm_app_server_http_module[ 	].*\)$/#\1/
+s/^\([ 	]*LoadModule[ 	]\{1,\}was_ap20_module[ 	].*\)$/#\1/
+s/^\([ 	]*AddModule[ 	]\{1,\}mod_app_server_http\.c.*\)$/#\1/
+s/^\([ 	]*WebSpherePluginConfig[ 	].*\)$/#\1/

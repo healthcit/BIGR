@@ -1,0 +1,23 @@
+# sed script to edit the Api.properties file that is deployed with a build
+# to make it appropriate for this server.  The sed call that uses this
+# is in the editProperties.jacl script.
+#
+# You can't tell by looking at it, but all of the "[ 	]"s that appear
+# below contain a space character and a tab character.  When changing this
+# file, please preserve this convention so that the rules will match regardless
+# of whether the whitespace characters in the source file are spaces to tabs.
+# The easiest way to do this is to copy the [ 	] from an existing line
+# to the new line.
+#
+# Example line:
+#s/^[ 	]*\(abc\.def\)[ 	]*=.*/\1=new value/
+
+s/^[ 	]*\(api\.mail\.smtp\)[ 	]*=.*/\1=127.0.0.1/
+s/^[ 	]*\(api\.custserv\.email\)[ 	]*=.*/\1=SoftwareSupport@gulfstreambio.com/
+s/^[ 	]*\(api\.email\.from\.default\)[ 	]*=.*/\1=BIGRSystem_Beaumont@gulfstreambio.com/
+s/^[ 	]*\(api\.email\.majordiscordance\)[ 	]*=.*/\1=major_discordance@gulfstreambio.com/
+s/^[ 	]*\(api\.email\.from_majordiscordance\)[ 	]*=.*/\1=from_Beaumont_major_discordance@gulfstreambio.com/
+s/^[ 	]*\(api\.email\.tosamplepulledproject\)[ 	]*=.*/\1=SoftwareSupport@gulfstreambio.com/
+s/^[ 	]*\(api\.email\.tosamplepulledshoppingcart\)[ 	]*=.*/\1=SoftwareSupport@gulfstreambio.com/
+s/^[ 	]*\(api\.email\.fromsamplepulled\)[ 	]*=.*/\1=from_Beaumont_sample_pulled@gulfstreambio.com/
+s/^[ 	]*\(api\.orderrequest\.email\)[ 	]*=.*/\1=SoftwareSupport@gulfstreambio.com/

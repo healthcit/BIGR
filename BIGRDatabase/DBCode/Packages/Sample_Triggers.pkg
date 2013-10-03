@@ -1,0 +1,1615 @@
+CREATE OR REPLACE package Sample_Triggers as
+  /**************************************************************************
+   * Package of procedure that support the implementation of the triggers
+   * related to ILTDS_SAMPLE (either triggers that fire on ILTDS_SAMPLE
+   * changes or that make changes to ILTDS_SAMPLE).  There is also code
+   * here related to triggers on other inventory item types such as
+   * RNA/DNA.
+   * 
+   * There is some extra complexity here because we need to work around
+   * the Oracle mutating table problem.  (If you try to query the same
+   * table that is being changed (the one that caused the trigger to fire)
+   * in a FOR EACH ROW trigger, you get the Oracle mutating table error.)
+   *
+   * The solution used here is an enhanced version of an approach that
+   * is suggested in many Oracle books.  It uses a package variable that
+   * holds a PL/SQL table object that gets filled by the FOR EACH ROW
+   * trigger with information about which rows have been inserted, updated
+   * or deleted.  In addition to the FOR EACH ROW trigger, there's also a
+   * statement trigger.  The statement trigger fires after the statement,
+   * and reads the package variable to get the list of changes, and does
+   * whatever needs to be done in response to those changes.  Because
+   * this second trigger is a statement trigger, it does not cause a
+   * mutating table error.
+   *
+   * It is important that the FOR EACH ROW trigger in an AFTER FOR EACH ROW
+   * trigger, not a BEFORE FOR EACH ROW trigger.  If it was a BEFORE trigger
+   * and the INSERT/UPDATE/DELETE failed for some reason (possibly a constraint
+   * violation), the PL/SQL table would end up having a row in it
+   * that shouldn't be there.  This is because the BEFORE trigger would have
+   * already completed before the INSERT/UPDATE/DELETE failed, and the trigger
+   * would have no way of knowing that it needed to remove a row from the
+   * PL/SQL table.  Using an AFTER FOR EACH ROW trigger avoids this problem.
+   *
+   * There's a third trigger involved:  a statement trigger that fires
+   * before the statement that initializes the package's PL/SQL table
+   * variable to an empty table.  While we also empty this
+   * table at the completion of the trigger that fires after the statement
+   * completes, there are certain situations involving exceptions that
+   * require the variable to be initialized in a BEFORE trigger as well.
+   * For example, suppose a single update statement updates 10 rows.  The
+   * first 5 updates go ok, and the FOR EACH ROW trigger puts five rows
+   * in PL/SQL table.  Then the update for the sixth row fails
+   * for some reason, perhaps a constraint violation, and the transaction
+   * rolls back.  In this situation, the AFTER statement trigger never fires,
+   * so the PL/SQL table would be left with five rows in it that would get
+   * processed the next time the triggers fired (which they shouldn't be).
+   * Having this extra procedure that gets called from a BEFORE statement
+   * trigger ensures that PL/SQL table is always empty at the
+   * beginning of processing and INSERT, UPDATE or DELETE statement.
+   **************************************************************************/
+
+  /* public procedures */
+
+  /* The first group of triggers here handles setting the ILTDS_SAMPLE.BMS_YN
+   * column.  It is to be set to Y for samples that are in *any* BMS logical
+   * repository and N for all other samples.  Inserts, Updates and Deletes
+   * on the ARD_LOGICAL_REPOS_ITEM and Updates on ARD_LOGICAL_REPOS fire
+   * the triggers that set BMS_YN to the correct value.  We need a set of
+   * triggers that works around the mutating table problem because to
+   * determine the new value for BMS_YN after a change to
+   * ARD_LOGICAL_REPOS_ITEM, we have to query
+   * ARD_LOGICAL_REPOS_ITEM to see if the sample is in some BMS repository
+   * folling the change -- so we need to query the same table that caused
+   * the trigger to fire.
+   */
+
+  /*
+   * This is called from the ARD_LOGICAL_REPOS Before Update
+   * Statement trigger.  It initializes the
+   * v_bms_yn_repos_changes PL/SQL table variable to an empty table.
+   */
+  procedure bms_yn_on_repos_bms_yn_bus;
+
+  /*
+   * This is called from the ARD_LOGICAL_REPOS After Update Row trigger.
+   * If the repository's BMS_YN flag has changed values, it updates
+   * the BMS_YN on all of the items in the repository.
+   */
+  procedure bms_yn_on_repos_bms_yn_aur(
+       ip_old_repos_id in ARD_LOGICAL_REPOS.id%TYPE,
+       ip_old_bms_yn   in ARD_LOGICAL_REPOS.bms_yn%TYPE,
+       ip_new_repos_id in ARD_LOGICAL_REPOS.id%TYPE,
+       ip_new_bms_yn   in ARD_LOGICAL_REPOS.bms_yn%TYPE
+       );
+
+  /*
+   * This is called from the ARD_LOGICAL_REPOS After Update
+   * Statement trigger.  It processes the row changes that
+   * are described in the v_bms_yn_repos_changes PL/SQL table variable.
+   */
+  procedure bms_yn_on_repos_bms_yn_aus;
+
+  /*
+   * This is called from the ARD_LOGICAL_REPOS_ITEM Before Insert Or Update
+   * Or Delete Statement trigger.  It initializes the
+   * v_bmsyn_rep_item_changes PL/SQL table variable to an empty table.
+   */
+  procedure bms_yn_on_repos_item_biuds;
+
+  /*
+   * This is called from the ARD_LOGICAL_REPOS_ITEM After Insert Or Update
+   * Or Delete Row trigger.  It inserts row-change descriptions into
+   * v_bmsyn_rep_item_changes.
+   */
+  procedure bms_yn_on_repos_item_aiudr(
+       ip_change_operation in CHAR,
+       ip_old_item_id      in ARD_LOGICAL_REPOS_ITEM.item_id%TYPE,
+       ip_old_item_type    in ARD_LOGICAL_REPOS_ITEM.item_type%TYPE,
+       ip_new_item_id      in ARD_LOGICAL_REPOS_ITEM.item_id%TYPE,
+       ip_new_item_type    in ARD_LOGICAL_REPOS_ITEM.item_type%TYPE
+       );
+
+  /*
+   * This is called from the ARD_LOGICAL_REPOS_ITEM After Insert Or Update
+   * Or Delete Statement trigger.  It processes the row changes that
+   * are described in the v_bmsyn_rep_item_changes PL/SQL table variable.
+   */
+  procedure bms_yn_on_repos_item_aiuds;
+
+  /*
+   * This is called from the RNA_BATCH_DETAIL Before Insert Or Update
+   * Or Delete Statement trigger.  It initializes the
+   * v_rna_batch_detail_changes PL/SQL table variable to an empty table.
+   */
+  procedure on_rna_batch_detail_biuds;
+
+  /*
+   * This is called from the RNA_BATCH_DETAIL After Insert Or Update
+   * Or Delete Row trigger.  It inserts row-change descriptions into
+   * v_rna_batch_detail_changes.
+   */
+  procedure on_rna_batch_detail_aiudr(
+       ip_change_operation in CHAR,
+       ip_old_rnavialid      in RNA_BATCH_DETAIL.rnavialid%TYPE,
+       ip_old_producttype    in RNA_BATCH_DETAIL.producttype%TYPE,
+       ip_old_rep_sample     in RNA_BATCH_DETAIL.rep_sample%TYPE,
+       ip_new_rnavialid      in RNA_BATCH_DETAIL.rnavialid%TYPE,
+       ip_new_producttype    in RNA_BATCH_DETAIL.producttype%TYPE,
+       ip_new_rep_sample     in RNA_BATCH_DETAIL.rep_sample%TYPE
+       );
+
+  /*
+   * This is called from the RNA_BATCH_DETAIL After Insert Or Update
+   * Or Delete Statement trigger.  It processes the row changes that
+   * are described in the v_rna_batch_detail_changes PL/SQL table variable.
+   */
+  procedure on_rna_batch_detail_aiuds;
+
+  /*
+   * Procedure to determine the best tissue of finding (and tissue of finding other) values
+   * for a sample.  Rule is to first look for a reported evaluation for that sample with a non-null
+   * tissue_finding_concept_id, and use the information in that evaluation.  If no such evaluation
+   * exists, then try to get the information from the asm for the sample
+   */
+  procedure get_best_tissue_of_finding(ip_sample_id in iltds_sample.sample_barcode_id%type,
+  								  ip_asm_id in iltds_sample.asm_id%type,
+							      op_tissue_finding_cui out iltds_sample.tissue_finding_cui%type,
+							      op_tissue_finding_other out iltds_sample.tissue_finding_other%type);
+
+  /*
+   * Procedure to determine the best appearance value for a sample.  Rule is to first look for a 
+   * reported evaluation for that sample with a non-null microscopic_appearance, and use that
+   * appearance value.  If no such evaluation exists, then try to get the gross appearance
+   * from the asm for the sample.  If that fails, the best appearance should be null
+   */
+  procedure get_best_appearance(ip_sample_id in iltds_sample.sample_barcode_id%type,
+  								ip_asm_id in iltds_sample.asm_id%type,
+							    op_appearance out iltds_sample.appearance_best%type);
+							    
+  /*
+   * Procedure to determine the best diagnosis value for a sample.  Rule is to first look for a 
+   * reported evaluation for that sample with a non-null diagnosis, and use that
+   * diagnosis value.  If no such evaluation exists, then try to get the best diagnosis
+   * from the case for the sample.  If that fails, the best diagnosis should be null
+   */
+  procedure get_best_diagnosis(ip_sample_id in iltds_sample.sample_barcode_id%type,
+  							   ip_consent_id in iltds_informed_consent.consent_id%type,
+							   op_diagnosis_cui out iltds_sample.diagnosis_cui_best%type,
+							   op_diagnosis_other out iltds_sample.diagnosis_other_best%type);
+ 
+  /*
+   * Procedure to determine the best tissue of origin (and tissue of origin other) values
+   * for a sample.  Rule is to first look for a reported evaluation for that sample with a non-null
+   * tissue_origin_concept_id, and use the information in that evaluation.  If no such evaluation
+   * exists, then try to get the information from DDC.  If that information doesn't exists,
+   * then try to get the information from the asm for the sample
+   */
+  procedure get_best_tissue_of_origin(ip_sample_id in iltds_sample.sample_barcode_id%type,
+  								  ip_asm_id in iltds_sample.asm_id%type,
+  								  ip_path_rep_id in pdc_pathology_report.path_report_id%type,
+							      op_tissue_origin_cui out iltds_sample.tissue_origin_cui%type,
+							      op_tissue_origin_other out iltds_sample.tissue_origin_other%type);
+  
+  /*
+   * Initialize the set of tissue finding changes to process
+   */
+  procedure init_tissue_finding_changes;
+							    
+  /*
+   * Initialize the set of appearance changes to process
+   */
+  procedure init_appearance_changes;
+							    
+  /*
+   * Initialize the set of diagnosis changes to process
+   */
+  procedure init_diagnosis_changes;
+  
+  /*
+   * Initialize the set of tissue origin changes to process
+   */
+  procedure init_tissue_origin_changes;
+  
+  /*
+   * Initialize the set of qc_verified changes to process
+   */
+  procedure init_qc_verified_changes;
+
+  /*
+   * Add to the set of tissue finding changes to process
+   */
+  procedure append_tissue_finding_change(ip_change_operation in char, ip_obj_type in varchar2, ip_obj_id in varchar2);
+
+  /*
+   * Add to the set of appearance changes to process
+   */
+  procedure append_appearance_change(ip_change_operation in char, ip_obj_type in varchar2, ip_obj_id in varchar2);
+
+  /*
+   * Add to the set of diagnosis changes to process
+   */
+  procedure append_diagnosis_change(ip_change_operation in char, ip_obj_type in varchar2, ip_obj_id in varchar2);
+
+  /*
+   * Add to the set of tissue origin changes to process
+   */
+  procedure append_tissue_origin_change(ip_change_operation in char, ip_obj_type in varchar2, ip_obj_id in varchar2);
+
+  /*
+   * Add to the set of qc_verified changes to process
+   */
+  procedure append_qc_verified_change(ip_change_operation in char, ip_obj_type in varchar2, ip_obj_id in varchar2);
+
+  /*
+   * Process the set of tissue finding changes
+   */
+  procedure process_tissue_finding_changes;
+
+  /*
+   * Process the set of appearance changes
+   */
+  procedure process_appearance_changes;
+
+  /*
+   * Process the set of diagnosis changes
+   */
+  procedure process_diagnosis_changes;
+
+  /*
+   * Process the set of tissue origin changes
+   */
+  procedure process_tissue_origin_changes;
+
+  /*
+   * Process the set of qc_verified changes
+   */
+  procedure process_qc_verified_changes;
+							      
+  /************************************************************************
+   * This procedure sets the ILTDS_SAMPLE.QC_VERIFIED and
+   * QC_VERIFIED_DATE columns for the specified sample.  QC_VERIFIED
+   * is set to 'Y' if and only if there is a reported PV result for that
+   * sample (in LIMS).  Otherwise it is set to 'N'.  When it is set to 'Y',
+   * QC_VERIFIED_DATE is set to the date/time that the reported PV record
+   * was created, otherwise QC_VERIFEID_DATE is set to NULL.
+   ************************************************************************/
+   procedure set_sample_qc_verified_flag(ip_sample_id in iltds_sample.sample_barcode_id%type);
+   
+  /************************************************************************
+   * This is a zero-arg proc. that updates the QC_VERIFIED and
+   * QC_VERIFIED_DATE columns on all records in ILTDS_SAMPLE.
+   ************************************************************************/
+  procedure update_all_qc_verified;
+  
+  NEOPLASTIC_DISEASE_CODE constant pdc_lookup.lookup_type_cd%type := '55342001^^';
+
+end Sample_Triggers;
+/
+CREATE OR REPLACE package body Sample_Triggers as
+
+  type rna_batch_detail_change is record (
+       change_operation CHAR(1), -- I (insert) or U (update) or D (delete)
+       old_rnavialid      RNA_BATCH_DETAIL.rnavialid%TYPE,
+       old_producttype    RNA_BATCH_DETAIL.producttype%TYPE,
+       old_rep_sample     RNA_BATCH_DETAIL.rep_sample%TYPE,
+       new_rnavialid      RNA_BATCH_DETAIL.rnavialid%TYPE,
+       new_producttype    RNA_BATCH_DETAIL.producttype%TYPE,
+       new_rep_sample     RNA_BATCH_DETAIL.rep_sample%TYPE
+       );
+
+  type rna_batch_detail_changes is table of rna_batch_detail_change
+    index by binary_integer;
+
+  type bmsyn_rep_item_change is record (
+       change_operation CHAR(1), -- I (insert) or U (update) or D (delete)
+       old_item_id      ARD_LOGICAL_REPOS_ITEM.item_id%TYPE,
+       old_item_type    ARD_LOGICAL_REPOS_ITEM.item_type%TYPE,
+       new_item_id      ARD_LOGICAL_REPOS_ITEM.item_id%TYPE,
+       new_item_type    ARD_LOGICAL_REPOS_ITEM.item_type%TYPE
+       );
+
+  type bmsyn_rep_item_changes is table of bmsyn_rep_item_change
+    index by binary_integer;
+
+  type bms_yn_repos_change is record (
+       old_repos_id ARD_LOGICAL_REPOS.id%TYPE,
+       old_bms_yn   ARD_LOGICAL_REPOS.bms_yn%TYPE,
+       new_repos_id ARD_LOGICAL_REPOS.id%TYPE,
+       new_bms_yn   ARD_LOGICAL_REPOS.bms_yn%TYPE
+       );
+
+  type bms_yn_repos_changes is table of bms_yn_repos_change
+    index by binary_integer;
+
+  v_bmsyn_rep_item_changes bmsyn_rep_item_changes;
+  v_bmsyn_rep_item_changes_empty bmsyn_rep_item_changes;
+
+  v_rna_batch_detail_changes rna_batch_detail_changes;
+  v_rna_batch_det_changes_empty rna_batch_detail_changes;
+
+  v_bms_yn_repos_changes bms_yn_repos_changes;
+  v_bms_yn_repos_changes_empty bms_yn_repos_changes;
+
+  type tissue_finding_change is record(
+   		change_operation char(1),
+   		obj_type varchar2(10),
+   		obj_id varchar2(50)
+   		);
+
+  type appearance_change is record(
+   		change_operation char(1),
+   		obj_type varchar2(10),
+   		obj_id varchar2(50)
+   		);
+
+  type diagnosis_change is record(
+   		change_operation char(1),
+   		obj_type varchar2(10),
+   		obj_id varchar2(50)
+   		);
+
+  type tissue_origin_change is record(
+   		change_operation char(1),
+   		obj_type varchar2(10),
+   		obj_id varchar2(50)
+   		);
+
+  type qc_verified_change is record(
+   		change_operation char(1),
+   		obj_type varchar2(10),
+   		obj_id varchar2(50)
+   		);
+
+  type tissue_finding_changes is table of tissue_finding_change
+   index by binary_integer;
+
+  type appearance_changes is table of appearance_change
+   index by binary_integer;
+
+  type diagnosis_changes is table of diagnosis_change
+   index by binary_integer;
+
+  type tissue_origin_changes is table of tissue_origin_change
+   index by binary_integer;
+
+  type qc_verified_changes is table of qc_verified_change
+   index by binary_integer;
+
+  v_tissue_finding_changes        tissue_finding_changes;
+  v_tissue_finding_changes_empty  tissue_finding_changes;
+
+  v_appearance_changes        appearance_changes;
+  v_appearance_changes_empty  appearance_changes;
+
+  v_diagnosis_changes        diagnosis_changes;
+  v_diagnosis_changes_empty  diagnosis_changes;
+
+  v_tissue_origin_changes        tissue_origin_changes;
+  v_tissue_origin_changes_empty  tissue_origin_changes;
+
+  v_qc_verified_changes        qc_verified_changes;
+  v_qc_verified_changes_empty  qc_verified_changes;
+
+  /*
+   * Recompute the BMS_YN value for the specified item (if it is a kind
+   * of item for which we compute this field) and update the item's
+   * record accordingly.
+   */
+  procedure recompute_bmsyn_for_item(
+       ip_item_id      in ard_logical_repos_item.item_id%TYPE,
+       ip_item_type    in ard_logical_repos_item.item_type%TYPE
+       )
+  is
+    v_bms_repos_count integer;
+    v_new_value       iltds_sample.bms_yn%TYPE;
+  begin
+      -- An item has BMS_YN = 'Y' if it is in any logical repository that
+      -- has BMS_YN = 'Y'.  Otherwise it has BMS_YN = 'N'.
+
+      select count(1) into v_bms_repos_count
+      from ard_logical_repos_item i, ard_logical_repos r
+      where i.item_id = ip_item_id
+        and i.repository_id = r.id
+        and r.bms_yn = 'Y';
+
+      if (v_bms_repos_count > 0) then
+        v_new_value := 'Y';
+      else
+        v_new_value := 'N';
+      end if;
+
+      if (ip_item_type = 'SAMPLE') then
+        update iltds_sample set bms_yn = v_new_value
+        where sample_barcode_id = ip_item_id
+          and bms_yn <> v_new_value;
+      else -- If ip_item_type is not SAMPLE the item should be in RNA_BATCH_DETAIL
+        update rna_batch_detail set bms_yn = v_new_value
+        where rnavialid = ip_item_id
+          and bms_yn <> v_new_value;
+      end if;
+  end;
+
+  /*
+   * Recompute the BMS_YN value for all items in the specified
+   * repository.
+   */
+  procedure recompute_bmsyn_for_rep_items(
+       ip_repos_id in ARD_LOGICAL_REPOS.id%TYPE
+       )
+  is
+    v_repos_bms_yn ARD_LOGICAL_REPOS.bms_yn%TYPE;
+  begin
+    select bms_yn into v_repos_bms_yn
+    from ard_logical_repos where id = ip_repos_id;
+
+    if (v_repos_bms_yn = 'Y') then
+      update iltds_sample s set s.bms_yn = 'Y'
+      where s.bms_yn <> 'Y'
+        and s.sample_barcode_id in
+              (select i.item_id
+               from ard_logical_repos_item i
+               where i.repository_id = ip_repos_id);
+      update rna_batch_detail s set s.bms_yn = 'Y'
+      where s.bms_yn <> 'Y'
+        and s.rnavialid in
+              (select i.item_id
+               from ard_logical_repos_item i
+               where i.repository_id = ip_repos_id);
+    else -- v_repos_bms_yn = 'N'
+      update iltds_sample s set s.bms_yn = 'Y'
+      where s.bms_yn <> 'Y'
+        and s.sample_barcode_id in
+              (select i.item_id
+               from ard_logical_repos_item i
+               where i.repository_id = ip_repos_id)
+        and s.sample_barcode_id in
+              (select i.item_id
+               from ard_logical_repos_item i, ard_logical_repos r
+               where i.repository_id = r.id
+                 and r.bms_yn = 'Y');
+
+      update rna_batch_detail s set s.bms_yn = 'Y'
+      where s.bms_yn <> 'Y'
+        and s.rnavialid in
+              (select i.item_id
+               from ard_logical_repos_item i
+               where i.repository_id = ip_repos_id)
+        and s.rnavialid in
+              (select i.item_id
+               from ard_logical_repos_item i, ard_logical_repos r
+               where i.repository_id = r.id
+                 and r.bms_yn = 'Y');
+
+      update iltds_sample s set s.bms_yn = 'N'
+      where s.bms_yn <> 'N'
+        and s.sample_barcode_id in
+              (select i.item_id
+               from ard_logical_repos_item i
+               where i.repository_id = ip_repos_id)
+        and s.sample_barcode_id not in
+              (select i.item_id
+               from ard_logical_repos_item i, ard_logical_repos r
+               where i.repository_id = r.id
+                 and r.bms_yn = 'Y');
+
+      update rna_batch_detail s set s.bms_yn = 'N'
+      where s.bms_yn <> 'N'
+        and s.rnavialid in
+              (select i.item_id
+               from ard_logical_repos_item i
+               where i.repository_id = ip_repos_id)
+        and s.rnavialid not in
+              (select i.item_id
+               from ard_logical_repos_item i, ard_logical_repos r
+               where i.repository_id = r.id
+                 and r.bms_yn = 'Y');
+    end if;
+  end;
+
+  /*
+   * This is called from the ARD_LOGICAL_REPOS Before Update
+   * Statement trigger.  It initializes the
+   * v_bms_yn_repos_changes PL/SQL table variable to an empty table.
+   */
+  procedure bms_yn_on_repos_bms_yn_bus
+  is
+  begin
+    v_bms_yn_repos_changes := v_bms_yn_repos_changes_empty;
+  end;
+
+  /*
+   * This is called from the ARD_LOGICAL_REPOS After Update Row trigger.
+   * If the repository's BMS_YN flag has changes values, it updates
+   * the BMS_YN on all of the items in the repository.
+   */
+  procedure bms_yn_on_repos_bms_yn_aur(
+       ip_old_repos_id in ARD_LOGICAL_REPOS.id%TYPE,
+       ip_old_bms_yn   in ARD_LOGICAL_REPOS.bms_yn%TYPE,
+       ip_new_repos_id in ARD_LOGICAL_REPOS.id%TYPE,
+       ip_new_bms_yn   in ARD_LOGICAL_REPOS.bms_yn%TYPE
+       )
+  is
+       v_change bms_yn_repos_change;
+  begin
+       v_change.old_repos_id := ip_old_repos_id;
+       v_change.old_bms_yn   := ip_old_bms_yn;
+
+       v_change.new_repos_id := ip_new_repos_id;
+       v_change.new_bms_yn   := ip_new_bms_yn;
+
+       v_bms_yn_repos_changes(
+         nvl(v_bms_yn_repos_changes.last, 0) + 1) := v_change;
+  end;
+
+  /*
+   * This is called from the ARD_LOGICAL_REPOS After Update
+   * Statement trigger.  It processes the row changes that
+   * are described in the v_bms_yn_repos_changes PL/SQL table variable.
+   */
+  procedure bms_yn_on_repos_bms_yn_aus
+  is
+      i binary_integer;
+      v_change bms_yn_repos_change;
+      v_old_repos_id ARD_LOGICAL_REPOS.id%TYPE     := null;
+      v_old_bms_yn   ARD_LOGICAL_REPOS.bms_yn%TYPE := null;
+      v_new_repos_id ARD_LOGICAL_REPOS.id%TYPE     := null;
+      v_new_bms_yn   ARD_LOGICAL_REPOS.bms_yn%TYPE := null;
+  begin
+      i := v_bms_yn_repos_changes.first;
+
+      while i is not null loop
+          v_change := v_bms_yn_repos_changes(i);
+
+          v_old_repos_id := v_change.old_repos_id;
+          v_old_bms_yn   := v_change.old_bms_yn;
+          v_new_repos_id := v_change.new_repos_id;
+          v_new_bms_yn   := v_change.new_bms_yn;
+
+          if (v_old_bms_yn <> v_new_bms_yn) then
+            recompute_bmsyn_for_rep_items(v_new_repos_id);
+          end if;
+
+          i := v_bms_yn_repos_changes.next(i);
+      end loop;
+
+      v_bms_yn_repos_changes := v_bms_yn_repos_changes_empty;
+  end;
+
+  /*
+   * This is called from the ARD_LOGICAL_REPOS_ITEM Before Insert Or Update
+   * Or Delete Statement trigger.  It initializes the
+   * v_bmsyn_rep_item_changes PL/SQL table variable to an empty table.
+   */
+  procedure bms_yn_on_repos_item_biuds
+  is
+  begin
+    v_bmsyn_rep_item_changes := v_bmsyn_rep_item_changes_empty;
+  end;
+
+  /*
+   * This is called from the ARD_LOGICAL_REPOS_ITEM After Insert Or Update
+   * Or Delete Row trigger.  It inserts row-change descriptions into
+   * v_bmsyn_rep_item_changes.
+   */
+  procedure bms_yn_on_repos_item_aiudr(
+       ip_change_operation in CHAR,
+       ip_old_item_id      in ARD_LOGICAL_REPOS_ITEM.item_id%TYPE,
+       ip_old_item_type    in ARD_LOGICAL_REPOS_ITEM.item_type%TYPE,
+       ip_new_item_id      in ARD_LOGICAL_REPOS_ITEM.item_id%TYPE,
+       ip_new_item_type    in ARD_LOGICAL_REPOS_ITEM.item_type%TYPE
+       )
+  is
+       v_change bmsyn_rep_item_change;
+  begin
+       v_change.change_operation := ip_change_operation;
+
+       v_change.old_item_id   := ip_old_item_id;
+       v_change.old_item_type := ip_old_item_type;
+
+       v_change.new_item_id   := ip_new_item_id;
+       v_change.new_item_type := ip_new_item_type;
+
+       v_bmsyn_rep_item_changes(
+         nvl(v_bmsyn_rep_item_changes.last, 0) + 1) := v_change;
+  end;
+
+  /*
+   * This is called from the ARD_LOGICAL_REPOS_ITEM After Insert Or Update
+   * Or Delete Statement trigger.  It processes the row changes that
+   * are described in the v_bmsyn_rep_item_changes PL/SQL table variable.
+   */
+  procedure bms_yn_on_repos_item_aiuds
+  is
+      i binary_integer;
+      v_change bmsyn_rep_item_change;
+      v_change_operation CHAR(1);
+      v_old_item_id      ARD_LOGICAL_REPOS_ITEM.item_id%TYPE   := null;
+      v_old_item_type    ARD_LOGICAL_REPOS_ITEM.item_type%TYPE := null;
+      v_new_item_id      ARD_LOGICAL_REPOS_ITEM.item_id%TYPE   := null;
+      v_new_item_type    ARD_LOGICAL_REPOS_ITEM.item_type%TYPE := null;
+  begin
+      i := v_bmsyn_rep_item_changes.first;
+
+      while i is not null loop
+          v_change := v_bmsyn_rep_item_changes(i);
+          v_change_operation := v_change.change_operation;
+
+          v_old_item_id   := v_change.old_item_id;
+          v_old_item_type := v_change.old_item_type;
+          v_new_item_id   := v_change.new_item_id;
+          v_new_item_type := v_change.new_item_type;
+
+          if (v_old_item_id is not null) then
+            recompute_bmsyn_for_item(v_old_item_id, v_old_item_type);
+          end if;
+
+          if (v_new_item_id is not null AND
+              (v_new_item_id <> v_old_item_id OR v_old_item_id is null)) then
+            recompute_bmsyn_for_item(v_new_item_id, v_new_item_type);
+          end if;
+
+          i := v_bmsyn_rep_item_changes.next(i);
+      end loop;
+
+      v_bmsyn_rep_item_changes := v_bmsyn_rep_item_changes_empty;
+  end;
+
+  /*
+   * This procedure assigns molecular derivatives to their
+   * initial logical repositories by creating rows in ARD_LOGICAL_REPOS_ITEM.
+   * It is intended to only do initial assignment, so this should only
+   * get called by the triggers if either a new row is being inserted or
+   * a row is being updated and the old value of the REP_SAMPLE column is
+   * null and the new value is non-null.  In any case, if there are already
+   * rows in ARD_LOGICAL_REPOS_ITEM for the item, no new ones will be
+   * inserted.
+   */
+  procedure assign_deriv_init_inv_groups(
+       ip_item_id in RNA_BATCH_DETAIL.rnavialid%TYPE,
+       ip_item_type in RNA_BATCH_DETAIL.producttype%TYPE,
+       ip_representative_sample in RNA_BATCH_DETAIL.rep_sample%TYPE)
+  is
+    v_current_repos_item_count integer;
+  begin
+    -- MR 7865 has the detailed requirements for how items from
+    -- RNA_BATCH_DETAIL should be assigned to their initial logical
+    -- repositories.
+
+    -- Check to see if the representative sample is null or if the
+    -- specified item is already in one or more LRs.  In either case
+    -- do nothing.
+
+    if (ip_representative_sample is null) then
+      return;
+    end if;
+
+    select count(1) into v_current_repos_item_count
+    from ard_logical_repos_item
+    where item_id = ip_item_id;
+
+    if (v_current_repos_item_count > 0) then
+      return;
+    end if;
+
+    -- If we get here, we should assign the item to its initial
+    -- logical repositories.  The item should go into the same
+    -- repositories as its representative sample.
+
+    insert into ard_logical_repos_item (repository_id, item_id, item_type)
+    select i.repository_id, ip_item_id, ip_item_type
+    from ard_logical_repos_item i
+    where i.item_id = ip_representative_sample;
+  end;
+
+  /*
+   * This is called from the RNA_BATCH_DETAIL Before Insert Or Update
+   * Or Delete Statement trigger.  It initializes the
+   * v_rna_batch_detail_changes PL/SQL table variable to an empty table.
+   */
+  procedure on_rna_batch_detail_biuds
+  is
+  begin
+    v_rna_batch_detail_changes := v_rna_batch_det_changes_empty;
+  end;
+
+  /*
+   * This is called from the RNA_BATCH_DETAIL After Insert Or Update
+   * Or Delete Row trigger.  It inserts row-change descriptions into
+   * v_rna_batch_detail_changes.
+   */
+  procedure on_rna_batch_detail_aiudr(
+       ip_change_operation in CHAR,
+       ip_old_rnavialid      in RNA_BATCH_DETAIL.rnavialid%TYPE,
+       ip_old_producttype    in RNA_BATCH_DETAIL.producttype%TYPE,
+       ip_old_rep_sample     in RNA_BATCH_DETAIL.rep_sample%TYPE,
+       ip_new_rnavialid      in RNA_BATCH_DETAIL.rnavialid%TYPE,
+       ip_new_producttype    in RNA_BATCH_DETAIL.producttype%TYPE,
+       ip_new_rep_sample     in RNA_BATCH_DETAIL.rep_sample%TYPE
+       )
+  is
+       v_change rna_batch_detail_change;
+  begin
+       v_change.change_operation := ip_change_operation;
+
+       v_change.old_rnavialid   := ip_old_rnavialid;
+       v_change.old_producttype := ip_old_producttype;
+       v_change.old_rep_sample  := ip_old_rep_sample;
+
+       v_change.new_rnavialid   := ip_new_rnavialid;
+       v_change.new_producttype := ip_new_producttype;
+       v_change.new_rep_sample  := ip_new_rep_sample;
+
+       v_rna_batch_detail_changes(
+         nvl(v_rna_batch_detail_changes.last, 0) + 1) := v_change;
+  end;
+
+
+  /*
+   * This is called from the RNA_BATCH_DETAIL After Insert Or Update
+   * Or Delete Statement trigger.  It processes the row changes that
+   * are described in the v_rna_batch_detail_changes PL/SQL table variable.
+   */
+  procedure on_rna_batch_detail_aiuds
+  is
+      i binary_integer;
+      v_change rna_batch_detail_change;
+      v_change_operation CHAR(1);
+      v_old_rnavialid      RNA_BATCH_DETAIL.rnavialid%TYPE := null;
+      v_old_producttype    RNA_BATCH_DETAIL.producttype%TYPE := null;
+      v_old_rep_sample     RNA_BATCH_DETAIL.rep_sample%TYPE := null;
+      v_new_rnavialid      RNA_BATCH_DETAIL.rnavialid%TYPE := null;
+      v_new_producttype    RNA_BATCH_DETAIL.producttype%TYPE := null;
+      v_new_rep_sample     RNA_BATCH_DETAIL.rep_sample%TYPE := null;
+      v_skip               CHAR(1) := 'N';
+  begin
+      i := v_rna_batch_detail_changes.first;
+
+      while i is not null loop
+          v_change := v_rna_batch_detail_changes(i);
+          v_change_operation := v_change.change_operation;
+
+          v_old_rnavialid   := v_change.old_rnavialid;
+          v_old_producttype := v_change.old_producttype;
+          v_old_rep_sample  := v_change.old_rep_sample;
+          v_new_rnavialid   := v_change.new_rnavialid;
+          v_new_producttype := v_change.new_producttype;
+          v_new_rep_sample  := v_change.new_rep_sample;
+
+          if (v_change_operation = 'D') then -- D = delete
+		    -- Check to see if the v_old_rnavialid or v_old_producttype is null.
+		    -- If so raise an exception.  If we did nothing in this case
+		    -- then we might be leaving rows in ard_logical_repos_item that
+		    -- the caller is expecting to be deleted
+		    if (v_old_rnavialid is null) then
+		      raise_application_error(-20009,
+		        'Error: In on_rna_batch_detail_aiuds (delete), a null v_old_rnavialid value was passed.');
+		    end if;
+		    if (v_old_producttype is null) then
+		      raise_application_error(-20009,
+		        'Error: In on_rna_batch_detail_aiuds (delete), a null v_old_producttype value was passed.');
+		    end if;
+
+		    -- If we get here, we need to remove any rows from ARD_LOGICAL_REPOSITORY_ITEM
+		    -- for the specified id and type.
+		    delete from ard_logical_repos_item where item_id = v_old_rnavialid and item_type = v_old_producttype;
+
+          else -- v_change_operation is I (insert) or U (update)
+			-- Assign initial logical repositories to molecular derivatives.
+			-- See MR 7865 for requirements details.
+
+			-- If we're updating a record, only assign to a logical repository
+			-- if the old rep_sample is null but the new one is non-null.
+			-- We do this because we only want to assign initial logical repositories,
+			-- not keep updating them whenever the record changes.  Ideally we'd
+			-- just have on insert trigger, but the molecular derivative application
+			-- doesn't always have the rep_sample defined yet when the row is first
+			-- inserted.
+			--
+			v_skip := 'N';
+			if (v_change_operation = 'U') then
+			  if (not (v_old_rep_sample is null and v_new_rep_sample is not null)) then
+			    v_skip := 'Y';
+			  end if;
+			end if;
+
+			if (v_skip = 'N') then
+			  assign_deriv_init_inv_groups(
+			    v_new_rnavialid, v_new_producttype, v_new_rep_sample);
+			end if;
+
+          end if; -- end of v_change_operation is I (insert) or U (update)
+
+          i := v_rna_batch_detail_changes.next(i);
+      end loop;
+
+      v_rna_batch_detail_changes := v_rna_batch_det_changes_empty;
+  end;
+
+  /*
+   * Procedure to determine the best tissue of finding (and tissue of finding other) values
+   * for a sample.  Rule is to first look for a reported evaluation for that sample with a non-null
+   * tissue_finding_concept_id, and use the information in that evaluation.  If no such evaluation
+   * exists, then try to get the information from the asm for the sample
+   */
+  procedure get_best_tissue_of_finding(ip_sample_id in iltds_sample.sample_barcode_id%type,
+  								  ip_asm_id in iltds_sample.asm_id%type,
+							      op_tissue_finding_cui out iltds_sample.tissue_finding_cui%type,
+							      op_tissue_finding_other out iltds_sample.tissue_finding_other%type)
+  is
+  begin
+    op_tissue_finding_cui := null;
+    op_tissue_finding_other := null;
+    --try to get the tissue of finding information from the lims pathology evaluation table
+    select tissue_finding_concept_id, other_tissue_finding_name
+    into op_tissue_finding_cui, op_tissue_finding_other
+    from lims_pathology_evaluation
+    where sample_barcode_id = ip_sample_id and
+   		 reported_yn = 'Y' and
+   		 tissue_finding_concept_id is not null;
+  EXCEPTION
+    WHEN no_data_found then
+      begin
+        --there was no pathology evaluation suitable for use, so try to use the asm information
+        if (ip_asm_id is null)
+        then
+          op_tissue_finding_cui := null;
+          op_tissue_finding_other := null;
+        else
+	      select organ_site_concept_id, organ_site_concept_id_other
+	      into op_tissue_finding_cui, op_tissue_finding_other
+	      from iltds_asm
+	      where asm_id = ip_asm_id;
+        end if;
+      EXCEPTION
+        WHEN no_data_found then
+          op_tissue_finding_cui := null;
+          op_tissue_finding_other := null;
+      end;
+  WHEN others then
+      raise_application_error (-20020, 'Error in Sample_triggers.get_best_tissue_of_finding determining tissue of finding values: ' || sqlerrm);
+  end;
+
+  /*
+   * Procedure to determine the best appearance value for a sample.  Rule is to first look for a 
+   * reported evaluation for that sample with a non-null microscopic_appearance, and use that
+   * appearance value.  If no such evaluation exists, then try to get the gross appearance
+   * from the asm for the sample.  If that fails, the best appearance should be null
+   */
+  procedure get_best_appearance(ip_sample_id in iltds_sample.sample_barcode_id%type,
+  								ip_asm_id in iltds_sample.asm_id%type,
+							    op_appearance out iltds_sample.appearance_best%type)
+  is
+  begin
+    op_appearance := null;
+    --try to get the appearance information from the lims pathology evaluation table
+    select microscopic_appearance
+    into op_appearance
+    from lims_pathology_evaluation
+    where sample_barcode_id = ip_sample_id and
+   		 reported_yn = 'Y' and
+   		 microscopic_appearance is not null;
+  EXCEPTION
+    WHEN no_data_found then
+      begin
+        --there was no pathology evaluation suitable for use, so try to use the asm information
+        if (ip_asm_id is null)
+        then
+          op_appearance := null;
+        else
+	      select specimen_type
+	      into op_appearance
+	      from iltds_asm
+	      where asm_id = ip_asm_id
+	      and specimen_type is not null;
+        end if;
+      EXCEPTION
+        WHEN no_data_found then
+          op_appearance := null;
+      end;
+  WHEN others then
+      raise_application_error (-20020, 'Error in Sample_triggers.get_best_appearance determining appearance values: ' || sqlerrm);
+  end;
+
+  /*
+   * Procedure to determine the best diagnosis value for a sample.  Rule is to first look for a 
+   * reported evaluation for that sample with a non-null diagnosis, and use that
+   * diagnosis value.  If no such evaluation exists, then try to get the best diagnosis
+   * from the case for the sample.  If that fails, the best diagnosis should be null
+   */
+  procedure get_best_diagnosis(ip_sample_id in iltds_sample.sample_barcode_id%type,
+  							   ip_consent_id in iltds_informed_consent.consent_id%type,
+							   op_diagnosis_cui out iltds_sample.diagnosis_cui_best%type,
+							   op_diagnosis_other out iltds_sample.diagnosis_other_best%type)
+  is
+  begin
+    op_diagnosis_cui := null;
+    op_diagnosis_other := null;
+    --try to get the diagnosis information from the lims pathology evaluation table
+    select diagnosis_concept_id, other_diagnosis_name
+    into op_diagnosis_cui, op_diagnosis_other
+    from lims_pathology_evaluation
+    where sample_barcode_id = ip_sample_id and
+   		 reported_yn = 'Y' and
+   		 diagnosis_concept_id is not null;
+  EXCEPTION
+    WHEN no_data_found then
+      begin
+        --there was no pathology evaluation suitable for use, so try to use the consent information
+        if (ip_consent_id is null)
+        then
+          op_diagnosis_cui := null;
+          op_diagnosis_other := null;
+        else
+	      select best_diagnosis_cui, best_diagnosis_other
+	      into op_diagnosis_cui, op_diagnosis_other
+	      from iltds_informed_consent
+	      where consent_id = ip_consent_id
+	      and best_diagnosis_cui is not null;
+        end if;
+      EXCEPTION
+        WHEN no_data_found then
+          op_diagnosis_cui := null;
+          op_diagnosis_other := null;
+      end;
+  WHEN others then
+      raise_application_error (-20020, 'Error in Sample_triggers.get_best_diagnosis determining diagnosis values: ' || sqlerrm);
+  end;
+
+  /*
+   * Procedure to determine the best tissue of origin (and tissue of origin other) values
+   * for a sample.  Rule is to first look for a reported evaluation for that sample with a non-null
+   * tissue_origin_concept_id, and use the information in that evaluation.  If no such evaluation
+   * exists, then try to get the information from DDC.  If that information doesn't exists,
+   * then try to get the information from the asm for the sample
+   */
+  procedure get_best_tissue_of_origin(ip_sample_id in iltds_sample.sample_barcode_id%type,
+  								  ip_asm_id in iltds_sample.asm_id%type,
+  								  ip_path_rep_id in pdc_pathology_report.path_report_id%type,
+							      op_tissue_origin_cui out iltds_sample.tissue_origin_cui%type,
+							      op_tissue_origin_other out iltds_sample.tissue_origin_other%type)
+  is
+    v_try_asm_info_flag VARCHAR2(5) := 'FALSE';
+  begin
+    op_tissue_origin_cui := null;
+    op_tissue_origin_other := null;
+    --try to get the tissue information from the lims pathology evaluation table
+    select tissue_origin_concept_id, other_tissue_origin_name
+    into op_tissue_origin_cui, op_tissue_origin_other
+    from lims_pathology_evaluation
+    where sample_barcode_id = ip_sample_id and
+   		 reported_yn = 'Y' and
+   		 tissue_origin_concept_id is not null;
+  EXCEPTION
+    WHEN no_data_found then
+      begin
+        --there was no pathology evaluation suitable for use, so try to use DDC information
+        --if possible otherwise use ASM information
+        if (ip_path_rep_id is not null and ip_asm_id is not null)
+        then
+          --set the flag to try ASM info if we fail
+          v_try_asm_info_flag := 'TRUE';
+		  select p.tissue_concept_id, p.tissue_other
+    	  into op_tissue_origin_cui, op_tissue_origin_other
+		  from iltds_asm ia, pdc_pathology_report p, pdc_dx_tc_hierarchy h1, pdc_dx_tc_hierarchy h2
+		  where 
+		  ia.asm_id = ip_asm_id
+		  and ia.specimen_type <> 'N'
+		  and P.path_report_id = ip_path_rep_id
+		  and P.tissue_concept_id is not null
+		  and p.diagnosis_concept_id = h2.owner_code
+		  and h2.parent_code = h1.owner_code
+		  and h1.parent_code = NEOPLASTIC_DISEASE_CODE;
+		-- no DDC info, so try to use ASM info
+		elsif (ip_asm_id is not null) then
+		  select a.organ_site_concept_id, a.organ_site_concept_id_other
+    	  into op_tissue_origin_cui, op_tissue_origin_other
+		  from iltds_asm a
+		  where
+		  a.asm_id = ip_asm_id
+		  and a.organ_site_concept_id is not null;
+		else
+		  op_tissue_origin_cui := null;
+		  op_tissue_origin_other := null;
+        end if;
+      EXCEPTION
+        WHEN no_data_found then
+          begin
+            --tried to use DDC information and didn't find any, so use ASM information
+            if (v_try_asm_info_flag = 'TRUE') then
+  		      select a.organ_site_concept_id, a.organ_site_concept_id_other
+    	      into op_tissue_origin_cui, op_tissue_origin_other
+		      from iltds_asm a
+		      where
+		      a.asm_id = ip_asm_id
+		      and a.organ_site_concept_id is not null;
+            else
+		  	  op_tissue_origin_cui := null;
+		  	  op_tissue_origin_other := null;
+            end if;
+	      EXCEPTION
+	        WHEN no_data_found then
+	          begin
+		  		op_tissue_origin_cui := null;
+		 		op_tissue_origin_other := null;
+              end;
+          end;
+      end;
+  WHEN others then
+      raise_application_error (-20020, 'Error in Sample_triggers.get_best_tissue_of_origin determining tissue of origin values: ' || sqlerrm);
+  end;
+
+  /*
+   * Initialize the set of tissue finding changes to process
+   */
+   --gets called from each table's BEFORE STATEMENT trigger
+   procedure init_tissue_finding_changes is
+   begin
+      v_tissue_finding_changes := v_tissue_finding_changes_empty;
+   end init_tissue_finding_changes;
+
+  /*
+   * Initialize the set of appearance changes to process
+   */
+   --gets called from each table's BEFORE STATEMENT trigger
+   procedure init_appearance_changes is
+   begin
+      v_appearance_changes := v_appearance_changes_empty;
+   end init_appearance_changes;
+
+  /*
+   * Initialize the set of diagnosis changes to process
+   */
+   --gets called from each table's BEFORE STATEMENT trigger
+   procedure init_diagnosis_changes is
+   begin
+      v_diagnosis_changes := v_diagnosis_changes_empty;
+   end init_diagnosis_changes;
+
+  /*
+   * Initialize the set of tissue origin changes to process
+   */
+   --gets called from each table's BEFORE STATEMENT trigger
+   procedure init_tissue_origin_changes is
+   begin
+      v_tissue_origin_changes := v_tissue_origin_changes_empty;
+   end init_tissue_origin_changes;
+
+  /*
+   * Initialize the set of qc_verified changes to process
+   */
+   --gets called from each table's BEFORE STATEMENT trigger
+   procedure init_qc_verified_changes is
+   begin
+      v_qc_verified_changes := v_qc_verified_changes_empty;
+   end init_qc_verified_changes;
+
+  /*
+   * Add to the set of tissue finding changes to process
+   */
+  --gets called from each table's AFTER INSERT/UPD ROW trigger
+  -- inserts either one of following:
+  -- 		 'sample' :new sample_id
+  -- 		 'asm' :new asm_id
+  -- 		 'limspath' :new pe_id
+  procedure append_tissue_finding_change(ip_change_operation in char, ip_obj_type in varchar2, ip_obj_id in varchar2) is
+       v_tissue_finding_change_rec tissue_finding_change;
+  begin
+       v_tissue_finding_change_rec.change_operation := ip_change_operation;
+       v_tissue_finding_change_rec.obj_type := ip_obj_type;
+       v_tissue_finding_change_rec.obj_id := ip_obj_id;
+       v_tissue_finding_changes(nvl(v_tissue_finding_changes.last, 0) + 1) := v_tissue_finding_change_rec;
+  end append_tissue_finding_change;
+
+  /*
+   * Add to the set of appearance changes to process
+   */
+  --gets called from each table's AFTER INSERT/UPD ROW trigger
+  -- inserts either one of following:
+  -- 		 'asm' :new asm_id
+  -- 		 'limspath' :new pe_id
+  procedure append_appearance_change(ip_change_operation in char, ip_obj_type in varchar2, ip_obj_id in varchar2) is
+       v_appearance_change_rec appearance_change;
+  begin
+       v_appearance_change_rec.change_operation := ip_change_operation;
+       v_appearance_change_rec.obj_type := ip_obj_type;
+       v_appearance_change_rec.obj_id := ip_obj_id;
+       v_appearance_changes(nvl(v_appearance_changes.last, 0) + 1) := v_appearance_change_rec;
+  end append_appearance_change;
+
+  /*
+   * Add to the set of diagnosis changes to process
+   */
+  --gets called from each table's AFTER INSERT/UPD ROW trigger
+  -- inserts either one of following:
+  -- 		 'consent' :new consent_id
+  -- 		 'limspath' :new pe_id
+  procedure append_diagnosis_change(ip_change_operation in char, ip_obj_type in varchar2, ip_obj_id in varchar2) is
+       v_diagnosis_change_rec diagnosis_change;
+  begin
+       v_diagnosis_change_rec.change_operation := ip_change_operation;
+       v_diagnosis_change_rec.obj_type := ip_obj_type;
+       v_diagnosis_change_rec.obj_id := ip_obj_id;
+       v_diagnosis_changes(nvl(v_diagnosis_changes.last, 0) + 1) := v_diagnosis_change_rec;
+  end append_diagnosis_change;
+
+  /*
+   * Add to the set of tissue origin changes to process
+   */
+  --gets called from each table's AFTER INSERT/UPD ROW trigger
+  -- inserts either one of following:
+  -- 		 'sample' :new sample_id
+  -- 		 'asm' :new asm_id
+  -- 		 'ddcpath' :new path_report_id
+  -- 		 'limspath' :new pe_id
+  procedure append_tissue_origin_change(ip_change_operation in char, ip_obj_type in varchar2, ip_obj_id in varchar2) is
+       v_tissue_origin_change_rec tissue_origin_change;
+  begin
+       v_tissue_origin_change_rec.change_operation := ip_change_operation;
+       v_tissue_origin_change_rec.obj_type := ip_obj_type;
+       v_tissue_origin_change_rec.obj_id := ip_obj_id;
+       v_tissue_origin_changes(nvl(v_tissue_origin_changes.last, 0) + 1) := v_tissue_origin_change_rec;
+  end append_tissue_origin_change;
+
+  /*
+   * Add to the set of qc_verified changes to process
+   */
+  --gets called from each table's AFTER INSERT/UPD ROW trigger
+  -- inserts one of following:
+  -- 		 'limspath' :new sample_id
+  procedure append_qc_verified_change(ip_change_operation in char, ip_obj_type in varchar2, ip_obj_id in varchar2) is
+       v_qc_verified_change_rec qc_verified_change;
+  begin
+       v_qc_verified_change_rec.change_operation := ip_change_operation;
+       v_qc_verified_change_rec.obj_type := ip_obj_type;
+       v_qc_verified_change_rec.obj_id := ip_obj_id;
+       v_qc_verified_changes(nvl(v_qc_verified_changes.last, 0) + 1) := v_qc_verified_change_rec;
+  end append_qc_verified_change;
+
+  /*
+   * Process the set of tissue finding changes
+   */
+  --gets called from each table's AFTER STATEMENT trigger
+  procedure process_tissue_finding_changes is
+    appl_exception               exception;
+	i                            binary_integer;
+    v_tissue_finding_change_rec  tissue_finding_change;
+ 	v_asm_id                     iltds_asm.ASM_ID%type;
+    v_tissue_finding_cui	     iltds_sample.tissue_finding_cui%type;
+    v_tissue_finding_other       iltds_sample.tissue_finding_other%type;
+
+	--(asm) - called from ILTDS_ASM
+    cursor asm_cur(v_asm in varchar2) is
+    select sample_barcode_id
+    from iltds_sample
+    where asm_id = v_asm
+    for update of tissue_finding_cui, tissue_finding_other;
+
+    begin
+      i := v_tissue_finding_changes.first;
+      while i is not null loop
+        v_tissue_finding_change_rec := v_tissue_finding_changes(i);
+
+		if (v_tissue_finding_change_rec.obj_type = 'sample' or
+			v_tissue_finding_change_rec.obj_type = 'limspath') then
+		  --get the asm_id for the sample
+		  begin
+		    select s.asm_id
+		    into v_asm_id
+		    from iltds_sample s
+		    where s.sample_barcode_id = v_tissue_finding_change_rec.obj_id;
+		  exception
+		    when no_data_found then
+		      v_asm_id := null;
+		  end;
+
+          --get the best tissue of finding values for the sample
+          get_best_tissue_of_finding(v_tissue_finding_change_rec.obj_id, v_asm_id, v_tissue_finding_cui, v_tissue_finding_other);
+
+		  --set the tissue of finding values on the sample
+		  update iltds_sample
+		  set tissue_finding_cui = v_tissue_finding_cui,
+		      tissue_finding_other = v_tissue_finding_other
+		  where sample_barcode_id = v_tissue_finding_change_rec.obj_id;
+
+		elsif (v_tissue_finding_change_rec.obj_type = 'asm') then
+		  --loop over every sample in the asm
+		  for rec in asm_cur(v_tissue_finding_change_rec.obj_id) loop
+		    --get the best tissue of finding values for the sample.  if the asm is
+		    --being deleted then use a null asm_id for the sample,
+		    --otherwise use the id of the asm that was changed
+		    if (v_tissue_finding_change_rec.change_operation = 'D') then
+        	  get_best_tissue_of_finding(rec.sample_barcode_id, null, v_tissue_finding_cui, v_tissue_finding_other);
+		  	else
+        	  get_best_tissue_of_finding(rec.sample_barcode_id, v_tissue_finding_change_rec.obj_id, v_tissue_finding_cui, v_tissue_finding_other);
+		  	end if;
+			--set the tissue of finding values on the sample
+		  	update iltds_sample
+			set tissue_finding_cui = v_tissue_finding_cui,
+			    tissue_finding_other = v_tissue_finding_other
+			where current of asm_cur;
+		  end loop;
+
+		else
+		  raise appl_exception;
+		end if;
+        i := v_tissue_finding_changes.next(i);
+      end loop;
+      v_tissue_finding_changes := v_tissue_finding_changes_empty;
+    exception
+	  when appl_exception then
+	    raise_application_error(-20008, 'Error: Sample_triggers.process_tissue_finding_changes: Bad object_type: '||v_tissue_finding_change_rec.obj_type);
+ 	  when others then
+        raise_application_error(-20009, 'Error: Sample_triggers.process_tissue_finding_changes: '||sqlerrm);
+    end process_tissue_finding_changes;
+
+  /*
+   * Process the set of appearance changes
+   */
+  --gets called from each table's AFTER STATEMENT trigger
+  procedure process_appearance_changes is
+    appl_exception           exception;
+	i                        binary_integer;
+    v_appearance_change_rec  appearance_change;
+ 	v_asm_id                 iltds_asm.ASM_ID%type;
+    v_appearance			 iltds_sample.appearance_best%type;
+
+	--(asm) - called from ILTDS_ASM
+    cursor asm_cur(v_asm in varchar2) is
+    select sample_barcode_id
+    from iltds_sample
+    where asm_id = v_asm
+    for update of appearance_best;
+
+    begin
+      i := v_appearance_changes.first;
+      while i is not null loop
+        v_appearance_change_rec := v_appearance_changes(i);
+
+		if (v_appearance_change_rec.obj_type = 'sample' or
+			v_appearance_change_rec.obj_type = 'limspath') then
+		  --get the asm_id for the sample
+		  begin
+		    select s.asm_id
+		    into v_asm_id
+		    from iltds_sample s
+		    where s.sample_barcode_id = v_appearance_change_rec.obj_id;
+		  exception
+		    when no_data_found then
+		      v_asm_id := null;
+		  end;
+
+          --get the best appearance value for the sample
+          get_best_appearance(v_appearance_change_rec.obj_id, v_asm_id, v_appearance);
+
+		  --set the appearance value on the sample
+		  update iltds_sample
+		  set appearance_best = v_appearance
+		  where sample_barcode_id = v_appearance_change_rec.obj_id;
+
+		elsif (v_appearance_change_rec.obj_type = 'asm') then
+		  --loop over every sample in the asm
+		  for rec in asm_cur(v_appearance_change_rec.obj_id) loop
+		    --get the best appearance value for the sample.  if the asm is
+		    --being deleted then use a null asm_id for the sample,
+		    --otherwise use the id of the asm that was changed
+		    if (v_appearance_change_rec.change_operation = 'D') then
+        	  get_best_appearance(rec.sample_barcode_id, null, v_appearance);
+		  	else
+        	  get_best_appearance(rec.sample_barcode_id, v_appearance_change_rec.obj_id, v_appearance);
+		  	end if;
+			--set the appearance value on the sample
+		  	update iltds_sample
+			set appearance_best = v_appearance
+			where current of asm_cur;
+		  end loop;
+
+		else
+		  raise appl_exception;
+		end if;
+        i := v_appearance_changes.next(i);
+      end loop;
+      v_appearance_changes := v_appearance_changes_empty;
+    exception
+	  when appl_exception then
+	    raise_application_error(-20008, 'Error: Sample_triggers.process_appearance_changes: Bad object_type: '||v_appearance_change_rec.obj_type);
+ 	  when others then
+        raise_application_error(-20009, 'Error: Sample_triggers.process_appearance_changes: '||sqlerrm);
+    end process_appearance_changes;
+
+  /*
+   * Process the set of diagnosis changes
+   */
+  --gets called from each table's AFTER STATEMENT trigger
+  procedure process_diagnosis_changes is
+    appl_exception          exception;
+	i                       binary_integer;
+    v_diagnosis_change_rec  diagnosis_change;
+ 	v_consent_id            iltds_informed_consent.consent_id%type;
+    v_diagnosis_cui		    iltds_sample.diagnosis_cui_best%type;
+    v_diagnosis_other		iltds_sample.diagnosis_other_best%type;
+
+	--(consent) - called from ILTDS_INFORMED_CONSENT
+    cursor consent_cur(v_consent in varchar2) is
+    select sample_barcode_id
+    from iltds_sample
+    where consent_id = v_consent
+    for update of diagnosis_cui_best;
+
+    begin
+      i := v_diagnosis_changes.first;
+      while i is not null loop
+        v_diagnosis_change_rec := v_diagnosis_changes(i);
+
+		if (v_diagnosis_change_rec.obj_type = 'sample' or
+			v_diagnosis_change_rec.obj_type = 'limspath') then
+		  --get the consent_id for the sample
+		  begin
+		    select s.consent_id
+		    into v_consent_id
+		    from iltds_sample s
+		    where s.sample_barcode_id = v_diagnosis_change_rec.obj_id;
+		  exception
+		    when no_data_found then
+		      v_consent_id := null;
+		  end;
+
+          --get the best diagnosis values for the sample
+          get_best_diagnosis(v_diagnosis_change_rec.obj_id, v_consent_id, v_diagnosis_cui, v_diagnosis_other);
+
+		  --set the diagnosis values on the sample
+		  update iltds_sample
+		  set diagnosis_cui_best = v_diagnosis_cui, diagnosis_other_best = v_diagnosis_other
+		  where sample_barcode_id = v_diagnosis_change_rec.obj_id;
+		  
+		elsif (v_diagnosis_change_rec.obj_type = 'consent') then
+		  --loop over every sample in the consent
+		  for rec in consent_cur(v_diagnosis_change_rec.obj_id) loop
+		    --get the best diagnosis value for the sample.  if the consent is
+		    --being deleted then use a null consent_id for the sample,
+		    --otherwise use the id of the consent that was changed
+		    if (v_diagnosis_change_rec.change_operation = 'D') then
+        	  get_best_diagnosis(rec.sample_barcode_id, null, v_diagnosis_cui, v_diagnosis_other);
+		  	else
+        	  get_best_diagnosis(rec.sample_barcode_id, v_diagnosis_change_rec.obj_id, v_diagnosis_cui, v_diagnosis_other);
+		  	end if;
+			--set the diagnosis values on the sample
+		  	update iltds_sample
+			set diagnosis_cui_best = v_diagnosis_cui, diagnosis_other_best = v_diagnosis_other
+			where current of consent_cur;
+		  end loop;
+
+		else
+		  raise appl_exception;
+		end if;
+        i := v_diagnosis_changes.next(i);
+      end loop;
+      v_diagnosis_changes := v_diagnosis_changes_empty;
+    exception
+	  when appl_exception then
+	    raise_application_error(-20008, 'Error: Sample_triggers.process_diagnosis_changes: Bad object_type: '||v_diagnosis_change_rec.obj_type);
+ 	  when others then
+        raise_application_error(-20009, 'Error: Sample_triggers.process_diagnosis_changes: '||sqlerrm);
+    end process_diagnosis_changes;
+
+  /*
+   * Process the set of tissue origin changes
+   */
+  --gets called from each table's AFTER STATEMENT trigger
+  procedure process_tissue_origin_changes is
+    appl_exception             exception;
+	i                          binary_integer;
+    v_tissue_origin_change_rec tissue_origin_change;
+ 	v_path_report_id           pdc_pathology_report.path_report_id%type;
+ 	v_asm_id                   iltds_asm.ASM_ID%type;
+    v_tissue_origin_cui	       iltds_sample.tissue_origin_cui%type;
+    v_tissue_origin_other      iltds_sample.tissue_origin_other%type;
+
+	--(asm) - called from ILTDS_ASM
+    cursor asm_cur(v_asm in varchar2) is
+    select sample_barcode_id
+    from iltds_sample
+    where asm_id = v_asm
+    for update of tissue_origin_cui, tissue_origin_other;
+    
+	--(ddcpath) - called from PDC_PATHOLOGY_REPORT
+    cursor ddcpath_cur(v_pathid in varchar2) is
+    select sample_barcode_id
+    from iltds_sample s, pdc_pathology_report p
+    where p.path_report_id = v_pathid and 
+    p.consent_id = s.consent_id
+    for update of tissue_origin_cui, tissue_origin_other;
+
+    begin
+      i := v_tissue_origin_changes.first;
+      while i is not null loop
+        v_tissue_origin_change_rec := v_tissue_origin_changes(i);
+
+		if (v_tissue_origin_change_rec.obj_type = 'sample' or
+			v_tissue_origin_change_rec.obj_type = 'limspath') then
+		  --get the path_report_id and asm_id for the sample
+		  begin
+		    select p.path_report_id
+		    into v_path_report_id
+		    from iltds_sample s, pdc_pathology_report p
+		    where s.sample_barcode_id = v_tissue_origin_change_rec.obj_id
+		    and s.consent_id = p.consent_id;
+		  exception
+		    when no_data_found then
+		      v_path_report_id := null;
+		  end;
+		  begin
+		    select s.asm_id
+		    into v_asm_id
+		    from iltds_sample s
+		    where s.sample_barcode_id = v_tissue_origin_change_rec.obj_id;
+		  exception
+		    when no_data_found then
+		      v_asm_id := null;
+		  end;
+
+          --get the best tissue origin values for the sample
+          get_best_tissue_of_origin(v_tissue_origin_change_rec.obj_id, v_asm_id, v_path_report_id, v_tissue_origin_cui, v_tissue_origin_other);
+
+		  --set the tissue of origin values on the sample
+		  update iltds_sample
+		  set tissue_origin_cui = v_tissue_origin_cui, tissue_origin_other = v_tissue_origin_other
+		  where sample_barcode_id = v_tissue_origin_change_rec.obj_id;
+		  
+		elsif (v_tissue_origin_change_rec.obj_type = 'asm') then
+		  --loop over every sample in the asm
+		  for rec in asm_cur(v_tissue_origin_change_rec.obj_id) loop
+			--get the path_report_id for the sample
+		    begin
+		      select p.path_report_id
+		      into v_path_report_id
+		      from iltds_sample s, pdc_pathology_report p
+		      where s.sample_barcode_id = rec.sample_barcode_id
+		      and s.consent_id = p.consent_id;
+		    exception
+		      when no_data_found then
+		        v_path_report_id := null;
+		    end;
+		    --get the best tissue origin value for the sample.  if the asm is
+		    --being deleted then use a null asm_id for the sample,
+		    --otherwise use the id of the asm that was changed
+		    if (v_tissue_origin_change_rec.change_operation = 'D') then
+              get_best_tissue_of_origin(rec.sample_barcode_id, null, v_path_report_id, v_tissue_origin_cui, v_tissue_origin_other);
+		  	else
+              get_best_tissue_of_origin(rec.sample_barcode_id, v_tissue_origin_change_rec.obj_id, v_path_report_id, v_tissue_origin_cui, v_tissue_origin_other);
+		  	end if;
+		    --set the tissue of origin values on the sample
+		    update iltds_sample
+		    set tissue_origin_cui = v_tissue_origin_cui, tissue_origin_other = v_tissue_origin_other
+			where current of asm_cur;
+		  end loop;
+		  
+		elsif (v_tissue_origin_change_rec.obj_type = 'ddcpath') then
+		  --loop over every sample belonging to the consent belonging to the path report
+		  for rec in ddcpath_cur(v_tissue_origin_change_rec.obj_id) loop
+			--get the asm_id for the sample
+		    begin
+		      select s.asm_id
+		      into v_asm_id
+		      from iltds_sample s
+		      where s.sample_barcode_id = rec.sample_barcode_id;
+		    exception
+		      when no_data_found then
+		        v_asm_id := null;
+		    end;
+		    --get the best tissue origin value for the sample.  if the ddc path report is
+		    --being deleted then use a null path_report_id for the sample,
+		    --otherwise use the id of the path report that was changed
+		    if (v_tissue_origin_change_rec.change_operation = 'D') then
+              get_best_tissue_of_origin(rec.sample_barcode_id, v_asm_id, null, v_tissue_origin_cui, v_tissue_origin_other);
+		  	else
+              get_best_tissue_of_origin(rec.sample_barcode_id, v_asm_id, v_tissue_origin_change_rec.obj_id, v_tissue_origin_cui, v_tissue_origin_other);
+		  	end if;
+		    --set the tissue of origin values on the sample
+		    update iltds_sample
+		    set tissue_origin_cui = v_tissue_origin_cui, tissue_origin_other = v_tissue_origin_other
+			where current of ddcpath_cur;
+		  end loop;
+
+		else
+		  raise appl_exception;
+		end if;
+        i := v_tissue_origin_changes.next(i);
+      end loop;
+      v_tissue_origin_changes := v_tissue_origin_changes_empty;
+    exception
+	  when appl_exception then
+	    raise_application_error(-20008, 'Error: Sample_triggers.process_tissue_origin_changes: Bad object_type: '||v_tissue_origin_change_rec.obj_type);
+ 	  when others then
+        raise_application_error(-20009, 'Error: Sample_triggers.process_tissue_origin_changes: '||sqlerrm);
+    end process_tissue_origin_changes;
+
+  /*
+   * Process the set of qc_verified changes
+   */
+  --gets called from each table's AFTER STATEMENT trigger
+  procedure process_qc_verified_changes is
+    appl_exception             exception;
+	i                          binary_integer;
+    v_qc_verified_change_rec   qc_verified_change;
+
+    begin
+      i := v_qc_verified_changes.first;
+      while i is not null loop
+        v_qc_verified_change_rec := v_qc_verified_changes(i);
+
+		if (v_qc_verified_change_rec.obj_type = 'limspath') then
+		  --call the procedure to set the qc_verified flag for the sample
+		  set_sample_qc_verified_flag(v_qc_verified_change_rec.obj_id);
+		else
+		  raise appl_exception;
+		end if;
+        i := v_qc_verified_changes.next(i);
+      end loop;
+      v_qc_verified_changes := v_qc_verified_changes_empty;
+    exception
+	  when appl_exception then
+	    raise_application_error(-20008, 'Error: Sample_triggers.process_qc_verified_changes: Bad object_type: '||v_qc_verified_change_rec.obj_type);
+ 	  when others then
+        raise_application_error(-20009, 'Error: Sample_triggers.process_qc_verified_changes: '||sqlerrm);
+    end process_qc_verified_changes;
+
+  /************************************************************************
+   * This procedure sets the ILTDS_SAMPLE.QC_VERIFIED and
+   * QC_VERIFIED_DATE columns for the specified sample.  QC_VERIFIED
+   * is set to 'Y' if and only if there is a reported PV result for that
+   * sample (in LIMS).  Otherwise it is set to 'N'.  When it is set to 'Y',
+   * QC_VERIFIED_DATE is set to the date/time that the reported PV record
+   * was created, otherwise QC_VERIFEID_DATE is set to NULL.
+   ************************************************************************/
+  procedure set_sample_qc_verified_flag(ip_sample_id in iltds_sample.sample_barcode_id%type)
+  is
+    v_qc_verified iltds_sample.qc_verified%TYPE := null;
+    v_qc_verified_date iltds_sample.qc_verified_date%TYPE := null;
+  begin
+      -- See if there's reported PV record in LIMS
+      --
+      select max(reported_date)
+	  into v_qc_verified_date
+      from lims_pathology_evaluation
+      where sample_barcode_id = ip_sample_id 
+	  and reported_yn = 'Y';	
+
+    if v_qc_verified_date is null then
+      v_qc_verified := 'N';
+    else
+      v_qc_verified := 'Y';
+    end if;
+
+    update iltds_sample
+    set qc_verified = v_qc_verified,
+        qc_verified_date = v_qc_verified_date
+    where sample_barcode_id = ip_sample_id;
+  end set_sample_qc_verified_flag;
+
+  /************************************************************************
+   * This is a zero-arg proc. that updates the QC_VERIFIED and
+   * QC_VERIFIED_DATE columns on all records in ILTDS_SAMPLE.
+   ************************************************************************/
+  procedure update_all_qc_verified is
+    cnt integer := 0;
+    v_sample_barcode_id iltds_sample.sample_barcode_id%TYPE := null;
+
+    cursor sample_cur is
+      select sample_barcode_id from iltds_sample;
+  begin
+    dbms_output.put_line('Updating QC_VERIFIED columns in ILTDS_SAMPLE... ');
+    for rec in sample_cur loop
+      cnt:= cnt+1;
+	  v_sample_barcode_id := rec.sample_barcode_id;
+      set_sample_qc_verified_flag(v_sample_barcode_id);
+    end loop;
+    commit;
+    dbms_output.put_line(cnt||' records processed for global QC_VERIFIED update. '||chr(10));
+  exception
+    when others then
+      raise_application_error(-20009, 'Error encountered during global QC_VERIFIED update: '||v_sample_barcode_id||':  '||sqlerrm);
+  end update_all_qc_verified;
+
+end Sample_Triggers;
+/

@@ -1,0 +1,56 @@
+#
+# Install the BIGR Enterprise Application.
+#
+
+if {$argc != 1} {
+  puts "**** Usage: installBIGR <ear-file-name>"
+  exit
+}
+
+set myCell $env(WAS_CELL)
+set appNode $env(WAS_NODE)
+set appServer $env(BIGR_SERVER)
+set appName $env(BIGR_APPNAME)
+
+set earFile [lindex $argv 0]
+
+# Exit if BIGR is already installed
+#
+if {[isBigrInstalled]} {
+  puts "**** $appName is already installed."
+  exit
+}
+
+set dataSourceName $env(BIGR_DATASOURCE_NAME)
+set dataSource [$AdminConfig getid /WAS40DataSource:$dataSourceName/]
+set dataSourceJNDIName [$AdminConfig showAttribute $dataSource jndiName]
+#set dataSourceUser [$AdminConfig showAttribute $dataSource defaultUser]
+#set dataSourcePassword [$AdminConfig showAttribute $dataSource defaultPassword]
+set dataSourcePassword $env(BIGR_DATASOURCE_OWNER_PASSWORD)
+set dataSourceUser $env(BIGR_DATASOURCE_OWNER_USERNAME)
+
+$AdminApp install $earFile [subst {\
+  -DataSourceFor10EJBModules {\
+    {BIGREjb BIGREjb.jar,META-INF/ejb-jar.xml \
+     $dataSourceJNDIName $dataSourceUser $dataSourcePassword }}}]
+
+# Map BIGR to both its application server and its web server.
+#
+if {$env(BIGR_WAS_MAJOR_VERSION) >= 6} then {
+  set webServerNode $env(BIGR_WEB_SERVER_NODE)
+  set webServerName $env(BIGR_WEB_SERVER_NAME)
+  $AdminApp edit $appName [subst {\
+    -MapModulesToServers {\
+      {BIGRWeb BIGRWeb.war,WEB-INF/web.xml \
+       WebSphere:cell=$myCell,node=$appNode,server=$appServer+WebSphere:cell=$myCell,node=$webServerNode,server=$webServerName }}}]
+}
+if {$env(BIGR_WAS_MAJOR_VERSION) >= 6} then {
+  set webServerNode $env(BIGR_WEB_SERVER_NODE)
+  set webServerName $env(BIGR_WEB_SERVER_NAME)
+  $AdminApp edit $appName [subst {\
+    -MapModulesToServers {\
+      {BIGREjb BIGREjb.jar,META-INF/ejb-jar.xml \
+       WebSphere:cell=$myCell,node=$appNode,server=$appServer+WebSphere:cell=$myCell,node=$webServerNode,server=$webServerName }}}]
+}
+
+$AdminConfig save

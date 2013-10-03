@@ -1,0 +1,219 @@
+#*
+ * This template is for generating the TableMetaData.java file for Bigr Library.
+ *#
+package com.ardais.bigr.query.generator.gen;
+
+import java.sql.Types;
+
+import com.ardais.bigr.api.ApiException;
+import com.ardais.bigr.api.ApiFunctions;
+
+/**
+ * Holds metadata about a single table, where a table is defined as a 
+ * fragment of a SQL FROM clause. <code>TableMetaData</code> can return a 
+ * SQL FROM clause fragment that is appropriate for inclusion in a generated 
+ * query.  Also holds constants that can be used as keys into data structures
+ * that contain <code>TableMetaData</code> objects.
+ * <p>
+ * <b>Developer's Notes</b>
+ * </p>
+ * <p>
+ * This is a generated file. DO NOT MANUALLY EDIT THIS FILE, AS YOUR CHANGES WILL
+ * BE LOST THE NEXT TIME THIS FILE IS GENERATED.  To make changes, modify the 
+ * xml file holding the Bigr Library information
+ *
+ * ${metaData.GenerationMessage}
+ *
+ * @see ColumnMetaData
+ * @see FilterMetaData
+ * @see ProductQueryMetaData
+ * @see com.ardais.bigr.util.gen.DbAliases
+ * </p>
+ */
+
+public class TableMetaData {
+
+    //------------------------------------------------------------
+    // Table keys
+    //------------------------------------------------------------
+#foreach($table in $metaData.Tables)
+    public final static String ${table.KeyName} = "${table.Ordering}";
+#end## foreach table
+
+    /**
+     * The data type of the input parameters.
+     */
+    private int _dataType = Types.VARCHAR;
+
+    /**
+     * The FROM clause fragment.
+     */
+    private String _fromFragment;
+
+    /**
+     * The inline view.
+     */
+    private String _inlineView;
+
+    /**
+     * The number of parameters for the inline view.
+     */
+    private int _numberParameters = 0;
+
+    /**
+     * The table alias.  This may be the same as the actual table name.
+     */
+    private String _tableAlias;
+
+    /**
+     * The actual table name.
+     */
+    private String _tableName;
+
+
+    /**
+     * Creates a new <code>TableMetaData</code>.
+     */
+    public TableMetaData() {
+    }
+
+    /**
+     * Creates a new <code>TableMetaData</code>, from the given table name
+     * and alias.
+     * 
+     * @param  tableName  the actual name of the database table
+     * @param  tableAlias  the database table's alias 
+     */
+    public TableMetaData(String tableName, String tableAlias) {
+    	_tableName = tableName;
+    	_tableAlias = tableAlias;
+    	buildFromFragment();
+    }
+
+    /**
+     * Returns the data type of the parameters in this table.
+     * 
+     * @return  The parameter's data type.
+     */
+    public int getDataType() {
+    	return _dataType;
+    }
+
+    /**
+     * Returns the FROM fragment corresponding to this table.
+     * 
+     * @return  The FROM fragment.
+     */
+    public String getFromFragment() {
+    	if (_fromFragment == null) {
+    		buildFromFragment();
+    	}
+    	return _fromFragment;
+    }
+
+    /**
+     * Returns the inline view.
+     * 
+     * @return  The inline view, with ? placeholders if they were
+     * 					 present when the inline view was set.
+     */
+    public String getInlineView() {
+    	return _inlineView;
+    }
+
+    /**
+     * Returns the number of parameters.  This is only meaningful if an inline
+     * view with one or more placeholders was specified.
+     * 
+     * @return  The number of parameters.
+     */
+    public int getNumberParameters() {
+    	return _numberParameters;
+    }
+
+    /**
+     * Returns the table alias.
+     * 
+     * @return  The table alias.
+     */
+    public String getTableAlias() {
+    	return _tableAlias;
+    }
+
+    /**
+     * Returns the actual table name.
+     * 
+     * @return  The actual table name.
+     */
+    public String getTableName() {
+    	return _tableName;
+    }
+
+    /**
+     * Sets the data type of the parameters in this table.  If not
+     * set, the parameter defaults to <code>Types.VARCHAR</code>.
+     * 
+     * @param  dataType  the parameter's data type; must be one of
+     *  <code>java.sql.Types</code>
+     */
+    public void setDataType(int dataType) {
+    	_dataType = dataType;
+    }
+
+    /**
+     * Sets the inline view.  The inline view parameter must contain () around
+     * it.
+     * 
+     * @param inlineView  the inline view
+     */
+    public void setInlineView(String inlineView) {
+    	_inlineView = inlineView;
+    	_numberParameters = ApiFunctions.occurrencesOf('?', inlineView);
+    	_fromFragment = null;
+    }
+
+    /**
+     * Sets the table alias.
+     * 
+     * @param tableAlias  the table alias
+     */
+    public void setTableAlias(String tableAlias) {
+    	_tableAlias = tableAlias;
+    	_fromFragment = null;
+    }
+
+    /**
+     * Sets the actual name of the table.
+     * 
+     * @param  tableName  The actual name of the table.
+     */
+    public void setTableName(String tableName) {
+    	_tableName = tableName;
+    	_fromFragment = null;
+    }
+
+    private void buildFromFragment() {
+    	if (getInlineView() != null) {
+    		if (getTableAlias() == null) {
+    			throw new ApiException("In TableMetaData.buildFromFragment: inline view specified without an alias");
+    		}
+    		else {
+    			_fromFragment = getInlineView() + " " + getTableAlias();
+    		}
+    	}
+    	else {
+    		if (getTableName() == null) {
+    			throw new ApiException("In TableMetaData.buildFromFragment: table name not specified");
+    		}
+    		else {
+    			if (getTableAlias().equals(getTableName())) {
+    				_fromFragment = getTableName();
+    			}
+    			else {
+    				_fromFragment = getTableName() + " " + getTableAlias();
+    			}
+    		}
+    	}
+    }
+
+}

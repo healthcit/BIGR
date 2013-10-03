@@ -1,0 +1,40 @@
+#*
+ * This template is for generating documentation for the BTX transactions.
+ *#
+<html>
+<head>
+<title>BTX Transactions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../theme/Master.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table cellspacing="0" cellpadding="3" border="0" width="100%" class="clsHeader1"><tr><td class="clsHeader1">BTX Transactions</td></tr></table>
+<div class="tagBody">
+<table border="0" cellspacing="0" cellpadding="3" class="clsSummary">
+<thead><tr><td>Tx Type</td><td>Btx Class</td><td>Performer Method</td><td>Validate Method</td><td>Validated?</td></tr></thead>
+#foreach($tx in $txs)
+<tr>
+<td>${tx.txType}</td>
+<td><a href="${helper.getPerformerJavadocLink(${tx})}">${helper.getPerformerTypeOnly(${tx})}</a></td>
+<td>${tx.performerMethodName}</td>
+<td>
+#if($tx.validate)
+${tx.validatorMethodName}
+#else
+--
+#end
+</td>
+<td>
+#if($tx.validate)
+Yes
+#else
+No
+#end
+</td>
+</tr>
+#end## foreach tag
+</table>
+</div>
+
+</body>
+</html>

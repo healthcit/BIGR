@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="source"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/WebSphere Application Server v7.0 JRE">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/com.ibm.ws.ast.st.runtime.runtimeTarget.v70/WebSphere Application Server v7.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/BIGRCore"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/BIGREjb"/>
+	<classpathentry kind="lib" path="/BIGR/EarContent/lib/acegi-security-1.0.3.jar"/>
+	<classpathentry kind="lib" path="/BIGR/EarContent/lib/clm.jar"/>
+	<classpathentry kind="lib" path="/BIGR/EarContent/lib/commons-collections.jar"/>
+	<classpathentry kind="lib" path="/BIGR/EarContent/lib/commons-digester.jar"/>
+	<classpathentry kind="lib" path="/BIGR/EarContent/lib/commons-lang.jar"/>
+	<classpathentry kind="lib" path="/BIGR/EarContent/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="/BIGR/EarContent/lib/csmapi.jar"/>
+	<classpathentry kind="lib" path="/BIGR/EarContent/lib/ehcache-1.2.jar"/>
+	<classpathentry kind="lib" path="/BIGR/EarContent/lib/hibernate3.jar"/>
+	<classpathentry kind="lib" path="/BIGR/EarContent/lib/jakarta-oro.jar"/>
+	<classpathentry kind="lib" path="/BIGR/EarContent/lib/jdom.jar"/>
+	<classpathentry kind="lib" path="/BIGR/EarContent/lib/jsse.jar"/>
+	<classpathentry kind="lib" path="/BIGR/EarContent/lib/junit.jar"/>
+	<classpathentry kind="lib" path="/BIGR/EarContent/lib/log4j.jar"/>
+	<classpathentry kind="lib" path="/BIGR/EarContent/lib/spring-1.2.8.jar"/>
+	<classpathentry kind="lib" path="/BIGR/EarContent/lib/velocity.jar"/>
+	<classpathentry kind="lib" path="/BIGR/EarContent/lib/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="/BIGR/EarContent/lib/xml-apis.jar"/>
+	<classpathentry kind="var" path="ORACLE_JDBC_LIB"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

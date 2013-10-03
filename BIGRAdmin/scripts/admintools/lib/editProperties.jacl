@@ -1,0 +1,147 @@
+#
+# Edit various properties files to make them appropriate for the local
+# machine.  This edits Api.properties and log4j.properties.
+#
+
+proc editProperties {} {
+  global env
+  global AdminConfig
+  global AdminControl
+
+  set editSpecDir $env(BIGR_LOCAL_LIB)
+  set propFileDir $env(BIGR_CONFIG_DIR)
+  set logFileDir $env(BIGR_LOG_DIR)
+  set bootstrapUser $env(BIGR_BOOTSTRAP_USERID)
+  set bootstrapAccount $env(BIGR_BOOTSTRAP_ACCOUNT)
+
+  if {! [file exists $editSpecDir]} {
+    puts "**** Directory $editSpecDir does not exist."
+    return
+  }
+
+  if {! [file isdirectory $editSpecDir]} {
+    puts "**** $editSpecDir is not a directory."
+    return
+  }
+
+  if {! [file exists $propFileDir]} {
+    puts "**** Directory $propFileDir does not exist."
+    return
+  }
+
+  if {! [file isdirectory $propFileDir]} {
+    puts "**** $propFileDir is not a directory."
+    return
+  }
+
+  if {! [file exists $logFileDir]} {
+    puts "**** Directory $logFileDir does not exist."
+    return
+  }
+
+  if {! [file isdirectory $logFileDir]} {
+    puts "**** $logFileDir is not a directory."
+    return
+  }
+
+  cd $propFileDir
+
+  #******************************
+  # Edit Api.properties
+  #******************************
+
+  # We need the BIGR data source username and password for some of the
+  # edits we do to Api.properties
+  #
+  set dataSourceName $env(BIGR_DATASOURCE_NAME)
+  set dataSource [$AdminConfig getid /WAS40DataSource:$dataSourceName/]
+ # set dataSourceUser [$AdminConfig showAttribute $dataSource defaultUser]
+ # set dataSourcePassword [$AdminConfig showAttribute $dataSource defaultPassword]
+
+  set dataSourceUser $env(BIGR_DATASOURCE_OWNER_USERNAME)
+  set dataSourcePassword $env(BIGR_DATASOURCE_OWNER_PASSWORD) 
+  
+  set apiPropEdits "$editSpecDir/Api-properties-local-edits.txt"
+  
+  set bootUser $bootstrapUser
+  set bootAccount $bootstrapAccount
+
+  if {[file exists $apiPropEdits]} {
+    # First make sure Api.properties ends with a newline
+    exec sh -c {echo "" >> Api.properties}
+
+    file rename -force Api.properties Api.properties.bak
+    exec sh -c "sed -f ${apiPropEdits} < Api.properties.bak > Api.properties"
+    file delete Api.properties.bak
+  }
+
+  # Now edit Api.properties to set the database user/password properties
+
+  file rename -force Api.properties Api.properties.bak
+  set sedScript [subst -nobackslashes -nocommands \
+      {s/^[ 	]*\(api\.db\.user\)[ 	]*=.*/\1=$dataSourceUser/}]
+  exec sh -c "sed -e \"$sedScript\" < Api.properties.bak > Api.properties"
+  file delete Api.properties.bak
+
+  file rename -force Api.properties Api.properties.bak
+  set sedScript [subst -nobackslashes -nocommands \
+      {s/^[ 	]*\(api\.db\.password\)[ 	]*=.*/\1=$dataSourcePassword/}]
+  exec sh -c "sed -e \"$sedScript\" < Api.properties.bak > Api.properties"
+  file delete Api.properties.bak
+  
+  # Also edit Api.properties to set the bootstrap user and account
+
+  file rename -force Api.properties Api.properties.bak
+  set sedScript [subst -nobackslashes -nocommands \
+      {s/^[ 	]*\(api\.bigr\.bootstrap\.user\)[ 	]*=.*/\1=$bootUser/}]
+  exec sh -c "sed -e \"$sedScript\" < Api.properties.bak > Api.properties"
+  file delete Api.properties.bak
+  
+  file rename -force Api.properties Api.properties.bak
+  set sedScript [subst -nobackslashes -nocommands \
+      {s/^[ 	]*\(api\.bigr\.bootstrap\.account\)[ 	]*=.*/\1=$bootAccount/}]
+  exec sh -c "sed -e \"$sedScript\" < Api.properties.bak > Api.properties"
+  file delete Api.properties.bak
+
+  #******************************
+  # Edit log4j.properties
+  #******************************
+
+  set log4jPropEdits "$editSpecDir/log4j-properties-local-edits.txt"
+
+  if {[file exists $log4jPropEdits]} {
+    # First make sure log4j.properties ends with a newline
+    exec sh -c {echo "" >> log4j.properties}
+
+    file rename -force log4j.properties log4j.properties.bak
+    exec sh -c "sed -f ${log4jPropEdits} < log4j.properties.bak > log4j.properties"
+    file delete log4j.properties.bak
+  }
+
+  # We need to edit various pathnames in log4j.properties to reflect
+  # the correct directory for this installation.
+  #
+    file rename -force log4j.properties log4j.properties.bak
+
+    # Escape characters that might be special to sed in logFileDir:
+    # \, /, and &.
+
+    set escapedDir $logFileDir
+
+    regsub -all {[&/\\]} $escapedDir {\\&} escapedDir 
+
+    set sedScript [subst -nobackslashes -nocommands \
+        {s/BIGRLOGDIRMARKER/$escapedDir/g}]
+    exec sh -c "sed -e \"$sedScript\" < log4j.properties.bak > log4j.properties"
+    file delete log4j.properties.bak
+
+}
+
+# ************ End of procedure definitions ************
+
+if {$argc != 0} {
+  puts "**** Usage: editProperties"
+  exit
+}
+
+editProperties

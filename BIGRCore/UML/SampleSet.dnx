@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.ibm.com/xtools/1.5.0/Notation" xmlns:uml="http://www.eclipse.org/uml2/1.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.0/Umlnotation" xmi:id="_EkYV0G3bEduFMu6yBo9gHQ" type="Class" name="classdiagram.dnx">
+  <children xmi:id="_HMBGcG3bEduFMu6yBo9gHQ" targetEdges="_IuN5AG3bEduFMu6yBo9gHQ _JPJb0G3bEduFMu6yBo9gHQ _MVVJoG3bEduFMu6yBo9gHQ _M2tYYG3bEduFMu6yBo9gHQ">
+    <children xmi:id="_HMK3cG3bEduFMu6yBo9gHQ" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_HMK3cW3bEduFMu6yBo9gHQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_HMK3cm3bEduFMu6yBo9gHQ" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_HMK3c23bEduFMu6yBo9gHQ" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_HMUBYG3bEduFMu6yBo9gHQ" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_HMUBYW3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_HMUBYm3bEduFMu6yBo9gHQ" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_HMUBY23bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_HMUBZG3bEduFMu6yBo9gHQ" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_HMUBZW3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_HNz2MG3bEduFMu6yBo9gHQ" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_HNz2MW3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_HMBGcW3bEduFMu6yBo9gHQ" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HMBGcm3bEduFMu6yBo9gHQ" x="11766" y="954"/>
+  </children>
+  <children xmi:id="_IsIOUG3bEduFMu6yBo9gHQ" sourceEdges="_IuN5AG3bEduFMu6yBo9gHQ">
+    <children xmi:id="_IsIOU23bEduFMu6yBo9gHQ" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HoldListSampleSet[jcu^name=HoldListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_IsIOVG3bEduFMu6yBo9gHQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_IsIOVW3bEduFMu6yBo9gHQ" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HoldListSampleSet[jcu^name=HoldListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_IsIOVm3bEduFMu6yBo9gHQ" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HoldListSampleSet[jcu^name=HoldListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_IsIOV23bEduFMu6yBo9gHQ" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_IsIOWG3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HoldListSampleSet[jcu^name=HoldListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_IsIOWW3bEduFMu6yBo9gHQ" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_IsIOWm3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HoldListSampleSet[jcu^name=HoldListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_IsIOW23bEduFMu6yBo9gHQ" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_IsIOXG3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HoldListSampleSet[jcu^name=HoldListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_IsIOXW3bEduFMu6yBo9gHQ" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_IsIOXm3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HoldListSampleSet[jcu^name=HoldListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_IsIOUW3bEduFMu6yBo9gHQ" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=HoldListSampleSet[jcu^name=HoldListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IsIOUm3bEduFMu6yBo9gHQ" x="11448" y="11130"/>
+  </children>
+  <children xmi:id="_JISl4G3bEduFMu6yBo9gHQ" sourceEdges="_JPJb0G3bEduFMu6yBo9gHQ" targetEdges="_JkdkgG3bEduFMu6yBo9gHQ _J6gtAG3bEduFMu6yBo9gHQ _Kxy6UG3bEduFMu6yBo9gHQ _MCtIkG3bEduFMu6yBo9gHQ _MW-IZW3bEduFMu6yBo9gHQ">
+    <children xmi:id="_JISl423bEduFMu6yBo9gHQ" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_JISl5G3bEduFMu6yBo9gHQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_JISl5W3bEduFMu6yBo9gHQ" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_JISl5m3bEduFMu6yBo9gHQ" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_JISl523bEduFMu6yBo9gHQ" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_JISl6G3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_JISl6W3bEduFMu6yBo9gHQ" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_JISl6m3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_JISl623bEduFMu6yBo9gHQ" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_JISl7G3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_JISl7W3bEduFMu6yBo9gHQ" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_JISl7m3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_JISl4W3bEduFMu6yBo9gHQ" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JISl4m3bEduFMu6yBo9gHQ" x="-1272" y="13041"/>
+  </children>
+  <children xmi:id="_Jheh8G3bEduFMu6yBo9gHQ" sourceEdges="_JkdkgG3bEduFMu6yBo9gHQ">
+    <children xmi:id="_Jheh823bEduFMu6yBo9gHQ" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=IcpSampleSet[jcu^name=IcpSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_Jheh9G3bEduFMu6yBo9gHQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_Jheh9W3bEduFMu6yBo9gHQ" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=IcpSampleSet[jcu^name=IcpSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_Jheh9m3bEduFMu6yBo9gHQ" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=IcpSampleSet[jcu^name=IcpSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_Jheh923bEduFMu6yBo9gHQ" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Jheh-G3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=IcpSampleSet[jcu^name=IcpSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_Jheh-W3bEduFMu6yBo9gHQ" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Jheh-m3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=IcpSampleSet[jcu^name=IcpSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_Jheh-23bEduFMu6yBo9gHQ" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Jheh_G3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=IcpSampleSet[jcu^name=IcpSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_Jheh_W3bEduFMu6yBo9gHQ" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_Jheh_m3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=IcpSampleSet[jcu^name=IcpSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_Jheh8W3bEduFMu6yBo9gHQ" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=IcpSampleSet[jcu^name=IcpSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jheh8m3bEduFMu6yBo9gHQ" x="-9858" y="24168"/>
+  </children>
+  <children xmi:id="_J4bCUG3bEduFMu6yBo9gHQ" sourceEdges="_J6gtAG3bEduFMu6yBo9gHQ">
+    <children xmi:id="_J4bCU23bEduFMu6yBo9gHQ" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=OrderDetailSampleResults[jcu^name=OrderDetailSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_J4bCVG3bEduFMu6yBo9gHQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_J4bCVW3bEduFMu6yBo9gHQ" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=OrderDetailSampleResults[jcu^name=OrderDetailSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_J4bCVm3bEduFMu6yBo9gHQ" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=OrderDetailSampleResults[jcu^name=OrderDetailSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_J4bCV23bEduFMu6yBo9gHQ" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_J4bCWG3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=OrderDetailSampleResults[jcu^name=OrderDetailSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_J4bCWW3bEduFMu6yBo9gHQ" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_J4bCWm3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=OrderDetailSampleResults[jcu^name=OrderDetailSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_J4bCW23bEduFMu6yBo9gHQ" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_J4bCXG3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=OrderDetailSampleResults[jcu^name=OrderDetailSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_J4bCXW3bEduFMu6yBo9gHQ" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_J4bCXm3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=OrderDetailSampleResults[jcu^name=OrderDetailSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_J4bCUW3bEduFMu6yBo9gHQ" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=OrderDetailSampleResults[jcu^name=OrderDetailSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J4bCUm3bEduFMu6yBo9gHQ" x="-1272" y="33390"/>
+  </children>
+  <children xmi:id="_Kt7G8G3bEduFMu6yBo9gHQ" sourceEdges="_Kxy6UG3bEduFMu6yBo9gHQ" targetEdges="_LGNrIG3bEduFMu6yBo9gHQ _LepZQG3bEduFMu6yBo9gHQ">
+    <children xmi:id="_Kt7G823bEduFMu6yBo9gHQ" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_Kt7G9G3bEduFMu6yBo9gHQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_Kt7G9W3bEduFMu6yBo9gHQ" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_Kt7G9m3bEduFMu6yBo9gHQ" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_Kt7G923bEduFMu6yBo9gHQ" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Kt7G-G3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_Kt7G-W3bEduFMu6yBo9gHQ" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Kt7G-m3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_Kt7G-23bEduFMu6yBo9gHQ" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Kt7G_G3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_Kt7G_W3bEduFMu6yBo9gHQ" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_Kt7G_m3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_Kt7G8W3bEduFMu6yBo9gHQ" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Kt7G8m3bEduFMu6yBo9gHQ" x="11130" y="24168"/>
+  </children>
+  <children xmi:id="_LEksYG3bEduFMu6yBo9gHQ" sourceEdges="_LGNrIG3bEduFMu6yBo9gHQ">
+    <children xmi:id="_LEksY23bEduFMu6yBo9gHQ" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=RnaQuery[jcu^name=RnaQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_LEksZG3bEduFMu6yBo9gHQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_LEksZW3bEduFMu6yBo9gHQ" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=RnaQuery[jcu^name=RnaQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_LEksZm3bEduFMu6yBo9gHQ" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=RnaQuery[jcu^name=RnaQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_LEksZ23bEduFMu6yBo9gHQ" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_LEksaG3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=RnaQuery[jcu^name=RnaQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_LEksaW3bEduFMu6yBo9gHQ" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_LEksam3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=RnaQuery[jcu^name=RnaQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_LEksa23bEduFMu6yBo9gHQ" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_LEksbG3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=RnaQuery[jcu^name=RnaQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_LEksbW3bEduFMu6yBo9gHQ" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_LEksbm3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=RnaQuery[jcu^name=RnaQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_LEksYW3bEduFMu6yBo9gHQ" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=RnaQuery[jcu^name=RnaQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LEksYm3bEduFMu6yBo9gHQ" x="6360" y="41022"/>
+  </children>
+  <children xmi:id="_LdAagG3bEduFMu6yBo9gHQ" sourceEdges="_LepZQG3bEduFMu6yBo9gHQ">
+    <children xmi:id="_LdAag23bEduFMu6yBo9gHQ" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleQuery[jcu^name=SampleQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_LdAahG3bEduFMu6yBo9gHQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_LdAahW3bEduFMu6yBo9gHQ" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleQuery[jcu^name=SampleQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_LdAahm3bEduFMu6yBo9gHQ" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleQuery[jcu^name=SampleQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_LdAah23bEduFMu6yBo9gHQ" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_LdAaiG3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleQuery[jcu^name=SampleQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_LdAaiW3bEduFMu6yBo9gHQ" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_LdAaim3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleQuery[jcu^name=SampleQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_LdAai23bEduFMu6yBo9gHQ" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_LdAajG3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleQuery[jcu^name=SampleQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_LdAajW3bEduFMu6yBo9gHQ" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_LdAajm3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleQuery[jcu^name=SampleQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_LdAagW3bEduFMu6yBo9gHQ" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleQuery[jcu^name=SampleQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdAagm3bEduFMu6yBo9gHQ" x="21624" y="41022"/>
+  </children>
+  <children xmi:id="_MAUi8G3bEduFMu6yBo9gHQ" sourceEdges="_MCtIkG3bEduFMu6yBo9gHQ">
+    <children xmi:id="_MAUi823bEduFMu6yBo9gHQ" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=RequestDetailsSampleResults[jcu^name=RequestDetailsSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_MAUi9G3bEduFMu6yBo9gHQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_MAeT8G3bEduFMu6yBo9gHQ" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=RequestDetailsSampleResults[jcu^name=RequestDetailsSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_MAeT8W3bEduFMu6yBo9gHQ" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=RequestDetailsSampleResults[jcu^name=RequestDetailsSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_MAeT8m3bEduFMu6yBo9gHQ" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_MAeT823bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=RequestDetailsSampleResults[jcu^name=RequestDetailsSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_MAeT9G3bEduFMu6yBo9gHQ" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_MAeT9W3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=RequestDetailsSampleResults[jcu^name=RequestDetailsSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_MAeT9m3bEduFMu6yBo9gHQ" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_MAeT923bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=RequestDetailsSampleResults[jcu^name=RequestDetailsSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_MAeT-G3bEduFMu6yBo9gHQ" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_MAeT-W3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=RequestDetailsSampleResults[jcu^name=RequestDetailsSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_MAUi8W3bEduFMu6yBo9gHQ" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=RequestDetailsSampleResults[jcu^name=RequestDetailsSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MAUi8m3bEduFMu6yBo9gHQ" x="26712" y="20670"/>
+  </children>
+  <children xmi:id="_MR6CMG3bEduFMu6yBo9gHQ" sourceEdges="_MVVJoG3bEduFMu6yBo9gHQ _MW-IZW3bEduFMu6yBo9gHQ">
+    <children xmi:id="_MR6CM23bEduFMu6yBo9gHQ" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleSetResultsWrapper[jcu^name=SampleSetResultsWrapper.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_MR6CNG3bEduFMu6yBo9gHQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_MR6CNW3bEduFMu6yBo9gHQ" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleSetResultsWrapper[jcu^name=SampleSetResultsWrapper.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_MR6CNm3bEduFMu6yBo9gHQ" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleSetResultsWrapper[jcu^name=SampleSetResultsWrapper.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_MR6CN23bEduFMu6yBo9gHQ" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_MR6COG3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleSetResultsWrapper[jcu^name=SampleSetResultsWrapper.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_MR6COW3bEduFMu6yBo9gHQ" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_MR6COm3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleSetResultsWrapper[jcu^name=SampleSetResultsWrapper.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_MR6CO23bEduFMu6yBo9gHQ" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_MR6CPG3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleSetResultsWrapper[jcu^name=SampleSetResultsWrapper.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_MR6CPW3bEduFMu6yBo9gHQ" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_MR6CPm3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleSetResultsWrapper[jcu^name=SampleSetResultsWrapper.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_MR6CMW3bEduFMu6yBo9gHQ" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SampleSetResultsWrapper[jcu^name=SampleSetResultsWrapper.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MR6CMm3bEduFMu6yBo9gHQ" x="-5406" y="954"/>
+  </children>
+  <children xmi:id="_M0UywG3bEduFMu6yBo9gHQ" sourceEdges="_M2tYYG3bEduFMu6yBo9gHQ" targetEdges="_NPvjcG3bEduFMu6yBo9gHQ">
+    <children xmi:id="_M0Uyw23bEduFMu6yBo9gHQ" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SimpleSampleSet[jcu^name=SimpleSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_M0UyxG3bEduFMu6yBo9gHQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_M0UyxW3bEduFMu6yBo9gHQ" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SimpleSampleSet[jcu^name=SimpleSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_M0Uyxm3bEduFMu6yBo9gHQ" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SimpleSampleSet[jcu^name=SimpleSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_M0Uyx23bEduFMu6yBo9gHQ" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_M0UyyG3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SimpleSampleSet[jcu^name=SimpleSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_M0UyyW3bEduFMu6yBo9gHQ" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_M0Uyym3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SimpleSampleSet[jcu^name=SimpleSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_M0Uyy23bEduFMu6yBo9gHQ" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_M0UyzG3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SimpleSampleSet[jcu^name=SimpleSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_M0UyzW3bEduFMu6yBo9gHQ" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_M0Uyzm3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SimpleSampleSet[jcu^name=SimpleSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_M0UywW3bEduFMu6yBo9gHQ" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=SimpleSampleSet[jcu^name=SimpleSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_M0Uywm3bEduFMu6yBo9gHQ" x="26712" y="9222"/>
+  </children>
+  <children xmi:id="_NO_8kG3bEduFMu6yBo9gHQ" sourceEdges="_NPvjcG3bEduFMu6yBo9gHQ">
+    <children xmi:id="_NO_8k23bEduFMu6yBo9gHQ" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=PickListSampleSet[jcu^name=PickListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_NO_8lG3bEduFMu6yBo9gHQ" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_NO_8lW3bEduFMu6yBo9gHQ" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=PickListSampleSet[jcu^name=PickListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_NO_8lm3bEduFMu6yBo9gHQ" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=PickListSampleSet[jcu^name=PickListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_NO_8l23bEduFMu6yBo9gHQ" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_NO_8mG3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=PickListSampleSet[jcu^name=PickListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_NO_8mW3bEduFMu6yBo9gHQ" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_NO_8mm3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=PickListSampleSet[jcu^name=PickListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_NO_8m23bEduFMu6yBo9gHQ" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_NO_8nG3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=PickListSampleSet[jcu^name=PickListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <children xmi:id="_NO_8nW3bEduFMu6yBo9gHQ" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_NO_8nm3bEduFMu6yBo9gHQ"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=PickListSampleSet[jcu^name=PickListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_NO_8kW3bEduFMu6yBo9gHQ" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=PickListSampleSet[jcu^name=PickListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NO_8km3bEduFMu6yBo9gHQ" x="26712" y="16536"/>
+  </children>
+  <styles xmi:type="umlnotation:UMLDiagramStyle" xmi:id="_EkYV0W3bEduFMu6yBo9gHQ"/>
+  <edges xmi:id="_IuN5AG3bEduFMu6yBo9gHQ" source="_IsIOUG3bEduFMu6yBo9gHQ" target="_HMBGcG3bEduFMu6yBo9gHQ">
+    <children xmi:id="_IuN5A23bEduFMu6yBo9gHQ" type="NameLabel">
+      <children xmi:id="_IuXqAG3bEduFMu6yBo9gHQ" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=HoldListSampleSet[jcu^name=HoldListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <children xmi:id="_IuXqAW3bEduFMu6yBo9gHQ" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=HoldListSampleSet[jcu^name=HoldListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=HoldListSampleSet[jcu^name=HoldListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IuN5BG3bEduFMu6yBo9gHQ" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_IuN5AW3bEduFMu6yBo9gHQ" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=HoldListSampleSet[jcu^name=HoldListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IuN5Am3bEduFMu6yBo9gHQ" points="[-14, -4128, 1574, 4854]$[-1601, -5715, -13, 3267]"/>
+  </edges>
+  <edges xmi:id="_JPJb0G3bEduFMu6yBo9gHQ" source="_JISl4G3bEduFMu6yBo9gHQ" target="_HMBGcG3bEduFMu6yBo9gHQ">
+    <children xmi:id="_JPJb023bEduFMu6yBo9gHQ" type="NameLabel">
+      <children xmi:id="_JPTM0G3bEduFMu6yBo9gHQ" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <children xmi:id="_JPTM0W3bEduFMu6yBo9gHQ" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JPJb1G3bEduFMu6yBo9gHQ" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_JPJb0W3bEduFMu6yBo9gHQ" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JPJb0m3bEduFMu6yBo9gHQ" points="[-13, -4128, -4802, 4854]$[4776, -5715, -13, 3267]"/>
+  </edges>
+  <edges xmi:id="_JkdkgG3bEduFMu6yBo9gHQ" source="_Jheh8G3bEduFMu6yBo9gHQ" target="_JISl4G3bEduFMu6yBo9gHQ">
+    <children xmi:id="_Jkdkg23bEduFMu6yBo9gHQ" type="NameLabel">
+      <children xmi:id="_JkdkhW3bEduFMu6yBo9gHQ" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=IcpSampleSet[jcu^name=IcpSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <children xmi:id="_Jkdkhm3bEduFMu6yBo9gHQ" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=IcpSampleSet[jcu^name=IcpSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=IcpSampleSet[jcu^name=IcpSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JkdkhG3bEduFMu6yBo9gHQ" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_JkdkgW3bEduFMu6yBo9gHQ" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=IcpSampleSet[jcu^name=IcpSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Jkdkgm3bEduFMu6yBo9gHQ" points="[-14, -7078, -12740, 5715]$[12713, -8666, -13, 4127]"/>
+  </edges>
+  <edges xmi:id="_J6gtAG3bEduFMu6yBo9gHQ" source="_J4bCUG3bEduFMu6yBo9gHQ" target="_JISl4G3bEduFMu6yBo9gHQ">
+    <children xmi:id="_J6gtA23bEduFMu6yBo9gHQ" type="NameLabel">
+      <children xmi:id="_J6qeAG3bEduFMu6yBo9gHQ" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=OrderDetailSampleResults[jcu^name=OrderDetailSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <children xmi:id="_J6qeAW3bEduFMu6yBo9gHQ" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=OrderDetailSampleResults[jcu^name=OrderDetailSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=OrderDetailSampleResults[jcu^name=OrderDetailSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J6gtBG3bEduFMu6yBo9gHQ" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_J6gtAW3bEduFMu6yBo9gHQ" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=OrderDetailSampleResults[jcu^name=OrderDetailSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_J6gtAm3bEduFMu6yBo9gHQ" points="[-13, -7078, 675, 5715]$[-701, -8666, -13, 4127]"/>
+  </edges>
+  <edges xmi:id="_Kxy6UG3bEduFMu6yBo9gHQ" source="_Kt7G8G3bEduFMu6yBo9gHQ" target="_JISl4G3bEduFMu6yBo9gHQ">
+    <children xmi:id="_Kxy6U23bEduFMu6yBo9gHQ" type="NameLabel">
+      <children xmi:id="_Kxy6VW3bEduFMu6yBo9gHQ" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <children xmi:id="_Kxy6Vm3bEduFMu6yBo9gHQ" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Kxy6VG3bEduFMu6yBo9gHQ" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_Kxy6UW3bEduFMu6yBo9gHQ" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Kxy6Um3bEduFMu6yBo9gHQ" points="[0, -7078, -6019, 5715]$[6006, -8666, -13, 4127]"/>
+  </edges>
+  <edges xmi:id="_LGNrIG3bEduFMu6yBo9gHQ" source="_LEksYG3bEduFMu6yBo9gHQ" target="_Kt7G8G3bEduFMu6yBo9gHQ">
+    <children xmi:id="_LGNrI23bEduFMu6yBo9gHQ" type="NameLabel">
+      <children xmi:id="_LGNrJW3bEduFMu6yBo9gHQ" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=RnaQuery[jcu^name=RnaQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <children xmi:id="_LGNrJm3bEduFMu6yBo9gHQ" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=RnaQuery[jcu^name=RnaQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=RnaQuery[jcu^name=RnaQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LGNrJG3bEduFMu6yBo9gHQ" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_LGNrIW3bEduFMu6yBo9gHQ" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=RnaQuery[jcu^name=RnaQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LGNrIm3bEduFMu6yBo9gHQ" points="[0, -2646, -2435, 8665]$[2435, -4234, 0, 7077]"/>
+  </edges>
+  <edges xmi:id="_LepZQG3bEduFMu6yBo9gHQ" source="_LdAagG3bEduFMu6yBo9gHQ" target="_Kt7G8G3bEduFMu6yBo9gHQ">
+    <children xmi:id="_LezKQG3bEduFMu6yBo9gHQ" type="NameLabel">
+      <children xmi:id="_LezKQm3bEduFMu6yBo9gHQ" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=SampleQuery[jcu^name=SampleQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <children xmi:id="_LezKQ23bEduFMu6yBo9gHQ" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=SampleQuery[jcu^name=SampleQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=SampleQuery[jcu^name=SampleQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LezKQW3bEduFMu6yBo9gHQ" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_LepZQW3bEduFMu6yBo9gHQ" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=SampleQuery[jcu^name=SampleQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=ProductQuery[jcu^name=ProductQuery.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LepZQm3bEduFMu6yBo9gHQ" points="[0, -2646, 2460, 8665]$[-2460, -4234, 0, 7077]"/>
+  </edges>
+  <edges xmi:id="_MCtIkG3bEduFMu6yBo9gHQ" source="_MAUi8G3bEduFMu6yBo9gHQ" target="_JISl4G3bEduFMu6yBo9gHQ">
+    <children xmi:id="_MCtIk23bEduFMu6yBo9gHQ" type="NameLabel">
+      <children xmi:id="_MCtIlW3bEduFMu6yBo9gHQ" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=RequestDetailsSampleResults[jcu^name=RequestDetailsSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <children xmi:id="_MCtIlm3bEduFMu6yBo9gHQ" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=RequestDetailsSampleResults[jcu^name=RequestDetailsSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=RequestDetailsSampleResults[jcu^name=RequestDetailsSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MCtIlG3bEduFMu6yBo9gHQ" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_MCtIkW3bEduFMu6yBo9gHQ" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=RequestDetailsSampleResults[jcu^name=RequestDetailsSampleResults.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_MCtIkm3bEduFMu6yBo9gHQ" points="[-13, -7078, 7289, 5715]$[-7315, -8666, -13, 4127]"/>
+  </edges>
+  <edges xmi:id="_MVVJoG3bEduFMu6yBo9gHQ" source="_MR6CMG3bEduFMu6yBo9gHQ" target="_HMBGcG3bEduFMu6yBo9gHQ">
+    <children xmi:id="_MW-IYG3bEduFMu6yBo9gHQ" type="KindLabel">
+      <children xmi:id="_MW-IYm3bEduFMu6yBo9gHQ" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=SampleSetResultsWrapper[jcu^name=SampleSetResultsWrapper.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <children xmi:id="_MW-IZG3bEduFMu6yBo9gHQ" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=SampleSetResultsWrapper[jcu^name=SampleSetResultsWrapper.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <children xmi:id="_MW-IY23bEduFMu6yBo9gHQ" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=SampleSetResultsWrapper[jcu^name=SampleSetResultsWrapper.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=SampleSetResultsWrapper[jcu^name=SampleSetResultsWrapper.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MW-IYW3bEduFMu6yBo9gHQ" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_MVVJoW3bEduFMu6yBo9gHQ" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=SampleSetResultsWrapper[jcu^name=SampleSetResultsWrapper.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_MVVJom3bEduFMu6yBo9gHQ" points="[-13, 4749, -4802, -4856]$[4776, 6337, -13, -3268]"/>
+  </edges>
+  <edges xmi:id="_MW-IZW3bEduFMu6yBo9gHQ" source="_MR6CMG3bEduFMu6yBo9gHQ" target="_JISl4G3bEduFMu6yBo9gHQ">
+    <children xmi:id="_MW-IaG3bEduFMu6yBo9gHQ" type="NameLabel">
+      <children xmi:id="_MW-Iam3bEduFMu6yBo9gHQ" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=SampleSetResultsWrapper[jcu^name=SampleSetResultsWrapper.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <children xmi:id="_MW-Ia23bEduFMu6yBo9gHQ" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=SampleSetResultsWrapper[jcu^name=SampleSetResultsWrapper.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=SampleSetResultsWrapper[jcu^name=SampleSetResultsWrapper.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MW-IaW3bEduFMu6yBo9gHQ" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_MW-IZm3bEduFMu6yBo9gHQ" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=SampleSetResultsWrapper[jcu^name=SampleSetResultsWrapper.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleResults[jcu^name=SampleResults.java[jpack^name=com.ardais.bigr.query[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_MW-IZ23bEduFMu6yBo9gHQ" points="[-13, 4749, -13, -13838]$[-13, 14459, -13, -4128]"/>
+  </edges>
+  <edges xmi:id="_M2tYYG3bEduFMu6yBo9gHQ" source="_M0UywG3bEduFMu6yBo9gHQ" target="_HMBGcG3bEduFMu6yBo9gHQ">
+    <children xmi:id="_M2tYY23bEduFMu6yBo9gHQ" type="NameLabel">
+      <children xmi:id="_M2tYZW3bEduFMu6yBo9gHQ" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=SimpleSampleSet[jcu^name=SimpleSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <children xmi:id="_M2tYZm3bEduFMu6yBo9gHQ" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=SimpleSampleSet[jcu^name=SimpleSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=SimpleSampleSet[jcu^name=SimpleSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_M2tYZG3bEduFMu6yBo9gHQ" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_M2tYYW3bEduFMu6yBo9gHQ" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=SimpleSampleSet[jcu^name=SimpleSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SampleSet[jcu^name=SampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_M2tYYm3bEduFMu6yBo9gHQ" points="[-1, -4128, 8056, 4854]$[-8070, -5715, -13, 3267]"/>
+  </edges>
+  <edges xmi:id="_NPvjcG3bEduFMu6yBo9gHQ" source="_NO_8kG3bEduFMu6yBo9gHQ" target="_M0UywG3bEduFMu6yBo9gHQ">
+    <children xmi:id="_NPvjc23bEduFMu6yBo9gHQ" type="NameLabel">
+      <children xmi:id="_NPvjdW3bEduFMu6yBo9gHQ" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=PickListSampleSet[jcu^name=PickListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SimpleSampleSet[jcu^name=SimpleSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <children xmi:id="_NPvjdm3bEduFMu6yBo9gHQ" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=PickListSampleSet[jcu^name=PickListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SimpleSampleSet[jcu^name=SimpleSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=PickListSampleSet[jcu^name=PickListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SimpleSampleSet[jcu^name=SimpleSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NPvjdG3bEduFMu6yBo9gHQ" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_NPvjcW3bEduFMu6yBo9gHQ" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=PickListSampleSet[jcu^name=PickListSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]][jsrctype^name=SimpleSampleSet[jcu^name=SimpleSampleSet.java[jpack^name=com.ardais.bigr.library[jsrcroot^srcfolder=source[project^vcore.target=uml2.Model^id=BIGRWeb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_NPvjcm3bEduFMu6yBo9gHQ" points="[-14, -7078, -1, 5715]$[-14, -8666, -1, 4127]"/>
+  </edges>
+</notation:Diagram>

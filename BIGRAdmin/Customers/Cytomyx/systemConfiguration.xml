@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.4 U (http://www.xmlspy.com) by John Esielionis (Ardais Corporation) -->
+<!-- 
+    NOTE: This file is intended to contain system configuration information.  It is important that the only
+    information contained in this file is that which can be parsed by the existing Java code and can
+    be reloaded when the refresh cache link is used!
+
+    NOTE: cuiDescription values, if any, are disregarded and are used only for human readability.  When this
+    file is parsed by the system all descriptions are retrieved by using the cui values.
+-->
+<systemConfiguration>
+	<conceptList name="sample_types">
+		<concept cui="CA12310C" cuiDescription="Amniotic Fluid"/>
+		<concept cui="CA00008C" cuiDescription="bone marrow"/>
+		<concept cui="CA00011C" cuiDescription="buffy coat"/>
+		<concept cui="CA12314C" cuiDescription="Cell Prep Slide: Cytospin"/>
+		<concept cui="CA12315C" cuiDescription="Cell Prep Slide: Scraping"/>
+		<concept cui="CA12316C" cuiDescription="Cell Prep Slide: Smear"/>
+		<concept cui="CA00017C" cuiDescription="cerebrospinal fluid"/>
+		<concept cui="CA11725C" cuiDescription="dna"/>
+		<concept cui="CA00049C" cuiDescription="fresh tissue"/>
+		<concept cui="CA00052C" cuiDescription="frozen tissue"/>
+		<concept cui="CA09400C" cuiDescription="paraffin tissue"/>
+		<concept cui="CA09402C" cuiDescription="pbmc"/>
+		<concept cui="CA09556C" cuiDescription="pbmc pellet"/>
+		<concept cui="CA09563C" cuiDescription="plasma"/>
+		<concept cui="CA12311C" cuiDescription="Protein"/>
+		<concept cui="CA09572C" cuiDescription="rna"/>
+		<concept cui="CA12312C" cuiDescription="Saliva"/>
+		<concept cui="CA11117C" cuiDescription="serum"/>
+		<concept cui="CA12313C" cuiDescription="Stained Slide"/>
+		<concept cui="CA09582C" cuiDescription="synovial fluid"/>
+		<concept cui="CA11143C" cuiDescription="urine"/>
+		<concept cui="CA11144C" cuiDescription="whole blood"/>
+	</conceptList>
+	<conceptList name="sample_attributes">
+		<concept cui="CA11155C" cuiDescription="buffer type"/>
+		<concept cui="CA11157C" cuiDescription="Cells/ml"/>
+		<concept cui="CA11154C" cuiDescription="comment"/>
+		<concept cui="CA01033C" cuiDescription="Concentration"/>
+		<concept cui="CA11152C" cuiDescription="date of collection"/>
+		<concept cui="CA11153C" cuiDescription="date of preservation"/>
+		<concept cui="CA11148C" cuiDescription="fixative type"/>
+		<concept cui="CA11149C" cuiDescription="format detail"/>
+		<concept cui="CA11147C" cuiDescription="Gross Appearance"/>
+		<concept cui="CA11158C" cuiDescription="percent viability"/>
+		<concept cui="CA11150C" cuiDescription="prepared by"/>
+		<concept cui="CA11145C" cuiDescription="procedure"/>
+		<concept cui="CA11146C" cuiDescription="tissue"/>
+		<concept cui="CA11156C" cuiDescription="total number of cells"/>
+		<concept cui="CA11745C" cuiDescription="weight"/>
+		<concept cui="CA11151C" cuiDescription="volume"/>
+		<concept cui="CA01034C" cuiDescription="Yield"/>
+		<concept cui="CA11747C" cuiDescription="Source"/>
+	</conceptList>
+	<conceptList name="case_attributes">
+		<concept cui="CA11754C" cuiDescription="Diagnosis"/>
+		<concept cui="CA11755C" cuiDescription="Comments"/>		
+	</conceptList>
+	<conceptList name="donor_attributes">
+		<concept cui="CA11748C" cuiDescription="Year of Birth"/>
+		<concept cui="CA11749C" cuiDescription="Gender"/>
+		<concept cui="CA11750C" cuiDescription="Zip Code"/>
+		<concept cui="CA11751C" cuiDescription="Ethnicity"/>
+		<concept cui="CA11752C" cuiDescription="Race"/>
+		<concept cui="CA11753C" cuiDescription="Donor Notes"/>		
+	</conceptList>	
+	<conceptList name="storage_types">
+		<concept cui="CA09406C" cuiDescription="room temp"/>
+		<concept cui="CA09411C" cuiDescription="-20C"/>
+		<concept cui="CA11174C" cuiDescription="-70C"/>
+		<concept cui="CA09483C" cuiDescription="-80C"/>
+		<concept cui="CA09486C" cuiDescription="vapor phase ln2"/>
+		<concept cui="CA12255C" cuiDescription="4C Refrigerator"/>
+	</conceptList>
+	<conceptList name="derivation_operations">
+		<concept cui="CA11175C" cuiDescription="Aliquot"/>
+		<concept cui="CA11176C" cuiDescription="Blood Separation"/>
+		<concept cui="CA11177C" cuiDescription="Concentrate"/>
+		<concept cui="CA11178C" cuiDescription="Create Pellet"/>
+		<concept cui="CA11179C" cuiDescription="Create Suspension"/>
+		<concept cui="CA11180C" cuiDescription="Dilute"/>
+		<concept cui="CA11181C" cuiDescription="Extract"/>
+		<concept cui="CA11182C" cuiDescription="Mix/Pool"/>
+		<concept cui="CA11183C" cuiDescription="Replace/Change Buffer"/>
+		<concept cui="CA11184C" cuiDescription="Subdivide"/>
+		<concept cui="CA11185C" cuiDescription="Other Operation"/>
+	</conceptList>
+	<simpleList name="results_view_columns">
+		<listItem item="AGE_AT_COLLECTION"/>
+		<listItem item="APPEARANCE"/>
+		<listItem item="BUFFER_TYPE"/>
+		<listItem item="CASE_ALIAS"/>
+		<listItem item="CASE_ID"/>
+		<listItem item="CELLS_PER_ML"/>
+		<listItem item="CONCENTRATION"/>
+		<listItem item="DATE_OF_COLLECTION"/>
+		<listItem item="DATE_OF_PRESERVATION"/>
+		<listItem item="DIAGNOSIS_DDC"/>
+		<listItem item="DIAGNOSIS_ILTDS"/>
+		<listItem item="DIAGNOSTIC_RESULT"/>
+		<listItem item="DONOR_ALIAS"/>
+		<listItem item="DONOR_COMMENTS"/>
+		<listItem item="DONOR_ID"/>
+		<listItem item="ELAPSED_TIME"/>
+		<listItem item="FORMAT_DETAIL"/>
+		<listItem item="FIXATIVE_TYPE"/>
+		<listItem item="GENDER"/>
+		<listItem item="HNG_TNM_STAGE"/>
+		<listItem item="INVENTORY_STATUS"/>
+		<listItem item="LOGICAL_REPOSITORY"/>
+		<listItem item="PERCENT_VIABILITY"/>
+		<listItem item="PREPARED_BY"/>
+		<listItem item="PROCEDURE"/>
+		<listItem item="PROJECT_STATUS"/>
+		<listItem item="REPEAT_DONOR"/>
+		<listItem item="SAMPLE_ALIAS"/>
+		<listItem item="SAMPLE_ID"/>
+		<listItem item="SAMPLE_LOCATION"/>
+		<listItem item="SAMPLE_SOURCE"/>
+		<listItem item="SAMPLE_TYPE"/>
+		<listItem item="SOURCE"/>
+		<listItem item="TISSUE"/>
+		<listItem item="TOTAL_NUM_OF_CELLS"/>
+		<listItem item="VOLUME"/>
+		<listItem item="WEIGHT"/>
+		<listItem item="YIELD"/>
+	<listItem item="COMPOSITION_ALL"/><listItem item="DIAGNOSIS_LIMS"/><listItem item="IMAGES"/><listItem item="PV_NOTES"/><listItem item="PV_NOTES_INTERNAL"/><listItem item="ASM_POS_WITH_PV"/><listItem item="ASM_OR_PREP"/><listItem item="ASM_TISSUE"/><listItem item="NUM_SECTIONS"/><listItem item="QC_STATUS"/><listItem item="SALES_STATUS"/><listItem item="QC_POSTED"/></simpleList>
+	<simpleList name="results_view_columns_so_only">
+		<listItem item="REPEAT_DONOR"/>
+		<listItem item="SOURCE"/>
+	<listItem item="PV_NOTES_INTERNAL"/><listItem item="ASM_TISSUE"/><listItem item="NUM_SECTIONS"/><listItem item="QC_STATUS"/><listItem item="SALES_STATUS"/><listItem item="QC_POSTED"/></simpleList>
+	<simpleList name="results_view_columns_so_and_di_only">
+		<listItem item="CASE_ALIAS"/>
+		<listItem item="DATE_OF_COLLECTION"/>
+		<listItem item="DATE_OF_PRESERVATION"/>
+		<listItem item="DIAGNOSIS_ILTDS"/>
+		<listItem item="DONOR_ALIAS"/>
+		<listItem item="DONOR_COMMENTS"/>
+		<listItem item="INVENTORY_STATUS"/>
+		<listItem item="PREPARED_BY"/>
+		<listItem item="PROCEDURE"/>
+		<listItem item="PROJECT_STATUS"/>
+		<listItem item="SAMPLE_LOCATION"/>
+	</simpleList>
+	<legalValueSet name="kc_annotated_objects">
+		<legalValue value="donor" displayValue="Donor"/>
+		<legalValue value="case" displayValue="Case"/>
+		<legalValue value="sample" displayValue="Sample"/>
+	</legalValueSet>
+	<legalValueSet name="data_form_uses">
+	  <legalValue value="annotation" displayValue="Annotation"/>
+	  <legalValue value="registration" displayValue="Registration"/>
+	</legalValueSet>
+	<sampleTypeConfiguration>
+		<sampleType cui="CA12310C" cuiDescription="Amniotic Fluid">
+			<storageType cui="CA09411C" cuiDescription="-20C"/>
+			<storageType cui="CA09483C" cuiDescription="-80C"/>
+			<storageType cui="CA09486C" cuiDescription="vapor phase ln2"/>
+			<storageType cui="CA12255C" cuiDescription="4C Refrigerator"/>
+		</sampleType>
+		<sampleType cui="CA00008C" cuiDescription="bone marrow">
+			<storageType cui="CA09411C" cuiDescription="-20C"/>
+			<storageType cui="CA09483C" cuiDescription="-80C"/>
+			<storageType cui="CA09486C" cuiDescription="vapor phase ln2"/>
+			<storageType cui="CA12255C" cuiDescription="4C Refrigerator"/>
+		</sampleType>
+		<sampleType cui="CA00011C" cuiDescription="buffy coat">
+			<storageType cui="CA09411C" cuiDescription="-20C"/>
+			<storageType cui="CA09483C" cuiDescription="-80C"/>
+			<storageType cui="CA09486C" cuiDescription="vapor phase ln2"/>
+			<storageType cui="CA12255C" cuiDescription="4C Refrigerator"/>
+		</sampleType>
+		<sampleType cui="CA12314C" cuiDescription="Cell Prep Slide: Cytospin">
+			<storageType cui="CA12255C" cuiDescription="4C Refrigerator"/>
+			<storageType cui="CA09406C" cuiDescription="room temp"/>
+		</sampleType>
+		<sampleType cui="CA12315C" cuiDescription="Cell Prep Slide: Scraping">
+			<storageType cui="CA12255C" cuiDescription="4C Refrigerator"/>
+			<storageType cui="CA09406C" cuiDescription="room temp"/>
+		</sampleType>
+		<sampleType cui="CA12316C" cuiDescription="Cell Prep Slide: Smear">
+			<storageType cui="CA12255C" cuiDescription="4C Refrigerator"/>
+			<storageType cui="CA09406C" cuiDescription="room temp"/>
+		</sampleType>
+		<sampleType cui="CA00017C" cuiDescription="cerebrospinal fluid">
+			<storageType cui="CA09411C" cuiDescription="-20C"/>
+			<storageType cui="CA09483C" cuiDescription="-80C"/>
+			<storageType cui="CA09486C" cuiDescription="vapor phase ln2"/>
+		</sampleType>
+		<sampleType cui="CA11725C" cuiDescription="dna">
+			<storageType cui="CA09411C" cuiDescription="-20C"/>
+			<storageType cui="CA09483C" cuiDescription="-80C"/>
+			<storageType cui="CA09486C" cuiDescription="vapor phase ln2"/>
+			<storageType cui="CA12255C" cuiDescription="4C Refrigerator"/>
+		</sampleType>				
+		<sampleType cui="CA00049C" cuiDescription="fresh tissue">
+			<storageType cui="CA12255C" cuiDescription="4C Refrigerator"/>
+		</sampleType>
+		<sampleType cui="CA00052C" cuiDescription="frozen tissue">
+			<storageType cui="CA09411C" cuiDescription="-20C"/>
+			<storageType cui="CA11174C" cuiDescription="-70C"/>
+			<storageType cui="CA09483C" cuiDescription="-80C"/>
+			<storageType cui="CA09486C" cuiDescription="vapor phase ln2"/>
+		</sampleType>
+		<sampleType cui="CA09400C" cuiDescription="paraffin tissue">
+			<storageType cui="CA09406C" cuiDescription="room temp"/>
+		</sampleType>
+		<sampleType cui="CA09402C" cuiDescription="pbmc">
+			<storageType cui="CA09411C" cuiDescription="-20C"/>
+			<storageType cui="CA09483C" cuiDescription="-80C"/>
+			<storageType cui="CA09486C" cuiDescription="vapor phase ln2"/>
+			<storageType cui="CA12255C" cuiDescription="4C Refrigerator"/>
+		</sampleType>
+		<sampleType cui="CA09556C" cuiDescription="pbmc pellet">
+			<storageType cui="CA09411C" cuiDescription="-20C"/>
+			<storageType cui="CA09483C" cuiDescription="-80C"/>
+			<storageType cui="CA09486C" cuiDescription="vapor phase ln2"/>
+		</sampleType>
+		<sampleType cui="CA09563C" cuiDescription="plasma">
+			<storageType cui="CA09411C" cuiDescription="-20C"/>
+			<storageType cui="CA09483C" cuiDescription="-80C"/>
+			<storageType cui="CA09486C" cuiDescription="vapor phase ln2"/>
+			<storageType cui="CA12255C" cuiDescription="4C Refrigerator"/>
+		</sampleType>
+		<sampleType cui="CA12311C" cuiDescription="Protein">
+			<storageType cui="CA09411C" cuiDescription="-20C"/>
+			<storageType cui="CA09483C" cuiDescription="-80C"/>
+			<storageType cui="CA09486C" cuiDescription="vapor phase ln2"/>
+			<storageType cui="CA12255C" cuiDescription="4C Refrigerator"/>
+		</sampleType>
+		<sampleType cui="CA09572C" cuiDescription="rna">
+			<storageType cui="CA09411C" cuiDescription="-20C"/>
+			<storageType cui="CA09483C" cuiDescription="-80C"/>
+			<storageType cui="CA09486C" cuiDescription="vapor phase ln2"/>
+			<storageType cui="CA12255C" cuiDescription="4C Refrigerator"/>
+		</sampleType>
+		<sampleType cui="CA12312C" cuiDescription="Saliva">
+			<storageType cui="CA09411C" cuiDescription="-20C"/>
+			<storageType cui="CA09483C" cuiDescription="-80C"/>
+			<storageType cui="CA09486C" cuiDescription="vapor phase ln2"/>
+			<storageType cui="CA12255C" cuiDescription="4C Refrigerator"/>
+		</sampleType>
+		<sampleType cui="CA11117C" cuiDescription="serum">
+			<storageType cui="CA09411C" cuiDescription="-20C"/>
+			<storageType cui="CA09483C" cuiDescription="-80C"/>
+			<storageType cui="CA09486C" cuiDescription="vapor phase ln2"/>
+			<storageType cui="CA12255C" cuiDescription="4C Refrigerator"/>
+		</sampleType>
+		<sampleType cui="CA12313C" cuiDescription="Stained Slide">
+			<storageType cui="CA12255C" cuiDescription="4C Refrigerator"/>
+			<storageType cui="CA09406C" cuiDescription="room temp"/>
+		</sampleType>
+		<sampleType cui="CA09582C" cuiDescription="synovial fluid">
+			<storageType cui="CA09411C" cuiDescription="-20C"/>
+			<storageType cui="CA09483C" cuiDescription="-80C"/>
+			<storageType cui="CA09486C" cuiDescription="vapor phase ln2"/>
+			<storageType cui="CA12255C" cuiDescription="4C Refrigerator"/>
+		</sampleType>
+		<sampleType cui="CA11143C" cuiDescription="urine">
+			<storageType cui="CA09411C" cuiDescription="-20C"/>
+			<storageType cui="CA09483C" cuiDescription="-80C"/>
+			<storageType cui="CA09486C" cuiDescription="vapor phase ln2"/>
+			<storageType cui="CA12255C" cuiDescription="4C Refrigerator"/>
+		</sampleType>
+		<sampleType cui="CA11144C" cuiDescription="whole blood">
+			<storageType cui="CA09411C" cuiDescription="-20C"/>
+			<storageType cui="CA09483C" cuiDescription="-80C"/>
+			<storageType cui="CA09486C" cuiDescription="vapor phase ln2"/>
+			<storageType cui="CA12255C" cuiDescription="4C Refrigerator"/>
+		</sampleType>
+	</sampleTypeConfiguration>
+	<derivativeOperationConfiguration>
+		<derivativeOperation cui="CA11175C" cuiDescription="Aliquot">
+		  <parentSampleType cui="CA12310C" cuiDescription="Amniotic Fluid">
+		    <childSampleType cui="CA12310C" cuiDescription="Amniotic Fluid"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00008C" cuiDescription="bone marrow">
+		    <childSampleType cui="CA00008C" cuiDescription="bone marrow"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00011C" cuiDescription="buffy coat">
+		    <childSampleType cui="CA00011C" cuiDescription="buffy coat"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00017C" cuiDescription="cerebrospinal fluid">
+		    <childSampleType cui="CA00017C" cuiDescription="cerebrospinal fluid"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA11725C" cuiDescription="dna">
+		    <childSampleType cui="CA11725C" cuiDescription="dna"/>
+		  </parentSampleType>			  
+		  <parentSampleType cui="CA09563C" cuiDescription="plasma">
+		    <childSampleType cui="CA09563C" cuiDescription="plasma"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA12311C" cuiDescription="Protein">
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09572C" cuiDescription="rna">
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA12312C" cuiDescription="Saliva">
+		    <childSampleType cui="CA12312C" cuiDescription="Saliva"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA11117C" cuiDescription="serum">
+		    <childSampleType cui="CA11117C" cuiDescription="serum"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09582C" cuiDescription="synovial fluid">
+		    <childSampleType cui="CA09582C" cuiDescription="synovial fluid"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA11143C" cuiDescription="urine">
+		    <childSampleType cui="CA11143C" cuiDescription="urine"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA11144C" cuiDescription="whole blood">
+		    <childSampleType cui="CA11144C" cuiDescription="whole blood"/>
+		  </parentSampleType>	  
+		</derivativeOperation>
+		<derivativeOperation cui="CA11176C" cuiDescription="Blood Separation">
+		  <parentSampleType cui="CA11144C" cuiDescription="whole blood">
+		    <childSampleType cui="CA00011C" cuiDescription="buffy coat"/>
+		    <childSampleType cui="CA09402C" cuiDescription="pbmc"/>
+		    <childSampleType cui="CA09556C" cuiDescription="pbmc pellet"/>
+		    <childSampleType cui="CA09563C" cuiDescription="plasma"/>
+		    <childSampleType cui="CA11117C" cuiDescription="serum"/>
+		  </parentSampleType>
+		</derivativeOperation>
+		<derivativeOperation cui="CA11177C" cuiDescription="Concentrate">
+		  <parentSampleType cui="CA12310C" cuiDescription="Amniotic Fluid">
+		    <childSampleType cui="CA12310C" cuiDescription="Amniotic Fluid"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00008C" cuiDescription="bone marrow">
+		    <childSampleType cui="CA00008C" cuiDescription="bone marrow"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00011C" cuiDescription="buffy coat">
+		    <childSampleType cui="CA00011C" cuiDescription="buffy coat"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00017C" cuiDescription="cerebrospinal fluid">
+		    <childSampleType cui="CA00017C" cuiDescription="cerebrospinal fluid"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA11725C" cuiDescription="dna">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		  </parentSampleType>			  
+		  <parentSampleType cui="CA09402C" cuiDescription="pbmc">
+		    <childSampleType cui="CA09402C" cuiDescription="pbmc"/>
+		    <childSampleType cui="CA09556C" cuiDescription="pbmc pellet"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09563C" cuiDescription="plasma">
+		    <childSampleType cui="CA09563C" cuiDescription="plasma"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA12311C" cuiDescription="Protein">
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09572C" cuiDescription="rna">
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+		  </parentSampleType>	  
+		  <parentSampleType cui="CA12312C" cuiDescription="Saliva">
+		    <childSampleType cui="CA12312C" cuiDescription="Saliva"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA11117C" cuiDescription="serum">
+		    <childSampleType cui="CA11117C" cuiDescription="serum"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09582C" cuiDescription="synovial fluid">
+		    <childSampleType cui="CA09582C" cuiDescription="synovial fluid"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA11143C" cuiDescription="urine">
+		    <childSampleType cui="CA11143C" cuiDescription="urine"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA11144C" cuiDescription="whole blood">
+		    <childSampleType cui="CA11144C" cuiDescription="whole blood"/>
+		  </parentSampleType>
+		</derivativeOperation>
+		<derivativeOperation cui="CA11178C" cuiDescription="Create Pellet">
+		  <parentSampleType cui="CA00011C" cuiDescription="buffy coat">
+		    <childSampleType cui="CA09556C" cuiDescription="pbmc pellet"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09402C" cuiDescription="pbmc">
+		    <childSampleType cui="CA09556C" cuiDescription="pbmc pellet"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA11144C" cuiDescription="whole blood">
+		    <childSampleType cui="CA09556C" cuiDescription="pbmc pellet"/>
+		  </parentSampleType>
+		</derivativeOperation>
+		<derivativeOperation cui="CA11179C" cuiDescription="Create Suspension">
+		  <parentSampleType cui="CA09556C" cuiDescription="pbmc pellet">
+		    <childSampleType cui="CA09402C" cuiDescription="pbmc"/>
+		  </parentSampleType>
+		</derivativeOperation>
+		<derivativeOperation cui="CA11180C" cuiDescription="Dilute">
+		  <parentSampleType cui="CA12310C" cuiDescription="Amniotic Fluid">
+		    <childSampleType cui="CA12310C" cuiDescription="Amniotic Fluid"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00008C" cuiDescription="bone marrow">
+		    <childSampleType cui="CA00008C" cuiDescription="bone marrow"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00011C" cuiDescription="buffy coat">
+		    <childSampleType cui="CA00011C" cuiDescription="buffy coat"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00017C" cuiDescription="cerebrospinal fluid">
+		    <childSampleType cui="CA00017C" cuiDescription="cerebrospinal fluid"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA11725C" cuiDescription="dna">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		  </parentSampleType>			  
+		  <parentSampleType cui="CA09402C" cuiDescription="pbmc">
+		    <childSampleType cui="CA09402C" cuiDescription="pbmc"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09556C" cuiDescription="pbmc pellet">
+		    <childSampleType cui="CA09402C" cuiDescription="pbmc"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09563C" cuiDescription="plasma">
+		    <childSampleType cui="CA09563C" cuiDescription="plasma"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA12311C" cuiDescription="Protein">
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09572C" cuiDescription="rna">
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+		  </parentSampleType>	  
+		  <parentSampleType cui="CA12312C" cuiDescription="Saliva">
+		    <childSampleType cui="CA12312C" cuiDescription="Saliva"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA11117C" cuiDescription="serum">
+		    <childSampleType cui="CA11117C" cuiDescription="serum"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09582C" cuiDescription="synovial fluid">
+		    <childSampleType cui="CA09582C" cuiDescription="synovial fluid"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA11143C" cuiDescription="urine">
+		    <childSampleType cui="CA11143C" cuiDescription="urine"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA11144C" cuiDescription="whole blood">
+		    <childSampleType cui="CA11144C" cuiDescription="whole blood"/>
+		  </parentSampleType>
+		</derivativeOperation>
+		<derivativeOperation cui="CA11181C" cuiDescription="Extract">
+		  <parentSampleType cui="CA12310C" cuiDescription="Amniotic Fluid">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00008C" cuiDescription="bone marrow">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA09402C" cuiDescription="pbmc"/>
+		    <childSampleType cui="CA09556C" cuiDescription="pbmc pellet"/>
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00011C" cuiDescription="buffy coat">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA09402C" cuiDescription="pbmc"/>
+		    <childSampleType cui="CA09556C" cuiDescription="pbmc pellet"/>
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00017C" cuiDescription="cerebrospinal fluid">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00049C" cuiDescription="fresh tissue">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00052C" cuiDescription="frozen tissue">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09400C" cuiDescription="paraffin tissue">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09402C" cuiDescription="pbmc">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09556C" cuiDescription="pbmc pellet">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09563C" cuiDescription="plasma">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+		    <childSampleType cui="CA11117C" cuiDescription="serum"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA12312C" cuiDescription="Saliva">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09582C" cuiDescription="synovial fluid">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA11143C" cuiDescription="urine">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA11144C" cuiDescription="whole blood">
+		    <childSampleType cui="CA00011C" cuiDescription="buffy coat"/>
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA09402C" cuiDescription="pbmc"/>
+		    <childSampleType cui="CA09556C" cuiDescription="pbmc pellet"/>
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+		  </parentSampleType>
+		</derivativeOperation>
+		<derivativeOperation cui="CA11182C" multipleParents="true" cuiDescription="Mix/Pool">
+		  <parentSampleType cui="CA11725C" cuiDescription="dna">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		  </parentSampleType>			  
+		  <parentSampleType cui="CA09572C" cuiDescription="rna">
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+		  </parentSampleType>	  
+		</derivativeOperation>
+		<derivativeOperation cui="CA11183C" cuiDescription="Replace/Change Buffer">
+		  <parentSampleType cui="CA09402C" cuiDescription="pbmc">
+		    <childSampleType cui="CA09402C" cuiDescription="pbmc"/>
+		  </parentSampleType>
+		</derivativeOperation>
+		<derivativeOperation cui="CA11184C" cuiDescription="Subdivide">
+		  <parentSampleType cui="CA00049C" cuiDescription="fresh tissue">
+		    <childSampleType cui="CA00049C" cuiDescription="fresh tissue"/>
+				<childSampleType cui="CA12313C" cuiDescription="Stained Slide"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00052C" cuiDescription="frozen tissue">
+		    <childSampleType cui="CA00052C" cuiDescription="frozen tissue"/>
+				<childSampleType cui="CA12313C" cuiDescription="Stained Slide"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09400C" cuiDescription="paraffin tissue">
+		    <childSampleType cui="CA09400C" cuiDescription="paraffin tissue"/>
+				<childSampleType cui="CA12313C" cuiDescription="Stained Slide"/>
+		  </parentSampleType>
+		</derivativeOperation>
+		<derivativeOperation cui="CA11185C" multipleParents="true" cuiDescription="Other Operation">
+		  <parentSampleType cui="CA12310C" cuiDescription="Amniotic Fluid">
+		  	<childSampleType cui="CA12310C" cuiDescription="Amniotic Fluid"/>
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+				<childSampleType cui="CA12313C" cuiDescription="Stained Slide"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00008C" cuiDescription="bone marrow">
+		    <childSampleType cui="CA00008C" cuiDescription="bone marrow"/>
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA09402C" cuiDescription="pbmc"/>
+		    <childSampleType cui="CA09556C" cuiDescription="pbmc pellet"/>
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+				<childSampleType cui="CA12313C" cuiDescription="Stained Slide"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00011C" cuiDescription="buffy coat">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA09402C" cuiDescription="pbmc"/>
+		    <childSampleType cui="CA09556C" cuiDescription="pbmc pellet"/>
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+				<childSampleType cui="CA12313C" cuiDescription="Stained Slide"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00017C" cuiDescription="cerebrospinal fluid">
+		    <childSampleType cui="CA00017C" cuiDescription="cerebrospinal fluid"/>
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+				<childSampleType cui="CA12313C" cuiDescription="Stained Slide"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00049C" cuiDescription="fresh tissue">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA00049C" cuiDescription="fresh tissue"/>
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+				<childSampleType cui="CA12313C" cuiDescription="Stained Slide"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA00052C" cuiDescription="frozen tissue">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA00052C" cuiDescription="frozen tissue"/>
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+				<childSampleType cui="CA12313C" cuiDescription="Stained Slide"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09400C" cuiDescription="paraffin tissue">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA09400C" cuiDescription="paraffin tissue"/>
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+				<childSampleType cui="CA12313C" cuiDescription="Stained Slide"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09402C" cuiDescription="pbmc">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA09402C" cuiDescription="pbmc"/>
+		    <childSampleType cui="CA09556C" cuiDescription="pbmc pellet"/>
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+				<childSampleType cui="CA12313C" cuiDescription="Stained Slide"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09556C" cuiDescription="pbmc pellet">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA09402C" cuiDescription="pbmc"/>
+		    <childSampleType cui="CA09556C" cuiDescription="pbmc pellet"/>
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+				<childSampleType cui="CA12313C" cuiDescription="Stained Slide"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09563C" cuiDescription="plasma">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA09563C" cuiDescription="plasma"/>
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+		    <childSampleType cui="CA11117C" cuiDescription="serum"/>
+				<childSampleType cui="CA12313C" cuiDescription="Stained Slide"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA12312C" cuiDescription="Saliva">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+				<childSampleType cui="CA12312C" cuiDescription="Saliva"/>
+				<childSampleType cui="CA12313C" cuiDescription="Stained Slide"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA09582C" cuiDescription="synovial fluid">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+				<childSampleType cui="CA12313C" cuiDescription="Stained Slide"/>
+		    <childSampleType cui="CA09582C" cuiDescription="synovial fluid"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA11143C" cuiDescription="urine">
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+				<childSampleType cui="CA12313C" cuiDescription="Stained Slide"/>
+		    <childSampleType cui="CA11143C" cuiDescription="urine"/>
+		  </parentSampleType>
+		  <parentSampleType cui="CA11144C" cuiDescription="whole blood">
+		    <childSampleType cui="CA00011C" cuiDescription="buffy coat"/>
+ 		    <childSampleType cui="CA11725C" cuiDescription="dna"/>		 		    
+		    <childSampleType cui="CA09402C" cuiDescription="pbmc"/>
+		    <childSampleType cui="CA09556C" cuiDescription="pbmc pellet"/>
+		    <childSampleType cui="CA12311C" cuiDescription="Protein"/>
+		    <childSampleType cui="CA09572C" cuiDescription="rna"/>
+				<childSampleType cui="CA12313C" cuiDescription="Stained Slide"/>
+		    <childSampleType cui="CA11144C" cuiDescription="whole blood"/>
+		  </parentSampleType>
+		</derivativeOperation>
+	</derivativeOperationConfiguration>
+</systemConfiguration>

@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.ibm.com/xtools/1.5.0/Notation" xmlns:uml="http://www.eclipse.org/uml2/1.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.0/Umlnotation" xmi:id="_zBiScMZ0EduIEbNALM3ysg" type="Class" name="classdiagram.dnx">
+  <children xmi:id="_1tC2cMZ0EduIEbNALM3ysg" sourceEdges="_3KUjgMd2EduIEbNALM3ysg" targetEdges="_2KZg2MZ0EduIEbNALM3ysg _2K2M0cZ0EduIEbNALM3ysg">
+    <children xmi:id="_1tVxYMZ0EduIEbNALM3ysg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_1tVxYcZ0EduIEbNALM3ysg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_1tVxYsZ0EduIEbNALM3ysg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_1tVxY8Z0EduIEbNALM3ysg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_1tfiYMZ0EduIEbNALM3ysg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_1tfiYcZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_1tfiYsZ0EduIEbNALM3ysg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_1tfiY8Z0EduIEbNALM3ysg" filtering="Automatic" filteringKeys="private"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_1tfiZMZ0EduIEbNALM3ysg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_1tfiZcZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_1tfiZsZ0EduIEbNALM3ysg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_1tfiZ8Z0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_1tC2ccZ0EduIEbNALM3ysg" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1tC2csZ0EduIEbNALM3ysg" x="5090" y="14573"/>
+  </children>
+  <children xmi:id="_1-xfoMZ0EduIEbNALM3ysg" sourceEdges="_2KQW78Z0EduIEbNALM3ysg" targetEdges="_2KQW78Z0EduIEbNALM3ysg _2KZg0MZ0EduIEbNALM3ysg">
+    <children xmi:id="_1-xfo8Z0EduIEbNALM3ysg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_1-xfpMZ0EduIEbNALM3ysg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_1-xfpcZ0EduIEbNALM3ysg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_1-xfpsZ0EduIEbNALM3ysg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_1-xfp8Z0EduIEbNALM3ysg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_1-xfqMZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_1-xfqcZ0EduIEbNALM3ysg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_1-xfqsZ0EduIEbNALM3ysg" filtering="Automatic" filteringKeys="private"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_1-xfq8Z0EduIEbNALM3ysg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_1-xfrMZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_1-xfrcZ0EduIEbNALM3ysg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_1-xfrsZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_1-xfocZ0EduIEbNALM3ysg" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1-xfosZ0EduIEbNALM3ysg" x="659" y="14571"/>
+  </children>
+  <children xmi:id="_1_q3gMZ0EduIEbNALM3ysg" sourceEdges="_2KZg0MZ0EduIEbNALM3ysg" targetEdges="_2KjR4MZ0EduIEbNALM3ysg _2Ksb3MZ0EduIEbNALM3ysg">
+    <children xmi:id="_1_q3g8Z0EduIEbNALM3ysg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_1_q3hMZ0EduIEbNALM3ysg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_1_0ogMZ0EduIEbNALM3ysg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_1_0ogcZ0EduIEbNALM3ysg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_1_0ogsZ0EduIEbNALM3ysg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_1_0og8Z0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_1_0ohMZ0EduIEbNALM3ysg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_1_0ohcZ0EduIEbNALM3ysg" filtering="Automatic" filteringKeys="private"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_1_0ohsZ0EduIEbNALM3ysg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_1_0oh8Z0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_1_0oiMZ0EduIEbNALM3ysg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_1_0oicZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_1_q3gcZ0EduIEbNALM3ysg" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1_q3gsZ0EduIEbNALM3ysg" x="2510" y="11947"/>
+  </children>
+  <children xmi:id="_2AkPYMZ0EduIEbNALM3ysg" sourceEdges="_2KZg2MZ0EduIEbNALM3ysg _2KZg4MZ0EduIEbNALM3ysg _2KZg6MZ0EduIEbNALM3ysg _2KjR0MZ0EduIEbNALM3ysg _2KjR2MZ0EduIEbNALM3ysg _2KjR4MZ0EduIEbNALM3ysg" targetEdges="_2KjR6MZ0EduIEbNALM3ysg">
+    <children xmi:id="_2AkPY8Z0EduIEbNALM3ysg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_2AkPZMZ0EduIEbNALM3ysg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_2AkPZcZ0EduIEbNALM3ysg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2AkPZsZ0EduIEbNALM3ysg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2AkPZ8Z0EduIEbNALM3ysg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2AkPaMZ0EduIEbNALM3ysg" filtering="Automatic" filteringKeys="private"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2AkPacZ0EduIEbNALM3ysg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2AkPasZ0EduIEbNALM3ysg" filtering="Automatic" filteringKeys="private"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2AkPa8Z0EduIEbNALM3ysg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2AkPbMZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2AkPbcZ0EduIEbNALM3ysg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_2AkPbsZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_2AkPYcZ0EduIEbNALM3ysg" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2AkPYsZ0EduIEbNALM3ysg" x="7979" y="4079"/>
+  </children>
+  <children xmi:id="_2BmxMMZ0EduIEbNALM3ysg" targetEdges="_2KjR2MZ0EduIEbNALM3ysg">
+    <children xmi:id="_2BmxM8Z0EduIEbNALM3ysg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValue[jcu^name=DetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_2BwiMMZ0EduIEbNALM3ysg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_2BwiMcZ0EduIEbNALM3ysg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValue[jcu^name=DetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2BwiMsZ0EduIEbNALM3ysg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValue[jcu^name=DetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2BwiM8Z0EduIEbNALM3ysg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2BwiNMZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValue[jcu^name=DetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2BwiNcZ0EduIEbNALM3ysg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2BwiNsZ0EduIEbNALM3ysg" filtering="Automatic" filteringKeys="private"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValue[jcu^name=DetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2BwiN8Z0EduIEbNALM3ysg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2BwiOMZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValue[jcu^name=DetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2BwiOcZ0EduIEbNALM3ysg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_2BwiOsZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValue[jcu^name=DetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_2BmxMcZ0EduIEbNALM3ysg" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetValue[jcu^name=DetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2BmxMsZ0EduIEbNALM3ysg" x="7329" y="6704"/>
+  </children>
+  <children xmi:id="_2Cp6EMZ0EduIEbNALM3ysg" sourceEdges="_2KjR6MZ0EduIEbNALM3ysg">
+    <children xmi:id="_2Cp6E8Z0EduIEbNALM3ysg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetService[jcu^name=DetService.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_2Cp6FMZ0EduIEbNALM3ysg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_2Cp6FcZ0EduIEbNALM3ysg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetService[jcu^name=DetService.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2Cp6FsZ0EduIEbNALM3ysg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetService[jcu^name=DetService.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2Cp6F8Z0EduIEbNALM3ysg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2Cp6GMZ0EduIEbNALM3ysg" filtering="Automatic" filteringKeys="private"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetService[jcu^name=DetService.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2Cp6GcZ0EduIEbNALM3ysg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2Cp6GsZ0EduIEbNALM3ysg" filtering="Automatic" filteringKeys="private"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetService[jcu^name=DetService.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2Cp6G8Z0EduIEbNALM3ysg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2Cp6HMZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetService[jcu^name=DetService.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2Cp6HcZ0EduIEbNALM3ysg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_2Cp6HsZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetService[jcu^name=DetService.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_2Cp6EcZ0EduIEbNALM3ysg" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetService[jcu^name=DetService.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2Cp6EsZ0EduIEbNALM3ysg" x="8985" y="1456"/>
+  </children>
+  <children xmi:id="_2Diq4MZ0EduIEbNALM3ysg" sourceEdges="_2KsbzcZ0EduIEbNALM3ysg _3KUjh8d2EduIEbNALM3ysg" targetEdges="_2KZg6MZ0EduIEbNALM3ysg _2K2MycZ0EduIEbNALM3ysg">
+    <children xmi:id="_2Diq48Z0EduIEbNALM3ysg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_2Diq5MZ0EduIEbNALM3ysg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_2Diq5cZ0EduIEbNALM3ysg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2Diq5sZ0EduIEbNALM3ysg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2Diq58Z0EduIEbNALM3ysg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2Diq6MZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2Diq6cZ0EduIEbNALM3ysg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2Diq6sZ0EduIEbNALM3ysg" filtering="Automatic" filteringKeys="private"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2Diq68Z0EduIEbNALM3ysg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2Diq7MZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2Diq7cZ0EduIEbNALM3ysg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_2Diq7sZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_2Diq4cZ0EduIEbNALM3ysg" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2Diq4sZ0EduIEbNALM3ysg" x="10198" y="9327"/>
+  </children>
+  <children xmi:id="_2GhtcMZ0EduIEbNALM3ysg" sourceEdges="_2Ksb3MZ0EduIEbNALM3ysg" targetEdges="_3KUjlsd2EduIEbNALM3ysg">
+    <children xmi:id="_2Ghtc8Z0EduIEbNALM3ysg" type="ImageCompartment">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=DetElement[jcu^name=DetElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_2GhtdMZ0EduIEbNALM3ysg" width="530" height="530"/>
+    </children>
+    <children xmi:id="_2GhtdcZ0EduIEbNALM3ysg" type="Stereotype">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=DetElement[jcu^name=DetElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2GhtdsZ0EduIEbNALM3ysg" type="Kind">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=DetElement[jcu^name=DetElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2Ghtd8Z0EduIEbNALM3ysg" type="Name">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=DetElement[jcu^name=DetElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2GhteMZ0EduIEbNALM3ysg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2GhtecZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=DetElement[jcu^name=DetElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2GhtesZ0EduIEbNALM3ysg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2Ghte8Z0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=DetElement[jcu^name=DetElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2GhtfMZ0EduIEbNALM3ysg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2GhtfcZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=DetElement[jcu^name=DetElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLClassifierStyle" xmi:id="_2GhtccZ0EduIEbNALM3ysg" showListSignature="true" showStereotype="Label" useClassifierShape="true"/>
+    <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=DetElement[jcu^name=DetElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2GhtcsZ0EduIEbNALM3ysg" x="2570" y="9320"/>
+  </children>
+  <children xmi:id="_2HbFUMZ0EduIEbNALM3ysg" sourceEdges="_2K2MwcZ0EduIEbNALM3ysg _2K2MycZ0EduIEbNALM3ysg" targetEdges="_2KjR0MZ0EduIEbNALM3ysg _2K2MwcZ0EduIEbNALM3ysg">
+    <children xmi:id="_2HbFU8Z0EduIEbNALM3ysg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_2HbFVMZ0EduIEbNALM3ysg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_2HbFVcZ0EduIEbNALM3ysg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2HbFVsZ0EduIEbNALM3ysg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2HbFV8Z0EduIEbNALM3ysg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2HbFWMZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2HbFWcZ0EduIEbNALM3ysg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2HbFWsZ0EduIEbNALM3ysg" filtering="Automatic" filteringKeys="private"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2HbFW8Z0EduIEbNALM3ysg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2HbFXMZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2HbFXcZ0EduIEbNALM3ysg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_2HbFXsZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_2HbFUcZ0EduIEbNALM3ysg" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2HbFUsZ0EduIEbNALM3ysg" x="10349" y="6701"/>
+  </children>
+  <children xmi:id="_2IKsMMZ0EduIEbNALM3ysg" sourceEdges="_2K2M0cZ0EduIEbNALM3ysg" targetEdges="_2KZg4MZ0EduIEbNALM3ysg _2KsbzcZ0EduIEbNALM3ysg">
+    <children xmi:id="_2IKsM8Z0EduIEbNALM3ysg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_2IKsNMZ0EduIEbNALM3ysg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_2IKsNcZ0EduIEbNALM3ysg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2IKsNsZ0EduIEbNALM3ysg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2IKsN8Z0EduIEbNALM3ysg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2IKsOMZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2IKsOcZ0EduIEbNALM3ysg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2IKsOsZ0EduIEbNALM3ysg" filtering="Automatic" filteringKeys="private"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2IKsO8Z0EduIEbNALM3ysg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2IKsPMZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2IKsPcZ0EduIEbNALM3ysg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_2IKsPsZ0EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_2IKsMcZ0EduIEbNALM3ysg" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2IKsMsZ0EduIEbNALM3ysg" x="10890" y="11951"/>
+  </children>
+  <children xmi:id="_3GcwIMd2EduIEbNALM3ysg" sourceEdges="_3KUjlsd2EduIEbNALM3ysg" targetEdges="_3KUjgMd2EduIEbNALM3ysg _3KUjh8d2EduIEbNALM3ysg">
+    <children xmi:id="_3GcwI8d2EduIEbNALM3ysg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_3GcwJMd2EduIEbNALM3ysg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_3GcwJcd2EduIEbNALM3ysg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_3GcwJsd2EduIEbNALM3ysg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_3GcwJ8d2EduIEbNALM3ysg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_3GcwKMd2EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_3GcwKcd2EduIEbNALM3ysg" visible="false" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_3GcwKsd2EduIEbNALM3ysg" filtering="Automatic" filteringKeys="private"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_3GcwK8d2EduIEbNALM3ysg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_3GcwLMd2EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_3GcwLcd2EduIEbNALM3ysg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_3GcwLsd2EduIEbNALM3ysg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_3GcwIcd2EduIEbNALM3ysg" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3GcwIsd2EduIEbNALM3ysg" x="2304" y="6706"/>
+  </children>
+  <styles xmi:type="umlnotation:UMLDiagramStyle" xmi:id="_zBiSccZ0EduIEbNALM3ysg"/>
+  <edges xmi:id="_2KQW78Z0EduIEbNALM3ysg" source="_1-xfoMZ0EduIEbNALM3ysg" target="_1-xfoMZ0EduIEbNALM3ysg">
+    <children xmi:id="_2KQW8sZ0EduIEbNALM3ysg" visible="false" type="KindLabel">
+      <children xmi:id="_2KQW9MZ0EduIEbNALM3ysg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2KQW9sZ0EduIEbNALM3ysg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2KQW9cZ0EduIEbNALM3ysg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2KQW88Z0EduIEbNALM3ysg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_2KQW8MZ0EduIEbNALM3ysg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2KQW8cZ0EduIEbNALM3ysg" points="[1985, 212, 1985, 212]$[2249, 212, 2249, 212]$[2091, 1138, 2091, 1138]$[1297, 1111, 1297, 1111]$[556, 503, 556, 503]"/>
+  </edges>
+  <edges xmi:id="_2KZg0MZ0EduIEbNALM3ysg" source="_1_q3gMZ0EduIEbNALM3ysg" target="_1-xfoMZ0EduIEbNALM3ysg">
+    <children xmi:id="_2KZg08Z0EduIEbNALM3ysg" visible="false" type="KindLabel">
+      <children xmi:id="_2KZg1cZ0EduIEbNALM3ysg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2KZg18Z0EduIEbNALM3ysg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2KZg1sZ0EduIEbNALM3ysg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2KZg1MZ0EduIEbNALM3ysg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_2KZg0cZ0EduIEbNALM3ysg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSetValue[jcu^name=DetValueSetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2KZg0sZ0EduIEbNALM3ysg" points="[-1, 516, 1415, -2104]$[-1430, 2104, -14, -516]"/>
+  </edges>
+  <edges xmi:id="_2KZg2MZ0EduIEbNALM3ysg" source="_2AkPYMZ0EduIEbNALM3ysg" target="_1tC2cMZ0EduIEbNALM3ysg">
+    <children xmi:id="_2KZg28Z0EduIEbNALM3ysg" visible="false" type="KindLabel">
+      <children xmi:id="_2KZg3cZ0EduIEbNALM3ysg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2KZg38Z0EduIEbNALM3ysg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2KZg3sZ0EduIEbNALM3ysg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2KZg3MZ0EduIEbNALM3ysg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_2KZg2cZ0EduIEbNALM3ysg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2KZg2sZ0EduIEbNALM3ysg" points="[-13, 516, 3479, -9962]$[-3506, 2103, -14, -8375]$[-3506, 9962, -14, -516]"/>
+  </edges>
+  <edges xmi:id="_2KZg4MZ0EduIEbNALM3ysg" source="_2AkPYMZ0EduIEbNALM3ysg" target="_2IKsMMZ0EduIEbNALM3ysg">
+    <children xmi:id="_2KZg48Z0EduIEbNALM3ysg" visible="false" type="KindLabel">
+      <children xmi:id="_2KZg5cZ0EduIEbNALM3ysg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2KZg58Z0EduIEbNALM3ysg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2KZg5sZ0EduIEbNALM3ysg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2KZg5MZ0EduIEbNALM3ysg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_2KZg4cZ0EduIEbNALM3ysg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2KZg4sZ0EduIEbNALM3ysg" points="[-13, 516, -1693, -7342]$[3982, 2103, 2302, -5755]$[3982, 5756, 2302, -2102]$[1680, 7342, 0, -516]"/>
+  </edges>
+  <edges xmi:id="_2KZg6MZ0EduIEbNALM3ysg" source="_2AkPYMZ0EduIEbNALM3ysg" target="_2Diq4MZ0EduIEbNALM3ysg">
+    <children xmi:id="_2KZg68Z0EduIEbNALM3ysg" visible="false" type="KindLabel">
+      <children xmi:id="_2KZg7cZ0EduIEbNALM3ysg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2KZg78Z0EduIEbNALM3ysg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2KZg7sZ0EduIEbNALM3ysg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2KZg7MZ0EduIEbNALM3ysg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_2KZg6cZ0EduIEbNALM3ysg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2KZg6sZ0EduIEbNALM3ysg" points="[-13, 516, -1693, -4723]$[3559, 2103, 1879, -3136]$[3559, 3136, 1879, -2103]$[1680, 4723, 0, -516]"/>
+  </edges>
+  <edges xmi:id="_2KjR0MZ0EduIEbNALM3ysg" source="_2AkPYMZ0EduIEbNALM3ysg" target="_2HbFUMZ0EduIEbNALM3ysg">
+    <children xmi:id="_2KjR08Z0EduIEbNALM3ysg" visible="false" type="KindLabel">
+      <children xmi:id="_2KjR1cZ0EduIEbNALM3ysg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2KjR18Z0EduIEbNALM3ysg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2KjR1sZ0EduIEbNALM3ysg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2KjR1MZ0EduIEbNALM3ysg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_2KjR0cZ0EduIEbNALM3ysg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2KjR0sZ0EduIEbNALM3ysg" points="[-13, 516, -1561, -2103]$[1548, 2103, 0, -516]"/>
+  </edges>
+  <edges xmi:id="_2KjR2MZ0EduIEbNALM3ysg" source="_2AkPYMZ0EduIEbNALM3ysg" target="_2BmxMMZ0EduIEbNALM3ysg">
+    <children xmi:id="_2KjR28Z0EduIEbNALM3ysg" visible="false" type="KindLabel">
+      <children xmi:id="_2KjR3cZ0EduIEbNALM3ysg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValue[jcu^name=DetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2KjR38Z0EduIEbNALM3ysg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValue[jcu^name=DetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2KjR3sZ0EduIEbNALM3ysg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValue[jcu^name=DetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValue[jcu^name=DetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2KjR3MZ0EduIEbNALM3ysg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_2KjR2cZ0EduIEbNALM3ysg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValue[jcu^name=DetValue.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2KjR2sZ0EduIEbNALM3ysg" points="[-13, 516, 1760, -2103]$[-1786, 2103, -13, -516]"/>
+  </edges>
+  <edges xmi:id="_2KjR4MZ0EduIEbNALM3ysg" source="_2AkPYMZ0EduIEbNALM3ysg" target="_1_q3gMZ0EduIEbNALM3ysg">
+    <children xmi:id="_2KjR48Z0EduIEbNALM3ysg" visible="false" type="KindLabel">
+      <children xmi:id="_2KjR5cZ0EduIEbNALM3ysg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2KjR58Z0EduIEbNALM3ysg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2KjR5sZ0EduIEbNALM3ysg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2KjR5MZ0EduIEbNALM3ysg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_2KjR4cZ0EduIEbNALM3ysg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2KjR4sZ0EduIEbNALM3ysg" points="[-13, 516, 6323, -7342]$[-3929, 2103, 2407, -5755]$[-3929, 5756, 2407, -2102]$[-6337, 7342, -1, -516]"/>
+  </edges>
+  <edges xmi:id="_2KjR6MZ0EduIEbNALM3ysg" source="_2Cp6EMZ0EduIEbNALM3ysg" target="_2AkPYMZ0EduIEbNALM3ysg">
+    <children xmi:id="_2KjR68Z0EduIEbNALM3ysg" visible="false" type="KindLabel">
+      <children xmi:id="_2KjR7cZ0EduIEbNALM3ysg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetService[jcu^name=DetService.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2KjR78Z0EduIEbNALM3ysg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetService[jcu^name=DetService.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2KjR7sZ0EduIEbNALM3ysg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetService[jcu^name=DetService.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetService[jcu^name=DetService.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2KjR7MZ0EduIEbNALM3ysg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_2KjR6cZ0EduIEbNALM3ysg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetService[jcu^name=DetService.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DataElementTaxonomy[jcu^name=DataElementTaxonomy.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2KjR6sZ0EduIEbNALM3ysg" points="[-13, 516, -13, -2103]$[-13, 2103, -13, -516]"/>
+  </edges>
+  <edges xmi:id="_2KsbzcZ0EduIEbNALM3ysg" source="_2Diq4MZ0EduIEbNALM3ysg" target="_2IKsMMZ0EduIEbNALM3ysg">
+    <children xmi:id="_2Ksb0MZ0EduIEbNALM3ysg" visible="false" type="KindLabel">
+      <children xmi:id="_2Ksb0sZ0EduIEbNALM3ysg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2Ksb1MZ0EduIEbNALM3ysg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2Ksb08Z0EduIEbNALM3ysg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2Ksb0cZ0EduIEbNALM3ysg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_2KsbzsZ0EduIEbNALM3ysg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2Ksbz8Z0EduIEbNALM3ysg" points="[0, 516, 0, -2103]$[0, 2103, 0, -516]"/>
+  </edges>
+  <edges xmi:id="_2Ksb3MZ0EduIEbNALM3ysg" source="_2GhtcMZ0EduIEbNALM3ysg" target="_1_q3gMZ0EduIEbNALM3ysg">
+    <children xmi:id="_2Ksb38Z0EduIEbNALM3ysg" visible="false" type="KindLabel">
+      <children xmi:id="_2Ksb4cZ0EduIEbNALM3ysg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetElement[jcu^name=DetElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2K2MwMZ0EduIEbNALM3ysg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetElement[jcu^name=DetElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2Ksb4sZ0EduIEbNALM3ysg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetElement[jcu^name=DetElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetElement[jcu^name=DetElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2Ksb4MZ0EduIEbNALM3ysg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_2Ksb3cZ0EduIEbNALM3ysg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetElement[jcu^name=DetElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetValueSet[jcu^name=DetValueSet.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2Ksb3sZ0EduIEbNALM3ysg" points="[-13, 516, 26, -2103]$[-40, 2103, -1, -516]"/>
+  </edges>
+  <edges xmi:id="_2K2MwcZ0EduIEbNALM3ysg" source="_2HbFUMZ0EduIEbNALM3ysg" target="_2HbFUMZ0EduIEbNALM3ysg">
+    <children xmi:id="_2K2MxMZ0EduIEbNALM3ysg" visible="false" type="KindLabel">
+      <children xmi:id="_2K2MxsZ0EduIEbNALM3ysg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2K2MyMZ0EduIEbNALM3ysg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2K2Mx8Z0EduIEbNALM3ysg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2K2MxcZ0EduIEbNALM3ysg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_2K2MwsZ0EduIEbNALM3ysg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2K2Mw8Z0EduIEbNALM3ysg" points="[1587, 79, 1587, 79]$[2990, 79, 2990, 79]$[2699, 1111, 2699, 1111]$[1217, 1085, 1217, 1085]$[555, 502, 555, 502]"/>
+  </edges>
+  <edges xmi:id="_2K2MycZ0EduIEbNALM3ysg" source="_2HbFUMZ0EduIEbNALM3ysg" target="_2Diq4MZ0EduIEbNALM3ysg">
+    <children xmi:id="_2K2MzMZ0EduIEbNALM3ysg" visible="false" type="KindLabel">
+      <children xmi:id="_2K2MzsZ0EduIEbNALM3ysg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2K2M0MZ0EduIEbNALM3ysg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2K2Mz8Z0EduIEbNALM3ysg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2K2MzcZ0EduIEbNALM3ysg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_2K2MysZ0EduIEbNALM3ysg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetCategory[jcu^name=DetCategory.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2K2My8Z0EduIEbNALM3ysg" points="[0, 516, -132, -2104]$[132, 2104, 0, -516]"/>
+  </edges>
+  <edges xmi:id="_2K2M0cZ0EduIEbNALM3ysg" source="_2IKsMMZ0EduIEbNALM3ysg" target="_1tC2cMZ0EduIEbNALM3ysg">
+    <children xmi:id="_2K2M1MZ0EduIEbNALM3ysg" visible="false" type="KindLabel">
+      <children xmi:id="_2K2M1sZ0EduIEbNALM3ysg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2K2M2MZ0EduIEbNALM3ysg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2K2M18Z0EduIEbNALM3ysg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2K2M1cZ0EduIEbNALM3ysg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_2K2M0sZ0EduIEbNALM3ysg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=DetAde[jcu^name=DetAde.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2K2M08Z0EduIEbNALM3ysg" points="[0, 516, 5172, -2104]$[-5186, 2104, -14, -516]"/>
+  </edges>
+  <edges xmi:id="_3KUjgMd2EduIEbNALM3ysg" source="_1tC2cMZ0EduIEbNALM3ysg" target="_3GcwIMd2EduIEbNALM3ysg">
+    <children xmi:id="_3KUjg8d2EduIEbNALM3ysg" type="NameLabel">
+      <children xmi:id="_3KUjhcd2EduIEbNALM3ysg" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_3KUjhsd2EduIEbNALM3ysg" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3KUjhMd2EduIEbNALM3ysg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_3KUjgcd2EduIEbNALM3ysg" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=DetAdeElement[jcu^name=DetAdeElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3KUjgsd2EduIEbNALM3ysg" points="[-14, -516, 2712, 7343]$[-861, -2103, 1865, 5756]$[-861, -5755, 1865, 2104]$[-2739, -7343, -13, 516]"/>
+  </edges>
+  <edges xmi:id="_3KUjh8d2EduIEbNALM3ysg" source="_2Diq4MZ0EduIEbNALM3ysg" target="_3GcwIMd2EduIEbNALM3ysg">
+    <children xmi:id="_3KUjisd2EduIEbNALM3ysg" type="NameLabel">
+      <children xmi:id="_3KUjjMd2EduIEbNALM3ysg" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_3KUjjcd2EduIEbNALM3ysg" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3KUji8d2EduIEbNALM3ysg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_3KUjiMd2EduIEbNALM3ysg" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=DetDataElement[jcu^name=DetDataElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3KUjicd2EduIEbNALM3ysg" points="[0, -516, 7898, 2104]$[-7911, -2104, -13, 516]"/>
+  </edges>
+  <edges xmi:id="_3KUjlsd2EduIEbNALM3ysg" source="_3GcwIMd2EduIEbNALM3ysg" target="_2GhtcMZ0EduIEbNALM3ysg">
+    <children xmi:id="_3KUjmcd2EduIEbNALM3ysg" type="NameLabel">
+      <children xmi:id="_3KUjm8d2EduIEbNALM3ysg" type="Stereotype">
+        <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetElement[jcu^name=DetElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_3KUjnMd2EduIEbNALM3ysg" type="Name">
+        <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetElement[jcu^name=DetElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetElement[jcu^name=DetElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3KUjmsd2EduIEbNALM3ysg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_3KUjl8d2EduIEbNALM3ysg" showStereotype="Text"/>
+    <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=DetElementBase[jcu^name=DetElementBase.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=DetElement[jcu^name=DetElement.java[jpack^name=com.gulfstreambio.kc.det[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3KUjmMd2EduIEbNALM3ysg" points="[-13, 516, 66, -2104]$[-92, 2104, -13, -516]"/>
+  </edges>
+</notation:Diagram>

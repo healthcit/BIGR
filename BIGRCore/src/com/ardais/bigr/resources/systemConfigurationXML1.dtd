@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.4 U (http://www.xmlspy.com) by John (Ardais Corporation) -->
+<!ELEMENT systemConfiguration (conceptList*, simpleList*, legalValueSet*, sampleTypeConfiguration, derivativeOperationConfiguration)>
+<!ELEMENT conceptList (concept+)>
+<!ATTLIST conceptList
+	name ID #REQUIRED
+>
+<!ELEMENT concept EMPTY>
+<!ATTLIST concept
+	cui CDATA #REQUIRED
+	cuiDescription CDATA #IMPLIED
+>
+<!ELEMENT simpleList (listItem+)>
+<!ATTLIST simpleList
+	name ID #REQUIRED
+>
+<!ELEMENT listItem EMPTY>
+<!ATTLIST listItem
+	item CDATA #REQUIRED
+>
+<!ELEMENT legalValueSet (legalValue+)>
+<!ATTLIST legalValueSet
+	name ID #REQUIRED
+>
+<!ELEMENT legalValue EMPTY>
+<!ATTLIST legalValue
+	value CDATA #REQUIRED
+	displayValue CDATA #REQUIRED
+>
+<!ELEMENT sampleTypeConfiguration (sampleType+)>
+<!ELEMENT sampleType (storageType+)>
+<!ATTLIST sampleType
+	cui CDATA #REQUIRED
+	cuiDescription CDATA #IMPLIED
+>
+<!ELEMENT storageType EMPTY>
+<!ATTLIST storageType
+	cui CDATA #REQUIRED
+	cuiDescription CDATA #IMPLIED
+>
+<!ELEMENT derivativeOperationConfiguration (derivativeOperation+)>
+<!ELEMENT derivativeOperation (parentSampleType+)>
+<!ATTLIST derivativeOperation
+	cui CDATA #REQUIRED
+	cuiDescription CDATA #IMPLIED
+	multipleParents (true | false) "false"
+>
+<!ELEMENT parentSampleType (childSampleType+)>
+<!ATTLIST parentSampleType
+	cui CDATA #REQUIRED
+	cuiDescription CDATA #IMPLIED
+>
+<!ELEMENT childSampleType EMPTY>
+<!ATTLIST childSampleType
+	cui CDATA #REQUIRED
+	cuiDescription CDATA #IMPLIED
+>

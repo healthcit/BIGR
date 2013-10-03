@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<!-- FileName: kcFormDefinitionXML1.dtd-->
+<!-- -->
+<!ELEMENT formDefinition (formElementDefinitions, valueSetDefinitions?)>
+<!ATTLIST formDefinition
+	name CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT formElementDefinitions (categoryDefinition+ | (dataElementDefinition | hostElement)+)>
+<!-- -->
+<!ELEMENT categoryDefinition (categoryDefinition+ | (dataElementDefinition | hostElement)+)>
+<!ATTLIST categoryDefinition
+	displayName CDATA #REQUIRED
+	categoryType (page | heading) #REQUIRED
+>
+<!-- -->
+<!ELEMENT dataElementDefinition (adeElementDefinition*, tag*, calculation?)>
+<!ATTLIST dataElementDefinition
+	cui CDATA #REQUIRED
+	required (true | false) "false"
+	displayName CDATA #IMPLIED
+	standardValueSetId IDREF #IMPLIED
+	narrowValueSetId IDREF #IMPLIED
+	displayStandardValueSet (true | false) "false"
+>
+<!-- -->
+<!ELEMENT hostElement (tag*)>
+<!ATTLIST hostElement 
+	hostId CDATA #REQUIRED
+	required (true | false) "false"
+	displayName CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT valueSetDefinitions (valueSetDefinition+)>
+<!-- -->
+<!ELEMENT valueSetDefinition (valueDefinition+)>
+<!ATTLIST valueSetDefinition
+	id ID #REQUIRED
+>
+<!-- -->
+<!ELEMENT valueDefinition (valueDefinition*)>
+<!ATTLIST valueDefinition
+	cui CDATA #REQUIRED
+	displayName CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT adeElementDefinition EMPTY >
+<!ATTLIST adeElementDefinition 
+	cui CDATA #REQUIRED
+	displayName CDATA #IMPLIED
+>  
+<!-- -->
+<!ELEMENT tag EMPTY>
+<!ATTLIST tag
+	type CDATA #REQUIRED
+	value CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT calculation (calculation | dataElementDefinitionReference | literal)+>
+<!ATTLIST calculation
+	operation (add | subtract | multiply | divide) #REQUIRED
+	convertResultToIntMethod CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT dataElementDefinitionReference EMPTY>
+<!ATTLIST dataElementDefinitionReference
+	cui CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT literal EMPTY>
+<!ATTLIST literal
+  dataType (int | float | date) #REQUIRED
+	value CDATA #REQUIRED
+>
+

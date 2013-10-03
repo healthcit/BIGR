@@ -1,0 +1,52 @@
+#*
+ * This template is for generating the DbAliases.java file for Bigr Library.
+ *#
+package com.ardais.bigr.util.gen;
+
+/**
+ * Contains static constants that contain aliases used for database columns
+ * and tables.
+ * <p>
+ * <b>Developer's Notes</b>
+ * </p>
+ * <p>
+ * This is a generated file. DO NOT MANUALLY EDIT THIS FILE, AS YOUR CHANGES WILL
+ * BE LOST THE NEXT TIME THIS FILE IS GENERATED.  To make changes, modify the 
+ * xml file holding the Bigr Library information
+ *
+ * ${metaData.GenerationMessage}
+ * </p>
+ */
+ 
+public class DbAliases {
+
+    private DbAliases() {
+    }
+
+    //************************************************************
+    //  Table aliases.
+    //************************************************************
+#foreach($table in $metaData.DbTables)
+#foreach($alias in $table.DbAliases)
+    public final static String ${alias.JavaConstant} = "${alias.AliasValue}";
+#end## foreach alias
+#end## foreach table
+
+    //************************************************************
+    //  Column aliases.
+    //************************************************************
+#foreach($table in $metaData.DbTables)
+#if($table.hasDbColumns())
+
+    //------------------------------------------------------------
+    // ${table.TableName} columns
+    //------------------------------------------------------------
+#foreach($column in $table.DbColumns)
+#foreach($alias in $column.DbAliases)
+    public final static String ${alias.JavaConstant} = "${alias.AliasValue}";
+#end## foreach alias
+#end## foreach column
+#end## if table has dbcolumns
+#end## foreach table
+
+}

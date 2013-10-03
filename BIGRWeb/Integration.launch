@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="org.eclipse.jdt.launching.remoteJavaApplication">
+    <stringAttribute key="org.eclipse.debug.core.source_locator_id" value="org.eclipse.jdt.debug.ui.javaSourceLocator"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_CONNECTOR_ID" value="org.eclipse.jdt.launching.socketAttachConnector"/>
+    <stringAttribute key="org.eclipse.debug.ui.target_debug_perspective" value="perspective_default"/>
+    <mapAttribute key="org.eclipse.jdt.launching.CONNECT_MAP">
+        <mapEntry key="port" value="62766"/>
+        <mapEntry key="hostname" value="192.168.1.70"/>
+    </mapAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ALLOW_TERMINATE" value="false"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="BIGRWeb"/>
+    <stringAttribute key="org.eclipse.debug.ui.target_run_perspective" value="perspective_default"/>
+</launchConfiguration>

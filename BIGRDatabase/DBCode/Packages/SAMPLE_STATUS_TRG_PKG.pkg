@@ -1,0 +1,628 @@
+CREATE OR REPLACE package Sample_Status_TRG_PKG as
+  /**************************************************************************
+   * Package of procedure that support the implementation of the triggers
+   * on the ILTDS_SAMPLE_STATUS table -- for example, to populate
+   * denormalized columns in ILTDS_SAMPLE.  There is a lot of complexity here
+   * both because the business rules are complex and we need to work around
+   * the Oracle mutating table problem.
+   *
+   * The mutating table problem shows up because when an UPDATE or DELETE
+   * happens on the status table, we have to do a query on the status table
+   * to find the status values that are most current following the update
+   * or delete.  If you try to query the same table that is being changed
+   * (the one that caused the trigger to fire) in a FOR EACH ROW trigger,
+   * you get the Oracle mutating table error.
+   *
+   * The solution used here is an enhanced version of an approach that
+   * is suggested in many Oracle book.  It uses a package variable that
+   * holds a PL/SQL table object that gets filled by the FOR EACH ROW
+   * trigger with all of the information about rows updated or deleted.
+   * In addition to the FOR EACH ROW trigger, there's also a statement
+   * trigger.  The statement trigger fires after the statement, and reads the
+   * package variable to get the list of all updated/deleted status rows,
+   * and does queries on ILTDS_SAMPLE_STATUS to find the information needed
+   * to update ILTDS_SAMPLE.  Because this second trigger is a statement
+   * trigger, it does not cause a mutating table error.
+   *
+   * There's a third trigger involved:  a statement trigger that fires
+   * before the statement for UPDATE or DELETE that initializes the package's
+   * PL/SQL table variable to an empty table.  While we also empty this
+   * table at the completion of the trigger that fires after the statement
+   * completes, there are certain situations involving exceptions that
+   * require the variable to be initialized in a BEFORE trigger as well.
+   * See the on_sample_status_buds procedure for details on these special
+   * situations.
+   **************************************************************************/
+
+  /* public procedures */
+
+  /*
+   * This is called from the ILTDS_SAMPLE_STATUS After Insert Row trigger.
+   */
+  procedure on_sample_status_air(
+         ip_new_sample_barcode_id      in ILTDS_sample_status.sample_barcode_id%TYPE,
+         ip_new_status_type_code       in ILTDS_sample_status.status_type_code%TYPE,
+         ip_new_sample_status_datetime in ILTDS_sample_status.sample_status_datetime%TYPE);
+
+  /*
+   * This is called from the ILTDS_SAMPLE_STATUS Before Update Or Delete
+   * Statement trigger.
+   *
+   * This is called from a statement trigger that fires
+   * before the statement for UPDATE or DELETE; it initializes the package's
+   * PL/SQL table variable (v_sample_status_changes) to an empty table.
+   * While we also empty this table at the completion of the trigger that
+   * fires after the statement completes (in on_sample_status_auds), there
+   * are certain situations involving exceptions that
+   * require the variable to be initialized in a BEFORE trigger as well.
+   *
+   * For example, suppose a single update statement updates 10 rows.  The
+   * first 5 updates go ok, and the FOR EACH ROW trigger puts five rows
+   * in v_sample_status_changes.  Then the update for the sixth row fails
+   * for some reason, perhaps a constraint violation, and the transaction
+   * rolls back.  In this situation, the AFTER statement trigger never fires,
+   * so on_sample_status_auds is never called, and v_sample_status_changes
+   * would be left with five rows in it that would get processed the next
+   * time on_sample_status_auds was called (which they shouldn't be).
+   * Having this extra procedure that gets called from a BEFORE statement
+   * trigger ensures that v_sample_status_changes is always empty at the
+   * beginning of processing and UPDATE or DELETE statement.
+   */
+  procedure on_sample_status_buds;
+
+  /*
+   * This is called from the ILTDS_SAMPLE_STATUS After Update Or Delete Row
+   * trigger.
+   *
+   * This adds a row to v_sample_status_changes describing the UPDATE or DELETE
+   * involved in the FOR EACH ROW trigger.  The added row indicates whether
+   * it was an UPDATE or DELETE operation, and include details on both the old
+   * and new values in the row.
+   *
+   * It is important that this is called from an AFTER FOR EACH ROW trigger,
+   * not a BEFORE FOR EACH ROW trigger.  If we called it from a BEFORE trigger
+   * and the UPDATE or DELETE failed for some reason (possibly a constraint
+   * violation), the v_sample_status_changes would end up having a row in it
+   * that shouldn't be there.  This is because the BEFORE trigger would have
+   * already completed before the UPDATE or DELETE failed, and the trigger
+   * would have no way of knowing that it needed to remove a row from
+   * v__sample_status_changes.  Calling this from an AFTER FOR EACH ROW
+   * trigger avoids this problem.
+   */
+  procedure on_sample_status_audr(
+       ip_change_operation in CHAR,
+       ip_old_sample_barcode_id      in ILTDS_sample_status.sample_barcode_id%TYPE,
+       ip_old_status_type_code       in ILTDS_sample_status.status_type_code%TYPE,
+       ip_old_sample_status_datetime in ILTDS_sample_status.sample_status_datetime%TYPE,
+       ip_new_sample_barcode_id      in ILTDS_sample_status.sample_barcode_id%TYPE,
+       ip_new_status_type_code       in ILTDS_sample_status.status_type_code%TYPE,
+       ip_new_sample_status_datetime in ILTDS_sample_status.sample_status_datetime%TYPE);
+
+  /*
+   * This is called from the ILTDS_SAMPLE_STATUS After Update Or Delete
+   * Statement trigger.
+   *
+   * This processes all of the information that on_sample_status_audr
+   * placed in v_sample_status_changes.  It looks up the latest status
+   * information in the status categories affected by the change and updates
+   * ILTDS_SAMPLE accordingly.
+   */
+  procedure on_sample_status_auds;
+  
+  /*
+   * This is a procedure that can be called to change all ocurrences
+   * of an existing status value to a new value.  To avoid extent problems 
+   * that can occur when using this method (due to the potentially large 
+   * number of rows involved), it takes in a parameter allowing the caller 
+   * to specify the number of rows to update before issuing a commit.  
+   * Passing a value less than 1 in this parameter will cause this method 
+   * to process all rows before doing a commit.
+   */
+  procedure replace_status_type_code(
+         ip_old_code in ILTDS_sample_status.status_type_code%TYPE,
+         ip_new_code in ILTDS_sample_status.status_type_code%TYPE,
+         ip_records_before_commit in INTEGER);
+
+end Sample_Status_TRG_PKG;
+/
+CREATE OR REPLACE package body Sample_Status_TRG_PKG as
+
+  type sample_status_change is record (
+       change_operation CHAR(1), -- U (update) or D (delete)
+       old_sample_barcode_id      ILTDS_sample_status.sample_barcode_id%TYPE,
+       old_status_type_code       ILTDS_sample_status.status_type_code%TYPE,
+       old_sample_status_datetime ILTDS_sample_status.sample_status_datetime%TYPE,
+       new_sample_barcode_id      ILTDS_sample_status.sample_barcode_id%TYPE,
+       new_status_type_code       ILTDS_sample_status.status_type_code%TYPE,
+       new_sample_status_datetime ILTDS_sample_status.sample_status_datetime%TYPE
+       );
+
+  type sample_status_changes is table of sample_status_change index by binary_integer;
+
+  v_sample_status_changes sample_status_changes;
+  v_sample_status_empty   sample_status_changes;
+
+  /*
+   * Return a string indicating the category of the supplied status.  The
+   * returned category will be one of SALES, INVENTORY, QC, PROJECT or OTHER.
+   */
+  function sample_status_category(ip_status_type_code in ILTDS_sample_status.status_type_code%TYPE)
+  return VARCHAR2
+  is
+  begin
+       IF ((ip_status_type_code = 'ESSOLD')
+           OR (ip_status_type_code = 'ESSHIPPED')
+           OR (ip_status_type_code = 'GENRECALLED')
+           OR (ip_status_type_code = 'GENRELEASED')
+           OR (ip_status_type_code = 'ADDTOCART')) then
+
+           return 'SALES';
+
+       ELSIF (ip_status_type_code like 'QC%') then
+
+           return 'QC';
+
+       ELSIF ((ip_status_type_code = 'ARCOCASEPULL')
+              OR (ip_status_type_code = 'ARCOCONSREV')
+              OR (ip_status_type_code = 'COCONSUMED')
+              OR (ip_status_type_code = 'MICOCASEPULL')
+              OR (ip_status_type_code = 'MICOCONSREV')
+              OR (ip_status_type_code = 'RNDREQUEST')
+              OR (ip_status_type_code = 'ARCOOTHER')
+              OR (ip_status_type_code = 'MICOOTHER')
+              OR (ip_status_type_code = 'ARMVTOPATH')
+              OR (ip_status_type_code = 'CORND')
+			  OR (ip_status_type_code = 'REQUESTED')
+			  OR (ip_status_type_code = 'CHECKEDOUT')
+			  OR (ip_status_type_code = 'BOXSCAN')
+			  OR (ip_status_type_code = 'TRANSFER')) then
+
+           return 'INVENTORY';
+
+       ELSIF ((ip_status_type_code = 'PRJADDED')
+              OR (ip_status_type_code = 'PRJREMOVED')) then
+
+           return 'PROJECT';
+
+       ELSE
+           return 'OTHER';
+       END IF;
+  end;
+
+  /*
+   * This is called from the ILTDS_SAMPLE_STATUS After Insert Row trigger.
+   */
+  procedure on_sample_status_air(
+         ip_new_sample_barcode_id      in ILTDS_sample_status.sample_barcode_id%TYPE,
+         ip_new_status_type_code       in ILTDS_sample_status.status_type_code%TYPE,
+         ip_new_sample_status_datetime in ILTDS_sample_status.sample_status_datetime%TYPE)
+  is
+      v_new_status_category VARCHAR2(20) := sample_status_category(ip_new_status_type_code);
+      v_status iltds_sample_status.status_type_code%TYPE := null;
+      v_status_date iltds_sample_status.sample_status_datetime%TYPE := null;
+  begin
+       --DECLARE THE RULES FOR SALES STATUSES
+       IF (v_new_status_category = 'SALES') then
+
+           --grab the current sales status and date
+           select sales_status, sales_status_date
+           into v_status, v_status_date
+           from ILTDS_sample
+           where sample_barcode_id = ip_new_sample_barcode_id;
+		   
+		   if ((v_status_date <= ip_new_sample_status_datetime) or (v_status_date is null))
+		   then
+
+               --Update the sample table
+               update ILTDS_sample
+               set sales_status = ip_new_status_type_code,
+                   sales_status_date = ip_new_sample_status_datetime
+               where sample_barcode_id = ip_new_sample_barcode_id;
+
+           end if;
+
+       --DECLARE THE RULES FOR QC STATUSES
+       ELSIF (v_new_status_category = 'QC') then
+
+           --grab the current qc status and date
+           select qc_status, qc_status_date
+           into v_status, v_status_date
+           from ILTDS_sample
+           where sample_barcode_id = ip_new_sample_barcode_id;
+
+		   if ((v_status_date <= ip_new_sample_status_datetime) or (v_status_date is null))
+		   then
+               --Update the sample table
+               update ILTDS_sample
+               set qc_status = ip_new_status_type_code,
+                   qc_status_date = ip_new_sample_status_datetime
+               where sample_barcode_id = ip_new_sample_barcode_id;
+           end if;
+
+       --DECLARE THE RULES FOR INVENTORY STATUSES
+       ELSIF (v_new_status_category = 'INVENTORY') then
+
+           --grab the current inventory status and date
+           select inv_status, inv_status_date
+           into v_status, v_status_date
+           from ILTDS_sample
+           where sample_barcode_id = ip_new_sample_barcode_id; 
+
+		   if ((v_status_date <= ip_new_sample_status_datetime) or (v_status_date is null))
+		   then
+               --Update the sample table
+               update ILTDS_sample
+               set inv_status = ip_new_status_type_code,
+                   inv_status_date = ip_new_sample_status_datetime
+               where sample_barcode_id = ip_new_sample_barcode_id;
+           end if;
+
+
+       --DECLARE THE RULES FOR PROJECT STATUSES
+       ELSIF (v_new_status_category = 'PROJECT') then
+
+           --grab the current project status and date
+           select project_status, project_status_date
+           into v_status, v_status_date
+           from ILTDS_sample
+           where sample_barcode_id = ip_new_sample_barcode_id;
+
+		   if ((v_status_date <= ip_new_sample_status_datetime) or (v_status_date is null))
+		   then
+
+               --Update the sample table
+               update ILTDS_sample
+               set project_status = ip_new_status_type_code,
+                   project_status_date = ip_new_sample_status_datetime
+               where sample_barcode_id = ip_new_sample_barcode_id;
+
+           end if;
+       END IF;
+  end;
+
+  /*
+   * This is a private procedure that is called for Update and Delete
+   * statements on ILTDS_SAMPLE_STATUS.  It updates the sample columns
+   * for the specified status category for the specified sample, based
+   * on the information currently in ILTDS_SAMPLE_STATUS for that sample.
+   */
+  procedure recompute_sample_status_cols(
+         ip_sample_barcode_id in ILTDS_sample_status.sample_barcode_id%TYPE,
+         ip_status_category   in VARCHAR2)
+  is
+      v_status iltds_sample_status.status_type_code%TYPE := null;
+      v_status_date iltds_sample_status.sample_status_datetime%TYPE := null;
+      v_other_date iltds_sample_status.sample_status_datetime%TYPE := null;
+  begin
+       --DECLARE THE RULES FOR SALES STATUSES
+       if (ip_status_category = 'SALES') then
+
+           begin
+               --grab the latest sales status and date
+               select st0.status_type_code, st0.sample_status_datetime
+               into v_status, v_status_date
+               from ILTDS_sample_status st0
+               where st0.id =
+                 (select max(st1.id)
+                  from ILTDS_sample_status st1
+                  where st1.sample_barcode_id = ip_sample_barcode_id
+                    and st1.status_type_code in ('ESSOLD','ESSHIPPED','GENRECALLED','GENRELEASED','ADDTOCART')
+                    and st1.sample_status_datetime =
+                       (select max(st2.sample_status_datetime) from ILTDS_sample_status st2
+                        where st1.sample_barcode_id = st2.sample_barcode_id
+                          and st2.status_type_code in ('ESSOLD','ESSHIPPED','GENRECALLED','GENRELEASED','ADDTOCART')));
+           exception
+             when NO_DATA_FOUND then
+                 v_status := null;
+                 v_status_date := null;
+           end;
+
+           --Update the sample table
+           update ILTDS_sample
+           set sales_status = v_status,
+               sales_status_date = v_status_date
+           where sample_barcode_id = ip_sample_barcode_id;
+
+       --DECLARE THE RULES FOR QC STATUSES
+       elsif (ip_status_category = 'QC') then
+           -- Set QC_STATUS/QC_STATUS_DATETIME to the status code and
+	   -- date of the latest QC status for the sample.
+
+	   begin
+	       --grab the latest qc status and date
+	       select st0.status_type_code, st0.sample_status_datetime
+	       into v_status, v_status_date
+	       from ILTDS_sample_status st0
+	       where st0.id =
+		 (select max(st1.id)
+		  from ILTDS_sample_status st1
+		  where st1.sample_barcode_id = ip_sample_barcode_id
+		    and st1.status_type_code like 'QC%'
+		    and st1.sample_status_datetime =
+			(select max(st2.sample_status_datetime) from ILTDS_sample_status st2
+			     where st1.sample_barcode_id = st2.sample_barcode_id
+			       and st2.status_type_code like 'QC%'));
+	   exception
+	     when NO_DATA_FOUND then
+		 v_status := null;
+		 v_status_date := null;
+	   end;
+
+           --Update the sample table
+           update ILTDS_sample
+           set qc_status = v_status,
+               qc_status_date = v_status_date
+           where sample_barcode_id = ip_sample_barcode_id;
+
+       --DECLARE THE RULES FOR INVENTORY STATUSES
+       ELSIF (ip_status_category = 'INVENTORY') then
+
+           begin
+               --grab the latest inventory status and date
+               select st0.status_type_code, st0.sample_status_datetime
+               into v_status, v_status_date
+               from ILTDS_sample_status st0
+               where st0.id =
+                 (select max(st1.id)
+                  from ILTDS_sample_status st1
+                  where st1.sample_barcode_id = ip_sample_barcode_id
+                    and st1.status_type_code in ('ARCOCASEPULL','ARCOCONSREV',
+                           'COCONSUMED','MICOCASEPULL','MICOCONSREV',
+                           'RNDREQUEST','ARCOOTHER','MICOOTHER','ARMVTOPATH','CORND',
+						   'REQUESTED', 'CHECKEDOUT', 'BOXSCAN', 'TRANSFER')
+                    and st1.sample_status_datetime =
+                       (select max(st2.sample_status_datetime) from ILTDS_sample_status st2
+                        where st1.sample_barcode_id = st2.sample_barcode_id
+                          and st2.status_type_code in ('ARCOCASEPULL','ARCOCONSREV',
+                               'COCONSUMED','MICOCASEPULL','MICOCONSREV',
+                                'RNDREQUEST','ARCOOTHER','MICOOTHER','ARMVTOPATH','CORND',
+							   'REQUESTED', 'CHECKEDOUT', 'BOXSCAN', 'TRANSFER')));
+          exception
+             when NO_DATA_FOUND then
+                 v_status := null;
+                 v_status_date := null;
+           end;
+
+
+           --Update the sample table
+           update ILTDS_sample
+           set inv_status = v_status,
+               inv_status_date = v_status_date
+           where sample_barcode_id = ip_sample_barcode_id;
+
+       --DECLARE THE RULES FOR PROJECT STATUSES
+       ELSIF (ip_status_category = 'PROJECT') then
+
+           begin
+               --grab the latest project status and date
+               select st0.status_type_code, st0.sample_status_datetime
+               into v_status, v_status_date
+               from ILTDS_sample_status st0
+               where st0.id =
+                 (select max(st1.id)
+                  from ILTDS_sample_status st1
+                  where st1.sample_barcode_id = ip_sample_barcode_id
+                    and st1.status_type_code in ('PRJADDED','PRJREMOVED')
+                    and st1.sample_status_datetime =
+                       (select max(st2.sample_status_datetime) from ILTDS_sample_status st2
+                        where st1.sample_barcode_id = st2.sample_barcode_id
+                          and st2.status_type_code in ('PRJADDED','PRJREMOVED')));
+           exception
+             when NO_DATA_FOUND then
+                 v_status := null;
+                 v_status_date := null;
+           end;
+
+           --Update the sample table
+           update ILTDS_sample
+           set project_status = v_status,
+               project_status_date = v_status_date
+           where sample_barcode_id = ip_sample_barcode_id;
+
+       END IF;
+  end;
+
+  /*
+   * This is called from the ILTDS_SAMPLE_STATUS Before Update Or Delete
+   * Statement trigger.
+   *
+   * This is called from a statement trigger that fires
+   * before the statement for UPDATE or DELETE; it initializes the package's
+   * PL/SQL table variable (v_sample_status_changes) to an empty table.
+   * While we also empty this table at the completion of the trigger that
+   * fires after the statement completes (in on_sample_status_auds), there
+   * are certain situations involving exceptions that
+   * require the variable to be initialized in a BEFORE trigger as well.
+   *
+   * For example, suppose a single update statement updates 10 rows.  The
+   * first 5 updates go ok, and the FOR EACH ROW trigger puts five rows
+   * in v_sample_status_changes.  Then the update for the sixth row fails
+   * for some reason, perhaps a constraint violation, and the transaction
+   * rolls back.  In this situation, the AFTER statement trigger never fires,
+   * so on_sample_status_auds is never called, and v_sample_status_changes
+   * would be left with five rows in it that would get processed the next
+   * time on_sample_status_auds was called (which they shouldn't be).
+   * Having this extra procedure that gets called from a BEFORE statement
+   * trigger ensures that v_sample_status_changes is always empty at the
+   * beginning of processing and UPDATE or DELETE statement.
+   */
+  procedure on_sample_status_buds
+  is
+  begin
+         v_sample_status_changes := v_sample_status_empty;
+  end;
+
+  /*
+   * This is called from the ILTDS_SAMPLE_STATUS After Update Or Delete Row
+   * trigger.
+   *
+   * This adds a row to v_sample_status_changes describing the UPDATE or DELETE
+   * involved in the FOR EACH ROW trigger.  The added row indicates whether
+   * it was an UPDATE or DELETE operation, and include details on both the old
+   * and new values in the row.
+   *
+   * It is important that this is called from an AFTER FOR EACH ROW trigger,
+   * not a BEFORE FOR EACH ROW trigger.  If we called it from a BEFORE trigger
+   * and the UPDATE or DELETE failed for some reason (possibly a constraint
+   * violation), the v_sample_status_changes would end up having a row in it
+   * that shouldn't be there.  This is because the BEFORE trigger would have
+   * already completed before the UPDATE or DELETE failed, and the trigger
+   * would have no way of knowing that it needed to remove a row from
+   * v__sample_status_changes.  Calling this from an AFTER FOR EACH ROW
+   * trigger avoids this problem.
+   */
+  procedure on_sample_status_audr(
+       ip_change_operation in CHAR,
+         ip_old_sample_barcode_id      in ILTDS_sample_status.sample_barcode_id%TYPE,
+         ip_old_status_type_code       in ILTDS_sample_status.status_type_code%TYPE,
+         ip_old_sample_status_datetime in ILTDS_sample_status.sample_status_datetime%TYPE,
+         ip_new_sample_barcode_id      in ILTDS_sample_status.sample_barcode_id%TYPE,
+         ip_new_status_type_code       in ILTDS_sample_status.status_type_code%TYPE,
+         ip_new_sample_status_datetime in ILTDS_sample_status.sample_status_datetime%TYPE)
+  is
+       v_change sample_status_change;
+  begin
+       v_change.change_operation := ip_change_operation;
+
+       v_change.old_sample_barcode_id      := ip_old_sample_barcode_id;
+       v_change.old_status_type_code       := ip_old_status_type_code;
+       v_change.old_sample_status_datetime := ip_old_sample_status_datetime;
+
+       if (ip_change_operation = 'U') then
+          v_change.new_sample_barcode_id      := ip_new_sample_barcode_id;
+          v_change.new_status_type_code       := ip_new_status_type_code;
+          v_change.new_sample_status_datetime := ip_new_sample_status_datetime;
+       end if;
+
+       v_sample_status_changes(nvl(v_sample_status_changes.last, 0) + 1) := v_change;
+  end;
+
+  /*
+   * This is called from the ILTDS_SAMPLE_STATUS After Update Or Delete
+   * Statement trigger.
+   *
+   * This processes all of the information that on_sample_status_audr
+   * placed in v_sample_status_changes.  It looks up the latest status
+   * information in the status categories affected by the change and updates
+   * ILTDS_SAMPLE accordingly.
+   */
+  procedure on_sample_status_auds
+  is
+      i binary_integer;
+      v_change sample_status_change;
+      v_old_sample_barcode ILTDS_SAMPLE.SAMPLE_BARCODE_ID%TYPE := null;
+      v_new_status_category VARCHAR2(20) := null;
+      v_old_status_category VARCHAR2(20) := null;
+  begin
+      i := v_sample_status_changes.first;
+
+      while i is not null loop
+          v_change := v_sample_status_changes(i);
+
+          v_old_sample_barcode := v_change.old_sample_barcode_id;
+          v_old_status_category := sample_status_category(v_change.old_status_type_code);
+
+          recompute_sample_status_cols(v_old_sample_barcode, v_old_status_category);
+
+          if (v_change.change_operation = 'U') then -- this is an UPDATE
+              v_new_status_category := sample_status_category(v_change.new_status_type_code);
+              if ((v_old_sample_barcode <> v_change.new_sample_barcode_id) OR
+                  (v_old_status_category <> v_new_status_category)) then
+                  on_sample_status_air(v_change.new_sample_barcode_id,
+                                       v_change.new_status_type_code,
+                                       v_change.new_sample_status_datetime);
+              end if;
+          end if;
+
+          i := v_sample_status_changes.next(i);
+      end loop;
+
+      v_sample_status_changes := v_sample_status_empty;
+  end;
+  
+  /*
+   * This is a procedure that can be called to change all ocurrences
+   * of an existing status value to a new value.  To avoid extent problems 
+   * that can occur when using this method (due to the potentially large 
+   * number of rows involved), it takes in a parameter allowing the caller 
+   * to specify the number of rows to update before issuing a commit.  
+   * Passing a value less than 1 in this parameter will cause this method 
+   * to process all rows before doing a commit.
+   */
+  procedure replace_status_type_code(
+         ip_old_code in ILTDS_sample_status.status_type_code%TYPE,
+         ip_new_code in ILTDS_sample_status.status_type_code%TYPE,
+         ip_records_before_commit in INTEGER)
+  is
+      v_total_count INTEGER := 0;
+      v_commit_at_count INTEGER := 0;
+      v_processed_count INTEGER := 0;
+      v_updated_count INTEGER := 0;
+	  PARAM_LIST				   EXCEPTION;
+      update_statement  varchar2(500);
+	  cursor records_to_update (p_code varchar2) is select id from iltds_sample_status 
+	                              where status_type_code = p_code;
+
+  begin
+    --make sure all expected parameters are present
+    if (ip_old_code is null or 
+        ip_new_code is null or 
+        ip_records_before_commit is null) then
+	   raise PARAM_LIST;
+	end if;
+	
+	--determine the total number of records to update
+  	select count(1) into v_total_count
+  	from iltds_sample_status 
+  	where status_type_code = ip_old_code;
+	dbms_output.put_line('There are ' || v_total_count || ' rows with a status_type_code value of ' || ip_old_code || ' to be updated.');
+	
+	if (v_total_count > 0) then
+	                              
+	  --if the caller hasn't specified a number of records to process before 
+	  --doing a commit use the total number of records
+	  v_commit_at_count := ip_records_before_commit;
+	  if (v_commit_at_count <= 0) then
+	    v_commit_at_count := v_total_count;
+	  end if;
+	  
+      for rec in records_to_update (ip_old_code) loop
+        -- update the record
+	    update iltds_sample_status set status_type_code = ip_new_code where id = rec.id;
+        
+        --increment the count of records processed
+        v_processed_count := v_processed_count + 1;
+        
+        -- if we have reached the point to do a commit, do it, show the progress,
+        -- and prepare for the next chunk
+        if (v_processed_count = v_commit_at_count) then
+          commit;
+          v_updated_count := v_updated_count + v_processed_count;
+	      dbms_output.put_line('Processed ' || v_updated_count || ' of ' || v_total_count || ' rows.');
+          v_processed_count := 0;
+        end if;
+        
+     end loop;
+     
+     --if necessary, do a commit to handle the last rows updated
+     --(this is necessary when the last "chunk" of rows contains
+     --fewer than v_commit_at_count records)
+     if (v_updated_count < v_total_count) then
+       commit;
+       v_updated_count := v_updated_count + v_processed_count;
+       dbms_output.put_line('Processed ' || v_updated_count || ' of ' || v_total_count || ' rows.');
+     end if;
+	
+	end if;
+	
+  exception
+	when PARAM_LIST then
+      dbms_output.put_line('The parameter list provided is not complete.  Exiting program.');
+	  rollback;
+    when OTHERS then
+      dbms_output.put_line('An error occured during replace_status_type_code: ' || sqlerrm);
+      rollback;
+  end replace_status_type_code;
+
+end Sample_Status_TRG_PKG;
+/

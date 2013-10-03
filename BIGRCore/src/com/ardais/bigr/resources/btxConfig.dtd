@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- FileName: btxConfig.dtd-->
+<!--
+  ** Transaction configuration file for the BTX framework.
+  -->
+
+<!-- -->
+<!ELEMENT btxConfig (transactions)>
+
+<!-- -->
+<!ELEMENT transactions (transaction*)>
+
+<!-- -->
+<!ELEMENT transaction (set-property*)>
+<!ATTLIST transaction
+	type ID #REQUIRED
+	performerType NMTOKEN #REQUIRED
+	performerMethod NMTOKEN #REQUIRED
+	validate (true | false) #IMPLIED
+	validatorMethod NMTOKEN #IMPLIED
+>
+
+<!-- -->
+<!ELEMENT set-property EMPTY>
+<!ATTLIST set-property
+	property NMTOKEN #REQUIRED
+	value NMTOKEN #REQUIRED
+>

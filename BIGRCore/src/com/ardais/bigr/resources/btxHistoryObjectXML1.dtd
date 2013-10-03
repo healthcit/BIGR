@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<!-- File: btxHistoryObjectXML1.dtd -->
+<!-- This specifies version 1 of our XML encoding for BTX History Objects.  See -->
+<!-- BtxHistoryObjectUtils.java and BtxHistoryObjectParser.java for more details. -->
+<!-- -->
+<!ELEMENT historyObject (null | string | attrs | array | idlist | list) >
+<!-- -->
+<!ELEMENT null EMPTY >
+<!-- -->
+<!ELEMENT string (#PCDATA) >
+<!-- -->
+<!ELEMENT attrs (attr*) >
+<!-- -->
+<!ELEMENT attr (null | string | attrs | array | idlist | list) >
+<!ATTLIST attr
+	name CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT idlist (string*) >
+<!-- -->
+<!ELEMENT array (null | string | attrs | array | idlist | list)* >
+<!ATTLIST array
+	length CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT list (null | string | attrs | array | idlist | list)* >
+<!-- -->

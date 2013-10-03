@@ -1,0 +1,150 @@
+#*
+ * This template is for generating the ColumnMetaData.java file for Bigr Library.
+ *#
+ 
+package com.ardais.bigr.query.generator.gen;
+
+/**
+ * Holds metadata about a single column, where a column is defined as a 
+ * fragment of a SQL SELECT clause. <code>ColumnMetaData</code> can return a 
+ * SQL SELECT clause fragment that is appropriate for inclusion in a generated 
+ * query.  Also holds constants that can be used as keys into data structures
+ * that contain <code>ColumnMetaData</code> objects.
+ * <p>
+ * <p>
+ * <b>Developer's Notes</b>
+ * </p>
+ * <p>
+ * This is a generated file. DO NOT MANUALLY EDIT THIS FILE, AS YOUR CHANGES WILL
+ * BE LOST THE NEXT TIME THIS FILE IS GENERATED.  To make changes, modify the 
+ * xml file holding the Bigr Library information
+ *
+ * ${metaData.GenerationMessage}
+ *
+ * 
+ * @see FilterMetaData
+ * @see ProductQueryMetaData
+ * @see TableMetaData
+ * @see com.ardais.bigr.util.DbAliases
+ */
+ 
+ public class ColumnMetaData {
+
+#set( $prevAlias = "xxx" )
+#foreach($column in $metaData.Columns)
+#if ($column.TableAlias != $prevAlias)
+
+  //------------------------------------------------------------
+  // $column.TableAlias keys.
+  //------------------------------------------------------------
+#end
+    public final static String ${column.KeyName} = "${column.Ordering}";    
+#set( $prevAlias = $column.TableAlias )
+#end
+
+#set( $prevAlias = "xxx" )
+#foreach($columnCount in $metaData.ColumnCounts)
+#if ($columnCount.TableAlias != $prevAlias)
+
+  //------------------------------------------------------------
+  // $columnCount.TableAlias keys.
+  //------------------------------------------------------------
+#end
+    public final static String ${columnCount.KeyName} = "${columnCount.Ordering}";    
+#set( $prevAlias = $columnCount.TableAlias )
+#end
+  /**
+  	 * The table alias.
+  	 */
+  private String _tableAlias;
+
+  /**
+   * The actual column name.
+   */
+  private String _column;
+
+  /**
+   * The column alias.  This may be the same as the actual column name.
+   */
+  private String _columnAlias;
+
+  /**
+   * The SQL SELECT fragment for this column.
+   */
+  private String _selectFragment;
+
+  /**
+   * Creates a new <code>ColumnMetaData</code> from the given table alias,
+   * column name and column alias.
+   * 
+   * @param  tableAlias  the database table's alias 
+   * @param  column  the actual column name
+   * @param  columnAlias  the column's alias
+   */
+  public ColumnMetaData(String tableAlias, String column, String columnAlias) {
+    _tableAlias = tableAlias;
+    _column = column;
+    _columnAlias = columnAlias;
+    _selectFragment =
+      (_column.equals(columnAlias))
+        ? tableAlias + "." + column
+        : tableAlias + "." + column + " AS \"" + columnAlias + "\"";
+  }
+
+  /**
+   * Creates a new <code>ColumnMetaData</code> from the given table alias and
+   * column name.  The column will not be aliased.
+   * 
+   * @param  tableAlias  the database table's alias 
+   * @param  column  the actual column name
+   */
+  ColumnMetaData(String tableAlias, String column) {
+    this(tableAlias, column, column);
+  }
+
+  /**
+   * Returns the table's alias.
+   * 
+   * @return  The table's alias.
+   */
+  public String getTableAlias() {
+    return _tableAlias;
+  }
+
+  /**
+   * Returns the column's name.
+   * 
+   * @return  The column's name.
+   */
+  public String getColumn() {
+    return _column;
+  }
+
+  /**
+   * Returns the column's alias.
+   * 
+   * @return  The column's alias.
+   */
+  public String getColumnAlias() {
+    return _columnAlias;
+  }
+
+  /**
+   * Returns the SELECT fragment.
+   * 
+   * @return  The SELECT fragment.
+   */
+  public String getSelectFragment() {
+    return _selectFragment;
+  }
+
+  /**
+   * Sets the selectFragment.
+   * @param selectFragment The selectFragment to set
+   */
+  protected void setSelectFragment(String selectFragment) {
+    _selectFragment = selectFragment;
+  }
+
+}
+ 

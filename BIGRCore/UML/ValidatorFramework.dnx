@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.ibm.com/xtools/1.5.0/Notation" xmlns:uml="http://www.eclipse.org/uml2/1.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.0/Umlnotation" xmi:id="_kWazoBDfEduti79uC5nWLA" type="Freeform">
+  <children xmi:id="_kWazohDfEduti79uC5nWLA" sourceEdges="_kWa0ehDfEduti79uC5nWLA _kWa00BDfEduti79uC5nWLA">
+    <children xmi:id="_kWazoxDfEduti79uC5nWLA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractValidator[jcu^name=AbstractValidator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_kWazpBDfEduti79uC5nWLA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_kWazpRDfEduti79uC5nWLA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractValidator[jcu^name=AbstractValidator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWazphDfEduti79uC5nWLA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractValidator[jcu^name=AbstractValidator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWazpxDfEduti79uC5nWLA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWazqBDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractValidator[jcu^name=AbstractValidator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWazqRDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWazqhDfEduti79uC5nWLA" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWazqxDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractValidator[jcu^name=AbstractValidator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWazrBDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWazrRDfEduti79uC5nWLA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWazrhDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractValidator[jcu^name=AbstractValidator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWazrxDfEduti79uC5nWLA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_kWazsBDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractValidator[jcu^name=AbstractValidator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_kWazsRDfEduti79uC5nWLA" fontHeight="10" fillColor="13565951" lineColor="4009615"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractValidator[jcu^name=AbstractValidator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWazshDfEduti79uC5nWLA" x="1164" y="6668"/>
+  </children>
+  <children xmi:id="_kWazsxDfEduti79uC5nWLA" targetEdges="_kWa0ehDfEduti79uC5nWLA _kWa0gRDfEduti79uC5nWLA _kWa0iBDfEduti79uC5nWLA _kWa02BDfEduti79uC5nWLA">
+    <children xmi:id="_kWaztBDfEduti79uC5nWLA" type="ImageCompartment">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_kWaztRDfEduti79uC5nWLA" width="530" height="530"/>
+    </children>
+    <children xmi:id="_kWazthDfEduti79uC5nWLA" type="Stereotype">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWaztxDfEduti79uC5nWLA" type="Kind">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWazuBDfEduti79uC5nWLA" type="Name">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWazuRDfEduti79uC5nWLA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWazuhDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWazuxDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWazvBDfEduti79uC5nWLA" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWazvRDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWazvhDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWazvxDfEduti79uC5nWLA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWazwBDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLClassifierStyle" xmi:id="_kWazwRDfEduti79uC5nWLA" fontHeight="10" fillColor="13565951" lineColor="4009615" useClassifierShape="true"/>
+    <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWazwhDfEduti79uC5nWLA" x="12012" y="2302"/>
+  </children>
+  <children xmi:id="_kWazwxDfEduti79uC5nWLA" sourceEdges="_kWa0gRDfEduti79uC5nWLA">
+    <children xmi:id="_kWazxBDfEduti79uC5nWLA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractValidationService[jcu^name=AbstractValidationService.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_kWazxRDfEduti79uC5nWLA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_kWazxhDfEduti79uC5nWLA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractValidationService[jcu^name=AbstractValidationService.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWazxxDfEduti79uC5nWLA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractValidationService[jcu^name=AbstractValidationService.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWazyBDfEduti79uC5nWLA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWazyRDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractValidationService[jcu^name=AbstractValidationService.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWazyhDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWazyxDfEduti79uC5nWLA" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWazzBDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractValidationService[jcu^name=AbstractValidationService.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWazzRDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWazzhDfEduti79uC5nWLA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWazzxDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractValidationService[jcu^name=AbstractValidationService.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWaz0BDfEduti79uC5nWLA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_kWaz0RDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractValidationService[jcu^name=AbstractValidationService.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_kWaz0hDfEduti79uC5nWLA" fontHeight="10" fillColor="13565951" lineColor="4009615"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractValidationService[jcu^name=AbstractValidationService.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWaz0xDfEduti79uC5nWLA" x="20770" y="3625"/>
+  </children>
+  <children xmi:id="_kWaz1BDfEduti79uC5nWLA" sourceEdges="_kWa0iBDfEduti79uC5nWLA _kWa0oBDfEduti79uC5nWLA _kWa0sBDfEduti79uC5nWLA _kWa0wBDfEduti79uC5nWLA _kWa0yBDfEduti79uC5nWLA" targetEdges="_kWa0jxDfEduti79uC5nWLA">
+    <children xmi:id="_kWaz1RDfEduti79uC5nWLA" type="ImageCompartment">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_kWaz1hDfEduti79uC5nWLA" width="530" height="530"/>
+    </children>
+    <children xmi:id="_kWaz1xDfEduti79uC5nWLA" type="Stereotype">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWaz2BDfEduti79uC5nWLA" type="Kind">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWaz2RDfEduti79uC5nWLA" type="Name">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWaz2hDfEduti79uC5nWLA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWaz2xDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWaz3BDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWaz3RDfEduti79uC5nWLA" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWaz3hDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWaz3xDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWaz4BDfEduti79uC5nWLA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWaz4RDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLClassifierStyle" xmi:id="_kWaz4hDfEduti79uC5nWLA" fontHeight="10" fillColor="13565951" lineColor="4009615" useClassifierShape="true"/>
+    <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWaz4xDfEduti79uC5nWLA" x="11880" y="7938"/>
+  </children>
+  <children xmi:id="_kWaz5BDfEduti79uC5nWLA" sourceEdges="_kWa0jxDfEduti79uC5nWLA _kWa0lhDfEduti79uC5nWLA" targetEdges="_kWa0mRDfEduti79uC5nWLA">
+    <children xmi:id="_kWaz5RDfEduti79uC5nWLA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_kWaz5hDfEduti79uC5nWLA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_kWaz5xDfEduti79uC5nWLA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWaz6BDfEduti79uC5nWLA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWaz6RDfEduti79uC5nWLA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWaz6hDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWaz6xDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWaz7BDfEduti79uC5nWLA" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWaz7RDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWaz7hDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWaz7xDfEduti79uC5nWLA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWaz8BDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWaz8RDfEduti79uC5nWLA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_kWaz8hDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_kWaz8xDfEduti79uC5nWLA" fontHeight="10" fillColor="13565951" lineColor="4009615"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWaz9BDfEduti79uC5nWLA" x="9922" y="18759"/>
+  </children>
+  <children xmi:id="_kWaz9RDfEduti79uC5nWLA" sourceEdges="_kWa0qBDfEduti79uC5nWLA" targetEdges="_kWa0lhDfEduti79uC5nWLA">
+    <children xmi:id="_kWaz9hDfEduti79uC5nWLA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorItem[jsrctype^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_kWaz9xDfEduti79uC5nWLA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_kWaz-BDfEduti79uC5nWLA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorItem[jsrctype^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    </children>
+    <children xmi:id="_kWaz-RDfEduti79uC5nWLA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorItem[jsrctype^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    </children>
+    <children xmi:id="_kWaz-hDfEduti79uC5nWLA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWaz-xDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorItem[jsrctype^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWaz_BDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWaz_RDfEduti79uC5nWLA" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWaz_hDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorItem[jsrctype^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWaz_xDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWa0ABDfEduti79uC5nWLA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0ARDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorItem[jsrctype^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    </children>
+    <children xmi:id="_kWa0AhDfEduti79uC5nWLA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_kWa0AxDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorItem[jsrctype^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_kWa0BBDfEduti79uC5nWLA" fontHeight="10" fillColor="13565951" lineColor="4009615"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorItem[jsrctype^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa0BRDfEduti79uC5nWLA" x="10319" y="31036"/>
+  </children>
+  <children xmi:id="_kWa0BhDfEduti79uC5nWLA" sourceEdges="_kWa0mRDfEduti79uC5nWLA">
+    <children xmi:id="_kWa0BxDfEduti79uC5nWLA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorCollectionNonProceeding[jcu^name=ValidatorCollectionNonProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_kWa0CBDfEduti79uC5nWLA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_kWa0CRDfEduti79uC5nWLA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorCollectionNonProceeding[jcu^name=ValidatorCollectionNonProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0ChDfEduti79uC5nWLA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorCollectionNonProceeding[jcu^name=ValidatorCollectionNonProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0CxDfEduti79uC5nWLA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0DBDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorCollectionNonProceeding[jcu^name=ValidatorCollectionNonProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWa0DRDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWa0DhDfEduti79uC5nWLA" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0DxDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorCollectionNonProceeding[jcu^name=ValidatorCollectionNonProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWa0EBDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWa0ERDfEduti79uC5nWLA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0EhDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorCollectionNonProceeding[jcu^name=ValidatorCollectionNonProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0ExDfEduti79uC5nWLA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_kWa0FBDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorCollectionNonProceeding[jcu^name=ValidatorCollectionNonProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_kWa0FRDfEduti79uC5nWLA" fontHeight="10" fillColor="13565951" lineColor="4009615"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorCollectionNonProceeding[jcu^name=ValidatorCollectionNonProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa0FhDfEduti79uC5nWLA" x="1561" y="28866" width="7117" height="3201"/>
+  </children>
+  <children xmi:id="_kWa0FxDfEduti79uC5nWLA" targetEdges="_kWa0oBDfEduti79uC5nWLA _kWa0qBDfEduti79uC5nWLA _kWa0uBDfEduti79uC5nWLA">
+    <children xmi:id="_kWa0GBDfEduti79uC5nWLA" type="ImageCompartment">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorContext[jcu^name=ValidatorContext.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_kWa0GRDfEduti79uC5nWLA" width="530" height="530"/>
+    </children>
+    <children xmi:id="_kWa0GhDfEduti79uC5nWLA" type="Stereotype">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorContext[jcu^name=ValidatorContext.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0GxDfEduti79uC5nWLA" type="Kind">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorContext[jcu^name=ValidatorContext.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0HBDfEduti79uC5nWLA" type="Name">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorContext[jcu^name=ValidatorContext.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0HRDfEduti79uC5nWLA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0HhDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorContext[jcu^name=ValidatorContext.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWa0HxDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWa0IBDfEduti79uC5nWLA" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0IRDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorContext[jcu^name=ValidatorContext.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWa0IhDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWa0IxDfEduti79uC5nWLA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0JBDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorContext[jcu^name=ValidatorContext.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLClassifierStyle" xmi:id="_kWa0JRDfEduti79uC5nWLA" fontHeight="10" fillColor="13565951" lineColor="4009615" useClassifierShape="true"/>
+    <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorContext[jcu^name=ValidatorContext.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa0JhDfEduti79uC5nWLA" x="17357" y="26326"/>
+  </children>
+  <children xmi:id="_kWa0JxDfEduti79uC5nWLA" sourceEdges="_kWa0uBDfEduti79uC5nWLA" targetEdges="_kWa0sBDfEduti79uC5nWLA">
+    <children xmi:id="_kWa0KBDfEduti79uC5nWLA" type="ImageCompartment">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorContextUpdater[jcu^name=ValidatorContextUpdater.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_kWa0KRDfEduti79uC5nWLA" width="530" height="530"/>
+    </children>
+    <children xmi:id="_kWa0KhDfEduti79uC5nWLA" type="Stereotype">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorContextUpdater[jcu^name=ValidatorContextUpdater.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0KxDfEduti79uC5nWLA" type="Kind">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorContextUpdater[jcu^name=ValidatorContextUpdater.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0LBDfEduti79uC5nWLA" type="Name">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorContextUpdater[jcu^name=ValidatorContextUpdater.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0LRDfEduti79uC5nWLA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0LhDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorContextUpdater[jcu^name=ValidatorContextUpdater.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWa0LxDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWa0MBDfEduti79uC5nWLA" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0MRDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorContextUpdater[jcu^name=ValidatorContextUpdater.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWa0MhDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWa0MxDfEduti79uC5nWLA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0NBDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorContextUpdater[jcu^name=ValidatorContextUpdater.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLClassifierStyle" xmi:id="_kWa0NRDfEduti79uC5nWLA" fontHeight="10" fillColor="13565951" lineColor="4009615" useClassifierShape="true"/>
+    <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorContextUpdater[jcu^name=ValidatorContextUpdater.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa0NhDfEduti79uC5nWLA" x="18415" y="19473"/>
+  </children>
+  <children xmi:id="_kWa0NxDfEduti79uC5nWLA" targetEdges="_kWa0wBDfEduti79uC5nWLA">
+    <children xmi:id="_kWa0OBDfEduti79uC5nWLA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorInput[jcu^name=ValidatorInput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_kWa0ORDfEduti79uC5nWLA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_kWa0OhDfEduti79uC5nWLA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorInput[jcu^name=ValidatorInput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0OxDfEduti79uC5nWLA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorInput[jcu^name=ValidatorInput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0PBDfEduti79uC5nWLA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0PRDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorInput[jcu^name=ValidatorInput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWa0PhDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWa0PxDfEduti79uC5nWLA" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0QBDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorInput[jcu^name=ValidatorInput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWa0QRDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWa0QhDfEduti79uC5nWLA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0QxDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorInput[jcu^name=ValidatorInput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0RBDfEduti79uC5nWLA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_kWa0RRDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorInput[jcu^name=ValidatorInput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_kWa0RhDfEduti79uC5nWLA" fontHeight="10" fillColor="13565951" lineColor="4009615"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorInput[jcu^name=ValidatorInput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa0RxDfEduti79uC5nWLA" x="20346" y="9340"/>
+  </children>
+  <children xmi:id="_kWa0SBDfEduti79uC5nWLA" targetEdges="_kWa0yBDfEduti79uC5nWLA">
+    <children xmi:id="_kWa0SRDfEduti79uC5nWLA" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorOutput[jcu^name=ValidatorOutput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_kWa0ShDfEduti79uC5nWLA" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_kWa0SxDfEduti79uC5nWLA" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorOutput[jcu^name=ValidatorOutput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0TBDfEduti79uC5nWLA" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorOutput[jcu^name=ValidatorOutput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0TRDfEduti79uC5nWLA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0ThDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorOutput[jcu^name=ValidatorOutput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWa0TxDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWa0UBDfEduti79uC5nWLA" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0URDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorOutput[jcu^name=ValidatorOutput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWa0UhDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWa0UxDfEduti79uC5nWLA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0VBDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorOutput[jcu^name=ValidatorOutput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0VRDfEduti79uC5nWLA" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_kWa0VhDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorOutput[jcu^name=ValidatorOutput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_kWa0VxDfEduti79uC5nWLA" fontHeight="10" fillColor="13565951" lineColor="4009615"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ValidatorOutput[jcu^name=ValidatorOutput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa0WBDfEduti79uC5nWLA" x="21405" y="14526"/>
+  </children>
+  <children xmi:id="_kWa0WRDfEduti79uC5nWLA">
+    <children xmi:id="_kWa0WhDfEduti79uC5nWLA" type="ImageCompartment">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorInputOutputProperties[jcu^name=ValidatorInputOutputProperties.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_kWa0WxDfEduti79uC5nWLA" width="530" height="530"/>
+    </children>
+    <children xmi:id="_kWa0XBDfEduti79uC5nWLA" type="Stereotype">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorInputOutputProperties[jcu^name=ValidatorInputOutputProperties.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0XRDfEduti79uC5nWLA" type="Kind">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorInputOutputProperties[jcu^name=ValidatorInputOutputProperties.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0XhDfEduti79uC5nWLA" type="Name">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorInputOutputProperties[jcu^name=ValidatorInputOutputProperties.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0XxDfEduti79uC5nWLA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0YBDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorInputOutputProperties[jcu^name=ValidatorInputOutputProperties.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWa0YRDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWa0YhDfEduti79uC5nWLA" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0YxDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorInputOutputProperties[jcu^name=ValidatorInputOutputProperties.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWa0ZBDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWa0ZRDfEduti79uC5nWLA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0ZhDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorInputOutputProperties[jcu^name=ValidatorInputOutputProperties.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLClassifierStyle" xmi:id="_kWa0ZxDfEduti79uC5nWLA" fontHeight="10" fillColor="13565951" lineColor="4009615" useClassifierShape="true"/>
+    <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorInputOutputProperties[jcu^name=ValidatorInputOutputProperties.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa0aBDfEduti79uC5nWLA" x="1693" y="23574" width="6984" height="2275"/>
+  </children>
+  <children xmi:id="_kWa0aRDfEduti79uC5nWLA" sourceEdges="_kWa02BDfEduti79uC5nWLA" targetEdges="_kWa00BDfEduti79uC5nWLA">
+    <children xmi:id="_kWa0ahDfEduti79uC5nWLA" type="ImageCompartment">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorErrorListener[jcu^name=ValidatorErrorListener.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_kWa0axDfEduti79uC5nWLA" width="530" height="530"/>
+    </children>
+    <children xmi:id="_kWa0bBDfEduti79uC5nWLA" type="Stereotype">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorErrorListener[jcu^name=ValidatorErrorListener.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0bRDfEduti79uC5nWLA" type="Kind">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorErrorListener[jcu^name=ValidatorErrorListener.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0bhDfEduti79uC5nWLA" type="Name">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorErrorListener[jcu^name=ValidatorErrorListener.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kWa0bxDfEduti79uC5nWLA" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0cBDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorErrorListener[jcu^name=ValidatorErrorListener.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWa0cRDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWa0chDfEduti79uC5nWLA" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0cxDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorErrorListener[jcu^name=ValidatorErrorListener.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_kWa0dBDfEduti79uC5nWLA"/>
+    </children>
+    <children xmi:id="_kWa0dRDfEduti79uC5nWLA" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kWa0dhDfEduti79uC5nWLA"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorErrorListener[jcu^name=ValidatorErrorListener.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLClassifierStyle" xmi:id="_kWa0dxDfEduti79uC5nWLA" fontHeight="10" fillColor="13565951" lineColor="4009615" useClassifierShape="true"/>
+    <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ValidatorErrorListener[jcu^name=ValidatorErrorListener.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa0eBDfEduti79uC5nWLA" x="3307" y="18997"/>
+  </children>
+  <styles xmi:type="umlnotation:UMLDiagramStyle" xmi:id="_kWa0eRDfEduti79uC5nWLA"/>
+  <edges xmi:id="_kWa0ehDfEduti79uC5nWLA" source="_kWazohDfEduti79uC5nWLA" target="_kWazsxDfEduti79uC5nWLA">
+    <children xmi:id="_kWa0exDfEduti79uC5nWLA" type="NameLabel">
+      <children xmi:id="_kWa0fBDfEduti79uC5nWLA" type="Stereotype">
+        <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=AbstractValidator[jcu^name=AbstractValidator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kWa0fRDfEduti79uC5nWLA" type="Name">
+        <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=AbstractValidator[jcu^name=AbstractValidator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=AbstractValidator[jcu^name=AbstractValidator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa0fhDfEduti79uC5nWLA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_kWa0fxDfEduti79uC5nWLA" fontHeight="10" lineColor="4009615"/>
+    <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=AbstractValidator[jcu^name=AbstractValidator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kWa0gBDfEduti79uC5nWLA" points="[106, -2937, -9790, 2011]$[10001, -3784, 106, 1164]"/>
+  </edges>
+  <edges xmi:id="_kWa0gRDfEduti79uC5nWLA" source="_kWazwxDfEduti79uC5nWLA" target="_kWazsxDfEduti79uC5nWLA">
+    <children xmi:id="_kWa0ghDfEduti79uC5nWLA" type="NameLabel">
+      <children xmi:id="_kWa0gxDfEduti79uC5nWLA" type="Stereotype">
+        <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=AbstractValidationService[jcu^name=AbstractValidationService.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kWa0hBDfEduti79uC5nWLA" type="Name">
+        <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=AbstractValidationService[jcu^name=AbstractValidationService.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=AbstractValidationService[jcu^name=AbstractValidationService.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa0hRDfEduti79uC5nWLA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_kWa0hhDfEduti79uC5nWLA" fontHeight="10" lineColor="4009615"/>
+    <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=AbstractValidationService[jcu^name=AbstractValidationService.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kWa0hxDfEduti79uC5nWLA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_kWa0iBDfEduti79uC5nWLA" source="_kWaz1BDfEduti79uC5nWLA" target="_kWazsxDfEduti79uC5nWLA">
+    <children xmi:id="_kWa0iRDfEduti79uC5nWLA" type="NameLabel">
+      <children xmi:id="_kWa0ihDfEduti79uC5nWLA" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kWa0ixDfEduti79uC5nWLA" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa0jBDfEduti79uC5nWLA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_kWa0jRDfEduti79uC5nWLA" fontHeight="10" lineColor="4009615"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kWa0jhDfEduti79uC5nWLA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_kWa0jxDfEduti79uC5nWLA" source="_kWaz5BDfEduti79uC5nWLA" target="_kWaz1BDfEduti79uC5nWLA">
+    <children xmi:id="_kWa0kBDfEduti79uC5nWLA" type="NameLabel">
+      <children xmi:id="_kWa0kRDfEduti79uC5nWLA" type="Stereotype">
+        <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kWa0khDfEduti79uC5nWLA" type="Name">
+        <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa0kxDfEduti79uC5nWLA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_kWa0lBDfEduti79uC5nWLA" fontHeight="10" lineColor="4009615"/>
+    <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kWa0lRDfEduti79uC5nWLA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_kWa0lhDfEduti79uC5nWLA" type="OwnedElement" source="_kWaz5BDfEduti79uC5nWLA" target="_kWaz9RDfEduti79uC5nWLA">
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_kWa0lxDfEduti79uC5nWLA" fontHeight="10" lineColor="4009615"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kWa0mBDfEduti79uC5nWLA" points="[106, 3175, 106, -6297]$[106, 4022, 106, -5450]"/>
+  </edges>
+  <edges xmi:id="_kWa0mRDfEduti79uC5nWLA" source="_kWa0BhDfEduti79uC5nWLA" target="_kWaz5BDfEduti79uC5nWLA">
+    <children xmi:id="_kWa0mhDfEduti79uC5nWLA" type="NameLabel">
+      <children xmi:id="_kWa0mxDfEduti79uC5nWLA" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ValidatorCollectionNonProceeding[jcu^name=ValidatorCollectionNonProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kWa0nBDfEduti79uC5nWLA" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ValidatorCollectionNonProceeding[jcu^name=ValidatorCollectionNonProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ValidatorCollectionNonProceeding[jcu^name=ValidatorCollectionNonProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa0nRDfEduti79uC5nWLA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_kWa0nhDfEduti79uC5nWLA" fontHeight="10" lineColor="4009615"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=ValidatorCollectionNonProceeding[jcu^name=ValidatorCollectionNonProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorCollectionProceeding[jcu^name=ValidatorCollectionProceeding.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kWa0nxDfEduti79uC5nWLA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_kWa0oBDfEduti79uC5nWLA" source="_kWaz1BDfEduti79uC5nWLA" target="_kWa0FxDfEduti79uC5nWLA">
+    <children xmi:id="_kWa0oRDfEduti79uC5nWLA" type="KindLabel">
+      <children xmi:id="_kWa0ohDfEduti79uC5nWLA" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorContext[jcu^name=ValidatorContext.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kWa0oxDfEduti79uC5nWLA" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorContext[jcu^name=ValidatorContext.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kWa0pBDfEduti79uC5nWLA" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorContext[jcu^name=ValidatorContext.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorContext[jcu^name=ValidatorContext.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa0pRDfEduti79uC5nWLA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_kWa0phDfEduti79uC5nWLA" fontHeight="10" lineColor="4009615"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorContext[jcu^name=ValidatorContext.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kWa0pxDfEduti79uC5nWLA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_kWa0qBDfEduti79uC5nWLA" source="_kWaz9RDfEduti79uC5nWLA" target="_kWa0FxDfEduti79uC5nWLA">
+    <children xmi:id="_kWa0qRDfEduti79uC5nWLA" type="KindLabel">
+      <children xmi:id="_kWa0qhDfEduti79uC5nWLA" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref://#umlv1java^elementName=^vcore.target=uml2.Usage^nativeId0=UMLDependency^RefHelperId=sc[umlv1java^vcore.target=uml2.Element^pid=BIGREjb^nativeId1=com.ardais.bigr.validation.ValidatorCollectionProceeding%24ValidatorItem^RefHelperId=jclass][umlv1java^vcore.target=uml2.Element^pid=BIGREjb^nativeId1=com.ardais.bigr.validation.ValidatorCollectionProceeding%24ValidatorItem^RefHelperId=jclass][umlv1java^vcore.target=uml2.Element^pid=BIGREjb^nativeId1=com.ardais.bigr.validation.ValidatorContext^RefHelperId=jclass]"/>
+      </children>
+      <children xmi:id="_kWa0qxDfEduti79uC5nWLA" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref://#umlv1java^elementName=^vcore.target=uml2.Usage^nativeId0=UMLDependency^RefHelperId=sc[umlv1java^vcore.target=uml2.Element^pid=BIGREjb^nativeId1=com.ardais.bigr.validation.ValidatorCollectionProceeding%24ValidatorItem^RefHelperId=jclass][umlv1java^vcore.target=uml2.Element^pid=BIGREjb^nativeId1=com.ardais.bigr.validation.ValidatorCollectionProceeding%24ValidatorItem^RefHelperId=jclass][umlv1java^vcore.target=uml2.Element^pid=BIGREjb^nativeId1=com.ardais.bigr.validation.ValidatorContext^RefHelperId=jclass]"/>
+      </children>
+      <children xmi:id="_kWa0rBDfEduti79uC5nWLA" type="Name">
+        <element xmi:type="uml:Usage" href="vizref://#umlv1java^elementName=^vcore.target=uml2.Usage^nativeId0=UMLDependency^RefHelperId=sc[umlv1java^vcore.target=uml2.Element^pid=BIGREjb^nativeId1=com.ardais.bigr.validation.ValidatorCollectionProceeding%24ValidatorItem^RefHelperId=jclass][umlv1java^vcore.target=uml2.Element^pid=BIGREjb^nativeId1=com.ardais.bigr.validation.ValidatorCollectionProceeding%24ValidatorItem^RefHelperId=jclass][umlv1java^vcore.target=uml2.Element^pid=BIGREjb^nativeId1=com.ardais.bigr.validation.ValidatorContext^RefHelperId=jclass]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref://#umlv1java^elementName=^vcore.target=uml2.Usage^nativeId0=UMLDependency^RefHelperId=sc[umlv1java^vcore.target=uml2.Element^pid=BIGREjb^nativeId1=com.ardais.bigr.validation.ValidatorCollectionProceeding%24ValidatorItem^RefHelperId=jclass][umlv1java^vcore.target=uml2.Element^pid=BIGREjb^nativeId1=com.ardais.bigr.validation.ValidatorCollectionProceeding%24ValidatorItem^RefHelperId=jclass][umlv1java^vcore.target=uml2.Element^pid=BIGREjb^nativeId1=com.ardais.bigr.validation.ValidatorContext^RefHelperId=jclass]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa0rRDfEduti79uC5nWLA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_kWa0rhDfEduti79uC5nWLA" fontHeight="10" lineColor="4009615"/>
+    <element xmi:type="uml:Usage" href="vizref://#umlv1java^elementName=^vcore.target=uml2.Usage^nativeId0=UMLDependency^RefHelperId=sc[umlv1java^vcore.target=uml2.Element^pid=BIGREjb^nativeId1=com.ardais.bigr.validation.ValidatorCollectionProceeding%24ValidatorItem^RefHelperId=jclass][umlv1java^vcore.target=uml2.Element^pid=BIGREjb^nativeId1=com.ardais.bigr.validation.ValidatorCollectionProceeding%24ValidatorItem^RefHelperId=jclass][umlv1java^vcore.target=uml2.Element^pid=BIGREjb^nativeId1=com.ardais.bigr.validation.ValidatorContext^RefHelperId=jclass]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kWa0rxDfEduti79uC5nWLA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_kWa0sBDfEduti79uC5nWLA" source="_kWaz1BDfEduti79uC5nWLA" target="_kWa0JxDfEduti79uC5nWLA">
+    <children xmi:id="_kWa0sRDfEduti79uC5nWLA" type="KindLabel">
+      <children xmi:id="_kWa0shDfEduti79uC5nWLA" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorContextUpdater[jcu^name=ValidatorContextUpdater.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kWa0sxDfEduti79uC5nWLA" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorContextUpdater[jcu^name=ValidatorContextUpdater.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kWa0tBDfEduti79uC5nWLA" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorContextUpdater[jcu^name=ValidatorContextUpdater.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorContextUpdater[jcu^name=ValidatorContextUpdater.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa0tRDfEduti79uC5nWLA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_kWa0thDfEduti79uC5nWLA" fontHeight="10" lineColor="4009615"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorContextUpdater[jcu^name=ValidatorContextUpdater.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kWa0txDfEduti79uC5nWLA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_kWa0uBDfEduti79uC5nWLA" source="_kWa0JxDfEduti79uC5nWLA" target="_kWa0FxDfEduti79uC5nWLA">
+    <children xmi:id="_kWa0uRDfEduti79uC5nWLA" type="KindLabel">
+      <children xmi:id="_kWa0uhDfEduti79uC5nWLA" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorContextUpdater[jcu^name=ValidatorContextUpdater.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorContext[jcu^name=ValidatorContext.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kWa0uxDfEduti79uC5nWLA" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorContextUpdater[jcu^name=ValidatorContextUpdater.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorContext[jcu^name=ValidatorContext.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kWa0vBDfEduti79uC5nWLA" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorContextUpdater[jcu^name=ValidatorContextUpdater.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorContext[jcu^name=ValidatorContext.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorContextUpdater[jcu^name=ValidatorContextUpdater.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorContext[jcu^name=ValidatorContext.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa0vRDfEduti79uC5nWLA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_kWa0vhDfEduti79uC5nWLA" fontHeight="10" lineColor="4009615"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorContextUpdater[jcu^name=ValidatorContextUpdater.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorContext[jcu^name=ValidatorContext.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kWa0vxDfEduti79uC5nWLA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_kWa0wBDfEduti79uC5nWLA" source="_kWaz1BDfEduti79uC5nWLA" target="_kWa0NxDfEduti79uC5nWLA">
+    <children xmi:id="_kWa0wRDfEduti79uC5nWLA" type="KindLabel">
+      <children xmi:id="_kWa0whDfEduti79uC5nWLA" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorInput[jcu^name=ValidatorInput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kWa0wxDfEduti79uC5nWLA" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorInput[jcu^name=ValidatorInput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kWa0xBDfEduti79uC5nWLA" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorInput[jcu^name=ValidatorInput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorInput[jcu^name=ValidatorInput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa0xRDfEduti79uC5nWLA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_kWa0xhDfEduti79uC5nWLA" fontHeight="10" lineColor="4009615"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorInput[jcu^name=ValidatorInput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kWa0xxDfEduti79uC5nWLA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_kWa0yBDfEduti79uC5nWLA" source="_kWaz1BDfEduti79uC5nWLA" target="_kWa0SBDfEduti79uC5nWLA">
+    <children xmi:id="_kWa0yRDfEduti79uC5nWLA" type="KindLabel">
+      <children xmi:id="_kWa0yhDfEduti79uC5nWLA" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorOutput[jcu^name=ValidatorOutput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kWa0yxDfEduti79uC5nWLA" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorOutput[jcu^name=ValidatorOutput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kWa0zBDfEduti79uC5nWLA" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorOutput[jcu^name=ValidatorOutput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorOutput[jcu^name=ValidatorOutput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa0zRDfEduti79uC5nWLA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_kWa0zhDfEduti79uC5nWLA" fontHeight="10" lineColor="4009615"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorCollection[jcu^name=ValidatorCollection.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorOutput[jcu^name=ValidatorOutput.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kWa0zxDfEduti79uC5nWLA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_kWa00BDfEduti79uC5nWLA" source="_kWazohDfEduti79uC5nWLA" target="_kWa0aRDfEduti79uC5nWLA">
+    <children xmi:id="_kWa00RDfEduti79uC5nWLA" type="KindLabel">
+      <children xmi:id="_kWa00hDfEduti79uC5nWLA" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=AbstractValidator[jcu^name=AbstractValidator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorErrorListener[jcu^name=ValidatorErrorListener.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kWa00xDfEduti79uC5nWLA" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=AbstractValidator[jcu^name=AbstractValidator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorErrorListener[jcu^name=ValidatorErrorListener.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kWa01BDfEduti79uC5nWLA" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=AbstractValidator[jcu^name=AbstractValidator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorErrorListener[jcu^name=ValidatorErrorListener.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=AbstractValidator[jcu^name=AbstractValidator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorErrorListener[jcu^name=ValidatorErrorListener.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa01RDfEduti79uC5nWLA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_kWa01hDfEduti79uC5nWLA" fontHeight="10" lineColor="4009615"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=AbstractValidator[jcu^name=AbstractValidator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=ValidatorErrorListener[jcu^name=ValidatorErrorListener.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kWa01xDfEduti79uC5nWLA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_kWa02BDfEduti79uC5nWLA" source="_kWa0aRDfEduti79uC5nWLA" target="_kWazsxDfEduti79uC5nWLA">
+    <children xmi:id="_kWa02RDfEduti79uC5nWLA" type="KindLabel">
+      <children xmi:id="_kWa02hDfEduti79uC5nWLA" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorErrorListener[jcu^name=ValidatorErrorListener.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kWa02xDfEduti79uC5nWLA" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorErrorListener[jcu^name=ValidatorErrorListener.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kWa03BDfEduti79uC5nWLA" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorErrorListener[jcu^name=ValidatorErrorListener.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorErrorListener[jcu^name=ValidatorErrorListener.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kWa03RDfEduti79uC5nWLA" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_kWa03hDfEduti79uC5nWLA" fontHeight="10" lineColor="4009615"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=ValidatorErrorListener[jcu^name=ValidatorErrorListener.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Validator[jcu^name=Validator.java[jpack^name=com.ardais.bigr.validation[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kWa03xDfEduti79uC5nWLA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+</notation:Diagram>

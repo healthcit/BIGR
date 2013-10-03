@@ -1,0 +1,61 @@
+# This script will be run whenever the wsadmin tool starts.
+#
+# If you need customizations for JACL scripts that are specific to a
+# particular machine, don't edit this file.  This file is meant to be the
+# same on all machines to make script maintenance easier.  Instead, place
+# a file named wsadmin_profile.jacl in BIGR_LOCAL_LIB.  If it exists, that
+# script will be run whenever the wsadmin tool is run, following the standard
+# wsadmin_profile.jacl script that is in BIGR_SCRIPT_LIB.  See the
+# com.ibm.ws.scripting.profiles property in wsadmin.properties for more
+# details.
+
+proc isBigrInstalled {} {
+  global env
+  global AdminApp
+
+  set appName $env(BIGR_APPNAME)
+  set installedApps [$AdminApp list]
+
+  if {[lsearch -exact $installedApps $appName] >= 0} {
+    return 1
+  }
+  
+  return 0
+}
+
+proc isBigrRunning {} {
+  global env
+  global AdminControl
+
+  if {! [isBigrInstalled]} {
+    return 0
+  }
+
+  # Try to retrieve the running BIGR application from AdminControl
+  set bigrName $env(BIGR_APPNAME)
+  set bigr [$AdminControl completeObjectName type=Application,J2EEName=$bigrName,*]
+
+  if {$bigr != ""} {
+    return 1
+  }
+
+  return 0
+}
+
+# This is a workaround for the fact that the built-in "file copy" command
+# is broken in the jacl version that ships with WebSphere 5.1 (it gives
+# an "error copying: null" exception).
+#
+proc copyAsciiFile {source destination} {
+  set in [open $source r]
+  set out [open $destination w]
+  
+  while {! [eof $in]} {
+    set s [read $in 1024]
+    puts -nonewline $out $s
+  }
+
+  close $in
+  flush $out
+  close $out
+}

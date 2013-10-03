@@ -1,0 +1,325 @@
+<project name="BIGR" default="BIGR" basedir="..">
+
+    <property file="build/build.properties" />
+    <property environment="env" />
+
+    <property name="was.home" value="${env.WAS_HOME}" />
+    <property name="was.lib" value="${was.home}/lib" />
+	<property name="was.plugins" value="${was.home}/plugins" />
+
+    <property name="bigr" value="BIGR" />
+    <property name="bigr.admin" value="BIGRAdmin" />
+    <property name="bigr.build" value="${basedir}/BIGRBuild" />
+    <property name="bigr.core" value="BIGRCore" />
+    <property name="bigr.database" value="BIGRDatabase" />
+    <property name="bigr.ejb" value="BIGREjb" />
+    <property name="bigr.server" value="BIGRServer" />
+    <property name="bigr.web" value="BIGRWeb" />
+    <property name="output.dir" value="${bigr.build}/output" />
+    <property name="bigr.dir" value="${basedir}/BIGR" />
+    <property name="bigr.admin.dir" value="${basedir}/BIGRAdmin" />
+    <property name="bigr.core.dir" value="${basedir}/BIGRCore" />
+    <property name="bigr.database.dir" value="${basedir}/BIGRDatabase" />
+    <property name="bigr.ejb.dir" value="${basedir}/BIGREjb" />
+    <property name="bigr.server.dir" value="${basedir}/BIGRServer" />
+    <property name="bigr.web.dir" value="${basedir}/BIGRWeb" />
+    <property name="classes.dir" value="${output.dir}/classes" />
+    <property name="modules.dir" value="${output.dir}/modules" />
+    <property name="javadoc.root.dir" value="${output.dir}/javadoc" />
+    <property name="javadoc.output.dir" value="${javadoc.root.dir}/BIGR" />
+    <property name="javadoc.temp.src" value="${javadoc.root.dir}/tempsrc" />
+
+    <property name="bigr.ear" value="${basedir}/BIGR" />
+
+    <property name="bigr.core" value="${basedir}/BIGRCore" />
+    <property name="bigr.core.src" value="${bigr.core}" />
+    <property name="bigr.core.metainf" value="${bigr.core.src}/META-INF"/>
+    <property name="bigr.core.output" value="${output.dir}/BIGRCore" />
+    <property name="bigr.core.classes" value="${bigr.core.output}/classes" />
+
+    <property name="bigr.ejb" value="${basedir}/BIGREjb" />
+    <property name="bigr.ejb.src" value="${bigr.ejb}/ejbModule" />
+    <property name="bigr.ejb.output" value="${output.dir}/BIGREjb" />
+    <property name="bigr.ejb.classes" value="${bigr.ejb.output}/classes" />
+    <property name="bigr.ejb.metainf" value="${bigr.ejb.src}/META-INF" />
+
+    <property name="bigr.web" value="${basedir}/BIGRWeb" />
+    <property name="bigr.web.app" value="${bigr.web}/webApplication" />
+    <property name="bigr.web.lib" value="${bigr.web.app}/WEB-INF/lib" />
+    <property name="bigr.web.src" value="${bigr.web}/source" />
+    <property name="bigr.web.output" value="${output.dir}/BIGRWeb" />
+    <property name="bigr.web.classes" value="${bigr.web.output}/classes" />
+
+    <path id="class.path">
+        <fileset dir="${was.lib}">
+            <include name="**/*.jar" />
+            <include name="**/*.zip" />
+        </fileset>
+        <fileset dir="${was.home}/java/jre/lib">
+            <include name="**/xml.jar" />
+        </fileset>
+    	<fileset dir="${was.plugins}">
+    	      <include name="**/*.jar" />
+    	      <include name="**/*.zip" />
+    	</fileset>
+        <fileset dir="${bigr.ear}/lib">
+            <include name="**/*.jar" />
+            <include name="**/*.zip" />
+        </fileset>
+    </path>
+
+    <target name="prepare">
+        <mkdir dir="${output.dir}" />
+        <mkdir dir="${classes.dir}" />
+        <mkdir dir="${modules.dir}" />
+		<move todir="${bigr.ear}" preservelastmodified="true" overwrite="true">
+			<fileset dir="${bigr.ear}/EarContent">
+				<include name="**"/>
+			</fileset>
+		</move>	
+		<move todir="${bigr.core}" preservelastmodified="true" overwrite="true">
+			<fileset dir="${bigr.core}/src">
+				<include name="**"/>
+			</fileset>
+		</move>
+    </target>
+
+    <target name="cvsPrep">
+        <cvs failonerror="true">
+            <commandline>
+                <argument value="rtag"/>
+                <argument value="-r"/>
+                <argument value="${env.BRANCH}"/>
+                <argument value="${env.BUILD_REV}"/>
+                <argument value="BIGR"/>
+                <argument value="BIGRAdmin"/>
+                <argument value="BIGRBuild"/>
+                <argument value="BIGRCore"/>
+                <argument value="BIGRDatabase"/>
+                <argument value="BIGREjb"/>
+                <argument value="BIGRServer"/>
+                <argument value="BIGRWeb"/>
+                <argument value="Other"/>
+            </commandline>
+	    	<commandline>
+	        	<argument line="checkout -r &quot;${env.BUILD_REV}&quot; BIGR" />
+	    	</commandline>
+            <commandline>
+                <argument line="checkout -r &quot;${env.BUILD_REV}&quot; BIGRAdmin" />
+            </commandline>
+            <commandline>
+                <argument line="checkout -r &quot;${env.BUILD_REV}&quot; BIGRCore" />
+            </commandline>
+            <commandline>
+                <argument line="checkout -r &quot;${env.BUILD_REV}&quot; BIGRDatabase" />
+            </commandline>
+            <commandline>
+                <argument line="checkout -r &quot;${env.BUILD_REV}&quot; BIGREjb" />
+            </commandline>
+            <commandline>
+                <argument line="checkout -r &quot;${env.BUILD_REV}&quot; BIGRServer" />
+            </commandline>
+            <commandline>
+                <argument line="checkout -r &quot;${env.BUILD_REV}&quot; BIGRWeb" />
+            </commandline>
+        </cvs>
+    </target>
+
+    <target name="clean">
+        <delete dir="${output.dir}" />
+        <delete dir="${bigr.dir}" />
+        <delete dir="${bigr.admin.dir}" />
+        <delete dir="${bigr.core.dir}" />
+        <delete dir="${bigr.database.dir}" />
+        <delete dir="${bigr.ejb.dir}" />
+        <delete dir="${bigr.server.dir}" />
+        <delete dir="${bigr.web.dir}" />
+    </target>
+
+    <target name="BIGRCore" depends="prepare">
+        <mkdir dir="${bigr.core.output}" />
+        <mkdir dir="${bigr.core.classes}" />
+        
+        <copy todir="${bigr.core.classes}" preservelastmodified="true" overwrite="true">
+            <fileset dir="${bigr.core.src}">
+                <include name="com/ardais/bigr/resources/**"/>
+                <include name="com/gulfstreambio/kc/resources/**"/>
+                <include name="com/gulfstreambio/gboss/resources/**"/>
+            </fileset>
+            <fileset dir="${bigr.core.src}">
+                <include name="META-INF/services/**"/>
+            </fileset>
+        </copy>
+
+        <javac srcdir="${bigr.core.src}" destdir="${bigr.core.classes}" classpathref="class.path"/>
+        
+        <jar jarfile="${modules.dir}/BIGRCore.jar" manifest="${bigr.core.metainf}/MANIFEST.MF">
+            <fileset dir="${bigr.core.classes}"/>
+        </jar>
+    </target>
+
+    <target name="BIGREjb" depends="BIGRCore">
+        <mkdir dir="${bigr.ejb.output}" />
+        <mkdir dir="${bigr.ejb.classes}" />
+
+        <path id="ejb.class.path">
+            <path refid="class.path" />
+            <pathelement location="${modules.dir}/BIGRCore.jar" />
+        </path>
+
+        <javac srcdir="${bigr.ejb.src}" destdir="${bigr.ejb.classes}" classpathref="ejb.class.path" 
+        	   debug="on" />
+
+        <jar destfile="${modules.dir}/BIGREjb.jar" manifest="${bigr.ejb.metainf}/MANIFEST.MF">
+            <fileset dir="${bigr.ejb.classes}">
+                <include name="**/*.class" />
+            </fileset>
+            <fileset dir="${bigr.ejb.src}">
+                <include name="META-INF/**" />
+                <exclude name="META-INF/MANIFEST.MF" />
+            </fileset>
+        </jar>
+    </target>
+
+    <target name="BIGRWeb" depends="BIGREjb">
+        <mkdir dir="${bigr.web.output}" />
+        <mkdir dir="${bigr.web.classes}" />
+
+        <path id="web.class.path">
+            <path refid="class.path" />
+            <fileset dir="${modules.dir}">
+                <include name="**/*.jar" />
+            </fileset>
+            <fileset dir="${bigr.web.lib}">
+                <include name="**/*.jar" />
+            </fileset>
+        </path>
+
+        <javac srcdir="${bigr.web.src}" destdir="${bigr.web.classes}" classpathref="web.class.path" 
+        	   debug="on" target="1.6"/>
+        
+        <copy todir="${bigr.web.classes}">
+            <fileset dir="${bigr.web.src}">
+                <exclude name="**/*.java" />
+            </fileset>
+        </copy>
+
+        <war destfile="${modules.dir}/BIGRWeb.war" webxml="${bigr.web.app}/WEB-INF/web.xml" manifest="${bigr.web.app}/META-INF/MANIFEST.MF">
+            <classes dir="${bigr.web.classes}" />
+            <fileset dir="${bigr.web.app}">
+                <exclude name="WEB-INF/**" />
+                <exclude name="META-INF/**" />
+            </fileset>
+            <webinf dir="${bigr.web.app}/WEB-INF">
+                <exclude name="web.xml" />
+            </webinf>
+            <metainf dir="${bigr.web.app}/META-INF">
+                <exclude name="MANIFEST.MF" />
+            </metainf>
+        </war>
+    </target>
+
+    <target name="BIGR" depends="BIGRWeb">
+        <ear destfile="${output.dir}/BIGR.ear" appxml="${bigr.ear}/META-INF/application.xml">
+            <fileset dir="${modules.dir}" includes="*.jar,*.war" />
+            <fileset dir="${bigr.ear}">
+                <exclude name="META-INF/application.xml" />
+                <include name="lib/**" />
+                <include name="META-INF/**" />
+            </fileset>
+        </ear>
+    </target>
+    
+    <target name="javadoc">
+        <!-- Generate Javadoc.  This target deliberately doesn't have
+           * any "depends" attribute because of the way we invoke this in
+           * the overall build process: we invoke ant first to build the
+           * default target (compile/package the BIGR code), and then we invoke
+           * it again to build just the javadoc.  We do this because we're
+           * more lenient about warnings/errors in the javadoc than in the
+           * code, and we want to log the javadoc build to a separate file.
+           * 
+           * Although we don't include a "depends" attribute, this target
+           * DOES logically have dependencies and it will not behave as
+           * expected if you don't keep that in mind.  Specifically, this
+           * target was written to assume that the default target was built
+           * by a previous ant run prior to running the javadoc target,
+           * and that all of the input and output files left behind from
+           * building the default target are still present and up to date.
+          -->
+        
+        <mkdir dir="${javadoc.output.dir}" />
+
+        <path id="javadoc.class.path">
+            <path refid="class.path" />
+            <fileset dir="${modules.dir}">
+                <include name="**/*.jar" />
+            </fileset>
+            <fileset dir="${bigr.web.lib}">
+                <include name="**/*.jar" />
+            </fileset>
+        </path>
+        
+        <!-- Copy the source files for which we want Javadoc to a temporary
+           * directory.  This excludes, for example, generated EJB deployed
+           * code.
+          -->
+        <copy todir="${javadoc.temp.src}" preservelastmodified="true" overwrite="true">
+            <fileset dir="${bigr.core.src}">
+                <include name="**/*.java"/>
+            </fileset>
+            <fileset dir="${bigr.ejb.src}">
+                <exclude name="**/_*.java"/>
+                <exclude name="**/EJS*.java"/>
+                <exclude name="**/*AccessBean.java"/>
+                <exclude name="**/*AccessBeanData.java"/>
+                <exclude name="**/beans/**/*Factory.java"/>
+                <exclude name="**/ejb/session/*Factory.java"/>
+                <exclude name="**/beans/**/*Link.java"/>
+                <exclude name="**/ejb/session/*Link.java"/>
+                <exclude name="com/ibm/**"/>
+                <exclude name="org/**"/>
+                <exclude name="**/gen/**"/>
+            </fileset>
+            <fileset dir="${bigr.web.src}">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+
+        <javadoc classpathref="javadoc.class.path"
+                 destdir="${javadoc.output.dir}"
+                 access="package" additionalparam="-J-Xss3m" author="false"
+                 failonerror="false" maxmemory="256m"
+                 nodeprecated="false" nodeprecatedlist="false" nohelp="false"
+                 noindex="false" nonavbar="false" notree="false"
+                 splitindex="true" use="true" version="false"
+                 windowtitle="BIGR(TM) Javadoc">
+
+             <packageset dir="${javadoc.temp.src}"/>
+             <bottom><![CDATA[<i>HealthCare IT Corporation - Strictly Confidential.  Copyright &#169; 2007 HealthCare IT Corporation.  All Rights Reserved.</i>]]></bottom>
+             <doctitle><![CDATA[BIGR&#174; Packages]]></doctitle>
+             <footer><![CDATA[HealthCare IT Corporation BIGR&#174;]]></footer>
+             <header><![CDATA[HealthCare IT Corporation BIGR&#174;]]></header>
+             <link href="http://java.sun.com/j2se/1.4/docs/api"/>
+             <link href="http://java.sun.com/j2ee/sdk_1.2.1/techdocs/api"/>
+             <link href="http://bos-rcs1.ardais.com/doc/ant-1.5.1/manual/api"/>
+             <link href="http://bos-rcs1.ardais.com/doc/commons-beanutils-1.7.0/docs/api"/>
+             <link href="http://bos-rcs1.ardais.com/doc/commons-beanutils-1.7.0/docs/bean-collections"/>
+             <link href="http://bos-rcs1.ardais.com/doc/commons-collections-3.0"/>
+             <link href="http://bos-rcs1.ardais.com/doc/commons-digester-1.6"/>
+             <link href="http://bos-rcs1.ardais.com/doc/commons-lang-2.0"/>
+             <link href="http://bos-rcs1.ardais.com/doc/commons-logging-1.0.3"/>
+             <link href="http://bos-rcs1.ardais.com/doc/jakarta-log4j-1.2.8/api"/>
+             <link href="http://bos-rcs1.ardais.com/doc/jakarta-oro-2.0.8/api"/>
+             <link href="http://bos-rcs1.ardais.com/doc/junit-3.7/javadoc"/>
+             <link href="http://bos-rcs1.ardais.com/doc/struts-1.1/api"/>
+             <link href="http://bos-rcs1.ardais.com/doc/velocity-1.3.1/api"/>
+             <link href="http://bos-rcs1.ardais.com/doc/xerces-2.6.2/javadocs/api"/>
+        </javadoc>
+
+        <!-- Remove the temporary copies of source files.
+          -->
+        <delete dir="${javadoc.temp.src}" />
+    </target>
+
+</project>

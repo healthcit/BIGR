@@ -1,0 +1,11 @@
+set define off;
+set echo on;
+insert into pdc_lookup values('SAMPLE_INFO', 'CA12749C', 'Sample subtype', '', '', 'ARD_CAP', 'A', 'P', '', '1.56', '', 'sample_subtype', '1', 'N', 'text', '', 'Element', '', '', '', '', '', '', 'N', '', '21', '');
+insert into pdc_lookup values('SAMPLE_INFO', 'CA12750C', 'Test technique', '', '', 'ARD_CAP', 'A', 'P', '', '1.56', '', 'sample_technique', '1', 'N', 'cv', '', 'Element', '', '', '', '', '', '', 'N', '', '21', '');
+insert into pdc_lookup values('SAMPLE_TYPE', 'CA12751C', 'Buccal Swab', '', '', 'ARD_CAP', 'A', 'P', '', '1.56', '', '', '', '', '', '', 'Value', '', '', '', '', '', '', '', '', '21', '');
+insert into pdc_lookup values('SAMPLE_TYPE', 'CA12646C', 'cDNA', '', '', 'ARD_CAP', 'A', 'P', '', '1.56', '', '', '', '', '', '', 'Value', '', '', '', '', '', '', '', '', '21', '');
+insert into pdc_lookup values('SAMPLE_TYPE', 'CA12644C', 'Cell', '', '', 'ARD_CAP', 'A', 'P', '', '1.56', '', '', '', '', '', '', 'Value', '', '', '', '', '', '', '', '', '21', '');
+insert into pdc_lookup values('SAMPLE_TYPE', 'CA12645C', 'Cell Lysate', '', '', 'ARD_CAP', 'A', 'P', '', '1.56', '', '', '', '', '', '', 'Value', '', '', '', '', '', '', '', '', '21', '');
+insert into pdc_lookup values('SAMPLE_TYPE', 'CA12647C', 'Depleted PBMC', '', '', 'ARD_CAP', 'A', 'P', '', '1.56', '', '', '', '', '', '', 'Value', '', '', '', '', '', '', '', '', '21', '');
+insert into pdc_lookup values('STORAGE_TYPE', 'CA12748C', 'Liquid Nitrogen', '', '', 'ARD_CAP', 'A', 'P', '', '1.56', '', '', '', '', '', '', 'Value', '', '', '', '', '', '', '', '', '21', '');
+commit;

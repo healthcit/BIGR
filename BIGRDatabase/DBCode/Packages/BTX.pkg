@@ -1,0 +1,465 @@
+CREATE OR REPLACE package btx as
+  /**************************************************************************
+   * Package of procedures to support the BIGR business-transaction
+   * framework.
+   *
+   * author: Gregg Yost
+   * created: 28-Mar-2002
+   **************************************************************************/
+
+  /* public procedures */
+
+  /* Insert a transaction history record that doesn't involve any
+   * box locations.
+   *
+   * This returns (as output parameters) the transaction id assigned
+   * to the transaction.
+   */
+  procedure insert_history_no_boxloc(
+      o_btx_id out iltds_btx_history.btx_id%type,
+      p_btx_end_datetime in iltds_btx_history.btx_end_datetime%type,
+      p_btx_type in iltds_btx_history.btx_type%type,
+      p_btx_ardais_user_id in iltds_btx_history.btx_ardais_user_id%type,
+      p_btx_begin_datetime in iltds_btx_history.btx_begin_datetime%type,
+      p_exception_text in iltds_btx_history.exception_text%type,
+      p_exception_stacktrace in iltds_btx_history.exception_stacktrace%type,
+      p_box_barcode_id in iltds_btx_history.box_barcode_id%type,
+      p_box_contents in iltds_btx_history.box_contents%type,
+      p_id_list_1 in iltds_btx_history.id_list_1%type,
+      p_id_list_2 in iltds_btx_history.id_list_2%type,
+      p_attrib_1 in iltds_btx_history.attrib_1%type,
+      p_attrib_2 in iltds_btx_history.attrib_2%type,
+      p_attrib_3 in iltds_btx_history.attrib_3%type,
+      p_attrib_4 in iltds_btx_history.attrib_4%type,
+      p_attrib_5 in iltds_btx_history.attrib_5%type,
+      p_attrib_6 in iltds_btx_history.attrib_6%type,
+      p_attrib_7 in iltds_btx_history.attrib_7%type,
+      p_attrib_8 in iltds_btx_history.attrib_8%type,
+      p_attrib_9 in iltds_btx_history.attrib_9%type,
+      p_attrib_10 in iltds_btx_history.attrib_10%type,
+      p_attrib_11 in iltds_btx_history.attrib_11%type,
+      p_attrib_12 in iltds_btx_history.attrib_12%type,
+      p_attrib_13 in iltds_btx_history.attrib_13%type,
+      p_attrib_14 in iltds_btx_history.attrib_14%type,
+      p_attrib_15 in iltds_btx_history.attrib_15%type,
+      p_attrib_16 in iltds_btx_history.attrib_16%type,
+      p_attrib_17 in iltds_btx_history.attrib_17%type,
+      p_attrib_18 in iltds_btx_history.attrib_18%type,
+      p_attrib_19 in iltds_btx_history.attrib_19%type,
+      p_attrib_20 in iltds_btx_history.attrib_20%type,
+      p_clob_1 in iltds_btx_history.clob_1%type,
+      p_clob_2 in iltds_btx_history.clob_2%type,
+      p_history_object_encoding in iltds_btx_history.history_object_encoding%type,
+      p_history_object in iltds_btx_history.history_object%type
+      );
+
+  /* Insert a transaction history record involving one or two box locations.
+   * This has all the same parameters as insert_history_without_locations
+   * but adds additional parameters that describe up to two optional
+   * box locations.  Pass TRUE to the loc1_present and/or loc2_present
+   * parameters to write an involved-location record linked to the
+   * BOX_LOCATION_1 and BOX_LOCATION_2 columns of ILTDS_BTX_HISTORY.
+   * When loc1_present is TRUE, pass the details on the location into
+   * the remaining loc1_* parameters, and similarly for loc2_present.
+   *
+   * This returns (as output parameters) the transaction id assigned
+   * to the transaction.
+   */
+  procedure insert_history_with_boxloc(
+      o_btx_id out iltds_btx_history.btx_id%type,
+      p_btx_end_datetime in iltds_btx_history.btx_end_datetime%type,
+      p_btx_type in iltds_btx_history.btx_type%type,
+      p_btx_ardais_user_id in iltds_btx_history.btx_ardais_user_id%type,
+      p_btx_begin_datetime in iltds_btx_history.btx_begin_datetime%type,
+      p_exception_text in iltds_btx_history.exception_text%type,
+      p_exception_stacktrace in iltds_btx_history.exception_stacktrace%type,
+      p_box_barcode_id in iltds_btx_history.box_barcode_id%type,
+      p_box_contents in iltds_btx_history.box_contents%type,
+      p_id_list_1 in iltds_btx_history.id_list_1%type,
+      p_id_list_2 in iltds_btx_history.id_list_2%type,
+      p_attrib_1 in iltds_btx_history.attrib_1%type,
+      p_attrib_2 in iltds_btx_history.attrib_2%type,
+      p_attrib_3 in iltds_btx_history.attrib_3%type,
+      p_attrib_4 in iltds_btx_history.attrib_4%type,
+      p_attrib_5 in iltds_btx_history.attrib_5%type,
+      p_attrib_6 in iltds_btx_history.attrib_6%type,
+      p_attrib_7 in iltds_btx_history.attrib_7%type,
+      p_attrib_8 in iltds_btx_history.attrib_8%type,
+      p_attrib_9 in iltds_btx_history.attrib_9%type,
+      p_attrib_10 in iltds_btx_history.attrib_10%type,
+      p_attrib_11 in iltds_btx_history.attrib_11%type,
+      p_attrib_12 in iltds_btx_history.attrib_12%type,
+      p_attrib_13 in iltds_btx_history.attrib_13%type,
+      p_attrib_14 in iltds_btx_history.attrib_14%type,
+      p_attrib_15 in iltds_btx_history.attrib_15%type,
+      p_attrib_16 in iltds_btx_history.attrib_16%type,
+      p_attrib_17 in iltds_btx_history.attrib_17%type,
+      p_attrib_18 in iltds_btx_history.attrib_18%type,
+      p_attrib_19 in iltds_btx_history.attrib_19%type,
+      p_attrib_20 in iltds_btx_history.attrib_20%type,
+      p_clob_1 in iltds_btx_history.clob_1%type,
+      p_clob_2 in iltds_btx_history.clob_2%type,
+      p_history_object_encoding in iltds_btx_history.history_object_encoding%type,
+      p_history_object in iltds_btx_history.history_object%type,
+
+      p_loc1_present in CHAR,
+      p_loc1_location_address_id in iltds_btx_involved_location.location_address_id%type,
+      p_loc1_room_id in iltds_btx_involved_location.room_id%type,
+      p_loc1_unit_name in iltds_btx_involved_location.unit_name%type,
+      p_loc1_drawer_id in iltds_btx_involved_location.drawer_id%type,
+      p_loc1_slot_id in iltds_btx_involved_location.slot_id%type,
+      p_loc1_storage_type in iltds_btx_involved_location.storage_type%type,
+      p_loc1_location_name in iltds_btx_involved_location.location_name%type,
+
+      p_loc2_present in CHAR,
+      p_loc2_location_address_id in iltds_btx_involved_location.location_address_id%type,
+      p_loc2_room_id in iltds_btx_involved_location.room_id%type,
+      p_loc2_unit_name in iltds_btx_involved_location.unit_name%type,
+      p_loc2_drawer_id in iltds_btx_involved_location.drawer_id%type,
+      p_loc2_slot_id in iltds_btx_involved_location.slot_id%type,
+      p_loc2_storage_type in iltds_btx_involved_location.storage_type%type,
+      p_loc2_location_name in iltds_btx_involved_location.location_name%type
+      );
+
+  /* Insert a transaction history record for image creation.  This procedure is called
+   * from the ADS_IMAGET After Insert Row trigger
+   */
+  procedure on_ads_imaget_air(
+      p_slideid in ads_imaget_syn.slideid%type,
+      p_username in ads_imaget_syn.username%type,
+      p_magnification in ads_imaget_syn.magnification%type,
+      p_imagenotes in ads_imaget_syn.imagenotes%type,
+      p_imagefilename in ads_imaget_syn.imagefilename%type
+	);
+
+end btx;
+/
+CREATE OR REPLACE package body btx as
+
+  /* Insert a transaction history record that doesn't involve any
+   * box locations.
+   *
+   * This returns (as output parameters) the transaction id assigned
+   * to the transaction.
+   */
+  procedure insert_history_no_boxloc(
+      o_btx_id out iltds_btx_history.btx_id%type,
+      p_btx_end_datetime in iltds_btx_history.btx_end_datetime%type,
+      p_btx_type in iltds_btx_history.btx_type%type,
+      p_btx_ardais_user_id in iltds_btx_history.btx_ardais_user_id%type,
+      p_btx_begin_datetime in iltds_btx_history.btx_begin_datetime%type,
+      p_exception_text in iltds_btx_history.exception_text%type,
+      p_exception_stacktrace in iltds_btx_history.exception_stacktrace%type,
+      p_box_barcode_id in iltds_btx_history.box_barcode_id%type,
+      p_box_contents in iltds_btx_history.box_contents%type,
+      p_id_list_1 in iltds_btx_history.id_list_1%type,
+      p_id_list_2 in iltds_btx_history.id_list_2%type,
+      p_attrib_1 in iltds_btx_history.attrib_1%type,
+      p_attrib_2 in iltds_btx_history.attrib_2%type,
+      p_attrib_3 in iltds_btx_history.attrib_3%type,
+      p_attrib_4 in iltds_btx_history.attrib_4%type,
+      p_attrib_5 in iltds_btx_history.attrib_5%type,
+      p_attrib_6 in iltds_btx_history.attrib_6%type,
+      p_attrib_7 in iltds_btx_history.attrib_7%type,
+      p_attrib_8 in iltds_btx_history.attrib_8%type,
+      p_attrib_9 in iltds_btx_history.attrib_9%type,
+      p_attrib_10 in iltds_btx_history.attrib_10%type,
+      p_attrib_11 in iltds_btx_history.attrib_11%type,
+      p_attrib_12 in iltds_btx_history.attrib_12%type,
+      p_attrib_13 in iltds_btx_history.attrib_13%type,
+      p_attrib_14 in iltds_btx_history.attrib_14%type,
+      p_attrib_15 in iltds_btx_history.attrib_15%type,
+      p_attrib_16 in iltds_btx_history.attrib_16%type,
+      p_attrib_17 in iltds_btx_history.attrib_17%type,
+      p_attrib_18 in iltds_btx_history.attrib_18%type,
+      p_attrib_19 in iltds_btx_history.attrib_19%type,
+      p_attrib_20 in iltds_btx_history.attrib_20%type,
+      p_clob_1 in iltds_btx_history.clob_1%type,
+      p_clob_2 in iltds_btx_history.clob_2%type,
+      p_history_object_encoding in iltds_btx_history.history_object_encoding%type,
+      p_history_object in iltds_btx_history.history_object%type
+      )
+  is
+  begin
+
+	  insert into iltds_btx_history (
+	      btx_id,
+          btx_type,
+          btx_ardais_user_id,
+          btx_begin_datetime,
+          btx_end_datetime,
+          exception_text,
+          exception_stacktrace,
+          box_barcode_id,
+          box_contents,
+		  id_list_1,
+		  id_list_2,
+		  attrib_1,
+		  attrib_2,
+		  attrib_3,
+		  attrib_4,
+		  attrib_5,
+		  attrib_6,
+		  attrib_7,
+		  attrib_8,
+		  attrib_9,
+		  attrib_10,
+		  attrib_11,
+		  attrib_12,
+		  attrib_13,
+		  attrib_14,
+		  attrib_15,
+		  attrib_16,
+		  attrib_17,
+		  attrib_18,
+		  attrib_19,
+		  attrib_20,
+		  clob_1,
+		  clob_2,
+		  history_object_encoding,
+		  history_object
+              )
+	    values (
+	      iltds_btx_history_btx_id_seq.nextval,
+          p_btx_type,
+          p_btx_ardais_user_id,
+          p_btx_begin_datetime,
+          p_btx_end_datetime,
+          p_exception_text,
+          p_exception_stacktrace,
+          p_box_barcode_id,
+          p_box_contents,
+		  p_id_list_1,
+		  p_id_list_2,
+          p_attrib_1,
+		  p_attrib_2,
+		  p_attrib_3,
+		  p_attrib_4,
+		  p_attrib_5,
+		  p_attrib_6,
+		  p_attrib_7,
+		  p_attrib_8,
+		  p_attrib_9,
+		  p_attrib_10,
+		  p_attrib_11,
+		  p_attrib_12,
+		  p_attrib_13,
+		  p_attrib_14,
+		  p_attrib_15,
+		  p_attrib_16,
+		  p_attrib_17,
+		  p_attrib_18,
+		  p_attrib_19,
+		  p_attrib_20,
+		  p_clob_1,
+		  p_clob_2,
+		  p_history_object_encoding,
+		  p_history_object
+		  )
+		returning btx_id into o_btx_id;
+  end insert_history_no_boxloc;
+
+  /* Insert a transaction history record involving one or two box locations.
+   * This has all the same parameters as insert_history_without_locations
+   * but adds additional parameters that describe up to two optional
+   * box locations.  Pass TRUE to the loc1_present and/or loc2_present
+   * parameters to write an involved-location record linked to the
+   * BOX_LOCATION_1 and BOX_LOCATION_2 columns of ILTDS_BTX_HISTORY.
+   * When loc1_present is TRUE, pass the details on the location into
+   * the remaining loc1_* parameters, and similarly for loc2_present.
+   *
+   * This returns (as output parameters) the transaction id assigned
+   * to the transaction.
+   */
+  procedure insert_history_with_boxloc(
+      o_btx_id out iltds_btx_history.btx_id%type,
+      p_btx_end_datetime in iltds_btx_history.btx_end_datetime%type,
+      p_btx_type in iltds_btx_history.btx_type%type,
+      p_btx_ardais_user_id in iltds_btx_history.btx_ardais_user_id%type,
+      p_btx_begin_datetime in iltds_btx_history.btx_begin_datetime%type,
+      p_exception_text in iltds_btx_history.exception_text%type,
+      p_exception_stacktrace in iltds_btx_history.exception_stacktrace%type,
+      p_box_barcode_id in iltds_btx_history.box_barcode_id%type,
+      p_box_contents in iltds_btx_history.box_contents%type,
+      p_id_list_1 in iltds_btx_history.id_list_1%type,
+      p_id_list_2 in iltds_btx_history.id_list_2%type,
+      p_attrib_1 in iltds_btx_history.attrib_1%type,
+      p_attrib_2 in iltds_btx_history.attrib_2%type,
+      p_attrib_3 in iltds_btx_history.attrib_3%type,
+      p_attrib_4 in iltds_btx_history.attrib_4%type,
+      p_attrib_5 in iltds_btx_history.attrib_5%type,
+      p_attrib_6 in iltds_btx_history.attrib_6%type,
+      p_attrib_7 in iltds_btx_history.attrib_7%type,
+      p_attrib_8 in iltds_btx_history.attrib_8%type,
+      p_attrib_9 in iltds_btx_history.attrib_9%type,
+      p_attrib_10 in iltds_btx_history.attrib_10%type,
+      p_attrib_11 in iltds_btx_history.attrib_11%type,
+      p_attrib_12 in iltds_btx_history.attrib_12%type,
+      p_attrib_13 in iltds_btx_history.attrib_13%type,
+      p_attrib_14 in iltds_btx_history.attrib_14%type,
+      p_attrib_15 in iltds_btx_history.attrib_15%type,
+      p_attrib_16 in iltds_btx_history.attrib_16%type,
+      p_attrib_17 in iltds_btx_history.attrib_17%type,
+      p_attrib_18 in iltds_btx_history.attrib_18%type,
+      p_attrib_19 in iltds_btx_history.attrib_19%type,
+      p_attrib_20 in iltds_btx_history.attrib_20%type,
+      p_clob_1 in iltds_btx_history.clob_1%type,
+      p_clob_2 in iltds_btx_history.clob_2%type,
+      p_history_object_encoding in iltds_btx_history.history_object_encoding%type,
+      p_history_object in iltds_btx_history.history_object%type,
+
+      p_loc1_present in CHAR,
+      p_loc1_location_address_id in iltds_btx_involved_location.location_address_id%type,
+      p_loc1_room_id in iltds_btx_involved_location.room_id%type,
+      p_loc1_unit_name in iltds_btx_involved_location.unit_name%type,
+      p_loc1_drawer_id in iltds_btx_involved_location.drawer_id%type,
+      p_loc1_slot_id in iltds_btx_involved_location.slot_id%type,
+      p_loc1_storage_type in iltds_btx_involved_location.storage_type%type,
+      p_loc1_location_name in iltds_btx_involved_location.location_name%type,
+
+      p_loc2_present in CHAR,
+      p_loc2_location_address_id in iltds_btx_involved_location.location_address_id%type,
+      p_loc2_room_id in iltds_btx_involved_location.room_id%type,
+      p_loc2_unit_name in iltds_btx_involved_location.unit_name%type,
+      p_loc2_drawer_id in iltds_btx_involved_location.drawer_id%type,
+      p_loc2_slot_id in iltds_btx_involved_location.slot_id%type,
+      p_loc2_storage_type in iltds_btx_involved_location.storage_type%type,
+      p_loc2_location_name in iltds_btx_involved_location.location_name%type
+      )
+  is
+	  v_box_location_1 iltds_btx_history.box_location_1%type := NULL;
+	  v_box_location_2 iltds_btx_history.box_location_2%type := NULL;
+  begin
+      insert_history_no_boxloc(
+          o_btx_id,
+          p_btx_end_datetime,
+          p_btx_type,
+          p_btx_ardais_user_id,
+          p_btx_begin_datetime,
+          p_exception_text,
+          p_exception_stacktrace,
+          p_box_barcode_id,
+          p_box_contents,
+          p_id_list_1,
+		  p_id_list_2,
+		  p_attrib_1,
+		  p_attrib_2,
+		  p_attrib_3,
+		  p_attrib_4,
+		  p_attrib_5,
+		  p_attrib_6,
+		  p_attrib_7,
+		  p_attrib_8,
+		  p_attrib_9,
+		  p_attrib_10,
+		  p_attrib_11,
+		  p_attrib_12,
+		  p_attrib_13,
+		  p_attrib_14,
+		  p_attrib_15,
+		  p_attrib_16,
+		  p_attrib_17,
+		  p_attrib_18,
+		  p_attrib_19,
+		  p_attrib_20,
+		  p_clob_1,
+		  p_clob_2,
+		  p_history_object_encoding,
+		  p_history_object
+          );
+
+	  if p_loc1_present = 'Y' then
+	      insert into iltds_btx_involved_location (
+		      id,
+			  btx_id,
+			  location_address_id,
+			  room_id,
+			  unit_name,
+			  drawer_id,
+			  slot_id,
+			  storage_type,
+			  location_name
+			  )
+			values (
+		      iltds_btx_involved_loc_id_seq.nextval,
+			  o_btx_id,
+			  p_loc1_location_address_id,
+			  p_loc1_room_id,
+			  p_loc1_unit_name,
+			  p_loc1_drawer_id,
+			  p_loc1_slot_id,
+			  p_loc1_storage_type,
+			  p_loc1_location_name
+			  )
+			returning id into v_box_location_1;
+	  end if;
+
+	  if p_loc2_present = 'Y' then
+	      insert into iltds_btx_involved_location (
+		      id,
+			  btx_id,
+			  location_address_id,
+			  room_id,
+			  unit_name,
+			  drawer_id,
+			  slot_id,
+			  storage_type,
+			  location_name
+			  )
+			values (
+		      iltds_btx_involved_loc_id_seq.nextval,
+			  o_btx_id,
+			  p_loc2_location_address_id,
+			  p_loc2_room_id,
+			  p_loc2_unit_name,
+			  p_loc2_drawer_id,
+			  p_loc2_slot_id,
+			  p_loc2_storage_type,
+			  p_loc2_location_name
+			  )
+			returning id into v_box_location_2;
+	  end if;
+
+	  if (p_loc1_present = 'Y') OR (p_loc2_present = 'Y') then
+	      update iltds_btx_history
+		    set box_location_1 = v_box_location_1,
+			    box_location_2 = v_box_location_2
+			where btx_id = o_btx_id;
+	  end if;
+
+  end insert_history_with_boxloc;
+
+  /* Insert a transaction history record for image creation.  This procedure is called
+   * from the ADS_IMAGET After Insert Row trigger
+   */
+  procedure on_ads_imaget_air(
+      p_slideid in ads_imaget_syn.slideid%type,
+      p_username in ads_imaget_syn.username%type,
+      p_magnification in ads_imaget_syn.magnification%type,
+      p_imagenotes in ads_imaget_syn.imagenotes%type,
+      p_imagefilename in ads_imaget_syn.imagefilename%type
+	)
+  is
+	v_sample_id iltds_sample.sample_barcode_id%type := null;
+	v_stain_type lims_slide.section_proc%type := null;
+	v_transaction_id iltds_btx_history.btx_id%type := null;
+  begin
+	--get the sample id and stain type for the slide
+	select sample_barcode_id, section_proc
+	into v_sample_id, v_stain_type
+	from lims_slide where slide_id = p_slideid;
+
+	--call the regular btx stored procedure to insert the information into the iltds_btx_history table
+	 insert_history_no_boxloc(v_transaction_id,sysdate, 'CreateImage', p_username, sysdate, null, null, null, null, null, null,
+					 v_sample_id, p_slideid, p_magnification, v_stain_type, p_imagenotes, p_imagefilename,
+					 null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+
+	--insert information into the iltds_btx_involved_object table for both the sample and slide
+	insert into iltds_btx_involved_object (btx_id, object_id, direct) values (v_transaction_id, v_sample_id, 'Y');
+	insert into iltds_btx_involved_object (btx_id, object_id, direct) values (v_transaction_id, p_slideid, 'Y');
+  end on_ads_imaget_air;
+
+
+end btx;
+/
+

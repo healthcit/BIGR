@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE formDefinition PUBLIC "-//GulfStream Bioinformatics Corporation//DTD KnowledgeCapture Form Definition XML1//EN" "kcFormDefinitionXML1.dtd">
+<formDefinition name="All Combo Test - text">
+  <formElementDefinitions>
+    <categoryDefinition displayName="datatype=text; EAV=n; ADE=n" categoryType="heading">
+      <dataElementDefinition cui="CA11190C"/>
+      <dataElementDefinition cui="CA11229C"/>
+    </categoryDefinition>
+<!--    <categoryDefinition displayName="datatype=text; EAV=n; ADE=y" categoryType="heading">
+    </categoryDefinition> -->
+<!--    <categoryDefinition displayName="datatype=text; EAV=y; ADE=n" categoryType="heading">
+    </categoryDefinition> -->
+<!--    <categoryDefinition displayName="datatype=text; EAV=y; ADE=y" categoryType="heading">
+    </categoryDefinition> -->
+  </formElementDefinitions>
+</formDefinition>

@@ -1,0 +1,48 @@
+#*
+ * This template is for generating the DbConstants.java file for Bigr Library.
+ *#
+package com.ardais.bigr.util.gen;
+
+/**
+ * Contains static constants that contain actual names of database columns
+ * and tables.
+ * <p>
+ * <b>Developer's Notes</b>
+ * </p>
+ * <p>
+ * This is a generated file. DO NOT MANUALLY EDIT THIS FILE, AS YOUR CHANGES WILL
+ * BE LOST THE NEXT TIME THIS FILE IS GENERATED.  To make changes, modify the 
+ * xml file holding the Bigr Library information
+ *
+ * ${metaData.GenerationMessage}
+ * </p>
+ */
+ 
+public class DbConstants {
+
+    private DbConstants() {
+    }
+
+    //----------------------------------------------------------------
+    // Table names.  These are the actual table names in the database.
+    //----------------------------------------------------------------
+#foreach($table in $metaData.DbTables)
+    public final static String ${table.JavaConstant} = "${table.TableName}";
+#end## foreach table
+
+    //------------------------------------------------------------
+    // Column names.  These are the actual column names in the database.
+    //------------------------------------------------------------
+#foreach($table in $metaData.DbTables)
+#if($table.hasDbColumns())
+
+    //------------------------------------------------------------
+    // ${table.TableName} columns
+    //------------------------------------------------------------
+#foreach($column in $table.DbColumns)
+    public final static String ${column.JavaConstant} = "${column.ColumnName}";
+#end## foreach column
+#end## if table has dbcolumns
+#end## foreach table
+
+}

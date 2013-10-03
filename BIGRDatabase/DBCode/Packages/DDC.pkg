@@ -1,0 +1,498 @@
+CREATE OR REPLACE PACKAGE ddc AS
+
+  /**************************************************************************
+   * Package of procedures related to DDC.
+   **************************************************************************/
+
+  /* public procedures */
+  PROCEDURE replicate_primary_dx_tc(ip_path_report_id IN pdc_path_report_section.path_report_id%type,
+                                    ip_path_report_section_id IN pdc_path_report_section.path_report_section_id%type,
+                                    ip_dx IN pdc_path_report_section.diagnosis_concept_id%type,
+                                    ip_dx_other IN pdc_path_report_section.other_dx_name%type,
+                                    ip_tc IN pdc_path_report_section.tissue_origin_concept_id%type,
+                                    ip_tc_other IN pdc_path_report_section.other_origin_tc_name%type);
+  PROCEDURE set_ddc_check_flag(  ip_consent_id IN pdc_pathology_report.consent_id%type,
+    						   	 ip_disease IN pdc_pathology_report.disease_concept_id%type,
+   								 ip_procedure IN pdc_pathology_report.procedure_concept_id%type,
+    							 ip_month IN pdc_pathology_report.path_check_date_mm%type,
+    							 ip_year IN pdc_pathology_report.path_check_date_yyyy%type,
+								 ip_primary_path_section_id pdc_pathology_report.primary_path_report_section_id%type
+							   );
+  PROCEDURE set_ddc_check_flag(  ip_path_report_id IN pdc_path_report_section.path_report_id%type,
+		  						 --ip_path_sec_rep_id IN pdc_path_report_section.path_report_section_id%type,
+								 ip_dx IN pdc_path_report_section.diagnosis_concept_id%type,
+	                             ip_tc_origin IN pdc_path_report_section.tissue_origin_concept_id%type,
+								 ip_tc_finding IN pdc_path_report_section.tissue_finding_concept_id%type,
+								 ip_tumor_size IN pdc_path_report_section.tumor_size%type,
+								 ip_tumor_wt IN pdc_path_report_section.tumor_weight%type,
+								 ip_hist_type IN pdc_path_report_section.histological_type%type,
+								 ip_hist_nuc_grade IN pdc_path_report_section.histological_nuclear_grade%type,
+								 ip_tumor_stage_type IN pdc_path_report_section.tumor_stage_type%type,
+								 ip_tumor_stage_desc IN pdc_path_report_section.tumor_stage_desc%type,
+								 ip_lymph_node_st IN pdc_path_report_section.lymph_node_stage%type,
+								 ip_tot_nodes_pos IN pdc_path_report_section.total_nodes_positive%type,
+								 ip_tot_nod_exam IN pdc_path_report_section.total_nodes_examined%type,
+								 ip_ext_intra_comp IN pdc_path_report_section.extensive_intraductal_comp%type,
+								 ip_primary_gleason IN pdc_path_report_section.primary_gleason_score%type,
+								 ip_sec_gleason IN pdc_path_report_section.secondary_gleason_score%type,
+								 ip_tot_gleason IN pdc_path_report_section.total_gleason_score%type,
+								 ip_peri_inv_ind IN pdc_path_report_section.perineural_invasion_ind%type,
+								 ip_joint_comp IN pdc_path_report_section.joint_component%type,
+								 ip_dist_meta IN pdc_path_report_section.distant_metastasis%type,
+								 ip_stage_grouping IN pdc_path_report_section.stage_grouping%type
+							   );							   
+  PROCEDURE set_ddc_check_flag_(  ip_consent_id IN pdc_pathology_report.consent_id%type,
+    						   	 ip_disease IN pdc_pathology_report.disease_concept_id%type,
+   								 ip_procedure IN pdc_pathology_report.procedure_concept_id%type,
+    							 ip_month IN pdc_pathology_report.path_check_date_mm%type,
+    							 ip_year IN pdc_pathology_report.path_check_date_yyyy%type,
+  								 --ip_path_report_id IN pdc_path_report_section.path_report_id%type,
+		  						 --ip_path_sec_rep_id IN pdc_path_report_section.path_report_section_id%type,
+								 ip_dx IN pdc_path_report_section.diagnosis_concept_id%type,
+	                             ip_tc_origin IN pdc_path_report_section.tissue_origin_concept_id%type,
+								 ip_tc_finding IN pdc_path_report_section.tissue_finding_concept_id%type,
+								 ip_tumor_size IN pdc_path_report_section.tumor_size%type,
+								 ip_tumor_wt IN pdc_path_report_section.tumor_weight%type,
+								 ip_hist_type IN pdc_path_report_section.histological_type%type,
+								 ip_hist_nuc_grade IN pdc_path_report_section.histological_nuclear_grade%type,
+								 ip_tumor_stage_type IN pdc_path_report_section.tumor_stage_type%type,
+								 ip_tumor_stage_desc IN pdc_path_report_section.tumor_stage_desc%type,
+								 ip_lymph_node_st IN pdc_path_report_section.lymph_node_stage%type,
+								 ip_tot_nodes_pos IN pdc_path_report_section.total_nodes_positive%type,
+								 ip_tot_nod_exam IN pdc_path_report_section.total_nodes_examined%type,
+								 ip_ext_intra_comp IN pdc_path_report_section.extensive_intraductal_comp%type,
+								 ip_primary_gleason IN pdc_path_report_section.primary_gleason_score%type,
+								 ip_sec_gleason IN pdc_path_report_section.secondary_gleason_score%type,
+								 ip_tot_gleason IN pdc_path_report_section.total_gleason_score%type,
+								 ip_peri_inv_ind IN pdc_path_report_section.perineural_invasion_ind%type,
+								 ip_joint_comp IN pdc_path_report_section.joint_component%type,
+								 ip_dist_meta IN pdc_path_report_section.distant_metastasis%type,
+								 ip_stage_grouping IN pdc_path_report_section.stage_grouping%type
+							   );
+
+  /* constants */
+  DISEASE_VASCULAR      CONSTANT VARCHAR2(15) := '72092001';
+  DISEASE_CONNECTIVE    CONSTANT VARCHAR2(15) := '105969002';
+  DISEASE_BOWEL         CONSTANT VARCHAR2(15) := '24526004';
+  DISEASE_OTHER_NON_NEO CONSTANT VARCHAR2(15) := '128999004';
+  DISEASE_NEO_BREAST    CONSTANT VARCHAR2(15) := '126926005';
+  DISEASE_NEO_COLON     CONSTANT VARCHAR2(15) := '126838000';
+  DISEASE_NEO_LUNG      CONSTANT VARCHAR2(15) := '126713003';
+  DISEASE_NEO_OVARY     CONSTANT VARCHAR2(15) := '123843001';
+  DISEASE_NEO_PROSTATE  CONSTANT VARCHAR2(15) := '126906006';
+  DISEASE_NEO_OTHER     CONSTANT VARCHAR2(15) := '55342001';
+
+END ddc;
+/
+CREATE OR REPLACE PACKAGE BODY ddc AS
+
+  /**************************************************************************
+   * Replicates the diagnosis, diagnosis other, origin tissue, and origin tissue 
+   * other from the primary pathology section to the pathology report's diagnosis,
+   * diagnosis other, tissue, and tissue other.
+   **************************************************************************/
+  PROCEDURE replicate_primary_dx_tc(ip_path_report_id IN pdc_path_report_section.path_report_id%type,
+                                    ip_path_report_section_id IN pdc_path_report_section.path_report_section_id%type,
+                                    ip_dx IN pdc_path_report_section.diagnosis_concept_id%type,
+                                    ip_dx_other IN pdc_path_report_section.other_dx_name%type,
+                                    ip_tc IN pdc_path_report_section.tissue_origin_concept_id%type,
+                                    ip_tc_other IN pdc_path_report_section.other_origin_tc_name%type) IS
+  BEGIN
+    UPDATE pdc_pathology_report p
+    SET p.primary_path_report_section_id = ip_path_report_section_id,
+        p.diagnosis_concept_id = ip_dx,
+        p.diagnosis_other = ip_dx_other,
+        p.tissue_concept_id = ip_tc,
+        p.tissue_other = ip_tc_other
+    WHERE p.path_report_id = ip_path_report_id;
+  EXCEPTION
+    WHEN OTHERS THEN
+      Raise_Application_Error(-20004, 'Error while replicating diagnosis and tissue from PDC_PATH_REPORT_SECTION to PDC_PATHOLOGY_REPORT: '||sqlerrm);
+  END replicate_primary_dx_tc;
+  
+    /**************************************************************************
+   * Sets the DDC_CHECK_FLAG in ILTDS_INFORMED_CONSENT 
+   * data in PDC_PATHOLOGY_REPORT gets updated or inserted
+   **************************************************************************/
+  
+  PROCEDURE set_ddc_check_flag(  ip_consent_id IN pdc_pathology_report.consent_id%type,
+    						   	 ip_disease IN pdc_pathology_report.disease_concept_id%type,
+   								 ip_procedure IN pdc_pathology_report.procedure_concept_id%type,
+    							 ip_month IN pdc_pathology_report.path_check_date_mm%type,
+    							 ip_year IN pdc_pathology_report.path_check_date_yyyy%type,
+								 ip_primary_path_section_id pdc_pathology_report.primary_path_report_section_id%type
+							  ) IS
+  ip_dx pdc_path_report_section.diagnosis_concept_id%type;
+  ip_tc_origin pdc_path_report_section.tissue_origin_concept_id%type;
+  ip_tc_finding pdc_path_report_section.tissue_finding_concept_id%type;
+  ip_tumor_size pdc_path_report_section.tumor_size%type;
+  ip_tumor_wt pdc_path_report_section.tumor_weight%type;
+  ip_hist_type pdc_path_report_section.histological_type%type;
+  ip_hist_nuc_grade pdc_path_report_section.histological_nuclear_grade%type;
+  ip_tumor_stage_type pdc_path_report_section.tumor_stage_type%type;
+  ip_tumor_stage_desc pdc_path_report_section.tumor_stage_desc%type;
+  ip_lymph_node_st pdc_path_report_section.lymph_node_stage%type;
+  ip_tot_nodes_pos pdc_path_report_section.total_nodes_positive%type;
+  ip_tot_nod_exam pdc_path_report_section.total_nodes_examined%type;
+  ip_ext_intra_comp pdc_path_report_section.extensive_intraductal_comp%type;
+  ip_primary_gleason pdc_path_report_section.primary_gleason_score%type;
+  ip_sec_gleason pdc_path_report_section.secondary_gleason_score%type;
+  ip_tot_gleason pdc_path_report_section.total_gleason_score%type;
+  ip_peri_inv_ind pdc_path_report_section.perineural_invasion_ind%type;
+  ip_joint_comp pdc_path_report_section.joint_component%type;
+  ip_dist_meta pdc_path_report_section.distant_metastasis%type;
+  ip_stage_grouping pdc_path_report_section.stage_grouping%type;							  
+  BEGIN
+  
+  	   IF (ip_primary_path_section_id is not null) THEN	   
+		   SELECT diagnosis_concept_id, tissue_origin_concept_id,
+				  tissue_finding_concept_id, tumor_size, tumor_weight, histological_type,
+				  histological_nuclear_grade, tumor_stage_type, tumor_stage_desc,
+				  lymph_node_stage, total_nodes_positive, total_nodes_examined,
+				  extensive_intraductal_comp, primary_gleason_score, secondary_gleason_score,
+				  total_gleason_score, perineural_invasion_ind, joint_component,
+				  distant_metastasis, stage_grouping
+		   INTO	  ip_dx, ip_tc_origin, ip_tc_finding, ip_tumor_size, ip_tumor_wt, ip_hist_type,
+				  ip_hist_nuc_grade, ip_tumor_stage_type, ip_tumor_stage_desc, ip_lymph_node_st,
+				  ip_tot_nodes_pos, ip_tot_nod_exam, ip_ext_intra_comp, ip_primary_gleason,
+				  ip_sec_gleason, ip_tot_gleason, ip_peri_inv_ind, ip_joint_comp,
+				  ip_dist_meta, ip_stage_grouping 
+		   FROM   PDC_PATH_REPORT_SECTION
+		   WHERE  path_report_section_id = ip_primary_path_section_id; 
+		   --Set DDC Check flag
+		   set_ddc_check_flag_(ip_consent_id, ip_disease, ip_procedure, ip_month, ip_year,
+		   		  			  ip_dx, ip_tc_origin, ip_tc_finding, ip_tumor_size, ip_tumor_wt, ip_hist_type,
+				  			  ip_hist_nuc_grade, ip_tumor_stage_type, ip_tumor_stage_desc, ip_lymph_node_st,
+				  			  ip_tot_nodes_pos, ip_tot_nod_exam, ip_ext_intra_comp, ip_primary_gleason,
+				  			  ip_sec_gleason, ip_tot_gleason, ip_peri_inv_ind, ip_joint_comp,
+				  			  ip_dist_meta, ip_stage_grouping);		  
+			  
+			   
+	   		  
+	   END IF;
+	   
+	   
+  EXCEPTION
+    WHEN OTHERS THEN
+      Raise_Application_Error(-20004, 'Error while setting DDC CHECK FLAG from PDC_PATHOLOGY_REPORT: '||sqlerrm);
+  END set_ddc_check_flag;	
+  
+    /**************************************************************************
+   * Sets the DDC_CHECK_FLAG in ILTDS_INFORMED_CONSENT 
+   * data in PDC_PATH_REPORT_SECTION gets updated or inserted
+   **************************************************************************/  
+  PROCEDURE set_ddc_check_flag(  ip_path_report_id IN pdc_path_report_section.path_report_id%type,
+		  						 --ip_path_sec_rep_id IN pdc_path_report_section.path_report_section_id%type,
+								 ip_dx IN pdc_path_report_section.diagnosis_concept_id%type,
+	                             ip_tc_origin IN pdc_path_report_section.tissue_origin_concept_id%type,
+								 ip_tc_finding IN pdc_path_report_section.tissue_finding_concept_id%type,
+								 ip_tumor_size IN pdc_path_report_section.tumor_size%type,
+								 ip_tumor_wt IN pdc_path_report_section.tumor_weight%type,
+								 ip_hist_type IN pdc_path_report_section.histological_type%type,
+								 ip_hist_nuc_grade IN pdc_path_report_section.histological_nuclear_grade%type,
+								 ip_tumor_stage_type IN pdc_path_report_section.tumor_stage_type%type,
+								 ip_tumor_stage_desc IN pdc_path_report_section.tumor_stage_desc%type,
+								 ip_lymph_node_st IN pdc_path_report_section.lymph_node_stage%type,
+								 ip_tot_nodes_pos IN pdc_path_report_section.total_nodes_positive%type,
+								 ip_tot_nod_exam IN pdc_path_report_section.total_nodes_examined%type,
+								 ip_ext_intra_comp IN pdc_path_report_section.extensive_intraductal_comp%type,
+								 ip_primary_gleason IN pdc_path_report_section.primary_gleason_score%type,
+								 ip_sec_gleason IN pdc_path_report_section.secondary_gleason_score%type,
+								 ip_tot_gleason IN pdc_path_report_section.total_gleason_score%type,
+								 ip_peri_inv_ind IN pdc_path_report_section.perineural_invasion_ind%type,
+								 ip_joint_comp IN pdc_path_report_section.joint_component%type,
+								 ip_dist_meta IN pdc_path_report_section.distant_metastasis%type,
+								 ip_stage_grouping IN pdc_path_report_section.stage_grouping%type
+							   ) IS
+  ip_consent_id pdc_pathology_report.consent_id%type;
+  ip_disease pdc_pathology_report.disease_concept_id%type;
+  ip_procedure pdc_pathology_report.procedure_concept_id%type;
+  ip_month pdc_pathology_report.path_check_date_mm%type;
+  ip_year pdc_pathology_report.path_check_date_yyyy%type;
+  ip_primary_path_section_id pdc_pathology_report.primary_path_report_section_id%type;
+							   
+  BEGIN  	   
+     SELECT r.consent_id, r.disease_concept_id, r.procedure_concept_id, r.path_check_date_mm, r.path_check_date_yyyy
+     INTO ip_consent_id, ip_disease, ip_procedure, ip_month, ip_year
+     FROM  pdc_pathology_report r
+     WHERE r.path_report_id = ip_path_report_id;
+	 --dbms_output.put_line('SET_DDC_CHECK_FLAG called from SECTION :'||ip_path_report_id);
+	 	   
+	 --Set DDC Check flag
+	 set_ddc_check_flag_(ip_consent_id, ip_disease, ip_procedure, ip_month, ip_year,
+		   		  		ip_dx, ip_tc_origin, ip_tc_finding, ip_tumor_size, ip_tumor_wt, ip_hist_type,
+				  		ip_hist_nuc_grade, ip_tumor_stage_type, ip_tumor_stage_desc, ip_lymph_node_st,
+				  		ip_tot_nodes_pos, ip_tot_nod_exam, ip_ext_intra_comp, ip_primary_gleason,
+				  		ip_sec_gleason, ip_tot_gleason, ip_peri_inv_ind, ip_joint_comp,
+				  		ip_dist_meta, ip_stage_grouping);		 
+  							   						   
+  EXCEPTION
+    WHEN OTHERS THEN
+      Raise_Application_Error(-20004, 'Error while setting DDC CHECK FLAG from PDC_PATH_REPORT_SECTION: '||ip_path_report_id||sqlerrm);
+  END set_ddc_check_flag;	
+  /**************************************************************************
+   * Sets the DDC_CHECK_FLAG in ILTDS_INFORMED_CONSENT if the
+   * section to the pathology report's diagnosis and tissue.
+   **************************************************************************/
+  PROCEDURE set_ddc_check_flag_ ( ip_consent_id IN pdc_pathology_report.consent_id%type,
+    						   	 ip_disease IN pdc_pathology_report.disease_concept_id%type,
+   								 ip_procedure IN pdc_pathology_report.procedure_concept_id%type,
+    							 ip_month IN pdc_pathology_report.path_check_date_mm%type,
+    							 ip_year IN pdc_pathology_report.path_check_date_yyyy%type,
+  							   	 --ip_path_report_id IN pdc_path_report_section.path_report_id%type,
+		  						 --ip_path_sec_rep_id IN pdc_path_report_section.path_report_section_id%type,
+								 ip_dx IN pdc_path_report_section.diagnosis_concept_id%type,
+	                             ip_tc_origin IN pdc_path_report_section.tissue_origin_concept_id%type,
+								 ip_tc_finding IN pdc_path_report_section.tissue_finding_concept_id%type,
+								 ip_tumor_size IN pdc_path_report_section.tumor_size%type,
+								 ip_tumor_wt IN pdc_path_report_section.tumor_weight%type,
+								 ip_hist_type IN pdc_path_report_section.histological_type%type,
+								 ip_hist_nuc_grade IN pdc_path_report_section.histological_nuclear_grade%type,
+								 ip_tumor_stage_type IN pdc_path_report_section.tumor_stage_type%type,
+								 ip_tumor_stage_desc IN pdc_path_report_section.tumor_stage_desc%type,
+								 ip_lymph_node_st IN pdc_path_report_section.lymph_node_stage%type,
+								 ip_tot_nodes_pos IN pdc_path_report_section.total_nodes_positive%type,
+								 ip_tot_nod_exam IN pdc_path_report_section.total_nodes_examined%type,
+								 ip_ext_intra_comp IN pdc_path_report_section.extensive_intraductal_comp%type,
+								 ip_primary_gleason IN pdc_path_report_section.primary_gleason_score%type,
+								 ip_sec_gleason IN pdc_path_report_section.secondary_gleason_score%type,
+								 ip_tot_gleason IN pdc_path_report_section.total_gleason_score%type,
+								 ip_peri_inv_ind IN pdc_path_report_section.perineural_invasion_ind%type,
+								 ip_joint_comp IN pdc_path_report_section.joint_component%type,
+								 ip_dist_meta IN pdc_path_report_section.distant_metastasis%type,
+								 ip_stage_grouping IN pdc_path_report_section.stage_grouping%type
+							   ) IS  
+  BEGIN
+    
+ 	/*  Neoplasm of breast */		   
+ 	IF ip_disease = '126926005' THEN
+ 	   IF ip_month IS NOT NULL AND
+ 	   	  ip_year IS NOT NULL AND
+		  ip_procedure IS NOT NULL AND
+		  ip_dx IS NOT NULL AND
+		  ip_tc_origin IS NOT NULL AND
+		  ip_tc_finding IS NOT NULL AND
+		  (ip_tumor_size IS NOT NULL OR ip_tumor_wt IS NOT NULL) AND
+		  ip_hist_type IS NOT NULL AND
+		  ip_hist_nuc_grade IS NOT NULL AND
+		  ip_tumor_stage_type IS NOT NULL AND
+		  ip_tumor_stage_desc IS NOT NULL AND
+		  ip_tot_nodes_pos IS NOT NULL AND
+		  ip_dist_meta IS NOT NULL AND
+		  ip_lymph_node_st IS NOT NULL AND
+		  ip_tot_nod_exam IS NOT NULL AND
+		  ip_ext_intra_comp IS NOT NULL AND
+		  ip_stage_grouping IS NOT NULL THEN
+		  UPDATE iltds_informed_consent
+		  SET	 ddc_check_flag = 'Y'
+		  WHERE	 consent_id = ip_consent_id;
+	   ELSE
+	   	  UPDATE iltds_informed_consent
+		  SET	 ddc_check_flag = 'N'
+		  WHERE	 consent_id = ip_consent_id; 	  
+	   END IF;
+	/* Neoplasm of colon */
+	ELSIF ip_disease = '126838000' THEN
+ 	   IF ip_month IS NOT NULL AND
+ 	   	  ip_year IS NOT NULL AND
+		  ip_procedure IS NOT NULL AND
+		  ip_dx IS NOT NULL AND
+		  ip_tc_origin IS NOT NULL AND
+		  ip_tc_finding IS NOT NULL AND
+		  (ip_tumor_size IS NOT NULL OR ip_tumor_wt IS NOT NULL) AND
+		  ip_hist_type IS NOT NULL AND
+		  ip_hist_nuc_grade IS NOT NULL AND
+		  ip_tumor_stage_type IS NOT NULL AND
+		  ip_tumor_stage_desc IS NOT NULL AND
+		  ip_tot_nodes_pos IS NOT NULL AND
+		  ip_dist_meta IS NOT NULL AND
+		  ip_lymph_node_st IS NOT NULL AND
+		  ip_tot_nod_exam IS NOT NULL AND
+		  ip_stage_grouping IS NOT NULL THEN
+		  UPDATE iltds_informed_consent
+		  SET	 ddc_check_flag = 'Y'
+		  WHERE	 consent_id = ip_consent_id;
+	   ELSE
+	   	  UPDATE iltds_informed_consent
+		  SET	 ddc_check_flag = 'N'
+		  WHERE	 consent_id = ip_consent_id;
+	   END IF;
+	/* Neoplasm of lung */
+	ELSIF ip_disease = '126713003' THEN
+ 	   IF ip_month IS NOT NULL AND
+ 	   	  ip_year IS NOT NULL AND
+		  ip_procedure IS NOT NULL AND
+		  ip_dx IS NOT NULL AND
+		  ip_tc_origin IS NOT NULL AND
+		  ip_tc_finding IS NOT NULL AND
+		  (ip_tumor_size IS NOT NULL OR ip_tumor_wt IS NOT NULL) AND
+		  ip_hist_type IS NOT NULL AND
+		  ip_hist_nuc_grade IS NOT NULL AND
+		  ip_tumor_stage_type IS NOT NULL AND
+		  ip_tumor_stage_desc IS NOT NULL AND
+		  ip_tot_nodes_pos IS NOT NULL AND
+		  ip_dist_meta IS NOT NULL AND
+		  ip_lymph_node_st IS NOT NULL AND
+		  ip_tot_nod_exam IS NOT NULL AND
+		  ip_stage_grouping IS NOT NULL THEN
+		  UPDATE iltds_informed_consent
+		  SET	 ddc_check_flag = 'Y'
+		  WHERE	 consent_id = ip_consent_id;
+	   ELSE
+	   	  UPDATE iltds_informed_consent
+		  SET	 ddc_check_flag = 'N'
+		  WHERE	 consent_id = ip_consent_id; 
+	   END IF;
+	/* Neoplasm of ovary */
+	ELSIF ip_disease = '123843001' THEN
+ 	   IF ip_month IS NOT NULL AND
+ 	   	  ip_year IS NOT NULL AND
+		  ip_procedure IS NOT NULL AND
+		  ip_dx IS NOT NULL AND
+		  ip_tc_origin IS NOT NULL AND
+		  ip_tc_finding IS NOT NULL AND
+		  (ip_tumor_size IS NOT NULL OR ip_tumor_wt IS NOT NULL) AND
+		  ip_hist_type IS NOT NULL AND
+		  ip_hist_nuc_grade IS NOT NULL AND
+		  ip_tumor_stage_type IS NOT NULL AND
+		  ip_tumor_stage_desc IS NOT NULL AND
+		  ip_tot_nodes_pos IS NOT NULL AND
+		  ip_dist_meta IS NOT NULL AND
+		  ip_lymph_node_st IS NOT NULL AND
+		  ip_tot_nod_exam IS NOT NULL AND
+		  ip_stage_grouping IS NOT NULL THEN
+		  UPDATE iltds_informed_consent
+		  SET	 ddc_check_flag = 'Y'
+		  WHERE	 consent_id = ip_consent_id;
+	   ELSE
+	   	  UPDATE iltds_informed_consent
+		  SET	 ddc_check_flag = 'N'
+		  WHERE	 consent_id = ip_consent_id; 
+	   END IF;
+	/* Neoplasm of prostate */
+	ELSIF ip_disease = '126906006' THEN
+ 	   IF ip_month IS NOT NULL AND
+ 	   	  ip_year IS NOT NULL AND
+		  ip_procedure IS NOT NULL AND
+		  ip_dx IS NOT NULL AND
+		  ip_tc_origin IS NOT NULL AND
+		  ip_tc_finding IS NOT NULL AND
+		  (ip_tumor_size IS NOT NULL OR ip_tumor_wt IS NOT NULL) AND
+		  ip_hist_type IS NOT NULL AND		  
+		  ip_hist_nuc_grade IS NOT NULL AND		  
+		  ip_tumor_stage_type IS NOT NULL AND
+		  ip_tumor_stage_desc IS NOT NULL AND
+		  ip_tot_nodes_pos IS NOT NULL AND
+		  ip_dist_meta IS NOT NULL AND
+		  ip_lymph_node_st IS NOT NULL AND
+		  ip_tot_nod_exam IS NOT NULL AND
+		  ip_peri_inv_ind IS NOT NULL AND
+		  ip_stage_grouping IS NOT NULL THEN
+		  UPDATE iltds_informed_consent
+		  SET	 ddc_check_flag = 'Y'
+		  WHERE	 consent_id = ip_consent_id;
+	   ELSE
+	   	  UPDATE iltds_informed_consent
+		  SET	 ddc_check_flag = 'N'
+		  WHERE	 consent_id = ip_consent_id; 
+	   END IF;
+	/* Inflammatory disorder of digestive tract */
+	ELSIF ip_disease = '128999004' THEN
+ 	   IF ip_month IS NOT NULL AND
+ 	   	  ip_year IS NOT NULL AND
+		  ip_procedure IS NOT NULL AND
+		  ip_dx IS NOT NULL AND
+		  ip_tc_origin IS NOT NULL AND
+		  ip_tc_finding IS NOT NULL AND
+		  (ip_tumor_size IS NOT NULL OR ip_tumor_wt IS NOT NULL) THEN
+		  UPDATE iltds_informed_consent
+		  SET	 ddc_check_flag = 'Y'
+		  WHERE	 consent_id = ip_consent_id;
+	   ELSE
+	   	  UPDATE iltds_informed_consent
+		  SET	 ddc_check_flag = 'N'
+		  WHERE	 consent_id = ip_consent_id; 
+	   END IF;
+	/* Disease of connective tissues */
+	ELSIF ip_disease = '105969002' THEN
+ 	   IF ip_month IS NOT NULL AND
+ 	   	  ip_year IS NOT NULL AND
+		  ip_procedure IS NOT NULL AND
+		  ip_dx IS NOT NULL AND
+		  ip_tc_origin IS NOT NULL AND
+		  ip_tc_finding IS NOT NULL AND
+		  (ip_tumor_size IS NOT NULL OR ip_tumor_wt IS NOT NULL) AND
+		  ip_joint_comp IS NOT NULL THEN
+		  UPDATE iltds_informed_consent
+		  SET	 ddc_check_flag = 'Y'
+		  WHERE	 consent_id = ip_consent_id;
+	   ELSE
+	   	  UPDATE iltds_informed_consent
+		  SET	 ddc_check_flag = 'N'
+		  WHERE	 consent_id = ip_consent_id; 
+	   END IF;
+	/* Inflammatory bowel disease */
+	ELSIF ip_disease = '24526004' THEN
+ 	   IF ip_month IS NOT NULL AND
+ 	   	  ip_year IS NOT NULL AND
+		  ip_procedure IS NOT NULL AND
+		  ip_dx IS NOT NULL AND
+		  ip_tc_origin IS NOT NULL AND
+		  ip_tc_finding IS NOT NULL AND
+		  (ip_tumor_size IS NOT NULL OR ip_tumor_wt IS NOT NULL) THEN
+		  UPDATE iltds_informed_consent
+		  SET	 ddc_check_flag = 'Y'
+		  WHERE	 consent_id = ip_consent_id;
+	   END IF;
+	/* Other non neoplastic disease */
+	ELSIF ip_disease = '72092001' THEN
+ 	   IF ip_month IS NOT NULL AND
+ 	   	  ip_year IS NOT NULL AND
+		  ip_procedure IS NOT NULL AND
+		  ip_dx IS NOT NULL AND
+		  ip_tc_origin IS NOT NULL AND
+		  ip_tc_finding IS NOT NULL AND
+		  (ip_tumor_size IS NOT NULL OR ip_tumor_wt IS NOT NULL) THEN
+		  UPDATE iltds_informed_consent
+		  SET	 ddc_check_flag = 'Y'
+		  WHERE	 consent_id = ip_consent_id;
+	   ELSE
+	   	  UPDATE iltds_informed_consent
+		  SET	 ddc_check_flag = 'N'
+		  WHERE	 consent_id = ip_consent_id; 
+	   END IF;
+	/* Other Neoplastic Disease */
+	ELSIF ip_disease = '55342001' THEN
+ 	   IF ip_month IS NOT NULL AND
+ 	   	  ip_year IS NOT NULL AND
+		  ip_procedure IS NOT NULL AND
+		  ip_dx IS NOT NULL AND
+		  ip_tc_origin IS NOT NULL AND
+		  ip_tc_finding IS NOT NULL AND
+		  (ip_tumor_size IS NOT NULL OR ip_tumor_wt IS NOT NULL) AND
+		  ip_hist_type IS NOT NULL AND
+		  ip_hist_nuc_grade IS NOT NULL AND
+		  ip_tumor_stage_type IS NOT NULL AND
+		  ip_tumor_stage_desc IS NOT NULL AND
+		  ip_tot_nodes_pos IS NOT NULL AND
+		  ip_dist_meta IS NOT NULL AND
+		  ip_lymph_node_st IS NOT NULL AND
+		  ip_tot_nod_exam IS NOT NULL AND
+		  ip_stage_grouping IS NOT NULL THEN
+		  UPDATE iltds_informed_consent
+		  SET	 ddc_check_flag = 'Y'
+		  WHERE	 consent_id = ip_consent_id;
+	   ELSE
+	   	  UPDATE iltds_informed_consent
+		  SET	 ddc_check_flag = 'N'
+		  WHERE	 consent_id = ip_consent_id; 
+	   END IF;
+	END IF;
+  EXCEPTION
+    WHEN OTHERS THEN
+      Raise_Application_Error(-20004, 'Error while setting DDC_CHECK_FLAG: '||sqlerrm);
+  END set_ddc_check_flag_;
+
+END ddc;
+/
+

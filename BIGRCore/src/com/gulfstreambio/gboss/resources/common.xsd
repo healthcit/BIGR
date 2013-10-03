@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="//gulfstreambio/gboss/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gb="//gulfstreambio/gboss/">
+	<!-- 
+	conceptType 
+	-->
+	<xs:complexType name="conceptType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A type that includes properties common to all kinds of concepts.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="cui" type="gb:cuiType" use="required"/>
+		<xs:attribute name="vIntro" type="xs:string" use="optional"/>
+		<xs:attribute name="vRevised" type="xs:string" use="optional"/>
+		<xs:attribute name="description" type="gb:descriptionType" use="required"/>
+	</xs:complexType>
+	<!-- 
+	cleanStringType 
+	-->
+	<xs:simpleType name="cleanStringType">
+		<xs:annotation>
+			<xs:documentation>Non-control characters from the Basic Latin Unicode character set:
+			U+0020 through U+007E, which is everything between the space and the tilde.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[ -~]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- 
+	descriptionType 
+	-->
+	<xs:simpleType name="descriptionType">
+		<xs:annotation>
+			<xs:documentation>A type of clean string that must not include the empty string.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="gb:cleanStringType">
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- 
+	systemNameType 
+	-->
+	<xs:simpleType name="systemNameType">
+		<xs:annotation>
+			<xs:documentation>The lower-case alphabet, digits 0-9 and underscore are allowed.
+			Must start with lower-case alphabet only.  Must end with lower-case alphabet or digit 0-9.
+			Character after underscore must be a lower-case alphabet character.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-z]([a-z0-9]|_[a-z])*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- 
+	cuiType 
+	-->
+	<xs:simpleType name="cuiType">
+		<xs:annotation>
+			<xs:documentation>Upper and lower-case, digits 0-9 and ^</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Za-z0-9^]+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- 
+	elementType 
+	-->
+	<xs:complexType name="elementType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A type of concept that includes properties common to both 
+			dataElements and adeElements.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:conceptType">
+				<xs:sequence>
+					<xs:element name="longDescription" type="xs:string" minOccurs="0"/>
+					<xs:element name="comment" type="xs:string" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="systemName" type="gb:systemNameType"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	refType 
+	-->
+	<xs:complexType name="refType">
+		<xs:annotation>
+			<xs:documentation>Any type that contains a cui property that acts as a reference
+			to another concept.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="cui" type="xs:string" use="required"/>
+	</xs:complexType>
+	<!-- 
+	flagOneManyType 
+	-->
+	<xs:simpleType name="flagOneManyType">
+		<xs:annotation>
+			<xs:documentation>A string restricted to the values 1 and N which indicate a cardinality
+			of one or many.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="N"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- 
+	rangeAttributeGroup 
+	-->
+	<xs:attributeGroup name="rangeAttributeGroup">
+		<xs:annotation>
+			<xs:documentation>Group of attributes that qualify range properties, min and max.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="inclusive" type="xs:boolean" use="required"/>
+	</xs:attributeGroup>
+	<!-- 
+	intGroup 
+	-->
+	<xs:group name="intGroup">
+		<xs:annotation>
+			<xs:documentation>A group of properties common to int type elements.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="unitRef" type="gb:refType" minOccurs="0"/>
+			<xs:element name="min" type="gb:intRangeType" minOccurs="0"/>
+			<xs:element name="max" type="gb:intRangeType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:group>
+	<!-- 
+	intRangeType 
+	-->
+	<xs:complexType name="intRangeType">
+		<xs:annotation>
+			<xs:documentation>A type that holds the value of an int range property like
+			min or max and also includes range attributes.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:int">
+				<xs:attributeGroup ref="gb:rangeAttributeGroup"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- 
+	floatGroup 
+	-->
+	<xs:group name="floatGroup">
+		<xs:annotation>
+			<xs:documentation>A group of properties common to float type elements.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="unitRef" type="gb:refType" minOccurs="0"/>
+			<xs:element name="min" type="gb:floatRangeType" minOccurs="0"/>
+			<xs:element name="max" type="gb:floatRangeType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:group>
+	<!-- 
+	floatRangeType 
+	-->
+	<xs:complexType name="floatRangeType">
+		<xs:annotation>
+			<xs:documentation>A type that holds the value of a float range property like
+			min or max and also includes range attributes.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:decimal">
+				<xs:attributeGroup ref="gb:rangeAttributeGroup"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- 
+	dateGroup 
+	-->
+	<xs:group name="dateGroup">
+		<xs:annotation>
+			<xs:documentation>A group of properties common to date type elements.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="min" type="gb:dateRangeType" minOccurs="0"/>
+			<xs:element name="max" type="gb:dateRangeType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:group>
+	<!-- 
+	dateRangeType 
+	-->
+	<xs:complexType name="dateRangeType">
+		<xs:annotation>
+			<xs:documentation>A type that holds the value of a date range property like
+			min or max and also includes range attributes.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="gb:dateOrEnumType">
+				<xs:attributeGroup ref="gb:rangeAttributeGroup"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- 
+	dateOrEnumType 
+	-->
+	<xs:simpleType name="dateOrEnumType">
+		<xs:annotation>
+			<xs:documentation>A simple type that contains either a date or an enumerated string
+			that identifies a particular date within some context.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="xs:date">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="today"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<!-- 
+	cvGroup 
+	-->
+	<xs:group name="cvGroup">
+		<xs:annotation>
+			<xs:documentation>A group of properties common to cv type elements.
+			(in element form)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="broadValueSetRef" type="gb:refType"/>
+		</xs:sequence>
+	</xs:group>
+	<!-- 
+	cvAttributeGroup 
+	-->
+	<xs:attributeGroup name="cvAttributeGroup">
+		<xs:annotation>
+			<xs:documentation>A group of properties common to cv type elements.
+			(in attribute form)</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="multiplicity" type="gb:flagOneManyType" use="required"/>
+	</xs:attributeGroup>
+</xs:schema>

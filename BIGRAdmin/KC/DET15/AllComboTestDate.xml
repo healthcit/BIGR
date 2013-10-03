@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE formDefinition PUBLIC "-//GulfStream Bioinformatics Corporation//DTD KnowledgeCapture Form Definition XML1//EN" "kcFormDefinitionXML1.dtd">
+<formDefinition name="All Combo Test - date">
+  <formElementDefinitions>
+    <categoryDefinition displayName="datatype=date; min=n; max=n; EAV=n; ADE=n" categoryType="heading">
+      <dataElementDefinition cui="CA12228C"/>
+      <dataElementDefinition cui="CA12229C"/>
+    </categoryDefinition>
+<!--    <categoryDefinition displayName="datatype=date; min=n; max=n; EAV=n; ADE=y" categoryType="heading">
+    </categoryDefinition> -->
+<!--    <categoryDefinition displayName="datatype=date; min=n; max=n; EAV=y; ADE=n" categoryType="heading">
+    </categoryDefinition> -->
+<!--    <categoryDefinition displayName="datatype=date; min=n; max=n; EAV=y; ADE=y" categoryType="heading">
+    </categoryDefinition> -->
+    <categoryDefinition displayName="datatype=date; min=n; max=y; EAV=n; ADE=n" categoryType="heading">
+      <dataElementDefinition cui="CA01335C"/>
+      <dataElementDefinition cui="CA03284C"/>
+    </categoryDefinition>
+<!--    <categoryDefinition displayName="datatype=date; min=n; max=y; EAV=n; ADE=y" categoryType="heading">
+    </categoryDefinition> -->
+<!--    <categoryDefinition displayName="datatype=date; min=n; max=y; EAV=y; ADE=n" categoryType="heading">
+    </categoryDefinition> -->
+<!--    <categoryDefinition displayName="datatype=date; min=n; max=y; EAV=y; ADE=y" categoryType="heading">
+    </categoryDefinition> -->
+<!--    <categoryDefinition displayName="datatype=date; min=y; max=n; EAV=n; ADE=n" categoryType="heading">
+    </categoryDefinition> -->
+<!--    <categoryDefinition displayName="datatype=date; min=y; max=n; EAV=n; ADE=y" categoryType="heading">
+    </categoryDefinition> -->
+<!--    <categoryDefinition displayName="datatype=date; min=y; max=n; EAV=y; ADE=n" categoryType="heading">
+    </categoryDefinition> -->
+<!--    <categoryDefinition displayName="datatype=date; min=y; max=n; EAV=y; ADE=y" categoryType="heading">
+    </categoryDefinition> -->
+<!--    <categoryDefinition displayName="datatype=date; min=y; max=y; EAV=n; ADE=n" categoryType="heading">
+    </categoryDefinition> -->
+<!--    <categoryDefinition displayName="datatype=date; min=y; max=y; EAV=n; ADE=y" categoryType="heading">
+    </categoryDefinition> -->
+<!--    <categoryDefinition displayName="datatype=date; min=y; max=y; EAV=y; ADE=n" categoryType="heading">
+    </categoryDefinition> -->
+<!--    <categoryDefinition displayName="datatype=date; min=y; max=y; EAV=y; ADE=y" categoryType="heading">
+    </categoryDefinition> -->
+  </formElementDefinitions>
+</formDefinition>

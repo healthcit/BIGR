@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<!-- FileName: kcResultsFormXML1.dtd-->
+<!-- -->
+<!ELEMENT resultsFormDefinition (formElements+)>
+<!ATTLIST resultsFormDefinition 
+	name CDATA #REQUIRED
+      enabled (true|false) "false"
+>
+<!-- -->
+<!ELEMENT formElements (dataElement | hostElement)+>
+<!-- -->
+<!ELEMENT dataElement (tag*)>
+<!ATTLIST dataElement 
+	cui CDATA #REQUIRED
+	displayName CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT hostElement (tag*)>
+<!ATTLIST hostElement 
+	hostId CDATA #REQUIRED
+	displayName CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT tag EMPTY>
+<!ATTLIST tag
+	type CDATA #REQUIRED
+	value CDATA #REQUIRED
+>

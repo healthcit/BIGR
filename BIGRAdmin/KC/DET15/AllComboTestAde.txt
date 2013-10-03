@@ -1,0 +1,155 @@
+This document contains the unique metadata categories of ADE elements,
+and for each that contains at least one element in the DET, it indicates
+which data elements in the AllComboTest forms can be used to test the
+ADE elements in that category.
+
+datatype=cv; singlevalued; other=n, MLVS=n; NOVAL=n;
+----------------------------------------------------
+Culture result (CA01196C) - Lab Micro (CA01739C) - Bone culture (CA05853C) - cv single
+Timing of smoking (CA11271C) - Tobacco History (CA01744C) - Tobacco use indicator (CA06468C) - cv single
+
+datatype=cv; singlevalued; other=n, MLVS=n; NOVAL=y;
+----------------------------------------------------
+Cancer Status (CA05710C) - Cancer History (CA01762C) - Cancer Indicator (CA05877C) - cv single
+Head metastasis (CA11255C) - Lab CT (CA11275C) - Lab CT (CA11206C) - cv single
+
+//datatype=cv; singlevalued; other=n, MLVS=y; NOVAL=n;
+----------------------------------------------------
+
+//datatype=cv; singlevalued; other=n, MLVS=y; NOVAL=y;
+----------------------------------------------------
+
+datatype=cv; singlevalued; other=y, MLVS=n; NOVAL=n;
+----------------------------------------------------
+Object of study (CA05743C) - Object Study Report (CA01704C) - Abdominal scan (CA05165C) - cv single
+
+//datatype=cv; singlevalued; other=y, MLVS=n; NOVAL=y;
+----------------------------------------------------
+
+datatype=cv; singlevalued; other=y, MLVS=y; NOVAL=n;
+----------------------------------------------------
+Test technique (CA05753C) - Lab Technique (CA01730C) - Hybrid capture 2 HPV DNA test (CA01549C) - cv single
+
+//datatype=cv; singlevalued; other=y, MLVS=y; NOVAL=y;
+----------------------------------------------------
+
+datatype=cv; multivalued; other=n, MLVS=n; NOVAL=n;
+----------------------------------------------------
+Cancer treatment (CA05711C) - Cancer History (CA01762C) - Cancer Indicator (CA05877C) - cv single
+Lung mass (CA11258C) - Lab CT (CA11275C) - Lab CT (CA11206C) - cv single
+
+//datatype=cv; multivalued; other=n, MLVS=n; NOVAL=y;
+----------------------------------------------------
+
+//datatype=cv; multivalued; other=n, MLVS=y; NOVAL=n;
+----------------------------------------------------
+
+//datatype=cv; multivalued; other=n, MLVS=y; NOVAL=y;
+----------------------------------------------------
+
+datatype=cv; multivalued; other=y, MLVS=n; NOVAL=n;
+----------------------------------------------------
+Tobacco type (CA11272C) - Tobacco History (CA01744C) - Tobacco use indicator (CA06468C) - cv single
+PET mass (CA11263C) - Lab PET (CA11278C) - Lab PET (CA11209C) - cv single
+
+datatype=cv; multivalued; other=y, MLVS=n; NOVAL=y;
+----------------------------------------------------
+Cancer location (CA05709C) - Cancer History (CA01762C) - Cancer Indicator (CA05877C) - cv single
+Lymphadenopathy location (CA11259C) - Lab CT (CA11275C) - Lab CT (CA11206C) - cv single
+
+//datatype=cv; multivalued; other=y, MLVS=y; NOVAL=n;
+----------------------------------------------------
+
+//datatype=cv; multivalued; other=y, MLVS=y; NOVAL=y;
+----------------------------------------------------
+
+//datatype=date; min=n; max=n;
+----------------------------
+
+datatype=date; min=n; max=y;
+----------------------------
+Date of object study (CA05762C) - Object Study Report (CA01704C) - Abdominal scan (CA05165C) - cv single
+Date of microbiology test (CA05718C) - Lab Micro (CA01739C) - Bone culture (CA05853C) - cv single
+
+//datatype=date; min=y; max=n;
+----------------------------
+
+//datatype=date; min=y; max=y;
+----------------------------
+
+//datatype=float; unit=n; min=n; max=n;
+-------------------------------------
+
+//datatype=float; unit=n; min=n; max=y;
+
+datatype=float; unit=n; min=y; max=n;
+-------------------------------------
+SUV ~ Standardized uptake value (CA11267C) - Lab PET (CA11278C) - Lab PET (CA11209C) - cv single
+
+//datatype=float; unit=n; min=y; max=y;
+-------------------------------------
+
+//datatype=float; unit=y; min=n; max=n;
+-------------------------------------
+
+//datatype=float; unit=y; min=n; max=y;
+-------------------------------------
+
+datatype=float; unit=y; min=y; max=n;
+-------------------------------------
+CT size of tumor (CA11252C) - Lab CT (CA11275C) - Lab CT (CA11206C) - cv single
+CT size of lymph node (CA11251C) - Lab CT (CA11275C) - Lab CT (CA11206C) - cv single
+
+//datatype=float; unit=y; min=y; max=y;
+-------------------------------------
+
+//datatype=int; unit=n; min=n; max=n;
+-----------------------------------
+
+//datatype=int; unit=n; min=n; max=y;
+-----------------------------------
+
+//datatype=int; unit=n; min=y; max=n;
+-----------------------------------
+
+//datatype=int; unit=n; min=y; max=y;
+-----------------------------------
+
+//datatype=int; unit=y; min=n; max=n;
+-----------------------------------
+
+//datatype=int; unit=y; min=n; max=y;
+-----------------------------------
+
+datatype=int; unit=y; min=y; max=n;
+-----------------------------------
+Age at diagnosis (CA05704C) - Cancer History (CA01762C) - Cancer Indicator (CA05877C) - cv single
+Tobacco amount (CA05754C) - Tobacco History (CA01744C) - Tobacco use indicator (CA06468C) - cv single
+Years not smoking (CA02275C) - Tobacco History (CA01744C) - Tobacco use indicator (CA06468C) - cv single
+
+datatype=int; unit=y; min=y; max=y;
+-----------------------------------
+Percent inclusive (CA11773C) - Percent (CA11772C) - Esophagus (CA11786C) - cv multi
+
+datatype=report; 
+----------------
+Object study report (CA05761C) - Object Study Report (CA01704C) - Abdominal scan (CA05165C) - cv single
+CT comment (CA11250C) - Lab CT (CA11275C) - Lab CT (CA11206C) - cv single
+PET comment (CA11262C) - Lab PET (CA11278C) - Lab PET (CA11209C) - cv single
+
+//datatype=text; 
+--------------
+
+//datatype=vpd; min=n; max=n;
+---------------------------
+
+datatype=vpd; min=n; max=y;
+---------------------------
+Date of diagnosis (CA05717C) - Cancer History (CA01762C) - Cancer Indicator (CA05877C) - cv single
+Date most recent tobacco use (CA05755C) - Tobacco History (CA01744C) - Tobacco use indicator (CA06468C) - cv single
+
+//datatype=vpd; min=y; max=n;
+---------------------------
+
+//datatype=vpd; min=y; max=y;
+---------------------------

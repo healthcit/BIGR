@@ -1,0 +1,311 @@
+##-------------------- determineDataBaseType Macro --------------------
+#macro(determineDataBaseType $datatype)
+#if($datatype == "cv")
+VARCHAR2(30)
+#elseif($datatype == "int")
+NUMBER
+#elseif($datatype == "float")
+NUMBER
+#elseif($datatype == "date")
+DATE
+#elseif($datatype == "vpd")
+DATE
+#elseif($datatype == "report")
+CLOB
+#elseif($datatype == "text")
+VARCHAR2(4000)
+#end
+#end
+##-------------------- tablespaceDef Macro --------------------
+#macro(tablespaceDef)
+TABLESPACE CIR_TBL_TBS
+PCTUSED    85
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          16K
+            NEXT             16K
+            MINEXTENTS       1
+            MAXEXTENTS       505
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL#end## macro tablespaceDef
+##-------------------- uniqueIndexDef Macro --------------------
+#macro(uniqueIndexDef $indexName $tableName $columnName)
+CREATE UNIQUE INDEX $indexName ON $tableName ($columnName)
+TABLESPACE CIR_IDX_TBS
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          16K
+            NEXT             16K
+            MINEXTENTS       1
+            MAXEXTENTS       505
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+NOPARALLEL;
+#end## macro uniqueIndexDef
+##-------------------- fkIndexDefStorage Macro --------------------
+#macro(fkIndexDefStorage)
+LOGGING
+TABLESPACE CIR_IDX_TBS
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          16K
+            NEXT             16K
+            MINEXTENTS       1
+            MAXEXTENTS       505
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+NOPARALLEL
+#end## macro fkIndexDefStorage
+##-------------------- fkIndexDef Macro --------------------
+#macro(fkIndexDef $indexName $tableName $columnName)
+CREATE INDEX $indexName ON $tableName ($columnName)
+#end## macro fkIndexDef
+##-------------------- fkIndexDefShared Macro --------------------
+#macro(fkIndexDefShared $indexName $tableName $columnName)
+#fkIndexDef($indexName $tableName $columnName)
+#fkIndexDefStorage()
+#end## macro fkIndexDefShared
+
+REM ************************************************************************************
+REM * Generated KnowledgeCapture database schema for DET version $detversion
+REM ************************************************************************************
+#foreach($category in $gboss.Categories)
+#if($category.isDatabaseTypeEav() || $category.isDatabaseTypeConventional())
+#if($category.isDatabaseTypeConventional())
+
+REM ************************************************************************************
+REM * CREATE TABLE for category $category.SystemName (conventional)
+REM ************************************************************************************
+CREATE TABLE ${KcNamingUtils.getDatabaseTableNameConventional($category)} (
+ID NUMBER NOT NULL
+,FORM_ID VARCHAR2(10)
+#foreach($dataElement in $category.DataElementsAllDescendants)
+#if(!$dataElement.isMultiValued())
+#set ($detDataElement = ${det.getDataElement($dataElement.Cui)})
+#set ($dbDataElement = ${detDataElement.getDatabaseElement()})
+,${dbDataElement.ColumnDataValue} #determineDataBaseType($dataElement.Datatype)
+#if($dataElement.OtherValueCui)
+,${dbDataElement.ColumnDataValueOther} VARCHAR2(200)
+#end
+#if($dataElement.Datatype == "vpd")
+,${dbDataElement.ColumnDataValueDpc} VARCHAR2(30)
+#end
+#if($dataElement.Datatype != "cv")
+,${dbDataElement.ColumnDataValueSystemStandard} VARCHAR2(30)
+#end
+#end##if not multivalued
+#end##foreach data element
+)
+#if($environment == "shared")
+#tablespaceDef()
+#end
+;
+#if($environment == "shared")
+#set ($tableName = "${KcNamingUtils.getDatabaseTableNameConventional($category)}")
+#set ($indexName = "PK_${KcNamingUtils.getDatabaseTableNameConventional($category)}")
+#set ($columnName = "ID")
+
+#uniqueIndexDef($indexName $tableName $columnName)
+#set ($indexName = "${KcNamingUtils.getDatabaseTableNameConventional($category)}_I1")
+#set ($columnName = "FORM_ID")
+
+#fkIndexDefShared($indexName $tableName $columnName);
+#end
+
+ALTER TABLE ${KcNamingUtils.getDatabaseTableNameConventional($category)} ADD CONSTRAINT PK_${KcNamingUtils.getDatabaseTableNameConventional($category)} PRIMARY KEY (ID);
+#end## database type is conventional
+
+#if($category.isDatabaseTypeEav())
+#if($category.hasSingleValuedDataElements())
+REM ************************************************************************************
+REM * CREATE TABLE for category $category.SystemName (eav)
+REM ************************************************************************************
+CREATE TABLE ${KcNamingUtils.getDatabaseTableNameEav($category)} (
+ID NUMBER NOT NULL
+,FORM_ID VARCHAR2(10)
+,DATA_ELEMENT_CUI VARCHAR2(30)
+,DATA_VALUE_CUI VARCHAR2(30)
+,DATA_VALUE_DATE DATE
+,DATA_VALUE_DATE_DPC VARCHAR2(30)
+,DATA_VALUE_CLOB CLOB
+,DATA_VALUE_TEXT VARCHAR2(4000)
+,DATA_VALUE NUMBER
+,OTHER_DATA_VALUE VARCHAR(200)
+)
+#if($environment == "shared")
+#tablespaceDef()
+#end
+;
+#if($environment == "shared")
+#set ($indexName = "PK_${KcNamingUtils.getDatabaseTableNameConventional($category)}_E")
+#set ($tableName = "${KcNamingUtils.getDatabaseTableNameEav($category)}")
+#set ($columnName = "ID")
+
+#uniqueIndexDef($indexName $tableName $columnName)
+#end
+
+ALTER TABLE ${KcNamingUtils.getDatabaseTableNameEav($category)} ADD CONSTRAINT PK_${KcNamingUtils.getDatabaseTableNameConventional($category)}_E PRIMARY KEY (ID);
+
+#set ($indexName = "${KcNamingUtils.getDatabaseTableNameConventional($category)}_I7")
+#set ($tableName = "${KcNamingUtils.getDatabaseTableNameEav($category)}")
+#set ($columnName = "FORM_ID")
+#if($environment == "shared")
+#fkIndexDefShared($indexName $tableName $columnName);
+#else
+#fkIndexDef($indexName $tableName $columnName);
+#end
+#end##if has singlevalued
+#end##if is EAV
+
+#if($category.hasMultivaluedDataElements())
+CREATE TABLE ${KcNamingUtils.getDatabaseTableNameMulti($category)} (
+ID NUMBER NOT NULL
+,FORM_ID VARCHAR2(10)
+,DATA_ELEMENT_CUI VARCHAR2(30)
+,DATA_VALUE_CUI VARCHAR2(30)
+,OTHER_DATA_VALUE VARCHAR2(200)
+)
+#if($environment == "shared")
+#tablespaceDef()
+#end
+;
+
+#if($environment == "shared")
+#set ($indexName = "PK_${KcNamingUtils.getDatabaseTableNameConventional($category)}_M")
+#set ($tableName = "${KcNamingUtils.getDatabaseTableNameMulti($category)}")
+#set ($columnName = "ID")
+#uniqueIndexDef($indexName $tableName $columnName)
+#end
+
+ALTER TABLE ${KcNamingUtils.getDatabaseTableNameMulti($category)} ADD CONSTRAINT PK_${KcNamingUtils.getDatabaseTableNameConventional($category)}_M PRIMARY KEY (ID);
+
+#set ($indexName = "${KcNamingUtils.getDatabaseTableNameConventional($category)}_I3")
+#set ($tableName = "${KcNamingUtils.getDatabaseTableNameMulti($category)}")
+#set ($columnName = "FORM_ID")
+#if($environment == "shared")
+#fkIndexDefShared($indexName $tableName $columnName);
+#else
+#fkIndexDef($indexName $tableName $columnName);
+#end
+#end##if has multivalued
+
+CREATE TABLE ${KcNamingUtils.getDatabaseTableNameNote($category)} (
+ID NUMBER NOT NULL
+,FORM_ID VARCHAR2(10)
+,DATA_ELEMENT_CUI VARCHAR2(30)
+,NOTE VARCHAR2(4000)
+)
+#if($environment == "shared")
+#tablespaceDef()
+#end
+;
+
+#if($environment == "shared")
+#set ($indexName = "PK_${KcNamingUtils.getDatabaseTableNameConventional($category)}_N")
+#set ($tableName = "${KcNamingUtils.getDatabaseTableNameNote($category)}")
+#set ($columnName = "ID")
+#uniqueIndexDef($indexName $tableName $columnName)
+#end
+
+ALTER TABLE ${KcNamingUtils.getDatabaseTableNameNote($category)} ADD CONSTRAINT PK_${KcNamingUtils.getDatabaseTableNameConventional($category)}_N PRIMARY KEY (ID);
+
+#set ($indexName = "${KcNamingUtils.getDatabaseTableNameConventional($category)}_I5")
+#set ($tableName = "${KcNamingUtils.getDatabaseTableNameNote($category)}")
+#set ($columnName = "FORM_ID")
+#if($environment == "shared")
+#fkIndexDefShared($indexName $tableName $columnName);
+#else
+#fkIndexDef($indexName $tableName $columnName);
+#end
+#end##if category is a database category
+#end##foreach category
+
+#foreach($ade in $gboss.getAncillaryDataElements().getAncillaryDataElements())
+#set ($multi = false)
+CREATE TABLE ${KcNamingUtils.getDatabaseTableNameConventional($ade)} (
+ID NUMBER NOT NULL
+,FORM_ID VARCHAR2(10)
+,PARENT_ID NUMBER
+,DATA_ELEMENT_CUI VARCHAR2(30)
+#foreach($dataElement in $ade.getAncillaryDataElementElements())
+#if(!$dataElement.isMultiValued())
+#set ($detDataElement = ${det.getAdeElement($dataElement.Cui)})
+#set ($dbDataElement = ${detDataElement.getDatabaseElement()})
+,${dbDataElement.ColumnDataValue} #determineDataBaseType($dataElement.Datatype)
+#if($dataElement.OtherValueCui)
+,${dbDataElement.ColumnDataValueOther} VARCHAR2(200)
+#end
+#if($dataElement.Datatype == "vpd")
+,${dbDataElement.ColumnDataValueDpc} VARCHAR2(30)
+#end
+#else
+#set ($multi = true)
+#end##if-else not multivalued
+#end##foreach dataElement
+)
+#if($environment == "shared")
+#tablespaceDef()
+#end
+;
+#if($environment == "shared")
+#set ($tableName = "${KcNamingUtils.getDatabaseTableNameConventional($ade)}")
+#set ($indexName = "PK_${KcNamingUtils.getDatabaseTableNameConventional($ade)}")
+#set ($columnName = "ID")
+
+#uniqueIndexDef($indexName $tableName $columnName)
+#set ($indexName = "${KcNamingUtils.getDatabaseTableNameConventional($ade)}_I8")
+#set ($columnName = "FORM_ID")
+
+#fkIndexDefShared($indexName $tableName $columnName);
+#end
+
+ALTER TABLE ${KcNamingUtils.getDatabaseTableNameConventional($ade)} ADD CONSTRAINT PK_${KcNamingUtils.getDatabaseTableNameConventional($ade)} PRIMARY KEY (ID);
+
+#if($multi)
+CREATE TABLE ${KcNamingUtils.getDatabaseTableNameMulti($ade)} (
+ID NUMBER NOT NULL
+,FORM_ID VARCHAR2(10)
+,PARENT_ID NUMBER NOT NULL
+,DATA_ELEMENT_CUI VARCHAR2(30)
+,DATA_VALUE_CUI VARCHAR2(30)
+,OTHER_DATA_VALUE VARCHAR2(200)
+)
+#if($environment == "shared")
+#tablespaceDef()
+#end
+;
+#if($environment == "shared")
+#set ($tableName = "${KcNamingUtils.getDatabaseTableNameMulti($ade)}")
+#set ($indexName = "PK_${KcNamingUtils.getDatabaseTableNameConventional($ade)}_M")
+#set ($columnName = "ID")
+
+#uniqueIndexDef($indexName $tableName $columnName)
+#set ($indexName = "${KcNamingUtils.getDatabaseTableNameConventional($ade)}_I9")
+#set ($columnName = "FORM_ID")
+
+#fkIndexDefShared($indexName $tableName $columnName);
+#end
+
+ALTER TABLE ${KcNamingUtils.getDatabaseTableNameMulti($ade)} ADD CONSTRAINT PK_${KcNamingUtils.getDatabaseTableNameConventional($ade)}_M PRIMARY KEY (ID);
+#end##if has multivalued
+#end##foreach ade
+
+CREATE SEQUENCE CIR_SEQ START WITH 1 INCREMENT BY 1 NOMAXVALUE NOCYCLE CACHE 20;

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webSphere-memento-map
+   CONFIG_MEMENTO_MAP_FILE_KEY_ID="WebSphere V5.1 Configuration Memento Map File"
+   CONFIG_NAME_KEY_ID="BIGRAppSrv5" server-type="14">
+   <memento-map>
+      <memento-map-entry key="BIGRWeb.war" value="com.ibm.etools.webtools.server:BIGRWeb"/>
+      <memento-map-entry key="BIGR" value="com.ibm.etools.server.j2ee.ear12:BIGR"/>
+      <memento-map-entry key="BIGREjb.jar" value="com.ibm.etools.server.j2ee.ejb11:BIGREjb"/>
+   </memento-map>
+</webSphere-memento-map>

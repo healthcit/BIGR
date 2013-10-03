@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.4 U (http://www.xmlspy.com) by John Esielionis (Ardais Corporation) -->
+<!-- -->
+<!ELEMENT account (assignableInventoryGroups*, assignablePrivileges*)>
+<!-- -->
+<!ELEMENT assignableInventoryGroups (inventoryGroup*)>
+<!-- -->
+<!ELEMENT inventoryGroup EMPTY>
+<!ATTLIST inventoryGroup
+	id NMTOKEN #REQUIRED
+	fullName CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT assignablePrivileges (privilege*)>
+<!-- -->
+<!ELEMENT privilege EMPTY>
+<!ATTLIST privilege
+	id NMTOKEN #REQUIRED
+	description CDATA #IMPLIED
+>

@@ -1,0 +1,184 @@
+REM ************************************************************************************
+REM * Generated KnowledgeCapture database views for DET version $detversion
+REM ************************************************************************************
+#foreach($category in $gboss.Categories)
+#if($category.isDatabaseTypeEav() || $category.isDatabaseTypeConventional())
+#if($category.isDatabaseTypeConventional())
+
+REM ************************************************************************************
+REM * CREATE VIEW for category $category.SystemName (conventional)
+REM ************************************************************************************
+CREATE OR REPLACE VIEW ${KcNamingUtils.getDatabaseViewNameConventional($category)} (
+ID
+,FORM_ID
+#foreach($dataElement in $category.DataElementsAllDescendants)
+#if(!$dataElement.isMultiValued())
+#set ($detDataElement = ${det.getDataElement($dataElement.Cui)})
+#set ($dbDataElement = ${detDataElement.getDatabaseElement()})
+,${dbDataElement.ColumnDataValue}
+#if($dataElement.OtherValueCui)
+,${dbDataElement.ColumnDataValueOther}
+#end
+#if($dataElement.Datatype == "vpd")
+,${dbDataElement.ColumnDataValueDpc}
+#end
+#if($dataElement.Datatype != "cv")
+,${dbDataElement.ColumnDataValueSystemStandard}
+#end
+#end##if not multivalued
+#end##foreach data element
+)
+AS (SELECT
+ID
+,FORM_ID
+#foreach($dataElement in $category.DataElementsAllDescendants)
+#if(!$dataElement.isMultiValued())
+#set ($detDataElement = ${det.getDataElement($dataElement.Cui)})
+#set ($dbDataElement = ${detDataElement.getDatabaseElement()})
+,${dbDataElement.ColumnDataValue}
+#if($dataElement.OtherValueCui)
+,${dbDataElement.ColumnDataValueOther}
+#end
+#if($dataElement.Datatype == "vpd")
+,${dbDataElement.ColumnDataValueDpc}
+#end
+#if($dataElement.Datatype != "cv")
+,${dbDataElement.ColumnDataValueSystemStandard}
+#end
+#end##if not multivalued
+#end##foreach data element
+FROM ${KcNamingUtils.getDatabaseTableNameConventional($category)});
+/
+#end## database type is conventional
+
+#if($category.isDatabaseTypeEav())
+#if($category.hasSingleValuedDataElements())
+REM ************************************************************************************
+REM * CREATE VIEW for category $category.SystemName (eav)
+REM ************************************************************************************
+CREATE OR REPLACE VIEW ${KcNamingUtils.getDatabaseViewNameEav($category)} (
+ID
+,FORM_ID
+,DATA_ELEMENT_CUI
+,DATA_VALUE_CUI
+,DATA_VALUE_DATE
+,DATA_VALUE_DATE_DPC
+,DATA_VALUE_CLOB
+,DATA_VALUE_TEXT
+,DATA_VALUE
+,OTHER_DATA_VALUE
+)
+AS (SELECT
+ID
+,FORM_ID
+,DATA_ELEMENT_CUI
+,DATA_VALUE_CUI
+,DATA_VALUE_DATE
+,DATA_VALUE_DATE_DPC
+,DATA_VALUE_CLOB
+,DATA_VALUE_TEXT
+,DATA_VALUE
+,OTHER_DATA_VALUE
+FROM ${KcNamingUtils.getDatabaseTableNameEav($category)});
+/
+#end##if has singlevalued
+#end##if is EAV
+
+#if($category.hasMultivaluedDataElements())
+CREATE OR REPLACE VIEW ${KcNamingUtils.getDatabaseViewNameMulti($category)} (
+ID
+,FORM_ID
+,DATA_ELEMENT_CUI
+,DATA_VALUE_CUI
+,OTHER_DATA_VALUE
+)
+AS (SELECT 
+ID
+,FORM_ID
+,DATA_ELEMENT_CUI
+,DATA_VALUE_CUI
+,OTHER_DATA_VALUE
+FROM ${KcNamingUtils.getDatabaseTableNameMulti($category)});
+/
+#end##if has multivalued
+
+CREATE OR REPLACE VIEW ${KcNamingUtils.getDatabaseViewNameNote($category)} (
+ID
+,FORM_ID
+,DATA_ELEMENT_CUI
+,NOTE
+)
+AS (SELECT 
+ID
+,FORM_ID
+,DATA_ELEMENT_CUI
+,NOTE
+FROM ${KcNamingUtils.getDatabaseTableNameNote($category)});
+/
+#end##if category is a database category
+#end##foreach category
+
+#foreach($ade in $gboss.getAncillaryDataElements().getAncillaryDataElements())
+#set ($multi = false)
+CREATE OR REPLACE VIEW ${KcNamingUtils.getDatabaseViewNameConventional($ade)} (
+ID
+,FORM_ID
+,PARENT_ID
+,DATA_ELEMENT_CUI
+#foreach($dataElement in $ade.getAncillaryDataElementElements())
+#if(!$dataElement.isMultiValued())
+#set ($detDataElement = ${det.getAdeElement($dataElement.Cui)})
+#set ($dbDataElement = ${detDataElement.getDatabaseElement()})
+,${dbDataElement.ColumnDataValue}
+#if($dataElement.OtherValueCui)
+,${dbDataElement.ColumnDataValueOther}
+#end
+#if($dataElement.Datatype == "vpd")
+,${dbDataElement.ColumnDataValueDpc}
+#end
+#else
+#set ($multi = true)
+#end##if-else not multivalued
+#end##foreach dataElement
+)
+AS (SELECT
+ID
+,FORM_ID
+,PARENT_ID
+,DATA_ELEMENT_CUI
+#foreach($dataElement in $ade.getAncillaryDataElementElements())
+#if(!$dataElement.isMultiValued())
+#set ($detDataElement = ${det.getAdeElement($dataElement.Cui)})
+#set ($dbDataElement = ${detDataElement.getDatabaseElement()})
+,${dbDataElement.ColumnDataValue}
+#if($dataElement.OtherValueCui)
+,${dbDataElement.ColumnDataValueOther}
+#end
+#if($dataElement.Datatype == "vpd")
+,${dbDataElement.ColumnDataValueDpc}
+#end
+#end##if not multivalued
+#end##foreach dataElement
+FROM ${KcNamingUtils.getDatabaseTableNameConventional($ade)});
+/
+
+#if($multi)
+CREATE OR REPLACE VIEW ${KcNamingUtils.getDatabaseViewNameMulti($ade)} (
+ID
+,FORM_ID
+,PARENT_ID
+,DATA_ELEMENT_CUI
+,DATA_VALUE_CUI
+,OTHER_DATA_VALUE
+)
+AS (SELECT
+ID
+,FORM_ID
+,PARENT_ID
+,DATA_ELEMENT_CUI
+,DATA_VALUE_CUI
+,OTHER_DATA_VALUE
+FROM ${KcNamingUtils.getDatabaseTableNameMulti($ade)});
+/
+#end##if has multivalued
+#end##foreach ade

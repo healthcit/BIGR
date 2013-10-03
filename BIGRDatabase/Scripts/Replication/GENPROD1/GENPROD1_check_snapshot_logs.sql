@@ -1,0 +1,7 @@
+--SELECT count(*) from MLOG$_ARD_CONCEPT_GRAPH;
+SELECT count(*) from MLOG$_ARD_POLICY;
+SELECT count(*) from MLOG$_ES_ARDAIS_USER;
+SELECT count(*) from MLOG$_ILTDS_BLOOD_COLLECTI;
+SELECT count(*) from MLOG$_ILTDS_BTX_HISTORY;
+SELECT count(*) from MLOG$_ILTDS_SAMPLE;
+SELECT count(*) from MLOG$_PDC_LOOKUP;

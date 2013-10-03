@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<!-- TODO -->
+<!-- 1) Make sure code enforces ALL validity rules -->
+<!--		a) tableName attributes have unique values -->
+<!--		b) javaConstant attributes have unique values -->
+<!--		c) columnName attributes have unique values -->
+<!--		d) aliasValue attributes have unique values -->
+<!--		e) keyName attributes have unique values -->
+<!--		f) ordering attributes have unique values -->
+<!--		g) tableAlias attributes reference table aliases -->
+<!--		h) columnAlias attributes reference column aliases -->
+<!--		h) columnName attributes reference columns -->
+<!-- FileName: BigrLibraryMetaData.dtd-->
+<!-- -->
+<!ELEMENT bigrLibraryMetaData (dbTable*, table*, column*, columnCount*, filterEqual*, filterNotEqual*, filterGreaterThan*, filterLike*, filterNotLike*, filterIsNull*, filterNotIsNull*, filterContains*, filterNumericRange*, filterDateRange*, filterNvlEqual*, filterNvlNotEqual*, filterJoin*, filterExists*, filterNotExists*, filterNotIn*, filterOther*, compoundFilter*)>
+<!ATTLIST bigrLibraryMetaData
+	version CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT dbTable (dbAlias*, dbColumn*)>
+<!ATTLIST dbTable
+	tableName CDATA #REQUIRED
+	javaConstant CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT dbColumn (dbAlias*)>
+<!ATTLIST dbColumn
+	columnName CDATA #REQUIRED
+	javaConstant CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT dbAlias EMPTY>
+<!ATTLIST dbAlias
+	aliasValue CDATA #REQUIRED
+	javaConstant CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT table EMPTY>
+<!ATTLIST table
+	tableAlias CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT column EMPTY>
+<!ATTLIST column
+	tableAlias CDATA #REQUIRED
+	columnAlias CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT columnCount EMPTY>
+<!ATTLIST columnCount
+	tableAlias CDATA #REQUIRED
+	columnAlias CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT compoundFilter (filterKey*, hint?)>
+<!ATTLIST compoundFilter
+	keyName CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+	operator (AND | OR) #REQUIRED
+	multiOperator (AND | OR) #IMPLIED
+>
+<!-- -->
+<!ELEMENT filterKey EMPTY>
+<!ATTLIST filterKey
+	keyName CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT filterEqual (hint?)>
+<!ATTLIST filterEqual
+	keyName CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+	tableAlias CDATA #REQUIRED
+	columnName CDATA #REQUIRED
+	value CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT filterNotEqual (hint?)>
+<!ATTLIST filterNotEqual
+	keyName CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+	tableAlias CDATA #REQUIRED
+	columnName CDATA #REQUIRED
+	value CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT filterGreaterThan (hint?)>
+<!ATTLIST filterGreaterThan
+	keyName CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+	tableAlias CDATA #REQUIRED
+	columnName CDATA #REQUIRED
+	value CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT filterLike (hint?)>
+<!ATTLIST filterLike
+	keyName CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+	tableAlias CDATA #REQUIRED
+	columnName CDATA #REQUIRED
+	value CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT filterNotLike (hint?)>
+<!ATTLIST filterNotLike
+	keyName CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+	tableAlias CDATA #REQUIRED
+	columnName CDATA #REQUIRED
+	value CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT filterIsNull (hint?)>
+<!ATTLIST filterIsNull
+	keyName CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+	tableAlias CDATA #REQUIRED
+	columnName CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT filterNotIsNull (hint?)>
+<!ATTLIST filterNotIsNull
+	keyName CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+	tableAlias CDATA #REQUIRED
+	columnName CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT filterContains (hint?)>
+<!ATTLIST filterContains
+	keyName CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+	tableAlias CDATA #REQUIRED
+	columnName CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT filterNumericRange (hint?)>
+<!ATTLIST filterNumericRange
+	keyName CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+	tableAlias CDATA #REQUIRED
+	columnName CDATA #REQUIRED
+	lowerLimit CDATA #IMPLIED
+	lowerInclusive (true | false) #IMPLIED
+	upperLimit CDATA #IMPLIED
+	upperInclusive (true | false) #IMPLIED
+>
+<!-- -->
+<!ELEMENT filterDateRange (hint?)>
+<!ATTLIST filterDateRange
+	keyName CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+	tableAlias CDATA #REQUIRED
+	columnName CDATA #REQUIRED
+	lowerLimit CDATA #IMPLIED
+	upperLimit CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT filterNvlEqual  (leftNvlValue, rightNvlValue, hint?)>
+<!ATTLIST filterNvlEqual
+	keyName CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+	value CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT leftNvlValue (fixedValue*, tableColumn*)>
+<!-- -->
+<!ELEMENT rightNvlValue (fixedValue*, tableColumn*)>
+<!-- -->
+<!ELEMENT fixedValue EMPTY>
+<!ATTLIST fixedValue
+	value CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT filterNvlNotEqual (leftNvlValue, rightNvlValue, hint?)>
+<!ATTLIST filterNvlNotEqual
+	keyName CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+	value CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT filterExists (selectClause, hint?)>
+<!ATTLIST filterExists 
+	keyName CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+>
+
+<!ELEMENT selectClause (columnOrValueList, fromTable, whereClause)>
+<!ELEMENT columnOrValueList (fixedValue*, tableColumn*)>
+<!ELEMENT fromTable (dbAlias+)>
+<!ELEMENT whereClause (filterKey*)>
+<!ATTLIST whereClause 
+	operator (AND | OR) #IMPLIED
+>
+<!-- -->
+<!ELEMENT filterNotExists (selectClause, hint?)>
+<!ATTLIST filterNotExists 
+	keyName CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT filterNotIn (tableColumn, selectClause, hint?)>
+<!ATTLIST filterNotIn 
+	keyName CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT filterJoin (leftColumn, rightColumn, hint?)>
+<!ATTLIST filterJoin
+	keyName CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+	joinType (left | right | inner) #IMPLIED
+>
+<!ELEMENT leftColumn (tableColumn)>
+<!ELEMENT rightColumn (tableColumn)>
+<!-- -->
+<!ELEMENT tableColumn EMPTY>
+<!ATTLIST tableColumn
+	tableAlias CDATA #REQUIRED
+	columnName CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT filterOther (hint?)>
+<!ATTLIST filterOther
+	keyName CDATA #REQUIRED
+	ordering CDATA #REQUIRED
+	sqlString CDATA #REQUIRED
+	multiOperator (AND | OR) #IMPLIED
+>
+
+<!ELEMENT hint EMPTY>
+<!ATTLIST hint
+	hintPriority CDATA #REQUIRED
+	hintText CDATA #REQUIRED
+>
+

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labelPrintingConfiguration>
+        <account
+            id="CRIBIOBANK"
+                bartenderCommandLine="%BTW% /AF=&quot;{labelTemplate}&quot; /D=&quot;&lt;Trigger File Name&gt;&quot; /PRN=&quot;{labelPrinter}&quot; /R=3 /P &#13;&#10;%END%">
+                <resultsFormDefinition name="Label Data">
+                   <formElements>
+                        <hostElement hostId="SAMPLE_ID">
+                                <tag type="order" value="1"/>
+                        </hostElement>
+                        <hostElement hostId="SAMPLE_ALIAS">
+                                <tag type="order" value="2"/>
+                        </hostElement>
+                       <!-- <dataElement cui="CA12437C">
+                            <tag type="order" value="3"/>
+                            <tag type="parent" value="FD00000019"/>
+                        </dataElement>
+						-->
+                        <!-- hostElement hostId="WEIGHT">
+                            <tag type="order" value="3"/>
+                        </hostElement -->
+						<!--
+                        <dataElement cui="CA12703C">
+                            <tag type="order" value="4"/>
+                            <tag type="parent" value="FD00000019"/>
+                        </dataElement>
+						-->
+                        <hostElement hostId="GENDER">
+                                <tag type="order" value="5"/>
+                        </hostElement>
+                        <hostElement hostId="AGE_AT_COLLECTION">
+                                <tag type="order" value="6"/>
+                        </hostElement>
+						<!--
+                        <dataElement cui="CA01138C">
+                            <tag type="order" value="7"/>
+                            <tag type="parent" value="FD00000001"/>
+                        </dataElement>
+						-->
+                        <!-- hostElement hostId="RACE">
+                             <tag type="order" value="7"/>
+                        </hostElement -->
+                        <hostElement hostId="DIAGNOSIS_ILTDS">
+                              <tag type="order" value="8"/>
+                        </hostElement>
+                        <hostElement hostId="SAMPLE_TYPE">
+                              <tag type="order" value="9"/>
+                        </hostElement>
+<!-- Weight unit -->
+						<!--
+                        <dataElement cui="CA12438C">
+                            <tag type="order" value="10"/>
+                            <tag type="parent" value="FD00000019"/>
+                        </dataElement>
+						-->
+                        <hostElement hostId="CASE_ALIAS">
+                              <tag type="order" value="11"/>
+                        </hostElement>
+<!-- Ethnicity -->
+						<!--
+                        <dataElement cui="CA12407C">
+                            <tag type="order" value="12"/>
+                            <tag type="parent" value="FD00000001"/>
+                        </dataElement>
+						-->
+<!-- Gross Appearance -->
+						<!--
+                        <dataElement cui="CA12677C">
+                            <tag type="order" value="13"/>
+                            <tag type="parent" value="FD00000019"/>
+                        </dataElement>-->
+                    </formElements>
+                </resultsFormDefinition>
+
+                <labelTemplateDefinition name="Frozen Archives Label" displayName="Frozen Archives Label" objectType="sample" resultsFormDefinitionName="Label Data"/>
+                <labelTemplateDefinition name="CHTN Label" displayName="CHTN Label" objectType="sample" resultsFormDefinitionName="Label Data"/>
+                <labelTemplateDefinition name="Tube Label" displayName="Specialty Label" objectType="sample" resultsFormDefinitionName="Label Data"/>
+                <labelPrinter
+                        name="ZebraZM400_BIGR_2"
+                        displayName="Brady THT-134 Printer"
+                        tcpIpBasedPrintingEnabled="true"
+                        tcpIpHost="10.68.153.178"
+                        tcpIpPort="5170"
+                        emailBasedPrintingEnabled="false"
+                        emailAddress="HCITLabels@gmail.com"
+                        emailSubject="Label printing Zebra_2">
+                        <labelTemplate
+                                labelTemplateDefinitionName="Tube Label"
+                                fullyQualifiedName="\BarTenderFiles\Templates\ClevelandTube.btw"/>
+                </labelPrinter>
+                <labelPrinter
+                        name="ZebraZM400_BIGR_1"
+                        displayName="CHTN Label Printer"
+                        tcpIpBasedPrintingEnabled="true"
+                        tcpIpHost="10.68.153.98"
+                        tcpIpPort="5170"
+                        emailBasedPrintingEnabled="false"
+                        emailAddress="HCITLabels@gmail.com"
+                        emailSubject="Label printing Zebra_1">
+                        <labelTemplate
+                                labelTemplateDefinitionName="CHTN Label"
+                                fullyQualifiedName="\BarTenderFiles\Templates\CHTNLarge.btw"/>
+                        <labelTemplate
+                                labelTemplateDefinitionName="Frozen Archives Label"
+                                fullyQualifiedName="\BarTenderFiles\Templates\FrozenArchivesLarge.btw"/>
+                </labelPrinter>
+        </account>
+</labelPrintingConfiguration>
+<!--
+-->

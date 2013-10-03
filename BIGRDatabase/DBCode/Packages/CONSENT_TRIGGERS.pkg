@@ -1,0 +1,78 @@
+CREATE OR REPLACE PACKAGE CONSENT_TRIGGERS as
+  /**************************************************************************
+   * Package of procedures that support the implementation of the triggers
+   * related to ILTDS_INFORMED_CONSENT (either triggers that fire on 
+   * ILTDS_INFORMED_CONSENT or that make changes to ILTDS_INFORMED_CONSENT).
+   **************************************************************************/
+
+  /* public procedures */
+
+  /*
+   * This is called from the PDC_PATH_REP_SET_BESTDX_AIUR trigger.
+   * This procedure determines and sets the values on the best_diagnosis_cui and 
+   * best_diagnosis_other columns on the ILTDS_INFORMED_CONSENT table  
+   */
+  procedure set_best_diagnosis_values(
+       ip_diagnosis_cui in ILTDS_INFORMED_CONSENT.BEST_DIAGNOSIS_CUI%TYPE,
+       ip_diagnosis_other in ILTDS_INFORMED_CONSENT.BEST_DIAGNOSIS_OTHER%TYPE,
+	   ip_consent_id in ILTDS_INFORMED_CONSENT.CONSENT_ID%TYPE,
+	   ip_trigger_source in varchar2
+       );
+
+end CONSENT_TRIGGERS;
+/
+CREATE OR REPLACE package body CONSENT_TRIGGERS as
+
+  /*
+   * This is called from the PDC_PATH_REP_SET_BESTDX_AIUR trigger.
+   * This procedure determines and sets the values on the best_diagnosis_cui and 
+   * best_diagnosis_other columns on the ILTDS_INFORMED_CONSENT table  
+   */
+  procedure set_best_diagnosis_values(
+       ip_diagnosis_cui in ILTDS_INFORMED_CONSENT.BEST_DIAGNOSIS_CUI%TYPE,
+       ip_diagnosis_other in ILTDS_INFORMED_CONSENT.BEST_DIAGNOSIS_OTHER%TYPE,
+	   ip_consent_id in ILTDS_INFORMED_CONSENT.CONSENT_ID%TYPE,
+	   ip_trigger_source in varchar2
+       )
+  is
+    v_diagnosis_cui	   ILTDS_INFORMED_CONSENT.BEST_DIAGNOSIS_CUI%TYPE;
+    v_diagnosis_other  ILTDS_INFORMED_CONSENT.BEST_DIAGNOSIS_OTHER%TYPE;
+  begin
+    --make sure all required parameters have been specified and are valid
+	if (ip_consent_id is null) then
+      raise_application_error(-20009,
+        'Error: In set_best_diagnosis_values, a null ip_consent_id value was passed.');
+	end if;
+	if (ip_trigger_source is null) then
+      raise_application_error(-20009,
+        'Error: In set_best_diagnosis_values, a null ip_trigger_source value was passed.');
+	end if;
+	if (ip_trigger_source <> 'PDC_PATHOLOGY_REPORT') then
+      raise_application_error(-20009,
+        'Error: In set_best_diagnosis_values, an unrecognized ip_trigger_source value of ' || ip_trigger_source || ' was passed.');
+	end if;
+
+  	--if the procedure was invoked from a change to the pdc_pathology_report table,
+	--then if the diagnosis information passed in is non-null use it
+	--otherwise we need to get the values from the iltds_informed_consent table
+    if (ip_trigger_source = 'PDC_PATHOLOGY_REPORT') then
+	  if (ip_diagnosis_cui is not null) then
+        v_diagnosis_cui := ip_diagnosis_cui;
+		v_diagnosis_other := ip_diagnosis_other;
+      else
+        select disease_concept_id, disease_concept_id_other
+        into v_diagnosis_cui, v_diagnosis_other
+		from iltds_informed_consent
+		where consent_id = ip_consent_id;
+      end if;
+	end if;
+	--now that we know what values to use, update the row in ILTDS_INFORMED_CONSENT
+	update iltds_informed_consent
+	set best_diagnosis_cui = v_diagnosis_cui,
+		best_diagnosis_other = v_diagnosis_other
+	where consent_id = ip_consent_id;
+  end;
+
+end CONSENT_TRIGGERS;
+/
+

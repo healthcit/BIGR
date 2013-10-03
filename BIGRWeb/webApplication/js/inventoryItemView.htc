@@ -1,0 +1,201 @@
+<PUBLIC:COMPONENT NAME="inventoryItemView" tagName="inventoryItemView"
+  URN="-//Ardais Corporation//HTC Component Inventory Item View//EN"
+  lightWeight="true">
+
+<!-- 
+  ** Copyright 2004 Ardais Corporation.  All rights reserved.
+  **
+  ** This is only meant to be used as part of the HTML that is generated
+  ** by the bigr:inventoryItemView tag.  The context that this is used in
+  ** must satisfy the requirements described in the bigr:inventoryItemView
+  ** tag's documentation (see the class comments on InventoryItemViewTag).
+  **
+  ** I originally tried to define individual behaviors for various pieces
+  ** of the inventory item view tables, but IE was too slow dealing with
+  ** a large number of objects with behaviors in big result set pages.
+  ** Too bad, it was much cleaner and easier to write that way.
+  ** Now we have this one behavior that is attached to a DIV that is
+  ** wrapped around the entire view, and it handles events for a variety
+  ** of different situations.
+  -->
+  
+<!-- Set selectorName to null for views that don't support item selection. -->
+<PUBLIC:PROPERTY NAME="selectorName" />
+
+<PUBLIC:METHOD NAME="doToggleSelectSample" />
+
+<!-- <PUBLIC:ATTACH EVENT="ondetach" ONEVENT="doOnDetach()" /> -->
+<PUBLIC:ATTACH EVENT="ondocumentready" ONEVENT="doOnDocumentReady()" />
+<PUBLIC:ATTACH EVENT="onclick" ONEVENT="doOnClick()" />
+<PUBLIC:ATTACH EVENT="ondblclick" ONEVENT="doOnDoubleClick()" />
+
+<SCRIPT LANGUAGE="JScript">
+var isInitialized = false;
+
+function doOnDocumentReady() {
+  isInitialized = true;
+}
+
+//function doOnDetach() {
+//  // clean up
+//}
+
+// This kinds of clicks we handle here are:
+//   - Click on the checkbox that selects a row.
+//
+function doOnClick() {
+  if (! isInitialized) {
+    // If we don't set event.returnValue to false, we can have unintended
+    // consequences like a checkbox being checked when it is clicked even
+    // though we didn't run our usual on-select actions because the page
+    // wasn't completely loaded yet.
+    event.returnValue = false;
+    return;
+  }
+  
+  var eSrc = event.srcElement;
+
+  if (selectorName != null && eSrc.type == 'checkbox' && eSrc.name == selectorName) {
+    // If the click is on a row selector checkbox, toggle the row
+    // selection state.
+    toggleSelectInventoryItem(eSrc);
+  }
+	else if (eSrc.caseMenu != null) {
+	  // The user clicked an element with a case menu (i.e. the case id), so 
+	  // show the case menu.
+	  
+		_caseMenuDonorId = eSrc.donorId;
+		_caseMenuDonorAlias = eSrc.donorAlias;
+		_caseMenuConsentId = eSrc.consentId;
+		_caseMenuConsentAlias = eSrc.consentAlias;
+		_caseMenuPathId = eSrc.pathId;
+		_caseMenuSampleId = eSrc.sampleId;
+		_caseMenuSampleAlias = eSrc.sampleAlias;
+	
+    _caseMenu = element.document.all[eSrc.caseMenu];
+
+    // The positioning code can get confused when the menu is inside something
+    // unusual, such as an absolutely positioned element.  So here, we make
+    // sure that the menu is a direct child of the body before we do anything
+    // else.
+    //
+		if (element.document.body != _caseMenu.parentElement) {
+		  element.document.body.appendChild(_caseMenu);
+		}
+		
+    // note that the following two hardcoded values control
+    // where the case menu popup displays.   if more elements
+    // are added to the menu, this may have to be changed...or
+    // a more dynamic way of calculating the position implemented.
+    var offParent = _caseMenu.offsetParent;
+    var menuWidth = _caseMenu.offsetWidth;
+    var menuHeight = _caseMenu.offsetHeight;
+    var newClientX = event.clientX - 30;
+    var newClientY = event.clientY - 30;
+    if (newClientX + menuWidth > offParent.clientWidth) {
+      newClientX = offParent.clientWidth - menuWidth;
+    }
+    if (newClientX < 0) newClientX = 0;
+    if (newClientY + menuHeight > offParent.clientHeight) {
+      newClientY = offParent.clientHeight - menuHeight;
+    }
+    if (newClientY < 0) newClientY = 0;
+	  _caseMenu.style.left = newClientX + offParent.scrollLeft;
+	  _caseMenu.style.top = newClientY + offParent.scrollTop;
+    _caseMenu.style.visibility = 'visible';
+    _caseMenu.style.zIndex = 1000;
+	  _caseMenu.setCapture();
+	  event.returnValue = false;
+  }
+}
+
+// This kinds of clicks we handle here are:
+//   - Double-click anywhere in an item row (not a header row) to select a row.
+//
+function doOnDoubleClick() {
+  if (! isInitialized) {
+    event.returnValue = false;
+    return;
+  }
+
+  var eSrc = event.srcElement;
+  var thisRow = getParentRow(eSrc, element);
+  
+  if (thisRow != null) {
+    var selectorId = thisRow.selId;
+    if (selectorId != null) {
+      var selector = thisRow.all[selectorId];
+      toggleSelectInventoryItem(selector);
+    }
+  }
+}
+
+// Return the TR element that is the nearest ancestor of theElement
+// that is no farther up in the document tree than boundaryElement
+// (assuming that boundaryElement is an ancestor of theElement).  Return
+// null if there is no such TR element.  If theElement is a TR, this
+// returns theElement.
+//
+function getParentRow(theElement, boundaryElement) {
+  var e = theElement;
+  while (e != null && e.tagName != 'TR' && e != boundaryElement) {
+    e = e.parentElement;
+  }
+  if (e == null) {
+    return null;
+  }
+  if (e.tagName == 'TR') {
+    return e;
+  }
+  else {
+    return null;
+  }
+}
+
+// Select a sample given its selector checkbox element.
+function toggleSelectInventoryItem(checkbox) {
+  if (checkbox == null) return;
+  if (! window._isPageReadyForInteraction) {
+    // If we let users make selections before the page is fully loaded,
+    // our counts of selected items can become incorrect.  We also make
+    // the alert asynchronous so that it doesn't interfere with the
+    // JavaScript that normally runs at page load, which could also lead
+    // to things getting out of sync.
+    //
+    // cancel the event that got us here so that control values
+    // don't change inappropriately (e.g. checkbox state change).
+    event.returnValue = false;
+    window.setTimeout('alert("Please wait until the page has completely loaded to make your selections.");', 1, 'JavaScript');
+    return;
+  }
+	doToggleSelectSample(checkbox, true, (checkbox != event.srcElement));
+}
+	
+// Select/deselect a sample by toggling its checkbox and highlight.
+// This function is exposed publicly.
+function doToggleSelectSample(checkbox, updateDisplayCounts, updateCheckboxState) {
+  if ((checkbox != null) && (!checkbox.disabled)) {
+ 		window._isAllSelectedOnClipboard = false;
+	  if (updateCheckboxState) {
+	    checkbox.checked = (! checkbox.checked);
+	  }
+	  // now highlight row and update counts
+	  var sampleType = checkbox.stype;
+    var theRow = checkbox.parentElement.parentElement;
+	  if (checkbox.checked) {
+	    theRow.className = "highlight";
+		_selectedCounts.incrementCount(sampleType);
+	  } else {
+	    var unselectedClass = theRow.unselClass;
+	    if (unselectedClass == null) {
+	      unselectedClass = "white";
+	    }
+     	theRow.className = unselectedClass;
+		_selectedCounts.decrementCount(sampleType);
+	  }
+	if (updateDisplayCounts) _selectedCounts.updateTotalDisplay();
+	}
+}
+ 	
+</SCRIPT>
+</PUBLIC:COMPONENT>

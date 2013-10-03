@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    NOTE: This file is intended to contain default result view configuration information.  It is 
+    important that the only information contained in this file is that which can be parsed by the 
+    existing Java code and can be reloaded when the refresh cache link is used!
+
+-->
+<resultsFormDefinition name="BIGR default view" enabled="true">
+  <formElements>
+    <hostElement hostId="SAMPLE_ID">
+      <tag type="order" value="1"/>
+    </hostElement>
+    <hostElement hostId="SAMPLE_ALIAS">
+      <tag type="order" value="2"/>
+    </hostElement>
+    <hostElement hostId="SAMPLE_TYPE">
+      <tag type="order" value="3"/>
+    </hostElement>
+    <hostElement hostId="SAMPLE_SOURCE">
+      <tag type="order" value="4"/>
+    </hostElement>
+    <hostElement hostId="CASE_ID">
+      <tag type="order" value="5"/>
+    </hostElement>
+    <hostElement hostId="CASE_ALIAS">
+      <tag type="order" value="6"/>
+    </hostElement>
+    <hostElement hostId="DONOR_ID">
+      <tag type="order" value="7"/>
+    </hostElement>
+    <hostElement hostId="DONOR_ALIAS">
+      <tag type="order" value="8"/>
+    </hostElement>
+    <hostElement hostId="APPEARANCE">
+      <tag type="order" value="9"/>
+    </hostElement>
+    <hostElement hostId="DIAGNOSIS_ILTDS">
+      <tag type="order" value="10"/>
+    </hostElement>
+    <hostElement hostId="DIAGNOSIS_DDC">
+      <tag type="order" value="11"/>
+    </hostElement>
+    <hostElement hostId="TISSUE">
+      <tag type="order" value="12"/>
+    </hostElement>
+    <hostElement hostId="GENDER">
+      <tag type="order" value="13"/>
+    </hostElement>
+    <hostElement hostId="AGE_AT_COLLECTION">
+      <tag type="order" value="14"/>
+    </hostElement>
+    <hostElement hostId="INVENTORY_STATUS">
+      <tag type="order" value="18"/>
+    </hostElement>
+    <hostElement hostId="PROJECT_STATUS">
+      <tag type="order" value="19"/>
+    </hostElement>
+    <hostElement hostId="HNG_TNM_STAGE">
+      <tag type="order" value="21"/>
+    </hostElement>
+    <hostElement hostId="DIAGNOSTIC_RESULT">
+      <tag type="order" value="22"/>
+    </hostElement>
+    <hostElement hostId="DONOR_COMMENTS">
+      <tag type="order" value="23"/>
+    </hostElement>
+    <hostElement hostId="FORMAT_DETAIL">
+      <tag type="order" value="24"/>
+    </hostElement>
+    <hostElement hostId="SOURCE">
+      <tag type="order" value="25"/>
+    </hostElement>
+    <hostElement hostId="REPEAT_DONOR">
+      <tag type="order" value="26"/>
+    </hostElement>
+    <hostElement hostId="LOGICAL_REPOSITORY">
+      <tag type="order" value="27"/>
+    </hostElement>
+    <hostElement hostId="SAMPLE_LOCATION">
+      <tag type="order" value="28"/>
+    </hostElement>
+    <hostElement hostId="VOLUME">
+      <tag type="order" value="29"/>
+    </hostElement>
+    <hostElement hostId="WEIGHT">
+      <tag type="order" value="30"/>
+    </hostElement>
+    <hostElement hostId="BUFFER_TYPE">
+      <tag type="order" value="31"/>
+    </hostElement>
+    <hostElement hostId="TOTAL_NUM_OF_CELLS">
+      <tag type="order" value="32"/>
+    </hostElement>
+    <hostElement hostId="CELLS_PER_ML">
+      <tag type="order" value="33"/>
+    </hostElement>
+    <hostElement hostId="PERCENT_VIABILITY">
+      <tag type="order" value="34"/>
+    </hostElement>
+    <hostElement hostId="DATE_OF_COLLECTION">
+      <tag type="order" value="35"/>
+    </hostElement>
+    <hostElement hostId="ELAPSED_TIME">
+      <tag type="order" value="36"/>
+    </hostElement>
+    <hostElement hostId="CONCENTRATION">
+      <tag type="order" value="37"/>
+    </hostElement>
+    <hostElement hostId="YIELD">
+      <tag type="order" value="38"/>
+    </hostElement>
+    <hostElement hostId="SAMPLE_BOX_LOCATION">
+      <tag type="order" value="39"/>
+    </hostElement> 
+     <hostElement hostId="RACE">
+      <tag type="order" value="40"/>
+    </hostElement>     
+  </formElements>
+</resultsFormDefinition>

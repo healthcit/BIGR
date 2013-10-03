@@ -1,0 +1,72 @@
+####################################################################
+#		Scheduled analyze database jobs
+####################################################################
+#
+00 1 * * * /u01/app/oracle/scripts/maint/analyze_schema.sh ardais_owner LEXPROD1 > /u01/app/oracle/scripts/log/analyze_ardais_owner_LEXPROD1.log 2>&1
+15 1 * * * /u01/app/oracle/scripts/maint/analyze_schema.sh ads_user LEXPROD1 > /u01/app/oracle/scripts/log/analyze_ads_user_LEXPROD1.log 2>&1
+#
+30 1 * * * /u01/app/oracle/scripts/maint/analyze_schema.sh ardais_owner LEXINT1 > /u01/app/oracle/scripts/log/analyze_ardais_owner_LEXINT1.log 2>&1
+45 1 * * * /u01/app/oracle/scripts/maint/analyze_schema.sh ads_user LEXINT1 > /u01/app/oracle/scripts/log/analyze_ads_user_LEXINT1.log 2>&1
+#
+00 2 * * * /u01/app/oracle/scripts/maint/analyze_schema.sh train_owner LEXTRN1 > /u01/app/oracle/scripts/log/analyze_train_owner_LEXTRN1.log 2>&1
+15 2 * * * /u01/app/oracle/scripts/maint/analyze_schema.sh train_ads_user LEXTRN1 > /u01/app/oracle/scripts/log/analyze_train_ads_user_LEXTRN1.log 2>&1
+#
+30 3 * * * /u01/app/oracle/scripts/maint/analyze_schema.sh demo_owner LEXTRN1 > /u01/app/oracle/scripts/log/analyze_demo_owner_LEXTRN1.log 2>&1
+45 3 * * * /u01/app/oracle/scripts/maint/analyze_schema.sh demo_ads_user LEXTRN1 > /u01/app/oracle/scripts/log/analyze_demo_ads_user_LEXTRN1.log 2>&1
+#
+00 4 * * * /u01/app/oracle/scripts/maint/analyze_schema.sh tasha_owner LEXDEV1 >/u01/app/oracle/scripts/log/analyze_owner_LEXDEV1.log 2>&1
+15 4 * * * /u01/app/oracle/scripts/maint/analyze_schema.sh tasha_ads_user LEXDEV1 >/u01/app/oracle/scripts/log/analyze_ads_user_LEXDEV1.log 2>&1
+#
+30 4 * * * /u01/app/oracle/scripts/maint/analyze_schema.sh default_bigr_qa_db LEXPROD1 >/u01/app/oracle/scripts/log/analyze_td_LEXPROD1.log 2>&1
+#
+45 4 * * * /u01/app/oracle/scripts/maint/analyze_schema.sh burdock LEXINT1 >/u01/app/oracle/scripts/log/analyze_burdock_LEXINT1.log 2>&1
+#
+48 4 * * * /u01/app/oracle/scripts/maint/analyze_schema.sh toadflax LEXINT1 >/u01/app/oracle/scripts/log/analyze_toadflax_LEXINT1.log 2>&1
+#
+51 4 * * * /u01/app/oracle/scripts/maint/analyze_schema.sh demo3 LEXTRN1 >/u01/app/oracle/scripts/log/analyze_demo3_LEXTRN1.log 2>&1
+#
+54 4 * * * /u01/app/oracle/scripts/maint/analyze_schema.sh deploy LEXTRN1 >/u01/app/oracle/scripts/log/analyze_deploy_LEXTRN1.log 2>&1
+#
+###################################################################
+#		Scheduled database backup jobs
+###################################################################
+#
+20 1 * * * /u01/app/oracle/scripts/backup/fulldb_backup.sh LEXPROD1
+35 1 * * * /u01/app/oracle/scripts/backup/archiveOnly_backup.sh LEXPROD1
+#
+30 2 * * 0 /u01/app/oracle/scripts/backup/resync_db.sh LEXPROD1
+45 2 * * * /u01/app/oracle/scripts/backup/catalog_crosscheck.sh LEXPROD1
+05 5 * * * /u01/app/oracle/scripts/backup/deleteExpired_backups.sh LEXPROD1
+#
+#################################################################
+#               Log Checking for Oracle
+#################################################################
+#
+00,15,30,45 * * * * /usr/local/etc/logcheck_oracle_LEXPROD1.sh > /dev/null
+05,20,35,50 * * * * /usr/local/etc/logcheck_oracle_LEXINT1.sh > /dev/null
+10,25,40,55 * * * * /usr/local/etc/logcheck_oracle_LEXTRN1.sh > /dev/null
+03,18,33,48 * * * * /usr/local/etc/logcheck_oracle_LEXDEV1.sh > /dev/null
+#
+###################################################################
+#		Daily log gathering
+###################################################################
+#
+30 6 * * * /u01/app/oracle/scripts/log/daily_SID_logs.sh LEXPROD1 2>&1
+#
+#Generate the email for the log locations
+00 7 * * * /u01/app/oracle/scripts/log/generate_log_links.sh 2>&1
+# 
+###################################################################
+#	Daily database jobs for gathering SID stats
+###################################################################
+#
+00 6 * * * /u01/app/oracle/scripts/maint/daily_SID_stats.sh -s LEXPROD1 -p xxxxx > /dev/null
+#
+###################################################################
+#	Daily production export
+###################################################################
+#
+00 2 * * * /u01/app/oracle/scripts/maint/do_export.sh LEXPROD1 /u05/backup/LEXPROD1 2>&1
+#
+00 5 * * * /u01/app/oracle/scripts/maint/export_cleanup.sh 2>&1
+#

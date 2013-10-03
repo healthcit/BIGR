@@ -1,0 +1,246 @@
+#*
+ * This template is for generating the FilterMetaData.java file for Bigr Library.
+ *#
+package com.ardais.bigr.query.generator.gen;
+
+import java.sql.Types;
+
+import com.ardais.bigr.api.ApiFunctions;
+
+/**
+ * Holds metadata about a single filter or join, where a filter is defined as a 
+ * fragment of a SQL WHERE clause. <code>FilterMetaData</code> can return a 
+ * SQL WHERE clause fragment that is appropriate for inclusion in a generated 
+ * query.  Also holds constants that can be used as keys into data structures
+ * that contain <code>FilterMetaData</code> objects.
+ * <p>
+ * <b>Developer's Notes</b>
+ * </p>
+ * <p>
+ * This is a generated file. DO NOT MANUALLY EDIT THIS FILE, AS YOUR CHANGES WILL
+ * BE LOST THE NEXT TIME THIS FILE IS GENERATED.  To make changes, modify the 
+ * xml file holding the Bigr Library information
+ * </p>
+ *
+ * ${metaData.GenerationMessage}
+ * 
+ * @see ColumnMetaData
+ * @see ProductQueryMetaData        
+ * @see TableMetaData
+ * @see com.ardais.bigr.util.DbAliases
+ */
+public class FilterMetaData {
+
+#foreach ($filter in $metaData.Filters)
+	public final static String ${filter.KeyName} = "${filter.Ordering}";
+#end
+
+    /**
+     * The data type of the input parameters.
+     */
+    private int _dataType = Types.VARCHAR;
+
+    /**
+     * The operator used to concatenate multiples of this filter.
+     */
+    private String _multiOp = "OR";
+
+    /**
+     * The number of input parameters for the filter.
+     */
+    private int _numberParameters = 0;
+
+    /**
+     * The number of input parameters for the prefix for a filter with repeat segment.
+     */
+    private int _numberParametersInPrefix = 0;
+
+    /**
+     * The number of input parameters for the repeat for a filter with repeat segment.
+     */
+    private int _numberParametersInRepeat = 0;
+
+    /**
+     * The number of input parameters for the suffix for a filter with repeat segment.
+     */
+    private int _numberParametersInSuffix = 0;
+
+    /**
+     * Holds the priority for the current hint.
+     */
+    private int _hintPriority = 0;
+  
+    /**
+     * Holds the value for the highest priority hint.
+     */
+    private String _hintText = null;
+    
+    /**
+     * The SQL WHERE fragment for the filter.
+     */
+    private String _whereFragment;
+
+    /**
+     * Some SQL to append after the filter, or after the "multi op" group
+     * of filters.  For example, if we have a list of excluded values separated
+     * by the _multiOp of AND, we may add 'AND value IS NOT NULL' once at the end.
+     */
+    private String _additionalClause;
+    
+    /**
+     * Creates a new <code>FilterMetaData</code> from the given WHERE fragment.
+     * The datatype for the filter is assumed to be <code>Types.VARCHAR</code>,
+     * and the multiple operator is assumed to be <code>OR</code>.
+     * 
+     * @param  fragment  the database table's alias 
+     */
+    public FilterMetaData(String fragment) {
+        this(fragment, Types.VARCHAR, "OR");
+    }
+
+    /**
+     * Creates a new <code>FilterMetaData</code> from the given WHERE fragment
+     * and datatype.  The multiple operator for the filter is assumed to be 
+     * <code>OR</code>.
+     * 
+     * @param  fragment  the database table's alias 
+     * @param  dataType  the data type.  Must be one of the constants specified
+     * 										in <code>java.sql.Types</code>
+     */
+    public FilterMetaData(String fragment, int dataType) {
+        this(fragment, dataType, "OR");
+    }
+
+    /**
+     * Creates a new <code>FilterMetaData</code> from the given WHERE fragment,
+     * datatype and multiple operator.
+     * 
+     * @param  fragment  the database table's alias 
+     * @param  dataType  the data type.  Must be one of the constants specified
+     * 										in <code>java.sql.Types</code>
+     * @param  multiOperator  the multiple operator.  Must be one of 
+     * 												 <code>"OR"</code> or <code>"AND"</code>.
+     */
+    public FilterMetaData(String fragment, int dataType, String multiOperator) {
+        _whereFragment = fragment;
+        _dataType = dataType;
+        _multiOp = multiOperator;
+        if (ApiFunctions.hasRepeatSegment(fragment)) {
+          String[] segments = ApiFunctions.separateRepeatFragmentParts(fragment);
+          _numberParametersInPrefix = ApiFunctions.occurrencesOf('?', segments[0]); 
+          _numberParametersInRepeat = ApiFunctions.occurrencesOf('?', segments[1]); 
+          _numberParametersInSuffix = ApiFunctions.occurrencesOf('?', segments[2]);  
+        }
+        else {
+          _numberParameters = ApiFunctions.occurrencesOf('?', fragment);
+        }
+    }
+
+    /**
+     * Returns the data type of the parameters in this filter.
+     * 
+     * @return  The parameter's data type.  Will be one of the constants
+     * 					 specified in <code>java.sql.Types</code>.
+     */
+    public int getDataType() {
+        return _dataType;
+    }
+
+    /**
+     * Returns the operator to use if multiple of this filter are used in a query.
+     * 
+     * @return  The operator. Will be either <code>"OR"</code> or 
+     * 					 <code>"AND"</code>.
+    
+     */
+    public String getMultipleFilterOperator() {
+        return _multiOp;
+    }
+
+    /**
+     * Returns the number of parameters in this filter.
+     * 
+     * @return  The number of parameters.
+     */
+    public int getNumberParameters() {
+        return _numberParameters;
+    }
+
+    /**
+     * Returns the WHERE fragment corresponding to this filter.
+     * 
+     * @return  The WHERE fragment.
+     */
+    public String getWhereFragment() {
+        return _whereFragment;
+    }
+    /**
+     * Returns the additionalClause.
+     * @return String
+     */
+    public String getAdditionalClause() {
+      return _additionalClause;
+    }
+
+    /**
+     * Sets the additionalClause.
+     * @param additionalClause The additionalClause to set
+     */
+    public void setAdditionalClause(String additionalClause) {
+      _additionalClause = additionalClause;
+    }
+
+    /**
+     * Returns hint priority
+     * @return int
+     */
+    public int getHintPriority() {
+      return _hintPriority;
+    }
+
+    /**
+     * Returns the text to be used in query for hint
+     * @return String
+     */
+    public String getHintText() {
+      return _hintText;
+    }
+
+    /**
+     * Sets the priority for the hint
+     * @param i The priority valure for the hint.
+     */
+    public void setHintPriority(int i) {
+      _hintPriority = i;
+    }
+
+    /**
+     * Sets the text for the hint to be used in query
+     * @param string The text value to set for the hint
+     */
+    public void setHintText(String string) {
+      _hintText = string;
+    }    
+    
+    /**
+     * @return
+     */
+    public int getNumberParametersInPrefix() {
+      return _numberParametersInPrefix;
+    }
+
+    /**
+     * @return
+     */
+    public int getNumberParametersInRepeat() {
+      return _numberParametersInRepeat;
+    }
+
+    /**
+     * @return
+     */
+    public int getNumberParametersInSuffix() {
+      return _numberParametersInSuffix;
+    }
+
+}

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE formDefinition PUBLIC "-//GulfStream Bioinformatics Corporation//DTD KnowledgeCapture Form Definition XML1//EN" "kcFormDefinitionXML1.dtd">
+<formDefinition name="All Combo Test - int">
+  <formElementDefinitions>
+    <categoryDefinition displayName="no units" categoryType="page">
+      <categoryDefinition displayName="datatype=int; unit=n; min=n; max=n; EAV=n; ADE=n" categoryType="heading">
+        <dataElementDefinition cui="CA12234C"/>
+        <dataElementDefinition cui="CA12235C"/>
+      </categoryDefinition>
+<!--      <categoryDefinition displayName="datatype=int; unit=n; min=n; max=n; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=int; unit=n; min=n; max=n; EAV=y; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=int; unit=n; min=n; max=n; EAV=y; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=int; unit=n; min=n; max=y; EAV=n; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=int; unit=n; min=n; max=y; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=int; unit=n; min=n; max=y; EAV=y; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=int; unit=n; min=n; max=y; EAV=y; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+      <categoryDefinition displayName="datatype=int; unit=n; min=y; max=n; EAV=n; ADE=n" categoryType="heading">
+        <dataElementDefinition cui="CA01234C"/>
+        <dataElementDefinition cui="CA00173C"/>
+      </categoryDefinition>
+<!--      <categoryDefinition displayName="datatype=int; unit=n; min=y; max=n; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=int; unit=n; min=y; max=n; EAV=y; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=int; unit=n; min=y; max=n; EAV=y; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+      <categoryDefinition displayName="datatype=int; unit=n; min=y; max=y; EAV=n; ADE=n" categoryType="heading">
+        <dataElementDefinition cui="CA00053C"/>
+        <dataElementDefinition cui="CA11592C"/>
+      </categoryDefinition>
+<!--      <categoryDefinition displayName="datatype=int; unit=n; min=y; max=y; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+      <categoryDefinition displayName="datatype=int; unit=n; min=y; max=y; EAV=y; ADE=n" categoryType="heading">
+        <dataElementDefinition cui="CA07641C"/>
+        <dataElementDefinition cui="CA02486C"/>
+      </categoryDefinition>
+<!--      <categoryDefinition displayName="datatype=int; unit=n; min=y; max=y; EAV=y; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+    </categoryDefinition>
+    <categoryDefinition displayName="units" categoryType="page">
+<!--      <categoryDefinition displayName="datatype=int; unit=y; min=n; max=n; EAV=n; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=int; unit=y; min=n; max=n; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=int; unit=y; min=n; max=n; EAV=y; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=int; unit=y; min=n; max=n; EAV=y; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=int; unit=y; min=n; max=y; EAV=n; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=int; unit=y; min=n; max=y; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=int; unit=y; min=n; max=y; EAV=y; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=int; unit=y; min=n; max=y; EAV=y; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+      <categoryDefinition displayName="datatype=int; unit=y; min=y; max=n; EAV=n; ADE=n" categoryType="heading">
+        <dataElementDefinition cui="CA01326C"/>
+        <dataElementDefinition cui="CA11948C"/>
+      </categoryDefinition>
+      <categoryDefinition displayName="datatype=int; unit=y; min=y; max=n; EAV=n; ADE=y" categoryType="heading">
+        <dataElementDefinition cui="CA06331C"/>
+      </categoryDefinition>
+      <categoryDefinition displayName="datatype=int; unit=y; min=y; max=n; EAV=y; ADE=n" categoryType="heading">
+        <dataElementDefinition cui="CA07954C"/>
+        <dataElementDefinition cui="CA07964C"/>
+      </categoryDefinition>
+<!--      <categoryDefinition displayName="datatype=int; unit=y; min=y; max=n; EAV=y; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+      <categoryDefinition displayName="datatype=int; unit=y; min=y; max=y; EAV=n; ADE=n" categoryType="heading">
+        <dataElementDefinition cui="CA11764C"/>
+        <dataElementDefinition cui="CA11771C"/>
+      </categoryDefinition>
+<!--      <categoryDefinition displayName="datatype=int; unit=y; min=y; max=y; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=int; unit=y; min=y; max=y; EAV=y; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+      <categoryDefinition displayName="datatype=int; unit=y; min=y; max=y; EAV=y; ADE=y" categoryType="heading">
+        <dataElementDefinition cui="CA02445C"/>
+      </categoryDefinition>
+    </categoryDefinition>
+  </formElementDefinitions>
+</formDefinition>

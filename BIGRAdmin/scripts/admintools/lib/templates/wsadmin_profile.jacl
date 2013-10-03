@@ -1,0 +1,7 @@
+#
+# This script will be executed after the standard lib/wsadmin_profile.jacl
+# script runs.  It can be used to override various default settings to
+# make them appropriate for a particular machine.
+#
+# Some of the more likely variables to need to be changed in this file
+# have lines to set them as comments below.

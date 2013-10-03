@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<!ELEMENT labelPrintingConfigurationData (account+)>
+<!-- -->
+<!ELEMENT account (resultsFormDefinition+, labelTemplateDefinition+, labelPrinter+)>
+<!ATTLIST account
+	id ID #REQUIRED
+  bartenderCommandLine CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT resultsFormDefinition (formElements+)>
+<!ATTLIST resultsFormDefinition 
+	name ID #REQUIRED
+>
+<!-- -->
+<!ELEMENT formElements (dataElement | hostElement)+>
+<!-- -->
+<!ELEMENT dataElement (tag*)>
+<!ATTLIST dataElement 
+	cui CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT hostElement (tag*)>
+<!ATTLIST hostElement 
+	hostId CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT tag EMPTY>
+<!ATTLIST tag
+	type CDATA #REQUIRED
+	value CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT labelTemplateDefinition EMPTY>
+<!ATTLIST labelTemplateDefinition
+	name CDATA #REQUIRED
+	displayName CDATA #OPTIONAL
+	objectType CDATA #REQUIRED
+	objectSubtypes CDATA #IMPLIED
+	resultsFormDefinitionName CDATA #REQUIRED
+>
+<!-- -->
+<!ELEMENT labelPrinter (labelTemplate+)>
+<!ATTLIST labelPrinter 
+	name CDATA #REQUIRED
+	displayName CDATA #IMPLIED
+  fileBasedPrintingEnabled (true | false) "false"
+	fileDirectory CDATA #IMPLIED
+	fileName CDATA #IMPLIED
+	fileExtension CDATA #IMPLIED
+	fileTransferCommand CDATA #IMPLIED
+  emailBasedPrintingEnabled (true | false) "false"
+	emailAddress CDATA #IMPLIED
+	emailSubject CDATA #IMPLIED
+  tcpIpBasedPrintingEnabled (true | false) "false"
+	tcpIpHost CDATA #IMPLIED
+	tcpIpPort CDATA #IMPLIED
+>
+<!-- -->
+<!ELEMENT labelTemplate EMPTY>
+<!ATTLIST labelTemplate
+	labelTemplateDefinitionName CDATA #REQUIRED
+	fullyQualifiedName CDATA #REQUIRED
+>
+

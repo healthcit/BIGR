@@ -1,0 +1,232 @@
+@import "reset.css";
+body {
+  font-size: 75%;
+	font-family: tahoma, verdana, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+	text-align: center; /* IE bug 1 */
+}
+
+body select {
+  font-size: 95%;
+	font-family: tahoma, verdana, sans-serif;
+}
+
+body input.button {
+  font-size: 95%;
+	font-family: tahoma, verdana, sans-serif;
+  color: #000000;
+	border: 1px solid #000000;
+  background-color: #ffffff;
+}
+
+body input.buttonHover {
+  color: #7a899c;
+	border: 1px solid #7a899c;
+	cursor: hand;
+}
+
+#wholePage {
+	width: 95%;
+	line-height: 125%;
+	text-align: left;  /* IE bug 1 */
+}
+
+#intro {
+  padding: .25em;
+}
+
+#intro table {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#intro h1 {
+	font-variant: small-caps;
+  font-weight: bold;
+  font-size: 150%;
+  display: inline;
+}
+
+#historyButtons {
+	text-align: right;
+}
+
+#queryParams {
+  padding: .25em;
+	border-right: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+
+#queryParams h1 {
+	text-align: right;
+	font-variant: small-caps;
+  font-size: 120%;
+	margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+#queryParams div {
+  padding: 0.15em 0 0.35em 0.5em;
+}
+
+#queryParams div.selected {
+  background-color: #bcc8d4;
+}
+
+#queryParams div table {
+	margin-left: 0.5em;
+	margin-top: 0.1em;
+}
+
+#queryParams div table td {
+	padding: 0.25em 0 0 1em;
+	text-align: center;
+}
+
+#results {
+	margin-top: 0.5em;
+}
+
+#results a {
+  margin: 0.1em;
+}
+
+#results a:link {
+  color: #3f556d;
+	text-decoration: none;
+	border: 1px solid #FFFFFF;
+}
+  
+#results a:visited {
+  color: #3f556d;
+	text-decoration: none;
+	border: 1px solid #FFFFFF;
+}
+
+#results a:hover {
+  color: #7a899c;
+	border: 1px solid #7a899c;
+}
+
+#resultCount {
+	margin: 0 0 1em 0;
+	padding: 0.25em;
+	border-right: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+
+#resultCount a {
+  display: block;
+  margin: 0.1em;
+  padding: 0.1em;
+}
+
+#resultCount h1 {
+	text-align: right;
+	font-variant: small-caps;
+  font-size: 120%;
+	margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+#resultCount h2 {
+	font-variant: small-caps;
+  font-size: 120%;
+	margin: 0.25em 0 0 0;
+	font-weight: bold;
+}
+
+#resultCount table {
+	margin: 0;
+	width: 95%;
+}
+
+#resultCount table tbody {
+	margin: 0;
+  padding: 0;
+}
+
+#resultCount table tr {
+	margin: 0;
+  padding: 0;
+}
+
+#resultCount table td {
+	margin: 0;
+  padding: 0;
+}
+
+#singleResult table {
+	width: 100%;
+}
+
+#singleResult table td {
+	vertical-align: top;
+}
+
+#singleResult #basicInfoContainer {
+	width: 400px;
+}
+
+#singleResult #basicInfo {
+	margin: 0 1.5em 0 0;
+	padding: 0.25em;
+	border-right: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+
+#singleResult #basicInfo h1 {
+	text-align: right;
+	font-variant: small-caps;
+  font-size: 120%;
+	margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+#singleResult #basicInfo td {
+  padding-left: 1em;
+	padding-bottom: 0.25em;
+}
+
+#singleResult #basicInfo td.metadataConcept {
+  font-weight: bold;
+	text-align: right;
+  padding-left: 0;
+  white-space: nowrap;
+}
+
+#singleResult #associated {
+	padding: 0.25em;
+	border-right: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+
+#singleResult #associated h1 {
+	text-align: right;
+	font-variant: small-caps;
+  font-size: 120%;
+	margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+#singleResult #associated h2 {
+	font-variant: small-caps;
+  font-size: 120%;
+	margin: 1em 0 0.25em 0;
+  font-weight: bold;
+}
+
+#singleResult #associated ul {
+  padding-left: 1em;
+}
+
+#singleResult #associated li {
+  padding-bottom: 0.35em;
+}
+
+.metadataConcept {
+  font-weight: bold;
+}
+

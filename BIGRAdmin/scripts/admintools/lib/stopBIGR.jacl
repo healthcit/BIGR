@@ -1,0 +1,16 @@
+#
+# ***** DO NOT INVOKE this directly, use stopBIGR.sh instead. *****
+#
+# Stop the BIGR Enterprise Application.  This only stops the BIGR application,
+# not the entire WebSphere application server that BIGR runs inside.
+#
+
+set appName $env(BIGR_APPNAME)
+
+if {! [isBigrRunning]} {
+  puts "**** $appName is already stopped."
+  exit
+}
+
+set appManager [$AdminControl queryNames type=ApplicationManager,*]
+$AdminControl invoke $appManager stopApplication $appName

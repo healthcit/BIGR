@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Class-Path: lib/commons-beanutils.jar 
+ lib/commons-collections.jar 
+ lib/commons-digester.jar 
+ lib/commons-lang.jar 
+ lib/commons-logging.jar 
+ lib/jakarta-oro.jar 
+ lib/junit.jar 
+ lib/log4j.jar 
+ lib/velocity.jar 
+ lib/xercesImpl.jar 
+ lib/xml-apis.jar 
+ lib/spring-1.2.8.jar 
+ lib/acegi-security-1.0.3.jar 
+ lib/hibernate3.jar 
+ lib/jdom.jar 
+ lib/clm.jar 
+ lib/ehcache-1.2.jar 
+ lib/jsse.jar 
+ lib/csmapi.jar
+

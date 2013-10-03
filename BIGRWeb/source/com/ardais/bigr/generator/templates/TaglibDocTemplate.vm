@@ -1,0 +1,57 @@
+#*
+ * This template is for generating documentation for the BIGR taglib.
+ *#
+<html>
+<head>
+<title>BIGR Taglib</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../theme/Master.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table cellspacing="0" cellpadding="3" border="0" width="100%" class="clsHeader1"><tr><td class="clsHeader1">BIGR Tags</td></tr></table>
+<div class="tagBody">
+<p>${taglib.Info}</p>
+<table border="0" cellspacing="0" cellpadding="3" class="clsSummary">
+<thead><tr><td>Tag Name</td><td>Description</td></tr></thead>
+#foreach($tag in $taglib.SortedTags)
+<tr><td><a href="#${tag.Name}">${tag.Name}</a></td><td>
+#if($tag.Info)
+${tag.Info}
+#else
+&nbsp;
+#end
+</td></tr>
+#end## foreach tag
+</table>
+</div>
+
+#foreach($tag in $taglib.SortedTags)
+<a name="${tag.Name}">
+<table cellspacing="0" cellpadding="3" border="0" width="100%" class="clsHeader2"><tr><td class="clsHeader2">
+${tag.Name} - 
+#if($tag.Info)
+${tag.Info}
+#end
+</td></tr>
+<tr><td class="clsSubsummary">body content: ${tag.Bodycontent}</td></tr>
+<tr><td class="clsSubsummary">tag class: ${tag.Tagclass}</td></tr>
+#if($tag.Teiclass)
+<tr><td class="clsSubsummary">tei class: ${tag.Teiclass}</td></tr>
+#end
+</table>
+</a>
+<div class="tagBody">
+<table border="0" cellspacing="0" cellpadding="3" class="clsSummary">
+<thead><tr><td>Attribute Name</td><td>Required?</td><td>Run-time Expression?</td></tr></thead>
+#foreach($attr in $tag.SortedAttributes)
+<tr>
+<td>${attr.Name}</td>
+<td>${attr.Required}</td>
+<td>${attr.Rtexprvalue}</td>
+</tr>
+#end## foreach attr
+</table>
+</div>
+#end## foreach tag
+</body>
+</html>

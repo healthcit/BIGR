@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="//gulfstreambio/gboss/" xmlns:gb="//gulfstreambio/gboss/"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="./common.xsd"/>
+	<!-- 
+	detType 
+	-->
+	<xs:complexType name="detType">
+		<xs:annotation>
+			<xs:documentation>The det section must contain a sequence of one or more
+			categories.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="category" type="gb:categoryType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- 
+	categoryType 
+	-->
+	<xs:complexType name="categoryType">
+		<xs:annotation>
+			<xs:documentation>A category is a type of concept that has a systemName and one choice
+				between: 1) one or more child categories. OR 2) one or more choices between the
+				different types of dataElements.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:conceptType">
+				<xs:choice>
+					<xs:element name="category" type="gb:categoryType" maxOccurs="unbounded"/>
+					<xs:choice maxOccurs="unbounded">
+						<xs:element name="dataElementInt" type="gb:dataElementIntType"/>
+						<xs:element name="dataElementFloat" type="gb:dataElementFloatType"/>
+						<xs:element name="dataElementDate" type="gb:dataElementDateType"/>
+						<xs:element name="dataElementVpd" type="gb:dataElementVpdType"/>
+						<xs:element name="dataElementText" type="gb:dataElementTextType"/>
+						<xs:element name="dataElementReport" type="gb:dataElementReportType"/>
+						<xs:element name="dataElementCv" type="gb:dataElementCvType"/>
+					</xs:choice>
+				</xs:choice>
+				<xs:attribute name="systemName" type="gb:systemNameType"/>
+				<xs:attribute name="databaseType" use="optional">
+					<xs:annotation>
+						<xs:documentation>Indicates the type of database table that will store the
+							data in this category.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="eav"/>
+							<xs:enumeration value="conventional"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	dataElementType 
+	-->
+	<xs:complexType name="dataElementType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A type of element that has an optional adeRef.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:elementType">
+				<xs:sequence>
+					<xs:element name="adeRef" type="gb:refType" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	dataElementIntType 
+	-->
+	<xs:complexType name="dataElementIntType">
+		<xs:annotation>
+			<xs:documentation>A type of dataElement that includes a group of properties common to
+				int elements.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:dataElementType">
+				<xs:sequence>
+					<xs:group ref="gb:intGroup"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	dataElementFloatType 
+	-->
+	<xs:complexType name="dataElementFloatType">
+		<xs:annotation>
+			<xs:documentation>A type of dataElement that includes a group of properties common to
+				float elements.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:dataElementType">
+				<xs:sequence>
+					<xs:group ref="gb:floatGroup"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	dataElementDateType 
+	-->
+	<xs:complexType name="dataElementDateType">
+		<xs:annotation>
+			<xs:documentation>A type of dataElement that includes a group of properties common to
+				date elements.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:dataElementType">
+				<xs:sequence>
+					<xs:group ref="gb:dateGroup"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	dataElementVpdType 
+	-->
+	<xs:complexType name="dataElementVpdType">
+		<xs:annotation>
+			<xs:documentation>A type of dataElement that includes a group of properties common to
+				vpd elements.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:dataElementType">
+				<xs:sequence>
+					<xs:group ref="gb:dateGroup"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	dataElementTextType 
+	-->
+	<xs:complexType name="dataElementTextType">
+		<xs:annotation>
+			<xs:documentation>A type of dataElement with no special properties.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:dataElementType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	dataElementReportType 
+	-->
+	<xs:complexType name="dataElementReportType">
+		<xs:annotation>
+			<xs:documentation>A type of dataElement with no special properties.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:dataElementType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	dataElementCvType 
+	-->
+	<xs:complexType name="dataElementCvType">
+		<xs:annotation>
+			<xs:documentation>A type of dataElement that contains a group of element properties and
+				a group of attribute properties that are common to cv elements. This type of
+				dataElement also allows an extension of adeRef that contains a nonAtvValueSetRef.
+				Elements that use this type should specify a uniqueness constraint to keep more than
+				one adeRef from being used.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:dataElementType">
+				<xs:sequence>
+					<xs:element name="nonAtvValueSetRef" type="gb:refType" minOccurs="0"/>
+					<xs:group ref="gb:cvGroup"/>
+				</xs:sequence>
+				<xs:attributeGroup ref="gb:cvAttributeGroup"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

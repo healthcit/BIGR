@@ -1,0 +1,14 @@
+# sed script to edit the log4j.properties file that is deployed with a build
+# to make it appropriate for this server.  The sed call that uses this
+# is in the editProperties.jacl script.
+#
+# You can't tell by looking at it, but all of the "[ 	]"s that appear
+# below contain a space character and a tab character.  When changing this
+# file, please preserve this convention so that the rules will match regardless
+# of whether the whitespace characters in the source file are spaces to tabs.
+# The easiest way to do this is to copy the [ 	] from an existing line
+# to the new line.
+#
+# Example lines:
+#s/^[ 	]*\(abc\.def\)[ 	]*=.*/\1=new value/
+#s/^[ 	]*\(log4j\.logger\.com\.ardais\.bigr\.library\.PERFORMANCE\)[ 	]*=.*/\1=DEBUG, PerfLog/

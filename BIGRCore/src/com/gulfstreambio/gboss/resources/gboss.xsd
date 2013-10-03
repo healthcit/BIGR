@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="//gulfstreambio/gboss/" xmlns:gb="//gulfstreambio/gboss/"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!--
+	List of other schemas to include.
+	-->
+	<xs:include schemaLocation="./det.xsd"/>
+	<xs:include schemaLocation="./unit.xsd"/>
+	<xs:include schemaLocation="./ade.xsd"/>
+	<xs:include schemaLocation="./value.xsd"/>
+	<!--
+	gboss ROOT element
+	-->
+	<xs:element name="gboss" type="gb:gbossType">
+		<xs:annotation>
+			<xs:documentation>The root element of a gboss document. The definition of this root element
+				includes some uniqueness and reference constraints.</xs:documentation>
+		</xs:annotation>
+		<xs:unique name="cuiUnique">
+			<xs:annotation>
+				<xs:documentation>All cuis that define concepts (not including cuis that are references)
+					must be unique across the entire gboss document.</xs:documentation>
+			</xs:annotation>
+			<xs:selector
+				xpath=".//category | .//ade | .//valueSet | .//value | .//bigrConcept | .//dataElementInt | .//dataElementFloat | .//dataElementDate | .//dataElementVpd | .//dataElementReport | .//dataElementCv | .//adeElementInt | .//adeElementFloat | .//adeElementDate | .//adeElementVpd | .//adeElementReport | .//adeElementCv"/>
+			<xs:field xpath="@cui"/>
+		</xs:unique>
+		<xs:unique name="systemNameUnique">
+			<xs:annotation>
+				<xs:documentation>All systemNames must be unique across the entire gboss
+				document.</xs:documentation>
+			</xs:annotation>
+			<xs:selector
+				xpath=".//category | .//ade | .//dataElementInt | .//dataElementFloat | .//dataElementDate | .//dataElementVpd | .//dataElementReport | .//dataElementCv | .//adeElementInt | .//adeElementFloat | .//adeElementDate | .//adeElementVpd | .//adeElementReport | .//adeElementCv"/>
+			<xs:field xpath="@systemName"/>
+		</xs:unique>
+		<xs:key name="unitKey">
+			<xs:annotation>
+				<xs:documentation>All unit cui attributes within the units section must be unique and
+					not null and may be referenced elsewhere in the gboss document.</xs:documentation>
+			</xs:annotation>
+			<xs:selector xpath="units/unit"/>
+			<xs:field xpath="@cui"/>
+		</xs:key>
+		<xs:keyref name="unitKeyRef" refer="gb:unitKey">
+			<xs:annotation>
+				<xs:documentation>All unitRef cuis anywhere in the gboss document must refer to a key
+					defined by the unitKey.</xs:documentation>
+			</xs:annotation>
+			<xs:selector xpath=".//unitRef"/>
+			<xs:field xpath="@cui"/>
+		</xs:keyref>
+		<xs:key name="adeKey">
+			<xs:annotation>
+				<xs:documentation>All ade cui attributes within the ades section must be unique and not
+					null and may be referenced elsewhere in the gboss document.</xs:documentation>
+			</xs:annotation>
+			<xs:selector xpath="ades/ade"/>
+			<xs:field xpath="@cui"/>
+		</xs:key>
+		<xs:keyref name="adeKeyRef" refer="gb:adeKey">
+			<xs:annotation>
+				<xs:documentation>All adeRef cuis anywhere in the gboss document must refer to a key
+					defined by the adeKey.</xs:documentation>
+			</xs:annotation>
+			<xs:selector xpath=".//adeRef"/>
+			<xs:field xpath="@cui"/>
+		</xs:keyref>
+		<xs:key name="valueKey">
+			<xs:annotation>
+				<xs:documentation>All value cui attributes within the values section must be unique and
+					not null and may be referenced elsewhere in the gboss document.</xs:documentation>
+			</xs:annotation>
+			<xs:selector xpath="values/value"/>
+			<xs:field xpath="@cui"/>
+		</xs:key>
+		<xs:keyref name="valueKeyRef" refer="gb:valueKey">
+			<xs:annotation>
+				<xs:documentation>All valueRef cuis anywhere in the gboss document must refer to a key
+					defined by the valueKey.</xs:documentation>
+			</xs:annotation>
+			<xs:selector xpath=".//valueRef"/>
+			<xs:field xpath="@cui"/>
+		</xs:keyref>
+		<xs:key name="valueSetKey">
+			<xs:annotation>
+				<xs:documentation>All valueSet cui attributes within the valueSets section must be
+					unique and not null and may be referenced elsewhere in the gboss
+				document.</xs:documentation>
+			</xs:annotation>
+			<xs:selector xpath="valueSets/valueSet"/>
+			<xs:field xpath="@cui"/>
+		</xs:key>
+		<xs:keyref name="valueSetKeyRef" refer="gb:valueSetKey">
+			<xs:annotation>
+				<xs:documentation>All broadValueSetRef cuis and nonAtvValueSetRef cuis anywhere in the
+					gboss document must refer to a key defined by the valueSetKey.</xs:documentation>
+			</xs:annotation>
+			<xs:selector xpath=".//broadValueSetRef | .//nonAtvValueSetRef"/>
+			<xs:field xpath="@cui"/>
+		</xs:keyref>
+	</xs:element>
+	<!--
+	gbossType
+	-->
+	<xs:complexType name="gbossType">
+		<xs:annotation>
+			<xs:documentation>A type that includes a sequence of elements representing sections in a
+				gboss document.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="det" type="gb:detType"/>
+			<xs:element name="ades" type="gb:adesType"/>
+			<xs:element name="units" type="gb:unitsType"/>
+			<xs:element name="values" type="gb:valuesType"/>
+			<xs:element name="valueSets" type="gb:valueSetsType"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

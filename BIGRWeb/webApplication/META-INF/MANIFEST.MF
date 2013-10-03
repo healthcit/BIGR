@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Class-Path: lib/commons-beanutils.jar 
+ lib/commons-collections.jar 
+ lib/commons-lang.jar 
+ lib/commons-logging.jar 
+ lib/commons-digester.jar 
+ BIGRCore.jar 
+ BIGREjb.jar
+

@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.ibm.com/xtools/1.5.0/Notation" xmlns:uml="http://www.eclipse.org/uml2/1.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.0/Umlnotation" xmi:id="_0khQcT5yEduVfYIhlrVm7g" type="Class" name="KcFormDefinition.dnx">
+  <children xmi:id="_EUYmEIYFEdue9fwLYoBvAw" sourceEdges="_XJlxgIYFEdue9fwLYoBvAw _LhVGQKAiEduZmJRPh6fHjg _MBAGUsN4EduubOsUo4IsVg">
+    <children xmi:id="_EUYmE4YFEdue9fwLYoBvAw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_EUYmFIYFEdue9fwLYoBvAw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_EUYmFYYFEdue9fwLYoBvAw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_EUYmFoYFEdue9fwLYoBvAw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_EUYmF4YFEdue9fwLYoBvAw" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_EUYmGIYFEdue9fwLYoBvAw" filtering="Automatic" filteringKeys="private,package"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_EUYmGYYFEdue9fwLYoBvAw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_EUYmGoYFEdue9fwLYoBvAw" filtering="Automatic" filteringKeys="private,package" sorting="Automatic" sortingKeys="Name:Ascending"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_EUYmG4YFEdue9fwLYoBvAw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_EUYmHIYFEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_EUYmHYYFEdue9fwLYoBvAw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_EUYmHoYFEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_EUYmEYYFEdue9fwLYoBvAw" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EUYmEoYFEdue9fwLYoBvAw" x="-9222" y="-5088"/>
+  </children>
+  <children xmi:id="_XHNL4IYFEdue9fwLYoBvAw" sourceEdges="_Lhe3RaAiEduZmJRPh6fHjg" targetEdges="_XJlxgIYFEdue9fwLYoBvAw">
+    <children xmi:id="_XHNL44YFEdue9fwLYoBvAw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionServiceResponse[jcu^name=FormDefinitionServiceResponse.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_XHNL5IYFEdue9fwLYoBvAw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_XHNL5YYFEdue9fwLYoBvAw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionServiceResponse[jcu^name=FormDefinitionServiceResponse.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_XHNL5oYFEdue9fwLYoBvAw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionServiceResponse[jcu^name=FormDefinitionServiceResponse.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_XHNL54YFEdue9fwLYoBvAw" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_XHNL6IYFEdue9fwLYoBvAw" filtering="Automatic" filteringKeys="private,package"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionServiceResponse[jcu^name=FormDefinitionServiceResponse.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_XHNL6YYFEdue9fwLYoBvAw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_XHNL6oYFEdue9fwLYoBvAw" filtering="Automatic" filteringKeys="private,package"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionServiceResponse[jcu^name=FormDefinitionServiceResponse.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_XHNL64YFEdue9fwLYoBvAw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_XHNL7IYFEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionServiceResponse[jcu^name=FormDefinitionServiceResponse.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_XHNL7YYFEdue9fwLYoBvAw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_XHNL7oYFEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionServiceResponse[jcu^name=FormDefinitionServiceResponse.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_XHNL4YYFEdue9fwLYoBvAw" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionServiceResponse[jcu^name=FormDefinitionServiceResponse.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XHNL4oYFEdue9fwLYoBvAw" x="-9222" y="7950"/>
+  </children>
+  <children xmi:id="_LToBcKAiEduZmJRPh6fHjg" sourceEdges="_BhhYyKAjEduZmJRPh6fHjg _Nc9DwMN0EduubOsUo4IsVg _7OhvAMN0EduubOsUo4IsVg _SWcFwMN1EduubOsUo4IsVg" targetEdges="_LhVGQKAiEduZmJRPh6fHjg _Lhe3RaAiEduZmJRPh6fHjg _k1G3p6AiEduZmJRPh6fHjg _2hosoMN1EduubOsUo4IsVg">
+    <children xmi:id="_LToBc6AiEduZmJRPh6fHjg" type="ImageCompartment">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_LToBdKAiEduZmJRPh6fHjg" width="530" height="530"/>
+    </children>
+    <children xmi:id="_LToBdaAiEduZmJRPh6fHjg" type="Stereotype">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_LToBdqAiEduZmJRPh6fHjg" type="Kind">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_LToBd6AiEduZmJRPh6fHjg" type="Name">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_LToBeKAiEduZmJRPh6fHjg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_LToBeaAiEduZmJRPh6fHjg"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_LToBeqAiEduZmJRPh6fHjg" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_LToBe6AiEduZmJRPh6fHjg"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_LToBfKAiEduZmJRPh6fHjg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_LToBfaAiEduZmJRPh6fHjg"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLClassifierStyle" xmi:id="_LToBcaAiEduZmJRPh6fHjg" showListSignature="true" showStereotype="Label" useClassifierShape="true"/>
+    <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LToBcqAiEduZmJRPh6fHjg" x="5454" y="15953"/>
+  </children>
+  <children xmi:id="_kw7iQKAiEduZmJRPh6fHjg" sourceEdges="_k1G3p6AiEduZmJRPh6fHjg">
+    <children xmi:id="_kw7iQ6AiEduZmJRPh6fHjg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionBase[jcu^name=FormDefinitionBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_kw7iRKAiEduZmJRPh6fHjg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_kw7iRaAiEduZmJRPh6fHjg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionBase[jcu^name=FormDefinitionBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kw7iRqAiEduZmJRPh6fHjg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionBase[jcu^name=FormDefinitionBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kw7iR6AiEduZmJRPh6fHjg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kw7iSKAiEduZmJRPh6fHjg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionBase[jcu^name=FormDefinitionBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kw7iSaAiEduZmJRPh6fHjg" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kw7iSqAiEduZmJRPh6fHjg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionBase[jcu^name=FormDefinitionBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kw7iS6AiEduZmJRPh6fHjg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_kw7iTKAiEduZmJRPh6fHjg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionBase[jcu^name=FormDefinitionBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_kw7iTaAiEduZmJRPh6fHjg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_kw7iTqAiEduZmJRPh6fHjg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionBase[jcu^name=FormDefinitionBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_kw7iQaAiEduZmJRPh6fHjg" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionBase[jcu^name=FormDefinitionBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kw7iQqAiEduZmJRPh6fHjg" x="-9540" y="18762"/>
+  </children>
+  <children xmi:id="_BePbQKAjEduZmJRPh6fHjg" targetEdges="_BhhYyKAjEduZmJRPh6fHjg _MBJ3UMN4EduubOsUo4IsVg">
+    <children xmi:id="_BePbQ6AjEduZmJRPh6fHjg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Tag[jcu^name=Tag.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_BePbRKAjEduZmJRPh6fHjg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_BePbRaAjEduZmJRPh6fHjg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Tag[jcu^name=Tag.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_BePbRqAjEduZmJRPh6fHjg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Tag[jcu^name=Tag.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_BePbR6AjEduZmJRPh6fHjg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_BePbSKAjEduZmJRPh6fHjg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Tag[jcu^name=Tag.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_BePbSaAjEduZmJRPh6fHjg" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_BePbSqAjEduZmJRPh6fHjg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Tag[jcu^name=Tag.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_BePbS6AjEduZmJRPh6fHjg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_BePbTKAjEduZmJRPh6fHjg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Tag[jcu^name=Tag.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_BePbTaAjEduZmJRPh6fHjg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_BePbTqAjEduZmJRPh6fHjg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Tag[jcu^name=Tag.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_BePbQaAjEduZmJRPh6fHjg" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Tag[jcu^name=Tag.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BePbQqAjEduZmJRPh6fHjg" x="7314" y="8586"/>
+  </children>
+  <children xmi:id="_NXJWsMN0EduubOsUo4IsVg" sourceEdges="_jGbRIMN1EduubOsUo4IsVg" targetEdges="_Nc9DwMN0EduubOsUo4IsVg _kiHBcMN0EduubOsUo4IsVg _ZHUjt8N1EduubOsUo4IsVg _jGlCMMN1EduubOsUo4IsVg">
+    <children xmi:id="_NZrGQMN0EduubOsUo4IsVg" type="ImageCompartment">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_NZrGQcN0EduubOsUo4IsVg" width="530" height="530"/>
+    </children>
+    <children xmi:id="_NZrGQsN0EduubOsUo4IsVg" type="Stereotype">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_NZrGQ8N0EduubOsUo4IsVg" type="Kind">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_NZrGRMN0EduubOsUo4IsVg" type="Name">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_NZrGRcN0EduubOsUo4IsVg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_NZrGRsN0EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_NZrGR8N0EduubOsUo4IsVg" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_NZrGSMN0EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_NZrGScN0EduubOsUo4IsVg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_NZrGSsN0EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLClassifierStyle" xmi:id="_NXJWscN0EduubOsUo4IsVg" showListSignature="true" showStereotype="Label" useClassifierShape="true"/>
+    <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NXJWssN0EduubOsUo4IsVg" x="-10176" y="28302"/>
+  </children>
+  <children xmi:id="_khNpkMN0EduubOsUo4IsVg" sourceEdges="_kiHBcMN0EduubOsUo4IsVg _r1jZ4MN0EduubOsUo4IsVg">
+    <children xmi:id="_khNpk8N0EduubOsUo4IsVg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionCategoryBase[jcu^name=FormDefinitionCategoryBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_khNplMN0EduubOsUo4IsVg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_khNplcN0EduubOsUo4IsVg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionCategoryBase[jcu^name=FormDefinitionCategoryBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_khNplsN0EduubOsUo4IsVg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionCategoryBase[jcu^name=FormDefinitionCategoryBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_khNpl8N0EduubOsUo4IsVg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_khNpmMN0EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionCategoryBase[jcu^name=FormDefinitionCategoryBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_khNpmcN0EduubOsUo4IsVg" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_khNpmsN0EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionCategoryBase[jcu^name=FormDefinitionCategoryBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_khNpm8N0EduubOsUo4IsVg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_khNpnMN0EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionCategoryBase[jcu^name=FormDefinitionCategoryBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_khNpncN0EduubOsUo4IsVg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_khNpnsN0EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionCategoryBase[jcu^name=FormDefinitionCategoryBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_khNpkcN0EduubOsUo4IsVg" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionCategoryBase[jcu^name=FormDefinitionCategoryBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_khNpksN0EduubOsUo4IsVg" x="-9964" y="33072"/>
+  </children>
+  <children xmi:id="_r0g4EMN0EduubOsUo4IsVg" targetEdges="_r1jZ4MN0EduubOsUo4IsVg">
+    <children xmi:id="_r0g4E8N0EduubOsUo4IsVg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionCategoryTypes[jcu^name=FormDefinitionCategoryTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_r0g4FMN0EduubOsUo4IsVg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_r0g4FcN0EduubOsUo4IsVg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionCategoryTypes[jcu^name=FormDefinitionCategoryTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_r0g4FsN0EduubOsUo4IsVg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionCategoryTypes[jcu^name=FormDefinitionCategoryTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_r0g4F8N0EduubOsUo4IsVg" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_r0g4GMN0EduubOsUo4IsVg" filtering="Automatic" filteringKeys="private"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionCategoryTypes[jcu^name=FormDefinitionCategoryTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_r0g4GcN0EduubOsUo4IsVg" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_r0g4GsN0EduubOsUo4IsVg" filtering="Automatic" filteringKeys="private"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionCategoryTypes[jcu^name=FormDefinitionCategoryTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_r0g4G8N0EduubOsUo4IsVg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_r0g4HMN0EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionCategoryTypes[jcu^name=FormDefinitionCategoryTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_r0g4HcN0EduubOsUo4IsVg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_r0g4HsN0EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionCategoryTypes[jcu^name=FormDefinitionCategoryTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_r0g4EcN0EduubOsUo4IsVg" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionCategoryTypes[jcu^name=FormDefinitionCategoryTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_r0g4EsN0EduubOsUo4IsVg" x="-1590" y="36888"/>
+  </children>
+  <children xmi:id="_7NemIMN0EduubOsUo4IsVg" targetEdges="_7OhvAMN0EduubOsUo4IsVg _HnRNUMN1EduubOsUo4IsVg _jGlCOMN1EduubOsUo4IsVg">
+    <children xmi:id="_7NemI8N0EduubOsUo4IsVg" type="ImageCompartment">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_7NemJMN0EduubOsUo4IsVg" width="530" height="530"/>
+    </children>
+    <children xmi:id="_7NemJcN0EduubOsUo4IsVg" type="Stereotype">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_7NemJsN0EduubOsUo4IsVg" type="Kind">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_7NemJ8N0EduubOsUo4IsVg" type="Name">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_7NemKMN0EduubOsUo4IsVg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_7NemKcN0EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_7NemKsN0EduubOsUo4IsVg" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_7NemK8N0EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_7NemLMN0EduubOsUo4IsVg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_7NemLcN0EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLClassifierStyle" xmi:id="_7NemIcN0EduubOsUo4IsVg" showListSignature="true" showStereotype="Label" useClassifierShape="true"/>
+    <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7NemIsN0EduubOsUo4IsVg" x="11766" y="27348"/>
+  </children>
+  <children xmi:id="_Hmg_YMN1EduubOsUo4IsVg" sourceEdges="_HnRNUMN1EduubOsUo4IsVg">
+    <children xmi:id="_Hmg_Y8N1EduubOsUo4IsVg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionDataElementBase[jcu^name=FormDefinitionDataElementBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_Hmg_ZMN1EduubOsUo4IsVg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_Hmg_ZcN1EduubOsUo4IsVg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionDataElementBase[jcu^name=FormDefinitionDataElementBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_Hmg_ZsN1EduubOsUo4IsVg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionDataElementBase[jcu^name=FormDefinitionDataElementBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_Hmg_Z8N1EduubOsUo4IsVg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Hmg_aMN1EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionDataElementBase[jcu^name=FormDefinitionDataElementBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_Hmg_acN1EduubOsUo4IsVg" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Hmg_asN1EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionDataElementBase[jcu^name=FormDefinitionDataElementBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_Hmg_a8N1EduubOsUo4IsVg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Hmg_bMN1EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionDataElementBase[jcu^name=FormDefinitionDataElementBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_Hmg_bcN1EduubOsUo4IsVg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_Hmg_bsN1EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionDataElementBase[jcu^name=FormDefinitionDataElementBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_Hmg_YcN1EduubOsUo4IsVg" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionDataElementBase[jcu^name=FormDefinitionDataElementBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Hmg_YsN1EduubOsUo4IsVg" x="10176" y="32436"/>
+  </children>
+  <children xmi:id="_SVZj8MN1EduubOsUo4IsVg" sourceEdges="_jGbRMMN1EduubOsUo4IsVg" targetEdges="_SWcFwMN1EduubOsUo4IsVg _ZHUjsMN1EduubOsUo4IsVg">
+    <children xmi:id="_SVZj88N1EduubOsUo4IsVg" type="ImageCompartment">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_SVZj9MN1EduubOsUo4IsVg" width="530" height="530"/>
+    </children>
+    <children xmi:id="_SVZj9cN1EduubOsUo4IsVg" type="Stereotype">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_SVZj9sN1EduubOsUo4IsVg" type="Kind">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_SVZj98N1EduubOsUo4IsVg" type="Name">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_SVZj-MN1EduubOsUo4IsVg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_SVZj-cN1EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_SVZj-sN1EduubOsUo4IsVg" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_SVZj-8N1EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_SVZj_MN1EduubOsUo4IsVg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_SVZj_cN1EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLClassifierStyle" xmi:id="_SVZj8cN1EduubOsUo4IsVg" showListSignature="true" showStereotype="Label" useClassifierShape="true"/>
+    <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SVZj8sN1EduubOsUo4IsVg" x="2862" y="25758"/>
+  </children>
+  <children xmi:id="_ZG33wMN1EduubOsUo4IsVg" sourceEdges="_ZHUjsMN1EduubOsUo4IsVg _ZHUjt8N1EduubOsUo4IsVg">
+    <children xmi:id="_ZG33w8N1EduubOsUo4IsVg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionElementsBase[jcu^name=FormDefinitionElementsBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_ZG33xMN1EduubOsUo4IsVg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_ZG33xcN1EduubOsUo4IsVg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionElementsBase[jcu^name=FormDefinitionElementsBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_ZG33xsN1EduubOsUo4IsVg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionElementsBase[jcu^name=FormDefinitionElementsBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_ZG33x8N1EduubOsUo4IsVg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ZG33yMN1EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionElementsBase[jcu^name=FormDefinitionElementsBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_ZG33ycN1EduubOsUo4IsVg" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ZG33ysN1EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionElementsBase[jcu^name=FormDefinitionElementsBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_ZG33y8N1EduubOsUo4IsVg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ZG33zMN1EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionElementsBase[jcu^name=FormDefinitionElementsBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_ZG33zcN1EduubOsUo4IsVg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_ZG33zsN1EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionElementsBase[jcu^name=FormDefinitionElementsBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_ZG33wcN1EduubOsUo4IsVg" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionElementsBase[jcu^name=FormDefinitionElementsBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZG33wsN1EduubOsUo4IsVg" y="29574"/>
+  </children>
+  <children xmi:id="_jFO-UMN1EduubOsUo4IsVg" sourceEdges="_jGlCMMN1EduubOsUo4IsVg _jGlCOMN1EduubOsUo4IsVg" targetEdges="_jGbRIMN1EduubOsUo4IsVg _jGbRMMN1EduubOsUo4IsVg">
+    <children xmi:id="_jFO-U8N1EduubOsUo4IsVg" type="ImageCompartment">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_jFO-VMN1EduubOsUo4IsVg" width="530" height="530"/>
+    </children>
+    <children xmi:id="_jFO-VcN1EduubOsUo4IsVg" type="Stereotype">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_jFO-VsN1EduubOsUo4IsVg" type="Kind">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_jFO-V8N1EduubOsUo4IsVg" type="Name">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_jFYvUMN1EduubOsUo4IsVg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_jFYvUcN1EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_jFYvUsN1EduubOsUo4IsVg" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_jFYvU8N1EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_jFYvVMN1EduubOsUo4IsVg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_jFYvVcN1EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLClassifierStyle" xmi:id="_jFO-UcN1EduubOsUo4IsVg" showListSignature="true" showStereotype="Label" useClassifierShape="true"/>
+    <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jFO-UsN1EduubOsUo4IsVg" x="1590" y="33072"/>
+  </children>
+  <children xmi:id="_zKApgMN1EduubOsUo4IsVg" targetEdges="_MBJ3WMN4EduubOsUo4IsVg">
+    <children xmi:id="_zKApg8N1EduubOsUo4IsVg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionTypes[jcu^name=FormDefinitionTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_zKAphMN1EduubOsUo4IsVg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_zKAphcN1EduubOsUo4IsVg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionTypes[jcu^name=FormDefinitionTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_zKAphsN1EduubOsUo4IsVg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionTypes[jcu^name=FormDefinitionTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_zKAph8N1EduubOsUo4IsVg" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_zKApiMN1EduubOsUo4IsVg" filtering="Automatic" filteringKeys="private"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionTypes[jcu^name=FormDefinitionTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_zKApicN1EduubOsUo4IsVg" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_zKApisN1EduubOsUo4IsVg" filtering="Automatic" filteringKeys="private"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionTypes[jcu^name=FormDefinitionTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_zKApi8N1EduubOsUo4IsVg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_zKApjMN1EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionTypes[jcu^name=FormDefinitionTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_zKApjcN1EduubOsUo4IsVg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_zKApjsN1EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionTypes[jcu^name=FormDefinitionTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_zKApgcN1EduubOsUo4IsVg" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionTypes[jcu^name=FormDefinitionTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zKApgsN1EduubOsUo4IsVg" x="7950" y="-2544"/>
+  </children>
+  <children xmi:id="_2g5FwMN1EduubOsUo4IsVg" sourceEdges="_2hosoMN1EduubOsUo4IsVg">
+    <children xmi:id="_2g5Fw8N1EduubOsUo4IsVg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionFactory[jcu^name=FormDefinitionFactory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_2g5FxMN1EduubOsUo4IsVg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_2g5FxcN1EduubOsUo4IsVg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionFactory[jcu^name=FormDefinitionFactory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2g5FxsN1EduubOsUo4IsVg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionFactory[jcu^name=FormDefinitionFactory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2g5Fx8N1EduubOsUo4IsVg" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2g5FyMN1EduubOsUo4IsVg" filtering="Automatic" filteringKeys="private"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionFactory[jcu^name=FormDefinitionFactory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2g5FycN1EduubOsUo4IsVg" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2g5FysN1EduubOsUo4IsVg" filtering="Automatic" filteringKeys="private"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionFactory[jcu^name=FormDefinitionFactory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2g5Fy8N1EduubOsUo4IsVg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_2g5FzMN1EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionFactory[jcu^name=FormDefinitionFactory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_2g5FzcN1EduubOsUo4IsVg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_2g5FzsN1EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionFactory[jcu^name=FormDefinitionFactory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_2g5FwcN1EduubOsUo4IsVg" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionFactory[jcu^name=FormDefinitionFactory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2g5FwsN1EduubOsUo4IsVg" x="-9540" y="15264"/>
+  </children>
+  <children xmi:id="_L9uI0MN4EduubOsUo4IsVg" sourceEdges="_MBJ3UMN4EduubOsUo4IsVg _MBJ3WMN4EduubOsUo4IsVg" targetEdges="_MBAGUsN4EduubOsUo4IsVg">
+    <children xmi:id="_L9uI08N4EduubOsUo4IsVg" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_L9uI1MN4EduubOsUo4IsVg" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_L9uI1cN4EduubOsUo4IsVg" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_L9uI1sN4EduubOsUo4IsVg" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_L9uI18N4EduubOsUo4IsVg" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_L9uI2MN4EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_L9uI2cN4EduubOsUo4IsVg" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_L9uI2sN4EduubOsUo4IsVg" filtering="Automatic" filteringKeys="private,package"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_L9uI28N4EduubOsUo4IsVg" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_L9uI3MN4EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_L9uI3cN4EduubOsUo4IsVg" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_L9uI3sN4EduubOsUo4IsVg"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_L9uI0cN4EduubOsUo4IsVg" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L9uI0sN4EduubOsUo4IsVg" x="8268" y="2544"/>
+  </children>
+  <styles xmi:type="umlnotation:UMLDiagramStyle" xmi:id="_0khQcj5yEduVfYIhlrVm7g"/>
+  <edges xmi:id="_XJlxgIYFEdue9fwLYoBvAw" source="_EUYmEIYFEdue9fwLYoBvAw" target="_XHNL4IYFEdue9fwLYoBvAw">
+    <children xmi:id="_XJlxg4YFEdue9fwLYoBvAw" type="KindLabel">
+      <children xmi:id="_XJlxhYYFEdue9fwLYoBvAw" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionServiceResponse[jcu^name=FormDefinitionServiceResponse.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_XJlxh4YFEdue9fwLYoBvAw" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionServiceResponse[jcu^name=FormDefinitionServiceResponse.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_XJlxhoYFEdue9fwLYoBvAw" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionServiceResponse[jcu^name=FormDefinitionServiceResponse.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionServiceResponse[jcu^name=FormDefinitionServiceResponse.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XJlxhIYFEdue9fwLYoBvAw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_XJlxgYYFEdue9fwLYoBvAw" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionServiceResponse[jcu^name=FormDefinitionServiceResponse.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XJlxgoYFEdue9fwLYoBvAw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_LhVGQKAiEduZmJRPh6fHjg" source="_EUYmEIYFEdue9fwLYoBvAw" target="_LToBcKAiEduZmJRPh6fHjg">
+    <children xmi:id="_Lhe3QKAiEduZmJRPh6fHjg" type="KindLabel">
+      <children xmi:id="_Lhe3QqAiEduZmJRPh6fHjg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_Lhe3RKAiEduZmJRPh6fHjg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_Lhe3Q6AiEduZmJRPh6fHjg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Lhe3QaAiEduZmJRPh6fHjg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_LhVGQaAiEduZmJRPh6fHjg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LhVGQqAiEduZmJRPh6fHjg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_Lhe3RaAiEduZmJRPh6fHjg" source="_XHNL4IYFEdue9fwLYoBvAw" target="_LToBcKAiEduZmJRPh6fHjg">
+    <children xmi:id="_Lhe3SKAiEduZmJRPh6fHjg" type="KindLabel">
+      <children xmi:id="_Lhe3SqAiEduZmJRPh6fHjg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionServiceResponse[jcu^name=FormDefinitionServiceResponse.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_Lhe3TKAiEduZmJRPh6fHjg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionServiceResponse[jcu^name=FormDefinitionServiceResponse.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_Lhe3S6AiEduZmJRPh6fHjg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionServiceResponse[jcu^name=FormDefinitionServiceResponse.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionServiceResponse[jcu^name=FormDefinitionServiceResponse.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Lhe3SaAiEduZmJRPh6fHjg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_Lhe3RqAiEduZmJRPh6fHjg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionServiceResponse[jcu^name=FormDefinitionServiceResponse.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Lhe3R6AiEduZmJRPh6fHjg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_k1G3p6AiEduZmJRPh6fHjg" source="_kw7iQKAiEduZmJRPh6fHjg" target="_LToBcKAiEduZmJRPh6fHjg">
+    <children xmi:id="_k1G3qqAiEduZmJRPh6fHjg" type="NameLabel">
+      <children xmi:id="_k1G3rKAiEduZmJRPh6fHjg" type="Stereotype">
+        <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=FormDefinitionBase[jcu^name=FormDefinitionBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_k1G3raAiEduZmJRPh6fHjg" type="Name">
+        <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=FormDefinitionBase[jcu^name=FormDefinitionBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=FormDefinitionBase[jcu^name=FormDefinitionBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_k1G3q6AiEduZmJRPh6fHjg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_k1G3qKAiEduZmJRPh6fHjg" showStereotype="Text"/>
+    <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=FormDefinitionBase[jcu^name=FormDefinitionBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_k1G3qaAiEduZmJRPh6fHjg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_BhhYyKAjEduZmJRPh6fHjg" source="_LToBcKAiEduZmJRPh6fHjg" target="_BePbQKAjEduZmJRPh6fHjg">
+    <children xmi:id="_BhhYy6AjEduZmJRPh6fHjg" type="KindLabel">
+      <children xmi:id="_BhhYzaAjEduZmJRPh6fHjg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Tag[jcu^name=Tag.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_BhhYz6AjEduZmJRPh6fHjg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Tag[jcu^name=Tag.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_BhhYzqAjEduZmJRPh6fHjg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Tag[jcu^name=Tag.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Tag[jcu^name=Tag.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhhYzKAjEduZmJRPh6fHjg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_BhhYyaAjEduZmJRPh6fHjg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Tag[jcu^name=Tag.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BhhYyqAjEduZmJRPh6fHjg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_Nc9DwMN0EduubOsUo4IsVg" source="_LToBcKAiEduZmJRPh6fHjg" target="_NXJWsMN0EduubOsUo4IsVg">
+    <children xmi:id="_Nc9Dw8N0EduubOsUo4IsVg" type="KindLabel">
+      <children xmi:id="_Nc9DxcN0EduubOsUo4IsVg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_Nc9Dx8N0EduubOsUo4IsVg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_Nc9DxsN0EduubOsUo4IsVg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Nc9DxMN0EduubOsUo4IsVg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_Nc9DwcN0EduubOsUo4IsVg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Nc9DwsN0EduubOsUo4IsVg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_kiHBcMN0EduubOsUo4IsVg" source="_khNpkMN0EduubOsUo4IsVg" target="_NXJWsMN0EduubOsUo4IsVg">
+    <children xmi:id="_kiHBc8N0EduubOsUo4IsVg" type="NameLabel">
+      <children xmi:id="_kiHBdcN0EduubOsUo4IsVg" type="Stereotype">
+        <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=FormDefinitionCategoryBase[jcu^name=FormDefinitionCategoryBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_kiHBdsN0EduubOsUo4IsVg" type="Name">
+        <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=FormDefinitionCategoryBase[jcu^name=FormDefinitionCategoryBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=FormDefinitionCategoryBase[jcu^name=FormDefinitionCategoryBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kiHBdMN0EduubOsUo4IsVg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_kiHBccN0EduubOsUo4IsVg" showStereotype="Text"/>
+    <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=FormDefinitionCategoryBase[jcu^name=FormDefinitionCategoryBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kiHBcsN0EduubOsUo4IsVg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_r1jZ4MN0EduubOsUo4IsVg" source="_khNpkMN0EduubOsUo4IsVg" target="_r0g4EMN0EduubOsUo4IsVg">
+    <children xmi:id="_r1jZ48N0EduubOsUo4IsVg" type="KindLabel">
+      <children xmi:id="_r1jZ5cN0EduubOsUo4IsVg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionCategoryBase[jcu^name=FormDefinitionCategoryBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategoryTypes[jcu^name=FormDefinitionCategoryTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_r1jZ58N0EduubOsUo4IsVg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionCategoryBase[jcu^name=FormDefinitionCategoryBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategoryTypes[jcu^name=FormDefinitionCategoryTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_r1jZ5sN0EduubOsUo4IsVg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionCategoryBase[jcu^name=FormDefinitionCategoryBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategoryTypes[jcu^name=FormDefinitionCategoryTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionCategoryBase[jcu^name=FormDefinitionCategoryBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategoryTypes[jcu^name=FormDefinitionCategoryTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_r1jZ5MN0EduubOsUo4IsVg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_r1jZ4cN0EduubOsUo4IsVg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionCategoryBase[jcu^name=FormDefinitionCategoryBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategoryTypes[jcu^name=FormDefinitionCategoryTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_r1jZ4sN0EduubOsUo4IsVg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_7OhvAMN0EduubOsUo4IsVg" source="_LToBcKAiEduZmJRPh6fHjg" target="_7NemIMN0EduubOsUo4IsVg">
+    <children xmi:id="_7OhvA8N0EduubOsUo4IsVg" type="KindLabel">
+      <children xmi:id="_7OhvBcN0EduubOsUo4IsVg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_7OhvB8N0EduubOsUo4IsVg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_7OhvBsN0EduubOsUo4IsVg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7OhvBMN0EduubOsUo4IsVg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_7OhvAcN0EduubOsUo4IsVg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7OhvAsN0EduubOsUo4IsVg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_HnRNUMN1EduubOsUo4IsVg" source="_Hmg_YMN1EduubOsUo4IsVg" target="_7NemIMN0EduubOsUo4IsVg">
+    <children xmi:id="_HnRNU8N1EduubOsUo4IsVg" type="NameLabel">
+      <children xmi:id="_HnRNVcN1EduubOsUo4IsVg" type="Stereotype">
+        <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=FormDefinitionDataElementBase[jcu^name=FormDefinitionDataElementBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_HnRNVsN1EduubOsUo4IsVg" type="Name">
+        <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=FormDefinitionDataElementBase[jcu^name=FormDefinitionDataElementBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=FormDefinitionDataElementBase[jcu^name=FormDefinitionDataElementBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HnRNVMN1EduubOsUo4IsVg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_HnRNUcN1EduubOsUo4IsVg" showStereotype="Text"/>
+    <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=FormDefinitionDataElementBase[jcu^name=FormDefinitionDataElementBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HnRNUsN1EduubOsUo4IsVg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_SWcFwMN1EduubOsUo4IsVg" source="_LToBcKAiEduZmJRPh6fHjg" target="_SVZj8MN1EduubOsUo4IsVg">
+    <children xmi:id="_SWcFw8N1EduubOsUo4IsVg" type="KindLabel">
+      <children xmi:id="_SWcFxcN1EduubOsUo4IsVg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_SWcFx8N1EduubOsUo4IsVg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_SWcFxsN1EduubOsUo4IsVg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SWcFxMN1EduubOsUo4IsVg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_SWcFwcN1EduubOsUo4IsVg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SWcFwsN1EduubOsUo4IsVg" points="[-4419, 4101, 4445, -3572]$[-5900, 5476, 2964, -2197]$[-7170, 6376, 1694, -1297]"/>
+  </edges>
+  <edges xmi:id="_ZHUjsMN1EduubOsUo4IsVg" source="_ZG33wMN1EduubOsUo4IsVg" target="_SVZj8MN1EduubOsUo4IsVg">
+    <children xmi:id="_ZHUjs8N1EduubOsUo4IsVg" type="NameLabel">
+      <children xmi:id="_ZHUjtcN1EduubOsUo4IsVg" type="Stereotype">
+        <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=FormDefinitionElementsBase[jcu^name=FormDefinitionElementsBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_ZHUjtsN1EduubOsUo4IsVg" type="Name">
+        <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=FormDefinitionElementsBase[jcu^name=FormDefinitionElementsBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=FormDefinitionElementsBase[jcu^name=FormDefinitionElementsBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZHUjtMN1EduubOsUo4IsVg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_ZHUjscN1EduubOsUo4IsVg" showStereotype="Text"/>
+    <element xmi:type="uml:Implementation" href="vizref:///#jimpl^vcore.target=uml2.Implementation[jsrctype^name=FormDefinitionElementsBase[jcu^name=FormDefinitionElementsBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZHUjssN1EduubOsUo4IsVg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_ZHUjt8N1EduubOsUo4IsVg" source="_ZG33wMN1EduubOsUo4IsVg" target="_NXJWsMN0EduubOsUo4IsVg">
+    <children xmi:id="_ZHUjusN1EduubOsUo4IsVg" type="KindLabel">
+      <children xmi:id="_ZHUjvMN1EduubOsUo4IsVg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElementsBase[jcu^name=FormDefinitionElementsBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_ZHUjvsN1EduubOsUo4IsVg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElementsBase[jcu^name=FormDefinitionElementsBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_ZHUjvcN1EduubOsUo4IsVg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElementsBase[jcu^name=FormDefinitionElementsBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElementsBase[jcu^name=FormDefinitionElementsBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZHUju8N1EduubOsUo4IsVg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_ZHUjuMN1EduubOsUo4IsVg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElementsBase[jcu^name=FormDefinitionElementsBase.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZHUjucN1EduubOsUo4IsVg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_jGbRIMN1EduubOsUo4IsVg" source="_NXJWsMN0EduubOsUo4IsVg" target="_jFO-UMN1EduubOsUo4IsVg">
+    <children xmi:id="_jGbRI8N1EduubOsUo4IsVg" type="KindLabel">
+      <children xmi:id="_jGbRJcN1EduubOsUo4IsVg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_jGbRJ8N1EduubOsUo4IsVg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_jGbRJsN1EduubOsUo4IsVg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jGbRJMN1EduubOsUo4IsVg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_jGbRIcN1EduubOsUo4IsVg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jGbRIsN1EduubOsUo4IsVg" points="[1297, 1985, -8202, -9181]$[4472, 6694, -5027, -4472]$[7594, 9473, -1905, -1693]"/>
+  </edges>
+  <edges xmi:id="_jGbRMMN1EduubOsUo4IsVg" source="_SVZj8MN1EduubOsUo4IsVg" target="_jFO-UMN1EduubOsUo4IsVg">
+    <children xmi:id="_jGbRM8N1EduubOsUo4IsVg" type="KindLabel">
+      <children xmi:id="_jGbRNcN1EduubOsUo4IsVg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_jGbRN8N1EduubOsUo4IsVg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_jGbRNsN1EduubOsUo4IsVg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jGbRNMN1EduubOsUo4IsVg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_jGbRMcN1EduubOsUo4IsVg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElements[jcu^name=FormDefinitionElements.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jGbRMsN1EduubOsUo4IsVg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_jGlCMMN1EduubOsUo4IsVg" source="_jFO-UMN1EduubOsUo4IsVg" target="_NXJWsMN0EduubOsUo4IsVg">
+    <children xmi:id="_jGlCM8N1EduubOsUo4IsVg" type="KindLabel">
+      <children xmi:id="_jGlCNcN1EduubOsUo4IsVg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_jGlCN8N1EduubOsUo4IsVg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_jGlCNsN1EduubOsUo4IsVg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jGlCNMN1EduubOsUo4IsVg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_jGlCMcN1EduubOsUo4IsVg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionCategory[jcu^name=FormDefinitionCategory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jGlCMsN1EduubOsUo4IsVg" points="[-1217, -1667, 8282, 9499]$[-3757, -5292, 5742, 5874]$[-7594, -9181, 1905, 1985]"/>
+  </edges>
+  <edges xmi:id="_jGlCOMN1EduubOsUo4IsVg" source="_jFO-UMN1EduubOsUo4IsVg" target="_7NemIMN0EduubOsUo4IsVg">
+    <children xmi:id="_jGlCO8N1EduubOsUo4IsVg" type="KindLabel">
+      <children xmi:id="_jGlCPcN1EduubOsUo4IsVg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_jGlCP8N1EduubOsUo4IsVg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_jGlCPsN1EduubOsUo4IsVg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jGlCPMN1EduubOsUo4IsVg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_jGlCOcN1EduubOsUo4IsVg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionElement[jcu^name=FormDefinitionElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionDataElement[jcu^name=FormDefinitionDataElement.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jGlCOsN1EduubOsUo4IsVg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_2hosoMN1EduubOsUo4IsVg" source="_2g5FwMN1EduubOsUo4IsVg" target="_LToBcKAiEduZmJRPh6fHjg">
+    <children xmi:id="_2hoso8N1EduubOsUo4IsVg" type="KindLabel">
+      <children xmi:id="_2hospcN1EduubOsUo4IsVg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionFactory[jcu^name=FormDefinitionFactory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2hosp8N1EduubOsUo4IsVg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionFactory[jcu^name=FormDefinitionFactory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_2hospsN1EduubOsUo4IsVg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionFactory[jcu^name=FormDefinitionFactory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionFactory[jcu^name=FormDefinitionFactory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2hospMN1EduubOsUo4IsVg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_2hosocN1EduubOsUo4IsVg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionFactory[jcu^name=FormDefinitionFactory.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinition[jcu^name=FormDefinition.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2hososN1EduubOsUo4IsVg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_MBAGUsN4EduubOsUo4IsVg" source="_EUYmEIYFEdue9fwLYoBvAw" target="_L9uI0MN4EduubOsUo4IsVg">
+    <children xmi:id="_MBAGVcN4EduubOsUo4IsVg" type="KindLabel">
+      <children xmi:id="_MBAGV8N4EduubOsUo4IsVg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_MBAGWcN4EduubOsUo4IsVg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_MBAGWMN4EduubOsUo4IsVg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MBAGVsN4EduubOsUo4IsVg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_MBAGU8N4EduubOsUo4IsVg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionService[jcu^name=FormDefinitionService.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_MBAGVMN4EduubOsUo4IsVg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_MBJ3UMN4EduubOsUo4IsVg" source="_L9uI0MN4EduubOsUo4IsVg" target="_BePbQKAjEduZmJRPh6fHjg">
+    <children xmi:id="_MBJ3U8N4EduubOsUo4IsVg" type="KindLabel">
+      <children xmi:id="_MBJ3VcN4EduubOsUo4IsVg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Tag[jcu^name=Tag.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_MBJ3V8N4EduubOsUo4IsVg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Tag[jcu^name=Tag.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_MBJ3VsN4EduubOsUo4IsVg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Tag[jcu^name=Tag.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Tag[jcu^name=Tag.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MBJ3VMN4EduubOsUo4IsVg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_MBJ3UcN4EduubOsUo4IsVg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Tag[jcu^name=Tag.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_MBJ3UsN4EduubOsUo4IsVg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_MBJ3WMN4EduubOsUo4IsVg" source="_L9uI0MN4EduubOsUo4IsVg" target="_zKApgMN1EduubOsUo4IsVg">
+    <children xmi:id="_MBJ3W8N4EduubOsUo4IsVg" type="KindLabel">
+      <children xmi:id="_MBJ3XcN4EduubOsUo4IsVg" type="Stereotype">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionTypes[jcu^name=FormDefinitionTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_MBJ3X8N4EduubOsUo4IsVg" type="Kind">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionTypes[jcu^name=FormDefinitionTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_MBJ3XsN4EduubOsUo4IsVg" type="Name">
+        <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionTypes[jcu^name=FormDefinitionTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionTypes[jcu^name=FormDefinitionTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MBJ3XMN4EduubOsUo4IsVg" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_MBJ3WcN4EduubOsUo4IsVg" showStereotype="Text"/>
+    <element xmi:type="uml:Usage" href="vizref:///#jdep^vcore.target=uml2.Usage[jsrctype^name=FormDefinitionQueryCriteria[jcu^name=FormDefinitionQueryCriteria.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FormDefinitionTypes[jcu^name=FormDefinitionTypes.java[jpack^name=com.gulfstreambio.kc.form.def[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_MBJ3WsN4EduubOsUo4IsVg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+</notation:Diagram>

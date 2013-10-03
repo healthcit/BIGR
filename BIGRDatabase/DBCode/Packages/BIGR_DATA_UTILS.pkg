@@ -1,0 +1,1829 @@
+---------------------------------------------------------------------------------------------------------------
+--	  Program: bigr_data_utils.pkg
+--	  Author:  Dean Marsh
+--	  Date:	   10/18/02
+--
+--	  Purpose: The purpose for this package is to provide a temporary means for users
+--	  	   to correct certain data issues found within BIGR.  These temporary operations
+--		   are neccesarry due to the functionality not being in the front-end for these
+--		   operations.
+--
+--		   procedure unpull_samples:      Allow a user to unpull a pulled sample(s).
+--		   procedure relink_asm_form: 	  Allow a user to change the link of an asm_form(s) mistakenly
+--		   			 	  			      assigned as unlinked.
+--		   procedure del_path_findings:   Allow a user to delete additional path findings
+--		   procedure change_bankable:  	  Allow a user to change the bankable_ind in iltds_informed_consent
+--		   			 				   	  from 'Y' to 'N'.
+--		   procedure bulk_oce_update:  	  Allows a user to initiate a "bulk" update of OCE codes.  This
+--		   			 				   	  procedure requires a colon-delimited flat file as input.
+--		   procedure del_path_rep_diagnostics:
+--		   			 					  Allow a user to delete a record(s) from pdc_path_report_diagnostics
+--										  related to a path_report_id.
+--		   procedure change_diagnostic_concept:
+--		   			 					  Allow a user to change the value in pdc_path_report_diagnostics.diagnostic_concept_id
+--										  for a specific path_report_id.
+--		   procedure change_disease_concept:
+--		   			 				      Allow a user to change the disease_concept_id for a pdc_pathology_report
+--										  record.
+--		   procedure del_slides			  Allow a user to delete a delimited list of slides
+--
+--		   procedure del_empty_projects	  Allows a user to delete projects with no sample based on a create date.
+--
+--		   procedure cancel_picklist	  Allows a user to "cancel" a picklist.  This means adding a QCAWAITING status to those
+--		   			 					  samples that were in the picklist and a BTX transaction for those samples.
+--
+--		   procedure add_qcawaiting		  Allows a user to change the status of a sample(s) to qcawaiting and records a history
+--		   			 					  transaction per sample;
+--
+--		   procedure undivide_sample	  Allows a user to undo a mistaken subdivision.
+--
+--         procedure del_deriv_relation   Allows a user to remove a mistaken derivative relationship
+--
+--         procedure add_deriv_relation   Allows a user to add a forgotten derivative relationship to
+--											an existing derivation
+--
+--		   Any rows deleted as a result of these operations is written to an audit table.  Updates are 
+--		   also logged to the bigr_data_fixes table as what the update was except for bulk_oce_update.
+--		   Updates for this procedure can be found in the ard_other_code_edits status settings. 
+--		   old and new values.
+--
+---------------------------------------------------------------------------------------------------------------- 
+
+CREATE OR REPLACE package bigr_data_utils
+as
+--  	   procedure unpull_samples(sample_ids	varchar2, p_delim varchar2, p_comment varchar2);
+	   procedure relink_asm_form(consent_id1 varchar2, consent_id2 varchar2, asm_form_list varchar2, p_delim varchar2, p_comment varchar2);
+	   procedure del_path_findings(section_id varchar2, finding_lines varchar2, p_delim varchar2, p_comment varchar2);
+	   procedure change_bankable(consent_ids varchar2, yn_flag varchar2, p_delim varchar2, p_comment varchar2);
+	   procedure bulk_oce_update ( file_loc varchar2, file_name varchar2, ed_user varchar2, p_delim varchar2 );
+	   procedure del_path_rep_diagnostics (path_rep_id varchar2, diag_concepts varchar2, p_delim varchar2, p_comment varchar2);
+	   procedure change_diagnostic_concept (path_rep_id varchar2, old_diag_concept varchar2, new_diag_concept varchar2, p_comment varchar2);
+	   procedure change_disease_concept (path_rep_id varchar2, p_consent varchar2, p_new_disease varchar2, p_comment varchar2);
+	   procedure del_slides (p_ard_user_id varchar2, slide_list varchar2, p_delim varchar2, p_comment varchar2);
+	   procedure create_order (p_ard_user_id varchar2, p_acct_key varchar2, p_acct_user_id varchar2, p_approv_date varchar2,
+		  			   p_order_po varchar2, p_order_desc varchar2, p_sample_list varchar2, p_delim varchar2);
+	   procedure del_empty_projects (p_create_date varchar2, p_comment varchar2);
+	   procedure cancel_picklist (p_ard_user_id varchar2, p_picklist varchar2, p_comment varchar2);
+	   procedure add_qcawaiting (p_ard_user_id varchar2, p_sample_list varchar2, p_delim varchar2, p_comment varchar2);
+       PROCEDURE undivide_sample(p_ard_user_id varchar2, p_parent_sample_id varchar2, p_comment varchar2);
+       PROCEDURE del_deriv_relation(p_ard_user_id varchar2, p_parent_sample_id varchar2, p_child_sample_id varchar2);      
+       PROCEDURE add_deriv_relation(p_ard_user_id varchar2, p_parent_sample_id varchar2, 
+						p_child_sample_id varchar2, p_derivation_id varchar2);
+       
+
+end bigr_data_utils;
+/
+
+
+
+CREATE OR REPLACE package body bigr_data_utils
+is
+
+	v_cur_delim	  		  	   number;
+	v_next_delim			   number;
+	v_comment 				   varchar2(500);
+	v_sample_is_present		   number;
+	v_consent_is_present	   number;
+	v_form_is_present		   number;
+	v_section_is_present	   number;
+	v_slide_is_present		   number;
+	v_line_is_present		   number;
+	v_report_is_present		   number;
+	v_trans_counter			   number;
+
+	PARAM_LIST				   EXCEPTION;
+	NO_SAMPLE				   EXCEPTION;
+	NO_CONSENT				   EXCEPTION;
+	NO_LINE					   EXCEPTION;
+	NO_SECTION				   EXCEPTION;
+	NO_FORM					   EXCEPTION;
+	NOT_NEW_SAMPLE			   EXCEPTION;
+	NO_REPORT				   EXCEPTION;
+	NO_SLIDE				   EXCEPTION;
+	CONSENT_ORDER			   EXCEPTION;
+	HAS_FORMS				   EXCEPTION;
+	IS_ABSTRACTED			   EXCEPTION;
+	EXISTING_SAMPLES		   EXCEPTION;
+	INVALID_FLAG			   EXCEPTION;
+	MISMATCHED_POLICIES		   EXCEPTION;
+	INVALID_USER			   EXCEPTION;
+	NOT_SUBDIVIDED			   EXCEPTION;
+	CHILD_STATUS_RECORD_EXIST  EXCEPTION;
+    CHILD_HISTORY_RECORD_EXIST EXCEPTION;
+   	NO_PARENT 				   EXCEPTION;
+   	NO_CHILD  				   EXCEPTION;
+	NO_RELATIONSHIP 		   EXCEPTION;
+	NO_DERIVATION 		   	   EXCEPTION;
+    
+
+----------------------------------------------------------------------------------------------------
+--   Allows the user to unpull one or more samples at a time.
+--
+--   Input:  One or more sample_barcode_ids.  Multiple sample_barcode_ids must be separated by ':'.
+-----------------------------------------------------------------------------------------------------
+
+/*procedure unpull_samples(sample_ids varchar2, p_delim varchar2, p_comment varchar2)
+is
+    cur_sample_id   iltds_sample.sample_barcode_id%TYPE;
+    v_delim      	varchar2(2) := p_delim;
+begin
+    if sample_ids is null or p_comment is null
+    then
+	raise PARAM_LIST;
+    end if;
+    v_comment := p_comment;
+	select nvl(max(trans_num),0)+1 into v_trans_counter from bigr_data_fixes;
+	v_cur_delim := 0;
+	v_next_delim := 0;
+	v_next_delim := get_next_delim (sample_ids, v_delim, v_next_delim);
+	loop
+	   exit when v_cur_delim = v_next_delim;
+	   cur_sample_id := substr(sample_ids,v_cur_delim+1,v_next_delim - (v_cur_delim + 1));
+
+	   select count(*) into v_sample_is_present
+	   from iltds_sample_status
+	   where sample_barcode_id = cur_sample_id;
+
+	   if v_sample_is_present = 0
+	   then
+	      raise NO_SAMPLE;
+	   else
+              insert into bigr_data_fixes (audit_id, trans_num, audit_date,tab_name, trans_type, executing_procedure,
+			  		 	  				  trans_comment, attrib1)
+	      values (bigr_data_fixes_seq.nextval,v_trans_counter,sysdate,
+		     'ILTDS_SAMPLE','UPDATE','BIGR_DATA_UTILS.UNPULL_SAMPLES',
+		     v_comment,'Update sample ' || cur_sample_id || ' change PULL_YN from Y to N');
+
+  	      update iltds_sample set pull_yn = 'N' where sample_barcode_id = cur_sample_id;
+
+	      v_cur_delim := v_next_delim;
+	      v_next_delim := get_next_delim (sample_ids, v_delim, v_next_delim);
+	   end if;
+	end loop;
+	commit;
+    dbms_output.put_line ('Procedure bigr_data_utils.unpull_samples completed successfully.');
+exception
+   when PARAM_LIST then
+      dbms_output.put_line ('The parameter list provided is not complete.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling unpull_samples: The parameter list provided is not complete.');
+   when NO_SAMPLE then
+      dbms_output.put_line ('Sample_barcode_id ' || cur_sample_id || ' does not exist.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling unpull_samples: Sample_barcode_id ' || cur_sample_id || ' does not exist.');
+   when others then
+      dbms_output.put_line ('An error occured: ' || sqlerrm);
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling unpull_samples: An error occured: ' || sqlerrm);
+end unpull_samples;
+*/
+
+----------------------------------------------------------------------------------------------------
+--   Allows the user to delete one or more additional finding rows at a time
+--
+--   Input:  One or more finding_line_ids.  Multiple finding_line_ids must be separated by ':'.
+-----------------------------------------------------------------------------------------------------
+
+procedure del_path_findings (section_id varchar2, finding_lines varchar2, p_delim varchar2, p_comment varchar2)
+is
+   cur_finding_line		number;
+   v_section			number := to_number(section_id);
+   v_delim				varchar2(2) := p_delim;
+begin
+    if v_section is null or finding_lines is null or p_comment is null
+	then
+	   raise PARAM_LIST;
+	end if;
+    v_comment := p_comment;
+	select nvl(max(trans_num),0)+1 into v_trans_counter from bigr_data_fixes;
+	v_cur_delim := 0;
+	v_next_delim := 0;
+	v_next_delim := get_next_delim (finding_lines, v_delim, v_next_delim);
+	loop
+	   exit when v_cur_delim = v_next_delim;
+  	   cur_finding_line := to_number(substr(finding_lines,v_cur_delim+1,v_next_delim - (v_cur_delim + 1)));
+
+  	   select count(*) into v_section_is_present
+	   from pdc_path_report_dx
+	   where path_report_section_id = v_section;
+
+	   select count(*) into v_line_is_present
+	   from pdc_path_report_dx
+	   where finding_line_id = cur_finding_line
+	   and path_report_section_id = v_section;
+
+ 	   if v_section_is_present = 0
+	   then
+	      raise NO_SECTION;
+	   elsif v_line_is_present = 0
+	   then
+	      raise NO_LINE;
+	   else
+		  insert into bigr_data_fixes (audit_id,trans_num,audit_date,tab_name,trans_type,executing_procedure, trans_comment,
+		  		 	  				   attrib1,	attrib2, attrib3, attrib4, attrib5, attrib6, attrib7)
+	      select bigr_data_fixes_seq.nextval,
+		  		 v_trans_counter,
+		  		 sysdate,
+		  		 'PDC_PATH_REPORT_DX',
+				 'DELETE',
+				 'BIGR_DATA_UTILS.DEL_PATH_FINDINGS',
+				 v_comment,
+		  		 to_char(finding_line_id),
+		  		 path_dx_concept_id,
+				 path_tc_concept_id,
+				 other_path_dx,
+				 other_path_tissue,
+				 to_char(path_report_section_id),
+				 finding_notes
+	      from pdc_path_report_dx
+		  where path_report_section_id = v_section
+		  and finding_line_id = cur_finding_line;
+
+	      delete from pdc_path_report_dx
+		  where finding_line_id = cur_finding_line
+		  and path_report_section_id = v_section;
+
+		  v_cur_delim := v_next_delim;
+		  v_next_delim := get_next_delim (finding_lines, v_delim, v_next_delim);
+	   end if;
+	end loop;
+	commit;
+	dbms_output.put_line ('Procedure bigr_data_utils.del_path_findings completed successfully.');
+exception
+   when PARAM_LIST then
+      dbms_output.put_line ('The parameter list provided is not complete.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling del_path_findings: The parameter list provided is not complete.');
+   when NO_LINE then
+      dbms_output.put_line ('Finding_line_id ' || cur_finding_line || ' for section ' || section_id || ' does not exist.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling del_path_findings: Finding_line_id ' || cur_finding_line || ' for section ' || section_id || ' does not exist.');
+   when NO_SECTION then
+      dbms_output.put_line ('Path_report_section_id ' || section_id || ' does not exist.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling del_path_findings: Path_report_section_id ' || section_id || ' does not exist.');
+   when others then
+      dbms_output.put_line ('An error occured: ' || sqlerrm);
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling del_path_findings: An error occured: ' || sqlerrm);
+end del_path_findings;
+
+----------------------------------------------------------------------------------------------------
+--   Allows the user to change the link on some/all asm_form records assocated with a consent to
+--   another consent.
+--
+--   Input:  Consent to move from, consent to move to, one or more asm_form_ids.  Multiple asm_form_ids
+--           must be separated by ':'.
+-----------------------------------------------------------------------------------------------------
+
+procedure relink_asm_form(consent_id1 varchar2, consent_id2 varchar2, asm_form_list varchar2, p_delim varchar2, p_comment varchar2)
+is
+	cur_form		iltds_asm_form.asm_form_id%TYPE;
+	cur_aid			iltds_informed_consent.ardais_id%TYPE;
+	num_good_forms  number;
+	in_ddc			number;
+	v_delim			varchar2(2) := p_delim;
+	v_case_policy1  ard_policy.id%TYPE;
+	v_case_policy2  ard_policy.id%TYPE;
+begin
+    if consent_id1 is null or consent_id2 is null or asm_form_list is null or p_comment is null
+	then
+	   raise PARAM_LIST;
+	end if;
+
+    if substr(consent_id1,1,2) <> 'CU'
+	then
+	   raise CONSENT_ORDER;
+	end if;
+
+    select count(*) into v_consent_is_present
+	from iltds_informed_consent
+	where consent_id in (consent_id1, consent_id2);
+
+	if v_consent_is_present < 2
+	then
+	   raise NO_CONSENT;
+	end if;
+
+	select count(*) into num_good_forms
+	from iltds_asm_form
+	where consent_id = consent_id2;
+
+	if num_good_forms > 0
+	then
+	   raise HAS_FORMS;
+	end if;
+
+	select count(*) into in_ddc
+	from pdc_pathology_report
+	where consent_id = consent_id1;
+
+	if in_ddc > 0
+	then
+	   raise IS_ABSTRACTED;
+    end if;
+    
+    select policy_id into v_case_policy1
+	from iltds_informed_consent
+	where consent_id = consent_id1;
+    
+    select policy_id into v_case_policy2
+	from iltds_informed_consent
+	where consent_id = consent_id2;
+	
+	-- Per MR 6758, we don't allow this procedure to run when the two cases
+	-- specified have different case policies.  If we allowed that, we'd have
+	-- to handle undoing the allocation of any samples in the first case and
+	-- redoing their allocation under the case policy of the second case.
+	-- "Allocation" involves both setting allocation_ind to restricted/nonrestricted
+	-- and assigning items to logical repositories.
+	--
+	if (v_case_policy1 <> v_case_policy2) then
+	    raise MISMATCHED_POLICIES;
+	end if;
+
+	select ardais_id into cur_aid
+	from iltds_informed_consent
+	where consent_id = consent_id2;
+
+	select nvl(max(trans_num),0)+1 into v_trans_counter from bigr_data_fixes;
+    v_comment := p_comment;
+	v_cur_delim := 0;
+	v_next_delim := 0;
+	v_next_delim := get_next_delim (asm_form_list, v_delim, v_next_delim);
+	loop
+	   exit when v_cur_delim = v_next_delim;
+	   cur_form := substr(asm_form_list,v_cur_delim+1,v_next_delim - (v_cur_delim + 1));
+
+	   select count(*) into v_form_is_present
+	   from iltds_asm_form
+	   where asm_form_id = cur_form;
+
+	   if v_form_is_present = 0
+	   then
+          raise NO_FORM;
+	   else
+		  insert into bigr_data_fixes (audit_id,trans_num,audit_date,tab_name,trans_type,executing_procedure,trans_comment,attrib1)
+		  select bigr_data_fixes_seq.nextval,
+		  		 v_trans_counter,
+		  		 sysdate,
+		         'ILTDS_ASM',
+				 'UPDATE',
+				 'BIGR_DATA_UTILS.RELINK_ASM_FORM',
+				 v_comment,
+				 'Update consent_id from ' || consent_id || ' to ' || consent_id2 ||
+				 ' and ardais_id from ' || ardais_id || ' to ' || cur_aid || '.'
+		  from iltds_asm
+	      where asm_form_id = cur_form;
+
+		  insert into bigr_data_fixes (audit_id,trans_num,audit_date,tab_name,trans_type,executing_procedure,trans_comment,attrib1)
+		  select bigr_data_fixes_seq.nextval,
+		  		 v_trans_counter,
+		         sysdate,
+		         'ILTDS_ASM_FORM',
+				 'UPDATE',
+				 'BIGR_DATA_UTILS.RELINK_ASM_FORM',
+				 v_comment,
+				 'Update consent_id from ' || consent_id || ' to ' || consent_id2 ||
+				 ' and ardais_id from ' || ardais_id || ' to ' || cur_aid || '.'
+		  from iltds_asm_form
+	      where asm_form_id = cur_form;
+
+  	      update iltds_asm
+		  set consent_id = null
+		  where asm_form_id = cur_form;
+
+		  update iltds_asm_form
+		  set consent_id = consent_id2, ardais_id = cur_aid
+		  where asm_form_id = cur_form;
+
+		  update iltds_asm
+		  set consent_id = consent_id2, ardais_id = cur_aid
+		  where asm_form_id = cur_form;
+	   end if;
+	   v_cur_delim := v_next_delim;
+	   v_next_delim := get_next_delim (asm_form_list, v_delim, v_next_delim);
+    end loop;
+
+   	insert into bigr_data_fixes (audit_id,trans_num,audit_date,tab_name,trans_type,executing_procedure,trans_comment,
+		  		 	  attrib1,attrib2,attrib3,attrib4,attrib5,attrib6,attrib7,attrib8,attrib9,attrib11,
+					  attrib13,attrib14,attrib15,attrib16,attrib17,attrib18,attrib19,attrib20,attrib21,
+					  attrib22,attrib24,attrib25,attrib26,attrib27,attrib28,attrib31)
+	select bigr_data_fixes_seq.nextval,
+		   v_trans_counter,
+	  	   sysdate,
+		   'ILTDS_INFORMED_CONSENT',
+		   'DELETE',
+		   'BIGR_DATA_UTILS.RELINK_ASM_FORM',
+			v_comment,
+			consent_id,
+			ardais_id,
+			consent_location_address_id,
+			ardais_staff_id,
+			disease_concept_id,
+			linked,
+			form_entry_staff_id,
+			to_char(form_entry_datetime, 'DD-MON-YYYY HH24:MI:SS'),
+			form_signed_ind,
+			consent_release_staff_id,
+			to_char(consent_release_datetime, 'DD-MON-YYYY HH24:MI:SS'),
+			consent_pull_staff_id,
+			consent_pull_request_by,
+			to_char(consent_pull_datetime, 'DD-MON-YYYY HH24:MI:SS'),
+			consent_pull_reason_cd,
+			consent_pull_comment,
+			form_verified_by_staff_id,
+			to_char(form_verified_datetime, 'DD-MON-YYYY HH24:MI:SS'),
+			form_verified_sign_ind,
+			consent_version_num,
+			to_char(consent_datetime, 'DD-MON-YYYY HH24:MI:SS'),
+			bankable_ind,
+			ddc_check_flag,
+			disease_concept_id_other,
+			'',
+			di_case_profile_notes
+	from iltds_informed_consent
+	where consent_id = consent_id1;
+
+	delete from iltds_informed_consent
+	where consent_id = consent_id1;
+    commit;
+	dbms_output.put_line ('Procedure bigr_data_utils.relink_asm_form completed successfully.');
+exception
+   when PARAM_LIST then
+      dbms_output.put_line ('The parameter list provided is not complete.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling relink_asm_form: The parameter list provided is not complete.');
+   when NO_CONSENT then
+      dbms_output.put_line ('Consent_id ' || consent_id1 || ' or ' || consent_id2 || ' does not exist.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling relink_asm_form: Consent_id ' || consent_id1 || ' or ' || consent_id2 || ' does not exist.');
+   when NO_FORM then
+      dbms_output.put_line ('Asm_form_id_id ' || cur_form || ' does not exist.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling relink_asm_form: Asm_form_id_id ' || cur_form || ' does not exist.');
+   when CONSENT_ORDER then
+      dbms_output.put_line ('Consent order is incorrect.  Consent_id1 = ' || consent_id1 || '.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling relink_asm_form: Consent order is incorrect.  Consent_id1 = ' || consent_id1);
+   when HAS_FORMS then
+      dbms_output.put_line ('Consent_id ' || consent_id2 || ' already has forms assigned to it.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling relink_asm_form: Consent_id ' || consent_id2 || ' already has forms assigned to it.');
+   when IS_ABSTRACTED then
+      dbms_output.put_line ('Consent_id ' || consent_id1 || ' has a record in PDC_PATHOLOGY_REPORT.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling relink_asm_form: Consent_id ' || consent_id1 || ' has a record in PDC_PATHOLOGY_REPORT.');
+   when MISMATCHED_POLICIES then
+      dbms_output.put_line ('Consent_id ' || consent_id1 || ' and ' || consent_id2 || ' have different case policies.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling relink_asm_form: Consent_id ' || consent_id1 || ' and ' || consent_id2 || ' have different case policies.');
+   when others then
+      dbms_output.put_line ('An error occured: ' || sqlerrm);
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling relink_asm_form: An error occured: ' || sqlerrm);
+end relink_asm_form;
+
+----------------------------------------------------------------------------------------------------
+--   Allows the user to change the value in iltds_informed_consent.bankable_ind from 'Y' to 'N'.
+--
+--   Input:  Consent_id(s) for which the bankable_ind is being changed.  Multiple asm_form_ids
+--           must be separated by ':'.
+-----------------------------------------------------------------------------------------------------
+
+procedure change_bankable(consent_ids varchar2, yn_flag varchar2, p_delim varchar2, p_comment varchar2)
+is
+	cur_consent		iltds_informed_consent.consent_id%TYPE;
+	cnt_samples		number;
+	v_delim			varchar2(2) := p_delim;
+begin
+	if consent_ids is null or p_comment is null
+	then
+	   raise PARAM_LIST;
+    end if;
+	select nvl(max(trans_num),0)+1 into v_trans_counter from bigr_data_fixes;
+	v_comment := p_comment;
+	v_cur_delim := 0;
+	v_next_delim := 0;
+	v_next_delim := get_next_delim (consent_ids, v_delim, v_next_delim);
+	loop
+	   exit when v_cur_delim = v_next_delim;
+  	   cur_consent := substr(consent_ids,v_cur_delim+1,v_next_delim - (v_cur_delim + 1));
+
+	   select count(*) into v_consent_is_present
+	   from iltds_informed_consent
+	   where consent_id = cur_consent;
+
+	   select count(*) into cnt_samples
+	   from iltds_sample
+	   where asm_id in
+	   (select asm_id from iltds_asm where consent_id = cur_consent);
+
+	   if v_consent_is_present = 0
+	   then
+	      raise NO_CONSENT;
+	   elsif upper(yn_flag) = 'N' and cnt_samples > 0
+	   then
+	      raise EXISTING_SAMPLES;
+	   elsif upper(yn_flag) not in ('Y','N')
+	   then
+	      raise INVALID_FLAG;
+	   else
+	   	  insert into bigr_data_fixes (audit_id,trans_num,audit_date,tab_name,trans_type,executing_procedure,trans_comment,attrib1)
+          values (bigr_data_fixes_seq.nextval,v_trans_counter,sysdate,'ILTDS_INFORMED_CONSENT','UPDATE','BIGR_DATA_UTILS.CHANGE_BANKABLE',
+		  		  v_comment,'Update bankable_ind to ''' || upper(yn_flag) || ''' for consent_id ' || cur_consent || '.');
+
+	  	  update iltds_informed_consent
+		  set bankable_ind = upper(yn_flag)
+		  where consent_id = cur_consent;
+	   end if;
+  	   v_cur_delim := v_next_delim;
+	   v_next_delim := get_next_delim (consent_ids, v_delim, v_next_delim);
+    end loop;
+    commit;
+    dbms_output.put_line ('Procedure bigr_data_utils.change_bankable completed successfully.');
+exception
+   when PARAM_LIST then
+      dbms_output.put_line ('The parameter list provided is not complete.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling change_bankable: The parameter list provided is not complete.');
+   when EXISTING_SAMPLES then
+      dbms_output.put_line ('There are samples attached to consent_id ' || cur_consent || ', so it cannot have a flag of ' || upper(yn_flag) || '.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling change_bankable: There are samples attached to consent_id ' || cur_consent || ', so it cannot have a flag of ' || upper(yn_flag));
+   when INVALID_FLAG then
+      dbms_output.put_line ('The flag parameter is invalid.  Must be ''Y'' or ''N''.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling change_bankable: The flag parameter is invalid.  Must be ''Y'' or ''N''.');
+   when NO_CONSENT then
+      dbms_output.put_line ('Consent_id ' || cur_consent || ' does not exist.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling change_bankable: Consent_id ' || cur_consent || ' does not exist.');
+   when others then
+      dbms_output.put_line ('An error occured: ' || sqlerrm);
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling change_bankable: An error occured: ' || sqlerrm);
+end change_bankable;
+
+---------------------------------------------------------------------------------------------------------------
+--	BULK_OCE_UPDATE - this procedure takes the information from the ard_other_code_edits table,
+--	creates a dynamic sql statement for update, and issues that update statement on all affected rows.
+--	In addition, it sets the appropriate information in the ard_other_code_edits row to indicate that
+--	the row has been processed.
+--
+--	A colon-delimieted flat file is required to run this procedure.
+--
+--	NOTE:  THIS PROCEDURE DOES NOT AUTOMATICALLY COMMIT.  A MANUAL COMMIT IS REQUIRED!!!!!!!
+--
+--		parameters:	file_loc - the location of the OS-level flat file to process.  May be a directory object
+--					file_name - the name of the OS-level flat file to process.
+--					ed_user - the name of the user to provide in the ard_other_code_edits table.
+--					p_edlim - the delimiter used in the file.
+--
+--		flat-file format:  <type_code>:<current_other_text>:<new_concept_name>:<new_concept_code>:<statuses>
+--				  		   type_code = AT, AP, AD, AM, etc.
+--						   current_other_text = text in the ard_other_code_edits.other_edit_text column
+--						   new_concept_name = name as it appears in ard_other_code_edits.edit_text
+--						   new_concept_code = code as it appears in ard_other_code_edits.edit_code
+--						   statuses = the statuses for which to check existance for.  Statuses must be capitalized
+--						   			  One row per status.  So, if both 'C' and 'N' statuses for that string value
+--									  must be done, then two rows in the flat-file are required.  If the value is
+--									  null, then all rows exception 'F' and 'O' will be processed.
+--
+--		Example:	do_bulk_oce_update('OCE','OCE_mapped_codes.txt','Scripts1', '~');
+--
+---------------------------------------------------------------------------------------------------------------
+
+PROCEDURE bulk_oce_update ( file_loc IN varchar2, file_name IN varchar2, ed_user IN varchar2, p_delim varchar2 )
+IS
+   cursor oce_no_status (p_other_text varchar2, p_concept_type varchar2)
+   is
+      select * from ard_other_code_edits
+	  where other_text = p_other_text
+	  and type_code = p_concept_type
+	  and status_flag not in ('F','O');
+
+   cursor oce_with_status (p_other_text varchar2, p_concept_type varchar2, p_status varchar2)
+   is
+      select * from ard_other_code_edits
+	  where other_text = p_other_text
+	  and type_code = p_concept_type
+	  and status_flag = p_status;
+
+   v_cur_file_line	 varchar2(500);
+   v_work_file		 UTL_FILE.FILE_TYPE;
+   v_file_loc		 varchar2(100) := file_loc;
+   v_file_name		 varchar2(50) := file_name;
+   v_ed_user		 varchar2(12) := ed_user;
+   exit_flag		 varchar2(10) := 'FALSE';
+   update_statement  varchar2(500);
+   updated_oce_rows	 number := 0;
+   updated_data_rows number := 0;
+   rows_processed	 number := 0;
+   v_concept_type 	 ard_other_code_edits.type_code%TYPE;
+   v_other_text   	 ard_other_code_edits.other_text%TYPE;
+   v_concept_name 	 ard_other_code_edits.edit_text%TYPE;
+   v_concept_code 	 ard_other_code_edits.edit_code%TYPE;
+   v_status 	  	 ard_other_code_edits.status_flag%TYPE;
+   v_delim			 varchar2(2) := p_delim;
+BEGIN
+   v_work_file := utl_file.fopen(v_file_loc, v_file_name, 'r');
+   v_cur_file_line := get_new_line(v_work_file);
+
+   while exit_flag = 'FALSE'
+   loop
+	  dbms_output.put_line ('Processing file line - ' || v_cur_file_line);
+      v_next_delim := 0;
+      v_cur_delim := v_next_delim;
+      v_next_delim := get_next_delim (v_cur_file_line, v_delim, v_next_delim);
+      v_concept_type := substr(v_cur_file_line, v_cur_delim+1,v_next_delim - (v_cur_delim + 1));
+      v_cur_delim := v_next_delim;
+      v_next_delim := get_next_delim (v_cur_file_line, v_delim, v_next_delim);
+      v_other_text := substr(v_cur_file_line, v_cur_delim+1,v_next_delim - (v_cur_delim + 1));
+      v_cur_delim := v_next_delim;
+      v_next_delim := get_next_delim (v_cur_file_line, v_delim, v_next_delim);
+      v_concept_name := substr(v_cur_file_line, v_cur_delim+1,v_next_delim - (v_cur_delim + 1));
+      v_cur_delim := v_next_delim;
+      v_next_delim := get_next_delim (v_cur_file_line, v_delim, v_next_delim);
+      v_concept_code := substr(v_cur_file_line, v_cur_delim+1,v_next_delim - (v_cur_delim + 1));
+      v_cur_delim := v_next_delim;
+      v_next_delim := length(v_cur_file_line)+1;
+      v_status := substr(v_cur_file_line, v_cur_delim+1,v_next_delim - (v_cur_delim + 1));
+
+      if v_status is not null
+      then
+         for rec in oce_with_status (v_other_text, v_concept_type, v_status)
+	     loop
+		    if rec.table_name in ('PDC_PATHOLOGY_REPORT','PDC_PATH_REPORT_SECTION')
+			then
+               update_statement := 'update ' || rec.table_name || ' set ' || rec.column_name ||' = ''' ||
+	 				  	 v_concept_code || ''', ' || rec.other_text_column_name || ' = null, last_update_user = ''' || 
+						 ed_user || ''', last_update_date = ' || sysdate || ' ' || rec.where_clause;
+			else
+			   update_statement := 'update ' || rec.table_name || ' set ' || rec.column_name ||' = ''' ||
+	 				  	 v_concept_code || ''', ' || rec.other_text_column_name || ' = null ' || rec.where_clause;
+			end if;						 
+	        execute immediate update_statement;
+		    dbms_output.put_line(update_statement);
+		    updated_data_rows := updated_data_rows + 1;
+			
+		    update ard_other_code_edits
+		    set status_flag = 'F',
+		        edit_user = v_ed_user,
+		        edit_date = SYSDATE,
+		        edit_code = v_concept_code,
+		        edit_text = v_concept_name
+		    where other_line_id = rec.other_line_id;
+		    updated_oce_rows := updated_oce_rows + 1;
+	        --	commit;
+         end loop;
+      elsif v_status is null
+	  then
+         for rec in oce_no_status (v_other_text, v_concept_type)
+	     loop
+		    if rec.table_name in ('PDC_PATHOLOGY_REPORT','PDC_PATH_REPORT_SECTION')
+			then
+               update_statement := 'update ' || rec.table_name || ' set ' || rec.column_name ||' = ''' ||
+	 				  	 v_concept_code || ''', ' || rec.other_text_column_name || ' = null, last_update_user = ''' || 
+						 ed_user || ''', last_update_date = ' || sysdate || ' ' || rec.where_clause;
+			else
+			   update_statement := 'update ' || rec.table_name || ' set ' || rec.column_name ||' = ''' ||
+	 				  	 v_concept_code || ''', ' || rec.other_text_column_name || ' = null ' || rec.where_clause;
+			end if;	
+		    execute immediate update_statement;
+		    dbms_output.put_line(update_statement);
+		    updated_data_rows := updated_data_rows + 1;
+
+		    update ard_other_code_edits
+		    set status_flag = 'F',
+		        edit_user = v_ed_user,
+		        edit_date = SYSDATE,
+		        edit_code = v_concept_code,
+		        edit_text = v_concept_name
+		    where other_line_id = rec.other_line_id;
+		    updated_oce_rows := updated_oce_rows + 1;
+	        --	commit;
+         end loop;
+      end if;
+	  rows_processed := rows_processed + 1;
+      v_cur_file_line := get_new_line(v_work_file);
+      if v_cur_file_line = 'END OF FILE'
+      then
+	     exit_flag := 'TRUE';
+      end if;
+   end loop;
+
+utl_file.fclose(v_work_file);
+dbms_output.put_line ('');
+dbms_output.put_line ('----------------Stats for this run of bulk OCE update-------------------');
+dbms_output.put_line ('');
+dbms_output.put_line ('Number of input file rows processed = ' || rows_processed || '.');
+dbms_output.put_line ('Number of rows updated in ard_other_code_edits = ' || updated_oce_rows || '.');
+dbms_output.put_line ('Number of rows updated in data tables = ' || updated_data_rows || '.');
+
+EXCEPTION
+	WHEN UTL_FILE.INVALID_PATH THEN
+	   dbms_output.put_line ('The file location ' || file_loc || ' is not a valid path.');
+ 	   raise_application_error(-20004, 'Error while calling bulk_oce_update: The file location ' || file_loc || ' is not a valid path.');
+    WHEN UTL_FILE.INVALID_OPERATION THEN
+       dbms_output.put_line ('The file ' || file_name || ' could either not be found or operated on.');
+ 	   raise_application_error(-20004, 'Error while calling bulk_oce_update: The file ' || file_name || ' could either not be found or operated on.');
+    WHEN OTHERS THEN
+       dbms_output.put_line ('An error occured during oce cleanup processing: ' || sqlerrm);
+ 	   raise_application_error(-20004, 'Error while calling bulk_oce_update: An error occured during oce cleanup processing: ' || sqlerrm);
+END bulk_oce_update;
+
+
+----------------------------------------------------------------------------------------------------
+--   Allows the user to delete one or more diagnostic test report records at a time
+--
+--   Input:  A path_report_id and one or more diagnostic concepts affiliated with that path_report_id
+--	 		 to be deleted, as well as a comment.  Multiple diagnostic_concepts must be separated by ':'.
+-----------------------------------------------------------------------------------------------------
+
+procedure del_path_rep_diagnostics (path_rep_id varchar2, diag_concepts varchar2, p_delim varchar2, p_comment varchar2)
+is
+   cur_diag_concept		pdc_path_report_diagnostics.diagnostics_concept_id%TYPE;
+   v_rep_id				number := to_number(path_rep_id);
+   v_delim				varchar2(2) := p_delim;
+begin
+    if v_rep_id is null or diag_concepts is null or p_comment is null
+	then
+	   raise PARAM_LIST;
+	end if;
+    v_comment := p_comment;
+	select nvl(max(trans_num),0)+1 into v_trans_counter from bigr_data_fixes;
+	v_cur_delim := 0;
+	v_next_delim := 0;
+	v_next_delim := get_next_delim (diag_concepts, v_delim, v_next_delim);
+	loop
+	   exit when v_cur_delim = v_next_delim;
+  	   cur_diag_concept := upper(substr(diag_concepts,v_cur_delim+1,v_next_delim - (v_cur_delim + 1)));
+
+  	   select count(*) into v_report_is_present
+	   from pdc_path_report_diagnostics
+	   where path_report_id = v_rep_id
+	   and diagnostics_concept_id = cur_diag_concept;
+
+ 	   if v_report_is_present = 0
+	   then
+	      raise NO_REPORT;
+	   else
+		  insert into bigr_data_fixes (audit_id,trans_num,audit_date,tab_name,trans_type,executing_procedure, trans_comment,
+		  		 	  				   attrib1,	attrib2, attrib3, attrib5)
+	      select bigr_data_fixes_seq.nextval,
+		  		 v_trans_counter,
+		  		 sysdate,
+		  		 'PDC_PATH_REPORT_DIAGNOSTICS',
+				 'DELETE',
+				 'BIGR_DATA_UTILS.DEL_PATH_REP_DIAGNOSTICS',
+				 v_comment,
+				 diagnostics_concept_id,
+		  		 to_char(path_report_id),
+		  		 diagnostic_type,
+				 diagnostic_note
+	      from pdc_path_report_diagnostics
+		  where path_report_id = v_rep_id
+		  and diagnostics_concept_id = cur_diag_concept;
+
+	      delete from pdc_path_report_diagnostics
+		  where path_report_id = v_rep_id
+		  and diagnostics_concept_id = cur_diag_concept;
+
+		  v_cur_delim := v_next_delim;
+		  v_next_delim := get_next_delim (diag_concepts, v_delim, v_next_delim);
+	   end if;
+	end loop;
+	commit;
+	dbms_output.put_line ('Procedure bigr_data_utils.del_path_rep_diagnostics completed successfully.');
+exception
+   when PARAM_LIST then
+      dbms_output.put_line ('The parameter list provided is not complete.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling del_path_rep_diagnostics: The parameter list provided is not complete.');
+   when NO_REPORT then
+      dbms_output.put_line ('Path_report__id ' || v_rep_id || ' with diagnostic_concept_id ' || cur_diag_concept || ' does not exist.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling del_path_rep_diagnostics: Path_report__id ' || v_rep_id || ' with diagnostic_concept_id ' || cur_diag_concept || ' does not exist.');
+   when others then
+      dbms_output.put_line ('An error occured: ' || sqlerrm);
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling del_path_rep_diagnostics: An error occured: ' || sqlerrm);
+end del_path_rep_diagnostics;
+
+
+----------------------------------------------------------------------------------------------------
+--   Allows the user to change the diagnostics_concept_id for a path_report_id in pdc_path_report_diagnostics
+--
+--   Input:  A path_report_id, the old diagnostics_concept_id to change, and the new diagnostics_concept_id
+--	 		 as well as a comment.
+-----------------------------------------------------------------------------------------------------
+
+procedure change_diagnostic_concept (path_rep_id varchar2, old_diag_concept varchar2, new_diag_concept varchar2, p_comment varchar2)
+is
+   v_rep_id		number := to_number(path_rep_id);
+begin
+    if v_rep_id is null or old_diag_concept is null or new_diag_concept is null or p_comment is null
+	then
+	   raise PARAM_LIST;
+	end if;
+    v_comment := p_comment;
+
+	select nvl(max(trans_num),0)+1
+	into v_trans_counter
+	from bigr_data_fixes;
+
+    insert into bigr_data_fixes (audit_id,trans_num,audit_date,tab_name,trans_type,executing_procedure, trans_comment,
+	 	 	  				     attrib1)
+	select bigr_data_fixes_seq.nextval,
+		   v_trans_counter,
+		   sysdate,
+		   'PDC_PATH_REPORT_DIAGNOSTICS',
+		   'UPDATE',
+		   'BIGR_DATA_UTILS.CHANGE_DIAGNOSTIC_CONCEPT',
+		   v_comment,
+		   'Update diagnostics_concept_id from ''' || old_diag_concept || ''' to ''' || new_diag_concept || ''' for path_report_id ' || v_rep_id || '.'
+	from pdc_path_report_diagnostics
+	where path_report_id = v_rep_id
+	and diagnostics_concept_id = upper(old_diag_concept);
+
+    update pdc_path_report_diagnostics
+	set diagnostics_concept_id = upper(new_diag_concept)
+	where path_report_id = v_rep_id
+	and diagnostics_concept_id = upper(old_diag_concept);
+	commit;
+	dbms_output.put_line ('Procedure bigr_data_utils.change_diagnostic_concept completed successfully.');
+exception
+   when PARAM_LIST then
+      dbms_output.put_line ('The parameter list provided is not complete.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling change_diagnostic_concept: The parameter list provided is not complete.');
+   when DUP_VAL_ON_INDEX then
+      dbms_output.put_line ('The combination path_report__id ' || v_rep_id || ' with diagnostic_concept_id ' || new_diag_concept || ' already exists.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling change_diagnostic_concept: The combination path_report__id ' || v_rep_id || ' with diagnostic_concept_id ' || new_diag_concept || ' already exists.');
+   when NO_DATA_FOUND then
+      dbms_output.put_line ('The combination path_report__id ' || v_rep_id || ' with diagnostic_concept_id ' || new_diag_concept || ' does not exist.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling change_diagnostic_concept: The combination path_report__id ' || v_rep_id || ' with diagnostic_concept_id ' || new_diag_concept || ' does not exist.');
+   when others then
+      dbms_output.put_line ('An error occured: ' || sqlerrm);
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling change_diagnostic_concept: An error occured: ' || sqlerrm);
+end change_diagnostic_concept;
+
+
+----------------------------------------------------------------------------------------------------
+--   Allows the user to change the disease_concept_id for a path_report in pdc_pathology_report
+--
+--   Input:  A path_report_id, consent_id, the new disease_concept_id, and a comment
+-----------------------------------------------------------------------------------------------------
+
+procedure change_disease_concept (path_rep_id varchar2, p_consent varchar2, p_new_disease varchar2, p_comment varchar2)
+is
+   v_rep_id		number := to_number(path_rep_id);
+begin
+    if v_rep_id is null or p_consent is null or p_new_disease is null or p_comment is null
+	then
+	   raise PARAM_LIST;
+	end if;
+    v_comment := p_comment;
+
+	select nvl(max(trans_num),0)+1
+	into v_trans_counter
+	from bigr_data_fixes;
+
+    insert into bigr_data_fixes (audit_id,trans_num,audit_date,tab_name,trans_type,executing_procedure, trans_comment,
+	 	 	  				     attrib1)
+	select bigr_data_fixes_seq.nextval,
+		   v_trans_counter,
+		   sysdate,
+		   'PDC_PATHOLOGY_REPORT',
+		   'UPDATE',
+		   'BIGR_DATA_UTILS.CHANGE_DISEASE_CONCEPT',
+		   v_comment,
+		   'Update disease_concept_id from ''' || disease_concept_id || ''' to ''' || upper(p_new_disease) || ''' for path_report_id ' || v_rep_id || '.'
+	from pdc_pathology_report
+	where path_report_id = v_rep_id
+	and consent_id = upper(p_consent);
+
+    update pdc_pathology_report
+	set disease_concept_id = upper(p_new_disease)
+	where path_report_id = v_rep_id
+	and consent_id = upper(p_consent);
+	commit;
+	dbms_output.put_line ('Procedure bigr_data_utils.change_disease_concept completed successfully.');
+exception
+   when PARAM_LIST then
+      dbms_output.put_line ('The parameter list provided is not complete.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling change_disease_concept: The parameter list provided is not complete.');
+   when NO_DATA_FOUND then
+      dbms_output.put_line ('The combination path_report__id ' || v_rep_id || ' with consent_id ' || p_consent || ' does not exist.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling change_disease_concept: The combination path_report__id ' || v_rep_id || ' with consent_id ' || p_consent || ' does not exist.');
+   when others then
+      dbms_output.put_line ('An error occured: ' || sqlerrm);
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling change_disease_concept: An error occured: ' || sqlerrm);
+end change_disease_concept;
+
+----------------------------------------------------------------------------------------------------
+--   Allows the user to delete one or more slides
+--
+--   Input:  Ardais_user_id of user deleting slides, a delimited list of slides, the delimiter used,
+--	 		 a comment why the deletion occured.
+-----------------------------------------------------------------------------------------------------
+
+procedure del_slides (p_ard_user_id varchar2, slide_list varchar2, p_delim varchar2, p_comment varchar2)
+is
+   v_delim	    varchar2(2) := p_delim;
+   cur_slide	lims_slide.slide_id%TYPE;
+   cur_sample	lims_slide.sample_barcode_id%TYPE;
+   cur_btx_id	number;
+   cur_date 	date := sysdate;
+   trans_text	varchar2(500);
+   text_len     number;
+   note_clob	clob;
+   v_user_exists number;
+begin
+    if p_ard_user_id is null or slide_list is null or p_delim is null or p_comment is null
+	then
+	   raise PARAM_LIST;
+	end if;
+    
+    --make sure the user is valid
+    select count(*) into v_user_exists
+    from es_ardais_user
+    where ardais_user_id = p_ard_user_id;
+    if v_user_exists = 0
+    then
+       raise INVALID_USER;
+    end if;
+
+    v_comment := p_comment;
+	select nvl(max(trans_num),0)+1 into v_trans_counter from bigr_data_fixes;
+	v_cur_delim := 0;
+	v_next_delim := 0;
+	v_next_delim := get_next_delim (slide_list, v_delim, v_next_delim);
+	loop
+	   exit when v_cur_delim = v_next_delim;
+	   cur_slide := substr(slide_list,v_cur_delim+1,v_next_delim - (v_cur_delim + 1));
+
+  	   select count(*) into v_slide_is_present
+	   from lims_slide
+	   where slide_id = cur_slide;
+
+ 	   if v_slide_is_present = 0
+	   then
+	      raise NO_SLIDE;
+	   else
+	      select sample_barcode_id into cur_sample from lims_slide
+		  where slide_id = cur_slide;
+		  
+	      insert into bigr_data_fixes (audit_id,trans_num,audit_date,tab_name,trans_type,executing_procedure, trans_comment,
+		  		 	   attrib1,attrib2, attrib3, attrib4, attrib5, attrib6, attrib7, attrib8, attrib9)
+	      select bigr_data_fixes_seq.nextval,
+		  		 v_trans_counter,
+		  		 sysdate,
+		  		 'LIMS_SLIDE',
+				 'DELETE',
+				 'BIGR_DATA_UTILS.DEL_SLIDES',
+				 v_comment,
+		  		 slide_id,
+				 sample_barcode_id,
+				 create_user,
+				 to_char(create_date, 'DD-MON-YYYY HH24:MI:SS'),
+				 to_char(destroy_date, 'DD-MON-YYYY HH24:MI:SS'),
+				 to_char(section_number),
+				 to_char(section_level),
+				 current_location,
+				 section_proc
+	      from lims_slide
+		  where slide_id = cur_slide;
+
+	      delete from lims_slide
+	      where slide_id = cur_slide;
+		  
+		  trans_text := p_ard_user_id || ' destroyed slide ' || cur_slide || ' for sample ' || cur_sample || '.  Reason: ' || p_comment;
+		  select length(trans_text) into text_len from dual;
+
+		  dbms_lob.createtemporary(note_clob, TRUE, DBMS_LOB.SESSION);
+		  dbms_lob.write(note_clob, text_len, 1, trans_text);
+
+		  btx.INSERT_HISTORY_NO_BOXLOC( cur_btx_id, cur_date, 'TXHNote', p_ard_user_id, cur_date, null, null, null,
+   								 null, null, null, null, null, null, null, null, null, null, null, null,
+								 null, null, null, null, null, null, null, null, null, null, null, note_clob, null, null, null);
+
+	      dbms_lob.freetemporary(note_clob);
+
+	   	  insert into iltds_btx_involved_object (btx_id, object_id, direct)
+	   	  values (cur_btx_id, cur_sample, 'Y');								 
+
+   	      v_cur_delim := v_next_delim;
+	      v_next_delim := get_next_delim (slide_list, v_delim, v_next_delim);
+	   end if;
+	end loop;
+	commit;
+	dbms_output.put_line ('Procedure bigr_data_utils.del_slides completed successfully.');
+exception
+   when PARAM_LIST then
+      dbms_output.put_line ('The parameter list provided is not complete.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling del_slides: The parameter list provided is not complete.');
+   when INVALID_USER then
+      dbms_output.put_line ('There is no user with id ' || p_ard_user_id || '.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling del_slides: There is no user with id ' || p_ard_user_id);
+   when NO_SLIDE then
+      dbms_output.put_line ('Slide_id ' || cur_slide || ' does not exist.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling del_slides: Slide_id ' || cur_slide || ' does not exist.');
+   when others then
+      dbms_output.put_line ('An error occured: ' || sqlerrm);
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling del_slides: An error occured: ' || sqlerrm);
+end del_slides;
+
+----------------------------------------------------------------------------------------------------------
+--    Allows user to create an order, remove samples in the order from a hold list, and create an ICP
+--    transaction to track all samples in the order.
+--
+--	  INPUT:  The input parameters will generally come from a MDLR output file.  The parameters are:
+--	  		  p_ard_user_id - the id for the ARDAIS user creating the order
+--			  p_acct_key - the customer account key
+--			  p_acct_user_id - the customer user id
+--			  p_approv_date - the approval date for the order
+--			  p_order_po - the customer's PO number for the order
+--			  p_order_desc - description of the order
+--			  p_sample_list - a delimited list of sample ids in the order.
+--			  p_delim - the delimiter used to separate the samples in the p_sample_list parameter
+--
+-----------------------------------------------------------------------------------------------------------
+procedure create_order (p_ard_user_id varchar2, p_acct_key varchar2, p_acct_user_id varchar2,
+		  			   p_approv_date varchar2, p_order_po varchar2, p_order_desc varchar2,
+					   p_sample_list varchar2, p_delim varchar2)
+IS
+    cur_btx_id  	   iltds_btx_history.btx_id%TYPE;
+    f_sample_list	   varchar2(4000);
+	list_len		   number;
+	samp_list_clob	   clob;
+    cur_sample		   iltds_sample.sample_barcode_id%TYPE;
+    cur_order_num 	   es_order_line.order_number%TYPE;
+    cur_order_line_num es_order_line.order_line_number%TYPE := 1;
+   cur_date 	date := sysdate;	
+    v_user_exists      number;
+begin
+    if p_ard_user_id is null or p_acct_key is null or p_acct_user_id is null or p_approv_date is null
+	   or p_order_po is null or p_order_desc is null or p_sample_list is null or p_delim is null
+	then
+	   raise PARAM_LIST;
+	end if;
+    
+    --make sure the user is valid
+    select count(*) into v_user_exists
+    from es_ardais_user
+    where ardais_user_id = p_ard_user_id;
+    if v_user_exists = 0
+    then
+       raise INVALID_USER;
+    end if;
+
+    select replace(p_sample_list,p_delim,', ') into f_sample_list from dual;
+	select length(f_sample_list) into list_len from dual;
+    select ard_order_number_seq.nextval into cur_order_num from dual;
+
+    INSERT INTO ES_ARDAIS_ORDER (ORDER_NUMBER, ARDAIS_ACCT_KEY, ARDAIS_USER_ID, ORDER_DATE, ORDER_STATUS,
+   		  	   				   APPROVAL_USER_ID, APPROVED_DATE, ORDER_PO_NUMBER, ORDER_DESCRIPTION)
+    VALUES(cur_order_num,p_acct_key, p_ard_user_id, sysdate-(1/60*24),'SH', p_acct_user_id,
+    to_date(p_approv_date,'YYYYMMDDHHMISSAM'),p_order_po, p_order_desc);
+
+	dbms_lob.createtemporary(samp_list_clob, TRUE, DBMS_LOB.SESSION);
+	dbms_lob.write(samp_list_clob, list_len, 1, f_sample_list);
+
+    btx.INSERT_HISTORY_NO_BOXLOC( cur_btx_id, cur_date, 'RemFrmHoldList', p_ard_user_id, cur_date, null, null, null,
+   								 null, samp_list_clob, null, null, null, null, null, null, null, null, null, null,
+								 null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+
+    dbms_lob.freetemporary(samp_list_clob);
+
+    v_cur_delim := 0;
+    v_next_delim := 0;
+	v_next_delim := get_next_delim (p_sample_list, p_delim, v_next_delim);
+	loop
+
+	   exit when v_cur_delim = v_next_delim;
+  	   cur_sample := substr(p_sample_list,v_cur_delim+1,v_next_delim - (v_cur_delim + 1));
+
+	   INSERT INTO ES_ORDER_LINE (ORDER_LINE_NUMBER, ORDER_NUMBER, ORDER_LINE_AMOUNT, BARCODE_ID, CONSORTIUM_IND)
+	   VALUES(cur_order_line_num, cur_order_num,0,cur_sample,'N');
+
+	   insert into iltds_sample_status (sample_barcode_id, status_type_code, sample_status_datetime, id)
+	   values (cur_sample, 'GENRELEASED',sysdate-(1/(60*24)),iltds_sample_status_pk_seq.nextval);
+
+	   delete from es_shopping_cart_detail where barcode_id = cur_sample;
+
+	   insert into iltds_sample_status (sample_barcode_id, status_type_code, sample_status_datetime, id)
+	   values (cur_sample, 'ESSOLD',sysdate,iltds_sample_status_pk_seq.nextval);
+
+	   insert into iltds_sample_status (sample_barcode_id, status_type_code, sample_status_datetime, id)
+	   values (cur_sample, 'ESSHIPPED',sysdate,iltds_sample_status_pk_seq.nextval);
+
+	   insert into iltds_btx_involved_object (btx_id, object_id, direct)
+	   values (cur_btx_id, cur_sample, 'Y');
+
+	   cur_order_line_num := cur_order_line_num + 1;
+
+	   v_cur_delim := v_next_delim;
+	   v_next_delim := get_next_delim (p_sample_list, p_delim, v_next_delim);
+
+   	end loop;
+	commit;
+	dbms_output.put_line ('Procedure bigr_data_utils.create_order completed successfully.');
+	dbms_output.put_line ('Order number ' || cur_order_num || ' for account ' || p_acct_key || ' has been created.');
+	dbms_output.put_line ('Sample list: ');
+	v_cur_delim := 0;
+	v_next_delim := 0;
+	v_next_delim := get_next_delim (p_sample_list, p_delim, v_next_delim);
+	loop
+	   exit when v_cur_delim = v_next_delim;
+  	   cur_sample := substr(p_sample_list,v_cur_delim+1,v_next_delim - (v_cur_delim + 1));
+	   dbms_output.put_line(cur_sample);
+	   v_cur_delim := v_next_delim;
+	   v_next_delim := get_next_delim (p_sample_list, p_delim, v_next_delim);
+	end loop;
+
+	exception
+       when PARAM_LIST then
+           dbms_output.put_line ('The parameter list provided is not complete.  Exiting program.');
+	       rollback;
+	  	   raise_application_error(-20004, 'Error while calling create_order: The parameter list provided is not complete.');
+       when INVALID_USER then
+           dbms_output.put_line ('There is no user with id ' || p_ard_user_id || '.  Exiting program.');
+	       rollback;
+	  	   raise_application_error(-20004, 'Error while calling create_order: There is no user with id ' || p_ard_user_id);
+       when OTHERS then
+           dbms_output.put_line ('An error occured: ' || sqlerrm);
+	       rollback;
+	  	   raise_application_error(-20004, 'Error while calling create_order: An error occured: ' || sqlerrm);
+end create_order;
+
+----------------------------------------------------------------------------------------------------------
+--    Allows user to delete all empty projects prior to the data provided.
+--
+--	  INPUT:  The input parameters are:
+--	  		  p_create_date - all empty projects created before this date are deleted.  Supplied in the
+--			  				  format 'DD-MON-YYYY'.
+--			  p_comment - a comment about the deletion.
+-----------------------------------------------------------------------------------------------------------
+
+procedure del_empty_projects (p_create_date varchar2, p_comment varchar2)
+is
+  
+   v_create_date		date := to_date(p_create_date, 'DD-MON-YYYY');
+
+   cursor empty_projects is
+   select projectid from pts_project where 
+   daterequested < v_create_date and projectid not in
+   (select distinct(projectid) from pts_sample);
+      
+begin
+	v_comment := p_comment;
+    if v_create_date is null or p_comment is null
+	then
+	   raise PARAM_LIST;
+	end if;
+
+	for c1 in empty_projects loop
+		select nvl(max(trans_num),0)+1
+		into v_trans_counter
+		from bigr_data_fixes;
+
+    	insert into bigr_data_fixes (audit_id,trans_num,audit_date,tab_name,trans_type,executing_procedure, trans_comment,
+	 	 	  				     attrib1,attrib2,attrib3,attrib4,attrib5,attrib6,attrib7,attrib8,attrib9,attrib10)
+	    select bigr_data_fixes_seq.nextval,
+		   v_trans_counter,
+		   sysdate,
+		   'PTS_PROJECT',
+		   'DELETE',
+		   'BIGR_DATA_UTILS.DEL_EMPTY_PROJECTS',
+		   v_comment,
+		   projectid,
+		   projectname,
+		   ardais_acct_key,
+		   ardais_user_id,
+		   to_char(daterequested),
+		   to_char(dateapproved),
+		   to_char(dateshipped),
+		   notes,
+		   status,
+		   to_char(percentcomplete)
+	    from pts_project
+	    where projectid = c1.projectid;
+
+		delete from pts_workorder where projectid = c1.projectid;
+		delete from pts_lineitem where projectid = c1.projectid;
+		delete from pts_project where projectid = c1.projectid;
+	end loop;	
+	commit;
+	dbms_output.put_line ('Procedure bigr_data_utils.del_empty_projects completed successfully.');
+exception
+   when PARAM_LIST then
+      dbms_output.put_line ('The parameter list provided is not complete.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling del_empty_projects: The parameter list provided is not complete.');
+   when others then
+      dbms_output.put_line ('An error occured: ' || sqlerrm);
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling del_empty_projects: An error occured: ' || sqlerrm);
+end del_empty_projects;
+
+--NOTE:  This procedure will only work with lists of samples up to 4000 characters long.  Problem is that
+--		 iltds_btx_history.id_list_1 is a clob and can be longer than 4000 characters.  If this becomes an
+--		 issue, this procedure will need to be redesigned.
+
+procedure cancel_picklist (p_ard_user_id varchar2, p_picklist varchar2, p_comment varchar2)
+IS
+    cur_btx_id  	   iltds_btx_history.btx_id%TYPE;
+    sample_list		   varchar2(4000);
+	f_sample_list	   varchar2(4000);
+    cur_sample		   iltds_sample.sample_barcode_id%TYPE;
+	note_clob		   clob;
+	trans_text		   varchar2(4000);
+	text_len		   number;
+	sample_exists	   number;
+	cur_date		   date := sysdate;
+	plist_type		   iltds_btx_history.btx_type%TYPE;
+	status_type		   iltds_sample_status.status_type_code%TYPE;
+	plist_var		   varchar2(10);
+	v_user_exists	   number;
+begin
+    if p_ard_user_id is null or p_picklist is null or p_comment is null
+	then
+	   raise PARAM_LIST;
+	end if;
+    
+    --make sure the user is valid
+    select count(*) into v_user_exists
+    from es_ardais_user
+    where ardais_user_id = p_ard_user_id;
+    if v_user_exists = 0
+    then
+       raise INVALID_USER;
+    end if;
+	
+	select btx_type, id_list_1 into plist_type, sample_list from iltds_btx_history where attrib_2 = p_picklist;
+	
+	if plist_type = 'RNDRequest' then
+	   plist_var := 'RND';
+	   status_type := 'BOXSCAN';
+	else
+	   plist_var := 'PATH';
+	   status_type := 'QCAWAITING';
+	end if;	   
+
+	trans_text := 'All samples in ' || plist_var || ' picklist ' || p_picklist || ' were cancelled.  ' || p_comment || '  Samples removed from picklist were - ' || sample_list;
+	select length(trans_text) into text_len from dual;
+
+	dbms_lob.createtemporary(note_clob, TRUE, DBMS_LOB.SESSION);
+	dbms_lob.write(note_clob, text_len, 1, trans_text);
+
+	btx.INSERT_HISTORY_NO_BOXLOC( cur_btx_id, cur_date, 'TXHNote', p_ard_user_id, cur_date, null, null, null,
+   								 null, null, null, null, null, null, null, null, null, null, null, null,
+								 null, null, null, null, null, null, null, null, null, null, null, note_clob, null, null, null);
+
+	dbms_lob.freetemporary(note_clob);
+
+	select replace(sample_list,', ',':') into f_sample_list from dual;
+		
+    v_cur_delim := 0;
+    v_next_delim := 0;
+	v_next_delim := get_next_delim (f_sample_list, ':', v_next_delim);
+	loop
+	   exit when v_cur_delim = v_next_delim;
+  	   cur_sample := substr(f_sample_list,v_cur_delim+1,v_next_delim - (v_cur_delim + 1));
+
+	   select count(*) into sample_exists from iltds_sample
+	   where sample_barcode_id = cur_sample
+	   and box_barcode_id is not null;
+
+	   if sample_exists = 0
+	   then
+	      raise NO_SAMPLE;
+	   else
+	      insert into iltds_sample_status (sample_barcode_id, status_type_code, sample_status_datetime, id)
+	      values (cur_sample, status_type, cur_date,iltds_sample_status_pk_seq.nextval);
+
+	      insert into iltds_btx_involved_object (btx_id, object_id, direct)
+	      values (cur_btx_id, cur_sample, 'Y');
+
+	      v_cur_delim := v_next_delim;
+	      v_next_delim := get_next_delim (f_sample_list, ':', v_next_delim);
+	   end if;
+
+   	end loop;
+	commit;
+	dbms_output.put_line ('Sample removal from ' || plist_var || ' picklist ' || p_picklist || ' complete.');
+	exception
+       when PARAM_LIST then
+           dbms_output.put_line ('The parameter list provided is not complete.  Exiting program.');
+	       rollback;
+	  	   raise_application_error(-20004, 'Error while calling cancel_picklist: The parameter list provided is not complete.');
+       when INVALID_USER then
+           dbms_output.put_line ('There is no user with id ' || p_ard_user_id || '.  Exiting program.');
+	       rollback;
+	  	   raise_application_error(-20004, 'Error while calling cancel_picklist: There is no user with id ' || p_ard_user_id);
+	   when NO_SAMPLE then
+          dbms_output.put_line ('The following samples do not exist or do not have a box_barcode_id:');
+		  v_cur_delim := 0;
+    	  v_next_delim := 0;
+		  v_next_delim := get_next_delim (f_sample_list, ':', v_next_delim);		  
+		  loop
+		     exit when v_cur_delim = v_next_delim;
+			 cur_sample := substr(f_sample_list,v_cur_delim+1,v_next_delim - (v_cur_delim + 1));
+
+	   		 select count(*) into sample_exists from iltds_sample
+	   		 where sample_barcode_id = cur_sample
+	   		 and box_barcode_id is not null;
+			 
+			 if sample_exists = 0
+	   		 then
+	      	 	 dbms_output.put_line (cur_sample);
+		     end if;
+ 	         v_cur_delim := v_next_delim;
+	         v_next_delim := get_next_delim (f_sample_list, ':', v_next_delim);
+		  end loop;
+	      rollback;
+	  	  raise_application_error(-20004, 'Error while calling cancel_picklist: Sample(s) that do not exist or do not have a box_barcode_id encountered.');
+       when OTHERS then
+           dbms_output.put_line ('An error occured: ' || sqlerrm);
+	       rollback;
+	  	   raise_application_error(-20004, 'Error while calling cancel_picklist: An error occured: ' || sqlerrm);
+end cancel_picklist;
+
+procedure add_qcawaiting (p_ard_user_id varchar2, p_sample_list varchar2, p_delim varchar2, p_comment varchar2)
+IS
+    cur_btx_id  	   iltds_btx_history.btx_id%TYPE;
+    cur_sample		   iltds_sample.sample_barcode_id%TYPE;
+    f_sample_list	   varchar2(4000);
+	trans_text		   varchar2(4000);
+    cur_date 		   date := sysdate;
+	note_clob		   clob;
+	text_len		   number;
+	sample_exists	   number;
+	v_user_exists	   number;
+begin
+    if p_ard_user_id is null or p_sample_list is null or p_delim is null or p_comment is null
+	then
+	   raise PARAM_LIST;
+	end if;
+    
+    --make sure the user is valid
+    select count(*) into v_user_exists
+    from es_ardais_user
+    where ardais_user_id = p_ard_user_id;
+    if v_user_exists = 0
+    then
+       raise INVALID_USER;
+    end if;
+
+    v_cur_delim := 0;
+    v_next_delim := 0;
+	v_next_delim := get_next_delim (p_sample_list, p_delim, v_next_delim);
+	loop
+	   exit when v_cur_delim = v_next_delim;
+  	   cur_sample := substr(p_sample_list,v_cur_delim+1,v_next_delim - (v_cur_delim + 1));
+	   
+	   select count(*) into sample_exists from iltds_sample
+	   where sample_barcode_id = cur_sample;
+
+	   if sample_exists = 0
+	   then
+	      raise NO_SAMPLE;
+	   else
+	   	  trans_text := 'QCAwaiting added to sample ' || cur_sample || '.  ' || p_comment;
+	      select length(trans_text) into text_len from dual;
+
+	   	  dbms_lob.createtemporary(note_clob, TRUE, DBMS_LOB.SESSION);
+	   	  dbms_lob.write(note_clob, text_len, 1, trans_text);
+
+	   	  btx.INSERT_HISTORY_NO_BOXLOC( cur_btx_id, cur_date, 'TXHNote', p_ard_user_id, cur_date, null, null, null,
+   								 null, null, null, null, null, null, null, null, null, null, null, null,
+								 null, null, null, null, null, null, null, null, null, null, null, note_clob, null, null, null);
+
+	      dbms_lob.freetemporary(note_clob);
+		  		   
+	      insert into iltds_sample_status (sample_barcode_id, status_type_code, sample_status_datetime, id)
+	      values (cur_sample, 'QCAWAITING',cur_date ,iltds_sample_status_pk_seq.nextval);
+
+	      insert into iltds_btx_involved_object (btx_id, object_id, direct)
+	      values (cur_btx_id, cur_sample, 'Y');
+		  
+	      v_cur_delim := v_next_delim;
+	      v_next_delim := get_next_delim (p_sample_list, p_delim, v_next_delim);
+	   end if;
+   	end loop;
+	commit;
+	dbms_output.put_line ('QCAwaiting statuses added to all samples.  Procedure complete');
+	exception
+       when PARAM_LIST then
+           dbms_output.put_line ('The parameter list provided is not complete.  Exiting program.');
+	       rollback;
+	  	   raise_application_error(-20004, 'Error while calling add_qcawaiting: The parameter list provided is not complete.');
+       when INVALID_USER then
+           dbms_output.put_line ('There is no user with id ' || p_ard_user_id || '.  Exiting program.');
+	       rollback;
+	  	   raise_application_error(-20004, 'Error while calling add_qcawaiting: There is no user with id ' || p_ard_user_id);
+	   when NO_SAMPLE then
+          dbms_output.put_line ('Sample_barcode_id ' || cur_sample || ' does not exist.  Exiting program.');
+	      rollback;
+	  	  raise_application_error(-20004, 'Error while calling add_qcawaiting: Sample_barcode_id ' || cur_sample || ' does not exist.');
+       when OTHERS then
+           dbms_output.put_line ('An error occured: ' || sqlerrm);
+	       rollback;
+	  	   raise_application_error(-20004, 'Error while calling add_qcawaiting: An error occured: ' || sqlerrm);
+end add_qcawaiting;
+
+
+----------------------------------------------------------------------------------------------------
+--   Allows the user to undo a sample subdivision made in error.
+--
+--   Input:  1) The user name.
+--			 2) The parent sample id. The children will be derived from this.
+--			 3) The undivide reason (comment).
+-----------------------------------------------------------------------------------------------------
+
+PROCEDURE undivide_sample(p_ard_user_id varchar2, p_parent_sample_id varchar2, p_comment varchar2) IS
+  CURSOR child_sample_cur IS
+    SELECT * FROM iltds_sample WHERE parent_barcode_id = p_parent_sample_id;
+  child_sample_rec child_sample_cur%ROWTYPE;
+  cur_btx_id	  iltds_btx_history.btx_id%TYPE;
+  cur_date		  date := SYSDATE;
+  text_len		  number;
+  trans_text	  varchar2(500);
+  note_clob		  clob;
+  user_exists	  number;
+  sample_exists	  number;
+  subdivided	  number;
+  status_record_exists	 number;
+  history_record_exists	 number;
+BEGIN
+  -- Check parameters.
+  IF p_ard_user_id IS NULL OR p_parent_sample_id IS NULL OR p_comment IS NULL
+  THEN
+    RAISE PARAM_LIST;
+  END IF;
+    
+  -- Make sure the user is valid.
+  SELECT count(*) INTO user_exists FROM es_ardais_user WHERE ardais_user_id = p_ard_user_id;
+  IF user_exists = 0
+  THEN
+    RAISE INVALID_USER;
+  END IF;
+  
+  -- Make sure sample exists.
+  SELECT count(*) INTO sample_exists FROM iltds_sample WHERE sample_barcode_id = p_parent_sample_id;
+  IF sample_exists = 0
+  THEN
+    RAISE NO_SAMPLE;
+  END IF;
+  
+  -- Make sure that parent has actually been subdivided.
+  SELECT count(*) INTO subdivided FROM iltds_sample WHERE sample_barcode_id = p_parent_sample_id AND subdivision_date IS NOT NULL;
+  IF subdivided = 0
+  THEN
+    RAISE NOT_SUBDIVIDED;
+  END IF;
+
+  -- Make sure that nothing has happned with the children since they were created (subdivided from parent). Do the following:
+
+  --   Make sure that none of the children have records in the iltds_sample_status table with a date later than the
+  --   parent's subdivision date.
+  SELECT count(*) INTO status_record_exists FROM iltds_sample_status status, iltds_sample s1, iltds_sample s2 WHERE
+    status.SAMPLE_BARCODE_ID =  s1.SAMPLE_BARCODE_ID AND
+    status.SAMPLE_STATUS_DATETIME > s2.SUBDIVISION_DATE AND
+    s2.SAMPLE_BARCODE_ID = s1.PARENT_BARCODE_ID AND
+    s1.PARENT_BARCODE_ID = p_parent_sample_id;
+  IF status_record_exists > 0
+  THEN
+    RAISE CHILD_STATUS_RECORD_EXIST;
+  END IF;
+
+  --   Make sure that none of the children have records in the iltds_btx_involved_object table corresponding to the
+  --   iltds_btx_history records with a date later than the parent's subdivision date.
+  SELECT count(*) INTO history_record_exists FROM iltds_btx_involved_object btx_object, iltds_btx_history btx_history, iltds_sample s1, iltds_sample s2 WHERE
+    btx_object.BTX_ID = btx_history.BTX_ID AND
+    btx_history.BTX_BEGIN_DATETIME > s2.SUBDIVISION_DATE AND
+    btx_object.OBJECT_ID = s1.SAMPLE_BARCODE_ID AND
+    s2.SAMPLE_BARCODE_ID = s1.PARENT_BARCODE_ID AND
+    s1.PARENT_BARCODE_ID = p_parent_sample_id;
+  IF history_record_exists > 0
+  THEN
+    RAISE CHILD_HISTORY_RECORD_EXIST;
+  END IF;
+
+  -- Fetch all child samples to delete.
+  FOR child_sample_rec IN child_sample_cur
+  LOOP
+    -- Delete all child sample records from iltds_sample_status table.
+    DELETE FROM iltds_sample_status WHERE sample_barcode_id = child_sample_rec.sample_barcode_id;
+	
+    -- Delete all child sample records from ard_logical_repos_item table.
+	DELETE FROM ard_logical_repos_item WHERE item_id = child_sample_rec.sample_barcode_id;
+  
+    -- Delete all child sample records from iltds_sample table.
+    DELETE FROM iltds_sample WHERE sample_barcode_id = child_sample_rec.sample_barcode_id;
+
+    -- Log transaction record for each child sample.
+	trans_text := 'User ' || p_ard_user_id || ' deleted subdivided sample ' || child_sample_rec.sample_barcode_id || ' from parent sample ' || child_sample_rec.parent_barcode_id || '.  Reason: ' || p_comment;
+	SELECT length(trans_text) INTO text_len FROM dual;
+
+    dbms_lob.createtemporary(note_clob, TRUE, DBMS_LOB.SESSION);
+    dbms_lob.write(note_clob, text_len, 1, trans_text);
+
+    btx.INSERT_HISTORY_NO_BOXLOC(
+      cur_btx_id, cur_date, 'TXHNote', p_ard_user_id, cur_date, null, null, null,
+      null, null, null, null, null, null, null, null, null, null, null, null,
+	  null, null, null, null, null, null, null, null, null, null, null, note_clob, null, null, null);
+
+    dbms_lob.freetemporary(note_clob);
+
+    INSERT INTO iltds_btx_involved_object (btx_id, object_id, direct)
+    VALUES (cur_btx_id, child_sample_rec.sample_barcode_id, 'Y');								 
+
+  END LOOP;
+
+  -- Update parent sample by reseting the subdivision_date (null).
+  UPDATE iltds_sample SET subdivision_date = NULL WHERE sample_barcode_id = p_parent_sample_id;
+
+  -- Delete from iltds_sample_status the parent row where status_type_code is CONSUMED;
+  DELETE FROM iltds_sample_status WHERE sample_barcode_id = p_parent_sample_id and status_type_code = 'COCONSUMED';
+
+  -- Log transaction record for the undivided sample.
+  trans_text := 'User ' || p_ard_user_id || ' undivided sample ' || p_parent_sample_id || '.  Reason: ' || p_comment;
+  SELECT length(trans_text) INTO text_len FROM dual;
+
+  dbms_lob.createtemporary(note_clob, TRUE, DBMS_LOB.SESSION);
+  dbms_lob.write(note_clob, text_len, 1, trans_text);
+
+  btx.INSERT_HISTORY_NO_BOXLOC(
+    cur_btx_id, cur_date, 'TXHNote', p_ard_user_id, cur_date, null, null, null,
+    null, null, null, null, null, null, null, null, null, null, null, null,
+	null, null, null, null, null, null, null, null, null, null, null, note_clob, null, null, null);
+
+  dbms_lob.freetemporary(note_clob);
+
+  INSERT INTO iltds_btx_involved_object (btx_id, object_id, direct)
+  VALUES (cur_btx_id, p_parent_sample_id, 'Y');								 
+
+  EXCEPTION
+  WHEN PARAM_LIST THEN
+    dbms_output.put_line ('The parameter list provided is not complete.  Exiting program.');
+    ROLLBACK;
+	raise_application_error(-20004, 'Error while calling undivide_sample: The parameter list provided is not complete.');
+  WHEN INVALID_USER THEN
+    dbms_output.put_line ('There is no user with id ' || p_ard_user_id || '.  Exiting program.');
+    ROLLBACK;
+	raise_application_error(-20004, 'Error while calling undivide_sample: There is no user with id ' || p_ard_user_id);
+  WHEN NO_SAMPLE THEN
+    dbms_output.put_line ('Sample ' || p_parent_sample_id || ' does not exist.  Exiting program.');
+    ROLLBACK;
+	raise_application_error(-20004, 'Error while calling undivide_sample: Sample ' || p_parent_sample_id || ' does not exist.');
+  WHEN NOT_SUBDIVIDED THEN
+    dbms_output.put_line ('Sample ' || p_parent_sample_id || ' has not been subdivided.  Exiting program.');
+    ROLLBACK;
+	raise_application_error(-20004, 'Error while calling undivide_sample: Sample ' || p_parent_sample_id || ' has not been subdivided.');
+  WHEN CHILD_STATUS_RECORD_EXIST THEN
+    dbms_output.put_line ('Sample ' || p_parent_sample_id || ' cannot be undivided because there are child status records that are older than the parent subdivision date.  Exiting program.');
+    ROLLBACK;
+	raise_application_error(-20004, 'Error while calling undivide_sample: Sample ' || p_parent_sample_id || ' cannot be undivided because there are child status records that are older than the parent subdivision date.');
+  WHEN CHILD_HISTORY_RECORD_EXIST THEN
+    dbms_output.put_line ('Sample ' || p_parent_sample_id || ' cannot be undivided because there are child involved object history records that are older than the parent subdivision date.  Exiting program.');
+    ROLLBACK;
+	raise_application_error(-20004, 'Error while calling undivide_sample: Sample ' || p_parent_sample_id || ' cannot be undivided because there are child involved object history records that are older than the parent subdivision date.');
+  WHEN OTHERS THEN
+    dbms_output.put_line ('An error occured: ' || sqlerrm);
+    ROLLBACK;
+	raise_application_error(-20004, 'Error while calling undivide_sample: An error occured: ' || sqlerrm);
+
+   -- commit;
+END undivide_sample;
+
+
+procedure del_deriv_relation(p_ard_user_id varchar2, p_parent_sample_id varchar2,  p_child_sample_id varchar2)
+is
+    cur_btx_id	  iltds_btx_history.btx_id%TYPE;
+    cur_date	  date := SYSDATE;
+    text_len	  number;
+    trans_text	  varchar2(500);
+    note_clob	  clob;
+begin
+    if p_parent_sample_id is null or p_child_sample_id is null
+    then
+	raise PARAM_LIST;
+    end if;
+
+    -- verify that the parent sample exists
+    select count(*) into v_sample_is_present
+	from iltds_sample
+	where sample_barcode_id = p_parent_sample_id;
+    if v_sample_is_present = 0
+	then
+	  raise NO_PARENT;
+	else
+
+	  -- verify that the child sample exists
+    	  select count(*) into v_sample_is_present
+	   	from iltds_sample
+	   	where sample_barcode_id = p_child_sample_id;
+
+    	  if v_sample_is_present = 0
+	    then
+	      raise NO_CHILD;
+	    else
+		
+		-- verify that the relationship exists
+		select count(*) into v_sample_is_present
+			from iltds_sample_genealogy
+			where
+			parent_sample_barcode_id = p_parent_sample_id and
+			child_sample_barcode_id = p_child_sample_id;
+
+		if v_sample_is_present = 0
+	    	  then
+	      	    raise NO_RELATIONSHIP;
+	    	  else
+
+		    -- delete the parent, child relationship
+		    delete from iltds_sample_genealogy
+			where
+			parent_sample_barcode_id = p_parent_sample_id and
+			child_sample_barcode_id = p_child_sample_id;
+
+		    -- create btx history record of the deletion
+		    -- using the history note BTX_TYPE operation
+
+		    trans_text := 'User ' || p_ard_user_id || ' deleted the relationship previously specified between child sample ' || p_child_sample_id || ' and parent sample ' || p_parent_sample_id || '.';
+		    SELECT length(trans_text) INTO text_len FROM dual;
+
+    		    dbms_lob.createtemporary(note_clob, TRUE, DBMS_LOB.SESSION);
+    		    dbms_lob.write(note_clob, text_len, 1, trans_text);
+
+    		    btx.INSERT_HISTORY_NO_BOXLOC(
+      			cur_btx_id, cur_date, 'TXHNote', p_ard_user_id, cur_date, null, null, null,
+      		    null, null, null, null, null, null, null, null, null, null, null, null,
+	            null, null, null, null, null, null, null, null, null, null, null, note_clob, null, null, null);
+
+    		    dbms_lob.freetemporary(note_clob);
+
+		    -- create btx involved objects for parent and child samples
+
+                    INSERT INTO iltds_btx_involved_object (btx_id, object_id, direct)
+                    VALUES (cur_btx_id, p_child_sample_id, 'Y');
+
+                    INSERT INTO iltds_btx_involved_object (btx_id, object_id, direct)
+                    VALUES (cur_btx_id, p_parent_sample_id, 'Y');
+
+
+		    commit;
+    		    dbms_output.put_line ('Procedure bigr_data_utils.delete_derivation_relationship completed successfully.');
+
+
+		  end if;
+
+	    end if;
+
+   	end if;
+
+exception
+   when PARAM_LIST then
+      dbms_output.put_line ('The parameter list provided is not complete.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling del_deriv_relation: The parameter list provided is not complete.');
+   when NO_PARENT then
+      dbms_output.put_line ('The parentid does not exist in the system.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling del_deriv_relation: The parameter list provided is not complete.');
+   when NO_CHILD then
+      dbms_output.put_line ('The child id does not exist in the system.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling del_deriv_relation: The parameter list provided is not complete.');
+   when NO_RELATIONSHIP then
+      dbms_output.put_line ('The parent, child relationship does not exist in the system.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling del_deriv_relation: The parameter list provided is not complete.');
+   when others then
+      dbms_output.put_line ('An error occured: ' || sqlerrm);
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling delete_derivation_relationship: An error occured: ' || sqlerrm);
+end del_deriv_relation;
+
+
+procedure add_deriv_relation(p_ard_user_id varchar2, p_parent_sample_id varchar2,  
+					p_child_sample_id varchar2, p_derivation_id varchar2)
+is
+    cur_btx_id	  iltds_btx_history.btx_id%TYPE;
+    cur_date	  date := SYSDATE;
+    text_len	  number;
+    trans_text	  varchar2(500);
+    note_clob	  clob;
+begin
+    if p_parent_sample_id is null or p_child_sample_id is null
+    then
+	raise PARAM_LIST;
+    end if;
+
+    -- verify that the parent sample exists
+    select count(*) into v_sample_is_present
+	from iltds_sample
+	where sample_barcode_id = p_parent_sample_id;
+    if v_sample_is_present = 0
+	then
+	  raise NO_PARENT;
+	else
+
+	  -- verify that the child sample exists
+    	  select count(*) into v_sample_is_present
+		   	from iltds_sample
+		   	where sample_barcode_id = p_child_sample_id;
+
+    	if v_sample_is_present = 0
+	    then
+	      raise NO_CHILD;
+	    else
+	    
+	    -- verify that the derivation relationship exists
+	  	   select count(*) into v_sample_is_present
+	  	   	from iltds_derivation
+	  	   	where derivation_id = p_derivation_id; 
+		
+		if v_sample_is_present = 0
+	    then
+	      raise NO_DERIVATION;
+	    else
+		
+		
+		    -- add the parent, child relationship
+		    insert into iltds_sample_genealogy
+			 (derivation_id, parent_sample_barcode_id, child_sample_barcode_id) 
+			 values (p_derivation_id, p_parent_sample_id, p_child_sample_id);
+
+		    -- create btx history record of the added relationship
+		    -- using the history note BTX_TYPE operation
+
+		    trans_text := 'User ' || p_ard_user_id || ' added the relationship between child sample ' || p_child_sample_id || ' and parent sample ' || p_parent_sample_id || '.';
+		    SELECT length(trans_text) INTO text_len FROM dual;
+
+    		    dbms_lob.createtemporary(note_clob, TRUE, DBMS_LOB.SESSION);
+    		    dbms_lob.write(note_clob, text_len, 1, trans_text);
+
+    		    btx.INSERT_HISTORY_NO_BOXLOC(
+      			cur_btx_id, cur_date, 'TXHNote', p_ard_user_id, cur_date, null, null, null,
+      		    null, null, null, null, null, null, null, null, null, null, null, null,
+	            null, null, null, null, null, null, null, null, null, null, null, note_clob, null, null, null);
+
+    		    dbms_lob.freetemporary(note_clob);
+
+		    -- create btx involved objects for parent and child samples
+
+                    INSERT INTO iltds_btx_involved_object (btx_id, object_id, direct)
+                    VALUES (cur_btx_id, p_child_sample_id, 'Y');
+
+                    INSERT INTO iltds_btx_involved_object (btx_id, object_id, direct)
+                    VALUES (cur_btx_id, p_parent_sample_id, 'Y');
+
+
+		    commit;
+    		    dbms_output.put_line ('Procedure bigr_data_utils.add_deriv_relation completed successfully.');
+
+			end if;
+
+	    end if;
+
+   	end if;
+
+exception
+   when PARAM_LIST then
+      dbms_output.put_line ('The parameter list provided is not complete.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling add_deriv_relation: The parameter list provided is not complete.');
+   when NO_PARENT then
+      dbms_output.put_line ('The parentid does not exist in the system.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling add_deriv_relation: The parameter list provided is not complete.');
+   when NO_CHILD then
+      dbms_output.put_line ('The child id does not exist in the system.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling add_deriv_relation: The parameter list provided is not complete.');
+   when NO_DERIVATION then
+      dbms_output.put_line ('The derivation id does not exist in the system.  Exiting program.');
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling add_deriv_relation: The parameter list provided is not complete.');	  
+   when others then
+      dbms_output.put_line ('An error occured: ' || sqlerrm);
+	  rollback;
+	  raise_application_error(-20004, 'Error while calling add_deriv_relation: An error occured: ' || sqlerrm);
+end add_deriv_relation;
+
+end bigr_data_utils;
+/

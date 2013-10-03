@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+#	oracle control
+case $1 in
+'start')
+        su oracle -c "/u01/app/oracle/scripts/dbstart"
+        su oracle -c "/u01/app/oracle/product/9.2.0/bin/lsnrctl start"
+	;;
+'stop')
+        su oracle -c "/u01/app/oracle/product/9.2.0/bin/lsnrctl stop"
+        su oracle -c "/u01/app/oracle/scripts/dbshut"
+	;;
+*)
+	echo "usage: /etc/init.d/oracle {start|stop}"
+	;;
+esac

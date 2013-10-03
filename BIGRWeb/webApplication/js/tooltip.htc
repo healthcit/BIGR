@@ -1,0 +1,82 @@
+<PUBLIC:COMPONENT NAME="tooltip"
+  URN="-//Ardais Corporation//HTC Component Tooltip//EN"
+  lightWeight="true">
+
+<!-- 
+  ** Copyright 2004 Ardais Corporation.  All rights reserved.
+  **
+  ** If the element has the "tip" attribute then its value is used as the
+  ** tooltip.  Otherwise if it has a "tipKey" attribute and the window
+  ** has an array variable named "tooltipMap" then the values of
+  ** tooltipMap[tipKey] is used as the tooltip.  Otherwise no tooltip
+  ** is displayed.
+  **
+  ** The parent document must load Erik Bosrup's overLIB library
+  ** using a script include along these lines:
+  **   <script type="text/javascript" src='js/overlib.js'></script>
+  ** It should also include a comment indicating that overLIB is
+  ** copyright Erik Bosrup.
+  ** In addition, the parent document must include this line in the HTML
+  ** body section of its JSP page:
+  **   <bigr:overlibDiv/>
+  ** This can appear anywhere in the body, typically it is placed at
+  ** the beginning of the body.
+  **
+  ** To ensure that the parent document is completely ready (including
+  ** having all dependent script files completely loaded), no tooltips
+  ** will be displayed until the parent document is completely loaded
+  ** (that is, this behavior has received the ondocumentready event).
+  -->
+
+<PUBLIC:PROPERTY NAME="tip" />
+<PUBLIC:PROPERTY NAME="tipKey" />
+
+<PUBLIC:ATTACH EVENT="ondocumentready"  ONEVENT="doOnDocumentReady()" />
+<PUBLIC:ATTACH EVENT="onmouseover" ONEVENT="doOnMouseOver()" />
+<PUBLIC:ATTACH EVENT="onmouseout"  ONEVENT="doOnMouseOut()" />
+
+<SCRIPT LANGUAGE="JScript">
+var isInitialized = false;
+var isTipShowing = false;
+
+function doOnDocumentReady() {
+  isInitialized = true;
+}
+
+function doOnMouseOver()
+{
+  if (! isInitialized) return;
+
+  var tipHtml = getTipHtml();
+  if (tipHtml) {
+    isTipShowing = true;
+    event.returnValue = overlib(tipHtml);
+  }
+}
+
+function doOnMouseOut()
+{
+  if (! isInitialized) return;
+
+  if (isTipShowing) {
+    isTipShowing = false;
+    event.returnValue = nd();
+  }
+}
+
+function getTipHtml() {
+  if (tip) {
+    return tip;
+  }
+
+  var tipMap = window.tooltipMap;
+
+  if (tipKey && tipMap) {
+    return tipMap[tipKey];
+  }
+
+  return null;
+}
+
+</SCRIPT>
+</PUBLIC:COMPONENT>

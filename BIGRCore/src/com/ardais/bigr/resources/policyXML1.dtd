@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.4 U (http://www.xmlspy.com) by John Esielionis (Ardais Corporation) -->
+<!-- -->
+<!ELEMENT policy (sampleTypeConfiguration)>
+<!-- -->
+<!ELEMENT sampleTypeConfiguration (sampleType*)>
+<!-- -->
+<!ELEMENT sampleType (attribute*)>
+<!ATTLIST sampleType
+	cui ID #REQUIRED
+	cuiDescription CDATA #IMPLIED
+	supported (true | false) #REQUIRED
+>
+<!-- -->
+<!ELEMENT attribute EMPTY>
+<!ATTLIST attribute
+	cui CDATA #REQUIRED
+	cuiDescription CDATA #IMPLIED
+	relevance (required | optional | prohibited) #REQUIRED
+>

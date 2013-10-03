@@ -1,0 +1,13 @@
+insert into pdc_lookup values('TISSUE_LIST', '362154001', 'Distal Ileum', '', '', 'ARD_CAP', 'A', 'P', 'Entire distal portion of ileum', '1.77', '', '', '', '', '', '', 'Value', '', '', '', '', '', '', '', '', '32', '');
+insert into pdc_lookup values('TISSUE_LIST', '245786002', 'Floor of Mouth', '', '', 'ARD_CAP', 'A', 'P', '', '1.77', '', '', '', '', '', '', 'Value', '', '', '', '', '', '', '', '', '32', '');
+insert into pdc_lookup values('TISSUE_LIST', '244684002', 'Mandible', '', '', 'ARD_CAP', 'A', 'P', 'Entire body of Mandible', '1.77', '', '', '', '', '', '', 'Value', '', '', '', '', '', '', '', '', '32', '');
+insert into pdc_lookup values('TISSUE_LIST', '361738008', 'Maxilla', '', '', 'ARD_CAP', 'A', 'P', 'Entire body of Maxilla', '1.77', '', '', '', '', '', '', 'Value', '', '', '', '', '', '', '', '', '32', '');
+insert into pdc_lookup values('TISSUE_LIST', '181235001', 'Submandibular Gland', '', '', 'ARD_CAP', 'A', 'P', 'Entire submandibular gland', '1.77', '', '', '', '', '', '', 'Value', '', '', '', '', '', '', '', '', '32', '');
+insert into pdc_lookup values('DIAGNOSIS', '285311001^^', 'Ameloblastoma', '', '', 'ARD_CAP', 'A', 'P', '', '1.77', '', '', '', '', '', '', 'Value', '', '', '', '', '', '', '', '', '32', '');
+insert into pdc_lookup values('DIAGNOSIS', '93143009^^', 'Leukemia', '', '', 'ARD_CAP', 'A', 'P', '', '1.77', '', '', '', '', '', '', 'Value', '', '', '', '', '', '', '', '', '32', '');
+insert into pdc_lookup values('DIAGNOSIS', '118601006^^', 'Lymphoma, non-Hodgkins', '', '', 'ARD_CAP', 'A', 'P', '', '1.77', '', '', '', '', '', '', 'Value', '', '', '', '', '', '', '', '', '32', '');
+insert into pdc_lookup values('DIAGNOSIS', '443643007^^', 'Ependymoma', '', '', 'ARD_CAP', 'A', 'P', '', '1.77', '', '', '', '', '', '', 'Value', '', '', '', '', '', '', '', '', '32', '');
+insert into pdc_lookup values('DIAGNOSIS', '403977003^^', 'Angiosarcoma', '', '', 'ARD_CAP', 'A', 'P', '', '1.77', '', '', '', '', '', '', 'Value', '', '', '', '', '', '', '', '', '32', '');
+insert into pdc_lookup values('DIAGNOSIS', '126857009', 'Cholangiocarcinoma', '', '', 'ARD_CAP', 'A', 'P', '', '1.77', '', '', '', '', '', '', 'Value', '', '', '', '', '', '', '', '', '32', '');
+insert into pdc_lookup values('DIAGNOSIS', '92824003^^', 'Neurofibromatosis, type 1 (Von Recklinhausens)', '', '', 'ARD_CAP', 'A', 'P', '', '1.77', '', '', '', '', '', '', 'Value', '', '', '', '', '', '', '', '', '32', '');
+commit;

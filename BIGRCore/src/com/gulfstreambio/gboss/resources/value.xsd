@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="//gulfstreambio/gboss/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gb="//gulfstreambio/gboss/">
+	<xs:include schemaLocation="./common.xsd"/>
+	<!-- 
+	valuesType 
+	-->
+	<xs:complexType name="valuesType">
+		<xs:annotation>
+			<xs:documentation>The values section contains one or more value elements.
+			(Values defined in this section can be referenced by a valueRef.)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="value" type="gb:valueType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- 
+	valueType 
+	-->
+	<xs:complexType name="valueType">
+		<xs:annotation>
+			<xs:documentation>A type of concept that contains optional longDescription and comment
+			properties and required boolean otherValue and noValue properties.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:conceptType">
+				<xs:sequence>
+					<xs:element name="longDescription" type="xs:string" minOccurs="0"/>
+					<xs:element name="comment" type="xs:string" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="otherValue" type="xs:boolean" default="false"/>
+				<xs:attribute name="noValue" type="xs:boolean" default="false"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	valueSetsType 
+	-->
+	<xs:complexType name="valueSetsType">
+		<xs:annotation>
+			<xs:documentation>The valueSets section contains one or more valueSet elements.
+			(Values defined in this section may not be referenced by a valueRef.)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="valueSet" type="gb:valueSetType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- 
+	valueSetType 
+	-->
+	<xs:complexType name="valueSetType">
+		<xs:annotation>
+			<xs:documentation>A type of concept that includes one or more valueChoices.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:conceptType">
+				<xs:group ref="gb:valueChoiceGroup" maxOccurs="unbounded"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	valueChoiceGroup 
+	-->
+	<xs:group name="valueChoiceGroup">
+		<xs:annotation>
+			<xs:documentation>A choice between a value and a valueRef.</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="value" type="gb:valueTreeType"/>
+			<xs:element name="valueRef" type="gb:valueRefTreeType"/>
+		</xs:choice>
+	</xs:group>
+	<!-- 
+	valueTreeType 
+	-->
+	<xs:complexType name="valueTreeType">
+		<xs:annotation>
+			<xs:documentation>A type of value that may include zero or more valueChoices.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:valueType">
+				<xs:group ref="gb:valueChoiceGroup" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 
+	valueRefTreeType 
+	-->
+	<xs:complexType name="valueRefTreeType">
+		<xs:annotation>
+			<xs:documentation>A type of reference that may include zero or more valueChoices.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gb:refType">
+				<xs:group ref="gb:valueChoiceGroup" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

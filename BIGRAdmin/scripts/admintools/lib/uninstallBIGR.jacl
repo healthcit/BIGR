@@ -1,0 +1,21 @@
+#
+# Uninstall the BIGR Enterprise Application.
+#
+
+set appName $env(BIGR_APPNAME)
+
+# Exit if BIGR is not installed
+#
+if {! [isBigrInstalled]} {
+  puts "**** $appName is not currently installed."
+  exit
+}
+
+if {[isBigrRunning]} {
+  puts "**** $appName must be stopped before it can be uninstalled."
+  exit
+}
+
+$AdminApp uninstall $appName
+
+$AdminConfig save

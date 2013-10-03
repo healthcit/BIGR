@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE formDefinition PUBLIC "-//GulfStream Bioinformatics Corporation//DTD KnowledgeCapture Form Definition XML1//EN" "kcFormDefinitionXML1.dtd">
+<formDefinition name="All Combo Test - multivalued CV">
+  <formElementDefinitions>
+    <categoryDefinition displayName="no other" categoryType="page">
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=n; NOVAL=n; non-ATV=n; EAV=n; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=n; NOVAL=n; non-ATV=n; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=n; NOVAL=n; non-ATV=n; EAV=y; ADE=n" categoryType="heading">
+        <dataElementDefinition cui="CA02426C"/>
+        <dataElementDefinition cui="CA03718C"/>
+      </categoryDefinition>
+      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=n; NOVAL=n; non-ATV=n; EAV=y; ADE=y" categoryType="heading">
+        <dataElementDefinition cui="CA11786C"/>
+        <dataElementDefinition cui="CA11803C"/>
+      </categoryDefinition>
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=n; NOVAL=n; non-ATV=y; EAV=n; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=n; NOVAL=n; non-ATV=y; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=n; NOVAL=n; non-ATV=y; EAV=y; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=n; NOVAL=n; non-ATV=y; EAV=y; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=n; NOVAL=y; non-ATV=n; EAV=n; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=n; NOVAL=y; non-ATV=n; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=n; NOVAL=y; non-ATV=n; EAV=y; ADE=n" categoryType="heading">
+        <dataElementDefinition cui="CA11579C"/>
+      </categoryDefinition>
+      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=n; NOVAL=y; non-ATV=n; EAV=y; ADE=y" categoryType="heading">
+        <dataElementDefinition cui="CA04902C"/>
+      </categoryDefinition>
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=n; NOVAL=y; non-ATV=y; EAV=n; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=n; NOVAL=y; non-ATV=y; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=n; NOVAL=y; non-ATV=y; EAV=y; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=n; NOVAL=y; non-ATV=y; EAV=y; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=y; NOVAL=n; non-ATV=n; EAV=n; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=y; NOVAL=n; non-ATV=n; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=y; NOVAL=n; non-ATV=n; EAV=y; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=y; NOVAL=n; non-ATV=n; EAV=y; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=y; NOVAL=n; non-ATV=y; EAV=n; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=y; NOVAL=n; non-ATV=y; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=y; NOVAL=n; non-ATV=y; EAV=y; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=y; NOVAL=n; non-ATV=y; EAV=y; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=y; NOVAL=y; non-ATV=n; EAV=n; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=y; NOVAL=y; non-ATV=n; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=y; NOVAL=y; non-ATV=n; EAV=y; ADE=n" categoryType="heading">
+        <dataElementDefinition cui="CA11587C"/>
+      </categoryDefinition>
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=y; NOVAL=y; non-ATV=n; EAV=y; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=y; NOVAL=y; non-ATV=y; EAV=n; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=y; NOVAL=y; non-ATV=y; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=y; NOVAL=y; non-ATV=y; EAV=y; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=n, MLVS=y; NOVAL=y; non-ATV=y; EAV=y; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+    </categoryDefinition>
+    <categoryDefinition displayName="other" categoryType="page">
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=n; NOVAL=n; non-ATV=n; EAV=n; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=n; NOVAL=n; non-ATV=n; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=n; NOVAL=n; non-ATV=n; EAV=y; ADE=n" categoryType="heading">
+        <dataElementDefinition cui="CA12253C"/>
+        <dataElementDefinition cui="CA06489C"/>
+      </categoryDefinition>
+      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=n; NOVAL=n; non-ATV=n; EAV=y; ADE=y" categoryType="heading">
+        <dataElementDefinition cui="CA02431C"/>
+        <dataElementDefinition cui="CA11760C"/>
+      </categoryDefinition>
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=n; NOVAL=n; non-ATV=y; EAV=n; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=n; NOVAL=n; non-ATV=y; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=n; NOVAL=n; non-ATV=y; EAV=y; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=n; NOVAL=n; non-ATV=y; EAV=y; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=n; NOVAL=y; non-ATV=n; EAV=n; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=n; NOVAL=y; non-ATV=n; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=n; NOVAL=y; non-ATV=n; EAV=y; ADE=n" categoryType="heading">
+        <dataElementDefinition cui="CA11979C"/>
+        <dataElementDefinition cui="CA03338C"/>
+      </categoryDefinition>
+      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=n; NOVAL=y; non-ATV=n; EAV=y; ADE=y" categoryType="heading">
+        <dataElementDefinition cui="CA03609C"/>
+        <dataElementDefinition cui="CA12053C"/>
+      </categoryDefinition>
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=n; NOVAL=y; non-ATV=y; EAV=n; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=n; NOVAL=y; non-ATV=y; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=n; NOVAL=y; non-ATV=y; EAV=y; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=n; NOVAL=y; non-ATV=y; EAV=y; ADE=y" categoryType="heading">
+        <dataElementDefinition cui="CA05811C"/>
+        <dataElementDefinition cui="CA05244C"/>
+      </categoryDefinition>
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=y; NOVAL=n; non-ATV=n; EAV=n; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=y; NOVAL=n; non-ATV=n; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=y; NOVAL=n; non-ATV=n; EAV=y; ADE=n" categoryType="heading">
+        <dataElementDefinition cui="CA11191C"/>
+        <dataElementDefinition cui="CA11236C"/>
+      </categoryDefinition>
+      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=y; NOVAL=n; non-ATV=n; EAV=y; ADE=y" categoryType="heading">
+        <dataElementDefinition cui="CA11759C"/>
+      </categoryDefinition>
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=y; NOVAL=n; non-ATV=y; EAV=n; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=y; NOVAL=n; non-ATV=y; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=y; NOVAL=n; non-ATV=y; EAV=y; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=y; NOVAL=n; non-ATV=y; EAV=y; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=y; NOVAL=y; non-ATV=n; EAV=n; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=y; NOVAL=y; non-ATV=n; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=y; NOVAL=y; non-ATV=n; EAV=y; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=y; NOVAL=y; non-ATV=n; EAV=y; ADE=y" categoryType="heading">
+        <dataElementDefinition cui="CA12054C"/>
+      </categoryDefinition>
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=y; NOVAL=y; non-ATV=y; EAV=n; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=y; NOVAL=y; non-ATV=y; EAV=n; ADE=y" categoryType="heading">
+      </categoryDefinition> -->
+<!--      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=y; NOVAL=y; non-ATV=y; EAV=y; ADE=n" categoryType="heading">
+      </categoryDefinition> -->
+      <categoryDefinition displayName="datatype=cv; multivalued; other=y, MLVS=y; NOVAL=y; non-ATV=y; EAV=y; ADE=y" categoryType="heading">
+        <dataElementDefinition cui="CA03278C"/>
+        <dataElementDefinition cui="CA03585C"/>
+      </categoryDefinition>
+    </categoryDefinition>
+  </formElementDefinitions>
+</formDefinition>

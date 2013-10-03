@@ -1,0 +1,2491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bigrLibraryMetaData PUBLIC "-//Ardais Corporation//DTD Bigr Library Meta Data 1.0//EN" "BigrLibraryMetaData.dtd">
+<bigrLibraryMetaData version="1.0">
+	<dbTable tableName="iltds_asm" javaConstant="TABLE_ASM">
+		<dbAlias aliasValue="asm"/>
+		<dbColumn columnName="specimen_type" javaConstant="ASM_APPEARANCE">
+			<dbAlias aliasValue="gross_appearance"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_id" javaConstant="ASM_DONOR_ID">
+			<dbAlias aliasValue="asm_ardais_id"/>
+		</dbColumn>
+		<dbColumn columnName="consent_id" javaConstant="ASM_CONSENT_ID">
+			<dbAlias aliasValue="asm_consent_id"/>
+		</dbColumn>
+		<dbColumn columnName="asm_id" javaConstant="ASM_ID">
+			<dbAlias aliasValue="asm_id"/>
+		</dbColumn>
+		<dbColumn columnName="asm_form_id" javaConstant="ASM_FORM_ID">
+			<dbAlias aliasValue="asm_form_id"/>
+		</dbColumn>
+		<dbColumn columnName="organ_site_concept_id" javaConstant="ASM_TISSUE">
+			<dbAlias aliasValue="asm_tissue"/>
+		</dbColumn>
+		<dbColumn columnName="organ_site_concept_id_other" javaConstant="ASM_TISSUE_OTHER">
+			<dbAlias aliasValue="asm_tissue_other"/>
+		</dbColumn>
+		<dbColumn columnName="module_comments" javaConstant="ASM_MODULE_COMMENTS">
+			<dbAlias aliasValue="module_comments"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="iltds_asm_form" javaConstant="TABLE_ASM_FORM">
+		<dbAlias aliasValue="asm_form"/>
+		<dbColumn columnName="ardais_id" javaConstant="ASM_FORM_DONOR_ID">
+			<dbAlias aliasValue="asm_form_ardais_id"/>
+		</dbColumn>
+		<dbColumn columnName="consent_id" javaConstant="ASM_FORM_CONSENT_ID">
+			<dbAlias aliasValue="asm_form_consent_id"/>
+		</dbColumn>
+		<dbColumn columnName="asm_form_id" javaConstant="ASM_FORM_FORM_ID">
+			<dbAlias aliasValue="asm_form_form_id"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_staff_id" javaConstant="ASM_FORM_PREPARED_BY">
+			<dbAlias aliasValue="asm_form_prepared_by"/>
+		</dbColumn>
+		<dbColumn columnName="surgical_specimen_id" javaConstant="ASM_FORM_PROCEDURE">
+			<dbAlias aliasValue="asm_form_procedure"/>
+		</dbColumn>
+		<dbColumn columnName="surgical_specimen_id_other" javaConstant="ASM_FORM_PROCEDURE_OTHER">
+			<dbAlias aliasValue="asm_form_procedure_other"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="iltds_attachments" javaConstant="TABLE_ATTACHMENTS">
+		<dbAlias aliasValue="attachments"/>
+		<dbColumn columnName="id" javaConstant="ATTACHMENTS_ID">
+			<dbAlias aliasValue="attach_id"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_acct_key" javaConstant="ATTACHMENTS_ADS_ACCT_KEY">
+			<dbAlias aliasValue="attach_ardais_acct_key"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_id" javaConstant="ATTACHMENTS_DONOR_ID">
+			<dbAlias aliasValue="attach_ardais_id"/>
+		</dbColumn>
+		<dbColumn columnName="consent_id" javaConstant="ATTACHMENTS_CONSENT_ID">
+			<dbAlias aliasValue="attach_consent_id"/>
+		</dbColumn>		
+		<dbColumn columnName="sample_barcode_id" javaConstant="ATTACHMENTS_SAMPLE_BARCODE_ID">
+			<dbAlias aliasValue="attach_sample_barcode_id"/>
+		</dbColumn>
+		<dbColumn columnName="is_phi_yn" javaConstant="ATTACHMENTS_ISPHI">
+			<dbAlias aliasValue="attach_is_phi_yn"/>
+		</dbColumn>
+		<dbColumn columnName="comments" javaConstant="ATTACHMENTS_COMMENTS">
+			<dbAlias aliasValue="attach_comments"/>
+		</dbColumn>
+		<dbColumn columnName="name" javaConstant="ATTACHMENTS_NAME">
+			<dbAlias aliasValue="attach_name"/>
+		</dbColumn>
+		<dbColumn columnName="attachment" javaConstant="ATTACHMENTS_ATTACHED">
+			<dbAlias aliasValue="attach_attachment"/>
+		</dbColumn>
+		<dbColumn columnName="created_by" javaConstant="ATTACHMENTS_CREATED_BY">
+			<dbAlias aliasValue="attach_created_by"/>
+		</dbColumn>
+		<dbColumn columnName="created_date" javaConstant="ATTACHMENTS_CREATED_DATE">
+			<dbAlias aliasValue="attach_created_date"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="iltds_box_location" javaConstant="TABLE_BOX_LOCATION">
+		<dbAlias aliasValue="box_location"/>
+		<dbColumn columnName="box_barcode_id" javaConstant="BOX_LOCATION_BOX_BARCODE_ID">
+			<dbAlias aliasValue="box_location_box_barcode_id"/>
+		</dbColumn>
+		<dbColumn columnName="location_address_id" javaConstant="BOX_LOCATION_ADDRESS_ID">
+			<dbAlias aliasValue="box_location_id"/>
+		</dbColumn>		
+		<dbColumn columnName="room_id" javaConstant="BOX_LOCATION_ROOM_ID">
+			<dbAlias aliasValue="box_location_room_id"/>
+		</dbColumn>		
+		<dbColumn columnName="drawer_id" javaConstant="BOX_LOCATION_DRAWER_ID">
+			<dbAlias aliasValue="box_location_drawer_id"/>
+		</dbColumn>		
+		<dbColumn columnName="slot_id" javaConstant="BOX_LOCATION_SLOT_ID">
+			<dbAlias aliasValue="box_location_slot_id"/>
+		</dbColumn>
+		<dbColumn columnName="unit_name" javaConstant="BOX_LOCATION_UNIT_NAME">
+			<dbAlias aliasValue="box_location_unit_name"/>
+		</dbColumn>
+		<dbColumn columnName="storage_type_cid" javaConstant="BOX_LOCATION_STORAGE_TYPE_CID">
+			<dbAlias aliasValue="box_location_storage_type_cid"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="iltds_ardais_staff" javaConstant="TABLE_ARDAIS_STAFF">
+		<dbAlias aliasValue="staff"/>
+		<dbColumn columnName="ardais_staff_id" javaConstant="ARDAIS_STAFF_STAFF_ID">
+			<dbAlias aliasValue="staff_id"/>
+		</dbColumn>
+		<dbColumn columnName="location_address_id" javaConstant="STAFF_LOCATION_ADDRESS_ID">
+			<dbAlias aliasValue="staff_location_id"/>
+		</dbColumn>		
+		<dbColumn columnName="ardais_staff_lname" javaConstant="ARDAIS_STAFF_STAFF_LNAME">
+			<dbAlias aliasValue="ardais_staff_staff_lname"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_staff_fname" javaConstant="ARDAIS_STAFF_STAFF_FNAME">
+			<dbAlias aliasValue="ardais_staff_staff_fname"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_acct_key" javaConstant="ARDAIS_STAFF_ACCT_KEY">
+			<dbAlias aliasValue="ardais_staff_acct_key"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_user_id" javaConstant="ARDAIS_STAFF_USER_ID">
+			<dbAlias aliasValue="ardais_staff_user_id"/>
+		</dbColumn>
+	</dbTable>	
+	<dbTable tableName="iltds_informed_consent" javaConstant="TABLE_CONSENT">
+		<dbAlias aliasValue="consent"/>
+		<dbColumn columnName="consent_id" javaConstant="CONSENT_ID">
+			<dbAlias aliasValue="consent_id"/>
+			<dbAlias aliasValue="consent_count" javaConstant="DONOR_CONSENT_COUNT"/>
+		</dbColumn>
+		<dbColumn columnName="disease_concept_id" javaConstant="CONSENT_DX">
+			<dbAlias aliasValue="consent_dx"/>
+		</dbColumn>
+		<dbColumn columnName="disease_concept_id_other" javaConstant="CONSENT_DX_OTHER">
+			<dbAlias aliasValue="consent_dx_other"/>
+		</dbColumn>
+		<dbColumn columnName="linked" javaConstant="CONSENT_LINKED"/>
+		<dbColumn columnName="consent_location_address_id" javaConstant="CONSENT_LOCATION">
+			<dbAlias aliasValue="consent_location"/>
+		</dbColumn>
+		<dbColumn columnName="consent_pull_datetime" javaConstant="CONSENT_PULL_DT">
+			<dbAlias aliasValue="consent_pull_datetime"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_id" javaConstant="DONOR_ID">
+			<dbAlias aliasValue="ardais_id"/>
+		</dbColumn>
+		<dbColumn columnName="best_diagnosis_cui" javaConstant="CONSENT_BEST_DIAGNOSIS_CUI">
+			<dbAlias aliasValue="best_diagnosis_cui"/>
+		</dbColumn>
+		<dbColumn columnName="best_diagnosis_other" javaConstant="CONSENT_BEST_DIAGNOSIS_OTHER">
+			<dbAlias aliasValue="best_diagnosis_other"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_acct_key" javaConstant="CONSENT_ARDAIS_ACCT_KEY">
+			<dbAlias aliasValue="consent_ardais_acct_key"/>
+		</dbColumn>
+		<dbColumn columnName="imported_yn" javaConstant="CONSENT_IMPORTED_YN">
+			<dbAlias aliasValue="consent_imported_yn"/>
+		</dbColumn>
+		<dbColumn columnName="customer_id" javaConstant="CONSENT_CUSTOMER_ID">
+			<dbAlias aliasValue="consent_customer_id"/>
+		</dbColumn>
+		<dbColumn columnName="psa" javaConstant="CONSENT_PSA">
+			<dbAlias aliasValue="consent_psa"/>
+		</dbColumn>
+		<dbColumn columnName="dre_cid" javaConstant="CONSENT_DRE_CID">
+			<dbAlias aliasValue="consent_dre_cid"/>
+		</dbColumn>
+		<dbColumn columnName="clinical_finding_notes" javaConstant="CONSENT_CLINICAL_FINDING_NOTES">
+			<dbAlias aliasValue="consent_clinical_finding_notes"/>
+		</dbColumn>
+		<dbColumn columnName="policy_id" javaConstant="CONSENT_POLICY_ID">
+			<dbAlias aliasValue="consent_policy_id"/>
+		</dbColumn>
+		<dbColumn columnName="case_registration_form" javaConstant="CONSENT_REG_FORM">
+			<dbAlias aliasValue="consent_reg_form"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="iltds_revoked_consent_archive" javaConstant="TABLE_CONSENT_REVOKED">
+		<dbAlias aliasValue="revoked_consent"/>
+		<dbColumn columnName="consent_id" javaConstant="REVOKED_CONSENT_ID">
+			<dbAlias aliasValue="revoked_consent_id"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="iltds_sample" javaConstant="TABLE_SAMPLE">
+		<dbAlias aliasValue="sample"/>
+		<dbAlias aliasValue="sample1" javaConstant="TABLE_SAMPLE1"/>
+		<dbColumn columnName="ardais_acct_key" javaConstant="SAMPLE_ACCOUNT">
+			<dbAlias aliasValue="sample_ardais_acct_key"/>
+		</dbColumn>
+		<dbColumn columnName="asm_id" javaConstant="SAMPLE_ASM_ID">
+			<dbAlias aliasValue="sample_asm_id"/>
+		</dbColumn>
+		<dbColumn columnName="asm_position" javaConstant="SAMPLE_ASM_POSITION">
+			<dbAlias aliasValue="asm_position"/>
+		</dbColumn>
+		<dbColumn columnName="di_max_thickness_pfin_cid" javaConstant="SAMPLE_DI_MAX_THICKNESS">
+			<dbAlias aliasValue="di_max_thickness_pfin_cid"/>
+		</dbColumn>
+		<dbColumn columnName="di_min_thickness_pfin_cid" javaConstant="SAMPLE_DI_MIN_THICKNESS">
+			<dbAlias aliasValue="di_min_thickness_pfin_cid"/>
+		</dbColumn>
+		<dbColumn columnName="di_width_across_pfin_cid" javaConstant="SAMPLE_DI_WIDTH">
+			<dbAlias aliasValue="di_width_across_pfin_cid"/>
+		</dbColumn>
+		<dbColumn columnName="discordant_yn" javaConstant="SAMPLE_DISCORDANT">
+			<dbAlias aliasValue="discordant_yn"/>
+		</dbColumn>
+		<dbColumn columnName="format_detail_cid" javaConstant="SAMPLE_FORMAT_DETAIL">
+			<dbAlias aliasValue="format_detail_cid"/>
+		</dbColumn>
+		<dbColumn columnName="type_of_fixative" javaConstant="SAMPLE_FIXATIVE_TYPE">
+			<dbAlias aliasValue="type_of_fixative"/>
+		</dbColumn>
+		<dbColumn columnName="histo_max_thickness_pfin_cid" javaConstant="SAMPLE_HISTO_MAX_THICKNESS">
+			<dbAlias aliasValue="histo_max_thickness_pfin_cid"/>
+		</dbColumn>
+		<dbColumn columnName="histo_min_thickness_pfin_cid" javaConstant="SAMPLE_HISTO_MIN_THICKNESS">
+			<dbAlias aliasValue="histo_min_thickness_pfin_cid"/>
+		</dbColumn>
+		<dbColumn columnName="histo_notes" javaConstant="SAMPLE_HISTO_NOTES">
+			<dbAlias aliasValue="histo_notes"/>
+		</dbColumn>
+		<dbColumn columnName="histo_reembed_reason_cid" javaConstant="SAMPLE_HISTO_REEMBED_REASON">
+			<dbAlias aliasValue="histo_reembed_reason_cid"/>
+		</dbColumn>
+		<dbColumn columnName="histo_subdividable" javaConstant="SAMPLE_HISTO_SUBDIVIDABLE">
+			<dbAlias aliasValue="histo_subdividable"/>
+		</dbColumn>
+		<dbColumn columnName="histo_width_across_pfin_cid" javaConstant="SAMPLE_HISTO_WIDTH">
+			<dbAlias aliasValue="histo_width_across_pfin_cid"/>
+		</dbColumn>
+		<dbColumn columnName="sample_barcode_id" javaConstant="SAMPLE_ID">
+			<dbAlias aliasValue="sample_barcode_id"/>
+		</dbColumn>
+		<dbColumn columnName="inv_status" javaConstant="SAMPLE_INV_STATUS">
+			<dbAlias aliasValue="inv_status"/>
+		</dbColumn>
+		<dbColumn columnName="inv_status_date" javaConstant="SAMPLE_INV_STATUS_DATE">
+			<dbAlias aliasValue="inv_status_date"/>
+		</dbColumn>
+		<dbColumn columnName="cell_ref_location" javaConstant="SAMPLE_LOCATION">
+			<dbAlias aliasValue="cell_ref_location"/>
+		</dbColumn>
+		<dbColumn columnName="other_histo_reembed_reason" javaConstant="SAMPLE_OTHER_HISTO_REEMBED_REASON">
+			<dbAlias aliasValue="other_histo_reembed_reason"/>
+		</dbColumn>
+		<dbColumn columnName="project_status" javaConstant="SAMPLE_PROJECT_STATUS">
+			<dbAlias aliasValue="project_status"/>
+		</dbColumn>
+		<dbColumn columnName="project_status_date" javaConstant="SAMPLE_PROJECT_STATUS_DATE">
+			<dbAlias aliasValue="project_status_date"/>
+		</dbColumn>
+		<dbColumn columnName="pull_reason" javaConstant="SAMPLE_PULLED_REASON">
+			<dbAlias aliasValue="pull_reason"/>
+		</dbColumn>
+		<dbColumn columnName="pull_date" javaConstant="SAMPLE_PULL_DATE">
+			<dbAlias aliasValue="pull_date"/>
+		</dbColumn>
+		<dbColumn columnName="qc_status" javaConstant="SAMPLE_QCSTATUS">
+			<dbAlias aliasValue="qc_status"/>
+		</dbColumn>
+		<dbColumn columnName="qc_status_date" javaConstant="SAMPLE_QCSTATUS_DATE">
+			<dbAlias aliasValue="qc_status_date"/>
+		</dbColumn>
+		<dbColumn columnName="qc_verified" javaConstant="SAMPLE_QCVERIFIED">
+			<dbAlias aliasValue="qc_verified"/>
+		</dbColumn>
+		<dbColumn columnName="qcposted_yn" javaConstant="SAMPLE_QCPOSTED">
+			<dbAlias aliasValue="qcposted_yn"/>
+		</dbColumn>
+		<dbColumn columnName="pull_yn" javaConstant="SAMPLE_PULLED">
+			<dbAlias aliasValue="pull_yn"/>
+		</dbColumn>
+		<dbColumn columnName="released_yn" javaConstant="SAMPLE_RELEASED">
+			<dbAlias aliasValue="released_yn"/>
+		</dbColumn>
+		<dbColumn columnName="receipt_date" javaConstant="SAMPLE_RECEIPT_DATE">
+			<dbAlias aliasValue="receipt_date"/>
+		</dbColumn>
+		<dbColumn columnName="allocation_ind" javaConstant="SAMPLE_RESTRICTED">
+			<dbAlias aliasValue="restricted"/>
+		</dbColumn>
+		<dbColumn columnName="sales_status" javaConstant="SAMPLE_SALES_STATUS">
+			<dbAlias aliasValue="sales_status"/>
+		</dbColumn>
+		<dbColumn columnName="sales_status_date" javaConstant="SAMPLE_SALES_STATUS_DATE">
+			<dbAlias aliasValue="sales_status_date"/>
+		</dbColumn>
+		<dbColumn columnName="parent_barcode_id" javaConstant="SAMPLE_PARENT_ID">
+			<dbAlias aliasValue="parent_barcode_id"/>
+		</dbColumn>
+		<dbColumn columnName="section_count" javaConstant="SAMPLE_SECTION_COUNT">
+			<dbAlias aliasValue="section_count"/>
+		</dbColumn>
+		<dbColumn columnName="paraffin_feature_cid" javaConstant="SAMPLE_PARAFFIN_FEATURE_CID">
+			<dbAlias aliasValue="paraffin_feature_cid"/>
+		</dbColumn>
+		<dbColumn columnName="other_paraffin_feature" javaConstant="SAMPLE_OTHER_PARAFFIN_FEATURE">
+			<dbAlias aliasValue="other_paraffin_feature"/>
+		</dbColumn>
+		<dbColumn columnName="subdivision_date" javaConstant="SAMPLE_SUBDIVISION_DATE">
+			<dbAlias aliasValue="subdivision_date"/>
+		</dbColumn>
+		<dbColumn columnName="box_barcode_id" javaConstant="SAMPLE_BOX_BARCODE_ID">
+			<dbAlias aliasValue="box_barcode_id"/>
+		</dbColumn>
+		<dbColumn columnName="asm_note" javaConstant="SAMPLE_ASM_NOTE">
+			<dbAlias aliasValue="asm_note"/>
+		</dbColumn>
+		<dbColumn columnName="bms_yn" javaConstant="SAMPLE_BMS_YN">
+			<dbAlias aliasValue="bms_yn"/>
+		</dbColumn>
+		<dbColumn columnName="consent_id" javaConstant="SAMPLE_CONSENT_ID">
+			<dbAlias aliasValue="sample_consent_id"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_id" javaConstant="SAMPLE_ARDAIS_ID">
+			<dbAlias aliasValue="sample_ardais_id"/>
+		</dbColumn>
+		<dbColumn columnName="tissue_finding_cui" javaConstant="SAMPLE_TISSUE_FINDING_CUI">
+			<dbAlias aliasValue="tissue_finding_cui"/>
+		</dbColumn>
+		<dbColumn columnName="tissue_finding_other" javaConstant="SAMPLE_TISSUE_FINDING_OTHER">
+			<dbAlias aliasValue="tissue_finding_other"/>
+		</dbColumn>
+		<dbColumn columnName="imported_yn" javaConstant="SAMPLE_IMPORTED_YN">
+			<dbAlias aliasValue="sample_imported_yn"/>
+		</dbColumn>
+		<dbColumn columnName="customer_id" javaConstant="SAMPLE_CUSTOMER_ID">
+			<dbAlias aliasValue="sample_customer_id"/>
+		</dbColumn>
+		<dbColumn columnName="sample_type_cid" javaConstant="SAMPLE_SAMPLE_TYPE_CID">
+			<dbAlias aliasValue="sample_type_cid"/>
+		</dbColumn>
+		<dbColumn columnName="collection_datetime" javaConstant="SAMPLE_COLLECTION_DATETIME">
+			<dbAlias aliasValue="sample_collection_datetime"/>
+		</dbColumn>
+		<dbColumn columnName="collection_datetime_dpc" javaConstant="SAMPLE_COLLECTION_DATETIME_DPC">
+			<dbAlias aliasValue="sample_collection_datetime_dpc"/>
+		</dbColumn>
+		<dbColumn columnName="preservation_datetime" javaConstant="SAMPLE_PRESERVATION_DATETIME">
+			<dbAlias aliasValue="sample_preservation_datetime"/>
+		</dbColumn>
+		<dbColumn columnName="preservation_datetime_dpc" javaConstant="SAMPLE_PRESERVE_DATETIME_DPC">
+			<dbAlias aliasValue="sample_preserve_datetime_dpc"/>
+		</dbColumn>
+		<dbColumn columnName="volume" javaConstant="SAMPLE_VOLUME">
+			<dbAlias aliasValue="sample_volume"/>
+		</dbColumn>
+		<dbColumn columnName="volume_unit_cui" javaConstant="SAMPLE_VOLUME_UNIT_CUI">
+			<dbAlias aliasValue="sample_volume_unit_cui"/>
+		</dbColumn>
+		<dbColumn columnName="volume_ul" javaConstant="SAMPLE_VOLUME_UL">
+			<dbAlias aliasValue="sample_volume_ul"/>
+		</dbColumn>
+		<dbColumn columnName="weight" javaConstant="SAMPLE_WEIGHT">
+			<dbAlias aliasValue="sample_weight"/>
+		</dbColumn>
+		<dbColumn columnName="weight_unit_cui" javaConstant="SAMPLE_WEIGHT_UNIT_CUI">
+			<dbAlias aliasValue="sample_weight_unit_cui"/>
+		</dbColumn>
+		<dbColumn columnName="weight_mg" javaConstant="SAMPLE_WEIGHT_MG">
+			<dbAlias aliasValue="sample_weight_mg"/>
+		</dbColumn>
+		<dbColumn columnName="age_at_collection" javaConstant="SAMPLE_AGE_AT_COLLECTION">
+			<dbAlias aliasValue="sample_age_at_collection"/>
+		</dbColumn>
+		<dbColumn columnName="appearance_best" javaConstant="SAMPLE_APPEARANCE_BEST">
+			<dbAlias aliasValue="sample_appearance_best"/>
+		</dbColumn>
+		<dbColumn columnName="diagnosis_cui_best" javaConstant="SAMPLE_DIAGNOSIS_CUI_BEST">
+			<dbAlias aliasValue="sample_diagnosis_cui_best"/>
+		</dbColumn>
+		<dbColumn columnName="diagnosis_other_best" javaConstant="SAMPLE_DIAGNOSIS_OTHER_BEST">
+			<dbAlias aliasValue="sample_diagnosis_other_best"/>
+		</dbColumn>
+		<dbColumn columnName="tissue_origin_cui" javaConstant="SAMPLE_TISSUE_ORIGIN_CUI">
+			<dbAlias aliasValue="tissue_origin_cui"/>
+		</dbColumn>
+		<dbColumn columnName="tissue_origin_other" javaConstant="SAMPLE_TISSUE_ORIGIN_OTHER">
+			<dbAlias aliasValue="tissue_origin_other"/>
+		</dbColumn>
+		<dbColumn columnName="buffer_type_cui" javaConstant="SAMPLE_BUFFER_TYPE_CUI">
+			<dbAlias aliasValue="sample_buffer_type_cui"/>
+		</dbColumn>
+		<dbColumn columnName="buffer_type_other" javaConstant="SAMPLE_BUFFER_TYPE_OTHER">
+			<dbAlias aliasValue="sample_buffer_type_other"/>
+		</dbColumn>
+		<dbColumn columnName="total_num_of_cells" javaConstant="SAMPLE_TOTAL_NUM_OF_CELLS">
+			<dbAlias aliasValue="sample_total_num_of_cells"/>
+		</dbColumn>
+		<dbColumn columnName="total_num_of_cells_ex_rep_cui" javaConstant="SAMPLE_TOTAL_NUM_OF_CELLS_EX_REP_CUI">
+			<dbAlias aliasValue="sample_tnoc_ex_rep_cui"/>
+		</dbColumn>
+		<dbColumn columnName="cells_per_ml" javaConstant="SAMPLE_CELLS_PER_ML">
+			<dbAlias aliasValue="sample_cells_per_ml"/>
+		</dbColumn>
+		<dbColumn columnName="percent_viability" javaConstant="SAMPLE_PERCENT_VIABILITY">
+			<dbAlias aliasValue="sample_percent_viability"/>
+		</dbColumn>
+		<dbColumn columnName="source" javaConstant="SAMPLE_SOURCE">
+			<dbAlias aliasValue="sample_source"/>
+		</dbColumn>
+		<dbColumn columnName="concentration" javaConstant="SAMPLE_CONCENTRATION">
+			<dbAlias aliasValue="sample_concentration"/>
+		</dbColumn>
+		<dbColumn columnName="yield" javaConstant="SAMPLE_YIELD">
+			<dbAlias aliasValue="sample_yield"/>
+		</dbColumn>
+		<dbColumn columnName="sample_registration_form" javaConstant="SAMPLE_REG_FORM">
+			<dbAlias aliasValue="sample_reg_form"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="lims_pathology_evaluation" javaConstant="TABLE_LIMS_PE">
+		<dbAlias aliasValue="lims_pe"/>
+		<dbColumn columnName="pe_id" javaConstant="PE_ID">
+			<dbAlias aliasValue="pe_id"/>
+		</dbColumn>
+		<dbColumn columnName="slide_id" javaConstant="LIMS_PE_SLIDE_ID">
+			<dbAlias aliasValue="lims_pe_slide_id"/>
+		</dbColumn>
+		<dbColumn columnName="sample_barcode_id" javaConstant="LIMS_PE_SAMPLE_ID">
+			<dbAlias aliasValue="lims_pe_sample_id"/>
+		</dbColumn>
+		<dbColumn columnName="microscopic_appearance" javaConstant="LIMS_PE_APPEARANCE">
+			<dbAlias aliasValue="microscopic_appearance"/>
+		</dbColumn>
+		<dbColumn columnName="reported_yn" javaConstant="LIMS_PE_REPORTED">
+			<dbAlias aliasValue="reported_yn"/>
+		</dbColumn>
+		<dbColumn columnName="create_type" javaConstant="LIMS_PE_CREATE_TYPE">
+			<dbAlias aliasValue="create_type"/>
+		</dbColumn>
+		<dbColumn columnName="tumor_cells" javaConstant="LIMS_PE_TMR">
+			<dbAlias aliasValue="tumor_cells"/>
+		</dbColumn>
+		<dbColumn columnName="normal_cells" javaConstant="LIMS_PE_NRM">
+			<dbAlias aliasValue="normal_cells"/>
+		</dbColumn>
+		<dbColumn columnName="hypoacellularstroma_cells" javaConstant="LIMS_PE_TAS">
+			<dbAlias aliasValue="hypoacellularstroma_cells"/>
+		</dbColumn>
+		<dbColumn columnName="necrosis_cells" javaConstant="LIMS_PE_NEC">
+			<dbAlias aliasValue="necrosis_cells"/>
+		</dbColumn>
+		<dbColumn columnName="lesion_cells" javaConstant="LIMS_PE_LSN">
+			<dbAlias aliasValue="lesion_cells"/>
+		</dbColumn>
+		<dbColumn columnName="diagnosis_concept_id" javaConstant="LIMS_PE_DX">
+			<dbAlias aliasValue="diagnosis_concept_id"/>
+		</dbColumn>
+		<dbColumn columnName="tissue_origin_concept_id" javaConstant="LIMS_PE_TISSUE_ORIGIN">
+			<dbAlias aliasValue="tissue_origin_concept_id"/>
+		</dbColumn>
+		<dbColumn columnName="migrated_yn" javaConstant="LIMS_PE_MIGRATED">
+			<dbAlias aliasValue="migrated_yn"/>
+		</dbColumn>
+		<dbColumn columnName="tissue_finding_concept_id" javaConstant="LIMS_PE_TISSUE_FINDING">
+			<dbAlias aliasValue="tissue_finding_concept_id"/>
+		</dbColumn>
+		<dbColumn columnName="other_tissue_finding_name" javaConstant="LIMS_PE_OTHER_TISSUE_FINDING">
+			<dbAlias aliasValue="other_tissue_finding_name"/>
+		</dbColumn>
+		<dbColumn columnName="other_diagnosis_name" javaConstant="LIMS_PE_OTHER_DIAGNOSIS">
+			<dbAlias aliasValue="other_diagnosis_name"/>
+		</dbColumn>
+		<dbColumn columnName="other_tissue_origin_name" javaConstant="LIMS_PE_OTHER_TISSUE_ORIGIN">
+			<dbAlias aliasValue="other_tissue_origin_name"/>
+		</dbColumn>
+		<dbColumn columnName="external_comments" javaConstant="LIMS_PE_EXTERNAL_COMMENTS">
+			<dbAlias aliasValue="external_comments"/>
+		</dbColumn>
+		<dbColumn columnName="internal_comments" javaConstant="LIMS_PE_INTERNAL_COMMENTS">
+			<dbAlias aliasValue="internal_comments"/>
+		</dbColumn>
+		<dbColumn columnName="source_pe_id" javaConstant="LIMS_PE_SOURCE_ID">
+			<dbAlias aliasValue="source_pe_id"/>
+		</dbColumn>
+		<dbColumn columnName="cellularstroma_cells" javaConstant="LIMS_PE_TCS">
+			<dbAlias aliasValue="cellularstroma_cells"/>
+		</dbColumn>
+		<dbColumn columnName="reported_date" javaConstant="LIMS_PE_REPORTED_DATE">
+			<dbAlias aliasValue="reported_date"/>
+		</dbColumn>
+		<dbColumn columnName="create_date" javaConstant="LIMS_PE_CREATE_DATE">
+			<dbAlias aliasValue="lims_pe_create_date"/>
+		</dbColumn>
+		<dbColumn columnName="create_user" javaConstant="LIMS_PE_CREATE_USER">
+			<dbAlias aliasValue="lims_pe_create_user"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="lims_incidents" javaConstant="TABLE_LIMS_INCIDENTS">
+		<dbAlias aliasValue="lims_incidents"/>
+		<dbColumn columnName="incident_id" javaConstant="INCIDENT_ID">
+			<dbAlias aliasValue="incident_id"/>
+		</dbColumn>
+		<dbColumn columnName="create_user" javaConstant="LIMS_INCIDENT_CREATE_USER">
+			<dbAlias aliasValue="lims_incident_create_user"/>
+		</dbColumn>
+		<dbColumn columnName="create_date" javaConstant="LIMS_INCIDENT_CREATE_DATE">
+			<dbAlias aliasValue="lims_incident_create_date"/>
+		</dbColumn>
+		<dbColumn columnName="sample_barcode_id" javaConstant="LIMS_INCIDENT_SAMPLE_ID">
+			<dbAlias aliasValue="lims_incident_sample_id"/>
+		</dbColumn>
+		<dbColumn columnName="consent_id" javaConstant="LIMS_INCIDENT_CONSENT_ID">
+			<dbAlias aliasValue="lims_incident_consent_id"/>
+		</dbColumn>
+		<dbColumn columnName="action" javaConstant="LIMS_INCIDENT_ACTION">
+			<dbAlias aliasValue="lims_incident_action"/>
+		</dbColumn>
+		<dbColumn columnName="reason" javaConstant="LIMS_INCIDENT_REASON">
+			<dbAlias aliasValue="lims_incident_reason"/>
+		</dbColumn>
+		<dbColumn columnName="slide_id" javaConstant="LIMS_INCIDENT_SLIDE_ID">
+			<dbAlias aliasValue="lims_incident_slide_id"/>
+		</dbColumn>
+		<dbColumn columnName="pathologist" javaConstant="LIMS_INCIDENT_PATHOLOGIST">
+			<dbAlias aliasValue="lims_incident_pathologist"/>
+		</dbColumn>
+		<dbColumn columnName="re_pv_requestor_code" javaConstant="LIMS_INCIDENT_RE_PV_REQUESTOR_CODE">
+			<dbAlias aliasValue="lims_incident_requestor_code"/>
+		</dbColumn>
+		<dbColumn columnName="action_other" javaConstant="LIMS_INCIDENT_ACTION_OTHER">
+			<dbAlias aliasValue="lims_incident_action_other"/>
+		</dbColumn>
+		<dbColumn columnName="comments" javaConstant="LIMS_INCIDENT_COMMENTS">
+			<dbAlias aliasValue="lims_incident_comments"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="lims_slide" javaConstant="TABLE_SLIDE">
+		<dbAlias aliasValue="slide"/>
+		<dbColumn columnName="slide_id" javaConstant="SLIDE_ID">
+			<dbAlias aliasValue="slide_id"/>
+		</dbColumn>
+		<dbColumn columnName="sample_barcode_id" javaConstant="SLIDE_SAMPLE_ID">
+			<dbAlias aliasValue="lims_slide_sample_id"/>
+		</dbColumn>
+		<dbColumn columnName="create_date" javaConstant="CREATE_DATE">
+			<dbAlias aliasValue="create_date"/>
+		</dbColumn>
+		<dbColumn columnName="destroy_date" javaConstant="DESTROY_DATE">
+			<dbAlias aliasValue="destroy_date"/>
+		</dbColumn>
+		<dbColumn columnName="section_number" javaConstant="SLIDE_SECTION_NUMBER">
+			<dbAlias aliasValue="section_number"/>
+		</dbColumn>
+		<dbColumn columnName="section_level" javaConstant="SLIDE_SECTION_LEVEL">
+			<dbAlias aliasValue="section_level"/>
+		</dbColumn>
+		<dbColumn columnName="current_location" javaConstant="SLIDE_CURRENT_LOCATION">
+			<dbAlias aliasValue="current_location"/>
+		</dbColumn>
+		<dbColumn columnName="create_user" javaConstant="CREATE_USER">
+			<dbAlias aliasValue="create_user"/>
+		</dbColumn>
+		<dbColumn columnName="section_proc" javaConstant="SLIDE_SECTION_PROCEDURE">
+			<dbAlias aliasValue="section_proc"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="pdc_ardais_donor" javaConstant="TABLE_DONOR">
+		<dbAlias aliasValue="donor"/>
+		<dbColumn columnName="gender" javaConstant="DONOR_GENDER">
+			<dbAlias aliasValue="gender"/>
+		</dbColumn>
+		<dbColumn columnName="donor_profile_notes" javaConstant="DONOR_PROFILE_NOTES">
+			<dbAlias aliasValue="donor_profile_notes"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_id" javaConstant="DONOR_ARDAIS_ID">
+			<dbAlias aliasValue="donor_ardais_id"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_acct_key" javaConstant="DONOR_ARDAIS_ACCT_KEY">
+			<dbAlias aliasValue="donor_ardais_acct_key"/>
+		</dbColumn>
+		<dbColumn columnName="imported_yn" javaConstant="DONOR_IMPORTED_YN">
+			<dbAlias aliasValue="donor_imported_yn"/>
+		</dbColumn>
+		<dbColumn columnName="customer_id" javaConstant="DONOR_CUSTOMER_ID">
+			<dbAlias aliasValue="donor_customer_id"/>
+		</dbColumn>
+		<dbColumn columnName="donor_registration_form" javaConstant="DONOR_REG_FORM">
+			<dbAlias aliasValue="donor_reg_form"/>
+		</dbColumn>
+		<dbColumn columnName="race" javaConstant="DONOR_RACE">
+			<dbAlias aliasValue="donor_race"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="pdc_pathology_report" javaConstant="TABLE_PATH">
+		<dbAlias aliasValue="path"/>
+		<dbColumn columnName="additional_note" javaConstant="PATH_ADDITIONAL_NOTE">
+			<dbAlias aliasValue="additional_note"/>
+		</dbColumn>
+		<dbColumn columnName="consent_id" javaConstant="PATH_CONSENT_ID">
+			<dbAlias aliasValue="path_consent_id"/>
+		</dbColumn>
+		<dbColumn columnName="diagnosis_concept_id" javaConstant="PATH_DX"/>
+		<dbColumn columnName="disease_concept_id" javaConstant="PATH_DISEASE">
+			<dbAlias aliasValue="path_disease_concept_id"/>
+		</dbColumn>
+		<dbColumn columnName="path_report_id" javaConstant="PATH_ID">
+			<dbAlias aliasValue="path_report_id"/>
+		</dbColumn>
+		<dbColumn columnName="primary_path_report_section_id" javaConstant="PATH_PRIMARY_SECTION_ID"/>
+		<dbColumn columnName="pathology_ascii_report" javaConstant="PATH_ASCII_REPORT">
+			<dbAlias aliasValue="pathology_ascii_report"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="pdc_path_report_section" javaConstant="TABLE_SECTION">
+		<dbAlias aliasValue="path_section"/>
+		<dbColumn columnName="diagnosis_concept_id" javaConstant="SECTION_DX">
+			<dbAlias aliasValue="ddc_dx"/>
+		</dbColumn>
+		<dbColumn columnName="other_dx_name" javaConstant="SECTION_DX_OTHER">
+			<dbAlias aliasValue="ddc_dx_other"/>
+		</dbColumn>
+		<dbColumn columnName="histological_nuclear_grade" javaConstant="SECTION_HNG">
+			<dbAlias aliasValue="hng"/>
+		</dbColumn>
+		<dbColumn columnName="path_report_section_id" javaConstant="SECTION_ID">
+			<dbAlias aliasValue="path_section_id"/>
+		</dbColumn>
+		<dbColumn columnName="primary_gleason_score" javaConstant="SECTION_GLEASON_PRIMARY">
+			<dbAlias aliasValue="gleason_primary"/>
+		</dbColumn>
+		<dbColumn columnName="secondary_gleason_score" javaConstant="SECTION_GLEASON_SECONDARY">
+			<dbAlias aliasValue="gleason_secondary"/>
+		</dbColumn>
+		<dbColumn columnName="total_gleason_score" javaConstant="SECTION_GLEASON_TOTAL">
+			<dbAlias aliasValue="gleason_total"/>
+		</dbColumn>
+		<dbColumn columnName="lymph_node_stage" javaConstant="SECTION_LYMPH_STAGE">
+			<dbAlias aliasValue="lymph_node_stage"/>
+		</dbColumn>
+		<dbColumn columnName="distant_metastasis" javaConstant="SECTION_METASTASIS">
+			<dbAlias aliasValue="distant_metastasis"/>
+		</dbColumn>
+		<dbColumn columnName="path_report_id" javaConstant="SECTION_PATH_REPORT_ID">
+			<dbAlias aliasValue="section_path_report_id"/>
+		</dbColumn>
+		<dbColumn columnName="primary_ind" javaConstant="SECTION_PRIMARY_IND">
+			<dbAlias aliasValue="primary_ind"/>
+		</dbColumn>
+		<dbColumn columnName="path_section_notes" javaConstant="SECTION_SECTION_NOTES">
+			<dbAlias aliasValue="section_notes"/>
+		</dbColumn>
+		<dbColumn columnName="stage_grouping" javaConstant="SECTION_STAGE_GROUPING">
+			<dbAlias aliasValue="stage_grouping"/>
+		</dbColumn>
+		<dbColumn columnName="tissue_finding_concept_id" javaConstant="SECTION_TISSUE_FINDING">
+			<dbAlias aliasValue="ddc_tissue_finding"/>
+		</dbColumn>
+		<dbColumn columnName="other_finding_tc_name" javaConstant="SECTION_TISSUE_FINDING_OTHER">
+			<dbAlias aliasValue="ddc_tissue_finding_other"/>
+		</dbColumn>
+		<dbColumn columnName="tissue_origin_concept_id" javaConstant="SECTION_TISSUE_ORIGIN">
+			<dbAlias aliasValue="ddc_tissue_origin"/>
+		</dbColumn>
+		<dbColumn columnName="other_origin_tc_name" javaConstant="SECTION_TISSUE_ORIGIN_OTHER">
+			<dbAlias aliasValue="ddc_tissue_origin_other"/>
+		</dbColumn>
+		<dbColumn columnName="tumor_stage_desc" javaConstant="SECTION_TUMOR_STAGE">
+			<dbAlias aliasValue="tumor_stage"/>
+		</dbColumn>
+		<dbColumn columnName="tumor_stage_type" javaConstant="SECTION_TUMOR_STAGE_TYPE">
+			<dbAlias aliasValue="tumor_stage_type"/>
+		</dbColumn>
+		<dbColumn columnName="tumor_size" javaConstant="SECTION_TUMOR_SIZE">
+			<dbAlias aliasValue="tumor_size"/>
+		</dbColumn>
+		<dbColumn columnName="tumor_weight" javaConstant="SECTION_TUMOR_WEIGHT">
+			<dbAlias aliasValue="tumor_weight"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="tma_block_samples" javaConstant="TABLE_TMA_BLOCK_SAMPLES">
+		<dbAlias aliasValue="tma_block_samples"/>
+		<dbColumn columnName="sample_barcode_id" javaConstant="TMA_BLOCK_SAMPLE_ID">
+			<dbAlias aliasValue="tma_block_sample_id"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="rna_batch_detail" javaConstant="TABLE_RNA_BATCH_DETAIL">
+		<dbAlias aliasValue="rna_batch_detail"/>
+		<dbColumn columnName="consent_id" javaConstant="RNA_CONSENT_ID">
+			<dbAlias aliasValue="rna_consent_id"/>
+		</dbColumn>
+		<dbColumn columnName="rnavialid" javaConstant="RNA_RNAVIALID">
+			<dbAlias aliasValue="rnavialid"/>
+		</dbColumn>
+		<dbColumn columnName="prep" javaConstant="RNA_PREP">
+			<dbAlias aliasValue="prep"/>
+		</dbColumn>
+		<dbColumn columnName="sample_barcode_id" javaConstant="RNA_SAMPLE_ID">
+			<dbAlias aliasValue="rna_sample_id"/>
+		</dbColumn>
+		<dbColumn columnName="rnastatus" javaConstant="RNA_STATUS">
+			<dbAlias aliasValue="rna_status"/>
+		</dbColumn>
+		<dbColumn columnName="remainingvolume" javaConstant="RNA_REMAINING_VOLUME">
+			<dbAlias aliasValue="remaining_volume"/>
+		</dbColumn>
+		<dbColumn columnName="concentration" javaConstant="RNA_CONCENTRATION">
+			<dbAlias aliasValue="concentration"/>
+		</dbColumn>
+		<dbColumn columnName="producttype" javaConstant="RNA_PRODUCT_TYPE"/>
+		<dbColumn columnName="pooledtissue" javaConstant="RNA_POOLED_TISSUE">
+			<dbAlias aliasValue="pooledtissue"/>
+		</dbColumn>
+		<dbColumn columnName="case_exhausted" javaConstant="RNA_CASE_EXHAUSTED">
+			<dbAlias aliasValue="case_exhausted"/>
+		</dbColumn>
+		<dbColumn columnName="blocksetid" javaConstant="TMA_BLOCKSETID">
+			<dbAlias aliasValue="blocksetid"/>
+		</dbColumn>
+		<dbColumn columnName="rep_sample" javaConstant="RNA_REP_SAMPLE">
+			<dbAlias aliasValue="rep_sample"/>
+		</dbColumn>
+		<dbColumn columnName="tumor_cells" javaConstant="RNA_PE_TMR">
+			<dbAlias aliasValue="rna_tumor_cells"/>
+		</dbColumn>
+		<dbColumn columnName="lesion_cells" javaConstant="RNA_PE_LSN">
+			<dbAlias aliasValue="rna_lesion_cells"/>
+		</dbColumn>
+		<dbColumn columnName="normal_cells" javaConstant="RNA_PE_NRM">
+			<dbAlias aliasValue="rna_normal_cells"/>
+		</dbColumn>
+		<dbColumn columnName="cellularstroma_cells" javaConstant="RNA_PE_TCS">
+			<dbAlias aliasValue="rna_cellularstroma_cells"/>
+		</dbColumn>
+		<dbColumn columnName="hypoacellularstroma_cells" javaConstant="RNA_PE_TAS">
+			<dbAlias aliasValue="rna_hypoacellularstroma_cells"/>
+		</dbColumn>
+		<dbColumn columnName="necrosis_cells" javaConstant="RNA_PE_NEC">
+			<dbAlias aliasValue="rna_necrosis_cells"/>
+		</dbColumn>
+		<dbColumn columnName="external_comments" javaConstant="RNA_EXTERNAL_COMMENTS">
+			<dbAlias aliasValue="rna_external_comments"/>
+		</dbColumn>
+		<dbColumn columnName="internal_comments" javaConstant="RNA_INTERNAL_COMMENTS">
+			<dbAlias aliasValue="rna_internal_comments"/>
+		</dbColumn>
+		<dbColumn columnName="bms_yn" javaConstant="RNA_BMS_YN">
+			<dbAlias aliasValue="rna_bms_yn"/>
+		</dbColumn>
+		<dbColumn columnName="notes" javaConstant="RNA_NOTES">
+			<dbAlias aliasValue="rna_notes"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="rna_grossextraction" javaConstant="TABLE_RNA_GROSS_EXTRACTION">
+		<dbAlias aliasValue="rna_gross_extraction"/>
+		<dbColumn columnName="rnaquality" javaConstant="RNA_QUALITY">
+			<dbAlias aliasValue="rnaquality"/>
+		</dbColumn>
+		<dbColumn columnName="rnavialid" javaConstant="RNA_GROSS_VIAL_ID">
+			<dbAlias aliasValue="rna_gross_vial_id"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="rna_images" javaConstant="TABLE_RNA_IMAGES">
+		<dbAlias aliasValue="rna_images"/>
+		<dbColumn columnName="imagefilename" javaConstant="RNA_IMAGES_IMAGE_FILE_NAME">
+			<dbAlias aliasValue="imagefilename"/>
+		</dbColumn>
+		<dbColumn columnName="imagetype" javaConstant="RNA_IMAGES_IMAGE_TYPE">
+			<dbAlias aliasValue="imagetype"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="rna_rna_list" javaConstant="TABLE_RNA_LIST">
+		<dbAlias aliasValue="rna_rna_list"/>
+		<dbColumn columnName="requestid" javaConstant="RNA_LIST_REQUEST_ID">
+			<dbAlias aliasValue="rna_list_request_id"/>
+		</dbColumn>
+		<dbColumn columnName="vialtosend" javaConstant="RNA_LIST_VIALTOSEND">
+			<dbAlias aliasValue="vialtosend"/>
+		</dbColumn>
+		<dbColumn columnName="vialtouse" javaConstant="RNA_LIST_VIALTOUSE">
+			<dbAlias aliasValue="vialtouse"/>
+		</dbColumn>
+		<dbColumn columnName="volume" javaConstant="RNA_LIST_VOLUME">
+			<dbAlias aliasValue="volume"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="rna_pool_tissue" javaConstant="TABLE_RNA_POOL_TISSUE">
+		<dbAlias aliasValue="rna_pool_tissue"/>
+		<dbColumn columnName="sample_barcode_id" javaConstant="RNA_POOL_SAMPLE_ID">
+			<dbAlias aliasValue="rna_pool_sample_id"/>
+		</dbColumn>
+		<dbColumn columnName="rnavialid" javaConstant="RNA_POOL_VIAL_ID">
+			<dbAlias aliasValue="rna_pool_vial_id"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="rna_hold_amount_v" javaConstant="TABLE_RNA_HOLD_AMOUNT">
+		<dbAlias aliasValue="rna_hold_amount"/>
+		<dbColumn columnName="hold_amt" javaConstant="RNA_HOLD_AMOUNT">
+			<dbAlias aliasValue="hold_amt"/>
+		</dbColumn>
+		<dbColumn columnName="rnavialid" javaConstant="RNA_HOLD_VIAL_ID">
+			<dbAlias aliasValue="rna_hold_vial_id"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="rna_project" javaConstant="TABLE_RNA_PROJECT">
+		<dbAlias aliasValue="rna_project"/>
+		<dbColumn columnName="project" javaConstant="RNA_PROJECT">
+			<dbAlias aliasValue="rna_project"/>
+		</dbColumn>
+		<dbColumn columnName="requestid" javaConstant="RNA_REQUEST_ID">
+			<dbAlias aliasValue="rna_request_id"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="rna_bioanalyser" javaConstant="TABLE_RNA_BIOANALYSER">
+		<dbAlias aliasValue="rna_bioanalyser"/>
+		<dbColumn columnName="ratio" javaConstant="RNA_BIORATIO">
+			<dbAlias aliasValue="bio_ratio"/>
+		</dbColumn>
+		<dbColumn columnName="rnavialid" javaConstant="RNA_BIO_VIAL_ID">
+			<dbAlias aliasValue="rna_bio_vial_id"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="ads_imaget_syn" javaConstant="TABLE_IMAGES">
+		<dbAlias aliasValue="ads_imaget_syn"/>
+		<dbColumn columnName="imageid" javaConstant="IMAGES_IMAGE_ID">
+			<dbAlias aliasValue="images_imageid"/>
+		</dbColumn>
+		<dbColumn columnName="imagefilename" javaConstant="IMAGES_IMAGE_FILE_NAME">
+			<dbAlias aliasValue="images_imagefilename"/>
+		</dbColumn>
+		<dbColumn columnName="slideid" javaConstant="IMAGES_SLIDE_ID">
+			<dbAlias aliasValue="images_slideid"/>
+		</dbColumn>
+		<dbColumn columnName="username" javaConstant="IMAGES_USERNAME">
+			<dbAlias aliasValue="images_username"/>
+		</dbColumn>
+		<dbColumn columnName="imagetype" javaConstant="IMAGES_IMAGE_TYPE">
+			<dbAlias aliasValue="images_imagetype"/>
+		</dbColumn>
+		<dbColumn columnName="magnification" javaConstant="IMAGES_MAGNIFICATION">
+			<dbAlias aliasValue="images_magnification"/>
+		</dbColumn>
+		<dbColumn columnName="bestimage" javaConstant="IMAGES_BEST_IMAGE">
+			<dbAlias aliasValue="images_bestimage"/>
+		</dbColumn>
+		<dbColumn columnName="capturedate" javaConstant="IMAGES_CAPTURE_DATE">
+			<dbAlias aliasValue="images_capturedate"/>
+		</dbColumn>
+		<dbColumn columnName="imagenotes" javaConstant="IMAGES_IMAGE_NOTES">
+			<dbAlias aliasValue="images_imagenotes"/>
+		</dbColumn>
+		<dbColumn columnName="imagepath" javaConstant="IMAGES_IMAGE_PATH">
+			<dbAlias aliasValue="images_imagepath"/>
+		</dbColumn>
+		<dbColumn columnName="tnailpath" javaConstant="IMAGES_THUMBNAIL_PATH">
+			<dbAlias aliasValue="images_tnailpath"/>
+		</dbColumn>
+		<dbColumn columnName="overlay" javaConstant="IMAGES_OVERLAY">
+			<dbAlias aliasValue="images_overlay"/>
+		</dbColumn>
+		<dbColumn columnName="imageonreport" javaConstant="IMAGES_IMAGE_ON_REPORT">
+			<dbAlias aliasValue="images_imageonreport"/>
+		</dbColumn>
+		<dbColumn columnName="searchqry" javaConstant="IMAGES_SEARCH_QRY">
+			<dbAlias aliasValue="images_searchqry"/>
+		</dbColumn>
+		<dbColumn columnName="pathologist_id" javaConstant="IMAGES_PATHOLOGIST_ID">
+			<dbAlias aliasValue="images_pathologist_id"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="pts_project" javaConstant="TABLE_PTS_PROJECT">
+		<dbAlias aliasValue="pts_project"/>
+		<dbColumn columnName="projectname" javaConstant="PROJECT_NAME">
+			<dbAlias aliasValue="projectname"/>
+		</dbColumn>
+		<dbColumn columnName="projectid" javaConstant="PROJECT_ID">
+			<dbAlias aliasValue="projectid"/>
+		</dbColumn>
+		<dbColumn columnName="daterequested" javaConstant="PROJECT_DATE_REQUESTED">
+			<dbAlias aliasValue="project_date_requested"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="pts_sample" javaConstant="TABLE_PTS_SAMPLE">
+		<dbAlias aliasValue="pts_sample"/>
+		<dbColumn columnName="sample_barcode_id" javaConstant="PTS_SAMPLE_ID">
+			<dbAlias aliasValue="pts_sample_barcode_id"/>
+		</dbColumn>
+		<dbColumn columnName="projectid" javaConstant="PTS_SAMPLE_PROJECT_ID">
+			<dbAlias aliasValue="pts_sample_projectid"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="es_shopping_cart_detail" javaConstant="TABLE_SHOPPING_CART_DETAIL">
+		<dbAlias aliasValue="shopping_cart_detail"/>
+		<dbColumn columnName="shopping_cart_id" javaConstant="SHOPPING_CART_ID">
+			<dbAlias aliasValue="shopping_cart_id"/>
+		</dbColumn>
+		<dbColumn columnName="barcode_id" javaConstant="SHOPPING_CART_SAMPLE_ID">
+			<dbAlias aliasValue="shopping_cart_sample_id"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_user_id" javaConstant="SHOPPING_CART_USER_ID">
+			<dbAlias aliasValue="shopping_cart_user_id"/>
+		</dbColumn>
+		<dbColumn columnName="creation_dt" javaConstant="SHOPPING_CART_CREATION_DATE">
+			<dbAlias aliasValue="shopping_cart_creation_dt"/>
+		</dbColumn>
+		<dbColumn columnName="quantity" javaConstant="SHOPPING_CART_AMOUNT">
+			<dbAlias aliasValue="shopping_cart_amount"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="es_shopping_cart" javaConstant="TABLE_SHOPPING_CART">
+		<dbAlias aliasValue="shopping_cart"/>
+	</dbTable>
+	<dbTable tableName="es_ardais_order" javaConstant="TABLE_ORDER">
+		<dbAlias aliasValue="es_ardais_order"/>
+		<dbColumn columnName="order_number" javaConstant="ORDER_NUMBER">
+			<dbAlias aliasValue="order_number"/>
+		</dbColumn>
+		<dbColumn columnName="order_description" javaConstant="ORDER_DESCRIPTION">
+			<dbAlias aliasValue="order_description"/>
+		</dbColumn>
+		<dbColumn columnName="order_status" javaConstant="ORDER_STATUS">
+			<dbAlias aliasValue="order_status"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_user_id" javaConstant="ORDER_USER_ID">
+			<dbAlias aliasValue="order_user_id"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="es_order_line" javaConstant="TABLE_ORDER_LINE">
+		<dbAlias aliasValue="es_order_line"/>
+		<dbColumn columnName="order_number" javaConstant="LINE_ORDER_NUMBER">
+			<dbAlias aliasValue="line_order_number"/>
+		</dbColumn>
+		<dbColumn columnName="barcode_id" javaConstant="LINE_SAMPLE_ID">
+			<dbAlias aliasValue="line_barcode_id"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="es_ardais_user" javaConstant="TABLE_ARDAIS_USER">
+		<dbAlias aliasValue="es_ardais_user"/>
+		<dbColumn columnName="ardais_user_id" javaConstant="ARDAIS_USER_ID">
+			<dbAlias aliasValue="ardais_user_id"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_acct_key" javaConstant="USER_ACCT_KEY">
+			<dbAlias aliasValue="user_acct_key"/>
+		</dbColumn>
+		<dbColumn columnName="user_firstname" javaConstant="ARDAIS_USER_USER_FIRSTNAME">
+			<dbAlias aliasValue="ardais_user_user_firstname"/>
+		</dbColumn>
+		<dbColumn columnName="user_lastname" javaConstant="ARDAIS_USER_USER_LASTNAME">
+			<dbAlias aliasValue="ardais_user_user_lastname"/>
+		</dbColumn>
+		<dbColumn columnName="user_active_ind" javaConstant="ARDAIS_USER_USER_ACTIVE_IND">
+			<dbAlias aliasValue="ardais_user_user_active_ind"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="ard_logical_repos" javaConstant="TABLE_LOGICAL_REPOS">
+		<dbAlias aliasValue="ard_logical_repos"/>
+		<dbColumn columnName="id" javaConstant="LOGICAL_REPOS_ID">
+			<dbAlias aliasValue="logical_repos_id"/>
+		</dbColumn>
+		<dbColumn columnName="full_name" javaConstant="LOGICAL_REPOS_FULL_NAME">
+			<dbAlias aliasValue="logical_repos_full_name"/>
+		</dbColumn>
+		<dbColumn columnName="short_name" javaConstant="LOGICAL_REPOS_SHORT_NAME">
+			<dbAlias aliasValue="logical_repos_short_name"/>
+		</dbColumn>
+		<dbColumn columnName="bms_yn" javaConstant="LOGICAL_REPOS_BMS_YN">
+			<dbAlias aliasValue="logical_repos_bms_yn"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="ard_logical_repos_item" javaConstant="TABLE_LOGICAL_REPOS_ITEM">
+		<dbAlias aliasValue="ard_logical_repos_item"/>
+		<dbColumn columnName="id" javaConstant="LOGICAL_REPOS_ITEM_ID">
+			<dbAlias aliasValue="logical_repos_item_id"/>
+		</dbColumn>
+		<dbColumn columnName="repository_id" javaConstant="LOGICAL_REPOS_ITEM_REPOSITORY_ID">
+			<dbAlias aliasValue="logical_repos_item_repos_id"/>
+		</dbColumn>
+		<dbColumn columnName="item_id" javaConstant="LOGICAL_REPOS_ITEM_ITEM_ID">
+			<dbAlias aliasValue="logical_repos_item_item_id"/>
+		</dbColumn>
+		<dbColumn columnName="item_type" javaConstant="LOGICAL_REPOS_ITEM_ITEM_TYPE">
+			<dbAlias aliasValue="logical_repos_item_item_type"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="ard_logical_repos_user" javaConstant="TABLE_LOGICAL_REPOS_USER">
+		<dbAlias aliasValue="ard_logical_repos_user"/>
+		<dbColumn columnName="id" javaConstant="LOGICAL_REPOS_USER_ID">
+			<dbAlias aliasValue="logical_repos_user_id"/>
+		</dbColumn>
+		<dbColumn columnName="repository_id" javaConstant="LOGICAL_REPOS_USER_REPOSITORY_ID">
+			<dbAlias aliasValue="logical_repos_user_repos_id"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_user_id" javaConstant="LOGICAL_REPOS_USER_USER_ID">
+			<dbAlias aliasValue="logical_repos_user_user_id"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="iltds_request" javaConstant="TABLE_ILTDS_REQUEST">
+		<dbAlias aliasValue="iltds_request"/>
+		<dbColumn columnName="request_id" javaConstant="REQUEST_REQUEST_ID">
+			<dbAlias aliasValue="request_request_id"/>
+		</dbColumn>
+		<dbColumn columnName="create_date" javaConstant="REQUEST_CREATE_DATE">
+			<dbAlias aliasValue="request_create_date"/>
+		</dbColumn>
+		<dbColumn columnName="state" javaConstant="REQUEST_STATE">
+			<dbAlias aliasValue="request_state"/>
+		</dbColumn>
+		<dbColumn columnName="closed_yn" javaConstant="REQUEST_CLOSED_YN">
+			<dbAlias aliasValue="request_closed_yn"/>
+		</dbColumn>
+		<dbColumn columnName="requester_user_id" javaConstant="REQUEST_REQUESTER_USER_ID">
+			<dbAlias aliasValue="request_requester_user_id"/>
+		</dbColumn>
+		<dbColumn columnName="requester_comments" javaConstant="REQUEST_REQUESTER_COMMENTS">
+			<dbAlias aliasValue="request_requester_comments"/>
+		</dbColumn>
+		<dbColumn columnName="destination_id" javaConstant="REQUEST_DESTINATION_ID">
+			<dbAlias aliasValue="request_destination_id"/>
+		</dbColumn>
+		<dbColumn columnName="request_mgr_comments" javaConstant="REQUEST_REQUEST_MGR_COMMENTS">
+			<dbAlias aliasValue="request_request_mgr_comments"/>
+		</dbColumn>
+		<dbColumn columnName="request_type" javaConstant="REQUEST_REQUEST_TYPE">
+			<dbAlias aliasValue="request_request_type"/>
+		</dbColumn>
+		<dbColumn columnName="deliver_to_user_id" javaConstant="REQUEST_DELIVER_TO_USER_ID">
+			<dbAlias aliasValue="request_deliver_to_user_id"/>
+		</dbColumn>
+		<dbColumn columnName="ship_to_addr_id" javaConstant="REQUEST_SHIP_TO_ADDR_ID">
+			<dbAlias aliasValue="request_ship_to_addr_id"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="iltds_request_box" javaConstant="TABLE_ILTDS_REQUEST_BOX">
+		<dbAlias aliasValue="iltds_request_box"/>
+		<dbColumn columnName="id" javaConstant="REQUEST_BOX_ID">
+			<dbAlias aliasValue="request_box_id"/>
+		</dbColumn>
+		<dbColumn columnName="request_id" javaConstant="REQUEST_BOX_REQUEST_ID">
+			<dbAlias aliasValue="request_box_request_id"/>
+		</dbColumn>
+		<dbColumn columnName="box_barcode_id" javaConstant="REQUEST_BOX_BOX_BARCODE_ID">
+			<dbAlias aliasValue="request_box_box_barcode_id"/>
+		</dbColumn>
+		<dbColumn columnName="box_order" javaConstant="REQUEST_BOX_BOX_ORDER">
+			<dbAlias aliasValue="request_box_box_order"/>
+		</dbColumn>
+		<dbColumn columnName="shipped_yn" javaConstant="REQUEST_BOX_SHIPPED_YN">
+			<dbAlias aliasValue="request_box_shipped_yn"/>
+		</dbColumn>
+		<dbColumn columnName="box_contents" javaConstant="REQUEST_BOX_BOX_CONTENTS">
+			<dbAlias aliasValue="request_box_box_contents"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="iltds_request_item" javaConstant="TABLE_ILTDS_REQUEST_ITEM">
+		<dbAlias aliasValue="iltds_request_item"/>
+		<dbColumn columnName="id" javaConstant="REQUEST_ITEM_ID">
+			<dbAlias aliasValue="request_item_id"/>
+		</dbColumn>
+		<dbColumn columnName="request_id" javaConstant="REQUEST_ITEM_REQUEST_ID">
+			<dbAlias aliasValue="request_item_request_id"/>
+		</dbColumn>
+		<dbColumn columnName="item_id" javaConstant="REQUEST_ITEM_ITEM_ID">
+			<dbAlias aliasValue="request_item_item_id"/>
+		</dbColumn>
+		<dbColumn columnName="item_type" javaConstant="REQUEST_ITEM_ITEM_TYPE">
+			<dbAlias aliasValue="request_item_item_type"/>
+		</dbColumn>
+		<dbColumn columnName="item_order" javaConstant="REQUEST_ITEM_ITEM_ORDER">
+			<dbAlias aliasValue="request_item_item_order"/>
+		</dbColumn>
+		<dbColumn columnName="fulfilled_yn" javaConstant="REQUEST_ITEM_FULFILLED_YN">
+			<dbAlias aliasValue="request_item_fulfilled_yn"/>
+		</dbColumn>
+		<dbColumn columnName="box_barcode_id" javaConstant="REQUEST_ITEM_BOX_BARCODE_ID">
+			<dbAlias aliasValue="request_item_box_barcode_id"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="ard_urls" javaConstant="TABLE_ARD_URLS">
+		<dbAlias aliasValue="ard_urls"/>
+		<dbColumn columnName="id" javaConstant="ARD_URLS_ID">
+			<dbAlias aliasValue="ard_urls_id"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_acct_key" javaConstant="ARD_URLS_ACCT_KEY">
+			<dbAlias aliasValue="ard_urls_acct_key"/>
+		</dbColumn>
+		<dbColumn columnName="object_type" javaConstant="ARD_URLS_OBJECT_TYPE">
+			<dbAlias aliasValue="ard_urls_object_type"/>
+		</dbColumn>
+		<dbColumn columnName="url" javaConstant="ARD_URLS_URL">
+			<dbAlias aliasValue="ard_urls_url"/>
+		</dbColumn>
+		<dbColumn columnName="label" javaConstant="ARD_URLS_LABEL">
+			<dbAlias aliasValue="ard_urls_label"/>
+		</dbColumn>
+		<dbColumn columnName="target" javaConstant="ARD_URLS_TARGET">
+			<dbAlias aliasValue="ard_urls_target"/>
+		</dbColumn>
+	</dbTable>
+    <dbTable tableName="pdc_path_report_diagnostics" javaConstant="TABLE_PATH_REPORT_DIAGNOSTICS">
+		<dbAlias aliasValue="path_diagnostics"/>
+		<dbColumn columnName="path_report_id" javaConstant="DIAGNOSTICS_PATH_REPORT_ID">
+			<dbAlias aliasValue="diagnostics_path_report_id"/>
+		</dbColumn>
+		<dbColumn columnName="diagnostics_concept_id" javaConstant="DIAGNOSTICS_CONCEPT_ID">
+			<dbAlias aliasValue="path_diagnostics_concept_id"/>
+		</dbColumn>
+		<dbColumn columnName="diagnostic_results_cid" javaConstant="DIAGNOSTIC_RESULTS_CID">
+			<dbAlias aliasValue="diagnostic_results_cid"/>
+		</dbColumn>
+		<dbColumn columnName="diagnostic_type" javaConstant="DIAGNOSTIC_TYPE">
+			<dbAlias aliasValue="diagnostic_type"/>
+		</dbColumn>
+    </dbTable>
+	<dbTable tableName="ard_policy" javaConstant="TABLE_ARD_POLICY">
+		<dbAlias aliasValue="policy"/>
+		<dbColumn columnName="id" javaConstant="POLICY_ID">
+			<dbAlias aliasValue="policy_id"/>
+		</dbColumn>
+		<dbColumn columnName="name" javaConstant="POLICY_NAME">
+			<dbAlias aliasValue="policy_name"/>
+		</dbColumn>
+		<dbColumn columnName="allocation_denominator" javaConstant="POLICY_ALLOCATION_DENOMINATOR">
+			<dbAlias aliasValue="policy_allocation_denominator"/>
+		</dbColumn>
+		<dbColumn columnName="allocation_numerator" javaConstant="POLICY_ALLOCATION_NUMERATOR">
+			<dbAlias aliasValue="policy_allocation_numerator"/>
+		</dbColumn>
+		<dbColumn columnName="allocation_format_cid" javaConstant="POLICY_ALLOCATION_FORMAT_CID">
+			<dbAlias aliasValue="policy_allocation_format_cid"/>
+		</dbColumn>
+		<dbColumn columnName="default_logical_repos_id" javaConstant="POLICY_DEFAULT_LOGICAL_REPOS_ID">
+			<dbAlias aliasValue="policy_default_log_repos_id"/>
+		</dbColumn>
+		<dbColumn columnName="restricted_logical_repos_id" javaConstant="POLICY_RESTRICTED_LOGICAL_REPOS_ID">
+			<dbAlias aliasValue="policy_restricted_log_repos_id"/>
+		</dbColumn>
+		<dbColumn columnName="consent_verify_required_yn" javaConstant="POLICY_CONSENT_VERIFY_REQUIRED">
+			<dbAlias aliasValue="policy_consent_verify_required"/>
+		</dbColumn>
+		<dbColumn columnName="case_release_required_yn" javaConstant="POLICY_CASE_RELEASE_REQUIRED">
+			<dbAlias aliasValue="policy_case_release_required"/>
+		</dbColumn>
+		<dbColumn columnName="additional_questions_grpcode" javaConstant="POLICY_ADDITIONAL_QUESTIONS_GRP">
+			<dbAlias aliasValue="policy_additional_questions_grp"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_acct_key" javaConstant="POLICY_ARDAIS_ACCT_KEY">
+			<dbAlias aliasValue="policy_ardais_acct_key"/>
+		</dbColumn>
+		<dbColumn columnName="allow_for_unlinked_yn" javaConstant="POLICY_ALLOW_FOR_UNLINKED_YN">
+			<dbAlias aliasValue="policy_allow_for_unlinked_yn"/>
+		</dbColumn>
+		<dbColumn columnName="policy_data_encoding" javaConstant="POLICY_POLICY_DATA_ENCODING">
+			<dbAlias aliasValue="policy_policy_data_encoding"/>
+		</dbColumn>
+		<dbColumn columnName="policy_data" javaConstant="POLICY_POLICY_DATA">
+			<dbAlias aliasValue="policy_policy_data"/>
+		</dbColumn>
+		<dbColumn columnName="case_registration_form" javaConstant="POLICY_CASE_REGISTRATION_FORM">
+			<dbAlias aliasValue="policy_case_registration_form"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="es_ardais_irb" javaConstant="TABLE_IRB">
+		<dbAlias aliasValue="irb"/>
+		<dbColumn columnName="ardais_acct_key" javaConstant="IRB_ARDAIS_ACCT_KEY">
+			<dbAlias aliasValue="irb_ardais_acct_key"/>
+		</dbColumn>
+		<dbColumn columnName="irbprotocol_id" javaConstant="IRB_PROTOCOL_ID">
+			<dbAlias aliasValue="irb_protocol_id"/>
+		</dbColumn>
+		<dbColumn columnName="irbprotocol" javaConstant="IRB_PROTOCOL">
+			<dbAlias aliasValue="irb_protocol"/>
+		</dbColumn>
+		<dbColumn columnName="policy_id" javaConstant="IRB_POLICY_ID">
+			<dbAlias aliasValue="irb_policy_id"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="iltds_box_layout" javaConstant="TABLE_BOX_LAYOUT">
+		<dbAlias aliasValue="ly"/>
+		<dbColumn columnName="box_layout_id" javaConstant="LY_BOX_LAYOUT_ID">
+			<dbAlias aliasValue="ly_box_layout_id"/>
+		</dbColumn>
+		<dbColumn columnName="number_of_columns" javaConstant="LY_NUMBER_OF_COLUMNS">
+			<dbAlias aliasValue="ly_number_of_columns"/>
+		</dbColumn>
+		<dbColumn columnName="number_of_rows" javaConstant="LY_NUMBER_OF_ROWS">
+			<dbAlias aliasValue="ly_number_of_rows"/>
+		</dbColumn>
+		<dbColumn columnName="x_axis_label_cid" javaConstant="LY_X_AXIS_LABEL_CID">
+			<dbAlias aliasValue="ly_x_axis_label_cid"/>
+		</dbColumn>
+		<dbColumn columnName="y_axis_label_cid" javaConstant="LY_Y_AXIS_LABEL_CID">
+			<dbAlias aliasValue="ly_y_axis_label_cid"/>
+		</dbColumn>
+		<dbColumn columnName="tab_index_cid" javaConstant="LY_TAB_INDEX_CID">
+			<dbAlias aliasValue="ly_tab_index_cid"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="iltds_account_box_layout" javaConstant="TABLE_ACCOUNT_BOX_LAYOUT">
+		<dbAlias aliasValue="acct_ly"/>
+		<dbColumn columnName="id" javaConstant="ACCT_LY_ID">
+			<dbAlias aliasValue="acct_ly_id"/>
+		</dbColumn>
+		<dbColumn columnName="box_layout_name" javaConstant="ACCT_LY_BOX_LAYOUT_NAME">
+			<dbAlias aliasValue="acct_ly_box_layout_name"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_acct_key" javaConstant="ACCT_LY_ARDAIS_ACCT_KEY">
+			<dbAlias aliasValue="acct_ly_ardais_acct_key"/>
+		</dbColumn>
+		<dbColumn columnName="box_layout_id" javaConstant="ACCT_LY_BOX_LAYOUT_ID">
+			<dbAlias aliasValue="acct_ly_box_layout_id"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="es_ardais_account" javaConstant="TABLE_ARDAIS_ACCOUNT">
+		<dbAlias aliasValue="account"/>
+		<dbColumn columnName="ardais_acct_key" javaConstant="ACCOUNT_KEY">
+			<dbAlias aliasValue="acct_key"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_acct_type" javaConstant="ACCOUNT_TYPE">
+			<dbAlias aliasValue="acct_type"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_acct_status" javaConstant="ACCOUNT_STATUS">
+			<dbAlias aliasValue="acct_status"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_acct_company_desc" javaConstant="ACCOUNT_NAME">
+			<dbAlias aliasValue="acct_name"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_parent_acct_comp_desc" javaConstant="ACCOUNT_PARENT_NAME">
+			<dbAlias aliasValue="acct_parent_name"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_acct_open_date" javaConstant="ACCOUNT_OPEN_DATE">
+			<dbAlias aliasValue="acct_open_date"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_acct_active_date" javaConstant="ACCOUNT_ACTIVE_DATE">
+			<dbAlias aliasValue="acct_active_date"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_acct_close_date" javaConstant="ACCOUNT_CLOSE_DATE">
+			<dbAlias aliasValue="acct_close_date"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_acct_deactivate_date" javaConstant="ACCOUNT_DEACTIVATE_DATE">
+			<dbAlias aliasValue="acct_deactivate_date"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_acct_deactivate_reason" javaConstant="ACCOUNT_DEACTIVATE_REASON">
+			<dbAlias aliasValue="acct_deactivate_reason"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_acct_reactivate_date" javaConstant="ACCOUNT_REACTIVATE_DATE">
+			<dbAlias aliasValue="acct_reactivate_date"/>
+		</dbColumn>
+		<dbColumn columnName="primary_location" javaConstant="ACCOUNT_PRIMARY_LOCATION">
+			<dbAlias aliasValue="acct_primary_location"/>
+		</dbColumn>
+		<dbColumn columnName="brand_id" javaConstant="ACCOUNT_BRAND_ID">
+			<dbAlias aliasValue="acct_brand_id"/>
+		</dbColumn>
+		<dbColumn columnName="request_mgr_email_address" javaConstant="ACCOUNT_REQ_MGR_EMAIL">
+			<dbAlias aliasValue="acct_req_mgr_email"/>
+		</dbColumn>
+		<dbColumn columnName="linked_cases_only_yn" javaConstant="ACCOUNT_LINKED_CASES_ONLY_YN">
+			<dbAlias aliasValue="acct_linked_cases_only_yn"/>
+		</dbColumn>
+		<dbColumn columnName="password_policy_cid" javaConstant="ACCOUNT_PASSWORD_POLICY_CID">
+			<dbAlias aliasValue="acct_password_policy_cid"/>
+		</dbColumn>
+		<dbColumn columnName="password_life_span" javaConstant="ACCOUNT_PASSWORD_LIFE_SPAN">
+			<dbAlias aliasValue="acct_password_life_span"/>
+		</dbColumn>
+		<dbColumn columnName="default_box_layout_id" javaConstant="ACCOUNT_DEFAULT_BOX_LAYOUT_ID">
+			<dbAlias aliasValue="acct_default_box_layout_id"/>
+		</dbColumn>
+		<dbColumn columnName="account_data" javaConstant="ACCOUNT_ACCOUNT_DATA">
+			<dbAlias aliasValue="acct_account_data"/>
+		</dbColumn>
+		<dbColumn columnName="account_data_encoding" javaConstant="ACCOUNT_ACCOUNT_DATA_ENCODING">
+			<dbAlias aliasValue="acct_account_data_encoding"/>
+		</dbColumn>
+		<dbColumn columnName="contact_phone_number" javaConstant="ACCOUNT_CONTACT_PHONE_NUMBER">
+			<dbAlias aliasValue="acct_contact_phone_number"/>
+		</dbColumn>
+		<dbColumn columnName="contact_phone_ext" javaConstant="ACCOUNT_CONTACT_PHONE_EXT">
+			<dbAlias aliasValue="acct_contact_phone_ext"/>
+		</dbColumn>
+		<dbColumn columnName="contact_fax_number" javaConstant="ACCOUNT_CONTACT_FAX_NUMBER">
+			<dbAlias aliasValue="acct_contact_fax_number"/>
+		</dbColumn>
+		<dbColumn columnName="contact_email_address" javaConstant="ACCOUNT_CONTACT_EMAIL_ADDRESS">
+			<dbAlias aliasValue="acct_contact_email_address"/>
+		</dbColumn>
+		<dbColumn columnName="contact_address_id" javaConstant="ACCOUNT_CONTACT_ADDRESS_ID">
+			<dbAlias aliasValue="acct_contact_address_id"/>
+		</dbColumn>
+		<dbColumn columnName="contact_mobile_number" javaConstant="ACCOUNT_CONTACT_MOBILE_NUMBER">
+			<dbAlias aliasValue="acct_contact_mobile_number"/>
+		</dbColumn>
+		<dbColumn columnName="contact_pager_number" javaConstant="ACCOUNT_CONTACT_PAGER_NUMBER">
+			<dbAlias aliasValue="acct_contact_pager_number"/>
+		</dbColumn>
+		<dbColumn columnName="donor_registration_form" javaConstant="ACCOUNT_DONOR_REGISTRATION_FORM">
+			<dbAlias aliasValue="acct_donor_registration_form"/>
+		</dbColumn>
+		<dbColumn columnName="sample_aliases_unique_yn" javaConstant="ACCOUNT_SAMPLE_ALIASES_UNIQUE_YN">
+			<dbAlias aliasValue="acct_sample_aliases_unique_yn"/>
+		</dbColumn>
+		<dbColumn columnName="sample_aliases_required_yn" javaConstant="ACCOUNT_SAMPLE_ALIASES_REQUIRED_YN">
+			<dbAlias aliasValue="acct_sample_aliases_required_yn"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="ardais_address" javaConstant="TABLE_ARDAIS_ADDRESS">
+		<dbAlias aliasValue="address"/>
+		<dbColumn columnName="address_id" javaConstant="ADDRESS_ADDRESS_ID">
+			<dbAlias aliasValue="address_address_id"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_acct_key" javaConstant="ADDRESS_ACCOUNT_KEY">
+			<dbAlias aliasValue="address_acct_key"/>
+		</dbColumn>
+		<dbColumn columnName="address_type" javaConstant="ADDRESS_ADDRESS_TYPE">
+			<dbAlias aliasValue="address_address_type"/>
+		</dbColumn>
+		<dbColumn columnName="address_1" javaConstant="ADDRESS_ADDRESS_1">
+			<dbAlias aliasValue="address_address_1"/>
+		</dbColumn>
+		<dbColumn columnName="address_2" javaConstant="ADDRESS_ADDRESS_2">
+			<dbAlias aliasValue="address_address_2"/>
+		</dbColumn>
+		<dbColumn columnName="addr_city" javaConstant="ADDRESS_CITY">
+			<dbAlias aliasValue="address_city"/>
+		</dbColumn>
+		<dbColumn columnName="addr_state" javaConstant="ADDRESS_STATE">
+			<dbAlias aliasValue="address_state"/>
+		</dbColumn>
+		<dbColumn columnName="addr_zip_code" javaConstant="ADDRESS_ZIP_CODE">
+			<dbAlias aliasValue="address_zip_code"/>
+		</dbColumn>
+		<dbColumn columnName="addr_country" javaConstant="ADDRESS_COUNTRY">
+			<dbAlias aliasValue="address_country"/>
+		</dbColumn>
+		<dbColumn columnName="first_name" javaConstant="ADDRESS_FIRST_NAME">
+			<dbAlias aliasValue="address_first_name"/>
+		</dbColumn>
+		<dbColumn columnName="last_name" javaConstant="ADDRESS_LAST_NAME">
+			<dbAlias aliasValue="address_last_name"/>
+		</dbColumn>
+		<dbColumn columnName="middle_name" javaConstant="ADDRESS_MIDDLE_NAME">
+			<dbAlias aliasValue="address_middle_name"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="iltds_shipping_partners" javaConstant="TABLE_ILTDS_SHIPPING_PARTNERS">
+		<dbAlias aliasValue="isp"/>
+		<dbColumn columnName="id" javaConstant="SHIPPING_PARTNER_ID">
+			<dbAlias aliasValue="sp_id"/>
+		</dbColumn>
+		<dbColumn columnName="ardais_acct_key" javaConstant="SHIPPING_PARTNER_ARDAIS_ACCT_KEY">
+			<dbAlias aliasValue="sp_ardais_acct_key"/>
+		</dbColumn>
+		<dbColumn columnName="destination_id" javaConstant="SHIPPING_PARTNER_DESTINATION_ID">
+			<dbAlias aliasValue="sp_destination_id"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="iltds_geography_location" javaConstant="TABLE_ILTDS_GEOGRAPHY_LOCATION">
+		<dbAlias aliasValue="igl"/>
+		<dbColumn columnName="location_address_id" javaConstant="LOCATION_ADDRESS_ID">
+			<dbAlias aliasValue="gl_location_address_id"/>
+		</dbColumn>
+		<dbColumn columnName="location_name" javaConstant="LOCATION_NAME">
+			<dbAlias aliasValue="gl_location_name"/>
+		</dbColumn>
+		<dbColumn columnName="location_address_1" javaConstant="LOCATION_ADDRESS_1">
+			<dbAlias aliasValue="gl_location_address_1"/>
+		</dbColumn>
+		<dbColumn columnName="location_address_2" javaConstant="LOCATION_ADDRESS_2">
+			<dbAlias aliasValue="gl_location_address_2"/>
+		</dbColumn>
+		<dbColumn columnName="location_city" javaConstant="LOCATION_CITY">
+			<dbAlias aliasValue="gl_location_city"/>
+		</dbColumn>
+		<dbColumn columnName="location_state" javaConstant="LOCATION_STATE">
+			<dbAlias aliasValue="gl_location_state"/>
+		</dbColumn>
+		<dbColumn columnName="location_zip" javaConstant="LOCATION_ZIP">
+			<dbAlias aliasValue="gl_location_zip"/>
+		</dbColumn>
+		<dbColumn columnName="location_country" javaConstant="LOCATION_COUNTRY">
+			<dbAlias aliasValue="gl_location_country"/>
+		</dbColumn>
+		<dbColumn columnName="location_phone" javaConstant="LOCATION_PHONE">
+			<dbAlias aliasValue="gl_location_phone"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="iltds_sample_box" javaConstant="TABLE_ILTDS_SAMPLE_BOX">
+		<dbAlias aliasValue="sample_box"/>
+		<dbColumn columnName="box_barcode_id" javaConstant="SAMPLE_BOX_BOX_BARCODE_ID">
+			<dbAlias aliasValue="sample_box_box_barcode_id"/>
+		</dbColumn>
+		<dbColumn columnName="manifest_number" javaConstant="SAMPLE_BOX_MANIFEST_NUMBER">
+			<dbAlias aliasValue="sample_box_manifest_number"/>
+		</dbColumn>
+		<dbColumn columnName="box_check_in_date" javaConstant="SAMPLE_BOX_CHECK_IN_DATE">
+			<dbAlias aliasValue="sample_box_check_in_date"/>
+		</dbColumn>
+		<dbColumn columnName="box_check_out_date" javaConstant="SAMPLE_BOX_CHECK_OUT_DATE">
+			<dbAlias aliasValue="sample_box_check_out_date"/>
+		</dbColumn>
+		<dbColumn columnName="box_check_out_reason" javaConstant="SAMPLE_BOX_CHECK_OUT_REASON">
+			<dbAlias aliasValue="sample_box_check_out_reason"/>
+		</dbColumn>
+		<dbColumn columnName="box_check_out_request_staff_id" javaConstant="SAMPLE_BOX_CHECK_OUT_STAFF_ID">
+			<dbAlias aliasValue="sample_box_check_out_staff_id"/>
+		</dbColumn>
+		<dbColumn columnName="box_status" javaConstant="SAMPLE_BOX_STATUS">
+			<dbAlias aliasValue="sample_box_status"/>
+		</dbColumn>
+		<dbColumn columnName="box_note" javaConstant="SAMPLE_BOX_NOTE">
+			<dbAlias aliasValue="sample_box_note"/>
+		</dbColumn>
+		<dbColumn columnName="manifest_order" javaConstant="SAMPLE_BOX_MANIFEST_ORDER">
+			<dbAlias aliasValue="sample_box_manifest_order"/>
+		</dbColumn>
+		<dbColumn columnName="box_layout_id" javaConstant="SAMPLE_BOX_LAYOUT_ID">
+			<dbAlias aliasValue="sample_box_layout_id"/>
+		</dbColumn>
+		<dbColumn columnName="storage_type_cid" javaConstant="SAMPLE_BOX_STORAGE_TYPE_CID">
+			<dbAlias aliasValue="sample_box_storage_type_cid"/>
+		</dbColumn>
+	</dbTable>
+
+    <dbTable tableName="es_ardais_consentver" javaConstant="TABLE_ES_ARDAIS_CONSENTVER">
+     	<dbAlias aliasValue="consent_versions"/>
+     	<dbColumn columnName="irbprotocol_id" javaConstant="CONSENTVER_IRBPROTOCOL_ID">
+     		<dbAlias aliasValue="consentver_irbprotocol_id"/>
+     	</dbColumn>
+     	<dbColumn columnName="consent_version_id" javaConstant="CONSENT_VERSION_ID">
+     		<dbAlias aliasValue="consent_version_id"/>
+     	</dbColumn>
+     	<dbColumn columnName="consent_version" javaConstant="CONSENT_VERSION">
+     		<dbAlias aliasValue="consent_version"/>
+     	</dbColumn>
+    </dbTable>
+    
+	<dbTable tableName="bigr_role" javaConstant="TABLE_BIGR_ROLE">
+		<dbAlias aliasValue="bigr_role"/>
+		<dbColumn columnName="id" javaConstant="BIGR_ROLE_ID">
+			<dbAlias aliasValue="bigr_role_id"/>
+		</dbColumn>
+		<dbColumn columnName="name" javaConstant="BIGR_ROLE_NAME">
+			<dbAlias aliasValue="bigr_role_name"/>
+		</dbColumn>
+		<dbColumn columnName="account_id" javaConstant="BIGR_ROLE_ACCOUNT_ID">
+			<dbAlias aliasValue="bigr_role_account_id"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="bigr_role_privilege" javaConstant="TABLE_BIGR_ROLE_PRIVILEGE">
+		<dbAlias aliasValue="bigr_role_privilege"/>
+		<dbColumn columnName="id" javaConstant="BIGR_ROLE_PRIVILEGE_ID">
+			<dbAlias aliasValue="bigr_role_privilege_id"/>
+		</dbColumn>
+		<dbColumn columnName="role_id" javaConstant="BIGR_ROLE_PRIVILEGE_ROLE_ID">
+			<dbAlias aliasValue="bigr_role_privilege_role_id"/>
+		</dbColumn>
+		<dbColumn columnName="privilege_id" javaConstant="BIGR_ROLE_PRIVILEGE_PRIVILEGE_ID">
+			<dbAlias aliasValue="bigr_role_privilege_privilege_id"/>
+		</dbColumn>
+	</dbTable>
+	<dbTable tableName="bigr_role_user" javaConstant="TABLE_BIGR_ROLE_USER">
+		<dbAlias aliasValue="bigr_role_user"/>
+		<dbColumn columnName="id" javaConstant="BIGR_ROLE_USER_ID">
+			<dbAlias aliasValue="bigr_role_user_id"/>
+		</dbColumn>
+		<dbColumn columnName="role_id" javaConstant="BIGR_ROLE_USER_ROLE_ID">
+			<dbAlias aliasValue="bigr_role_user_role_id"/>
+		</dbColumn>
+		<dbColumn columnName="user_id" javaConstant="BIGR_ROLE_USER_USER_ID">
+			<dbAlias aliasValue="bigr_role_user_user_id"/>
+		</dbColumn>
+	</dbTable>
+    
+	<table tableAlias="asm" ordering="002"/>
+	<table tableAlias="asm_form" ordering="012"/>
+	<table tableAlias="consent" ordering="003"/>
+	<table tableAlias="revoked_consent" ordering="009"/>
+	<table tableAlias="donor" ordering="005"/>
+	<table tableAlias="rna_hold_amount" ordering="031"/>
+	<table tableAlias="rna_gross_extraction" ordering="036"/>
+	<table tableAlias="lims_pe" ordering="004"/>
+	<table tableAlias="path" ordering="006"/>
+	<table tableAlias="rna_batch_detail" ordering="010"/>
+	<table tableAlias="tma_block_samples" ordering="047"/>
+	<table tableAlias="rna_pool_tissue" ordering="011"/>
+	<table tableAlias="sample" ordering="001"/>
+	<table tableAlias="sample1" ordering="050"/>
+	<table tableAlias="path_section" ordering="007"/>
+	<table tableAlias="ads_imaget_syn" ordering="032"/>
+	<table tableAlias="slide" ordering="033"/>
+	<table tableAlias="pts_project" ordering="040"/>
+	<table tableAlias="pts_sample" ordering="039"/>
+	<table tableAlias="shopping_cart" ordering="051"/>
+	<table tableAlias="shopping_cart_detail" ordering="041"/>
+	<table tableAlias="es_ardais_order" ordering="042"/>
+	<table tableAlias="es_order_line" ordering="043"/>
+	<table tableAlias="rna_project" ordering="044"/>
+	<table tableAlias="rna_rna_list" ordering="045"/>
+	<table tableAlias="rna_bioanalyser" ordering="046"/>
+	<table tableAlias="es_ardais_user" ordering="048"/>
+	<table tableAlias="ard_logical_repos" ordering="052"/>
+	<table tableAlias="ard_logical_repos_item" ordering="053"/>
+	<table tableAlias="ard_logical_repos_user" ordering="054"/>
+	<table tableAlias="box_location" ordering="055"/>
+	<table tableAlias="staff" ordering="56"/>
+	<table tableAlias="path_diagnostics" ordering="057"/>
+	<table tableAlias="policy" ordering="058"/>
+	<table tableAlias="irb" ordering="060"/>
+	<table tableAlias="ly" ordering="065"/>
+	<table tableAlias="acct_ly" ordering="070"/>
+	<table tableAlias="account" ordering="075"/>
+	<table tableAlias="isp" ordering="080"/>
+	<table tableAlias="igl" ordering="085"/>
+	<table tableAlias="sample_box" ordering="086"/>
+	<table tableAlias="bigr_role" ordering="087"/>
+	<table tableAlias="bigr_role_privilege" ordering="088"/>
+	<table tableAlias="bigr_role_user" ordering="089"/>
+
+	<column tableAlias="sample" columnAlias="sample_asm_id" ordering="0002"/>
+	<column tableAlias="sample" columnAlias="asm_position" ordering="0006"/>
+	<column tableAlias="sample" columnAlias="sample_barcode_id" ordering="0001"/>
+	<column tableAlias="sample" columnAlias="format_detail_cid" ordering="0033"/>
+	<column tableAlias="sample" columnAlias="type_of_fixative" ordering="0034"/>
+	<column tableAlias="sample" columnAlias="qc_verified" ordering="0007"/>
+	<column tableAlias="sample" columnAlias="restricted" ordering="0005"/>
+	<column tableAlias="sample" columnAlias="pull_yn" ordering="0008"/>
+	<column tableAlias="sample" columnAlias="pull_date" ordering="0010"/>
+	<column tableAlias="sample" columnAlias="pull_reason" ordering="0039"/>
+	<column tableAlias="sample" columnAlias="released_yn" ordering="0009"/>
+	<column tableAlias="sample" columnAlias="qcposted_yn" ordering="0011"/>
+	<column tableAlias="sample" columnAlias="discordant_yn" ordering="0028"/>
+	<column tableAlias="sample" columnAlias="inv_status" ordering="0020"/>
+	<column tableAlias="sample" columnAlias="inv_status_date" ordering="0021"/>
+	<column tableAlias="sample" columnAlias="project_status" ordering="0022"/>
+	<column tableAlias="sample" columnAlias="project_status_date" ordering="0023"/>
+	<column tableAlias="sample" columnAlias="qc_status" ordering="0024"/>
+	<column tableAlias="sample" columnAlias="histo_notes" ordering="0032"/>
+	<column tableAlias="sample" columnAlias="qc_status_date" ordering="0025"/>
+	<column tableAlias="sample" columnAlias="sales_status" ordering="0026"/>
+	<column tableAlias="sample" columnAlias="sales_status_date" ordering="0027"/>
+	<column tableAlias="sample" columnAlias="section_count" ordering="0030"/>
+	<column tableAlias="sample" columnAlias="box_barcode_id" ordering="0037"/>
+	<column tableAlias="sample" columnAlias="subdivision_date" ordering="0036"/>
+	<column tableAlias="sample" columnAlias="asm_note" ordering="0038"/>
+	<column tableAlias="sample" columnAlias="bms_yn" ordering="0040"/>
+	<column tableAlias="sample" columnAlias="cell_ref_location" ordering="0041"/>
+	<column tableAlias="sample" columnAlias="sample_consent_id" ordering="0003"/>
+	<column tableAlias="sample" columnAlias="sample_ardais_id" ordering="0004"/>
+	<column tableAlias="sample" columnAlias="tissue_finding_cui" ordering="0042"/>
+	<column tableAlias="sample" columnAlias="tissue_finding_other" ordering="0043"/>
+	<column tableAlias="sample" columnAlias="sample_imported_yn" ordering="0164"/>
+	<column tableAlias="sample" columnAlias="sample_customer_id" ordering="0169"/>
+	<column tableAlias="sample" columnAlias="sample_type_cid" ordering="0165"/>
+	<column tableAlias="sample" columnAlias="sample_age_at_collection" ordering="0166"/>
+	<column tableAlias="sample" columnAlias="sample_appearance_best" ordering="0777"/>
+	<column tableAlias="sample" columnAlias="sample_diagnosis_cui_best" ordering="0778"/>
+	<column tableAlias="sample" columnAlias="sample_diagnosis_other_best" ordering="0779"/>
+	<column tableAlias="sample" columnAlias="tissue_origin_cui" ordering="0776"/>
+	<column tableAlias="sample" columnAlias="tissue_origin_other" ordering="0775"/>
+	<column tableAlias="sample" columnAlias="sample_weight" ordering="0845"/>
+	<column tableAlias="sample" columnAlias="sample_weight_unit_cui" ordering="0846"/>
+	<column tableAlias="sample" columnAlias="sample_weight_mg" ordering="0847"/>
+	<column tableAlias="sample" columnAlias="sample_volume" ordering="0850"/>
+	<column tableAlias="sample" columnAlias="sample_volume_unit_cui" ordering="0849"/>
+	<column tableAlias="sample" columnAlias="sample_volume_ul" ordering="0848"/>
+<column tableAlias="sample" columnAlias="sample_buffer_type_cui" ordering="0851"/>
+	<column tableAlias="sample" columnAlias="sample_buffer_type_other" ordering="0852"/>
+	<column tableAlias="sample" columnAlias="sample_total_num_of_cells" ordering="0853"/>
+	<column tableAlias="sample" columnAlias="sample_tnoc_ex_rep_cui" ordering="0854"/>
+	<column tableAlias="sample" columnAlias="sample_cells_per_ml" ordering="0855"/>
+	<column tableAlias="sample" columnAlias="sample_percent_viability" ordering="0856"/>
+	<column tableAlias="sample" columnAlias="sample_collection_datetime" ordering="0857"/>
+	<column tableAlias="sample" columnAlias="sample_collection_datetime_dpc" ordering="0858"/>
+	<column tableAlias="sample" columnAlias="sample_preservation_datetime" ordering="0859"/>
+	<column tableAlias="sample" columnAlias="sample_preserve_datetime_dpc" ordering="0860"/>
+	<column tableAlias="sample" columnAlias="sample_concentration" ordering="0861"/>
+	<column tableAlias="sample" columnAlias="sample_yield" ordering="0862"/>
+	<column tableAlias="sample" columnAlias="sample_source" ordering="0863"/>
+	<column tableAlias="tma_block_samples" columnAlias="blocksetid" ordering="0035"/>
+	<column tableAlias="asm" columnAlias="gross_appearance" ordering="0102"/>
+	<column tableAlias="asm" columnAlias="asm_consent_id" ordering="0101"/>
+	<column tableAlias="asm" columnAlias="asm_id" ordering="0100"/>
+	<column tableAlias="asm" columnAlias="asm_tissue" ordering="0103"/>
+	<column tableAlias="asm" columnAlias="asm_tissue_other" ordering="0104"/>
+	<column tableAlias="asm" columnAlias="module_comments" ordering="0105"/>
+	<column tableAlias="asm" columnAlias="asm_ardais_id" ordering="0106"/>
+	<column tableAlias="asm_form" columnAlias="asm_form_procedure" ordering="0107"/>
+	<column tableAlias="asm_form" columnAlias="asm_form_procedure_other" ordering="0108"/>
+	<column tableAlias="asm_form" columnAlias="asm_form_prepared_by" ordering="0109"/>
+	<column tableAlias="consent" columnAlias="consent_id" ordering="0150"/>
+	<column tableAlias="consent" columnAlias="consent_dx" ordering="0152"/>
+	<column tableAlias="consent" columnAlias="consent_dx_other" ordering="0153"/>
+	<column tableAlias="consent" columnAlias="ardais_id" ordering="0151"/>
+	<column tableAlias="consent" columnAlias="consent_pull_datetime" ordering="0156"/>
+	<column tableAlias="consent" columnAlias="consent_location" ordering="0157"/>
+	<column tableAlias="consent" columnAlias="best_diagnosis_cui" ordering="0158"/>
+	<column tableAlias="consent" columnAlias="best_diagnosis_other" ordering="0159"/>
+	<column tableAlias="consent" columnAlias="consent_ardais_acct_key" ordering="0160"/>
+	<column tableAlias="consent" columnAlias="consent_imported_yn" ordering="0161"/>
+	<column tableAlias="consent" columnAlias="consent_customer_id" ordering="0162"/>
+	<column tableAlias="consent" columnAlias="consent_psa" ordering="0167"/>
+	<column tableAlias="consent" columnAlias="consent_dre_cid" ordering="0168"/>
+	<column tableAlias="donor" columnAlias="gender" ordering="0170"/>
+	<column tableAlias="donor" columnAlias="donor_profile_notes" ordering="0172"/>
+	<column tableAlias="donor" columnAlias="donor_ardais_acct_key" ordering="0173"/>
+	<column tableAlias="donor" columnAlias="donor_imported_yn" ordering="0174"/>
+	<column tableAlias="donor" columnAlias="donor_customer_id" ordering="0175"/>
+	<column tableAlias="donor" columnAlias="donor_race" ordering="0176"/>
+	<column tableAlias="path" columnAlias="path_consent_id" ordering="0201"/>
+	<column tableAlias="path" columnAlias="path_report_id" ordering="0200"/>
+	<column tableAlias="path" columnAlias="path_disease_concept_id" ordering="0202"/>
+	<column tableAlias="path_section" columnAlias="ddc_dx" ordering="0221"/>
+	<column tableAlias="path_section" columnAlias="ddc_dx_other" ordering="0222"/>
+	<column tableAlias="path_section" columnAlias="hng" ordering="0233"/>
+	<column tableAlias="path_section" columnAlias="path_section_id" ordering="0220"/>
+	<column tableAlias="path_section" columnAlias="gleason_primary" ordering="0230"/>
+	<column tableAlias="path_section" columnAlias="gleason_secondary" ordering="0231"/>
+	<column tableAlias="path_section" columnAlias="gleason_total" ordering="0232"/>
+	<column tableAlias="path_section" columnAlias="lymph_node_stage" ordering="0234"/>
+	<column tableAlias="path_section" columnAlias="distant_metastasis" ordering="0235"/>
+	<column tableAlias="path_section" columnAlias="stage_grouping" ordering="0236"/>
+	<column tableAlias="path_section" columnAlias="ddc_tissue_finding" ordering="0223"/>
+	<column tableAlias="path_section" columnAlias="ddc_tissue_finding_other" ordering="0224"/>
+	<column tableAlias="path_section" columnAlias="ddc_tissue_origin" ordering="0225"/>
+	<column tableAlias="path_section" columnAlias="ddc_tissue_origin_other" ordering="0226"/>
+	<column tableAlias="path_section" columnAlias="tumor_stage" ordering="0237"/>
+	<column tableAlias="path_section" columnAlias="tumor_stage_type" ordering="0238"/>
+	<column tableAlias="path_section" columnAlias="tumor_size" ordering="0240"/>
+	<column tableAlias="path_section" columnAlias="tumor_weight" ordering="0241"/>
+	<column tableAlias="lims_pe" columnAlias="pe_id" ordering="0321"/>
+	<column tableAlias="lims_pe" columnAlias="microscopic_appearance" ordering="0304"/>
+	<column tableAlias="lims_pe" columnAlias="diagnosis_concept_id" ordering="0301"/>
+	<column tableAlias="lims_pe" columnAlias="other_diagnosis_name" ordering="0322"/>
+	<column tableAlias="lims_pe" columnAlias="lesion_cells" ordering="0312"/>
+	<column tableAlias="lims_pe" columnAlias="necrosis_cells" ordering="0316"/>
+	<column tableAlias="lims_pe" columnAlias="normal_cells" ordering="0311"/>
+	<column tableAlias="lims_pe" columnAlias="external_comments" ordering="0305"/>
+	<column tableAlias="lims_pe" columnAlias="internal_comments" ordering="0306"/>
+	<column tableAlias="lims_pe" columnAlias="hypoacellularstroma_cells" ordering="0315"/>
+	<column tableAlias="lims_pe" columnAlias="cellularstroma_cells" ordering="0314"/>
+	<column tableAlias="lims_pe" columnAlias="tissue_finding_concept_id" ordering="0302"/>
+	<column tableAlias="lims_pe" columnAlias="other_tissue_finding_name" ordering="0323"/>
+	<column tableAlias="lims_pe" columnAlias="tissue_origin_concept_id" ordering="0303"/>
+	<column tableAlias="lims_pe" columnAlias="other_tissue_origin_name" ordering="0324"/>
+	<column tableAlias="lims_pe" columnAlias="tumor_cells" ordering="0313"/>
+	<column tableAlias="lims_pe" columnAlias="lims_pe_sample_id" ordering="0300"/>
+	<column tableAlias="lims_pe" columnAlias="lims_pe_create_user" ordering="0317"/>
+	<column tableAlias="lims_pe" columnAlias="lims_pe_slide_id" ordering="0318"/>
+	<column tableAlias="lims_pe" columnAlias="lims_pe_create_date" ordering="0319"/>
+	<column tableAlias="lims_pe" columnAlias="reported_date" ordering="0320"/>
+	<column tableAlias="rna_pool_tissue" columnAlias="rna_pool_sample_id" ordering="0420"/>
+	<column tableAlias="rna_batch_detail" columnAlias="rna_consent_id" ordering="0400"/>
+	<column tableAlias="rna_batch_detail" columnAlias="prep" ordering="0401"/>
+	<column tableAlias="rna_batch_detail" columnAlias="rnavialid" ordering="0402"/>
+	<column tableAlias="rna_batch_detail" columnAlias="rna_sample_id" ordering="0403"/>
+	<column tableAlias="rna_batch_detail" columnAlias="remaining_volume" ordering="0406"/>
+	<column tableAlias="rna_batch_detail" columnAlias="rna_status" ordering="0404"/>
+	<column tableAlias="rna_batch_detail" columnAlias="concentration" ordering="0407"/>
+	<column tableAlias="rna_batch_detail" columnAlias="pooledtissue" ordering="0408"/>
+	<column tableAlias="rna_batch_detail" columnAlias="rep_sample" ordering="0410"/>
+	<column tableAlias="rna_batch_detail" columnAlias="case_exhausted" ordering="0409"/>
+	<column tableAlias="rna_batch_detail" columnAlias="rna_hypoacellularstroma_cells" ordering="0455"/>
+	<column tableAlias="rna_batch_detail" columnAlias="rna_cellularstroma_cells" ordering="0454"/>
+	<column tableAlias="rna_batch_detail" columnAlias="rna_lesion_cells" ordering="0452"/>
+	<column tableAlias="rna_batch_detail" columnAlias="rna_necrosis_cells" ordering="0456"/>
+	<column tableAlias="rna_batch_detail" columnAlias="rna_normal_cells" ordering="0453"/>
+	<column tableAlias="rna_batch_detail" columnAlias="rna_tumor_cells" ordering="0451"/>
+	<column tableAlias="rna_batch_detail" columnAlias="rna_external_comments" ordering="0457"/>
+	<column tableAlias="rna_batch_detail" columnAlias="rna_internal_comments" ordering="0458"/>
+	<column tableAlias="rna_batch_detail" columnAlias="rna_bms_yn" ordering="0459"/>
+	<column tableAlias="rna_batch_detail" columnAlias="rna_notes" ordering="0460"/>
+	<column tableAlias="rna_gross_extraction" columnAlias="rnaquality" ordering="0440"/>
+	<column tableAlias="rna_bioanalyser" columnAlias="bio_ratio" ordering="0445"/>
+	<column tableAlias="rna_hold_amount" columnAlias="hold_amt" ordering="0405"/>
+	<column tableAlias="ads_imaget_syn" columnAlias="images_imageid" ordering="0600"/>
+	<column tableAlias="ads_imaget_syn" columnAlias="images_imagefilename" ordering="0601"/>
+	<column tableAlias="ads_imaget_syn" columnAlias="images_slideid" ordering="0602"/>
+	<column tableAlias="ads_imaget_syn" columnAlias="images_username" ordering="0603"/>
+	<column tableAlias="ads_imaget_syn" columnAlias="images_imagetype" ordering="0604"/>
+	<column tableAlias="ads_imaget_syn" columnAlias="images_magnification" ordering="0605"/>
+	<column tableAlias="ads_imaget_syn" columnAlias="images_bestimage" ordering="0606"/>
+	<column tableAlias="ads_imaget_syn" columnAlias="images_capturedate" ordering="0607"/>
+	<column tableAlias="ads_imaget_syn" columnAlias="images_imagenotes" ordering="0608"/>
+	<column tableAlias="ads_imaget_syn" columnAlias="images_imagepath" ordering="0609"/>
+	<column tableAlias="ads_imaget_syn" columnAlias="images_tnailpath" ordering="0610"/>
+	<column tableAlias="ads_imaget_syn" columnAlias="images_overlay" ordering="0611"/>
+	<column tableAlias="ads_imaget_syn" columnAlias="images_imageonreport" ordering="0612"/>
+	<column tableAlias="ads_imaget_syn" columnAlias="images_searchqry" ordering="0613"/>
+	<column tableAlias="ads_imaget_syn" columnAlias="images_pathologist_id" ordering="0614"/>
+	<column tableAlias="slide" columnAlias="create_date" ordering="0503"/>
+	<column tableAlias="slide" columnAlias="slide_id" ordering="0500"/>
+	<column tableAlias="slide" columnAlias="destroy_date" ordering="0504"/>
+	<column tableAlias="slide" columnAlias="section_number" ordering="0505"/>
+	<column tableAlias="slide" columnAlias="section_level" ordering="0506"/>
+	<column tableAlias="slide" columnAlias="current_location" ordering="0507"/>
+	<column tableAlias="slide" columnAlias="lims_slide_sample_id" ordering="0501"/>
+	<column tableAlias="slide" columnAlias="create_user" ordering="0502"/>
+	<column tableAlias="slide" columnAlias="section_proc" ordering="0508"/>
+	<column tableAlias="rna_images" columnAlias="imagefilename" ordering="0430"/>
+	<column tableAlias="rna_images" columnAlias="imagetype" ordering="0431"/>
+	<column tableAlias="pts_project" columnAlias="projectid" ordering="0700"/>
+	<column tableAlias="pts_project" columnAlias="projectname" ordering="0701"/>
+	<column tableAlias="pts_project" columnAlias="project_date_requested" ordering="0702"/>
+	<column tableAlias="pts_sample" columnAlias="pts_sample_barcode_id" ordering="0711"/>
+	<column tableAlias="shopping_cart_detail" columnAlias="shopping_cart_user_id" ordering="0802"/>
+	<column tableAlias="shopping_cart_detail" columnAlias="shopping_cart_creation_dt" ordering="0803"/>
+	<column tableAlias="shopping_cart_detail" columnAlias="shopping_cart_amount" ordering="0804"/>
+	<column tableAlias="shopping_cart_detail" columnAlias="shopping_cart_sample_id" ordering="0801"/>
+	<column tableAlias="es_ardais_order" columnAlias="order_number" ordering="0720"/>
+	<column tableAlias="es_ardais_order" columnAlias="order_description" ordering="0721"/>
+	<column tableAlias="es_order_line" columnAlias="line_barcode_id" ordering="0730"/>
+	<column tableAlias="rna_project" columnAlias="rna_project" ordering="0740"/>
+	<column tableAlias="rna_project" columnAlias="rna_request_id" ordering="0741"/>
+	<column tableAlias="rna_rna_list" columnAlias="vialtouse" ordering="751"/>
+	<column tableAlias="rna_rna_list" columnAlias="rna_list_request_id" ordering="750"/>
+	<column tableAlias="rna_rna_list" columnAlias="vialtosend" ordering="752"/>
+	<column tableAlias="ard_logical_repos" columnAlias="logical_repos_id" ordering="0770"/>
+	<column tableAlias="ard_logical_repos" columnAlias="logical_repos_full_name" ordering="0771"/>
+	<column tableAlias="ard_logical_repos" columnAlias="logical_repos_short_name" ordering="0772"/>
+	<column tableAlias="ard_logical_repos" columnAlias="logical_repos_bms_yn" ordering="0773"/>
+	<column tableAlias="ard_logical_repos_item" columnAlias="logical_repos_item_id" ordering="0780"/>
+	<column tableAlias="ard_logical_repos_item" columnAlias="logical_repos_item_repos_id" ordering="0781"/>
+	<column tableAlias="ard_logical_repos_item" columnAlias="logical_repos_item_item_id" ordering="0782"/>
+	<column tableAlias="ard_logical_repos_item" columnAlias="logical_repos_item_item_type" ordering="0783"/>
+	<column tableAlias="ard_logical_repos_user" columnAlias="logical_repos_user_id" ordering="0790"/>
+	<column tableAlias="ard_logical_repos_user" columnAlias="logical_repos_user_repos_id" ordering="0791"/>
+	<column tableAlias="ard_logical_repos_user" columnAlias="logical_repos_user_user_id" ordering="0792"/>
+	<column tableAlias="box_location" columnAlias="box_location_id" ordering="800"/>
+	<column tableAlias="box_location" columnAlias="box_location_unit_name" ordering="801"/>
+	<column tableAlias="box_location" columnAlias="box_location_storage_type_cid" ordering="802"/>
+	<!-- SWP-1109 -->
+	<column tableAlias="box_location" columnAlias="box_location_room_id" ordering="803"/>
+    <column tableAlias="box_location" columnAlias="box_location_drawer_id" ordering="804"/>
+    <column tableAlias="box_location" columnAlias="box_location_slot_id" ordering="805"/>
+    <column tableAlias="box_location" columnAlias="box_location_box_barcode_id" ordering="806"/>
+	<column tableAlias="staff" columnAlias="staff_location_id" ordering="810"/>
+	<column tableAlias="staff" columnAlias="staff_id" ordering="811"/>
+	<column tableAlias="path_diagnostics" columnAlias="path_diagnostics_concept_id" ordering="0242"/>
+	<column tableAlias="path_diagnostics" columnAlias="diagnostic_results_cid" ordering="0243"/>
+	<column tableAlias="policy" columnAlias="policy_id" ordering="0900"/>
+	<column tableAlias="policy" columnAlias="policy_name" ordering="0901"/>
+	<column tableAlias="policy" columnAlias="policy_allocation_denominator" ordering="0902"/>
+	<column tableAlias="policy" columnAlias="policy_allocation_numerator" ordering="0903"/>
+	<column tableAlias="policy" columnAlias="policy_allocation_format_cid" ordering="0904"/>
+	<column tableAlias="policy" columnAlias="policy_default_log_repos_id" ordering="0905"/>
+	<column tableAlias="policy" columnAlias="policy_restricted_log_repos_id" ordering="0906"/>
+	<column tableAlias="policy" columnAlias="policy_consent_verify_required" ordering="0908"/>
+	<column tableAlias="policy" columnAlias="policy_case_release_required" ordering="0909"/>
+	<column tableAlias="policy" columnAlias="policy_additional_questions_grp" ordering="0910"/>
+	<column tableAlias="policy" columnAlias="policy_ardais_acct_key" ordering="0911"/>
+	<column tableAlias="policy" columnAlias="policy_allow_for_unlinked_yn" ordering="0912"/>
+	<column tableAlias="policy" columnAlias="policy_policy_data_encoding" ordering="0913"/>
+	<column tableAlias="policy" columnAlias="policy_policy_data" ordering="0914"/>
+	<column tableAlias="policy" columnAlias="policy_case_registration_form" ordering="0915"/>
+	<column tableAlias="irb" columnAlias="irb_ardais_acct_key" ordering="0970"/>
+	<column tableAlias="irb" columnAlias="irb_protocol_id" ordering="0971"/>
+	<column tableAlias="irb" columnAlias="irb_protocol" ordering="0972"/>
+	<column tableAlias="irb" columnAlias="irb_policy_id" ordering="0973"/>
+	<column tableAlias="ly" columnAlias="ly_box_layout_id" ordering="0980"/>
+	<column tableAlias="ly" columnAlias="ly_number_of_columns" ordering="0981"/>
+	<column tableAlias="ly" columnAlias="ly_number_of_rows" ordering="0982"/>
+	<column tableAlias="ly" columnAlias="ly_x_axis_label_cid" ordering="0983"/>
+	<column tableAlias="ly" columnAlias="ly_y_axis_label_cid" ordering="0984"/>
+	<column tableAlias="ly" columnAlias="ly_tab_index_cid" ordering="0985"/>
+	<column tableAlias="acct_ly" columnAlias="acct_ly_id" ordering="0990"/>
+	<column tableAlias="acct_ly" columnAlias="acct_ly_box_layout_name" ordering="0991"/>
+	<column tableAlias="acct_ly" columnAlias="acct_ly_ardais_acct_key" ordering="0992"/>
+	<column tableAlias="acct_ly" columnAlias="acct_ly_box_layout_id" ordering="0993"/>
+	<column tableAlias="account" columnAlias="acct_key" ordering="1010"/>
+	<column tableAlias="account" columnAlias="acct_type" ordering="1011"/>
+	<column tableAlias="account" columnAlias="acct_status" ordering="1012"/>
+	<column tableAlias="account" columnAlias="acct_name" ordering="1013"/>
+	<column tableAlias="account" columnAlias="acct_parent_name" ordering="1014"/>
+	<column tableAlias="account" columnAlias="acct_open_date" ordering="1015"/>
+	<column tableAlias="account" columnAlias="acct_active_date" ordering="1016"/>
+	<column tableAlias="account" columnAlias="acct_close_date" ordering="1017"/>
+	<column tableAlias="account" columnAlias="acct_deactivate_date" ordering="1018"/>
+	<column tableAlias="account" columnAlias="acct_deactivate_reason" ordering="1019"/>
+	<column tableAlias="account" columnAlias="acct_reactivate_date" ordering="1020"/>
+	<column tableAlias="account" columnAlias="acct_primary_location" ordering="1021"/>
+	<column tableAlias="account" columnAlias="acct_brand_id" ordering="1022"/>
+	<column tableAlias="account" columnAlias="acct_req_mgr_email" ordering="1023"/>
+	<column tableAlias="account" columnAlias="acct_linked_cases_only_yn" ordering="1024"/>
+	<column tableAlias="account" columnAlias="acct_password_policy_cid" ordering="1025"/>
+	<column tableAlias="account" columnAlias="acct_password_life_span" ordering="1026"/>
+	<column tableAlias="account" columnAlias="acct_donor_registration_form" ordering="1028"/>
+	<column tableAlias="account" columnAlias="acct_default_box_layout_id" ordering="1027"/>
+	<column tableAlias="isp" columnAlias="sp_id" ordering="1030"/>
+	<column tableAlias="isp" columnAlias="sp_ardais_acct_key" ordering="1031"/>
+	<column tableAlias="isp" columnAlias="sp_destination_id" ordering="1032"/>
+	<column tableAlias="igl" columnAlias="gl_location_address_id" ordering="1040"/>
+	<column tableAlias="igl" columnAlias="gl_location_name" ordering="1041"/>
+	<column tableAlias="igl" columnAlias="gl_location_address_1" ordering="1042"/>
+	<column tableAlias="igl" columnAlias="gl_location_address_2" ordering="1043"/>
+	<column tableAlias="igl" columnAlias="gl_location_city" ordering="1044"/>
+	<column tableAlias="igl" columnAlias="gl_location_state" ordering="1045"/>
+	<column tableAlias="igl" columnAlias="gl_location_zip" ordering="1046"/>
+	<column tableAlias="igl" columnAlias="gl_location_country" ordering="1047"/>
+	<column tableAlias="igl" columnAlias="gl_location_phone" ordering="1048"/>
+	<column tableAlias="sample_box" columnAlias="sample_box_box_barcode_id" ordering="1050"/>
+	<column tableAlias="sample_box" columnAlias="sample_box_manifest_number" ordering="1051"/>
+	<column tableAlias="sample_box" columnAlias="sample_box_check_in_date" ordering="1053"/>
+	<column tableAlias="sample_box" columnAlias="sample_box_check_out_date" ordering="1054"/>
+	<column tableAlias="sample_box" columnAlias="sample_box_check_out_reason" ordering="1055"/>
+	<column tableAlias="sample_box" columnAlias="sample_box_check_out_staff_id" ordering="1056"/>
+	<column tableAlias="sample_box" columnAlias="sample_box_status" ordering="1057"/>
+	<column tableAlias="sample_box" columnAlias="sample_box_note" ordering="1058"/>
+	<column tableAlias="sample_box" columnAlias="sample_box_manifest_order" ordering="1059"/>
+	<column tableAlias="sample_box" columnAlias="sample_box_layout_id" ordering="1060"/>
+	<column tableAlias="sample_box" columnAlias="sample_box_storage_type_cid" ordering="1061"/>
+	<column tableAlias="bigr_role" columnAlias="bigr_role_id" ordering="1062"/>
+	<column tableAlias="bigr_role" columnAlias="bigr_role_name" ordering="1063"/>
+	<column tableAlias="bigr_role" columnAlias="bigr_role_account_id" ordering="1064"/>
+	<column tableAlias="bigr_role_privilege" columnAlias="bigr_role_privilege_id" ordering="1065"/>
+	<column tableAlias="bigr_role_privilege" columnAlias="bigr_role_privilege_role_id" ordering="1066"/>
+	<column tableAlias="bigr_role_privilege" columnAlias="bigr_role_privilege_privilege_id" ordering="1067"/>
+	<column tableAlias="bigr_role_user" columnAlias="bigr_role_user_id" ordering="1068"/>
+	<column tableAlias="bigr_role_user" columnAlias="bigr_role_user_role_id" ordering="1069"/>
+	<column tableAlias="bigr_role_user" columnAlias="bigr_role_user_user_id" ordering="1070"/>
+
+	<!-- the following element is declared in ProductQueryMetaData as coming after the column -->
+	<!-- with keyName="KEY_DONOR_GENDER", but the DTD complained unless it came after all the columns -->
+	<columnCount tableAlias="consent" columnAlias="consent_count" ordering="0171"/>
+	<filterEqual keyName="KEY_SAMPLE_ACCOUNT" ordering="samp305" tableAlias="sample" columnName="ardais_acct_key"/>
+	<filterEqual keyName="KEY_SAMPLE_APPEARANCE_BEST" ordering="samp218" tableAlias="sample" columnName="appearance_best"/>
+	<filterEqual keyName="KEY_SAMPLE_ID" ordering="samp214" tableAlias="sample" columnName="sample_barcode_id"/>
+	<filterEqual keyName="KEY_SAMPLE_CONSENT_ID" ordering="samp215" tableAlias="sample" columnName="consent_id"/>
+	<filterEqual keyName="KEY_SAMPLE_DONOR_ID" ordering="samp221" tableAlias="sample" columnName="ardais_id"/>
+	<filterEqual keyName="KEY_SAMPLE_NOT_PULLED" ordering="samp225" tableAlias="sample" columnName="pull_yn" value="'N'"/>
+	<filterEqual keyName="KEY_SAMPLE_QCVERIFIED" ordering="samp220" tableAlias="sample" columnName="qc_verified"/>
+	<filterEqual keyName="KEY_SAMPLE_RESTRICTED" ordering="samp300" tableAlias="sample" columnName="allocation_ind" value="'R'"/>
+	<filterEqual keyName="KEY_SAMPLE_SALES_STATUS" ordering="samp311" tableAlias="sample" columnName="sales_status"/>
+	<filterEqual keyName="KEY_SAMPLE_UNRESTRICTED" ordering="samp301" tableAlias="sample" columnName="allocation_ind" value="'U'"/>
+	<filterEqual keyName="KEY_SAMPLE_QC_STATUS" ordering="samp315" tableAlias="sample" columnName="qc_status"/>
+	<filterEqual keyName="KEY_SAMPLE_QCPOSTED" ordering="samp253" tableAlias="sample" columnName="qcposted_yn" value="'Y'"/>
+	<filterEqual keyName="KEY_SAMPLE_NOT_QCPOSTED" ordering="506" tableAlias="sample" columnName="qcposted_yn" value="'N'"/>
+	<filterEqual keyName="KEY_SAMPLE_PULLED" ordering="samp254" tableAlias="sample" columnName="pull_yn" value="'Y'"/>
+	<filterEqual keyName="KEY_SAMPLE_NOT_RELEASED" ordering="504" tableAlias="sample" columnName="released_yn" value="'N'"/>
+	<filterEqual keyName="KEY_SAMPLE_RELEASED" ordering="505" tableAlias="sample" columnName="released_yn" value="'Y'"/>
+	<filterEqual keyName="KEY_SAMPLE_BMS_YN" ordering="515" tableAlias="sample" columnName="bms_yn"/>
+	<filterEqual keyName="KEY_SAMPLE_BMS_YN_YES" ordering="516" tableAlias="sample" columnName="bms_yn" value="'Y'"/>
+	<filterEqual keyName="KEY_SAMPLE_SAMPLE_TYPE_CID" ordering="517" tableAlias="sample" columnName="sample_type_cid"/>
+	<filterEqual keyName="KEY_TISSUE_ORIGIN" ordering="330" tableAlias="sample" columnName="tissue_origin_cui">
+	  <hint hintPriority="8500"
+	    hintText="leading(sample) index(sample ILTDS_SAMPLE_IN27) use_nl(rna_batch_detail)" />
+	</filterEqual>
+	<filterEqual keyName="KEY_TISSUE_ORIGIN_LIKE" ordering="376" tableAlias="sample" columnName="tissue_origin_cui">
+	  <hint hintPriority="8500"
+	    hintText="leading(sample) index(sample ILTDS_SAMPLE_IN27) use_nl(rna_batch_detail)" />
+	</filterEqual>
+	<filterEqual keyName="KEY_CONSENT_ID" ordering="212" tableAlias="consent" columnName="consent_id"/>
+	<filterEqual keyName="KEY_CONSENT_DX" ordering="220" tableAlias="consent" columnName="disease_concept_id">
+	  <hint hintPriority="9000"
+	    hintText="leading(consent) index(consent ILTDS_INFORMED_CONSENT_IN2) use_nl(sample) use_nl(rna_batch_detail)" />
+	</filterEqual>
+	<filterEqual keyName="KEY_CONSENT_DX_LIKE" ordering="221" tableAlias="consent" columnName="disease_concept_id">
+	  <hint hintPriority="9000"
+	    hintText="leading(consent) index(consent ILTDS_INFORMED_CONSENT_IN2) use_nl(sample) use_nl(rna_batch_detail)" />
+	</filterEqual>
+	<filterEqual keyName="KEY_CONSENT_LINKED" ordering="223" tableAlias="consent" columnName="linked"/>
+	<filterEqual keyName="KEY_CONSENT_DRE_CID" ordering="353" tableAlias="consent" columnName="dre_cid"/>
+	<filterEqual keyName="KEY_DONOR_ID" ordering="211" tableAlias="consent" columnName="ardais_id"/>
+	<filterEqual keyName="KEY_ASM_ID" ordering="213" tableAlias="asm" columnName="asm_id"/>
+	<filterEqual keyName="KEY_ASM_TISSUE" ordering="391" tableAlias="asm" columnName="organ_site_concept_id"/>
+	<filterEqual keyName="KEY_ASM_TISSUE_CONTAINS" ordering="390" tableAlias="asm" columnName="organ_site_concept_id"/>
+	<filterEqual keyName="KEY_PATH_CONSENT_ID" ordering="232" tableAlias="path" columnName="consent_id"/>
+	<filterEqual keyName="KEY_PATH_DX" ordering="230" tableAlias="path" columnName="diagnosis_concept_id">
+	  <hint hintPriority="9000"
+	    hintText="leading(path) index(path PDC_PATHOLOGY_REPORT_IN3) use_nl(sample) use_nl(rna_batch_detail)" />
+	</filterEqual>
+	<filterEqual keyName="KEY_PATH_DX_LIKE" ordering="231" tableAlias="path" columnName="diagnosis_concept_id">
+	  <hint hintPriority="9000"
+	    hintText="leading(path) index(path PDC_PATHOLOGY_REPORT_IN3) use_nl(sample) use_nl(rna_batch_detail)" />
+	</filterEqual>
+	<filterEqual keyName="KEY_SECTION_HNG" ordering="240" tableAlias="path_section" columnName="histological_nuclear_grade"/>
+	<filterEqual keyName="KEY_SECTION_LYMPH_STAGE" ordering="241" tableAlias="path_section" columnName="lymph_node_stage"/>
+	<filterEqual keyName="KEY_SECTION_METASTASIS" ordering="242" tableAlias="path_section" columnName="distant_metastasis"/>
+	<filterEqual keyName="KEY_SECTION_STAGE_GROUPING" ordering="243" tableAlias="path_section" columnName="stage_grouping"/>
+	<filterEqual keyName="KEY_SECTION_TUMOR_STAGE" ordering="244" tableAlias="path_section" columnName="tumor_stage_desc"/>
+	<filterEqual keyName="KEY_LIMS_PE_DX" ordering="251" tableAlias="lims_pe" columnName="diagnosis_concept_id">
+	  <hint hintPriority="10000"
+	    hintText="leading(lims_pe) index(lims_pe LIMS_PATHOLOGY_EVALUATION_IN3) use_nl(sample) use_nl(rna_batch_detail)" />
+	</filterEqual>
+	<filterEqual keyName="KEY_LIMS_PE_DX_LIKE" ordering="252" tableAlias="lims_pe" columnName="diagnosis_concept_id">
+	  <hint hintPriority="10000"
+	    hintText="leading(lims_pe) index(lims_pe LIMS_PATHOLOGY_EVALUATION_IN3) use_nl(sample) use_nl(rna_batch_detail)" />
+	</filterEqual>
+	<filterEqual keyName="KEY_LIMS_PE_REPORTED" ordering="250" tableAlias="lims_pe" columnName="reported_yn" value="'Y'"/>
+	<filterEqual keyName="KEY_LIMS_PE_SAMPLE_ID" ordering="253" tableAlias="lims_pe" columnName="sample_barcode_id"/>
+	<filterEqual keyName="KEY_LIMS_PE_TISSUE_FINDING" ordering="260" tableAlias="lims_pe" columnName="tissue_finding_concept_id"/>
+	<filterEqual keyName="KEY_LIMS_PE_TISSUE_ORIGIN" ordering="265" tableAlias="lims_pe" columnName="tissue_origin_concept_id"/>
+	<filterEqual keyName="KEY_LIMS_PE_TISSUE_ORIGIN_CONTAINS" ordering="266" tableAlias="lims_pe" columnName="tissue_origin_concept_id"/>
+	<filterEqual keyName="KEY_RNA_RNAVIALID" ordering="270" tableAlias="rna_batch_detail" columnName="rnavialid"/>
+	<filterEqual keyName="KEY_RNA_STATUS" ordering="271" tableAlias="rna_batch_detail" columnName="rnastatus"/>
+	<filterEqual keyName="KEY_RNA_PRODUCT_TYPE" ordering="275" tableAlias="rna_batch_detail" columnName="producttype"/>
+	<filterEqual keyName="KEY_RNA_BMS_YN_YES" ordering="277" tableAlias="rna_batch_detail" columnName="bms_yn" value="'Y'"/>
+	<filterEqual keyName="KEY_PTS_SAMPLE_ID" ordering="401" tableAlias="pts_sample" columnName="sample_barcode_id"/>
+	<filterEqual keyName="KEY_SHOPPING_CART_SAMPLE_ID" ordering="410" tableAlias="shopping_cart_detail" columnName="barcode_id"/>
+	<filterEqual keyName="KEY_SLIDE_SAMPLE_ID" ordering="450" tableAlias="slide" columnName="sample_barcode_id"/>
+	<filterEqual keyName="KEY_LINE_SAMPLE_ID" ordering="420" tableAlias="es_order_line" columnName="barcode_id"/>
+	<filterEqual keyName="KEY_ORDER_SHIPPED" ordering="421" tableAlias="es_ardais_order" columnName="order_status" value="'SH'"/>
+	<filterEqual keyName="KEY_DONOR_GENDER" ordering="280"  tableAlias="donor" columnName="gender"/>
+	<filterEqual keyName="KEY_RNA_LIST_VIALTOUSE" ordering="431" tableAlias="rna_rna_list" columnName="vialtouse"/>
+	<filterEqual keyName="KEY_HOLD_SOLD_USER" ordering="341" tableAlias="es_ardais_user" columnName="ardais_user_id"/>
+	<filterEqual keyName="KEY_HOLD_SOLD_ACCOUNT" ordering="342" tableAlias="es_ardais_user" columnName="ardais_acct_key"/>
+	<filterEqual keyName="KEY_CART_USER_ID" ordering="511" tableAlias="shopping_cart_detail" columnName="ardais_user_id"/>
+	<filterEqual keyName="KEY_LOGICAL_REPOS_ITEM_ITEM_ID" ordering="770" tableAlias="ard_logical_repos_item" columnName="item_id"/>
+	<filterEqual keyName="KEY_LOGICAL_REPOS_ITEM_REPOSITORY_ID" ordering="771" tableAlias="ard_logical_repos_item" columnName="repository_id"/>
+	<filterEqual keyName="KEY_STAFF_ID" ordering="772" tableAlias="staff" columnName="ardais_staff_id"/>
+	<filterEqual keyName="KEY_DIAGNOSTIC_TEST" ordering="355" tableAlias="path_diagnostics" columnName="diagnostics_concept_id"/>
+	<filterEqual keyName="KEY_BEST_CASE_DX" ordering="228" tableAlias="consent" columnName="best_diagnosis_cui">
+	  <hint hintPriority="9000"
+	    hintText="leading(consent) index(consent ILTDS_INFORMED_CONSENT_IN7) use_nl(sample) use_nl(rna_batch_detail)" />
+	</filterEqual>
+	<filterEqual keyName="KEY_BEST_CASE_DX_LIKE" ordering="229" tableAlias="consent" columnName="best_diagnosis_cui">
+	  <hint hintPriority="9000"
+	    hintText="leading(consent) index(consent ILTDS_INFORMED_CONSENT_IN7) use_nl(sample) use_nl(rna_batch_detail)" />
+	</filterEqual>
+	<filterEqual keyName="KEY_TISSUE_FINDING" ordering="332" tableAlias="sample" columnName="tissue_finding_cui">
+	  <hint hintPriority="8500"
+	    hintText="leading(sample) index(sample ILTDS_SAMPLE_IN9) use_nl(rna_batch_detail)" />
+	</filterEqual>
+	<filterEqual keyName="KEY_TISSUE_FINDING_LIKE" ordering="333" tableAlias="sample" columnName="tissue_finding_cui">
+	  <hint hintPriority="8500"
+	    hintText="leading(sample) index(sample ILTDS_SAMPLE_IN9) use_nl(rna_batch_detail)" />
+	</filterEqual>
+
+	<filterNotEqual keyName="KEY_SAMPLE_ACCOUNT_NOT" ordering="514" tableAlias="sample" columnName="ardais_acct_key"/>
+	<filterNotEqual keyName="KEY_SAMPLE_APPEARANCE_BEST_NOT" ordering="samp219" tableAlias="sample" columnName="appearance_best"/>
+	<filterNotEqual keyName="KEY_SAMPLE_INV_STATUS_NOT" ordering="samp303" tableAlias="sample" columnName="inv_status"/>
+	<filterNotEqual keyName="KEY_SAMPLE_SALES_STATUS_NOT" ordering="samp312" tableAlias="sample" columnName="sales_status"/>
+	<filterNotEqual keyName="KEY_TISSUE_ORIGIN_NOT" ordering="331" tableAlias="sample" columnName="tissue_origin_cui"/>
+	<filterNotEqual keyName="KEY_TISSUE_ORIGIN_NOT_LIKE" ordering="377" tableAlias="sample" columnName="tissue_origin_cui"/>
+	<filterNotEqual keyName="KEY_ASM_TISSUE_NOT" ordering="294" tableAlias="asm" columnName="organ_site_concept_id"/>
+	<filterNotEqual keyName="KEY_ASM_TISSUE_NOT_CONTAINS" ordering="394" tableAlias="asm" columnName="organ_site_concept_id"/>
+	<filterNotEqual keyName="KEY_PATH_DX_NOT" ordering="235" tableAlias="path" columnName="diagnosis_concept_id"/>
+	<filterNotEqual keyName="KEY_LIMS_PE_TISSUE_FINDING_NOT" ordering="262" tableAlias="lims_pe" columnName="tissue_finding_concept_id"/>
+	<filterNotEqual keyName="KEY_LIMS_PE_TISSUE_ORIGIN_NOT" ordering="267" tableAlias="lims_pe" columnName="tissue_origin_concept_id"/>
+	<filterNotEqual keyName="KEY_LIMS_PE_TISSUE_ORIGIN_NOT_CONTAINS" ordering="268" tableAlias="lims_pe" columnName="tissue_origin_concept_id"/>
+	<filterNotEqual keyName="KEY_SAMPLE_NOT_PRJADDED" ordering="500" tableAlias="sample" columnName="project_status" value="'PRJADDED'"/>
+	<filterNotEqual keyName="KEY_TISSUE_FINDING_NOT" ordering="334" tableAlias="sample" columnName="tissue_finding_cui"/>
+	<filterNotEqual keyName="KEY_TISSUE_FINDING_NOT_LIKE" ordering="336" tableAlias="sample" columnName="tissue_finding_cui"/>
+
+	<filterGreaterThan keyName="KEY_RNA_QUALITY_GREATER" ordering="274" tableAlias="rna_gross_extraction" columnName="rnaquality"/>
+
+	<filterLike  keyName="KEY_LIMS_PE_TISSUE_FINDING_CONTAINS" ordering="261" tableAlias="lims_pe" columnName="tissue_finding_concept_id"/>
+	<filterLike keyName="KEY_DONOR_ALIAS_ID" ordering="samp224" tableAlias="donor" columnName="customer_id"/>
+	<filterLike keyName="KEY_CONSENT_ALIAS_ID" ordering="samp223" tableAlias="consent" columnName="customer_id"/>
+	<filterLike keyName="KEY_SAMPLE_ALIAS_ID" ordering="samp222" tableAlias="sample" columnName="customer_id"/>
+
+	<filterNotLike  keyName="KEY_LIMS_PE_TISSUE_FINDING_NOT_CONTAINS" ordering="263" tableAlias="lims_pe" columnName="tissue_finding_concept_id"/>
+
+	<filterIsNull  keyName="KEY_CONSENT_NOT_PULLED" ordering="227" tableAlias="consent" columnName="consent_pull_datetime"/>
+	<filterIsNull keyName="KEY_RNA_STOCK_ON_HOLD" ordering="432" tableAlias="rna_rna_list" columnName="vialtosend"/>
+	<filterIsNull keyName="KEY_SAMPLE_NULL_PROJECT" ordering="501" tableAlias="sample" columnName="project_status"/>
+	<filterIsNull keyName="KEY_SAMPLE_QC_STATUS_IS_NULL" ordering="519" tableAlias="sample" columnName="qc_status"/>
+
+	<filterNotIsNull keyName="KEY_SAMPLE_RECEIVED_AT_ARDAIS" ordering="samp306" tableAlias="sample" columnName="receipt_date"/>
+	<filterNotIsNull keyName="KEY_PATH_DX_EXISTS" ordering="233" tableAlias="path" columnName="diagnosis_concept_id"/>
+	<filterNotIsNull keyName="KEY_RNA_SAMPLE_CREATED" ordering="430" tableAlias="rna_rna_list" columnName="vialtosend"/>
+	<filterNotIsNull keyName="KEY_SAMPLE_SALES_STATUS_EXISTS" ordering="samp317" tableAlias="sample" columnName="sales_status"/>
+	<filterNotIsNull keyName="KEY_CONSENT_DRE_CID_EXISTS" ordering="350" tableAlias="consent" columnName="dre_cid"/>
+	<filterNotIsNull keyName="KEY_CONSENT_PSA_EXISTS" ordering="352" tableAlias="consent" columnName="psa"/>
+
+	<filterContains keyName="KEY_PATH_ASCII_REPORT_CONTAINS" ordering="236" tableAlias="path" columnName="pathology_ascii_report">
+	  <hint hintPriority="11000"
+	    hintText="leading(path) index(path PDC_PATHOLOGY_REPORT_IN4) use_nl(sample) use_nl(rna_batch_detail)" />
+	</filterContains>
+	<filterContains keyName="KEY_LIMS_PE_EXTERNAL_COMMENTS_CONTAINS" ordering="269" tableAlias="lims_pe" columnName="external_comments">
+	  <hint hintPriority="11000"
+	    hintText="leading(lims_pe) index(lims_pe LIMS_PATH_EVALUATION_IN6) use_nl(sample) use_nl(rna_batch_detail)" />
+	</filterContains>
+	<filterContains keyName="KEY_PATH_NOTE" ordering="507" tableAlias="path" columnName="additional_note"/>
+	<filterContains keyName="KEY_DONOR_NOTE" ordering="508" tableAlias="donor" columnName="donor_profile_notes"/>
+	<filterContains keyName="KEY_SECTION_NOTE" ordering="509" tableAlias="path_section" columnName="path_section_notes" />
+	<filterNumericRange keyName="KEY_AGE_AT_COLLECTION" ordering="224" tableAlias="sample" columnName="age_at_collection">
+	  <hint hintPriority="4000"
+	    hintText="leading(sample) use_nl(rna_batch_detail)" />
+	</filterNumericRange>
+	<filterNumericRange keyName="KEY_LIMS_PE_LSN" ordering="255" tableAlias="lims_pe" columnName="lesion_cells">
+	  <hint hintPriority="4000"
+	    hintText="leading(lims_pe) use_nl(sample)" />
+	</filterNumericRange>
+	<filterNumericRange keyName="KEY_LIMS_PE_NEC" ordering="259" tableAlias="lims_pe" columnName="necrosis_cells">
+	  <hint hintPriority="4000"
+	    hintText="leading(lims_pe) use_nl(sample)" />
+	</filterNumericRange>
+	<filterNumericRange keyName="KEY_LIMS_PE_NRM" ordering="254" tableAlias="lims_pe" columnName="normal_cells">
+	  <hint hintPriority="4000"
+	    hintText="leading(lims_pe) use_nl(sample)" />
+	</filterNumericRange>
+	<filterNumericRange  keyName="KEY_LIMS_PE_TAS" ordering="258" tableAlias="lims_pe" columnName="hypoacellularstroma_cells">
+	  <hint hintPriority="4000"
+	    hintText="leading(lims_pe) use_nl(sample)" />
+	</filterNumericRange>
+	<filterNumericRange keyName="KEY_LIMS_PE_TCS" ordering="257" tableAlias="lims_pe" columnName="cellularstroma_cells">
+	  <hint hintPriority="4000"
+	    hintText="leading(lims_pe) use_nl(sample)" />
+	</filterNumericRange>
+	<filterNumericRange keyName="KEY_LIMS_PE_TMR" ordering="256" tableAlias="lims_pe" columnName="tumor_cells">
+	  <hint hintPriority="4000"
+	    hintText="leading(lims_pe) use_nl(sample)" />
+	</filterNumericRange>
+	<filterNumericRange keyName="KEY_RNA_PE_LSN" ordering="320" tableAlias="rna_batch_detail" columnName="lesion_cells"/>
+	<filterNumericRange keyName="KEY_RNA_PE_NEC" ordering="321" tableAlias="rna_batch_detail" columnName="necrosis_cells"/>
+	<filterNumericRange keyName="KEY_RNA_PE_NRM" ordering="322" tableAlias="rna_batch_detail" columnName="normal_cells"/>
+	<filterNumericRange keyName="KEY_RNA_PE_TMR" ordering="323"  tableAlias="rna_batch_detail" columnName="tumor_cells"/>
+	<filterNumericRange keyName="KEY_RNA_PE_TAS" ordering="324" tableAlias="rna_batch_detail" columnName="hypoacellularstroma_cells"/>
+	<filterNumericRange keyName="KEY_RNA_PE_TCS" ordering="325" tableAlias="rna_batch_detail" columnName="cellularstroma_cells"/>
+	<filterNumericRange keyName="KEY_CONSENT_PSA" ordering="354" tableAlias="consent" columnName="psa"/>
+	<filterDateRange  keyName="KEY_SAMPLE_DATE_RECEIVED" ordering="samp316" tableAlias="sample" columnName="receipt_date"/>
+	<filterDateRange  keyName="KEY_SAMPLE_DATE_COLLECTED" ordering="samp318" tableAlias="sample" columnName="collection_datetime"/>
+
+	<filterJoin keyName="KEY_JOIN_CART_RNA_BATCH" ordering="510">
+		<leftColumn>
+			<tableColumn tableAlias="shopping_cart_detail" columnName="barcode_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="rna_batch_detail" columnName="rnavialid"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_CONSENT_CONSENT_REVOKED" ordering="512">
+		<leftColumn>
+			<tableColumn tableAlias="revoked_consent" columnName="consent_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="consent" columnName="consent_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_SAMPLE_BOX_LOCATION" ordering="513">
+		<leftColumn>
+			<tableColumn tableAlias="sample" columnName="box_barcode_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="box_location" columnName="box_barcode_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_BOX_LOCATION_STAFF" ordering="524">
+		<leftColumn>
+			<tableColumn tableAlias="box_location" columnName="location_address_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="staff" columnName="location_address_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_ASM_ASM_FORM" ordering="021">
+		<leftColumn>
+			<tableColumn tableAlias="asm" columnName="asm_form_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="asm_form" columnName="asm_form_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_SAMPLE_ASM" ordering="001">
+		<leftColumn>
+			<tableColumn tableAlias="sample" columnName="asm_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="asm" columnName="asm_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_SAMPLE_CONSENT" ordering="077">
+		<leftColumn>
+			<tableColumn tableAlias="sample" columnName="consent_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="consent" columnName="consent_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_SAMPLE_SAMPLE1" ordering="078">
+		<leftColumn>
+			<tableColumn tableAlias="sample" columnName="consent_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="sample1" columnName="consent_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_ASM_CONSENT" ordering="002">
+		<leftColumn>
+			<tableColumn tableAlias="asm" columnName="consent_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="consent" columnName="consent_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_SAMPLE_DONOR" ordering="004">
+		<leftColumn>
+			<tableColumn tableAlias="sample" columnName="ardais_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="donor" columnName="ardais_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_LIMS_PE_SAMPLE" ordering="003">
+		<leftColumn>
+			<tableColumn tableAlias="lims_pe" columnName="sample_barcode_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="sample" columnName="sample_barcode_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_LIMS_PE_SAMPLE_OUTER" ordering="118" joinType="left">
+		<leftColumn>
+			<tableColumn tableAlias="lims_pe" columnName="sample_barcode_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="sample" columnName="sample_barcode_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_PATH_SAMPLE" ordering="011">
+		<leftColumn>
+			<tableColumn tableAlias="path" columnName="consent_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="sample" columnName="consent_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_PATH_CONSENT" ordering="005">
+		<leftColumn>
+			<tableColumn tableAlias="path" columnName="consent_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="consent" columnName="consent_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_PATH_CONSENT_OUTER" ordering="010" joinType="left">
+		<leftColumn>
+			<tableColumn tableAlias="path" columnName="consent_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="consent" columnName="consent_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_RNA_POOL_SAMPLE" ordering="008">
+		<leftColumn>
+			<tableColumn tableAlias="rna_pool_tissue" columnName="sample_barcode_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="sample" columnName="sample_barcode_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_PATH_SECTION" ordering="006">
+		<leftColumn>
+			<tableColumn tableAlias="path" columnName="primary_path_report_section_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="path_section" columnName="path_report_section_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_IMAGES_SLIDE" ordering="116">
+		<leftColumn>
+			<tableColumn tableAlias="ads_imaget_syn" columnName="slideid"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="slide" columnName="slide_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_RNA_GROSS_EXTRACTION" ordering="119">
+		<leftColumn>
+			<tableColumn tableAlias="rna_gross_extraction" columnName="rnavialid"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="rna_batch_detail" columnName="rnavialid"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_RNA_POOL_BATCH_DETAIL" ordering="120">
+		<leftColumn>
+			<tableColumn tableAlias="rna_batch_detail" columnName="rnavialid"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="rna_pool_tissue" columnName="rnavialid"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_RNA_BIOANALYSER" ordering="122">
+		<leftColumn>
+			<tableColumn tableAlias="rna_bioanalyser" columnName="rnavialid"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="rna_batch_detail" columnName="rnavialid"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_RNA_REP_SAMPLE" ordering="030">
+		<leftColumn>
+			<tableColumn tableAlias="rna_batch_detail" columnName="rep_sample"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="sample" columnName="sample_barcode_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_SAMPLE_TMA_BLOCK_SAMPLES_OUTER" ordering="126" joinType="right">
+		<leftColumn>
+			<tableColumn tableAlias="sample" columnName="sample_barcode_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="tma_block_samples" columnName="sample_barcode_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_SAMPLE_RNA_POOL_OUTER" ordering="125" joinType="left">
+		<leftColumn>
+			<tableColumn tableAlias="rna_pool_tissue" columnName="sample_barcode_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="sample" columnName="sample_barcode_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_RNA_POOL_BATCH_DETAIL_OUTER" ordering="127" joinType="left">
+		<leftColumn>
+			<tableColumn tableAlias="rna_batch_detail" columnName="rnavialid"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="rna_pool_tissue" columnName="rnavialid"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_OUTER_JOIN_CONSENT_DONOR" ordering="104" joinType="right">
+		<leftColumn>
+			<tableColumn tableAlias="consent" columnName="ardais_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="donor" columnName="ardais_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_OUTER_JOIN_PATH_SECTION" ordering="106" joinType="right">
+		<leftColumn>
+			<tableColumn tableAlias="path" columnName="primary_path_report_section_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="path_section" columnName="path_report_section_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_OUTER_JOIN_RNA_RNA_HOLD" ordering="009" joinType="left">
+		<leftColumn>
+			<tableColumn tableAlias="rna_hold_amount" columnName="rnavialid"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="rna_batch_detail" columnName="rnavialid"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_PTS_SAMPLE_PROJECT" ordering="017">
+		<leftColumn>
+			<tableColumn tableAlias="pts_sample" columnName="projectid"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="pts_project" columnName="projectid"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_LINE_ORDER" ordering="018">
+		<leftColumn>
+			<tableColumn tableAlias="es_order_line" columnName="order_number"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="es_ardais_order" columnName="order_number"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_RNA_PROJECT_LIST" ordering="019">
+		<leftColumn>
+			<tableColumn tableAlias="rna_project" columnName="requestid"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="rna_rna_list" columnName="requestid"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_ORDER_USER" ordering="020">
+		<leftColumn>
+			<tableColumn tableAlias="es_ardais_order" columnName="ardais_user_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="es_ardais_user" columnName="ardais_user_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_SAMPLE1_ORDER" ordering="024">
+		<leftColumn>
+			<tableColumn tableAlias="sample1" columnName="sample_barcode_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="es_order_line" columnName="barcode_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_SAMPLE1_CART_DETAIL" ordering="025">
+		<leftColumn>
+			<tableColumn tableAlias="sample1" columnName="sample_barcode_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="shopping_cart_detail" columnName="barcode_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_CART_USER" ordering="027">
+		<leftColumn>
+			<tableColumn tableAlias="shopping_cart_detail" columnName="ardais_user_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="es_ardais_user" columnName="ardais_user_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_LOGICAL_REPOS_ITEM_LOGICAL_REPOS" ordering="028">
+		<leftColumn>
+			<tableColumn tableAlias="ard_logical_repos_item" columnName="repository_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="ard_logical_repos" columnName="id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_RNA_LOGICAL_REPOS_ITEM" ordering="031">
+		<leftColumn>
+			<tableColumn tableAlias="rna_batch_detail" columnName="rnavialid"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="ard_logical_repos_item" columnName="item_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_SAMPLE_LOGICAL_REPOS_ITEM" ordering="029">
+		<leftColumn>
+			<tableColumn tableAlias="sample" columnName="sample_barcode_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="ard_logical_repos_item" columnName="item_id"/>
+		</rightColumn>
+	</filterJoin>
+	<filterJoin keyName="KEY_JOIN_PATH_DIAGNOSTICS" ordering="351">
+		<leftColumn>
+			<tableColumn tableAlias="path" columnName="path_report_id"/>
+		</leftColumn>
+		<rightColumn>
+			<tableColumn tableAlias="path_diagnostics" columnName="path_report_id"/>
+		</rightColumn>
+	</filterJoin>
+	
+	<filterExists keyName="KEY_IN_ARDAIS_REPOSITORY" ordering="290">
+		<selectClause>
+			<columnOrValueList>
+				<fixedValue value="1"/>
+			</columnOrValueList>
+			<fromTable>
+				<dbAlias aliasValue="box_location"/>
+			</fromTable>
+			<whereClause>
+				<filterKey keyName="KEY_JOIN_SAMPLE_BOX_LOCATION"/>
+			</whereClause>
+		</selectClause>
+	</filterExists>
+
+	<filterNotExists keyName="KEY_NO_EXISTING_SHOPPING_CART_ENTRY" ordering="415">
+		<selectClause>
+			<columnOrValueList>
+				<tableColumn tableAlias="shopping_cart_detail" columnName="barcode_id"/>
+			</columnOrValueList>
+			<fromTable>
+				<dbAlias aliasValue="shopping_cart_detail"/>
+			</fromTable>
+			<whereClause operator="AND">
+				<filterKey keyName="KEY_CART_USER_ID"/>
+				<filterKey keyName="KEY_JOIN_CART_RNA_BATCH"/>
+			</whereClause>
+		</selectClause>
+	</filterNotExists>
+	<filterNotExists keyName="KEY_CONSENT_NOT_REVOKED" ordering="226">
+		<selectClause>
+			<columnOrValueList>
+				<fixedValue value="1"/>
+			</columnOrValueList>
+			<fromTable>
+				<dbAlias aliasValue="revoked_consent"/>
+			</fromTable>
+			<whereClause>
+				<filterKey keyName="KEY_JOIN_CONSENT_CONSENT_REVOKED"/>
+			</whereClause>
+		</selectClause>
+	</filterNotExists>
+	<filterNotExists keyName="KEY_LIMS_PE_DX_NOT" ordering="299">
+		<selectClause>
+			<columnOrValueList>
+				<fixedValue value="1"/>
+			</columnOrValueList>
+			<fromTable>
+				<dbAlias aliasValue="lims_pe"/>
+			</fromTable>
+			<whereClause operator="AND">
+				<filterKey keyName="KEY_LIMS_PE_REPORTED"/>
+				<filterKey keyName="KEY_LIMS_PE_DX"/>
+				<filterKey keyName="KEY_JOIN_LIMS_PE_SAMPLE"/>
+			</whereClause>
+		</selectClause>
+	</filterNotExists>
+
+	<filterNotIn  keyName="KEY_RNA_RESTRICTED_DI" ordering="273">
+		<tableColumn tableAlias="rna_batch_detail" columnName="rnavialid"/>
+		<selectClause>
+			<columnOrValueList>
+				<tableColumn tableAlias="rna_pool_tissue" columnName="rnavialid"/>
+			</columnOrValueList>
+			<fromTable>
+				<dbAlias aliasValue="rna_pool_tissue"/>
+				<dbAlias aliasValue="sample"/>
+			</fromTable>
+			<whereClause operator="AND">
+				<filterKey keyName="KEY_SAMPLE_RESTRICTED"/>
+				<filterKey keyName="KEY_SAMPLE_ACCOUNT_NOT"/>
+				<filterKey keyName="KEY_JOIN_RNA_POOL_SAMPLE"/>
+			</whereClause>
+		</selectClause>
+	</filterNotIn>
+	<filterNotIn keyName="KEY_RNA_NOT_RESTRICTED" ordering="276">
+		<tableColumn tableAlias="rna_batch_detail" columnName="rnavialid"/>
+		<selectClause>
+			<columnOrValueList>
+				<tableColumn tableAlias="rna_pool_tissue" columnName="rnavialid"/>
+			</columnOrValueList>
+			<fromTable>
+				<dbAlias aliasValue="rna_pool_tissue"/>
+				<dbAlias aliasValue="sample"/>
+			</fromTable>
+			<whereClause operator="AND">
+				<filterKey keyName="KEY_SAMPLE_RESTRICTED"/>
+				<filterKey keyName="KEY_JOIN_RNA_POOL_SAMPLE"/>
+			</whereClause>
+		</selectClause>
+	</filterNotIn>
+
+	<filterOther keyName="KEY_PATH_NOTES_CONTAINS" ordering="234" sqlString="sample.consent_id IN ((select path999.consent_id from pdc_pathology_report path999 where CONTAINS(path999.additional_note, ?) > 0) UNION (select path_section999.consent_id from pdc_path_report_section path_section999, pdc_pathology_report path999 where path999.primary_path_report_section_id = path_section999.path_report_section_id and CONTAINS(path_section999.path_section_notes, ?) > 0) UNION (select consent999.consent_id from pdc_ardais_donor donor999, iltds_informed_consent consent999 where consent999.ardais_id = donor999.ardais_id and CONTAINS(donor999.donor_profile_notes, ?) > 0))"/>
+	<filterOther keyName="KEY_RNA_AMOUNT_AVAILABLE" ordering="272" sqlString="(rna_batch_detail.remainingvolume * rna_batch_detail.concentration - NVL(rna_hold_amount.hold_amt,0) >= 10)"/>
+	<filterOther keyName="KEY_LIMS_PE_REPORTED_OUTER" ordering="250b" sqlString="lims_pe.reported_yn(+) = 'Y'"/>
+	<filterOther keyName="KEY_SAMPLE_IN_LOGICAL_REPOSITORY" ordering="300"
+	  sqlString="exists (select /*+ INDEX(ri0 ARD_LOGICAL_REPOS_ITEM_IN2) */ 1 from ard_logical_repos_item ri0 where ri0.item_id = sample.sample_barcode_id and %[ri0.repository_id = ?%])"/>
+	<filterOther keyName="KEY_RNA_IN_LOGICAL_REPOSITORY" ordering="301"
+	  sqlString="exists (select /*+ INDEX(ri0 ARD_LOGICAL_REPOS_ITEM_IN2) */ 1 from ard_logical_repos_item ri0 where ri0.item_id = rna_batch_detail.rnavialid and %[ri0.repository_id = ?%])"/>
+	<!-- filter to add when no results (0 rows) should be returned -->
+	<filterOther keyName="KEY_RETURN_NO_RESULTS" ordering="999"
+	  sqlString="'TRUE' = 'FALSE'"/>
+	<filterOther keyName="KEY_ONLY_LOCAL_SAMPLES" ordering="302"
+		sqlString="exists (select 1 from iltds_box_location boxloc where sample.BOX_BARCODE_ID = boxloc.BOX_BARCODE_ID and boxloc.LOCATION_ADDRESS_ID = ?)"/>
+	<filterOther keyName="KEY_DIAGNOSTIC_TEST_RESULT" ordering="356"
+	  sqlString="(path_diagnostics.diagnostics_concept_id = ? and %[path_diagnostics.diagnostic_results_cid  = ?%])"
+	  />
+
+	<compoundFilter keyName="KEY_SAMPLE_NOT_IN_PROJECT" ordering="samp304" operator="OR">
+		<filterKey keyName="KEY_SAMPLE_NOT_PRJADDED"/>
+		<filterKey keyName="KEY_SAMPLE_NULL_PROJECT"/>
+	</compoundFilter>
+	<compoundFilter keyName="KEY_SAMPLE_QCVERIFIED_NOT" ordering="samp250" operator="AND">
+		<filterKey keyName="KEY_SAMPLE_QCVERIFIED"/>
+		<filterKey keyName="KEY_SAMPLE_NOT_PULLED"/>
+	</compoundFilter>
+	<compoundFilter keyName="KEY_SAMPLE_QCVERIFIED_ONLY" ordering="samp251" operator="AND">
+		<filterKey keyName="KEY_SAMPLE_QCVERIFIED"/>
+		<filterKey keyName="KEY_SAMPLE_NOT_RELEASED"/>
+	</compoundFilter>
+	<compoundFilter keyName="KEY_SAMPLE_QCRELEASED_ONLY" ordering="samp252" operator="AND">
+		<filterKey keyName="KEY_SAMPLE_RELEASED"/>
+		<filterKey keyName="KEY_SAMPLE_NOT_QCPOSTED"/>
+	</compoundFilter>
+	<compoundFilter keyName="KEY_SAMPLE_RESTRICTED_ACCOUNT" ordering="samp302" operator="AND">
+		<filterKey keyName="KEY_SAMPLE_ACCOUNT"/>
+		<filterKey keyName="KEY_SAMPLE_RESTRICTED"/>
+	</compoundFilter>
+	<compoundFilter keyName="KEY_SAMPLE_NOT_PULLED_OR_BMS_YN_YES" ordering="520" operator="OR">
+		<filterKey keyName="KEY_SAMPLE_NOT_PULLED"/>
+		<filterKey keyName="KEY_SAMPLE_BMS_YN_YES"/>
+	</compoundFilter>
+	<compoundFilter keyName="KEY_SAMPLE_NOT_IN_PROJECT_OR_BMS_YN_YES" ordering="522" operator="OR">
+		<filterKey keyName="KEY_SAMPLE_NOT_PRJADDED"/>
+		<filterKey keyName="KEY_SAMPLE_NULL_PROJECT"/>
+		<filterKey keyName="KEY_SAMPLE_BMS_YN_YES"/>
+	</compoundFilter>
+	<compoundFilter keyName="KEY_CONSENT_NOT_REVOKED_OR_BMS_YN_YES" ordering="523" operator="OR">
+		<filterKey keyName="KEY_CONSENT_NOT_REVOKED"/>
+		<filterKey keyName="KEY_SAMPLE_BMS_YN_YES"/>
+	</compoundFilter>
+	<compoundFilter keyName="KEY_CONSENT_NOT_PULLED_OR_BMS_YN_YES" ordering="525" operator="OR">
+		<filterKey keyName="KEY_CONSENT_NOT_PULLED"/>
+		<filterKey keyName="KEY_SAMPLE_BMS_YN_YES"/>
+	</compoundFilter>
+	<compoundFilter keyName="KEY_IN_ARDAIS_REPOSITORY_OR_BMS_YN_YES" ordering="526" operator="OR">
+		<filterKey keyName="KEY_IN_ARDAIS_REPOSITORY"/>
+		<filterKey keyName="KEY_SAMPLE_BMS_YN_YES"/>
+	</compoundFilter>
+	<compoundFilter keyName="KEY_PATH_DX_EXISTS_OR_BMS_YN_YES" ordering="529" operator="OR">
+		<filterKey keyName="KEY_PATH_DX_EXISTS"/>
+		<filterKey keyName="KEY_SAMPLE_BMS_YN_YES"/>
+	</compoundFilter>
+	<compoundFilter keyName="KEY_SAMPLE_SALES_STATUS_NOT_NULL_AND_BMS_YN_YES" ordering="531" operator="AND">
+		<filterKey keyName="KEY_SAMPLE_SALES_STATUS_EXISTS"/>
+		<filterKey keyName="KEY_SAMPLE_BMS_YN_YES"/>
+	</compoundFilter>
+	<compoundFilter keyName="KEY_SAMPLE_SALES_STATUS_OR_NOT_NULL_AND_BMS_YN_YES" ordering="532" operator="OR">
+		<filterKey keyName="KEY_SAMPLE_SALES_STATUS"/>
+		<filterKey keyName="KEY_SAMPLE_SALES_STATUS_NOT_NULL_AND_BMS_YN_YES"/>
+	</compoundFilter>
+	<compoundFilter keyName="KEY_NO_EXISTING_SHOPPING_CART_ENTRY_OR_BMS_RNA_YN_YES" ordering="533" operator="OR">
+		<filterKey keyName="KEY_NO_EXISTING_SHOPPING_CART_ENTRY"/>
+		<filterKey keyName="KEY_RNA_BMS_YN_YES"/>
+	</compoundFilter>
+</bigrLibraryMetaData>

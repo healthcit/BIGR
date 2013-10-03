@@ -1,0 +1,30 @@
+# Oracle cron
+#
+# Last updated 01/18/07
+#
+#
+# All System jobs
+#  Monitor alert logs
+59 * * * * /home/oracle/scripts/monitor/chk_alertlog.pl >> /dev/null 2>&1
+#  Monitor Oracle listener
+29,59 * * * * /home/oracle/scripts/monitor/islistenerup.ksh >> /dev/null 2>&1
+# Monitor Oracle OEM
+* 6,17 * * * /home/oracle/scripts/monitor/chk_oem.ksh >> /dev/null 2>&1
+# Monitor server disk space
+30 */3 * * * /home/oracle/scripts/monitor/chk_disk_space.ksh 95 85 >> /dev/null 2>&1
+############
+# ASPDB2 jobs
+# Export
+30 23 * * * /home/oracle/scripts/exp/do_full_dpexp.ksh ASPDB2 kb4urh1 >> /dev/null 2>&1
+# Rman
+05 1 * * * /home/oracle/scripts/rman/full_db_bkup.ksh ASPDB2
+# Purge obsolete Rman
+10 4 * * * /home/oracle/scripts/rman/rman_cleanup_obsolete.ksh ASPDB2
+# Purge obsolete datapump exports after 5 days
+10 5 * * * find /u01/app/oracle/admin/ASPDB2/dpdump/ -name 'dp_full*' -mtime +3 -exec rm  {} \;
+# Purge empty file directories
+59 23 * * 6 /home/oracle/scripts/maint/rm_empty_dirs.ksh /u02/oradata/flash_recovery_area/ASPDB2/backupset Y|mailx -s "rm_empty_dirs.ksh /backupset" dba@healthcit.com
+# Truncate log files
+15 3 27 3,6,9,12 * /home/oracle/scripts/maint/trunc_listener_log.ksh
+15 3 28 3,6,9,12 * /home/oracle/scripts/maint/trunc_alert_log.ksh
+############

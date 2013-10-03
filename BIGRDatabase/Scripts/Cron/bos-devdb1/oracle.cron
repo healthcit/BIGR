@@ -1,0 +1,31 @@
+# Oracle cron
+#
+# Last updated 11/09/06
+#
+#
+# All System jobs
+#  Monitor alert logs
+59 * * * * /home/oracle/scripts/monitor/chk_alertlog.pl >> /dev/null 2>&1
+#  Monitor Oracle listener
+29,59 * * * * /home/oracle/scripts/monitor/islistenerup.ksh >> /dev/null 2>&1
+# Monitor Oracle OEM
+* 6,17 * * * /home/oracle/scripts/monitor/chk_oem.ksh >> /dev/null 2>&1
+############
+# ASPDB1 jobs
+# Export
+30 23 * * * /home/oracle/scripts/exp/do_full_dpexp.ksh ASPDB1 lorq8xv >> /dev/null 2>&1
+# Rman
+05 1 * * * /home/oracle/scripts/rman/full_db_bkup.ksh ASPDB1
+# Purge obsolete Rman
+10 4 * * * /home/oracle/scripts/rman/rman_cleanup_obsolete.ksh ASPDB1
+# Purge obsolete datapump exports
+10 5 * * * find /u01/app/oracle/admin/ASPDB1/dpdump/ -name 'dp_full*' -mtime +3 -exec rm  {} \;
+# Purge empty file directories 
+59 23 * * 6 /home/oracle/scripts/maint/rm_empty_dirs.ksh /u01/app/oracle/flash_recovery_area/ASPDB1/backupset Y|mailx -s "rm_empty_dirs.ksh /backupset" dba@healthcit.com
+############
+# GSBDB jobs
+# Export
+30 22 * * * /home/oracle/scripts/exp/do_full_dpexp.ksh GSBDB phil5 >> /dev/null 2>&1
+# Purge obsolete datapump exports
+10 6 * * * find /u01/app/oracle/admin/GSBDB/dpdump/ -name 'dp_full*' -mtime +3 -exec rm  {} \;
+############

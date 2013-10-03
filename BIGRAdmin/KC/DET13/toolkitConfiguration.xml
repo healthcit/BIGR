@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toolkitConfiguration PUBLIC "-//GulfStream Bioinformatics Corporation//DTD Toolkit Configuration 1.0//EN" "toolkitConfiguration.dtd">
+<toolkitConfiguration version="1.0">
+  <category systemName="pt_info" isDatabase="true" isUi="true"/>
+  <category systemName="current_illness" isUi="true">
+    <category systemName="problem" isDatabase="true"/>
+    <category systemName="clin_pres" isDatabase="true">
+      <category systemName="clinical_symptoms"/>
+      <category systemName="vital_signs"/>
+      <category systemName="physical_examination"/>
+    </category>
+    <category systemName="clin_dis_prog" isDatabase="true" databasePattern="eav">
+      <category systemName="clin_tumo_stage"/>
+      <category systemName="clin_lymp_node_stage"/>
+      <category systemName="clin_met_stage"/>
+      <category systemName="clin_bloo_stg"/>
+      <category systemName="clin_stg_group"/>
+      <category systemName="othr_clin_prog_cat"/>
+    </category>
+    <category systemName="treatment" isDatabase="true">
+      <category systemName="medication"/>
+      <category systemName="specialty_therapy"/>
+      <category systemName="surgery"/>
+      <category systemName="clinical_trials"/>
+    </category>
+  </category>
+  <category systemName="diag_eval">
+    <category systemName="ancillary_studies" isDatabase="true" isUi="true" databasePattern="eav">
+      <category systemName="cardiovasc_stud"/>
+      <category systemName="derm_studies_cat"/>
+      <category systemName="endocrin_studies_cat"/>
+      <category systemName="gast_stud"/>
+      <category systemName="neurolog_studies_cat"/>
+      <category systemName="ophthalm_studies_cat"/>
+      <category systemName="orthopedic_studies"/>
+      <category systemName="respiratory_studies"/>
+      <category systemName="urologic_studies_cat"/>
+    </category>
+    <category systemName="laboratory_studies" isUi="true">
+      <category systemName="bloo_gase_arte" isDatabase="true" databasePattern="eav"/>
+      <category systemName="chemistry_survey" isDatabase="true" databasePattern="eav"/>
+      <category systemName="chemistry" isDatabase="true" databasePattern="eav"/>
+      <category systemName="chromosome_studies" isDatabase="true" databasePattern="eav"/>
+      <category systemName="coagulation" isDatabase="true" databasePattern="eav"/>
+      <category systemName="cytology" isDatabase="true" databasePattern="eav"/>
+      <category systemName="gene_studies" isDatabase="true" databasePattern="eav"/>
+      <category systemName="hematology_survey" isDatabase="true" databasePattern="eav"/>
+      <category systemName="hematology" isDatabase="true" databasePattern="eav"/>
+      <category systemName="histochemistry" isDatabase="true" databasePattern="eav"/>
+      <category systemName="immunohistochemistry" isDatabase="true" databasePattern="eav"/>
+      <category systemName="immunophenotype" isDatabase="true" databasePattern="eav"/>
+      <category systemName="microbiology" isDatabase="true" databasePattern="eav"/>
+      <category systemName="stains" isDatabase="true" databasePattern="eav"/>
+      <category systemName="urinalysis" isDatabase="true" databasePattern="eav"/>
+    </category>
+    <category systemName="imaging_studies" isDatabase="true" isUi="true" databasePattern="eav">
+      <category systemName="godfrey_lab_imaging"/>
+      <category systemName="magn_reso_imaging"/>
+      <category systemName="nuclear_scanning"/>
+      <category systemName="radiology"/>
+      <category systemName="tomography"/>
+      <category systemName="ultrasound_sonogr"/>
+    </category>
+    <category systemName="skin_tests" isDatabase="true" isUi="true" databasePattern="eav"/>
+    <category systemName="surgical_studies" isDatabase="true" isUi="true" databasePattern="eav">
+      <category systemName="aspi_lava"/>
+      <category systemName="endoscopic_studies"/>
+      <category systemName="tissue_biopsy"/>
+    </category>
+  </category>
+  <category systemName="past_medi_hist" isDatabase="true">
+    <category systemName="medical_history" isUi="true">
+      <category systemName="gene_hlth_surv"/>
+      <category systemName="medi_hist_surv"/>
+      <category systemName="pregnancy_history"/>
+      <category systemName="menstrual_history"/>
+      <category systemName="past_hlth_cond"/>
+    </category>
+    <category systemName="social_history" isUi="true"/>
+    <category systemName="family_history" isUi="true"/>
+    <category systemName="treatment_history" isUi="true">
+      <category systemName="medication_history"/>
+      <category systemName="spec_ther_hist"/>
+      <category systemName="surgery_history"/>
+    </category>
+  </category>
+  <category systemName="hospitalization_info" isDatabase="true" isUi="true"/>
+  <category systemName="case_info" isDatabase="true" isUi="true"/>
+  <category systemName="surgical_pathology" isDatabase="true" isUi="true">
+    <category systemName="pathology_report"/>
+    <category systemName="gross_examination"/>
+    <category systemName="path_dis_prog">
+      <category systemName="path_tumo_stg"/>
+      <category systemName="path_lym_node_stg"/>
+      <category systemName="path_dist_met_stg"/>
+      <category systemName="path_stg_group"/>
+      <category systemName="othr_path_prog_cat"/>
+    </category>
+    <category systemName="microscopic_exam_cat"/>
+    <category systemName="electron_microscopy"/>
+  </category>
+  <category systemName="followup_info" isDatabase="true" isUi="true"/>
+</toolkitConfiguration>

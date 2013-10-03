@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE btxConfig PUBLIC
+    "-//Ardais Corporation//DTD BTX Configuration 1.0//EN"
+    "btxConfig.dtd">
+
+<btxConfig>
+  <transactions>
+    <!-- ========== bigr ======================== -->
+    <transaction type="bigr_update_computed_data"
+      performerType="com.ardais.bigr.performers.BtxPerformerComputedDataOperation"
+      performerMethod="performUpdateComputedData"
+      validate="false"
+    />
+    <transaction type="bigr_update_computed_data_single"
+      performerType="com.ardais.bigr.performers.BtxPerformerComputedDataOperation"
+      performerMethod="performUpdateComputedDataSingle"
+      validate="false"
+    />
+    <!-- ========== bigr ======================== -->
+    <!-- ========== Begin Sample Selection ======================== -->
+    <transaction type="library_get_sample_summary_start"
+      performerType="com.ardais.bigr.library.performers.BtxPerformerSampleSelection"
+      performerMethod="performGetSampleSummaryStart"
+      validate="false"
+    />    
+    <transaction type="library_get_sample_summary"
+      performerType="com.ardais.bigr.library.performers.BtxPerformerSampleSelection"
+      performerMethod="performGetSampleSummary"
+      validate="false"
+    />
+    <transaction type="library_get_sample_summary_sql"
+      performerType="com.ardais.bigr.library.performers.BtxPerformerSampleSelection"
+      performerMethod="performGetSampleSummarySql"
+      validate="false"
+    />
+    <transaction type="library_get_rna_summary"
+      performerType="com.ardais.bigr.library.performers.BtxPerformerSampleSelection"
+      performerMethod="performGetRnaSummary"
+      validate="false"
+    />
+    <transaction type="library_get_rna_summary_sql"
+      performerType="com.ardais.bigr.library.performers.BtxPerformerSampleSelection"
+      performerMethod="performGetRnaSummarySql"
+      validate="false"
+    />
+    <transaction type="library_get_summary_no_implied"
+      performerType="com.ardais.bigr.library.performers.BtxPerformerSampleSelection"
+      performerMethod="performGetSummaryNoImplied"
+      validate="false"
+    />
+    <transaction type="library_get_details"
+      performerType="com.ardais.bigr.library.performers.BtxPerformerSampleSelection"
+      performerMethod="performGetDetails"
+      validate="false"
+    />
+    <transaction type="library_set_unavailable_for_pick_list"
+      performerType="com.ardais.bigr.library.performers.BtxPerformerSampleSelection"
+      performerMethod="performSetUnavailableForPickList"
+      validate="false"
+    />
+
+    <transaction type="library_get_rna_representative_sample"
+      performerType="com.ardais.bigr.library.performers.BtxPerformerRnaOperation"
+      performerMethod="performGetRnaWithRepresentativeSample"
+    />
+    <transaction type="library_get_hold_list_data"
+      performerType="com.ardais.bigr.library.performers.BtxPerformerHoldListManager"
+      performerMethod="performGetHoldListData"
+      validate="false"
+    />
+    <transaction type="library_add_to_hold_list"
+      performerType="com.ardais.bigr.library.performers.BtxPerformerHoldListManager"
+      performerMethod="performAddToHoldList"
+      validate="false"
+    />
+    <transaction type="library_remove_from_hold_list"
+      performerType="com.ardais.bigr.library.performers.BtxPerformerHoldListManager"
+      performerMethod="performRemoveFromHoldList"
+      validate="false"
+    />
+    <transaction type="library_get_order_line_data"
+      performerType="com.ardais.bigr.library.performers.BtxPerformerOrderLineManager"
+      performerMethod="performGetOrderLineData"
+      validate="false"
+    />
+    <transaction type="library_get_kc_query_form"
+      performerType="com.ardais.bigr.library.performers.BtxPerformerSampleSelection"
+      performerMethod="performGetKcQueryForm"
+      validate="false"
+    />    
+    <!-- ========== End Sample Selection ======================== -->
+    <!-- ========== Begin ILTDS =================================== -->
+    <transaction type="iltds_allocation_logAllocateSingle"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerSampleOperations"
+      performerMethod="performLogAllocateSingle"
+      validate="false"
+    />
+    <transaction type="iltds_sample_logCreateSample"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerSampleOperations"
+      performerMethod="performLogCreateSample"
+      validate="false"
+    />
+    <transaction type="iltds_case_createCase"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerCaseOperations"
+      performerMethod="performCreateCase"
+      validate="true"
+    />
+    <transaction type="iltds_shipping_createManifest"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerShippingOperations"
+      performerMethod="performCreateManifest"
+      validate="true"
+    />
+    <transaction type="iltds_shipping_printManifest"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerShippingOperations"
+      performerMethod="performPrintManifest"
+      validate="true"
+    />
+    <transaction type="iltds_shipping_scanpkg_getManifest"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerShippingOperations"
+      performerMethod="performGetManifest"
+      validatorMethod="validatePerformGetManifestForScanAndPackage"
+      validate="true"
+    />
+    <transaction type="iltds_shipping_confirmBoxOnManifest"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerShippingOperations"
+      performerMethod="performConfirmBoxOnManifest"
+      validate="true"
+    />
+    <transaction type="iltds_shipping_shipManifest"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerShippingOperations"
+      performerMethod="performShipManifest"
+      validate="true"
+    />
+    <transaction type="iltds_shipping_updateRequestsAfterShipment"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerRequestOperations"
+      performerMethod="performUpdateRequestsAfterShipment"
+      validate="true"
+    />
+    <transaction type="iltds_request_createRequestStart"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerRequestOperations"
+      performerMethod="performCreateRequestStart"
+      validate="true"
+    />
+    <transaction type="iltds_request_createRequest"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerRequestOperations"
+      performerMethod="performCreateRequest"
+      validate="true"
+    />
+    <transaction type="iltds_request_manageRequests"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerRequestOperations"
+      performerMethod="performManageRequests"
+      validate="true"
+    />
+    <transaction type="iltds_request_viewRequests"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerRequestOperations"
+      performerMethod="performFindUserRequests"
+      validate="true"
+    />
+    <transaction type="iltds_request_rejectRequestStart"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerRequestOperations"
+      performerMethod="performFindRequestDetails"
+      validatorMethod="validatePerformRejectRequestStart"
+      validate="true"
+    />
+    <transaction type="iltds_request_rejectRequest"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerRequestOperations"
+      performerMethod="performRejectRequest"
+      validate="true"
+    />
+    <transaction type="iltds_request_fulfillRequestStart"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerRequestOperations"
+      performerMethod="performFindRequestDetails"
+      validatorMethod="validatePerformFulfillRequestStart"
+      validate="true"
+    />
+    <transaction type="iltds_request_fulfillRequestAddBox"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerRequestOperations"
+      performerMethod="performFulfillRequestAddBox"
+      validate="true"
+    />
+    <transaction type="iltds_request_fulfillRequestNoOp"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerRequestOperations"
+      performerMethod="performFulfillRequestNoOp"
+      validate="false"
+    />
+    <transaction type="iltds_request_fulfillRequest"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerRequestOperations"
+      performerMethod="performFulfillRequest"
+      validate="true"
+    />
+    <transaction type="iltds_request_findRequestDetails"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerRequestOperations"
+      performerMethod="performFindRequestDetails"
+      validate="true"
+    />
+    <transaction type="iltds_receipt_shipmentVerification"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerShippingOperations"
+      performerMethod="performShipmentReceiptVerification"
+      validate="true"
+    />
+    <transaction type="iltds_receipt_boxVerification"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerShippingOperations"
+      performerMethod="performBoxReceiptVerification"
+      validate="false"
+    />
+    <transaction type="iltds_receipt_scanShipmentInformation"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerShippingOperations"
+      performerMethod="performScanShipmentInformation"
+      validate="true"
+    />
+    <transaction type="iltds_receipt_scanAndStoreBox"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerShippingOperations"
+      performerMethod="performScanAndStoreBox"
+      validate="true"
+    />
+    <transaction type="iltds_receipt_scanAndStoreManifest"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerShippingOperations"
+      performerMethod="performScanAndStoreManifest"
+      validate="true"
+    />
+    <transaction type="iltds_receipt_printPutAwayTicket"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerShippingOperations"
+      performerMethod="performPrintPutAwayTicket"
+      validate="true"
+    />
+    <transaction type="iltds_box_checkOutBox"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerBoxOperations"
+      performerMethod="performCheckOutBox"
+      validate="false"
+    />
+    <transaction type="iltds_box_createBox"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerBoxOperations"
+      performerMethod="performCreateBox"
+      validate="false"
+    />
+    <transaction type="iltds_box_setBoxLocation"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerBoxOperations"
+      performerMethod="performSetBoxLocation"
+      validate="false"
+    />
+    <transaction type="iltds_sample_deleteSamples"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerSampleOperations"
+      performerMethod="performDeleteSamples"
+      validate="true"
+    />
+    <transaction type="iltds_sample_logDeleteSample"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerSampleOperations"
+      performerMethod="performLogDeleteSample"
+      validate="false"
+    />
+    <transaction type="iltds_update_box_location"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerUpdateBoxLocation"
+      performerMethod="performUpdateBoxLocation"
+      validate="false"
+    />
+    <transaction type="iltds_placeholder"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerPlaceHolder"
+      performerMethod="performPlaceholder"
+      validate="false"
+    />
+    <transaction type="iltds_create_imported_case_start"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerCaseOperations"
+      performerMethod="performCreateImportedCaseStart"
+      validate="false"
+    />
+    <transaction type="iltds_create_imported_case"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerCaseOperations"
+      performerMethod="performCreateImportedCase"
+      validate="true"
+    />
+    <transaction type="iltds_get_case_form_summary"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerCaseOperations"
+      performerMethod="performGetCaseFormSummary"
+      validate="true"
+    />
+    <transaction type="iltds_modify_imported_case_start"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerCaseOperations"
+      performerMethod="performModifyImportedCaseStart"
+      validate="true"
+    />
+    <transaction type="iltds_modify_imported_case"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerCaseOperations"
+      performerMethod="performModifyImportedCase"
+      validate="true"
+    />
+    <transaction type="iltds_get_case_reg_form"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerCaseOperations"
+      performerMethod="performGetRegistrationForm"
+      validate="true"
+    />
+    <transaction type="iltds_pull_case_start"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerCaseOperations"
+      performerMethod="performPullCaseStart"
+      validate="true"
+    />
+    <transaction type="iltds_pull_case"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerCaseOperations"
+      performerMethod="performPullCase"
+      validate="true"
+    />
+    <transaction type="iltds_revoke_case_start"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerCaseOperations"
+      performerMethod="performRevokeCaseStart"
+      validate="true"
+    />
+    <transaction type="iltds_revoke_case"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerCaseOperations"
+      performerMethod="performRevokeCase"
+      validate="true"
+    />
+
+    <transaction type="iltds_generate_case_picklist"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerCaseOperations"
+      performerMethod="performGenerateCasePickList"
+      validate="true"
+    />
+    <transaction type="iltds_create_imported_sample_start"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerSampleOperations"
+      performerMethod="performCreateImportedSampleStart"
+      validate="false"
+    />
+    <transaction type="iltds_create_imported_sample_prepare"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerSampleOperations"
+      performerMethod="performCreateImportedSamplePrepare"
+      validate="true"
+    />
+    <transaction type="iltds_create_imported_sample"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerSampleOperations"
+      performerMethod="performCreateImportedSample"
+      validate="true"
+    />
+    <transaction type="iltds_get_sample_form_summary"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerSampleOperations"
+      performerMethod="performGetSampleFormSummary"
+      validate="true"
+    />
+    <transaction type="iltds_get_sample_reg_form"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerSampleOperations"
+      performerMethod="performGetRegistrationForm"
+      validate="true"
+    />
+    <transaction type="iltds_modify_imported_sample_start"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerSampleOperations"
+      performerMethod="performModifyImportedSampleStart"
+      validate="true"
+    />
+    <transaction type="iltds_modify_imported_sample"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerSampleOperations"
+      performerMethod="performModifyImportedSample"
+      validate="true"
+    />
+    <transaction type="iltds_modify_nonimported_sample"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerSampleOperations"
+      performerMethod="performModifyNonImportedSample"
+      validate="true"
+    />
+    <transaction type="iltds_find_by_id"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerFinderOperations"
+      performerMethod="performFindById"
+      validate="true"
+    />
+    <transaction type="iltds_icp_addHistoryNote"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerHistoryNoteOperations"
+      performerMethod="performAddHistoryNote"
+      validate="true"
+    />
+
+    <transaction type="iltds_get_clinical_findings"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerClinicalFindings"
+      performerMethod="performGetClinicalFindings"
+      validate="true"
+    />
+    <transaction type="iltds_store_clinical_finding"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerClinicalFindings"
+      performerMethod="performStoreClinicalFinding"
+      validate="true"
+    />
+    <transaction type="iltds_derivation_operation_no_validate"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerDerivationOperations"
+      performerMethod="performDerivation"
+      validate="false"
+    />
+    <transaction type="iltds_derivation_batch_operation"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerDerivationOperations"
+      performerMethod="performDerivationBatch"
+      validate="true"
+    />
+    <transaction type="iltds_derivation_batch_start"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerDerivationOperations"
+      performerMethod="performDerivationBatchStart"
+      validate="false"
+    />
+    <transaction type="iltds_derivation_batch_select"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerDerivationOperations"
+      performerMethod="performDerivationBatchSelect"
+      validate="true"
+    />
+    <transaction type="iltds_derivation_batch_lookup"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerDerivationOperations"
+      performerMethod="performDerivationBatchLookup"
+      validate="true"
+    />
+    <transaction type="iltds_derivation_batch_summary"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerDerivationOperations"
+      performerMethod="performDerivationBatchSummary"
+      validate="true"
+    />
+    <transaction type="iltds_derivation_batch_print_labels_start"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerDerivationOperations"
+      performerMethod="performDerivationBatchPrintLabelsStart"
+      validate="true"
+    />
+    <transaction type="iltds_derivation_batch_print_labels"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerDerivationOperations"
+      performerMethod="performDerivationBatchPrintLabels"
+      validate="true"
+    />
+    <!-- ========== End ILTDS =================================== -->
+    
+    <!-- ========== Begin LIMS =================================== -->
+    <transaction type="lims_subdivide_getSample"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerSubdivide"
+      performerMethod="performGetSample"
+    />
+    <transaction type="lims_subdivide_subdivide"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerSubdivide"
+      performerMethod="performSubdivide"
+    />
+    <transaction type="lims_subdivide_viewSubdivide"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerSubdivide"
+      performerMethod="performViewSubdivide"
+    />
+    <transaction type="lims_slides_prepare"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerHistologyOperation"
+      performerMethod="performCreateSlidesPrepare"
+    />
+    <transaction type="lims_create_slides"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerHistologyOperation"
+      performerMethod="performCreateSlides"
+    />
+    <transaction type="lims_create_slides_single"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerHistologyOperation"
+      performerMethod="performCreateSlidesSingle"
+      validate="false"
+    />
+    <transaction type="lims_path_lab_slides"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerHistologyOperation"
+      performerMethod="performPathLabSlides"
+    />
+    <transaction type="lims_path_lab_slides_single"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerHistologyOperation"
+      performerMethod="performPathLabSlidesSingle"
+      validate="false"
+    />
+    <transaction type="lims_print_slide_label"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerHistologyOperation"
+      performerMethod="performPrintSlideLabelFunctions"
+    />
+    <transaction type="lims_set_slide_locations"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerHistologyOperation"
+      performerMethod="performSetSlideLocations"
+    />
+    <transaction type="lims_set_slide_locations_single"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerHistologyOperation"
+      performerMethod="performSetSlideLocationsSingle"
+      validate="false"
+    />
+    <transaction type="lims_get_histo_qc_samples"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerHistologyOperation"
+      performerMethod="performGetHistoQCSample"
+    />
+    <transaction type="lims_update_histo_qc_samples"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerHistologyOperation"
+      performerMethod="performUpdateHistoQCSamples"
+    />
+    <transaction type="lims_update_histo_qc_samples_single"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerHistologyOperation"
+      performerMethod="performUpdateHistoQCSamplesSingle"
+      validate="false"
+    />
+    <transaction type="lims_get_sample_path_info"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerPathologyOperation"
+      performerMethod="performGetSamplePathologyInfo"
+      validate="false"
+    />
+    <transaction type="lims_mark_sample_discordant"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerPathologyOperation"
+      performerMethod="performMarkSampleDiscordant"
+      validate="false"
+    />
+    <transaction type="lims_mark_sample_pulled"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerPathologyOperation"
+      performerMethod="performMarkSamplePulled"
+      validate="false"
+    />
+    <transaction type="lims_mark_sample_unpulled"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerPathologyOperation"
+      performerMethod="performMarkSampleUnpulled"
+      validate="false"
+    />
+    <transaction type="lims_report_path_eval"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerPathologyOperation"
+      performerMethod="performReportPathologyEvaluation"
+      validate="false"
+    />
+    <transaction type="lims_create_path_eval_prepare"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerPathologyOperation"
+      performerMethod="performCreatePathologyEvaluationPrepare"
+      validate="false"
+    />
+    <transaction type="lims_create_path_eval"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerPathologyOperation"
+      performerMethod="performCreatePathologyEvaluation"
+      validate="false"
+    />
+    <transaction type="lims_create_incidents"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerPathologyOperation"
+      performerMethod="performCreateIncidents"
+      validate="false"
+    />
+    <transaction type="lims_create_incidents_single"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerPathologyOperation"
+      performerMethod="performCreateIncidentsSingle"
+      validate="false"
+    />
+    <transaction type="lims_mark_sample_released"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerPathologyOperation"
+      performerMethod="performMarkSampleReleased"
+      validate="false"
+    />
+    <transaction type="lims_mark_sample_unreleased"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerPathologyOperation"
+      performerMethod="performMarkSampleUnreleased"
+      validate="false"
+    />
+    <transaction type="lims_mark_sample_non_discordant"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerPathologyOperation"
+      performerMethod="performMarkSampleNonDiscordant"
+      validate="false"
+    />
+    <transaction type="lims_mark_sample_qc_posted"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerPathologyOperation"
+      performerMethod="performMarkSampleQCPosted"
+      validate="false"
+    />
+    <transaction type="lims_mark_sample_un_qc_posted"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerPathologyOperation"
+      performerMethod="performMarkSampleUnQCPosted"
+      validate="false"
+    />
+    <transaction type="lims_get_path_qc_sample_summary"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerPathologyOperation"
+      performerMethod="performGetPathQCSampleSummary"
+      validate="false"
+    />
+    <transaction type="lims_get_path_qc_sample_details"
+      performerType="com.ardais.bigr.lims.performers.BtxPerformerPathologyOperation"
+      performerMethod="performGetPathQCSampleDetails"
+      validate="false"
+    />
+
+    <!-- ========== End LIMS =================================== -->
+    
+    <!-- ========== Begin ORM =================================== -->
+    <transaction type="orm_displayBanner"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performDisplayBanner"
+    />
+    <transaction type="orm_logrepos_maintainStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performMaintainLogicalRepositoryStart"
+    />
+    <transaction type="orm_logrepos_maintainSave"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performMaintainLogicalRepositorySave"
+    />
+    <transaction type="orm_manageInventoryGroupsStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performManageInventoryGroupsStart"
+    />
+    <transaction type="orm_manageInventoryGroups"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performManageInventoryGroups"
+    />
+    <transaction type="orm_policy_maintainStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performMaintainPolicyStart"
+    />
+    <transaction type="orm_policy_maintainSave"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performMaintainPolicySave"
+    />
+    <transaction type="orm_changePassword"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performChangePassword"
+    />
+    <transaction type="orm_login"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performLogin"
+      validate="false"
+    />
+    <transaction type="orm_disable_user"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performDisableUser"
+      validate="false"
+    />
+    <transaction type="orm_accountUrl_maintainStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performMaintainAccountUrlStart"
+    />
+    <transaction type="orm_accountUrl_maintainSave"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performMaintainAccountUrlSave"
+    />
+    <transaction type="orm_boxLayout_maintainBoxLayoutStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performMaintainBoxLayoutStart"
+    />
+    <transaction type="orm_boxLayout_maintainBoxLayoutSave"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performMaintainBoxLayoutSave"
+    />
+    <transaction type="orm_boxLayout_manageAccountBoxLayoutStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performManageAccountBoxLayoutStart"
+    />
+    <transaction type="orm_boxLayout_manageAccountBoxLayoutSave"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performManageAccountBoxLayoutSave"
+    />
+    <transaction type="orm_shippingPartners_manageShippingPartnersStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performManageShippingPartnersStart"
+    />
+    <transaction type="orm_shippingPartners_manageShippingPartners"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performManageShippingPartners"
+    />
+    <transaction type="orm_moveByIg_moveByIgStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performMoveByInventoryGroupStart"
+    />
+    <transaction type="orm_moveByIg_moveByIg"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performMoveByInventoryGroup"
+    />
+    <transaction type="orm_addSampleToIg"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performAddSampleToInventoryGroup"
+      validate="false"
+    />
+    <transaction type="orm_removeSampleFromIg"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performRemoveSampleFromInventoryGroup"
+      validate="false"
+    />
+    <transaction type="orm_findUsersStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performFindUsersStart"
+      validate="false"
+    />
+    <transaction type="orm_findUsers"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performFindUsers"
+      validate="true"
+    />
+    <transaction type="orm_createUserStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performCreateUserStart"
+      validate="true"
+    />
+    <transaction type="orm_createUser"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performCreateUser"
+      validate="true"
+    />
+    <transaction type="orm_modifyUserStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performModifyUserStart"
+      validate="true"
+    />
+    <transaction type="orm_modifyUser"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performModifyUser"
+      validate="true"
+    />
+    <transaction type="orm_changeProfileStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performChangeProfileStart"
+      validate="false"
+    />
+    <transaction type="orm_changeProfile"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performChangeProfile"
+      validate="true"
+    />
+    <transaction type="orm_managePrivilegesStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performManagePrivilegesStart"
+      validate="true"
+    />
+    <transaction type="orm_managePrivileges"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performManagePrivileges"
+      validate="true"
+    />
+    <transaction type="orm_findAccountsStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performFindAccountsStart"
+      validate="true"
+    />
+    <transaction type="orm_findAccounts"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performFindAccounts"
+      validate="true"
+    />
+    <transaction type="orm_createAccountStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performCreateAccountStart"
+      validate="true"
+    />
+    <transaction type="orm_createAccount"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performCreateAccount"
+      validate="true"
+    />
+    <transaction type="orm_modifyAccountStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performModifyAccountStart"
+      validate="true"
+    />
+    <transaction type="orm_modifyAccount"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performModifyAccount"
+      validate="true"
+    />
+    <transaction type="orm_manageAccountLocations"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performManageAccountLocations"
+      validate="true"
+    />
+    <transaction type="orm_createAccountLocationStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performCreateAccountLocationStart"
+      validate="true"
+    />
+    <transaction type="orm_createAccountLocation"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performCreateAccountLocation"
+      validate="true"
+    />
+    <transaction type="orm_modifyAccountLocationStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performModifyAccountLocationStart"
+      validate="true"
+    />
+    <transaction type="orm_modifyAccountLocation"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performModifyAccountLocation"
+      validate="true"
+    />
+    <transaction type="orm_role_maintainStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performMaintainRoleStart"
+    />
+    <transaction type="orm_role_maintainSave"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performMaintainRoleSave"
+    />
+    <transaction type="orm_manageRolesStart"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performManageRolesStart"
+    />
+    <transaction type="orm_manageRoles"
+      performerType="com.ardais.bigr.orm.performers.BtxPerformerOrmOperations"
+      performerMethod="performManageRoles"
+    />
+    <!-- ========== End ORM =================================== -->
+    <!-- ========== Start PDC =================================== -->
+    <transaction type="pdc_placeholder"
+      performerType="com.ardais.bigr.iltds.performers.BtxPerformerPlaceHolder"
+      performerMethod="performPlaceholder"
+      validate="false"
+    />
+    <!-- ========== End PDC =================================== -->
+    <!-- ========== Start BIGR KC =================================== -->
+    <transaction type="kc_results_form_def_start"
+      performerType="com.ardais.bigr.kc.form.def.BtxPerformerKcFormDefinitionOperations"
+      performerMethod="performStartResultsFormDefinition"
+      validate="true"
+    />
+    <transaction type="kc_results_form_def_save_as_start"
+      performerType="com.ardais.bigr.kc.form.def.BtxPerformerKcFormDefinitionOperations"
+      performerMethod="performResultsFormDefinitionSaveAsStart"
+      validate="true"
+    />
+    <transaction type="kc_results_form_def_create_update"
+      performerType="com.ardais.bigr.kc.form.def.BtxPerformerKcFormDefinitionOperations"
+      performerMethod="performCreateOrUpdateResultsFormDefinition"
+      validate="true"
+    />
+    <transaction type="kc_results_form_def_delete"
+      performerType="com.ardais.bigr.kc.form.def.BtxPerformerKcFormDefinitionOperations"
+      performerMethod="performDeleteResultsFormDefinition"
+      validate="true"
+    />
+    <transaction type="kc_form_def_start"
+      performerType="com.ardais.bigr.kc.form.def.BtxPerformerKcFormDefinitionOperations"
+      performerMethod="performStartFormDefinition"
+      validate="false"
+    />
+    <transaction type="kc_form_defs_lookup"
+      performerType="com.ardais.bigr.kc.form.def.BtxPerformerKcFormDefinitionOperations"
+      performerMethod="performLookupFormDefinitions"
+      validate="true"
+    />
+    <transaction type="kc_form_def_lookup"
+      performerType="com.ardais.bigr.kc.form.def.BtxPerformerKcFormDefinitionOperations"
+      performerMethod="performLookupFormDefinition"
+      validate="true"
+    />
+    <transaction type="kc_form_def_create"
+      performerType="com.ardais.bigr.kc.form.def.BtxPerformerKcFormDefinitionOperations"
+      performerMethod="performCreateFormDefinition"
+      validate="true"
+    />
+    <transaction type="kc_form_def_update"
+      performerType="com.ardais.bigr.kc.form.def.BtxPerformerKcFormDefinitionOperations"
+      performerMethod="performUpdateFormDefinition"
+      validate="true"
+    />
+    <transaction type="kc_form_def_delete"
+      performerType="com.ardais.bigr.kc.form.def.BtxPerformerKcFormDefinitionOperations"
+      performerMethod="performDeleteFormDefinition"
+      validate="true"
+    />
+    <transaction type="kc_form_inst_domain_object_summary"
+      performerType="com.ardais.bigr.kc.form.BtxPerformerKcFormInstanceOperations"
+      performerMethod="performDomainObjectSummary"
+      validate="true"
+    />
+    <transaction type="kc_form_inst_create_prepare"
+      performerType="com.ardais.bigr.kc.form.BtxPerformerKcFormInstanceOperations"
+      performerMethod="performCreateFormInstancePrepare"
+      validate="true"
+    />
+    <transaction type="kc_form_inst_create"
+      performerType="com.ardais.bigr.kc.form.BtxPerformerKcFormInstanceOperations"
+      performerMethod="performCreateFormInstance"
+      validate="true"
+    />
+    <transaction type="kc_form_inst_summary"
+      performerType="com.ardais.bigr.kc.form.BtxPerformerKcFormInstanceOperations"
+      performerMethod="performFormInstanceSummary"
+      validate="true"
+    />
+    <transaction type="kc_form_inst_update_prepare"
+      performerType="com.ardais.bigr.kc.form.BtxPerformerKcFormInstanceOperations"
+      performerMethod="performUpdateFormInstancePrepare"
+      validate="true"
+    />
+    <transaction type="kc_form_inst_update"
+      performerType="com.ardais.bigr.kc.form.BtxPerformerKcFormInstanceOperations"
+      performerMethod="performUpdateFormInstance"
+      validate="true"
+    />
+    <!-- ========== End BIGR KC =================================== -->
+
+    <transaction type="generate_sample_id"
+      performerType="com.ardais.bigr.id.btx.BtxPerformerIdServices"
+      performerMethod="performGenerateSampleId"
+      validate="false"
+    />
+  </transactions>
+</btxConfig>

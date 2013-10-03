@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.ibm.com/xtools/1.5.0/Notation" xmlns:uml="http://www.eclipse.org/uml2/1.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.0/Umlnotation" xmi:id="_zQVzQIYlEdue9fwLYoBvAw" type="Class" name="classdiagram.dnx">
+  <children xmi:id="_05Y0sIYlEdue9fwLYoBvAw" targetEdges="_AxfrIIYmEdue9fwLYoBvAw _CqDIOIYmEdue9fwLYoBvAw _FWm1EIYmEdue9fwLYoBvAw _IFsRg4YmEdue9fwLYoBvAw _ldrfMIYmEdue9fwLYoBvAw _pQ3c-IYmEdue9fwLYoBvAw _skBPyIYmEdue9fwLYoBvAw _90MXGIYmEdue9fwLYoBvAw _GuweUIYnEdue9fwLYoBvAw _KOk0KIYnEdue9fwLYoBvAw _NnYjCIYnEdue9fwLYoBvAw">
+    <children xmi:id="_05Y0s4YlEdue9fwLYoBvAw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_05Y0tIYlEdue9fwLYoBvAw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_05Y0tYYlEdue9fwLYoBvAw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_05Y0toYlEdue9fwLYoBvAw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_05Y0t4YlEdue9fwLYoBvAw" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_05Y0uIYlEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_05Y0uYYlEdue9fwLYoBvAw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_05Y0uoYlEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_05Y0u4YlEdue9fwLYoBvAw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_05Y0vIYlEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_05Y0vYYlEdue9fwLYoBvAw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_05Y0voYlEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_05Y0sYYlEdue9fwLYoBvAw" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_05Y0soYlEdue9fwLYoBvAw" x="17172" y="318"/>
+  </children>
+  <children xmi:id="_AvjxcIYmEdue9fwLYoBvAw" sourceEdges="_AxfrIIYmEdue9fwLYoBvAw">
+    <children xmi:id="_Avjxc4YmEdue9fwLYoBvAw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterBoolean[jcu^name=FilterBoolean.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_AvjxdIYmEdue9fwLYoBvAw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_AvjxdYYmEdue9fwLYoBvAw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterBoolean[jcu^name=FilterBoolean.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_AvjxdoYmEdue9fwLYoBvAw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterBoolean[jcu^name=FilterBoolean.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_Avjxd4YmEdue9fwLYoBvAw" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_AvjxeIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterBoolean[jcu^name=FilterBoolean.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_AvjxeYYmEdue9fwLYoBvAw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_AvjxeoYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterBoolean[jcu^name=FilterBoolean.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_Avjxe4YmEdue9fwLYoBvAw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_AvjxfIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterBoolean[jcu^name=FilterBoolean.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_AvjxfYYmEdue9fwLYoBvAw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_AvjxfoYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterBoolean[jcu^name=FilterBoolean.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_AvjxcYYmEdue9fwLYoBvAw" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterBoolean[jcu^name=FilterBoolean.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AvjxcoYmEdue9fwLYoBvAw" x="636" y="2544"/>
+  </children>
+  <children xmi:id="_Cn9dgIYmEdue9fwLYoBvAw" sourceEdges="_CqDIOIYmEdue9fwLYoBvAw">
+    <children xmi:id="_Cn9dg4YmEdue9fwLYoBvAw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterDateRange[jcu^name=FilterDateRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_Cn9dhIYmEdue9fwLYoBvAw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_Cn9dhYYmEdue9fwLYoBvAw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterDateRange[jcu^name=FilterDateRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_Cn9dhoYmEdue9fwLYoBvAw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterDateRange[jcu^name=FilterDateRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_Cn9dh4YmEdue9fwLYoBvAw" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Cn9diIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterDateRange[jcu^name=FilterDateRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_Cn9diYYmEdue9fwLYoBvAw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Cn9dioYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterDateRange[jcu^name=FilterDateRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_Cn9di4YmEdue9fwLYoBvAw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Cn9djIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterDateRange[jcu^name=FilterDateRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_Cn9djYYmEdue9fwLYoBvAw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_Cn9djoYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterDateRange[jcu^name=FilterDateRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_Cn9dgYYmEdue9fwLYoBvAw" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterDateRange[jcu^name=FilterDateRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cn9dgoYmEdue9fwLYoBvAw" x="-954" y="9858"/>
+  </children>
+  <children xmi:id="_FWAYIIYmEdue9fwLYoBvAw" sourceEdges="_FWm1EIYmEdue9fwLYoBvAw">
+    <children xmi:id="_FWAYI4YmEdue9fwLYoBvAw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNoParameters[jcu^name=FilterNoParameters.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_FWAYJIYmEdue9fwLYoBvAw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_FWAYJYYmEdue9fwLYoBvAw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNoParameters[jcu^name=FilterNoParameters.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_FWAYJoYmEdue9fwLYoBvAw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNoParameters[jcu^name=FilterNoParameters.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_FWAYJ4YmEdue9fwLYoBvAw" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FWAYKIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNoParameters[jcu^name=FilterNoParameters.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_FWAYKYYmEdue9fwLYoBvAw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FWAYKoYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNoParameters[jcu^name=FilterNoParameters.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_FWAYK4YmEdue9fwLYoBvAw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_FWAYLIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNoParameters[jcu^name=FilterNoParameters.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_FWAYLYYmEdue9fwLYoBvAw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_FWAYLoYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNoParameters[jcu^name=FilterNoParameters.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_FWAYIYYmEdue9fwLYoBvAw" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNoParameters[jcu^name=FilterNoParameters.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FWAYIoYmEdue9fwLYoBvAw" x="4770" y="6996"/>
+  </children>
+  <children xmi:id="_IENDwIYmEdue9fwLYoBvAw" sourceEdges="_IFsRg4YmEdue9fwLYoBvAw" targetEdges="_Jo7l4IYmEdue9fwLYoBvAw _LE3_cIYmEdue9fwLYoBvAw">
+    <children xmi:id="_IENDw4YmEdue9fwLYoBvAw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_IENDxIYmEdue9fwLYoBvAw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_IENDxYYmEdue9fwLYoBvAw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_IENDxoYmEdue9fwLYoBvAw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_IENDx4YmEdue9fwLYoBvAw" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_IENDyIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_IENDyYYmEdue9fwLYoBvAw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_IENDyoYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_IENDy4YmEdue9fwLYoBvAw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_IENDzIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_IENDzYYmEdue9fwLYoBvAw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_IENDzoYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_IENDwYYmEdue9fwLYoBvAw" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IENDwoYmEdue9fwLYoBvAw" x="8243" y="20696"/>
+  </children>
+  <children xmi:id="_JnvTEIYmEdue9fwLYoBvAw" sourceEdges="_Jo7l4IYmEdue9fwLYoBvAw">
+    <children xmi:id="_JnvTE4YmEdue9fwLYoBvAw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRangeDecimal[jcu^name=FilterNumericRangeDecimal.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_JnvTFIYmEdue9fwLYoBvAw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_JnvTFYYmEdue9fwLYoBvAw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRangeDecimal[jcu^name=FilterNumericRangeDecimal.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_JnvTFoYmEdue9fwLYoBvAw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRangeDecimal[jcu^name=FilterNumericRangeDecimal.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_JnvTF4YmEdue9fwLYoBvAw" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_JnvTGIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRangeDecimal[jcu^name=FilterNumericRangeDecimal.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_JnvTGYYmEdue9fwLYoBvAw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_JnvTGoYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRangeDecimal[jcu^name=FilterNumericRangeDecimal.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_JnvTG4YmEdue9fwLYoBvAw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_JnvTHIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRangeDecimal[jcu^name=FilterNumericRangeDecimal.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_JnvTHYYmEdue9fwLYoBvAw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_JnvTHoYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRangeDecimal[jcu^name=FilterNumericRangeDecimal.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_JnvTEYYmEdue9fwLYoBvAw" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRangeDecimal[jcu^name=FilterNumericRangeDecimal.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JnvTEoYmEdue9fwLYoBvAw" x="-954" y="26394"/>
+  </children>
+  <children xmi:id="_K7yU4IYmEdue9fwLYoBvAw" sourceEdges="_LE3_cIYmEdue9fwLYoBvAw">
+    <children xmi:id="_K7yU44YmEdue9fwLYoBvAw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRangeInteger[jcu^name=FilterNumericRangeInteger.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_K7yU5IYmEdue9fwLYoBvAw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_K7yU5YYmEdue9fwLYoBvAw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRangeInteger[jcu^name=FilterNumericRangeInteger.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_K7yU5oYmEdue9fwLYoBvAw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRangeInteger[jcu^name=FilterNumericRangeInteger.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_K7yU54YmEdue9fwLYoBvAw" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_K7yU6IYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRangeInteger[jcu^name=FilterNumericRangeInteger.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_K7yU6YYmEdue9fwLYoBvAw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_K7yU6oYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRangeInteger[jcu^name=FilterNumericRangeInteger.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_K7yU64YmEdue9fwLYoBvAw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_K7yU7IYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRangeInteger[jcu^name=FilterNumericRangeInteger.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_K7yU7YYmEdue9fwLYoBvAw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_K7yU7oYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRangeInteger[jcu^name=FilterNumericRangeInteger.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_K7yU4YYmEdue9fwLYoBvAw" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterNumericRangeInteger[jcu^name=FilterNumericRangeInteger.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_K7yU4oYmEdue9fwLYoBvAw" x="16536" y="26394"/>
+  </children>
+  <children xmi:id="_lcVbYIYmEdue9fwLYoBvAw" sourceEdges="_ldrfMIYmEdue9fwLYoBvAw">
+    <children xmi:id="_lcVbY4YmEdue9fwLYoBvAw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterRepeating[jcu^name=FilterRepeating.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_lcVbZIYmEdue9fwLYoBvAw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_lcVbZYYmEdue9fwLYoBvAw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterRepeating[jcu^name=FilterRepeating.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_lcVbZoYmEdue9fwLYoBvAw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterRepeating[jcu^name=FilterRepeating.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_lcVbZ4YmEdue9fwLYoBvAw" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_lcVbaIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterRepeating[jcu^name=FilterRepeating.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_lcVbaYYmEdue9fwLYoBvAw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_lcVbaoYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterRepeating[jcu^name=FilterRepeating.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_lcVba4YmEdue9fwLYoBvAw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_lcVbbIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterRepeating[jcu^name=FilterRepeating.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_lcVbbYYmEdue9fwLYoBvAw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_lcVbboYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterRepeating[jcu^name=FilterRepeating.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_lcVbYYYmEdue9fwLYoBvAw" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterRepeating[jcu^name=FilterRepeating.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lcVbYoYmEdue9fwLYoBvAw" x="636" y="15582"/>
+  </children>
+  <children xmi:id="_pOxyQIYmEdue9fwLYoBvAw" sourceEdges="_pQ3c-IYmEdue9fwLYoBvAw">
+    <children xmi:id="_pOxyQ4YmEdue9fwLYoBvAw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringContains[jcu^name=FilterStringContains.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_pOxyRIYmEdue9fwLYoBvAw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_pOxyRYYmEdue9fwLYoBvAw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringContains[jcu^name=FilterStringContains.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_pOxyRoYmEdue9fwLYoBvAw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringContains[jcu^name=FilterStringContains.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_pOxyR4YmEdue9fwLYoBvAw" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_pOxySIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringContains[jcu^name=FilterStringContains.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_pOxySYYmEdue9fwLYoBvAw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_pOxySoYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringContains[jcu^name=FilterStringContains.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_pOxyS4YmEdue9fwLYoBvAw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_pOxyTIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringContains[jcu^name=FilterStringContains.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_pOxyTYYmEdue9fwLYoBvAw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_pOxyToYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringContains[jcu^name=FilterStringContains.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_pOxyQYYmEdue9fwLYoBvAw" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringContains[jcu^name=FilterStringContains.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pOxyQoYmEdue9fwLYoBvAw" x="16218" y="20670"/>
+  </children>
+  <children xmi:id="_siYRAIYmEdue9fwLYoBvAw" sourceEdges="_skBPyIYmEdue9fwLYoBvAw">
+    <children xmi:id="_siYRA4YmEdue9fwLYoBvAw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringEquals[jcu^name=FilterStringEquals.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_siYRBIYmEdue9fwLYoBvAw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_siYRBYYmEdue9fwLYoBvAw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringEquals[jcu^name=FilterStringEquals.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_siYRBoYmEdue9fwLYoBvAw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringEquals[jcu^name=FilterStringEquals.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_siYRB4YmEdue9fwLYoBvAw" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_siYRCIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringEquals[jcu^name=FilterStringEquals.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_siYRCYYmEdue9fwLYoBvAw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_siYRCoYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringEquals[jcu^name=FilterStringEquals.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_siYRC4YmEdue9fwLYoBvAw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_siYRDIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringEquals[jcu^name=FilterStringEquals.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_siYRDYYmEdue9fwLYoBvAw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_siYRDoYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringEquals[jcu^name=FilterStringEquals.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_siYRAYYmEdue9fwLYoBvAw" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringEquals[jcu^name=FilterStringEquals.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_siYRAoYmEdue9fwLYoBvAw" x="21306" y="16854"/>
+  </children>
+  <children xmi:id="_9x87YIYmEdue9fwLYoBvAw" sourceEdges="_90MXGIYmEdue9fwLYoBvAw" targetEdges="_-pr0oIYmEdue9fwLYoBvAw">
+    <children xmi:id="_9x87Y4YmEdue9fwLYoBvAw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringLike[jcu^name=FilterStringLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_9x87ZIYmEdue9fwLYoBvAw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_9x87ZYYmEdue9fwLYoBvAw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringLike[jcu^name=FilterStringLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_9x87ZoYmEdue9fwLYoBvAw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringLike[jcu^name=FilterStringLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_9x87Z4YmEdue9fwLYoBvAw" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_9x87aIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringLike[jcu^name=FilterStringLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_9x87aYYmEdue9fwLYoBvAw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_9x87aoYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringLike[jcu^name=FilterStringLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_9x87a4YmEdue9fwLYoBvAw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_9x87bIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringLike[jcu^name=FilterStringLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_9x87bYYmEdue9fwLYoBvAw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_9x87boYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringLike[jcu^name=FilterStringLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_9x87YYYmEdue9fwLYoBvAw" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringLike[jcu^name=FilterStringLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9x87YoYmEdue9fwLYoBvAw" x="32118" y="23850"/>
+  </children>
+  <children xmi:id="_-pPIsIYmEdue9fwLYoBvAw" sourceEdges="_-pr0oIYmEdue9fwLYoBvAw">
+    <children xmi:id="_-pPIs4YmEdue9fwLYoBvAw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringNotLike[jcu^name=FilterStringNotLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_-pPItIYmEdue9fwLYoBvAw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_-pPItYYmEdue9fwLYoBvAw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringNotLike[jcu^name=FilterStringNotLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_-pPItoYmEdue9fwLYoBvAw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringNotLike[jcu^name=FilterStringNotLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_-pPIt4YmEdue9fwLYoBvAw" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_-pPIuIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringNotLike[jcu^name=FilterStringNotLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_-pPIuYYmEdue9fwLYoBvAw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_-pPIuoYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringNotLike[jcu^name=FilterStringNotLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_-pPIu4YmEdue9fwLYoBvAw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_-pPIvIYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringNotLike[jcu^name=FilterStringNotLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_-pPIvYYmEdue9fwLYoBvAw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_-pPIvoYmEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringNotLike[jcu^name=FilterStringNotLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_-pPIsYYmEdue9fwLYoBvAw" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringNotLike[jcu^name=FilterStringNotLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-pPIsoYmEdue9fwLYoBvAw" x="34344" y="29256"/>
+  </children>
+  <children xmi:id="_GnTygIYnEdue9fwLYoBvAw" sourceEdges="_GuweUIYnEdue9fwLYoBvAw">
+    <children xmi:id="_GnTyg4YnEdue9fwLYoBvAw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterUserAccountInfo[jcu^name=FilterUserAccountInfo.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_GnTyhIYnEdue9fwLYoBvAw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_GnTyhYYnEdue9fwLYoBvAw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterUserAccountInfo[jcu^name=FilterUserAccountInfo.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_GnTyhoYnEdue9fwLYoBvAw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterUserAccountInfo[jcu^name=FilterUserAccountInfo.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_GnTyh4YnEdue9fwLYoBvAw" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_GnTyiIYnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterUserAccountInfo[jcu^name=FilterUserAccountInfo.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_GnTyiYYnEdue9fwLYoBvAw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_GnTyioYnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterUserAccountInfo[jcu^name=FilterUserAccountInfo.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_GnTyi4YnEdue9fwLYoBvAw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_GnTyjIYnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterUserAccountInfo[jcu^name=FilterUserAccountInfo.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_GnTyjYYnEdue9fwLYoBvAw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_GnTyjoYnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterUserAccountInfo[jcu^name=FilterUserAccountInfo.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_GnTygYYnEdue9fwLYoBvAw" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterUserAccountInfo[jcu^name=FilterUserAccountInfo.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GnTygoYnEdue9fwLYoBvAw" x="33708" y="954"/>
+  </children>
+  <children xmi:id="_KMfJcIYnEdue9fwLYoBvAw" sourceEdges="_KOk0KIYnEdue9fwLYoBvAw">
+    <children xmi:id="_KMo6cIYnEdue9fwLYoBvAw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsLike[jcu^name=FilterStringsLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_KMo6cYYnEdue9fwLYoBvAw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_KMo6coYnEdue9fwLYoBvAw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsLike[jcu^name=FilterStringsLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_KMo6c4YnEdue9fwLYoBvAw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsLike[jcu^name=FilterStringsLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_KMo6dIYnEdue9fwLYoBvAw" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_KMo6dYYnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsLike[jcu^name=FilterStringsLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_KMo6doYnEdue9fwLYoBvAw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_KMo6d4YnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsLike[jcu^name=FilterStringsLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_KMo6eIYnEdue9fwLYoBvAw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_KMo6eYYnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsLike[jcu^name=FilterStringsLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_KMo6eoYnEdue9fwLYoBvAw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_KMo6e4YnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsLike[jcu^name=FilterStringsLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_KMfJcYYnEdue9fwLYoBvAw" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsLike[jcu^name=FilterStringsLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KMfJcoYnEdue9fwLYoBvAw" x="34026" y="4452"/>
+  </children>
+  <children xmi:id="_Nd_9gIYnEdue9fwLYoBvAw" sourceEdges="_NnYjCIYnEdue9fwLYoBvAw" targetEdges="_Qzrf4IYnEdue9fwLYoBvAw _VCIdUIYnEdue9fwLYoBvAw">
+    <children xmi:id="_Nd_9g4YnEdue9fwLYoBvAw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_Nd_9hIYnEdue9fwLYoBvAw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_Nd_9hYYnEdue9fwLYoBvAw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_Nd_9hoYnEdue9fwLYoBvAw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_Nd_9h4YnEdue9fwLYoBvAw" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Nd_9iIYnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_Nd_9iYYnEdue9fwLYoBvAw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Nd_9ioYnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_Nd_9i4YnEdue9fwLYoBvAw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Nd_9jIYnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_Nd_9jYYnEdue9fwLYoBvAw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_Nd_9joYnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_Nd_9gYYnEdue9fwLYoBvAw" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Nd_9goYnEdue9fwLYoBvAw" x="38796" y="7950"/>
+  </children>
+  <children xmi:id="_QyyIAIYnEdue9fwLYoBvAw" sourceEdges="_Qzrf4IYnEdue9fwLYoBvAw">
+    <children xmi:id="_QyyIA4YnEdue9fwLYoBvAw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsEqualWithDescriptions[jcu^name=FilterStringsEqualWithDescriptions.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_QyyIBIYnEdue9fwLYoBvAw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_QyyIBYYnEdue9fwLYoBvAw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsEqualWithDescriptions[jcu^name=FilterStringsEqualWithDescriptions.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_QyyIBoYnEdue9fwLYoBvAw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsEqualWithDescriptions[jcu^name=FilterStringsEqualWithDescriptions.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_QyyIB4YnEdue9fwLYoBvAw" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_QyyICIYnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsEqualWithDescriptions[jcu^name=FilterStringsEqualWithDescriptions.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_QyyICYYnEdue9fwLYoBvAw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_QyyICoYnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsEqualWithDescriptions[jcu^name=FilterStringsEqualWithDescriptions.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_QyyIC4YnEdue9fwLYoBvAw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_QyyIDIYnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsEqualWithDescriptions[jcu^name=FilterStringsEqualWithDescriptions.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_QyyIDYYnEdue9fwLYoBvAw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_QyyIDoYnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsEqualWithDescriptions[jcu^name=FilterStringsEqualWithDescriptions.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_QyyIAYYnEdue9fwLYoBvAw" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsEqualWithDescriptions[jcu^name=FilterStringsEqualWithDescriptions.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QyyIAoYnEdue9fwLYoBvAw" x="32436" y="13992"/>
+  </children>
+  <children xmi:id="_VBincIYnEdue9fwLYoBvAw" sourceEdges="_VCIdUIYnEdue9fwLYoBvAw">
+    <children xmi:id="_VBinc4YnEdue9fwLYoBvAw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsNotEqual[jcu^name=FilterStringsNotEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_VBindIYnEdue9fwLYoBvAw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_VBindYYnEdue9fwLYoBvAw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsNotEqual[jcu^name=FilterStringsNotEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_VBindoYnEdue9fwLYoBvAw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsNotEqual[jcu^name=FilterStringsNotEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_VBind4YnEdue9fwLYoBvAw" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_VBineIYnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsNotEqual[jcu^name=FilterStringsNotEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_VBineYYnEdue9fwLYoBvAw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_VBineoYnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsNotEqual[jcu^name=FilterStringsNotEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_VBine4YnEdue9fwLYoBvAw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_VBinfIYnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsNotEqual[jcu^name=FilterStringsNotEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <children xmi:id="_VBinfYYnEdue9fwLYoBvAw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_VBinfoYnEdue9fwLYoBvAw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsNotEqual[jcu^name=FilterStringsNotEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_VBincYYnEdue9fwLYoBvAw" showListSignature="true" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=FilterStringsNotEqual[jcu^name=FilterStringsNotEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VBincoYnEdue9fwLYoBvAw" x="42930" y="17490"/>
+  </children>
+  <styles xmi:type="umlnotation:UMLDiagramStyle" xmi:id="_zQVzQYYlEdue9fwLYoBvAw"/>
+  <edges xmi:id="_AxfrIIYmEdue9fwLYoBvAw" source="_AvjxcIYmEdue9fwLYoBvAw" target="_05Y0sIYlEdue9fwLYoBvAw">
+    <children xmi:id="_AxfrI4YmEdue9fwLYoBvAw" type="NameLabel">
+      <children xmi:id="_AxfrJYYmEdue9fwLYoBvAw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterBoolean[jcu^name=FilterBoolean.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_AxfrJoYmEdue9fwLYoBvAw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterBoolean[jcu^name=FilterBoolean.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterBoolean[jcu^name=FilterBoolean.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AxfrJIYmEdue9fwLYoBvAw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_AxfrIYYmEdue9fwLYoBvAw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterBoolean[jcu^name=FilterBoolean.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AxfrIoYmEdue9fwLYoBvAw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_CqDIOIYmEdue9fwLYoBvAw" source="_Cn9dgIYmEdue9fwLYoBvAw" target="_05Y0sIYlEdue9fwLYoBvAw">
+    <children xmi:id="_CqDIO4YmEdue9fwLYoBvAw" type="NameLabel">
+      <children xmi:id="_CqDIPYYmEdue9fwLYoBvAw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterDateRange[jcu^name=FilterDateRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_CqDIPoYmEdue9fwLYoBvAw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterDateRange[jcu^name=FilterDateRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterDateRange[jcu^name=FilterDateRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CqDIPIYmEdue9fwLYoBvAw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_CqDIOYYmEdue9fwLYoBvAw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterDateRange[jcu^name=FilterDateRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_CqDIOoYmEdue9fwLYoBvAw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_FWm1EIYmEdue9fwLYoBvAw" source="_FWAYIIYmEdue9fwLYoBvAw" target="_05Y0sIYlEdue9fwLYoBvAw">
+    <children xmi:id="_FWm1E4YmEdue9fwLYoBvAw" type="NameLabel">
+      <children xmi:id="_FWm1FYYmEdue9fwLYoBvAw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterNoParameters[jcu^name=FilterNoParameters.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_FWm1FoYmEdue9fwLYoBvAw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterNoParameters[jcu^name=FilterNoParameters.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterNoParameters[jcu^name=FilterNoParameters.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FWm1FIYmEdue9fwLYoBvAw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_FWm1EYYmEdue9fwLYoBvAw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterNoParameters[jcu^name=FilterNoParameters.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FWm1EoYmEdue9fwLYoBvAw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_IFsRg4YmEdue9fwLYoBvAw" source="_IENDwIYmEdue9fwLYoBvAw" target="_05Y0sIYlEdue9fwLYoBvAw">
+    <children xmi:id="_IFsRhoYmEdue9fwLYoBvAw" type="NameLabel">
+      <children xmi:id="_IFsRiIYmEdue9fwLYoBvAw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_IFsRiYYmEdue9fwLYoBvAw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IFsRh4YmEdue9fwLYoBvAw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_IFsRhIYmEdue9fwLYoBvAw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IFsRhYYmEdue9fwLYoBvAw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_Jo7l4IYmEdue9fwLYoBvAw" source="_JnvTEIYmEdue9fwLYoBvAw" target="_IENDwIYmEdue9fwLYoBvAw">
+    <children xmi:id="_Jo7l44YmEdue9fwLYoBvAw" type="NameLabel">
+      <children xmi:id="_Jo7l5YYmEdue9fwLYoBvAw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterNumericRangeDecimal[jcu^name=FilterNumericRangeDecimal.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_Jo7l5oYmEdue9fwLYoBvAw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterNumericRangeDecimal[jcu^name=FilterNumericRangeDecimal.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterNumericRangeDecimal[jcu^name=FilterNumericRangeDecimal.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jo7l5IYmEdue9fwLYoBvAw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_Jo7l4YYmEdue9fwLYoBvAw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterNumericRangeDecimal[jcu^name=FilterNumericRangeDecimal.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Jo7l4oYmEdue9fwLYoBvAw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_LE3_cIYmEdue9fwLYoBvAw" source="_K7yU4IYmEdue9fwLYoBvAw" target="_IENDwIYmEdue9fwLYoBvAw">
+    <children xmi:id="_LE3_c4YmEdue9fwLYoBvAw" type="NameLabel">
+      <children xmi:id="_LE3_dYYmEdue9fwLYoBvAw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterNumericRangeInteger[jcu^name=FilterNumericRangeInteger.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_LE3_doYmEdue9fwLYoBvAw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterNumericRangeInteger[jcu^name=FilterNumericRangeInteger.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterNumericRangeInteger[jcu^name=FilterNumericRangeInteger.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LE3_dIYmEdue9fwLYoBvAw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_LE3_cYYmEdue9fwLYoBvAw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterNumericRangeInteger[jcu^name=FilterNumericRangeInteger.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterNumericRange[jcu^name=FilterNumericRange.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LE3_coYmEdue9fwLYoBvAw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_ldrfMIYmEdue9fwLYoBvAw" source="_lcVbYIYmEdue9fwLYoBvAw" target="_05Y0sIYlEdue9fwLYoBvAw">
+    <children xmi:id="_ldrfM4YmEdue9fwLYoBvAw" type="NameLabel">
+      <children xmi:id="_ldrfNYYmEdue9fwLYoBvAw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterRepeating[jcu^name=FilterRepeating.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_ldrfNoYmEdue9fwLYoBvAw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterRepeating[jcu^name=FilterRepeating.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterRepeating[jcu^name=FilterRepeating.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ldrfNIYmEdue9fwLYoBvAw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_ldrfMYYmEdue9fwLYoBvAw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterRepeating[jcu^name=FilterRepeating.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ldrfMoYmEdue9fwLYoBvAw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_pQ3c-IYmEdue9fwLYoBvAw" source="_pOxyQIYmEdue9fwLYoBvAw" target="_05Y0sIYlEdue9fwLYoBvAw">
+    <children xmi:id="_pQ3c-4YmEdue9fwLYoBvAw" type="NameLabel">
+      <children xmi:id="_pQ3c_YYmEdue9fwLYoBvAw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringContains[jcu^name=FilterStringContains.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_pQ3c_oYmEdue9fwLYoBvAw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringContains[jcu^name=FilterStringContains.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringContains[jcu^name=FilterStringContains.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pQ3c_IYmEdue9fwLYoBvAw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_pQ3c-YYmEdue9fwLYoBvAw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringContains[jcu^name=FilterStringContains.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_pQ3c-oYmEdue9fwLYoBvAw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_skBPyIYmEdue9fwLYoBvAw" source="_siYRAIYmEdue9fwLYoBvAw" target="_05Y0sIYlEdue9fwLYoBvAw">
+    <children xmi:id="_skBPy4YmEdue9fwLYoBvAw" type="NameLabel">
+      <children xmi:id="_skBPzYYmEdue9fwLYoBvAw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringEquals[jcu^name=FilterStringEquals.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_skBPzoYmEdue9fwLYoBvAw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringEquals[jcu^name=FilterStringEquals.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringEquals[jcu^name=FilterStringEquals.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_skBPzIYmEdue9fwLYoBvAw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_skBPyYYmEdue9fwLYoBvAw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringEquals[jcu^name=FilterStringEquals.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_skBPyoYmEdue9fwLYoBvAw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_90MXGIYmEdue9fwLYoBvAw" source="_9x87YIYmEdue9fwLYoBvAw" target="_05Y0sIYlEdue9fwLYoBvAw">
+    <children xmi:id="_90VhAoYmEdue9fwLYoBvAw" type="NameLabel">
+      <children xmi:id="_90VhBIYmEdue9fwLYoBvAw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringLike[jcu^name=FilterStringLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_90VhBYYmEdue9fwLYoBvAw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringLike[jcu^name=FilterStringLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringLike[jcu^name=FilterStringLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_90VhA4YmEdue9fwLYoBvAw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_90VhAIYmEdue9fwLYoBvAw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringLike[jcu^name=FilterStringLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_90VhAYYmEdue9fwLYoBvAw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_-pr0oIYmEdue9fwLYoBvAw" source="_-pPIsIYmEdue9fwLYoBvAw" target="_9x87YIYmEdue9fwLYoBvAw">
+    <children xmi:id="_-pr0o4YmEdue9fwLYoBvAw" type="NameLabel">
+      <children xmi:id="_-pr0pYYmEdue9fwLYoBvAw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringNotLike[jcu^name=FilterStringNotLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterStringLike[jcu^name=FilterStringLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_-pr0poYmEdue9fwLYoBvAw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringNotLike[jcu^name=FilterStringNotLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterStringLike[jcu^name=FilterStringLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringNotLike[jcu^name=FilterStringNotLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterStringLike[jcu^name=FilterStringLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-pr0pIYmEdue9fwLYoBvAw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_-pr0oYYmEdue9fwLYoBvAw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringNotLike[jcu^name=FilterStringNotLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterStringLike[jcu^name=FilterStringLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-pr0ooYmEdue9fwLYoBvAw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_GuweUIYnEdue9fwLYoBvAw" source="_GnTygIYnEdue9fwLYoBvAw" target="_05Y0sIYlEdue9fwLYoBvAw">
+    <children xmi:id="_GuweU4YnEdue9fwLYoBvAw" type="NameLabel">
+      <children xmi:id="_GuweVYYnEdue9fwLYoBvAw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterUserAccountInfo[jcu^name=FilterUserAccountInfo.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_GuweVoYnEdue9fwLYoBvAw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterUserAccountInfo[jcu^name=FilterUserAccountInfo.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterUserAccountInfo[jcu^name=FilterUserAccountInfo.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GuweVIYnEdue9fwLYoBvAw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_GuweUYYnEdue9fwLYoBvAw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterUserAccountInfo[jcu^name=FilterUserAccountInfo.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GuweUoYnEdue9fwLYoBvAw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_KOk0KIYnEdue9fwLYoBvAw" source="_KMfJcIYnEdue9fwLYoBvAw" target="_05Y0sIYlEdue9fwLYoBvAw">
+    <children xmi:id="_KOk0K4YnEdue9fwLYoBvAw" type="NameLabel">
+      <children xmi:id="_KOk0LYYnEdue9fwLYoBvAw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringsLike[jcu^name=FilterStringsLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_KOk0LoYnEdue9fwLYoBvAw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringsLike[jcu^name=FilterStringsLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringsLike[jcu^name=FilterStringsLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KOk0LIYnEdue9fwLYoBvAw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_KOk0KYYnEdue9fwLYoBvAw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringsLike[jcu^name=FilterStringsLike.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_KOk0KoYnEdue9fwLYoBvAw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_NnYjCIYnEdue9fwLYoBvAw" source="_Nd_9gIYnEdue9fwLYoBvAw" target="_05Y0sIYlEdue9fwLYoBvAw">
+    <children xmi:id="_NnYjC4YnEdue9fwLYoBvAw" type="NameLabel">
+      <children xmi:id="_NnYjDYYnEdue9fwLYoBvAw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_NnYjDoYnEdue9fwLYoBvAw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NnYjDIYnEdue9fwLYoBvAw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_NnYjCYYnEdue9fwLYoBvAw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=Filter[jcu^name=Filter.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_NnYjCoYnEdue9fwLYoBvAw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_Qzrf4IYnEdue9fwLYoBvAw" source="_QyyIAIYnEdue9fwLYoBvAw" target="_Nd_9gIYnEdue9fwLYoBvAw">
+    <children xmi:id="_Qzrf44YnEdue9fwLYoBvAw" type="NameLabel">
+      <children xmi:id="_Qzrf5YYnEdue9fwLYoBvAw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringsEqualWithDescriptions[jcu^name=FilterStringsEqualWithDescriptions.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_Qzrf5oYnEdue9fwLYoBvAw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringsEqualWithDescriptions[jcu^name=FilterStringsEqualWithDescriptions.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringsEqualWithDescriptions[jcu^name=FilterStringsEqualWithDescriptions.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qzrf5IYnEdue9fwLYoBvAw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_Qzrf4YYnEdue9fwLYoBvAw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringsEqualWithDescriptions[jcu^name=FilterStringsEqualWithDescriptions.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Qzrf4oYnEdue9fwLYoBvAw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:id="_VCIdUIYnEdue9fwLYoBvAw" source="_VBincIYnEdue9fwLYoBvAw" target="_Nd_9gIYnEdue9fwLYoBvAw">
+    <children xmi:id="_VCIdU4YnEdue9fwLYoBvAw" type="NameLabel">
+      <children xmi:id="_VCIdVYYnEdue9fwLYoBvAw" type="Stereotype">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringsNotEqual[jcu^name=FilterStringsNotEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <children xmi:id="_VCIdVoYnEdue9fwLYoBvAw" type="Name">
+        <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringsNotEqual[jcu^name=FilterStringsNotEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      </children>
+      <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringsNotEqual[jcu^name=FilterStringsNotEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VCIdVIYnEdue9fwLYoBvAw" y="-185"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_VCIdUYYnEdue9fwLYoBvAw" showStereotype="Text"/>
+    <element xmi:type="uml:Generalization" href="vizref:///#jgen^vcore.target=uml2.Generalization[jsrctype^name=FilterStringsNotEqual[jcu^name=FilterStringsNotEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]][jsrctype^name=FilterStringsEqual[jcu^name=FilterStringsEqual.java[jpack^name=com.ardais.bigr.query.filters[jsrcroot^srcfolder=ejbModule[project^vcore.target=uml2.Model^id=BIGREjb]]]]]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VCIdUoYnEdue9fwLYoBvAw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+</notation:Diagram>

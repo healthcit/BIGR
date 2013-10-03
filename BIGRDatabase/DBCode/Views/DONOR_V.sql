@@ -1,0 +1,7 @@
+CREATE OR REPLACE VIEW DONOR_V
+AS 
+SELECT ardais_id DONOR_ID,
+       ARDAIS_ACCT_KEY ACCOUNT_ID,
+       CUSTOMER_ID ALIAS
+  FROM pdc_ardais_donor
+/
