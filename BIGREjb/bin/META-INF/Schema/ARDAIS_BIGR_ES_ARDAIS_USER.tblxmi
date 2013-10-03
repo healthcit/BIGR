@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBTable_1035204456505" name="ES_ARDAIS_USER" primaryKey="SQLReference_1035204455574">
+  <database href="META-INF/Schema/ARDAIS.dbxmi#RDBDatabase_1035204447382"/>
+  <schema href="META-INF/Schema/ARDAIS_BIGR.schxmi#RDBSchema_1035204448253"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456505" name="ARDAIS_USER_ID">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456505" characterSet="800" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456506" name="ARDAIS_ACCT_KEY">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456506" characterSet="800" length="10">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456507" name="PASSWORD">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456507" characterSet="800" length="100">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456508" name="USER_VERIF_QUESTION" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456508" characterSet="800" length="100">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456509" name="USER_VERIF_ANSWER" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456509" characterSet="800" length="100">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456516" name="USER_LASTNAME" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456516" characterSet="800" length="25">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456517" name="USER_FIRSTNAME" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456517" characterSet="800" length="25">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456518" name="USER_TITLE" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456518" characterSet="800" length="15">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456519" name="USER_FUNCTIONAL_TITLE" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456519" characterSet="800" length="44">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456520" name="USER_AFFILIATION" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456520" characterSet="800" length="44">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456521" name="USER_PHONE_NUMBER" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456521" characterSet="800" length="20">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456522" name="USER_PHONE_EXT" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456522" characterSet="800" length="10">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456523" name="USER_FAX_NUMBER" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456523" characterSet="800" length="20">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456524" name="USER_MOBILE_NUMBER" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456524" characterSet="800" length="20">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456525" name="USER_EMAIL_ADDRESS" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456525" characterSet="800" length="100">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456527" name="CREATED_BY">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456527" characterSet="800" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456528" name="CREATE_DATE">
+    <type xmi:type="RDBSchema:SQLTimestamp" xmi:id="SQLTimestamp_1035204456515" precision="7">
+      <originatingType xmi:type="RDBSchema:SQLTimestamp" href="ORACLE_V8_Primitives.xmi#SQLTimestamp_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456529" name="UPDATE_DATE" allowNull="true">
+    <type xmi:type="RDBSchema:SQLTimestamp" xmi:id="SQLTimestamp_1035204456516" precision="7">
+      <originatingType xmi:type="RDBSchema:SQLTimestamp" href="ORACLE_V8_Primitives.xmi#SQLTimestamp_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456530" name="UPDATED_BY" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456528" characterSet="800" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456532" name="USER_ADDRESS_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1035222886032" precision="22" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="ORACLE_V8_Primitives.xmi#SQLNumeric_6"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456533" name="USER_ACTIVE_IND" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456530" characterSet="800" length="1">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456534" name="CONSECUTIVE_FAILED_LOGINS" defaultValue="0 ">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1035222886042" precision="22" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="ORACLE_V8_Primitives.xmi#SQLNumeric_6"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="PASSWORD_POLICY_CID" name="PASSWORD_POLICY_CID">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1095365416816" characterSet="800" length="30">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="PASSWORD_LAST_CHANGE_DATE" name="PASSWORD_LAST_CHANGE_DATE">
+    <type xmi:type="RDBSchema:SQLTimestamp" xmi:id="SQLTimestamp_1095365450316" precision="0">
+      <originatingType xmi:type="RDBSchema:SQLTimestamp" href="ORACLE_V8_Primitives.xmi#SQLTimestamp_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="USER_DEPARTMENT" name="USER_DEPARTMENT" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1155909846980" characterSet="800" length="200">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="CONSECUTIVE_FAILED_ANSWERS" name="CONSECUTIVE_FAILED_ANSWERS" defaultValue="0">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1157746204718" precision="22" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="ORACLE_V8_Primitives.xmi#SQLNumeric_6"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="SQLReference_1035204455574" name="PK_ES_ARDAIS_USER" members="RDBColumn_1035204456505 RDBColumn_1035204456506" constraint="SQLConstraint_1035204456525">
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER.tblxmi#RDBReferenceByKey_1035204456525"/>
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_ARD_USER_ACCESS.tblxmi#RDBReferenceByKey_1035204455644"/>
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_ARD_USER_ACCESS_MODULE.tblxmi#RDBReferenceByKey_1035204455604"/>
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER_STATUS.tblxmi#RDBReferenceByKey_1035204455594"/>
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_ES_SHOPPING_CART.tblxmi#RDBReferenceByKey_1035204455574"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1035204455253" name="FK_ARDAIS_ACCT_ARDAIS_USER" members="RDBColumn_1035204456506" onDelete="CASCADE" constraint="SQLConstraint_1035204456526">
+    <target href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#SQLReference_1035204455243"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1035204456525" name="PK_ES_ARDAIS_USER" type="PRIMARYKEY" primaryKey="SQLReference_1035204455574"/>
+  <constraints xmi:id="SQLConstraint_1035204456526" name="FK_ARDAIS_ACCT_ARDAIS_USER" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1035204455253"/>
+</RDBSchema:RDBTable>

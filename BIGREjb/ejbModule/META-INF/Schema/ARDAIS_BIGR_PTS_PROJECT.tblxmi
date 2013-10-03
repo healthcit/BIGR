@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBTable_1035204456205" name="PTS_PROJECT" primaryKey="SQLReference_1035204455664">
+  <database href="META-INF/Schema/ARDAIS.dbxmi#RDBDatabase_1035204447382"/>
+  <schema href="META-INF/Schema/ARDAIS_BIGR.schxmi#RDBSchema_1035204448253"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456205" name="PROJECTID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456205" characterSet="800" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456206" name="PROJECTNAME" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456206" characterSet="800" length="50">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456207" name="ARDAIS_ACCT_KEY" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456207" characterSet="800" length="10">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456208" name="ARDAIS_USER_ID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456208" characterSet="800" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456209" name="DATEREQUESTED" allowNull="false">
+    <type xmi:type="RDBSchema:SQLTimestamp" xmi:id="SQLTimestamp_1035204456205" precision="7" timezone="false">
+      <originatingType xmi:type="RDBSchema:SQLTimestamp" href="ORACLE_V8_Primitives.xmi#SQLTimestamp_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456210" name="DATEAPPROVED" allowNull="true">
+    <type xmi:type="RDBSchema:SQLTimestamp" xmi:id="SQLTimestamp_1035204456206" precision="7" timezone="false">
+      <originatingType xmi:type="RDBSchema:SQLTimestamp" href="ORACLE_V8_Primitives.xmi#SQLTimestamp_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456211" name="DATESHIPPED" allowNull="true">
+    <type xmi:type="RDBSchema:SQLTimestamp" xmi:id="SQLTimestamp_1035204456207" precision="7" timezone="false">
+      <originatingType xmi:type="RDBSchema:SQLTimestamp" href="ORACLE_V8_Primitives.xmi#SQLTimestamp_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456212" name="NOTES" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456209" characterSet="800" length="255">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456213" name="STATUS" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456210" characterSet="800" length="15">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456214" name="PERCENTCOMPLETE" allowNull="true" defaultValue="0">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1035204456205" precision="3" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="ORACLE_V8_Primitives.xmi#SQLNumeric_6"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="SQLReference_1035204455664" name="PK_PTS_PROJECT" members="RDBColumn_1035204456205" constraint="SQLConstraint_1035204456205">
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_PTS_LINEITEM.tblxmi#RDBReferenceByKey_1035204456195"/>
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_PTS_SAMPLE.tblxmi#RDBReferenceByKey_1035204456176"/>
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_PTS_WORKORDER.tblxmi#RDBReferenceByKey_1035204455664"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1035204455253" name="FK_PTS_PROJECT_CLIENT" members="RDBColumn_1035204456207" constraint="SQLConstraint_1035204456215">
+    <target href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#SQLReference_1035204455243"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1035204456205" name="PK_PTS_PROJECT" type="PRIMARYKEY" primaryKey="SQLReference_1035204455664"/>
+  <constraints xmi:id="SQLConstraint_1035204456215" name="FK_PTS_PROJECT_CLIENT" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1035204455253"/>
+</RDBSchema:RDBTable>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBTable_1035204455534" name="ES_ORDER_LINE" primaryKey="SQLReference_1035204455544">
+  <database href="META-INF/Schema/ARDAIS.dbxmi#RDBDatabase_1035204447382"/>
+  <schema href="META-INF/Schema/ARDAIS_BIGR.schxmi#RDBSchema_1035204448253"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455544" name="ORDER_LINE_NUMBER" allowNull="false">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1035225171747" precision="22" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="ORACLE_V8_Primitives.xmi#SQLNumeric_6"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455545" name="ORDER_NUMBER" allowNull="false">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1035225171748" precision="22" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="ORACLE_V8_Primitives.xmi#SQLNumeric_6"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455546" name="ORDER_LINE_AMOUNT" allowNull="true">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1035204455546" precision="12" scale="4">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="ORACLE_V8_Primitives.xmi#SQLNumeric_6"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455547" name="BARCODE_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455544" characterSet="800" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455548" name="CONSORTIUM_IND" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455545" characterSet="800" length="1">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="SQLReference_1035204455544" name="PK_ES_ORDER_LINE" members="RDBColumn_1035204455544 RDBColumn_1035204455545" constraint="SQLConstraint_1035204455544"/>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1035204455544" name="FK_ARD_ORDER_ORDER_LINE" onDelete="CASCADE" members="RDBColumn_1035204455545" constraint="SQLConstraint_1035204455545">
+    <target href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER.tblxmi#SQLReference_1035204455524"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1035204455544" name="PK_ES_ORDER_LINE" type="PRIMARYKEY" primaryKey="SQLReference_1035204455544"/>
+  <constraints xmi:id="SQLConstraint_1035204455545" name="FK_ARD_ORDER_ORDER_LINE" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1035204455544"/>
+</RDBSchema:RDBTable>

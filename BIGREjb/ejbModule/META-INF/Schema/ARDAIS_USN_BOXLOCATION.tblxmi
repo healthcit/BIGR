@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBTable_1053626315402" name="BOXLOCATION" primaryKey="SQLReference_1053626315730">
+  <database href="META-INF/Schema/ARDAIS.dbxmi#RDBDatabase_1035204447382"/>
+  <schema href="META-INF/Schema/ARDAIS_BIGR.schxmi#RDBSchema_1035204448253"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315402" name="STORAGE_TYPE" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626315730" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315403" name="DRAWER_ID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626315731" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315404" name="AVAILABLE_IND" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626315732" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315405" name="STORAGE_TYPE_ID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626315733" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315406" name="ROOM_ID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626315734" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315407" name="LOCATION_STATUS" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626315735" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315408" name="SLOT_ID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626315736" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315730" name="GEOLOCATION_LOCATION_ADDRESS_2" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626315737" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315731" name="SAMPLEBOX_BOX_BARCODE_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626315738" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="SQLReference_1053626315730" name="PK_BOXLOCATION" members="RDBColumn_1053626315403 RDBColumn_1053626315730 RDBColumn_1053626315406 RDBColumn_1053626315408 RDBColumn_1053626315405" constraint="SQLConstraint_1053626315730"/>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1053626315402" name="C5827042" members="RDBColumn_1053626315730" constraint="SQLConstraint_1053626315731">
+    <target href="META-INF/Schema/ARDAIS_USN_GEOLOCATION.tblxmi#SQLReference_1053626315683"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1053626315403" name="C5827058" members="RDBColumn_1053626315731" constraint="SQLConstraint_1053626315732">
+    <target href="META-INF/Schema/ARDAIS_USN_SAMPLEBOX.tblxmi#SQLReference_1053626315730"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1053626315730" name="PK_BOXLOCATION" type="PRIMARYKEY" primaryKey="SQLReference_1053626315730"/>
+  <constraints xmi:id="SQLConstraint_1053626315731" name="C5827042" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1053626315402"/>
+  <constraints xmi:id="SQLConstraint_1053626315732" name="C5827058" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1053626315403"/>
+</RDBSchema:RDBTable>

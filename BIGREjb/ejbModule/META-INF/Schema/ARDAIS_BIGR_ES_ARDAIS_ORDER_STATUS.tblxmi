@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBTable_1035204455584" name="ES_ARDAIS_ORDER_STATUS" primaryKey="SQLReference_1035204455584">
+  <database href="META-INF/Schema/ARDAIS.dbxmi#RDBDatabase_1035204447382"/>
+  <schema href="META-INF/Schema/ARDAIS_BIGR.schxmi#RDBSchema_1035204448253"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455584" name="ORDER_STATUS_ID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455584" characterSet="800" length="10">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455585" name="ARDAIS_USER_ID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455585" characterSet="800" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455586" name="ARDAIS_ACCT_KEY" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455586" characterSet="800" length="10">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455587" name="ORDER_NUMBER" allowNull="false">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1035225218063" precision="22" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="ORACLE_V8_Primitives.xmi#SQLNumeric_6"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455588" name="ORDER_STATUS_COMMENT" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455587" characterSet="800" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455589" name="ORDER_STATUS_DATE" allowNull="false">
+    <type xmi:type="RDBSchema:SQLTimestamp" xmi:id="SQLTimestamp_1035204455584" precision="7" timezone="false">
+      <originatingType xmi:type="RDBSchema:SQLTimestamp" href="ORACLE_V8_Primitives.xmi#SQLTimestamp_3"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="SQLReference_1035204455584" name="PK_ES_ARDAIS_ORDER_STATUS" members="RDBColumn_1035204455584 RDBColumn_1035204455585 RDBColumn_1035204455586 RDBColumn_1035204455587 RDBColumn_1035204455589" constraint="SQLConstraint_1035204455584"/>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1035204455584" name="FK_ARD_ORDER_ORDER_STATUS" members="RDBColumn_1035204455587" constraint="SQLConstraint_1035204455585">
+    <target href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER.tblxmi#SQLReference_1035204455524"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1035204455594" name="FK_ARD_USER_ORDER_STATUS" members="RDBColumn_1035204455585 RDBColumn_1035204455586" constraint="SQLConstraint_1035204455594">
+    <target href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#SQLReference_1035204455574"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1035204455584" name="PK_ES_ARDAIS_ORDER_STATUS" type="PRIMARYKEY" primaryKey="SQLReference_1035204455584"/>
+  <constraints xmi:id="SQLConstraint_1035204455585" name="FK_ARD_ORDER_ORDER_STATUS" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1035204455584"/>
+  <constraints xmi:id="SQLConstraint_1035204455594" name="FK_ARD_USER_ORDER_STATUS" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1035204455594"/>
+</RDBSchema:RDBTable>

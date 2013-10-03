@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejbbnd:EJBJarBinding xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ejb="ejb.xmi" xmlns:ejbbnd="ejbbnd.xmi" xmi:id="ejb-jar_ID_Binding">
+  <defaultDatasource xmi:id="ResourceRefBinding_1182452236153" jndiName="jdbc/BIGR_Data_Source"/>
+  <ejbJar href="META-INF/ejb-jar.xml#ejb-jar_ID"/>
+  <ejbBindings xmi:id="Ardaisstaff_Binding" jndiName="com/ardais/bigr/iltds/beans/Ardaisstaff">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Ardaisstaff"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="Asm_Binding" jndiName="com/ardais/bigr/iltds/beans/Asm">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Asm"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="Asmform_Binding" jndiName="com/ardais/bigr/iltds/beans/Asmform">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Asmform"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="Boxlocation_Binding" jndiName="com/ardais/bigr/iltds/beans/Boxlocation">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Boxlocation"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="Consent_Binding" jndiName="com/ardais/bigr/iltds/beans/Consent">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Consent"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="Geolocation_Binding" jndiName="com/ardais/bigr/iltds/beans/Geolocation">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Geolocation"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="Manifest_Binding" jndiName="com/ardais/bigr/iltds/beans/Manifest">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Manifest"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="Revokedconsent_Binding" jndiName="com/ardais/bigr/iltds/beans/Revokedconsent">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Revokedconsent"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="Sample_Binding" jndiName="com/ardais/bigr/iltds/beans/Sample">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Sample"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="Samplebox_Binding" jndiName="com/ardais/bigr/iltds/beans/Samplebox">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Samplebox"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="Samplestatus_Binding" jndiName="com/ardais/bigr/iltds/beans/Samplestatus">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Samplestatus"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033744215993" jndiName="com/ardais/bigr/es/beans/Ardaisaccount">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744215993"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1034963169585" jndiName="com/ardais/bigr/es/beans/Ardaisuser">
+      <bindingEjbRef href="META-INF/ejb-jar.xml#EjbRef_1034963169595"/>
+    </ejbRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033744216043" jndiName="com/ardais/bigr/es/beans/Ardaisuser">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216043"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1034369335258" jndiName="ejb/com/ardais/bigr/es/beans/ShoppingcartHome">
+      <bindingEjbRef href="META-INF/ejb-jar.xml#EjbRef_1034369335258"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1034963169766" jndiName="com/ardais/bigr/es/beans/Ardaisaccount">
+      <bindingEjbRef href="META-INF/ejb-jar.xml#EjbRef_1034963169766"/>
+    </ejbRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033744216063" jndiName="com/ardais/bigr/es/beans/Ardaisorder">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216073"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033744216093" jndiName="com/ardais/bigr/es/beans/Orderline">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216093"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033744216103" jndiName="com/ardais/bigr/es/beans/Ardaisorderstatus">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216103"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033744216173" jndiName="com/ardais/bigr/es/beans/Ardaisaddress">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216173"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033745432091" jndiName="com/ardais/bigr/orm/beans/Objects">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033745432091"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033745432111" jndiName="com/ardais/bigr/orm/beans/Useraccessmodule">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033745432111"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033749429890" jndiName="com/ardais/bigr/iltds/beans/Project">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033749429890"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033749429910" jndiName="com/ardais/bigr/iltds/beans/Workorder">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033749429910"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033749429930" jndiName="com/ardais/bigr/iltds/beans/Lineitem">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033749429930"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033749429950" jndiName="com/ardais/bigr/iltds/beans/Projectsample">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033749429950"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033749768752" jndiName="com/ardais/bigr/pdc/beans/DDCDonor">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749768752"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033749768772" jndiName="com/ardais/bigr/pdc/beans/DDCPathology">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749768772"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033749845332" jndiName="com/ardais/bigr/iltds/beans/ASMOperation">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749845332"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033749845442" jndiName="com/ardais/bigr/iltds/beans/BTXHistoryReader">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749845442"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033749845472" jndiName="com/ardais/bigr/iltds/beans/BTXHistoryRecorder">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749845472"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033749845582" jndiName="com/ardais/bigr/iltds/beans/ConsentOperation">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749845582"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033749845632" jndiName="com/ardais/bigr/iltds/icp/ejb/session/IcpOperation">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749845632"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033749845652" jndiName="com/ardais/bigr/iltds/beans/ListGenerator">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749845652"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033749845712" jndiName="com/ardais/bigr/iltds/beans/PathologyOperation">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749845712"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033749845732" jndiName="com/ardais/bigr/iltds/beans/PtsOperation">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749845732"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033749845752" jndiName="com/ardais/bigr/iltds/beans/Sequence">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749845752"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033749963522" jndiName="com/ardais/bigr/es/beans/SequenceGen">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749963522"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033750034293" jndiName="com/ardais/bigr/orm/beans/AccountSrchSB">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033750034293"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033750034464" jndiName="com/ardais/bigr/orm/beans/OrmUserManagement">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033750034464"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1033750034474" jndiName="com/ardais/bigr/userprofile/UserProf">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033750034474"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="Shoppingcartdetail_Bnd" jndiName="ejb/com/ardais/bigr/es/beans/ShoppingcartdetailHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Shoppingcartdetail"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1034369341587" jndiName="ejb/com/ardais/bigr/es/beans/ShoppingcartHome">
+      <bindingEjbRef href="META-INF/ejb-jar.xml#EjbRef_1034369341587"/>
+    </ejbRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="Shoppingcart_Bnd" jndiName="ejb/com/ardais/bigr/es/beans/ShoppingcartHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Shoppingcart"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1034369341607" jndiName="com/ardais/bigr/es/beans/Ardaisuser">
+      <bindingEjbRef href="META-INF/ejb-jar.xml#EjbRef_1034369341607"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1034369341617" jndiName="ejb/com/ardais/bigr/es/beans/ShoppingcartdetailHome">
+      <bindingEjbRef href="META-INF/ejb-jar.xml#EjbRef_1034369341617"/>
+    </ejbRefBindings>
+  </ejbBindings>
+  <ejbBindings xmi:id="Oce_Bnd" jndiName="ejb/com/ardais/bigr/pdc/oce/OceHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Oce"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="Slide_Bnd" jndiName="ejb/com/ardais/bigr/lims/beans/SlideHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Slide"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="LimsDataValidator_Bnd" jndiName="ejb/com/ardais/bigr/lims/beans/LimsDataValidatorHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#LimsDataValidator"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="LimsOperation_Bnd" jndiName="ejb/com/ardais/bigr/lims/beans/LimsOperationHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#LimsOperation"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="PathologyEvaluation_Bnd" jndiName="ejb/com/ardais/bigr/lims/beans/PathologyEvaluationHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#PathologyEvaluation"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1043759810061" jndiName="ejb/com/ardais/bigr/iltds/beans/BtxHistoryExceptionRecorderHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#BtxHistoryExceptionRecorder"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1044483671394" jndiName="ejb/com/ardais/bigr/iltds/beans/SampleOperationHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#SampleOperation"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1054131302984" jndiName="ejb/com/ardais/bigr/core/SequenceGeneratorHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#SequenceGenerator"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1055356773771" jndiName="ejb/com/ardais/bigr/lims/beans/IncidentHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Incident"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1059600742037" jndiName="ejb/com/ardais/bigr/btx/framework/BtxTransactionHome">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#BtxTransaction"/>
+  </ejbBindings>
+</ejbbnd:EJBJarBinding>

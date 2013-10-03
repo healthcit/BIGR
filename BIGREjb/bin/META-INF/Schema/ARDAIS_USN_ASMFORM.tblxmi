@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBTable_1053626315402" name="ASMFORM" primaryKey="SQLReference_1053626315714">
+  <database href="META-INF/Schema/ARDAIS.dbxmi#RDBDatabase_1035204447382"/>
+  <schema href="META-INF/Schema/ARDAIS_BIGR.schxmi#RDBSchema_1035204448253"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315402" name="ARDAIS_STAFF_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626315714" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315403" name="GROSSING_DATE" allowNull="true">
+    <type xmi:type="RDBSchema:SQLTimestamp" xmi:id="SQLTimestamp_1053626315714" precision="2" timezone="false">
+      <originatingType xmi:type="RDBSchema:SQLTimestamp" href="DB2UDBNT_V72_Primitives.xmi#SQLTimestamp_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315404" name="LINK_STAFF_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626315715" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315405" name="SURGICAL_SPECIMEN_ID_OTHER" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626315716" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315406" name="SURGICAL_SPECIMEN_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626315717" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315407" name="CREATION_TIME" allowNull="true">
+    <type xmi:type="RDBSchema:SQLTimestamp" xmi:id="SQLTimestamp_1053626315715" precision="2" timezone="false">
+      <originatingType xmi:type="RDBSchema:SQLTimestamp" href="DB2UDBNT_V72_Primitives.xmi#SQLTimestamp_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315408" name="ASM_FORM_ID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626315718" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315409" name="REMOVAL_DATE" allowNull="true">
+    <type xmi:type="RDBSchema:SQLTimestamp" xmi:id="SQLTimestamp_1053626315716" precision="2" timezone="false">
+      <originatingType xmi:type="RDBSchema:SQLTimestamp" href="DB2UDBNT_V72_Primitives.xmi#SQLTimestamp_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315410" name="ARDAIS_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626315719" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315411" name="ACC_SURGICAL_REMOVAL_TIME" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626315720" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315714" name="CONSENT_CONSENT_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626315721" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="SQLReference_1053626315714" name="PK_ASMFORM" members="RDBColumn_1053626315408" constraint="SQLConstraint_1053626315714"/>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1053626315402" name="C5826917" members="RDBColumn_1053626315714" constraint="SQLConstraint_1053626315715">
+    <target href="META-INF/Schema/ARDAIS_USN_CONSENT.tblxmi#SQLReference_1053626315714"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1053626315714" name="PK_ASMFORM" type="PRIMARYKEY" primaryKey="SQLReference_1053626315714"/>
+  <constraints xmi:id="SQLConstraint_1053626315715" name="C5826917" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1053626315402"/>
+</RDBSchema:RDBTable>

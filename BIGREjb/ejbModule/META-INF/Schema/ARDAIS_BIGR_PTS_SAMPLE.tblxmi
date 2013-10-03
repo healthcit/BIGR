@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBTable_1035204456175" name="PTS_SAMPLE" primaryKey="SQLReference_1035204456175">
+  <database href="META-INF/Schema/ARDAIS.dbxmi#RDBDatabase_1035204447382"/>
+  <schema href="META-INF/Schema/ARDAIS_BIGR.schxmi#RDBSchema_1035204448253"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456175" name="PROJECTID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456175" characterSet="800" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456176" name="LINEITEMID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456176" characterSet="800" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456177" name="SAMPLE_BARCODE_ID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456177" characterSet="800" length="10">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="SQLReference_1035204456175" name="PK_PTS_PROJECT_SAMPLE" members="RDBColumn_1035204456175 RDBColumn_1035204456176 RDBColumn_1035204456177" constraint="SQLConstraint_1035204456175"/>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1035204456165" name="FK_PTS_SAMPLE_ILTDS_SAMPLE" members="RDBColumn_1035204456177" constraint="SQLConstraint_1035204456176">
+    <target href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#SQLReference_1035204455694"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1035204456175" name="FK_PTS_SAMPLE_LINEITEM" members="RDBColumn_1035204456176" constraint="SQLConstraint_1035204456177">
+    <target href="META-INF/Schema/ARDAIS_BIGR_PTS_LINEITEM.tblxmi#SQLReference_1035204456175"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1035204456176" name="FK_PTS_SAMPLE_PROJECT" members="RDBColumn_1035204456175" constraint="SQLConstraint_1035204456178">
+    <target href="META-INF/Schema/ARDAIS_BIGR_PTS_PROJECT.tblxmi#SQLReference_1035204455664"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1035204456175" name="PK_PTS_PROJECT_SAMPLE" type="PRIMARYKEY" primaryKey="SQLReference_1035204456175"/>
+  <constraints xmi:id="SQLConstraint_1035204456176" name="FK_PTS_SAMPLE_ILTDS_SAMPLE" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1035204456165"/>
+  <constraints xmi:id="SQLConstraint_1035204456177" name="FK_PTS_SAMPLE_LINEITEM" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1035204456175"/>
+  <constraints xmi:id="SQLConstraint_1035204456178" name="FK_PTS_SAMPLE_PROJECT" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1035204456176"/>
+</RDBSchema:RDBTable>

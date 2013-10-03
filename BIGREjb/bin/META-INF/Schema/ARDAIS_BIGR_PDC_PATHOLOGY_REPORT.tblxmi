@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBTable_1035204455944" name="PDC_PATHOLOGY_REPORT" primaryKey="SQLReference_1035204455764">
+  <database href="META-INF/Schema/ARDAIS.dbxmi#RDBDatabase_1035204447382"/>
+  <schema href="META-INF/Schema/ARDAIS_BIGR.schxmi#RDBSchema_1035204448253"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455944" name="PATH_REPORT_ID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1035225522101" precision="22" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="ORACLE_V8_Primitives.xmi#SQLNumeric_6"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455945" name="CONSENT_ID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455944" characterSet="800" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455946" name="ARDAIS_ID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455945" characterSet="800" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455947" name="DISEASE_CONCEPT_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1092763396799" characterSet="800" length="30">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455948" name="DIAGNOSIS_CONCEPT_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455947" characterSet="800" length="30">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455949" name="TISSUE_CONCEPT_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455948" characterSet="800" length="30">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455950" name="PROCEDURE_CONCEPT_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455949" characterSet="800" length="30">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455951" name="OTHER_PR_NAME" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455950" characterSet="800" length="200">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455952" name="ADDITIONAL_NOTE" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterLargeObject" xmi:id="SQLCharacterLargeObject_1035204455944" characterSet="800" length="86">
+      <originatingType xmi:type="RDBSchema:SQLCharacterLargeObject" href="ORACLE_V8_Primitives.xmi#SQLCharacterLargeObject_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455953" name="PATH_CHECK_DATE_MM" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455951" characterSet="800" length="2">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455954" name="PATH_CHECK_DATE_YYYY" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455952" characterSet="800" length="4">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455955" name="PATHOLOGY_ASCII_REPORT" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterLargeObject" xmi:id="SQLCharacterLargeObject_1035204455954" characterSet="800" length="86">
+      <originatingType xmi:type="RDBSchema:SQLCharacterLargeObject" href="ORACLE_V8_Primitives.xmi#SQLCharacterLargeObject_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455956" name="CREATE_USER" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455954" characterSet="800" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455957" name="CREATE_DATE" allowNull="true">
+    <type xmi:type="RDBSchema:SQLTimestamp" xmi:id="SQLTimestamp_1035204455954" precision="7" timezone="false">
+      <originatingType xmi:type="RDBSchema:SQLTimestamp" href="ORACLE_V8_Primitives.xmi#SQLTimestamp_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455958" name="LAST_UPDATE_USER" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455955" characterSet="800" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455959" name="LAST_UPDATE_DATE" allowNull="true">
+    <type xmi:type="RDBSchema:SQLTimestamp" xmi:id="SQLTimestamp_1035204455955" precision="7" timezone="false">
+      <originatingType xmi:type="RDBSchema:SQLTimestamp" href="ORACLE_V8_Primitives.xmi#SQLTimestamp_3"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455960" name="PRIMARY_PATH_REPORT_SECTION_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1035225522102" precision="22" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="ORACLE_V8_Primitives.xmi#SQLNumeric_6"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="SQLReference_1035204455764" name="PK_PDC_PATHOLOGY_REPORT" members="RDBColumn_1035204455944" constraint="SQLConstraint_1035204455954">
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_PDC_PATH_REPORT_DIAGNOSTICS.tblxmi#RDBReferenceByKey_1035204455764"/>
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_PDC_PATH_REPORT_SECTION.tblxmi#RDBReferenceByKey_1035204455824"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1035204455954" name="FK_INF_CONSENT_PATH_REP" members="RDBColumn_1035204455945" constraint="SQLConstraint_1035204455955">
+    <target href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#SQLReference_1035204455954"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1035204455384" name="FK_REPORT_DIAGNOSIS_TO_DX_TC" members="RDBColumn_1035204455948" constraint="SQLConstraint_1035204455956">
+    <target href="META-INF/Schema/ARDAIS_BIGR_PDC_DX_TC_HIERARCHY.tblxmi#SQLReference_1035204455384"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1035204455385" name="FK_REPORT_PROCEDURE_TO_DX_TC" members="RDBColumn_1035204455950" constraint="SQLConstraint_1035204455957">
+    <target href="META-INF/Schema/ARDAIS_BIGR_PDC_DX_TC_HIERARCHY.tblxmi#SQLReference_1035204455384"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1035204455386" name="FK_REPORT_TISSUE_TO_DX_TC" members="RDBColumn_1035204455949" constraint="SQLConstraint_1035204455958">
+    <target href="META-INF/Schema/ARDAIS_BIGR_PDC_DX_TC_HIERARCHY.tblxmi#SQLReference_1035204455384"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1035204455824" name="FK_PATH_REP_TO_PATH_SECTION" members="RDBColumn_1035204455960" constraint="SQLConstraint_1035204455959">
+    <target href="META-INF/Schema/ARDAIS_BIGR_PDC_PATH_REPORT_SECTION.tblxmi#SQLReference_1035204455784"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1035204455954" name="PK_PDC_PATHOLOGY_REPORT" type="PRIMARYKEY" primaryKey="SQLReference_1035204455764"/>
+  <constraints xmi:id="SQLConstraint_1035204455955" name="FK_INF_CONSENT_PATH_REP" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1035204455954"/>
+  <constraints xmi:id="SQLConstraint_1035204455956" name="FK_REPORT_DIAGNOSIS_TO_DX_TC" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1035204455384"/>
+  <constraints xmi:id="SQLConstraint_1035204455957" name="FK_REPORT_PROCEDURE_TO_DX_TC" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1035204455385"/>
+  <constraints xmi:id="SQLConstraint_1035204455958" name="FK_REPORT_TISSUE_TO_DX_TC" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1035204455386"/>
+  <constraints xmi:id="SQLConstraint_1035204455959" name="FK_PATH_REP_TO_PATH_SECTION" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1035204455824"/>
+</RDBSchema:RDBTable>

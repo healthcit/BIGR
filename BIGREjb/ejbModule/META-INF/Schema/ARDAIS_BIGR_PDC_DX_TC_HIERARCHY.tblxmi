@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBTable_1035204455384" name="PDC_DX_TC_HIERARCHY" primaryKey="SQLReference_1035204455384">
+  <database href="META-INF/Schema/ARDAIS.dbxmi#RDBDatabase_1035204447382"/>
+  <schema href="META-INF/Schema/ARDAIS_BIGR.schxmi#RDBSchema_1035204448253"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455384" name="OWNER_CODE">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455384" characterSet="800" length="30">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455385" name="FULLY_SPECIFIED_NAME" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455385" characterSet="800" length="200">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455386" name="PARENT_CODE" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455386" characterSet="800" length="30">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455387" name="LEVEL_CODE" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455387" characterSet="800" length="1">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455388" name="TYPE_CODE" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455388" characterSet="800" length="1">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455389" name="ORDER_BY" allowNull="true">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1035225503985" precision="22" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="ORACLE_V8_Primitives.xmi#SQLNumeric_6"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455390" name="DESIRE_SCORE" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455389" characterSet="800" length="2">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455391" name="ACT" defaultValue="'A' ">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455390" characterSet="800" length="1">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455392" name="PRF" defaultValue="'P' ">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455391" characterSet="800" length="1">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204455393" name="GRP" defaultValue="'xxxxx' ">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204455392" characterSet="800" length="5">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="SQLReference_1035204455384" name="PK_PDC_DX_TC_HIERARCHY" members="RDBColumn_1035204455384" constraint="SQLConstraint_1035204455384">
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_PDC_PATHOLOGY_REPORT.tblxmi#RDBReferenceByKey_1035204455384"/>
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_PDC_PATHOLOGY_REPORT.tblxmi#RDBReferenceByKey_1035204455385"/>
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_PDC_PATHOLOGY_REPORT.tblxmi#RDBReferenceByKey_1035204455386"/>
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_ILTDS_DESIRED_SPECIMENS.tblxmi#RDBReferenceByKey_1035204455384"/>
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_ILTDS_DESIRED_SPECIMENS.tblxmi#RDBReferenceByKey_1035204455385"/>
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_PDC_PATH_REPORT_DX.tblxmi#RDBReferenceByKey_1035204455384"/>
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_PDC_PATH_REPORT_DX.tblxmi#RDBReferenceByKey_1035204455385"/>
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_PDC_PATH_REPORT_SECTION.tblxmi#RDBReferenceByKey_1035204455394"/>
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_PDC_PATH_REPORT_SECTION.tblxmi#RDBReferenceByKey_1035204455395"/>
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_PDC_PATH_REPORT_SECTION.tblxmi#RDBReferenceByKey_1035204455396"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1035204455384" name="PK_PDC_DX_TC_HIERARCHY" type="PRIMARYKEY" primaryKey="SQLReference_1035204455384"/>
+</RDBSchema:RDBTable>

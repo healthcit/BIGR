@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBTable_1053626315542" name="PROJECTSAMPLE" primaryKey="SQLReference_1053626316183">
+  <database href="META-INF/Schema/ARDAIS.dbxmi#RDBDatabase_1035204447382"/>
+  <schema href="META-INF/Schema/ARDAIS_BIGR.schxmi#RDBSchema_1035204448253"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315542" name="SAMPLEBARCODEID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626316183" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626316183" name="LINEITEM_LINEITEMID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626316184" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626316184" name="PROJECT_PROJECTID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626316185" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="SQLReference_1053626316183" name="PK_PROJECTSAMPLE" members="RDBColumn_1053626316183 RDBColumn_1053626316184 RDBColumn_1053626315542" constraint="SQLConstraint_1053626316183"/>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1053626315542" name="C5831652" members="RDBColumn_1053626316183" constraint="SQLConstraint_1053626316184">
+    <target href="META-INF/Schema/ARDAIS_USN_LINEITEM.tblxmi#SQLReference_1053626316136"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1053626315543" name="C5831652" members="RDBColumn_1053626316184" constraint="SQLConstraint_1053626316185">
+    <target href="META-INF/Schema/ARDAIS_USN_PROJECT.tblxmi#SQLReference_1053626316136"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1053626316183" name="PK_PROJECTSAMPLE" type="PRIMARYKEY" primaryKey="SQLReference_1053626316183"/>
+  <constraints xmi:id="SQLConstraint_1053626316184" name="C5831652" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1053626315542"/>
+  <constraints xmi:id="SQLConstraint_1053626316185" name="C5831652" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1053626315543"/>
+</RDBSchema:RDBTable>

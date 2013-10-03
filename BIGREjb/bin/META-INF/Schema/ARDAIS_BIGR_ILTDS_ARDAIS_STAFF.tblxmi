@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBTable_1035204456085" name="ILTDS_ARDAIS_STAFF" primaryKey="SQLReference_1035204456045">
+  <database href="META-INF/Schema/ARDAIS.dbxmi#RDBDatabase_1035204447382"/>
+  <schema href="META-INF/Schema/ARDAIS_BIGR.schxmi#RDBSchema_1035204448253"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456095" name="ARDAIS_STAFF_ID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456095" characterSet="800" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456096" name="LOCATION_ADDRESS_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456096" characterSet="800" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456097" name="ARDAIS_STAFF_LNAME" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456097" characterSet="800" length="25">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456098" name="ARDAIS_STAFF_FNAME" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456098" characterSet="800" length="25">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456099" name="ARDAIS_ACCT_KEY" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456099" characterSet="800" length="10">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1035204456100" name="ARDAIS_USER_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1035204456100" characterSet="800" length="12">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="ORACLE_V8_Primitives.xmi#SQLCharacterStringType_2"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="SQLReference_1035204456045" name="PK_ILTDS_ARDAIS_STAFF" members="RDBColumn_1035204456095" constraint="SQLConstraint_1035204456095">
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM_FORM.tblxmi#RDBReferenceByKey_1035204456095"/>
+    <referenceByKey href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBReferenceByKey_1035204456045"/>
+  </namedGroup>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1035204455344" name="FK_GEO_LOC_ARDAIS_STAFF" members="RDBColumn_1035204456096" constraint="SQLConstraint_1035204456096">
+    <target href="META-INF/Schema/ARDAIS_BIGR_ILTDS_GEOGRAPHY_LOCATION.tblxmi#SQLReference_1035204455344"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1035204456095" name="PK_ILTDS_ARDAIS_STAFF" type="PRIMARYKEY" primaryKey="SQLReference_1035204456045"/>
+  <constraints xmi:id="SQLConstraint_1035204456096" name="FK_GEO_LOC_ARDAIS_STAFF" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1035204455344"/>
+</RDBSchema:RDBTable>

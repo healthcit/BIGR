@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:accessbean="http:///accessbean.ecore" xmlns:ejb="ejb.xmi">
+  <accessbean:EJBShadow xmi:id="EJBShadow_1259699411122" name="ASMOperation">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749845332"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1259853192480" name="AccountSrchSB">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033750034293"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1123795157233" name="Ardaisaccount" factoryPackageName="com.ardais.bigr.es.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1123795157233" name="ArdaisaccountAccessBean" package="com.ardais.bigr.es.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1123795157233" name="ardais_acct_open_date" type="java.sql.Timestamp" getterName="getArdais_acct_open_date" setterName="setArdais_acct_open_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1123795157234" name="defaultBoxLayoutId" type="java.lang.String" getterName="getDefaultBoxLayoutId" setterName="setDefaultBoxLayoutId"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1123795157235" name="ardais_acct_reactivate_date" type="java.sql.Timestamp" getterName="getArdais_acct_reactivate_date" setterName="setArdais_acct_reactivate_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1123795157236" name="ardais_acct_type" type="java.lang.String" getterName="getArdais_acct_type" setterName="setArdais_acct_type"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1123795157237" name="ardais_parent_acct_comp_desc" type="java.lang.String" getterName="getArdais_parent_acct_comp_desc" setterName="setArdais_parent_acct_comp_desc"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1123795157238" name="ardais_acct_deactivate_date" type="java.sql.Timestamp" getterName="getArdais_acct_deactivate_date" setterName="setArdais_acct_deactivate_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1123795157239" name="ardais_acct_status" type="java.lang.String" getterName="getArdais_acct_status" setterName="setArdais_acct_status"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1123795157240" name="request_mgr_email_address" type="java.lang.String" getterName="getRequest_mgr_email_address" setterName="setRequest_mgr_email_address"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1123795157241" name="ardais_acct_close_date" type="java.sql.Timestamp" getterName="getArdais_acct_close_date" setterName="setArdais_acct_close_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1123795157242" name="passwordPolicyCid" type="java.lang.String" getterName="getPasswordPolicyCid" setterName="setPasswordPolicyCid"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1123795157243" name="primaryLocation" type="java.lang.String" getterName="getPrimaryLocation" setterName="setPrimaryLocation"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1123795157244" name="linked_cases_only_yn" type="java.lang.String" getterName="getLinked_cases_only_yn" setterName="setLinked_cases_only_yn"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1123795157245" name="ardais_acct_active_date" type="java.sql.Timestamp" getterName="getArdais_acct_active_date" setterName="setArdais_acct_active_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1123795157246" name="ardais_acct_company_desc" type="java.lang.String" getterName="getArdais_acct_company_desc" setterName="setArdais_acct_company_desc"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1123795157247" name="passwordLifeSpan" type="int" getterName="getPasswordLifeSpan" setterName="setPasswordLifeSpan"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1123795157248" name="ardais_acct_deactivate_reason" type="java.lang.String" getterName="getArdais_acct_deactivate_reason" setterName="setArdais_acct_deactivate_reason"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1182188341457" name="donorRegistrationForm" type="java.lang.String" getterName="getDonorRegistrationForm" setterName="setDonorRegistrationForm"/>
+      <nullConstructor xmi:id="MethodElement_1163186270007" name="create" parms="java.lang.String" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744215993"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1163186270007" name="ardais_acct_key" type="java.lang.String" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744215993"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1033757930427" name="Ardaisaddress" factoryPackageName="com.ardais.bigr.es.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1033757930427" name="ArdaisaddressAccessBean" package="com.ardais.bigr.es.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930432" name="address_type" type="java.lang.String" getterName="getAddress_type" setterName="setAddress_type"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930433" name="addr_country" type="java.lang.String" getterName="getAddr_country" setterName="setAddr_country"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930434" name="addr_state" type="java.lang.String" getterName="getAddr_state" setterName="setAddr_state"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930436" name="address_2" type="java.lang.String" getterName="getAddress_2" setterName="setAddress_2"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930437" name="address_1" type="java.lang.String" getterName="getAddress_1" setterName="setAddress_1"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930438" name="addr_city" type="java.lang.String" getterName="getAddr_city" setterName="setAddr_city"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930439" name="addr_zip_code" type="java.lang.String" getterName="getAddr_zip_code" setterName="setAddr_zip_code"/>
+      <nullConstructor xmi:id="MethodElement_1033757930427" name="create" parms="java.math.BigDecimal java.lang.String java.lang.String" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216173"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1033757930427" name="argAddress_id" type="java.math.BigDecimal" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1033757930428" name="argArdais_acct_key" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1033757930429" name="argAddress1" type="java.lang.String" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216173"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1035227914042" name="Ardaisorder" factoryPackageName="com.ardais.bigr.es.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1035227914042" name="ArdaisorderAccessBean" package="com.ardais.bigr.es.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1035227914042" name="order_po_number" type="java.lang.String" getterName="getOrder_po_number" setterName="setOrder_po_number"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1035227914043" name="ardaisuserKey" type="com.ardais.bigr.es.beans.ArdaisuserKey" getterName="getArdaisuserKey"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1035227914044" name="bill_to_addr_id" type="java.math.BigDecimal" getterName="getBill_to_addr_id" setterName="setBill_to_addr_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1035227914045" name="order_date" type="java.sql.Timestamp" getterName="getOrder_date" setterName="setOrder_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1035227914046" name="approved_date" type="java.sql.Timestamp" getterName="getApproved_date" setterName="setApproved_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1035227914047" name="order_status" type="java.lang.String" getterName="getOrder_status" setterName="setOrder_status"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1035227914052" name="order_amount" type="java.math.BigDecimal" getterName="getOrder_amount" setterName="setOrder_amount"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1035227914053" name="ship_instruction" type="java.lang.String" getterName="getShip_instruction" setterName="setShip_instruction"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1035227914054" name="approval_user_id" type="java.lang.String" getterName="getApproval_user_id" setterName="setApproval_user_id"/>
+      <nullConstructor xmi:id="MethodElement_1035227914052" name="create" parms="java.math.BigDecimal com.ardais.bigr.es.beans.ArdaisuserKey" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216073"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1035227914052" name="argOrder_number" type="java.math.BigDecimal" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1035227914053" name="argArdaisuser" type="com.ardais.bigr.es.beans.ArdaisuserKey" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216073"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1034015324168" name="Ardaisorderstatus" factoryPackageName="com.ardais.bigr.es.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1034015324168" name="ArdaisorderstatusAccessBean" package="com.ardais.bigr.es.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034015324168" name="order_status_comment" type="java.lang.String" getterName="getOrder_status_comment" setterName="setOrder_status_comment"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034015324169" name="ardaisorderKey" type="com.ardais.bigr.es.beans.ArdaisorderKey" getterName="getArdaisorderKey"/>
+      <nullConstructor xmi:id="MethodElement_1034015324168" name="create" parms="java.sql.Timestamp java.lang.String com.ardais.bigr.es.beans.ArdaisorderKey java.lang.String java.lang.String" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216103"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1034015324168" name="argOrder_status_date" type="java.sql.Timestamp" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1034015324169" name="argOrder_status_id" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1034015324170" name="argArdaisorder" type="com.ardais.bigr.es.beans.ArdaisorderKey" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1034015324171" name="argArdais_acct_key" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1034015324172" name="argArdais_user_id" type="java.lang.String" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216103"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1034951618489" name="Ardaisstaff" factoryPackageName="com.ardais.bigr.iltds.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1034951618499" name="ArdaisstaffAccessBean" package="com.ardais.bigr.iltds.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034951618499" name="ardais_user_id" type="java.lang.String" getterName="getArdais_user_id" setterName="setArdais_user_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034951618500" name="ardais_staff_fname" type="java.lang.String" getterName="getArdais_staff_fname" setterName="setArdais_staff_fname"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034951618501" name="geolocationKey" type="com.ardais.bigr.iltds.beans.GeolocationKey" getterName="getGeolocationKey"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034951618502" name="ardais_staff_lname" type="java.lang.String" getterName="getArdais_staff_lname" setterName="setArdais_staff_lname"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034951618503" name="ardais_acct_key" type="java.lang.String" getterName="getArdais_acct_key" setterName="setArdais_acct_key"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034951618504" name="geolocation_location_address_id" type="java.lang.String" getterName="getGeolocation_location_address_id" setterName="setGeolocation_location_address_id"/>
+      <nullConstructor xmi:id="MethodElement_1034951618499" name="create" parms="java.lang.String com.ardais.bigr.iltds.beans.Geolocation" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Ardaisstaff"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1034951618499" name="ardais_staff_id" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1034951618500" name="argGeolocation" type="com.ardais.bigr.iltds.beans.Geolocation" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Ardaisstaff"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1095370873587" name="Ardaisuser" factoryPackageName="com.ardais.bigr.es.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1095370873587" name="ArdaisuserAccessBean" package="com.ardais.bigr.es.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873600" name="user_phone_ext" type="java.lang.String" getterName="getUser_phone_ext" setterName="setUser_phone_ext"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873602" name="password" type="java.lang.String" getterName="getPassword" setterName="setPassword"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873604" name="user_lastname" type="java.lang.String" getterName="getUser_lastname" setterName="setUser_lastname"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873605" name="update_date" type="java.sql.Timestamp" getterName="getUpdate_date" setterName="setUpdate_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873606" name="user_active_ind" type="java.lang.String" getterName="getUser_active_ind" setterName="setUser_active_ind"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873607" name="updated_by" type="java.lang.String" getterName="getUpdated_by" setterName="setUpdated_by"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873608" name="user_affiliation" type="java.lang.String" getterName="getUser_affiliation" setterName="setUser_affiliation"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873609" name="created_by" type="java.lang.String" getterName="getCreated_by" setterName="setCreated_by"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873610" name="user_phone_number" type="java.lang.String" getterName="getUser_phone_number" setterName="setUser_phone_number"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873611" name="user_title" type="java.lang.String" getterName="getUser_title" setterName="setUser_title"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873612" name="user_verif_question" type="java.lang.String" getterName="getUser_verif_question" setterName="setUser_verif_question"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873613" name="user_firstname" type="java.lang.String" getterName="getUser_firstname" setterName="setUser_firstname"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873614" name="create_date" type="java.sql.Timestamp" getterName="getCreate_date" setterName="setCreate_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873615" name="ardaisaccountKey" type="com.ardais.bigr.es.beans.ArdaisaccountKey" getterName="getArdaisaccountKey"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873616" name="user_fax_number" type="java.lang.String" getterName="getUser_fax_number" setterName="setUser_fax_number"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873617" name="passwordPolicyCid" type="java.lang.String" getterName="getPasswordPolicyCid" setterName="setPasswordPolicyCid"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873618" name="user_verif_answer" type="java.lang.String" getterName="getUser_verif_answer" setterName="setUser_verif_answer"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873619" name="user_functional_title" type="java.lang.String" getterName="getUser_functional_title" setterName="setUser_functional_title"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873622" name="user_email_address" type="java.lang.String" getterName="getUser_email_address" setterName="setUser_email_address"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873623" name="user_address_id" type="java.math.BigDecimal" getterName="getUser_address_id" setterName="setUser_address_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873626" name="user_mobile_number" type="java.lang.String" getterName="getUser_mobile_number" setterName="setUser_mobile_number"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1095370873627" name="passwordLastChangeDate" type="java.sql.Timestamp" getterName="getPasswordLastChangeDate" setterName="setPasswordLastChangeDate"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1155911258198" name="user_department" type="java.lang.String" getterName="getUser_department" setterName="setUser_department"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1157747320988" name="consecutive_failed_answers" type="java.lang.Integer" getterName="getConsecutive_failed_answers" setterName="setConsecutive_failed_answers"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1157747320989" name="consecutive_failed_logins" type="java.lang.Integer" getterName="getConsecutive_failed_logins" setterName="setConsecutive_failed_logins"/>
+      <nullConstructor xmi:id="MethodElement_1095370873587" name="create" parms="java.lang.String com.ardais.bigr.es.beans.Ardaisaccount java.lang.String" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216043"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1095370873591" name="ardais_user_id" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1095370873592" name="argArdaisaccount" type="com.ardais.bigr.es.beans.Ardaisaccount" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1095370873593" name="passwordPolicyCid" type="java.lang.String" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216043"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1034163761940" name="Asm" factoryPackageName="com.ardais.bigr.iltds.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1034163761940" name="AsmAccessBean" package="com.ardais.bigr.iltds.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034163761940" name="specimen_type" type="java.lang.String" getterName="getSpecimen_type" setterName="setSpecimen_type"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034163761941" name="ardais_id" type="java.lang.String" getterName="getArdais_id" setterName="setArdais_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034163761942" name="consent_id" type="java.lang.String" getterName="getConsent_id" setterName="setConsent_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034163761943" name="organ_site_concept_id_other" type="java.lang.String" getterName="getOrgan_site_concept_id_other" setterName="setOrgan_site_concept_id_other"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034163761944" name="asm_entry_date" type="java.sql.Timestamp" getterName="getAsm_entry_date" setterName="setAsm_entry_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034163761945" name="organ_site_concept_id" type="java.lang.String" getterName="getOrgan_site_concept_id" setterName="setOrgan_site_concept_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034163761946" name="asm_form_id" type="java.lang.String" getterName="getAsm_form_id" setterName="setAsm_form_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1096309517301" name="module_weight" type="java.lang.Integer" getterName="getModule_weight" setterName="setModule_weight"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1096309517302" name="pfin_meets_specs" type="java.lang.String" getterName="getPfin_meets_specs" setterName="setPfin_meets_specs"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1096309517303" name="module_comments" type="java.lang.String" getterName="getModule_comments" setterName="setModule_comments"/>
+      <nullConstructor xmi:id="MethodElement_1034163761940" name="create" parms="java.lang.String" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Asm"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1034163761940" name="asm_id" type="java.lang.String" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Asm"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1040653463200" name="Asmform" factoryPackageName="com.ardais.bigr.iltds.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1040653463200" name="AsmformAccessBean" package="com.ardais.bigr.iltds.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1040653463200" name="ardais_id" type="java.lang.String" getterName="getArdais_id" setterName="setArdais_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1040653463201" name="ardais_staff_id" type="java.lang.String" getterName="getArdais_staff_id" setterName="setArdais_staff_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1040653463202" name="consentKey" type="com.ardais.bigr.iltds.beans.ConsentKey" getterName="getConsentKey"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1040653463203" name="creation_time" type="java.sql.Timestamp" getterName="getCreation_time" setterName="setCreation_time"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1040653463204" name="link_staff_id" type="java.lang.String" getterName="getLink_staff_id" setterName="setLink_staff_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1040653463205" name="surgical_specimen_id" type="java.lang.String" getterName="getSurgical_specimen_id" setterName="setSurgical_specimen_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1040653463206" name="grossing_date" type="java.sql.Timestamp" getterName="getGrossing_date" setterName="setGrossing_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1040653463207" name="ardaisstaffKey" type="com.ardais.bigr.iltds.beans.ArdaisstaffKey" getterName="getArdaisstaffKey"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1040653463208" name="removal_date" type="java.sql.Timestamp" getterName="getRemoval_date" setterName="setRemoval_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1040653463209" name="surgical_specimen_id_other" type="java.lang.String" getterName="getSurgical_specimen_id_other" setterName="setSurgical_specimen_id_other"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1040653463210" name="acc_surgical_removal_time" type="java.lang.String" getterName="getAcc_surgical_removal_time" setterName="setAcc_surgical_removal_time"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1073932513020" name="procedure_date" type="java.sql.Timestamp" getterName="getProcedure_date" setterName="setProcedure_date"/>
+      <nullConstructor xmi:id="MethodElement_1040653463200" name="create" parms="java.lang.String com.ardais.bigr.iltds.beans.ConsentKey java.lang.String" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Asmform"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1040653463200" name="argAsm_form_id" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1040653463201" name="argConsent" type="com.ardais.bigr.iltds.beans.ConsentKey" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1040653463202" name="argArdais_id" type="java.lang.String" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Asmform"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1259868408631" name="BTXHistoryReader">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749845442"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1259613388882" name="BTXHistoryRecorder">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749845472"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1119544352411" name="Boxlocation" factoryPackageName="com.ardais.bigr.iltds.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1119544352411" name="BoxlocationAccessBean" package="com.ardais.bigr.iltds.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119544352411" name="geolocation_location_address_id" type="java.lang.String" getterName="getGeolocation_location_address_id" setterName="setGeolocation_location_address_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119544352412" name="sampleboxKey" type="com.ardais.bigr.iltds.beans.SampleboxKey" getterName="getSampleboxKey"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119544352413" name="samplebox_box_barcode_id" type="java.lang.String" getterName="getSamplebox_box_barcode_id" setterName="setSamplebox_box_barcode_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119544352414" name="available_ind" type="java.lang.String" getterName="getAvailable_ind" setterName="setAvailable_ind"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119544352415" name="storageTypeCid" type="java.lang.String" getterName="getStorageTypeCid" setterName="setStorageTypeCid"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119544352416" name="location_status" type="java.lang.String" getterName="getLocation_status" setterName="setLocation_status"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119544352417" name="geolocationKey" type="com.ardais.bigr.iltds.beans.GeolocationKey" getterName="getGeolocationKey"/>
+      <nullConstructor xmi:id="MethodElement_1119544352411" name="create" parms="com.ardais.bigr.iltds.assistants.StorageLocAsst" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Boxlocation"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1119544352411" name="asst" type="com.ardais.bigr.iltds.assistants.StorageLocAsst" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Boxlocation"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1259613388883" name="BtxHistoryExceptionRecorder">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#BtxHistoryExceptionRecorder"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1259606348886" name="BtxTransaction">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#BtxTransaction"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1102023066242" name="Consent" factoryPackageName="com.ardais.bigr.iltds.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1102023066242" name="ConsentAccessBean" package="com.ardais.bigr.iltds.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066242" name="future_contact_yn" type="java.lang.String" getterName="getFuture_contact_yn" setterName="setFuture_contact_yn"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066243" name="consent_release_datetime" type="java.sql.Timestamp" getterName="getConsent_release_datetime" setterName="setConsent_release_datetime"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066244" name="consent_release_staff_id" type="java.lang.String" getterName="getConsent_release_staff_id" setterName="setConsent_release_staff_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066245" name="consent_pull_request_by" type="java.lang.String" getterName="getConsent_pull_request_by" setterName="setConsent_pull_request_by"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066246" name="best_diagnosis_cui" type="java.lang.String" getterName="getBest_diagnosis_cui"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066247" name="form_entry_staff_id" type="java.lang.String" getterName="getForm_entry_staff_id" setterName="setForm_entry_staff_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066248" name="form_entry_datetime" type="java.sql.Timestamp" getterName="getForm_entry_datetime" setterName="setForm_entry_datetime"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066249" name="bankable_ind" type="java.lang.String" getterName="getBankable_ind" setterName="setBankable_ind"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066250" name="comments" type="java.lang.String" getterName="getComments" setterName="setComments"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066251" name="consent_pull_reason_cd" type="java.lang.String" getterName="getConsent_pull_reason_cd" setterName="setConsent_pull_reason_cd"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066252" name="geolocationKey" type="com.ardais.bigr.iltds.beans.GeolocationKey" getterName="getGeolocationKey"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066253" name="consent_version_num" type="java.lang.String" getterName="getConsent_version_num" setterName="setConsent_version_num"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066254" name="form_verified_sign_ind" type="java.lang.String" getterName="getForm_verified_sign_ind" setterName="setForm_verified_sign_ind"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066255" name="consent_pull_datetime" type="java.sql.Timestamp" getterName="getConsent_pull_datetime" setterName="setConsent_pull_datetime"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066256" name="consent_pull_staff_id" type="java.lang.String" getterName="getConsent_pull_staff_id" setterName="setConsent_pull_staff_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066257" name="consent_datetime" type="java.sql.Timestamp" getterName="getConsent_datetime" setterName="setConsent_datetime"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066258" name="ardais_id" type="java.lang.String" getterName="getArdais_id" setterName="setArdais_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066259" name="consent_pull_comment" type="java.lang.String" getterName="getConsent_pull_comment" setterName="setConsent_pull_comment"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066260" name="best_diagnosis_other" type="java.lang.String" getterName="getBest_diagnosis_other"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066261" name="form_verified_by_staff_id" type="java.lang.String" getterName="getForm_verified_by_staff_id" setterName="setForm_verified_by_staff_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066262" name="disease_concept_id_other" type="java.lang.String" getterName="getDisease_concept_id_other" setterName="setDisease_concept_id_other"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066263" name="disease_concept_id" type="java.lang.String" getterName="getDisease_concept_id" setterName="setDisease_concept_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066264" name="blood_sample_yn" type="java.lang.String" getterName="getBlood_sample_yn" setterName="setBlood_sample_yn"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066265" name="ardaisstaffKey" type="com.ardais.bigr.iltds.beans.ArdaisstaffKey" getterName="getArdaisstaffKey"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066266" name="linked" type="java.lang.String" getterName="getLinked" setterName="setLinked"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066267" name="ardais_staff_id" type="java.lang.String" getterName="getArdais_staff_id" setterName="setArdais_staff_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066268" name="form_verified_datetime" type="java.sql.Timestamp" getterName="getForm_verified_datetime" setterName="setForm_verified_datetime"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066269" name="consent_version_id" type="java.math.BigDecimal" getterName="getConsent_version_id" setterName="setConsent_version_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066270" name="form_signed_ind" type="java.lang.String" getterName="getForm_signed_ind" setterName="setForm_signed_ind"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066271" name="policy_id" type="java.math.BigDecimal" getterName="getPolicy_id" setterName="setPolicy_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1102023066272" name="additional_needle_stick_yn" type="java.lang.String" getterName="getAdditional_needle_stick_yn" setterName="setAdditional_needle_stick_yn"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1104339196278" name="imported_yn" type="java.lang.String" getterName="getImported_yn" setterName="setImported_yn"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1104339196279" name="ardais_acct_key" type="java.lang.String" getterName="getArdais_acct_key" setterName="setArdais_acct_key"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1104339196280" name="customer_id" type="java.lang.String" getterName="getCustomer_id" setterName="setCustomer_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119275821506" name="psa" type="java.math.BigDecimal" getterName="getPsa" setterName="setPsa"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119275821507" name="clinical_finding_notes" type="java.lang.String" getterName="getClinical_finding_notes" setterName="setClinical_finding_notes"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119275821508" name="dre_cid" type="java.lang.String" getterName="getDre_cid" setterName="setDre_cid"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1182189885842" name="case_registration_form" type="java.lang.String" getterName="getCase_registration_form" setterName="setCase_registration_form"/>
+      <nullConstructor xmi:id="MethodElement_1186675502592" name="create" parms="java.lang.String java.math.BigDecimal java.lang.String java.lang.String java.lang.String java.lang.String" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Consent"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1186675502592" name="consent_id" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1186675502593" name="policy_id" type="java.math.BigDecimal" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1186675502594" name="ardais_id" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1186675502595" name="imported_yn" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1186675502596" name="ardais_acct_key" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1186675502597" name="case_registration_form" type="java.lang.String" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Consent"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1259853192496" name="ConsentOperation">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749845582"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1259853192497" name="DDCDonor">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749768752"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1259868408632" name="DDCPathology">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749768772"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1034166987130" name="Geolocation" factoryPackageName="com.ardais.bigr.iltds.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1034166987130" name="GeolocationAccessBean" package="com.ardais.bigr.iltds.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034166987130" name="location_zip" type="java.lang.String" getterName="getLocation_zip" setterName="setLocation_zip"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034166987131" name="location_name" type="java.lang.String" getterName="getLocation_name" setterName="setLocation_name"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034166987133" name="location_state" type="java.lang.String" getterName="getLocation_state" setterName="setLocation_state"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034166987134" name="location_city" type="java.lang.String" getterName="getLocation_city" setterName="setLocation_city"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034166987135" name="location_address_2" type="java.lang.String" getterName="getLocation_address_2" setterName="setLocation_address_2"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034166987136" name="location_address_1" type="java.lang.String" getterName="getLocation_address_1" setterName="setLocation_address_1"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034166987137" name="location_phone" type="java.lang.String" getterName="getLocation_phone" setterName="setLocation_phone"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1165868212703" name="location_country" type="java.lang.String" getterName="getLocation_country" setterName="setLocation_country"/>
+      <nullConstructor xmi:id="MethodElement_1034166987130" name="create" parms="com.ardais.bigr.iltds.assistants.LocationManagementAsst" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Geolocation"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1034166987130" name="locAsst" type="com.ardais.bigr.iltds.assistants.LocationManagementAsst" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Geolocation"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1259699411137" name="IcpOperation">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749845632"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1055452168421" name="Incident" factoryPackageName="com.ardais.bigr.lims.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1055452168421" name="IncidentAccessBean" package="com.ardais.bigr.lims.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1055452168421" name="rePVRequestorCode" type="java.lang.String" getterName="getRePVRequestorCode" setterName="setRePVRequestorCode"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1055452168422" name="action" type="java.lang.String" getterName="getAction" setterName="setAction"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1055452168423" name="reason" type="java.lang.String" getterName="getReason" setterName="setReason"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1055452168424" name="comments" type="java.lang.String" getterName="getComments" setterName="setComments"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1055452168425" name="sampleId" type="java.lang.String" getterName="getSampleId" setterName="setSampleId"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1055452168426" name="pathologist" type="java.lang.String" getterName="getPathologist" setterName="setPathologist"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1055452168427" name="slideId" type="java.lang.String" getterName="getSlideId" setterName="setSlideId"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1055452168428" name="consentId" type="java.lang.String" getterName="getConsentId" setterName="setConsentId"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1055452168429" name="createDate" type="java.sql.Timestamp" getterName="getCreateDate" setterName="setCreateDate"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1055452168430" name="actionOther" type="java.lang.String" getterName="getActionOther" setterName="setActionOther"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1055452168431" name="createUser" type="java.lang.String" getterName="getCreateUser" setterName="setCreateUser"/>
+      <nullConstructor xmi:id="MethodElement_1055452168421" name="create" parms="java.lang.String java.lang.String java.sql.Timestamp java.lang.String java.lang.String java.lang.String java.lang.String" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Incident"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1055452168421" name="incidentId" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1055452168422" name="createUser" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1055452168423" name="createDate" type="java.sql.Timestamp" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1055452168424" name="sampleId" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1055452168425" name="consentId" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1055452168426" name="action" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1055452168427" name="reason" type="java.lang.String" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Incident"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1259957955917" name="LimsDataValidator">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#LimsDataValidator"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1260281775556" name="LimsOperation">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#LimsOperation"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1033757930558" name="Lineitem" factoryPackageName="com.ardais.bigr.iltds.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1033757930557" name="LineitemAccessBean" package="com.ardais.bigr.iltds.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930564" name="projectKey" type="com.ardais.bigr.iltds.beans.ProjectKey" getterName="getProjectKey"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930565" name="quantity" type="java.math.BigDecimal" getterName="getQuantity" setterName="setQuantity"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930566" name="comments" type="java.lang.String" getterName="getComments" setterName="setComments"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930567" name="notes" type="java.lang.String" getterName="getNotes" setterName="setNotes"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930568" name="format" type="java.lang.String" getterName="getFormat" setterName="setFormat"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930569" name="lineitemnumber" type="java.math.BigDecimal" getterName="getLineitemnumber" setterName="setLineitemnumber"/>
+      <nullConstructor xmi:id="MethodElement_1033757930557" name="create" parms="java.lang.String java.lang.String java.math.BigDecimal java.math.BigDecimal" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033749429930"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1033757930557" name="argLineitemid" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1033757930558" name="argProjectid" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1033757930559" name="argLineitemnumber" type="java.math.BigDecimal" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1033757930560" name="argQuantity" type="java.math.BigDecimal" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033749429930"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1260281775557" name="ListGenerator">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749845652"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1034166987131" name="Manifest" factoryPackageName="com.ardais.bigr.iltds.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1034166987131" name="ManifestAccessBean" package="com.ardais.bigr.iltds.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034166987138" name="ship_staff_id" type="java.lang.String" getterName="getShip_staff_id" setterName="setShip_staff_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034166987139" name="ship_verify_datetime" type="java.sql.Timestamp" getterName="getShip_verify_datetime" setterName="setShip_verify_datetime"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034166987140" name="receipt_datetime" type="java.sql.Timestamp" getterName="getReceipt_datetime" setterName="setReceipt_datetime"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034166987141" name="receipt_verify_datetime" type="java.sql.Timestamp" getterName="getReceipt_verify_datetime" setterName="setReceipt_verify_datetime"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034166987142" name="shipment_status" type="java.lang.String" getterName="getShipment_status" setterName="setShipment_status"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034166987143" name="ship_datetime" type="java.sql.Timestamp" getterName="getShip_datetime" setterName="setShip_datetime"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034166987144" name="airbill_tracking_number" type="java.lang.String" getterName="getAirbill_tracking_number" setterName="setAirbill_tracking_number"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034166987145" name="mnft_create_staff_id" type="java.lang.String" getterName="getMnft_create_staff_id" setterName="setMnft_create_staff_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034166987146" name="receipt_verify_staff_id" type="java.lang.String" getterName="getReceipt_verify_staff_id" setterName="setReceipt_verify_staff_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034166987147" name="receipt_by_staff_id" type="java.lang.String" getterName="getReceipt_by_staff_id" setterName="setReceipt_by_staff_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034166987148" name="ship_verify_staff_id" type="java.lang.String" getterName="getShip_verify_staff_id" setterName="setShip_verify_staff_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034166987149" name="mnft_create_datetime" type="java.sql.Timestamp" getterName="getMnft_create_datetime" setterName="setMnft_create_datetime"/>
+      <nullConstructor xmi:id="MethodElement_1034166987140" name="create" parms="java.lang.String" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Manifest"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1034166987140" name="manifest_number" type="java.lang.String" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Manifest"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1033757930567" name="Objects" factoryPackageName="com.ardais.bigr.orm.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1033757930567" name="ObjectsAccessBean" package="com.ardais.bigr.orm.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930584" name="create_date" type="java.sql.Timestamp" getterName="getCreate_date" setterName="setCreate_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930585" name="url" type="java.lang.String" getterName="getUrl" setterName="setUrl"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930586" name="update_date" type="java.sql.Timestamp" getterName="getUpdate_date" setterName="setUpdate_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930587" name="updated_by" type="java.lang.String" getterName="getUpdated_by" setterName="setUpdated_by"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930588" name="created_by" type="java.lang.String" getterName="getCreated_by" setterName="setCreated_by"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930589" name="object_description" type="java.lang.String" getterName="getObject_description" setterName="setObject_description"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930590" name="long_description" type="java.lang.String" getterName="getLong_description" setterName="setLong_description"/>
+      <nullConstructor xmi:id="MethodElement_1033757930577" name="create" parms="java.lang.String" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033745432091"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1033757930577" name="argObject_id" type="java.lang.String" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033745432091"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1260286293145" name="Oce">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Oce"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1033757930578" name="Orderline" factoryPackageName="com.ardais.bigr.es.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1033757930577" name="OrderlineAccessBean" package="com.ardais.bigr.es.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930591" name="barcode_id" type="java.lang.String" getterName="getBarcode_id" setterName="setBarcode_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930592" name="order_line_amount" type="java.math.BigDecimal" getterName="getOrder_line_amount" setterName="setOrder_line_amount"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930593" name="consortium_ind" type="java.lang.String" getterName="getConsortium_ind" setterName="setConsortium_ind"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930594" name="ardaisorderKey" type="com.ardais.bigr.es.beans.ArdaisorderKey" getterName="getArdaisorderKey"/>
+      <nullConstructor xmi:id="MethodElement_1033757930578" name="create" parms="java.math.BigDecimal com.ardais.bigr.es.beans.ArdaisorderKey" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216093"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1033757930578" name="argOrder_line_number" type="java.math.BigDecimal" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1033757930579" name="argArdaisorder" type="com.ardais.bigr.es.beans.ArdaisorderKey" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216093"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1047934696007" name="PathologyEvaluation" factoryPackageName="com.ardais.bigr.lims.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1047934696023" name="PathologyEvaluationAccessBean" package="com.ardais.bigr.lims.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696023" name="lesionCells" type="java.lang.Integer" getterName="getLesionCells" setterName="setLesionCells"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696024" name="slideId" type="java.lang.String" getterName="getSlideId" setterName="setSlideId"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696025" name="hypoacellularstromaCells" type="java.lang.Integer" getterName="getHypoacellularstromaCells" setterName="setHypoacellularstromaCells"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696026" name="microscopicAppearance" type="java.lang.String" getterName="getMicroscopicAppearance" setterName="setMicroscopicAppearance"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696027" name="tissueOfFinding" type="java.lang.String" getterName="getTissueOfFinding" setterName="setTissueOfFinding"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696028" name="diagnosis" type="java.lang.String" getterName="getDiagnosis" setterName="setDiagnosis"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696029" name="createDate" type="java.sql.Timestamp" getterName="getCreateDate" setterName="setCreateDate"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696030" name="concatenatedInternalComments" type="java.lang.String" getterName="getConcatenatedInternalComments" setterName="setConcatenatedInternalComments"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696031" name="tissueOfFindingOther" type="java.lang.String" getterName="getTissueOfFindingOther" setterName="setTissueOfFindingOther"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696032" name="tissueOfOrigin" type="java.lang.String" getterName="getTissueOfOrigin" setterName="setTissueOfOrigin"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696033" name="sampleId" type="java.lang.String" getterName="getSampleId" setterName="setSampleId"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696034" name="sourceEvaluationId" type="java.lang.String" getterName="getSourceEvaluationId" setterName="setSourceEvaluationId"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696035" name="diagnosisOther" type="java.lang.String" getterName="getDiagnosisOther" setterName="setDiagnosisOther"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696036" name="pathologist" type="java.lang.String" getterName="getPathologist" setterName="setPathologist"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696037" name="concatenatedExternalComments" type="java.lang.String" getterName="getConcatenatedExternalComments" setterName="setConcatenatedExternalComments"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696038" name="reportedYN" type="java.lang.String" getterName="getReportedYN" setterName="setReportedYN"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696039" name="migratedYN" type="java.lang.String" getterName="getMigratedYN" setterName="setMigratedYN"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696040" name="normalCells" type="java.lang.Integer" getterName="getNormalCells" setterName="setNormalCells"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696041" name="necrosisCells" type="java.lang.Integer" getterName="getNecrosisCells" setterName="setNecrosisCells"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696042" name="cellularstromaCells" type="java.lang.Integer" getterName="getCellularstromaCells" setterName="setCellularstromaCells"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696043" name="tissueOfOriginOther" type="java.lang.String" getterName="getTissueOfOriginOther" setterName="setTissueOfOriginOther"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696044" name="reportedDate" type="java.sql.Timestamp" getterName="getReportedDate" setterName="setReportedDate"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696045" name="createMethod" type="java.lang.String" getterName="getCreateMethod" setterName="setCreateMethod"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1047934696046" name="tumorCells" type="java.lang.Integer" getterName="getTumorCells" setterName="setTumorCells"/>
+      <nullConstructor xmi:id="MethodElement_1047934696023" name="create" parms="java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.Integer java.lang.Integer java.lang.Integer java.lang.Integer java.lang.Integer java.lang.Integer" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#PathologyEvaluation"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1047934696023" name="evaluationId" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1047934696024" name="slideID" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1047934696025" name="sampleId" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1047934696026" name="microscopicAppearance" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1047934696027" name="reportedYN" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1047934696028" name="createMethod" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1047934696029" name="diagnosis" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1047934696030" name="tissueOfOrigin" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1047934696031" name="tissueOfFinding" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1047934696032" name="tumorCells" type="java.lang.Integer" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1047934696033" name="normalCells" type="java.lang.Integer" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1047934696034" name="hypoacellularstromaCells" type="java.lang.Integer" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1047934696035" name="necrosisCells" type="java.lang.Integer" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1047934696036" name="lesionCells" type="java.lang.Integer" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1047934696037" name="cellularstromaCells" type="java.lang.Integer" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#PathologyEvaluation"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1034093123739" name="Project" factoryPackageName="com.ardais.bigr.iltds.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1034093123739" name="ProjectAccessBean" package="com.ardais.bigr.iltds.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034093123739" name="ardaisaccountkey" type="java.lang.String" getterName="getArdaisaccountkey" setterName="setArdaisaccountkey"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034093123740" name="status" type="java.lang.String" getterName="getStatus" setterName="setStatus"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034093123741" name="dateapproved" type="java.sql.Timestamp" getterName="getDateapproved" setterName="setDateapproved"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034093123749" name="dateshipped" type="java.sql.Timestamp" getterName="getDateshipped" setterName="setDateshipped"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034093123750" name="projectId" type="java.lang.String" getterName="getProjectId"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034093123751" name="notes" type="java.lang.String" getterName="getNotes" setterName="setNotes"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034093123752" name="projectname" type="java.lang.String" getterName="getProjectname" setterName="setProjectname"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034093123753" name="daterequested" type="java.sql.Timestamp" getterName="getDaterequested" setterName="setDaterequested"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034093123754" name="ardaisuserid" type="java.lang.String" getterName="getArdaisuserid" setterName="setArdaisuserid"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034093123755" name="percentcomplete" type="java.math.BigDecimal" getterName="getPercentcomplete" setterName="setPercentcomplete"/>
+      <nullConstructor xmi:id="MethodElement_1034093123749" name="create" parms="java.lang.String java.lang.String java.lang.String java.lang.String java.sql.Timestamp" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033749429890"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1034093123749" name="argProjectid" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1034093123750" name="projectName" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1034093123751" name="client" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1034093123752" name="requestedBy" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1034093123753" name="requestDate" type="java.sql.Timestamp" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033749429890"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1033757930607" name="Projectsample" factoryPackageName="com.ardais.bigr.iltds.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1033757930607" name="ProjectsampleAccessBean" package="com.ardais.bigr.iltds.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930637" name="projectKey" type="com.ardais.bigr.iltds.beans.ProjectKey" getterName="getProjectKey"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1033757930638" name="lineitemKey" type="com.ardais.bigr.iltds.beans.LineitemKey" getterName="getLineitemKey"/>
+      <nullConstructor xmi:id="MethodElement_1033757930617" name="create" parms="java.lang.String com.ardais.bigr.iltds.beans.LineitemKey com.ardais.bigr.iltds.beans.ProjectKey" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033749429950"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1033757930617" name="argSamplebarcodeid" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1033757930618" name="argLineitem" type="com.ardais.bigr.iltds.beans.LineitemKey" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1033757930619" name="argProject" type="com.ardais.bigr.iltds.beans.ProjectKey" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033749429950"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1034009234329" name="Revokedconsent" factoryPackageName="com.ardais.bigr.iltds.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1034009234329" name="RevokedconsentAccessBean" package="com.ardais.bigr.iltds.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034009234329" name="revoked_reason" type="java.lang.String" getterName="getRevoked_reason" setterName="setRevoked_reason"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034009234330" name="revoked_by_staff_id" type="java.lang.String" getterName="getRevoked_by_staff_id" setterName="setRevoked_by_staff_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034009234331" name="revoked_timestamp" type="java.sql.Timestamp" getterName="getRevoked_timestamp" setterName="setRevoked_timestamp"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034009234332" name="ardais_id" type="java.lang.String" getterName="getArdais_id" setterName="setArdais_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034009234333" name="consent_id" type="java.lang.String" getterName="getConsent_id" setterName="setConsent_id"/>
+      <nullConstructor xmi:id="MethodElement_1034009234329" name="create" parms="java.lang.String java.lang.String" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Revokedconsent"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1034009234329" name="argConsent_id" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1034009234330" name="argArdais_id" type="java.lang.String" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Revokedconsent"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1127838558569" name="Sample" factoryPackageName="com.ardais.bigr.iltds.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1127838558569" name="SampleAccessBean" package="com.ardais.bigr.iltds.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558569" name="pullYN" type="java.lang.String" getterName="getPullYN" setterName="setPullYN"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558570" name="histoMaxThicknessPfinCid" type="java.lang.String" getterName="getHistoMaxThicknessPfinCid" setterName="setHistoMaxThicknessPfinCid"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558571" name="otherHistoReembedReason" type="java.lang.String" getterName="getOtherHistoReembedReason" setterName="setOtherHistoReembedReason"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558572" name="project_status_date" type="java.sql.Timestamp" getterName="getProject_status_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558573" name="diagnosisCuiBest" type="java.lang.String" getterName="getDiagnosisCuiBest"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558574" name="hoursInFixative" type="java.lang.Integer" getterName="getHoursInFixative" setterName="setHoursInFixative"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558575" name="bufferTypeCui" type="java.lang.String" getterName="getBufferTypeCui" setterName="setBufferTypeCui"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558576" name="diMinThicknessPfinCid" type="java.lang.String" getterName="getDiMinThicknessPfinCid" setterName="setDiMinThicknessPfinCid"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558577" name="project_status" type="java.lang.String" getterName="getProject_status"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558578" name="releasedYN" type="java.lang.String" getterName="getReleasedYN" setterName="setReleasedYN"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558579" name="histoNotes" type="java.lang.String" getterName="getHistoNotes" setterName="setHistoNotes"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558580" name="sales_status_date" type="java.sql.Timestamp" getterName="getSales_status_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558581" name="formatDetailCid" type="java.lang.String" getterName="getFormatDetailCid" setterName="setFormatDetailCid"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558582" name="qc_verified_date" type="java.sql.Timestamp" getterName="getQc_verified_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558583" name="collection_datetime" type="java.sql.Timestamp" getterName="getCollection_datetime" setterName="setCollection_datetime"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558584" name="receiptDate" type="java.sql.Timestamp" getterName="getReceiptDate" setterName="setReceiptDate"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558585" name="otherParaffinFeature" type="java.lang.String" getterName="getOtherParaffinFeature" setterName="setOtherParaffinFeature"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558586" name="pullDate" type="java.sql.Timestamp" getterName="getPullDate" setterName="setPullDate"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558587" name="sales_status" type="java.lang.String" getterName="getSales_status"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558588" name="sampleSizeMeetsSpecs" type="java.lang.String" getterName="getSampleSizeMeetsSpecs" setterName="setSampleSizeMeetsSpecs"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558589" name="diMaxThicknessPfinCid" type="java.lang.String" getterName="getDiMaxThicknessPfinCid" setterName="setDiMaxThicknessPfinCid"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558590" name="pullReason" type="java.lang.String" getterName="getPullReason" setterName="setPullReason"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558591" name="tissueOriginCid" type="java.lang.String" getterName="getTissueOriginCid"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558592" name="preservation_datetime" type="java.sql.Timestamp" getterName="getPreservation_datetime" setterName="setPreservation_datetime"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558593" name="qc_status_date" type="java.sql.Timestamp" getterName="getQc_status_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558594" name="qcpostedYN" type="java.lang.String" getterName="getQcpostedYN" setterName="setQcpostedYN"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558595" name="consentId" type="java.lang.String" getterName="getConsentId"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558596" name="tissueOriginOther" type="java.lang.String" getterName="getTissueOriginOther"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558597" name="sampleboxKey" type="com.ardais.bigr.iltds.beans.SampleboxKey" getterName="getSampleboxKey"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558598" name="preservation_datetime_dpc" type="java.lang.String" getterName="getPreservation_datetime_dpc" setterName="setPreservation_datetime_dpc"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558599" name="volume" type="java.math.BigDecimal" getterName="getVolume" setterName="setVolume"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558600" name="inv_status_date" type="java.sql.Timestamp" getterName="getInv_status_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558601" name="subdivision_date" type="java.sql.Timestamp" getterName="getSubdivision_date" setterName="setSubdivision_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558602" name="asm_position" type="java.lang.String" getterName="getAsm_position" setterName="setAsm_position"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558603" name="sampleTypeCid" type="java.lang.String" getterName="getSampleTypeCid" setterName="setSampleTypeCid"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558605" name="qc_status" type="java.lang.String" getterName="getQc_status"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558606" name="bms_sample" type="java.lang.String" getterName="getBms_sample"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558607" name="inv_status" type="java.lang.String" getterName="getInv_status"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558608" name="sectionCount" type="java.lang.Integer" getterName="getSectionCount"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558609" name="tissueFindingOther" type="java.lang.String" getterName="getTissueFindingOther"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558610" name="customerId" type="java.lang.String" getterName="getCustomerId" setterName="setCustomerId"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558611" name="cell_ref_location" type="java.lang.String" getterName="getCell_ref_location" setterName="setCell_ref_location"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558612" name="bufferTypeOther" type="java.lang.String" getterName="getBufferTypeOther" setterName="setBufferTypeOther"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558613" name="orphan_datetime" type="java.sql.Timestamp" getterName="getOrphan_datetime" setterName="setOrphan_datetime"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558615" name="importedYN" type="java.lang.String" getterName="getImportedYN" setterName="setImportedYN"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558616" name="cellsPerMl" type="java.math.BigDecimal" getterName="getCellsPerMl" setterName="setCellsPerMl"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558617" name="totalNumOfCells" type="java.math.BigDecimal" getterName="getTotalNumOfCells" setterName="setTotalNumOfCells"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558618" name="diagnosisOtherBest" type="java.lang.String" getterName="getDiagnosisOtherBest"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558619" name="allocation_ind" type="java.lang.String" getterName="getAllocation_ind" setterName="setAllocation_ind"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558620" name="tissueFindingCid" type="java.lang.String" getterName="getTissueFindingCid"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558621" name="discordantYN" type="java.lang.String" getterName="getDiscordantYN" setterName="setDiscordantYN"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558622" name="lastknownlocationid" type="java.lang.String" getterName="getLastknownlocationid" setterName="setLastknownlocationid"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558623" name="type_of_fixative" type="java.lang.String" getterName="getType_of_fixative" setterName="setType_of_fixative"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558624" name="born_date" type="java.sql.Timestamp" getterName="getBorn_date" setterName="setBorn_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558625" name="collection_datetime_dpc" type="java.lang.String" getterName="getCollection_datetime_dpc" setterName="setCollection_datetime_dpc"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558626" name="totalNumOfCellsExRepCui" type="java.lang.String" getterName="getTotalNumOfCellsExRepCui" setterName="setTotalNumOfCellsExRepCui"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558627" name="parent_barcode_id" type="java.lang.String" getterName="getParent_barcode_id" setterName="setParent_barcode_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558628" name="paraffinFeatureCid" type="java.lang.String" getterName="getParaffinFeatureCid" setterName="setParaffinFeatureCid"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558629" name="histoWidthAcrossPfinCid" type="java.lang.String" getterName="getHistoWidthAcrossPfinCid" setterName="setHistoWidthAcrossPfinCid"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558630" name="asm_asm_id" type="java.lang.String" getterName="getAsm_asm_id" setterName="setAsm_asm_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558631" name="diWidthAcrossPfinCid" type="java.lang.String" getterName="getDiWidthAcrossPfinCid" setterName="setDiWidthAcrossPfinCid"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558632" name="samplebox_box_barcode_id" type="java.lang.String" getterName="getSamplebox_box_barcode_id" setterName="setSamplebox_box_barcode_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558633" name="asm_note" type="java.lang.String" getterName="getAsm_note" setterName="setAsm_note"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558634" name="appearanceBest" type="java.lang.String" getterName="getAppearanceBest"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558635" name="asmKey" type="com.ardais.bigr.iltds.beans.AsmKey" getterName="getAsmKey"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558636" name="histoMinThicknessPfinCid" type="java.lang.String" getterName="getHistoMinThicknessPfinCid" setterName="setHistoMinThicknessPfinCid"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558637" name="histoReembedReasonCid" type="java.lang.String" getterName="getHistoReembedReasonCid" setterName="setHistoReembedReasonCid"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558638" name="barcode_scan_datetime" type="java.sql.Timestamp" getterName="getBarcode_scan_datetime" setterName="setBarcode_scan_datetime"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558639" name="ardais_acct_key" type="java.lang.String" getterName="getArdais_acct_key" setterName="setArdais_acct_key"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558640" name="histoSubdividable" type="java.lang.String" getterName="getHistoSubdividable" setterName="setHistoSubdividable"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558641" name="ardaisId" type="java.lang.String" getterName="getArdaisId"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127838558642" name="qc_verified" type="java.lang.String" getterName="getQc_verified"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1127929834774" name="percentViability" type="java.lang.Integer" getterName="getPercentViability" setterName="setPercentViability"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1143731553771" name="source" type="java.lang.String" getterName="getSource" setterName="setSource"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1150206567152" name="yield" type="java.math.BigDecimal" getterName="getYield" setterName="setYield"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1150206567153" name="concentration" type="java.math.BigDecimal" getterName="getConcentration" setterName="setConcentration"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1181067215431" name="volumeUnitCui" type="java.lang.String" getterName="getVolumeUnitCui" setterName="setVolumeUnitCui"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1181162415356" name="weightInMg" type="java.math.BigDecimal" getterName="getWeightInMg" setterName="setWeightInMg"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1181162415357" name="weight" type="java.math.BigDecimal" getterName="getWeight" setterName="setWeight"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1181162415358" name="volumeInUl" type="java.math.BigDecimal" getterName="getVolumeInUl" setterName="setVolumeInUl"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1181162415359" name="weightUnitCui" type="java.lang.String" getterName="getWeightUnitCui" setterName="setWeightUnitCui"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1182189885843" name="sampleRegistrationForm" type="java.lang.String" getterName="getSampleRegistrationForm" setterName="setSampleRegistrationForm"/>
+      <nullConstructor xmi:id="MethodElement_1128373510175" name="create" parms="java.lang.String java.lang.String java.lang.String" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Sample"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1128373510175" name="sample_barcode_id" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1128373510176" name="importedYN" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1128373510177" name="sampleTypeCid" type="java.lang.String" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Sample"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1119546018736" name="Samplebox" factoryPackageName="com.ardais.bigr.iltds.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1119546018736" name="SampleboxAccessBean" package="com.ardais.bigr.iltds.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119546018736" name="manifestKey" type="com.ardais.bigr.iltds.beans.ManifestKey" getterName="getManifestKey"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119546018737" name="boxLayoutId" type="java.lang.String" getterName="getBoxLayoutId" setterName="setBoxLayoutId"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119546018738" name="storageTypeCid" type="java.lang.String" getterName="getStorageTypeCid" setterName="setStorageTypeCid"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119546018739" name="box_check_out_reason" type="java.lang.String" getterName="getBox_check_out_reason" setterName="setBox_check_out_reason"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119546018740" name="box_status" type="java.lang.String" getterName="getBox_status" setterName="setBox_status"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119546018741" name="box_checkout_request_staff_id" type="java.lang.String" getterName="getBox_checkout_request_staff_id" setterName="setBox_checkout_request_staff_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119546018742" name="manifest_order" type="java.math.BigDecimal" getterName="getManifest_order" setterName="setManifest_order"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119546018743" name="box_check_in_date" type="java.sql.Timestamp" getterName="getBox_check_in_date" setterName="setBox_check_in_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119546018744" name="box_note" type="java.lang.String" getterName="getBox_note" setterName="setBox_note"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1119546018745" name="box_check_out_date" type="java.sql.Timestamp" getterName="getBox_check_out_date" setterName="setBox_check_out_date"/>
+      <nullConstructor xmi:id="MethodElement_1119546018736" name="create" parms="java.lang.String" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Samplebox"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1119546018736" name="box_barcode_id" type="java.lang.String" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Samplebox"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1035221312174" name="Samplestatus" factoryPackageName="com.ardais.bigr.iltds.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1035221312174" name="SamplestatusAccessBean" package="com.ardais.bigr.iltds.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1035221312174" name="status_type_code" type="java.lang.String" getterName="getStatus_type_code" setterName="setStatus_type_code"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1035221312175" name="sampleKey" type="com.ardais.bigr.iltds.beans.SampleKey" getterName="getSampleKey"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1035221312176" name="sample_status_datetime" type="java.sql.Timestamp" getterName="getSample_status_datetime" setterName="setSample_status_datetime"/>
+      <nullConstructor xmi:id="MethodElement_1035221312174" name="create" parms="java.lang.String com.ardais.bigr.iltds.beans.SampleKey java.sql.Timestamp" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Samplestatus"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1035221312174" name="argStatus_type_code" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1035221312175" name="argSample" type="com.ardais.bigr.iltds.beans.SampleKey" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1035221312176" name="argSample_status_datetime" type="java.sql.Timestamp" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Samplestatus"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1034020214749" name="SequenceGen">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749845752"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1034020214759" name="SequenceGen_1">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033749963522"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1260281775572" name="SequenceGenerator">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#SequenceGenerator"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1034369496961" name="Shoppingcart" factoryPackageName="com.ardais.bigr.es.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1034369496961" name="ShoppingcartAccessBean" package="com.ardais.bigr.es.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034369496961" name="cart_create_date" type="java.sql.Timestamp" getterName="getCart_create_date" setterName="setCart_create_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034369496962" name="last_update_dt" type="java.sql.Timestamp" getterName="getLast_update_dt" setterName="setLast_update_dt"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1034369496963" name="ardaisuserKey" type="com.ardais.bigr.es.beans.ArdaisuserKey" getterName="getArdaisuserKey"/>
+      <nullConstructor xmi:id="MethodElement_1057783021700" name="create" parms="java.math.BigDecimal java.lang.String java.lang.String" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Shoppingcart"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1034369496961" name="shopping_cart_id" type="java.math.BigDecimal" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1034369496962" name="userId" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1057783021700" name="acctId" type="java.lang.String" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Shoppingcart"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1058306427318" name="Shoppingcartdetail" factoryPackageName="com.ardais.bigr.es.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1058306427318" name="ShoppingcartdetailAccessBean" package="com.ardais.bigr.es.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1058306427318" name="barcode_id" type="java.lang.String" getterName="getBarcode_id" setterName="setBarcode_id"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1058306427319" name="quantity" type="java.lang.Integer" getterName="getQuantity" setterName="setQuantity"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1058306427320" name="shoppingcartKey" type="com.ardais.bigr.es.beans.ShoppingcartKey" getterName="getShoppingcartKey"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1058306427322" name="productType" type="java.lang.String" getterName="getProductType" setterName="setProductType"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1058306427323" name="shopping_cart_line_amount" type="java.math.BigDecimal" getterName="getShopping_cart_line_amount" setterName="setShopping_cart_line_amount"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1058306427324" name="creation_dt" type="java.sql.Timestamp" getterName="getCreation_dt" setterName="setCreation_dt"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1058306427325" name="search_desc" type="java.lang.String" getterName="getSearch_desc" setterName="setSearch_desc"/>
+      <nullConstructor xmi:id="MethodElement_1058306427318" name="create" parms="java.lang.String java.lang.String java.math.BigDecimal java.lang.String java.lang.String java.math.BigDecimal" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Shoppingcartdetail"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1058306427318" name="barcode_id" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1058306427319" name="productType" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1058306427320" name="shopping_cart_line_number" type="java.math.BigDecimal" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1058306427321" name="userId" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1058306427322" name="acctId" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1058306427323" name="cartNo" type="java.math.BigDecimal" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Shoppingcartdetail"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1055447123452" name="Slide" factoryPackageName="com.ardais.bigr.lims.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1055447123468" name="SlideAccessBean" package="com.ardais.bigr.lims.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1055447123468" name="sectionLevel" type="int" getterName="getSectionLevel" setterName="setSectionLevel"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1055447123469" name="destroyDate" type="java.sql.Timestamp" getterName="getDestroyDate" setterName="setDestroyDate"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1055447123470" name="sampleBarcodeId" type="java.lang.String" getterName="getSampleBarcodeId" setterName="setSampleBarcodeId"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1055447123471" name="currentLocation" type="java.lang.String" getterName="getCurrentLocation" setterName="setCurrentLocation"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1055447123472" name="sectionNumber" type="int" getterName="getSectionNumber" setterName="setSectionNumber"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1055447123473" name="createDate" type="java.sql.Timestamp" getterName="getCreateDate" setterName="setCreateDate"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1055447123474" name="sectionProc" type="java.lang.String" getterName="getSectionProc" setterName="setSectionProc"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1055447123475" name="createUser" type="java.lang.String" getterName="getCreateUser" setterName="setCreateUser"/>
+      <nullConstructor xmi:id="MethodElement_1055447123468" name="create" parms="java.lang.String java.sql.Timestamp java.lang.String java.lang.String" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Slide"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1055447123468" name="slideId" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1055447123469" name="createDate" type="java.sql.Timestamp" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1055447123470" name="sampleBarcodeId" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1055447123471" name="createUser" type="java.lang.String" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Slide"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1259699411153" name="UserProf">
+    <enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#Session_1033750034474"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1034020214770" name="Useraccessmodule" factoryPackageName="com.ardais.bigr.orm.beans">
+    <accessBeans xmi:type="accessbean:Type2AccessBean" xmi:id="Type2AccessBean_1147447196669" name="UseraccessmoduleAccessBean" package="com.ardais.bigr.orm.beans" version="WSAD-1.0">
+      <copyHelperProperties xmi:id="CopyHelperProperty_1147447196669" name="create_date" type="java.sql.Timestamp" getterName="getCreate_date" setterName="setCreate_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1147447196670" name="update_date" type="java.sql.Timestamp" getterName="getUpdate_date" setterName="setUpdate_date"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1147447196671" name="updated_by" type="java.lang.String" getterName="getUpdated_by" setterName="setUpdated_by"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1147447196672" name="order_view" type="java.lang.String" getterName="getOrder_view" setterName="setOrder_view"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1147447196673" name="created_by" type="java.lang.String" getterName="getCreated_by" setterName="setCreated_by"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1147447196674" name="order_maintain" type="java.lang.String" getterName="getOrder_maintain" setterName="setOrder_maintain"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1147447196675" name="description" type="java.lang.String" getterName="getDescription" setterName="setDescription"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1147447196676" name="objectsKey" type="com.ardais.bigr.orm.beans.ObjectsKey" getterName="getObjectsKey"/>
+      <copyHelperProperties xmi:id="CopyHelperProperty_1147447196677" name="new_order_creation" type="java.lang.String" getterName="getNew_order_creation" setterName="setNew_order_creation"/>
+      <nullConstructor xmi:id="MethodElement_1147447196669" name="create" parms="java.lang.String java.lang.String com.ardais.bigr.orm.beans.ObjectsKey java.lang.String java.sql.Timestamp java.lang.String java.sql.Timestamp" type="Home">
+        <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033745432111"/>
+      </nullConstructor>
+      <nullConstructorParameters xmi:id="Parameter_1147447196669" name="argArdais_acct_key" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1147447196670" name="argArdais_user_id" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1147447196671" name="argObjects" type="com.ardais.bigr.orm.beans.ObjectsKey" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1147447196672" name="argCreated_by" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1147447196673" name="argCreate_date" type="java.sql.Timestamp" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1147447196674" name="argUpdated_by" type="java.lang.String" isFieldFromKey="false"/>
+      <nullConstructorParameters xmi:id="Parameter_1147447196675" name="argUpdate_date" type="java.sql.Timestamp" isFieldFromKey="false"/>
+    </accessBeans>
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033745432111"/>
+  </accessbean:EJBShadow>
+  <accessbean:EJBShadow xmi:id="EJBShadow_1034020214773" name="Workorder">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033749429910"/>
+  </accessbean:EJBShadow>
+</xmi:XMI>

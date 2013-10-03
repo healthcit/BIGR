@@ -1,0 +1,1991 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 1.1//EN" "http://java.sun.com/j2ee/dtds/ejb-jar_1_1.dtd">
+   <ejb-jar id="ejb-jar_ID">
+      <display-name>BIGREjb</display-name>
+      <enterprise-beans>
+         <entity id="Ardaisstaff">
+            <ejb-name>Ardaisstaff</ejb-name>
+            <home>com.ardais.bigr.iltds.beans.ArdaisstaffHome</home>
+            <remote>com.ardais.bigr.iltds.beans.Ardaisstaff</remote>
+            <ejb-class>com.ardais.bigr.iltds.beans.ArdaisstaffBean</ejb-class>
+            <persistence-type>Container</persistence-type>
+            <prim-key-class>com.ardais.bigr.iltds.beans.ArdaisstaffKey</prim-key-class>
+            <reentrant>False</reentrant>
+            <cmp-field id="Ardaisstaff_ardais_staff_id">
+               <field-name>ardais_staff_id</field-name>
+            </cmp-field>
+            <cmp-field id="Ardaisstaff_ardais_acct_key">
+               <field-name>ardais_acct_key</field-name>
+            </cmp-field>
+            <cmp-field id="Ardaisstaff_ardais_staff_fname">
+               <field-name>ardais_staff_fname</field-name>
+            </cmp-field>
+            <cmp-field id="Ardaisstaff_ardais_staff_lname">
+               <field-name>ardais_staff_lname</field-name>
+            </cmp-field>
+            <cmp-field id="Ardaisstaff_ardais_user_id">
+               <field-name>ardais_user_id</field-name>
+            </cmp-field>
+            <cmp-field id="Ardaisstaff_geolocation_location_address_id">
+               <field-name>geolocation_location_address_id</field-name>
+            </cmp-field>
+            <env-entry id="EnvEntry_1">
+               <env-entry-name>ejb10-properties/Geolocation</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Geolocation</env-entry-value>
+            </env-entry>
+         </entity>
+         <entity id="Asm">
+            <ejb-name>Asm</ejb-name>
+            <home>com.ardais.bigr.iltds.beans.AsmHome</home>
+            <remote>com.ardais.bigr.iltds.beans.Asm</remote>
+            <ejb-class>com.ardais.bigr.iltds.beans.AsmBean</ejb-class>
+            <persistence-type>Container</persistence-type>
+            <prim-key-class>com.ardais.bigr.iltds.beans.AsmKey</prim-key-class>
+            <reentrant>False</reentrant>
+            <cmp-field id="Asm_asm_id">
+               <field-name>asm_id</field-name>
+            </cmp-field>
+            <cmp-field id="Asm_specimen_type">
+               <field-name>specimen_type</field-name>
+            </cmp-field>
+            <cmp-field id="Asm_organ_site_concept_id">
+               <field-name>organ_site_concept_id</field-name>
+            </cmp-field>
+            <cmp-field id="Asm_asm_entry_date">
+               <field-name>asm_entry_date</field-name>
+            </cmp-field>
+            <cmp-field id="Asm_organ_site_concept_id_other">
+               <field-name>organ_site_concept_id_other</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1034110177752">
+            	<field-name>asm_form_id</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1034110173015">
+            	<field-name>consent_id</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1034110264727">
+            	<field-name>ardais_id</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1043241666030">
+            	<field-name>pfin_meets_specs</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1043241670936">
+            	<field-name>module_weight</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1043241676045">
+            	<field-name>module_comments</field-name>
+            </cmp-field>
+            <env-entry id="EnvEntry_2">
+               <env-entry-name>ejb10-properties/Asmform</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Asmform</env-entry-value>
+            </env-entry>
+            <env-entry id="EnvEntry_3">
+               <env-entry-name>ejb10-properties/Sample</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Sample</env-entry-value>
+            </env-entry>
+         </entity>
+         <entity id="Asmform">
+            <ejb-name>Asmform</ejb-name>
+            <home>com.ardais.bigr.iltds.beans.AsmformHome</home>
+            <remote>com.ardais.bigr.iltds.beans.Asmform</remote>
+            <ejb-class>com.ardais.bigr.iltds.beans.AsmformBean</ejb-class>
+            <persistence-type>Container</persistence-type>
+            <prim-key-class>com.ardais.bigr.iltds.beans.AsmformKey</prim-key-class>
+            <reentrant>False</reentrant>
+            <cmp-field id="Asmform_ardais_staff_id">
+               <field-name>ardais_staff_id</field-name>
+            </cmp-field>
+            <cmp-field id="Asmform_grossing_date">
+               <field-name>grossing_date</field-name>
+            </cmp-field>
+            <cmp-field id="Asmform_link_staff_id">
+               <field-name>link_staff_id</field-name>
+            </cmp-field>
+            <cmp-field id="Asmform_surgical_specimen_id_other">
+               <field-name>surgical_specimen_id_other</field-name>
+            </cmp-field>
+            <cmp-field id="Asmform_surgical_specimen_id">
+               <field-name>surgical_specimen_id</field-name>
+            </cmp-field>
+            <cmp-field id="Asmform_creation_time">
+               <field-name>creation_time</field-name>
+            </cmp-field>
+            <cmp-field id="Asmform_asm_form_id">
+               <field-name>asm_form_id</field-name>
+            </cmp-field>
+            <cmp-field id="Asmform_removal_date">
+               <field-name>removal_date</field-name>
+            </cmp-field>
+            <cmp-field id="Asmform_consent_consent_id">
+               <field-name>consent_consent_id</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1035209971171">
+            	<field-name>ardais_id</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1040650252200">
+            	<field-name>acc_surgical_removal_time</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1073932146879">
+            	<field-name>procedure_date</field-name>
+            </cmp-field>
+            <env-entry id="EnvEntry_4">
+               <env-entry-name>ejb10-properties/Asm</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Asm</env-entry-value>
+            </env-entry>
+            <env-entry id="EnvEntry_5">
+               <env-entry-name>ejb10-properties/Consent</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Consent</env-entry-value>
+            </env-entry>
+         </entity>
+         <entity id="Boxlocation">
+            <ejb-name>Boxlocation</ejb-name>
+            <home>com.ardais.bigr.iltds.beans.BoxlocationHome</home>
+            <remote>com.ardais.bigr.iltds.beans.Boxlocation</remote>
+            <ejb-class>com.ardais.bigr.iltds.beans.BoxlocationBean</ejb-class>
+            <persistence-type>Container</persistence-type>
+            <prim-key-class>com.ardais.bigr.iltds.beans.BoxlocationKey</prim-key-class>
+            <reentrant>False</reentrant>
+            <cmp-field id="Boxlocation_drawer_id">
+               <field-name>drawer_id</field-name>
+            </cmp-field>
+            <cmp-field id="Boxlocation_available_ind">
+               <field-name>available_ind</field-name>
+            </cmp-field>
+            <cmp-field id="Boxlocation_room_id">
+               <field-name>room_id</field-name>
+            </cmp-field>
+            <cmp-field id="Boxlocation_location_status">
+               <field-name>location_status</field-name>
+            </cmp-field>
+            <cmp-field id="Boxlocation_slot_id">
+               <field-name>slot_id</field-name>
+            </cmp-field>
+            <cmp-field id="Boxlocation_geolocation_location_address_id">
+               <field-name>geolocation_location_address_id</field-name>
+            </cmp-field>
+            <cmp-field id="Boxlocation_samplebox_box_barcode_id">
+               <field-name>samplebox_box_barcode_id</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1118262513861">
+            	<field-name>unitName</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1118325101844">
+            	<field-name>storageTypeCid</field-name>
+            </cmp-field>
+            <env-entry id="EnvEntry_6">
+               <env-entry-name>ejb10-properties/Geolocation</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Geolocation</env-entry-value>
+            </env-entry>
+            <env-entry id="EnvEntry_7">
+               <env-entry-name>ejb10-properties/Samplebox</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Samplebox</env-entry-value>
+            </env-entry>
+         </entity>
+         <entity id="Consent">
+            <ejb-name>Consent</ejb-name>
+            <home>com.ardais.bigr.iltds.beans.ConsentHome</home>
+            <remote>com.ardais.bigr.iltds.beans.Consent</remote>
+            <ejb-class>com.ardais.bigr.iltds.beans.ConsentBean</ejb-class>
+            <persistence-type>Container</persistence-type>
+            <prim-key-class>com.ardais.bigr.iltds.beans.ConsentKey</prim-key-class>
+            <reentrant>False</reentrant>
+            <cmp-field id="Consent_consent_release_staff_id">
+               <field-name>consent_release_staff_id</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_consent_datetime">
+               <field-name>consent_datetime</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_disease_concept_id_other">
+               <field-name>disease_concept_id_other</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_consent_pull_comment">
+               <field-name>consent_pull_comment</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_consent_pull_request_by">
+               <field-name>consent_pull_request_by</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_form_entry_staff_id">
+               <field-name>form_entry_staff_id</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_form_signed_ind">
+               <field-name>form_signed_ind</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_ardais_staff_id">
+               <field-name>ardais_staff_id</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_consent_version_num">
+               <field-name>consent_version_num</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_consent_release_datetime">
+               <field-name>consent_release_datetime</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_form_verified_by_staff_id">
+               <field-name>form_verified_by_staff_id</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_form_verified_datetime">
+               <field-name>form_verified_datetime</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_consent_id">
+               <field-name>consent_id</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_consent_pull_staff_id">
+               <field-name>consent_pull_staff_id</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_form_verified_sign_ind">
+               <field-name>form_verified_sign_ind</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_consent_pull_reason_cd">
+               <field-name>consent_pull_reason_cd</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_bankable_ind">
+               <field-name>bankable_ind</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_consent_pull_datetime">
+               <field-name>consent_pull_datetime</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_form_entry_datetime">
+               <field-name>form_entry_datetime</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_disease_concept_id">
+               <field-name>disease_concept_id</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_linked">
+               <field-name>linked</field-name>
+            </cmp-field>
+            <cmp-field id="Consent_geolocation_location_address_id">
+               <field-name>geolocation_location_address_id</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1035212960628">
+            	<field-name>ardais_id</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1071166828342">
+            	<field-name>policy_id</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1071166833436">
+            	<field-name>consent_version_id</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1081353260999">
+            	<field-name>comments</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1081353267827">
+            	<field-name>blood_sample_yn</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1081353277467">
+            	<field-name>additional_needle_stick_yn</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1081353282686">
+            	<field-name>future_contact_yn</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1104338843856">
+            	<field-name>imported_yn</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1104338866121">
+            	<field-name>customer_id</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1104338875637">
+            	<field-name>ardais_acct_key</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1119275461859">
+            	<field-name>psa</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1119275466640">
+            	<field-name>dre_cid</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1119275471234">
+            	<field-name>clinical_finding_notes</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1182189599838">
+            	<field-name>case_registration_form</field-name>
+            </cmp-field>
+            <env-entry id="EnvEntry_8">
+               <env-entry-name>ejb10-properties/Geolocation</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Geolocation</env-entry-value>
+            </env-entry>
+            <env-entry id="EnvEntry_9">
+               <env-entry-name>ejb10-properties/Asmform</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Asmform</env-entry-value>
+            </env-entry>
+         </entity>
+        <entity id="Geolocation">
+            <ejb-name>Geolocation</ejb-name>
+            <home>com.ardais.bigr.iltds.beans.GeolocationHome</home>
+            <remote>com.ardais.bigr.iltds.beans.Geolocation</remote>
+            <ejb-class>com.ardais.bigr.iltds.beans.GeolocationBean</ejb-class>
+            <persistence-type>Container</persistence-type>
+            <prim-key-class>com.ardais.bigr.iltds.beans.GeolocationKey</prim-key-class>
+            <reentrant>False</reentrant>
+            <cmp-field id="Geolocation_location_zip">
+               <field-name>location_zip</field-name>
+            </cmp-field>
+            <cmp-field id="Geolocation_location_address_id">
+               <field-name>location_address_id</field-name>
+            </cmp-field>
+            <cmp-field id="Geolocation_location_city">
+               <field-name>location_city</field-name>
+            </cmp-field>
+            <cmp-field id="Geolocation_location_address_1">
+               <field-name>location_address_1</field-name>
+            </cmp-field>
+            <cmp-field id="Geolocation_location_state">
+               <field-name>location_state</field-name>
+            </cmp-field>
+            <cmp-field id="Geolocation_location_name">
+               <field-name>location_name</field-name>
+            </cmp-field>
+            <cmp-field id="Geolocation_location_address_2">
+               <field-name>location_address_2</field-name>
+            </cmp-field>
+            <cmp-field id="Geolocation_location_phone">
+               <field-name>location_phone</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1165868021533">
+            	<field-name>location_country</field-name>
+            </cmp-field>
+            <env-entry id="EnvEntry_10">
+               <env-entry-name>ejb10-properties/Consent</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Consent</env-entry-value>
+            </env-entry>
+            <env-entry id="EnvEntry_11">
+               <env-entry-name>ejb10-properties/Ardaisstaff</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Ardaisstaff</env-entry-value>
+            </env-entry>
+            <env-entry id="EnvEntry_12">
+               <env-entry-name>ejb10-properties/Boxlocation</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Boxlocation</env-entry-value>
+            </env-entry>
+            <env-entry id="EnvEntry_13">
+               <env-entry-name>ejb10-properties/Manifest</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Manifest</env-entry-value>
+            </env-entry>
+         </entity>
+         <entity id="Manifest">
+            <ejb-name>Manifest</ejb-name>
+            <home>com.ardais.bigr.iltds.beans.ManifestHome</home>
+            <remote>com.ardais.bigr.iltds.beans.Manifest</remote>
+            <ejb-class>com.ardais.bigr.iltds.beans.ManifestBean</ejb-class>
+            <persistence-type>Container</persistence-type>
+            <prim-key-class>com.ardais.bigr.iltds.beans.ManifestKey</prim-key-class>
+            <reentrant>False</reentrant>
+            <cmp-field id="Manifest_ship_datetime">
+               <field-name>ship_datetime</field-name>
+            </cmp-field>
+            <cmp-field id="Manifest_ship_staff_id">
+               <field-name>ship_staff_id</field-name>
+            </cmp-field>
+            <cmp-field id="Manifest_receipt_by_staff_id">
+               <field-name>receipt_by_staff_id</field-name>
+            </cmp-field>
+            <cmp-field id="Manifest_receipt_verify_datetime">
+               <field-name>receipt_verify_datetime</field-name>
+            </cmp-field>
+            <cmp-field id="Manifest_ship_verify_datetime">
+               <field-name>ship_verify_datetime</field-name>
+            </cmp-field>
+            <cmp-field id="Manifest_airbill_tracking_number">
+               <field-name>airbill_tracking_number</field-name>
+            </cmp-field>
+            <cmp-field id="Manifest_mnft_create_staff_id">
+               <field-name>mnft_create_staff_id</field-name>
+            </cmp-field>
+            <cmp-field id="Manifest_manifest_number">
+               <field-name>manifest_number</field-name>
+            </cmp-field>
+            <cmp-field id="Manifest_ship_verify_staff_id">
+               <field-name>ship_verify_staff_id</field-name>
+            </cmp-field>
+            <cmp-field id="Manifest_receipt_verify_staff_id">
+               <field-name>receipt_verify_staff_id</field-name>
+            </cmp-field>
+            <cmp-field id="Manifest_shipment_status">
+               <field-name>shipment_status</field-name>
+            </cmp-field>
+            <cmp-field id="Manifest_receipt_datetime">
+               <field-name>receipt_datetime</field-name>
+            </cmp-field>
+            <cmp-field id="Manifest_mnft_create_datetime">
+               <field-name>mnft_create_datetime</field-name>
+            </cmp-field>
+            <env-entry id="EnvEntry_14">
+               <env-entry-name>ejb10-properties/Geolocation</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Geolocation</env-entry-value>
+            </env-entry>
+            <env-entry id="EnvEntry_15">
+               <env-entry-name>ejb10-properties/Samplebox</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Samplebox</env-entry-value>
+            </env-entry>
+         </entity>
+         <entity id="Revokedconsent">
+            <ejb-name>Revokedconsent</ejb-name>
+            <home>com.ardais.bigr.iltds.beans.RevokedconsentHome</home>
+            <remote>com.ardais.bigr.iltds.beans.Revokedconsent</remote>
+            <ejb-class>com.ardais.bigr.iltds.beans.RevokedconsentBean</ejb-class>
+            <persistence-type>Container</persistence-type>
+            <prim-key-class>com.ardais.bigr.iltds.beans.RevokedconsentKey</prim-key-class>
+            <reentrant>False</reentrant>
+            <cmp-field id="Revokedconsent_revoked_timestamp">
+               <field-name>revoked_timestamp</field-name>
+            </cmp-field>
+            <cmp-field id="Revokedconsent_ardais_id">
+               <field-name>ardais_id</field-name>
+            </cmp-field>
+            <cmp-field id="Revokedconsent_revoked_reason">
+               <field-name>revoked_reason</field-name>
+            </cmp-field>
+            <cmp-field id="Revokedconsent_revoked_by_staff_id">
+               <field-name>revoked_by_staff_id</field-name>
+            </cmp-field>
+            <cmp-field id="Revokedconsent_consent_id">
+               <field-name>consent_id</field-name>
+            </cmp-field>
+         </entity>
+         <entity id="Sample">
+            <ejb-name>Sample</ejb-name>
+            <home>com.ardais.bigr.iltds.beans.SampleHome</home>
+            <remote>com.ardais.bigr.iltds.beans.Sample</remote>
+            <ejb-class>com.ardais.bigr.iltds.beans.SampleBean</ejb-class>
+            <persistence-type>Container</persistence-type>
+            <prim-key-class>com.ardais.bigr.iltds.beans.SampleKey</prim-key-class>
+            <reentrant>False</reentrant>
+            <cmp-field id="Sample_subdivision_date">
+               <field-name>subdivision_date</field-name>
+            </cmp-field>
+            <cmp-field id="Sample_asm_note">
+               <field-name>asm_note</field-name>
+            </cmp-field>
+            <cmp-field id="Sample_type_of_fixative">
+               <field-name>type_of_fixative</field-name>
+            </cmp-field>
+            <cmp-field id="Sample_orphan_datetime">
+               <field-name>orphan_datetime</field-name>
+            </cmp-field>
+            <cmp-field id="Sample_parent_barcode_id">
+               <field-name>parent_barcode_id</field-name>
+            </cmp-field>
+            <cmp-field id="Sample_ardais_acct_key">
+               <field-name>ardais_acct_key</field-name>
+            </cmp-field>
+            <cmp-field id="Sample_barcode_scan_datetime">
+               <field-name>barcode_scan_datetime</field-name>
+            </cmp-field>
+            <cmp-field id="Sample_cell_ref_location">
+               <field-name>cell_ref_location</field-name>
+            </cmp-field>
+            <cmp-field id="Sample_allocation_ind">
+               <field-name>allocation_ind</field-name>
+            </cmp-field>
+            <cmp-field id="Sample_asm_position">
+               <field-name>asm_position</field-name>
+            </cmp-field>
+            <cmp-field id="Sample_sample_barcode_id">
+               <field-name>sample_barcode_id</field-name>
+            </cmp-field>
+            <cmp-field id="Sample_born_date">
+               <field-name>born_date</field-name>
+            </cmp-field>
+            <cmp-field id="Sample_samplebox_box_barcode_id">
+               <field-name>samplebox_box_barcode_id</field-name>
+            </cmp-field>
+            <cmp-field id="Sample_asm_asm_id">
+               <field-name>asm_asm_id</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1037732846210">
+            	<field-name>pullYN</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1037732857917">
+            	<field-name>pullReason</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1037732869704">
+            	<field-name>releasedYN</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1037732878687">
+            	<field-name>discordantYN</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1037733388819">
+            	<field-name>pullDate</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1042476422061">
+            	<field-name>diMinThicknessPfinCid</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1042569871039">
+            	<field-name>diMaxThicknessPfinCid</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1042569901507">
+            	<field-name>diWidthAcrossPfinCid</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1042570237086">
+            	<field-name>formatDetailCid</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1042570247367">
+            	<field-name>sampleSizeMeetsSpecs</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1042570254664">
+            	<field-name>hoursInFixative</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1043245673547">
+            	<field-name>qcpostedYN</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1044644905516">
+            	<field-name>histoMinThicknessPfinCid</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1044644921141">
+            	<field-name>histoMaxThicknessPfinCid</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1044644938172">
+            	<field-name>histoWidthAcrossPfinCid</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1044644945578">
+            	<field-name>histoReembedReasonCid</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1044644954859">
+            	<field-name>histoSubdividable</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1044644969844">
+            	<field-name>histoNotes</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1044646888938">
+            	<field-name>otherHistoReembedReason</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1050010276707">
+            	<field-name>paraffinFeatureCid</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1050010293598">
+            	<field-name>otherParaffinFeature</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1079708643402">
+            	<field-name>receiptDate</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1080064803969">
+            	<field-name>lastknownlocationid</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1106598179198">
+            	<field-name>importedYN</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1106598191901">
+            	<field-name>customerId</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1117144334612">
+            	<field-name>sampleTypeCid</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1117722273619">
+            	<field-name>collection_datetime</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1117722279698">
+            	<field-name>preservation_datetime</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1117722284698">
+            	<field-name>volume</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1118427261645">
+            	<field-name>collection_datetime_dpc</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1118427267754">
+            	<field-name>preservation_datetime_dpc</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1127417299011">
+            	<field-name>bufferTypeCui</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1127417309651">
+            	<field-name>bufferTypeOther</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1127417315104">
+            	<field-name>totalNumOfCells</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1127417319464">
+            	<field-name>totalNumOfCellsExRepCui</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1127417323183">
+            	<field-name>cellsPerMl</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1127929736274">
+            	<field-name>percentViability</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1143731152425">
+            	<field-name>source</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1150206062482">
+            	<field-name>concentration</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1150206068951">
+            	<field-name>yield</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1181067623079">
+            	<field-name>volumeUnitCui</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1181174051001">
+            	<field-name>volumeInUl</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1181174058110">
+            	<field-name>weight</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1181174062594">
+            	<field-name>weightInMg</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1181174068688">
+            	<field-name>weightUnitCui</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1182189641557">
+            	<field-name>sampleRegistrationForm</field-name>
+            </cmp-field>
+            <env-entry id="EnvEntry_16">
+               <env-entry-name>ejb10-properties/Samplebox</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Samplebox</env-entry-value>
+            </env-entry>
+            <env-entry id="EnvEntry_17">
+               <env-entry-name>ejb10-properties/Samplestatus</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Samplestatus</env-entry-value>
+            </env-entry>
+            <env-entry id="EnvEntry_19">
+               <env-entry-name>ejb10-properties/Asm</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Asm</env-entry-value>
+            </env-entry>
+         </entity>
+         <entity id="Samplebox">
+            <ejb-name>Samplebox</ejb-name>
+            <home>com.ardais.bigr.iltds.beans.SampleboxHome</home>
+            <remote>com.ardais.bigr.iltds.beans.Samplebox</remote>
+            <ejb-class>com.ardais.bigr.iltds.beans.SampleboxBean</ejb-class>
+            <persistence-type>Container</persistence-type>
+            <prim-key-class>com.ardais.bigr.iltds.beans.SampleboxKey</prim-key-class>
+            <reentrant>False</reentrant>
+            <cmp-field id="Samplebox_box_check_out_reason">
+               <field-name>box_check_out_reason</field-name>
+            </cmp-field>
+            <cmp-field id="Samplebox_box_check_in_date">
+               <field-name>box_check_in_date</field-name>
+            </cmp-field>
+            <cmp-field id="Samplebox_box_check_out_date">
+               <field-name>box_check_out_date</field-name>
+            </cmp-field>
+            <cmp-field id="Samplebox_box_status">
+               <field-name>box_status</field-name>
+            </cmp-field>
+            <cmp-field id="Samplebox_box_checkout_request_staff_id">
+               <field-name>box_checkout_request_staff_id</field-name>
+            </cmp-field>
+            <cmp-field id="Samplebox_box_barcode_id">
+               <field-name>box_barcode_id</field-name>
+            </cmp-field>
+            <cmp-field id="Samplebox_box_note">
+               <field-name>box_note</field-name>
+            </cmp-field>
+            <cmp-field id="Samplebox_manifest_manifest_number">
+               <field-name>manifest_manifest_number</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1035217180923">
+            	<field-name>manifest_order</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1104782966992">
+            	<field-name>boxLayoutId</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1118342478511">
+            	<field-name>storageTypeCid</field-name>
+            </cmp-field>
+            <env-entry id="EnvEntry_20">
+               <env-entry-name>ejb10-properties/Sample</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Sample</env-entry-value>
+            </env-entry>
+            <env-entry id="EnvEntry_21">
+               <env-entry-name>ejb10-properties/Boxlocation</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Boxlocation</env-entry-value>
+            </env-entry>
+            <env-entry id="EnvEntry_22">
+               <env-entry-name>ejb10-properties/Manifest</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Manifest</env-entry-value>
+            </env-entry>
+         </entity>
+         <entity id="Samplestatus">
+            <ejb-name>Samplestatus</ejb-name>
+            <home>com.ardais.bigr.iltds.beans.SamplestatusHome</home>
+            <remote>com.ardais.bigr.iltds.beans.Samplestatus</remote>
+            <ejb-class>com.ardais.bigr.iltds.beans.SamplestatusBean</ejb-class>
+            <persistence-type>Container</persistence-type>
+            <prim-key-class>com.ardais.bigr.iltds.beans.SamplestatusKey</prim-key-class>
+            <reentrant>False</reentrant>
+            <cmp-field id="Samplestatus_status_type_code">
+               <field-name>status_type_code</field-name>
+            </cmp-field>
+            <cmp-field id="Samplestatus_sample_status_datetime">
+               <field-name>sample_status_datetime</field-name>
+            </cmp-field>
+            <cmp-field id="Samplestatus_sample_sample_barcode_id">
+               <field-name>sample_sample_barcode_id</field-name>
+            </cmp-field>
+            <cmp-field id="CMPAttribute_1035217278584">
+            	<field-name>id</field-name>
+            </cmp-field>
+            <env-entry id="EnvEntry_24">
+               <env-entry-name>ejb10-properties/Sample</env-entry-name>
+               <env-entry-type>java.lang.String</env-entry-type>
+               <env-entry-value>com/ardais/bigr/iltds/beans/Sample</env-entry-value>
+            </env-entry>
+         </entity>
+         <entity id="ContainerManagedEntity_1033744215993">
+         	<ejb-name>Ardaisaccount</ejb-name>
+         	<home>com.ardais.bigr.es.beans.ArdaisaccountHome</home>
+         	<remote>com.ardais.bigr.es.beans.Ardaisaccount</remote>
+         	<ejb-class>com.ardais.bigr.es.beans.ArdaisaccountBean</ejb-class>
+         	<persistence-type>Container</persistence-type>
+         	<prim-key-class>com.ardais.bigr.es.beans.ArdaisaccountKey</prim-key-class>
+         	<reentrant>False</reentrant>
+         	<cmp-field id="CMPAttribute_1033745178078">
+         		<field-name>ardais_acct_close_date</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745179600">
+         		<field-name>ardais_acct_deactivate_reason</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745180031">
+         		<field-name>ardais_acct_deactivate_date</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745180511">
+         		<field-name>ardais_acct_status</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745180571">
+         		<field-name>ardais_acct_key</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745180591">
+         		<field-name>ardais_acct_reactivate_date</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745180652">
+         		<field-name>ardais_acct_type</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745180672">
+         		<field-name>ardais_acct_open_date</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745180732">
+         		<field-name>ardais_parent_acct_comp_desc</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745180782">
+         		<field-name>ardais_acct_active_date</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745180802">
+         		<field-name>ardais_acct_company_desc</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1078180130316">
+         		<field-name>request_mgr_email_address</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1092078147434">
+         		<field-name>linked_cases_only_yn</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1095365794003">
+         		<field-name>passwordPolicyCid</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1095365856347">
+         		<field-name>passwordLifeSpan</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1103142363492">
+         		<field-name>defaultBoxLayoutId</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1123795097124">
+         		<field-name>primaryLocation</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1182187819552">
+         		<field-name>donorRegistrationForm</field-name>
+         	</cmp-field>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Ardaisuser</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/es/beans/Ardaisuser</env-entry-value>
+         	</env-entry>
+         	<ejb-ref id="EjbRef_1034963169595">
+         		<ejb-ref-name>ejb/Ardaisuser</ejb-ref-name>
+         		<ejb-ref-type>Entity</ejb-ref-type>
+         		<home>com.ardais.bigr.es.beans.ArdaisuserHome</home>
+         		<remote>com.ardais.bigr.es.beans.Ardaisuser</remote>
+         		<ejb-link>Ardaisuser</ejb-link>
+         	</ejb-ref>
+         </entity>
+         <entity id="ContainerManagedEntity_1033744216043">
+         	<ejb-name>Ardaisuser</ejb-name>
+         	<home>com.ardais.bigr.es.beans.ArdaisuserHome</home>
+         	<remote>com.ardais.bigr.es.beans.Ardaisuser</remote>
+         	<ejb-class>com.ardais.bigr.es.beans.ArdaisuserBean</ejb-class>
+         	<persistence-type>Container</persistence-type>
+         	<prim-key-class>com.ardais.bigr.es.beans.ArdaisuserKey</prim-key-class>
+         	<reentrant>False</reentrant>
+         	<cmp-field id="CMPAttribute_1033745181703">
+         		<field-name>user_verif_answer</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745181723">
+         		<field-name>create_date</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745181753">
+         		<field-name>user_active_ind</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745181923">
+         		<field-name>user_functional_title</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745181953">
+         		<field-name>user_address_id</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745181983">
+         		<field-name>user_lastname</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745182004">
+         		<field-name>user_email_address</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745182024">
+         		<field-name>user_verif_question</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745182114">
+         		<field-name>user_phone_ext</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745182154">
+         		<field-name>ardais_user_id</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745182174">
+         		<field-name>user_fax_number</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745182194">
+         		<field-name>user_phone_number</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745182214">
+         		<field-name>password</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745182234">
+         		<field-name>created_by</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745182254">
+         		<field-name>user_mobile_number</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745182274">
+         		<field-name>user_title</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745182294">
+         		<field-name>updated_by</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745182314">
+         		<field-name>user_firstname</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745182354">
+         		<field-name>user_affiliation</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745182374">
+         		<field-name>update_date</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1034963170517">
+         		<description>Generated to support relationships.  Do NOT delete.</description>
+         		<field-name>ardaisaccount_ardais_acct_key</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1095365753222">
+         		<field-name>passwordPolicyCid</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1095365759816">
+         		<field-name>passwordLastChangeDate</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1155910282136">
+         		<field-name>user_department</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1157746440468">
+         		<field-name>consecutive_failed_logins</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1157746450030">
+         		<field-name>consecutive_failed_answers</field-name>
+         	</cmp-field>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Ardaisorder</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/es/beans/Ardaisorder</env-entry-value>
+         	</env-entry>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Ardaisaccount</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/es/beans/Ardaisaccount</env-entry-value>
+         	</env-entry>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Shoppingcart</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/es/beans/Shoppingcart</env-entry-value>
+         	</env-entry>
+         	<ejb-ref id="EjbRef_1034369335258">
+         		<ejb-ref-name>ejb/Shoppingcart</ejb-ref-name>
+         		<ejb-ref-type>Entity</ejb-ref-type>
+         		<home>com.ardais.bigr.es.beans.ShoppingcartHome</home>
+         		<remote>com.ardais.bigr.es.beans.Shoppingcart</remote>
+         		<ejb-link>Shoppingcart</ejb-link>
+         	</ejb-ref>
+         	<ejb-ref id="EjbRef_1034963169766">
+         		<ejb-ref-name>ejb/Ardaisaccount</ejb-ref-name>
+         		<ejb-ref-type>Entity</ejb-ref-type>
+         		<home>com.ardais.bigr.es.beans.ArdaisaccountHome</home>
+         		<remote>com.ardais.bigr.es.beans.Ardaisaccount</remote>
+         		<ejb-link>Ardaisaccount</ejb-link>
+         	</ejb-ref>
+         </entity>
+         <entity id="ContainerManagedEntity_1033744216073">
+         	<ejb-name>Ardaisorder</ejb-name>
+         	<home>com.ardais.bigr.es.beans.ArdaisorderHome</home>
+         	<remote>com.ardais.bigr.es.beans.Ardaisorder</remote>
+         	<ejb-class>com.ardais.bigr.es.beans.ArdaisorderBean</ejb-class>
+         	<persistence-type>Container</persistence-type>
+         	<prim-key-class>com.ardais.bigr.es.beans.ArdaisorderKey</prim-key-class>
+         	<reentrant>False</reentrant>
+         	<cmp-field id="CMPAttribute_1033745182394">
+         		<field-name>approval_user_id</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745182414">
+         		<field-name>order_number</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745182494">
+         		<field-name>order_po_number</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745182624">
+         		<field-name>order_date</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745182715">
+         		<field-name>ship_instruction</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745182825">
+         		<field-name>order_status</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745183025">
+         		<field-name>bill_to_addr_id</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745183055">
+         		<field-name>order_amount</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033744217235">
+         		<field-name>ardaisuser_ardais_user_id</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1034963735268">
+         		<description>Generated to support relationships.  Do NOT delete.</description>
+         		<field-name>ardaisuser_ardaisaccount_ardais_acct_key</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1035227957755">
+         		<field-name>approved_date</field-name>
+         	</cmp-field>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Ardaisuser</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/es/beans/Ardaisuser</env-entry-value>
+         	</env-entry>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Orderline</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/es/beans/Orderline</env-entry-value>
+         	</env-entry>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Ardaisorderstatus</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/es/beans/Ardaisorderstatus</env-entry-value>
+         	</env-entry>
+         </entity>
+         <entity id="ContainerManagedEntity_1033744216093">
+         	<ejb-name>Orderline</ejb-name>
+         	<home>com.ardais.bigr.es.beans.OrderlineHome</home>
+         	<remote>com.ardais.bigr.es.beans.Orderline</remote>
+         	<ejb-class>com.ardais.bigr.es.beans.OrderlineBean</ejb-class>
+         	<persistence-type>Container</persistence-type>
+         	<prim-key-class>com.ardais.bigr.es.beans.OrderlineKey</prim-key-class>
+         	<reentrant>False</reentrant>
+         	<cmp-field id="CMPAttribute_1033745183065">
+         		<field-name>barcode_id</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745183085">
+         		<field-name>order_line_number</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745183105">
+         		<field-name>consortium_ind</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745183115">
+         		<field-name>order_line_amount</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033744217465">
+         		<field-name>ardaisorder_order_number</field-name>
+         	</cmp-field>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Ardaisorder</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/es/beans/Ardaisorder</env-entry-value>
+         	</env-entry>
+         </entity>
+         <entity id="ContainerManagedEntity_1033744216103">
+         	<ejb-name>Ardaisorderstatus</ejb-name>
+         	<home>com.ardais.bigr.es.beans.ArdaisorderstatusHome</home>
+         	<remote>com.ardais.bigr.es.beans.Ardaisorderstatus</remote>
+         	<ejb-class>com.ardais.bigr.es.beans.ArdaisorderstatusBean</ejb-class>
+         	<persistence-type>Container</persistence-type>
+         	<prim-key-class>com.ardais.bigr.es.beans.ArdaisorderstatusKey</prim-key-class>
+         	<reentrant>False</reentrant>
+         	<cmp-field id="CMPAttribute_1033745183265">
+         		<field-name>ardais_acct_key</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745183285">
+         		<field-name>order_status_id</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745183295">
+         		<field-name>order_status_date</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745183315">
+         		<field-name>order_status_comment</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745183345">
+         		<field-name>ardais_user_id</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033744217595">
+         		<field-name>ardaisorder_order_number</field-name>
+         	</cmp-field>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Ardaisorder</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/es/beans/Ardaisorder</env-entry-value>
+         	</env-entry>
+         </entity>
+         <entity id="ContainerManagedEntity_1033744216173">
+         	<ejb-name>Ardaisaddress</ejb-name>
+         	<home>com.ardais.bigr.es.beans.ArdaisaddressHome</home>
+         	<remote>com.ardais.bigr.es.beans.Ardaisaddress</remote>
+         	<ejb-class>com.ardais.bigr.es.beans.ArdaisaddressBean</ejb-class>
+         	<persistence-type>Container</persistence-type>
+         	<prim-key-class>com.ardais.bigr.es.beans.ArdaisaddressKey</prim-key-class>
+         	<reentrant>False</reentrant>
+         	<cmp-field id="CMPAttribute_1033745183496">
+         		<field-name>ardais_acct_key</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745183516">
+         		<field-name>address_id</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745183526">
+         		<field-name>address_2</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745183556">
+         		<field-name>address_1</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745183566">
+         		<field-name>addr_country</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745183576">
+         		<field-name>address_type</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745183586">
+         		<field-name>addr_zip_code</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745183596">
+         		<field-name>addr_city</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745183606">
+         		<field-name>addr_state</field-name>
+         	</cmp-field>
+         </entity>
+         <entity id="ContainerManagedEntity_1033745432091">
+         	<ejb-name>Objects</ejb-name>
+         	<home>com.ardais.bigr.orm.beans.ObjectsHome</home>
+         	<remote>com.ardais.bigr.orm.beans.Objects</remote>
+         	<ejb-class>com.ardais.bigr.orm.beans.ObjectsBean</ejb-class>
+         	<persistence-type>Container</persistence-type>
+         	<prim-key-class>com.ardais.bigr.orm.beans.ObjectsKey</prim-key-class>
+         	<reentrant>False</reentrant>
+         	<cmp-field id="CMPAttribute_1033745699356">
+         		<field-name>created_by</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745699446">
+         		<field-name>create_date</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745699466">
+         		<field-name>updated_by</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745699716">
+         		<field-name>object_description</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745699736">
+         		<field-name>object_id</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745699756">
+         		<field-name>long_description</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745699776">
+         		<field-name>url</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745699796">
+         		<field-name>update_date</field-name>
+         	</cmp-field>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Useraccessmodule</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/orm/beans/Useraccessmodule</env-entry-value>
+         	</env-entry>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Workgroupobjects</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/orm/beans/Workgroupobjects</env-entry-value>
+         	</env-entry>
+         </entity>
+         <entity id="ContainerManagedEntity_1033745432111">
+         	<ejb-name>Useraccessmodule</ejb-name>
+         	<home>com.ardais.bigr.orm.beans.UseraccessmoduleHome</home>
+         	<remote>com.ardais.bigr.orm.beans.Useraccessmodule</remote>
+         	<ejb-class>com.ardais.bigr.orm.beans.UseraccessmoduleBean</ejb-class>
+         	<persistence-type>Container</persistence-type>
+         	<prim-key-class>com.ardais.bigr.orm.beans.UseraccessmoduleKey</prim-key-class>
+         	<reentrant>False</reentrant>
+         	<cmp-field id="CMPAttribute_1033745699816">
+         		<field-name>new_order_creation</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745699836">
+         		<field-name>order_view</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745699856">
+         		<field-name>create_date</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745699876">
+         		<field-name>ardais_acct_key</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745699896">
+         		<field-name>description</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745699916">
+         		<field-name>update_date</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745699936">
+         		<field-name>ardais_user_id</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745699947">
+         		<field-name>updated_by</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745699967">
+         		<field-name>order_maintain</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745699987">
+         		<field-name>created_by</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033745432812">
+         		<field-name>objects_object_id</field-name>
+         	</cmp-field>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Objects</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/orm/beans/Objects</env-entry-value>
+         	</env-entry>
+         </entity>
+         <entity id="ContainerManagedEntity_1033749429930">
+         	<ejb-name>Lineitem</ejb-name>
+         	<home>com.ardais.bigr.iltds.beans.LineitemHome</home>
+         	<remote>com.ardais.bigr.iltds.beans.Lineitem</remote>
+         	<ejb-class>com.ardais.bigr.iltds.beans.LineitemBean</ejb-class>
+         	<persistence-type>Container</persistence-type>
+         	<prim-key-class>com.ardais.bigr.iltds.beans.LineitemKey</prim-key-class>
+         	<reentrant>False</reentrant>
+         	<cmp-field id="CMPAttribute_1033749531661">
+         		<field-name>lineitemnumber</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749531681">
+         		<field-name>format</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749531711">
+         		<field-name>lineitemid</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749531731">
+         		<field-name>quantity</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749531751">
+         		<field-name>comments</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749531771">
+         		<field-name>notes</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749430461">
+         		<field-name>project_projectid</field-name>
+         	</cmp-field>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Project</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/iltds/beans/Project</env-entry-value>
+         	</env-entry>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Projectsample</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/iltds/beans/Projectsample</env-entry-value>
+         	</env-entry>
+         </entity>
+         <entity id="ContainerManagedEntity_1033749429890">
+         	<ejb-name>Project</ejb-name>
+         	<home>com.ardais.bigr.iltds.beans.ProjectHome</home>
+         	<remote>com.ardais.bigr.iltds.beans.Project</remote>
+         	<ejb-class>com.ardais.bigr.iltds.beans.ProjectBean</ejb-class>
+         	<persistence-type>Container</persistence-type>
+         	<prim-key-class>com.ardais.bigr.iltds.beans.ProjectKey</prim-key-class>
+         	<reentrant>False</reentrant>
+         	<cmp-field id="CMPAttribute_1033749531791">
+         		<field-name>daterequested</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749531811">
+         		<field-name>dateapproved</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749531831">
+         		<field-name>projectname</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749531851">
+         		<field-name>percentcomplete</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749531861">
+         		<field-name>notes</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749497512">
+         		<field-name>ardaisuserid</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749531881">
+         		<field-name>dateshipped</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749531891">
+         		<field-name>status</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749500916">
+         		<field-name>ardaisaccountkey</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749531911">
+         		<field-name>projectid</field-name>
+         	</cmp-field>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Workorder</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/iltds/beans/Workorder</env-entry-value>
+         	</env-entry>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Lineitem</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/iltds/beans/Lineitem</env-entry-value>
+         	</env-entry>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Projectsample</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/iltds/beans/Projectsample</env-entry-value>
+         	</env-entry>
+         </entity>
+         <entity id="ContainerManagedEntity_1033749429910">
+         	<ejb-name>Workorder</ejb-name>
+         	<home>com.ardais.bigr.iltds.beans.WorkorderHome</home>
+         	<remote>com.ardais.bigr.iltds.beans.Workorder</remote>
+         	<ejb-class>com.ardais.bigr.iltds.beans.WorkorderBean</ejb-class>
+         	<persistence-type>Container</persistence-type>
+         	<prim-key-class>com.ardais.bigr.iltds.beans.WorkorderKey</prim-key-class>
+         	<reentrant>False</reentrant>
+         	<cmp-field id="CMPAttribute_1033749531921">
+         		<field-name>workorderid</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749531961">
+         		<field-name>listorder</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749531981">
+         		<field-name>workordername</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749531991">
+         		<field-name>startdate</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749532011">
+         		<field-name>numberofsamples</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749532021">
+         		<field-name>enddate</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749532041">
+         		<field-name>percentcomplete</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749532061">
+         		<field-name>notes</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749532081">
+         		<field-name>status</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749532091">
+         		<field-name>workordertype</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749430501">
+         		<field-name>project_projectid</field-name>
+         	</cmp-field>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Project</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/iltds/beans/Project</env-entry-value>
+         	</env-entry>
+         </entity>
+         <entity id="ContainerManagedEntity_1033749429950">
+         	<ejb-name>Projectsample</ejb-name>
+         	<home>com.ardais.bigr.iltds.beans.ProjectsampleHome</home>
+         	<remote>com.ardais.bigr.iltds.beans.Projectsample</remote>
+         	<ejb-class>com.ardais.bigr.iltds.beans.ProjectsampleBean</ejb-class>
+         	<persistence-type>Container</persistence-type>
+         	<prim-key-class>com.ardais.bigr.iltds.beans.ProjectsampleKey</prim-key-class>
+         	<reentrant>False</reentrant>
+         	<cmp-field id="CMPAttribute_1033749528416">
+         		<field-name>samplebarcodeid</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749430521">
+         		<field-name>lineitem_lineitemid</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1033749430541">
+         		<field-name>project_projectid</field-name>
+         	</cmp-field>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Lineitem</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/iltds/beans/Lineitem</env-entry-value>
+         	</env-entry>
+         	<env-entry>
+         		<env-entry-name>ejb10-properties/Project</env-entry-name>
+         		<env-entry-type>java.lang.String</env-entry-type>
+         		<env-entry-value>com/ardais/bigr/iltds/beans/Project</env-entry-value>
+         	</env-entry>
+         </entity>
+         <session id="Session_1033749768752">
+         	<ejb-name>DDCDonor</ejb-name>
+         	<home>com.ardais.bigr.pdc.beans.DDCDonorHome</home>
+         	<remote>com.ardais.bigr.pdc.beans.DDCDonor</remote>
+         	<ejb-class>com.ardais.bigr.pdc.beans.DDCDonorBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <session id="Session_1033749768772">
+         	<ejb-name>DDCPathology</ejb-name>
+         	<home>com.ardais.bigr.pdc.beans.DDCPathologyHome</home>
+         	<remote>com.ardais.bigr.pdc.beans.DDCPathology</remote>
+         	<ejb-class>com.ardais.bigr.pdc.beans.DDCPathologyBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <session id="Session_1033749845332">
+         	<ejb-name>ASMOperation</ejb-name>
+         	<home>com.ardais.bigr.iltds.beans.ASMOperationHome</home>
+         	<remote>com.ardais.bigr.iltds.beans.ASMOperation</remote>
+         	<ejb-class>com.ardais.bigr.iltds.beans.ASMOperationBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <session id="Session_1033749845442">
+         	<ejb-name>BTXHistoryReader</ejb-name>
+         	<home>com.ardais.bigr.iltds.beans.BTXHistoryReaderHome</home>
+         	<remote>com.ardais.bigr.iltds.beans.BTXHistoryReader</remote>
+         	<ejb-class>com.ardais.bigr.iltds.beans.BTXHistoryReaderBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <session id="Session_1033749845472">
+         	<ejb-name>BTXHistoryRecorder</ejb-name>
+         	<home>com.ardais.bigr.iltds.beans.BTXHistoryRecorderHome</home>
+         	<remote>com.ardais.bigr.iltds.beans.BTXHistoryRecorder</remote>
+         	<ejb-class>com.ardais.bigr.iltds.beans.BTXHistoryRecorderBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <session id="Session_1033749845582">
+         	<ejb-name>ConsentOperation</ejb-name>
+         	<home>com.ardais.bigr.iltds.beans.ConsentOperationHome</home>
+         	<remote>com.ardais.bigr.iltds.beans.ConsentOperation</remote>
+         	<ejb-class>com.ardais.bigr.iltds.beans.ConsentOperationBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <session id="Session_1033749845632">
+         	<ejb-name>IcpOperation</ejb-name>
+         	<home>com.ardais.bigr.iltds.icp.ejb.session.IcpOperationHome</home>
+         	<remote>com.ardais.bigr.iltds.icp.ejb.session.IcpOperation</remote>
+         	<ejb-class>com.ardais.bigr.iltds.icp.ejb.session.IcpOperationBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <session id="Session_1033749845652">
+         	<ejb-name>ListGenerator</ejb-name>
+         	<home>com.ardais.bigr.iltds.beans.ListGeneratorHome</home>
+         	<remote>com.ardais.bigr.iltds.beans.ListGenerator</remote>
+         	<ejb-class>com.ardais.bigr.iltds.beans.ListGeneratorBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <session id="Session_1033749845712">
+         	<ejb-name>PathologyOperation</ejb-name>
+         	<home>com.ardais.bigr.iltds.beans.PathologyOperationHome</home>
+         	<remote>com.ardais.bigr.iltds.beans.PathologyOperation</remote>
+         	<ejb-class>com.ardais.bigr.iltds.beans.PathologyOperationBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <session id="Session_1033749845732">
+         	<ejb-name>PtsOperation</ejb-name>
+         	<home>com.ardais.bigr.iltds.beans.PtsOperationHome</home>
+         	<remote>com.ardais.bigr.iltds.beans.PtsOperation</remote>
+         	<ejb-class>com.ardais.bigr.iltds.beans.PtsOperationBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <session id="Session_1033749845752">
+         	<ejb-name>SequenceGen</ejb-name>
+         	<home>com.ardais.bigr.iltds.beans.SequenceGenHome</home>
+         	<remote>com.ardais.bigr.iltds.beans.SequenceGen</remote>
+         	<ejb-class>com.ardais.bigr.iltds.beans.SequenceGenBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <session id="Session_1033749963522">
+         	<ejb-name>SequenceGen_1</ejb-name>
+         	<home>com.ardais.bigr.es.beans.SequenceGenHome</home>
+         	<remote>com.ardais.bigr.es.beans.SequenceGen</remote>
+         	<ejb-class>com.ardais.bigr.es.beans.SequenceGenBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <session id="Session_1033750034293">
+         	<ejb-name>AccountSrchSB</ejb-name>
+         	<home>com.ardais.bigr.orm.beans.AccountSrchSBHome</home>
+         	<remote>com.ardais.bigr.orm.beans.AccountSrchSB</remote>
+         	<ejb-class>com.ardais.bigr.orm.beans.AccountSrchSBBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <session id="Session_1033750034464">
+         	<ejb-name>OrmUserManagement</ejb-name>
+         	<home>com.ardais.bigr.orm.beans.OrmUserManagementHome</home>
+         	<remote>com.ardais.bigr.orm.beans.OrmUserManagement</remote>
+         	<ejb-class>com.ardais.bigr.orm.beans.OrmUserManagementBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <session id="Session_1033750034474">
+         	<ejb-name>UserProf</ejb-name>
+         	<home>com.ardais.bigr.userprofile.UserProfHome</home>
+         	<remote>com.ardais.bigr.userprofile.UserProf</remote>
+         	<ejb-class>com.ardais.bigr.userprofile.UserProfBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <entity id="Shoppingcartdetail">
+         	<ejb-name>Shoppingcartdetail</ejb-name>
+         	<home>com.ardais.bigr.es.beans.ShoppingcartdetailHome</home>
+         	<remote>com.ardais.bigr.es.beans.Shoppingcartdetail</remote>
+         	<ejb-class>com.ardais.bigr.es.beans.ShoppingcartdetailBean</ejb-class>
+         	<persistence-type>Container</persistence-type>
+         	<prim-key-class>com.ardais.bigr.es.beans.ShoppingcartdetailKey</prim-key-class>
+         	<reentrant>False</reentrant>
+         	<cmp-field id="CMPAttribute_1034087749316">
+         		<field-name>shopping_cart_line_number</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1034088215857">
+         		<field-name>shopping_cart_line_amount</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1034088215877">
+         		<field-name>barcode_id</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1034088215897">
+         		<field-name>search_desc</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1034166451073">
+         		<field-name>creation_dt</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1034369342198">
+         		<description>Generated to support relationships.  Do NOT delete.</description>
+         		<field-name>shoppingcart_shopping_cart_id</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1034369342218">
+         		<description>Generated to support relationships.  Do NOT delete.</description>
+         		<field-name>shoppingcart_ardaisuser_ardais_user_id</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1034963743590">
+         		<description>Generated to support relationships.  Do NOT delete.</description>
+         		<field-name>shoppingcart_ardaisuser_ardaisaccount_ardais_acct_key</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1052426514117">
+         		<field-name>quantity</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1052426519289">
+         		<field-name>productType</field-name>
+         	</cmp-field>
+         	<ejb-ref id="EjbRef_1034369341587">
+         		<ejb-ref-name>ejb/Shoppingcart</ejb-ref-name>
+         		<ejb-ref-type>Entity</ejb-ref-type>
+         		<home>com.ardais.bigr.es.beans.ShoppingcartHome</home>
+         		<remote>com.ardais.bigr.es.beans.Shoppingcart</remote>
+         		<ejb-link>Shoppingcart</ejb-link>
+         	</ejb-ref>
+         </entity>
+         <entity id="Shoppingcart">
+         	<ejb-name>Shoppingcart</ejb-name>
+         	<home>com.ardais.bigr.es.beans.ShoppingcartHome</home>
+         	<remote>com.ardais.bigr.es.beans.Shoppingcart</remote>
+         	<ejb-class>com.ardais.bigr.es.beans.ShoppingcartBean</ejb-class>
+         	<persistence-type>Container</persistence-type>
+         	<prim-key-class>com.ardais.bigr.es.beans.ShoppingcartKey</prim-key-class>
+         	<reentrant>False</reentrant>
+         	<cmp-field id="CMPAttribute_1034369426770">
+         		<field-name>shopping_cart_id</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1034369403526">
+         		<field-name>last_update_dt</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1034369426790">
+         		<field-name>cart_create_date</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1034369342248">
+         		<description>Generated to support relationships.  Do NOT delete.</description>
+         		<field-name>ardaisuser_ardais_user_id</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1034963743620">
+         		<description>Generated to support relationships.  Do NOT delete.</description>
+         		<field-name>ardaisuser_ardaisaccount_ardais_acct_key</field-name>
+         	</cmp-field>
+         	<ejb-ref id="EjbRef_1034369341607">
+         		<ejb-ref-name>ejb/Ardaisuser</ejb-ref-name>
+         		<ejb-ref-type>Entity</ejb-ref-type>
+         		<home>com.ardais.bigr.es.beans.ArdaisuserHome</home>
+         		<remote>com.ardais.bigr.es.beans.Ardaisuser</remote>
+         		<ejb-link>Ardaisuser</ejb-link>
+         	</ejb-ref>
+         	<ejb-ref id="EjbRef_1034369341617">
+         		<ejb-ref-name>ejb/Shoppingcartdetail</ejb-ref-name>
+         		<ejb-ref-type>Entity</ejb-ref-type>
+         		<home>com.ardais.bigr.es.beans.ShoppingcartdetailHome</home>
+         		<remote>com.ardais.bigr.es.beans.Shoppingcartdetail</remote>
+         		<ejb-link>Shoppingcartdetail</ejb-link>
+         	</ejb-ref>
+         </entity>
+         <session id="Oce">
+         	<ejb-name>Oce</ejb-name>
+         	<home>com.ardais.bigr.pdc.oce.OceHome</home>
+         	<remote>com.ardais.bigr.pdc.oce.Oce</remote>
+         	<ejb-class>com.ardais.bigr.pdc.oce.OceBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <entity id="Slide">
+         	<ejb-name>Slide</ejb-name>
+         	<home>com.ardais.bigr.lims.beans.SlideHome</home>
+         	<remote>com.ardais.bigr.lims.beans.Slide</remote>
+         	<ejb-class>com.ardais.bigr.lims.beans.SlideBean</ejb-class>
+         	<persistence-type>Container</persistence-type>
+         	<prim-key-class>java.lang.String</prim-key-class>
+         	<reentrant>False</reentrant>
+         	<cmp-field id="CMPAttribute_1037135081551">
+         		<field-name>slideId</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1037135121609">
+         		<field-name>createDate</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1037135152894">
+         		<field-name>destroyDate</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1037135105646">
+         		<field-name>sectionNumber</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1037135161006">
+         		<field-name>sectionLevel</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1037135171250">
+         		<field-name>currentLocation</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1037135178531">
+         		<field-name>sampleBarcodeId</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1037135185491">
+         		<field-name>createUser</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1037135204568">
+         		<field-name>sectionProc</field-name>
+         	</cmp-field>
+         	<primkey-field>slideId</primkey-field>
+         </entity>
+         <session id="LimsDataValidator">
+         	<ejb-name>LimsDataValidator</ejb-name>
+         	<home>com.ardais.bigr.lims.beans.LimsDataValidatorHome</home>
+         	<remote>com.ardais.bigr.lims.beans.LimsDataValidator</remote>
+         	<ejb-class>com.ardais.bigr.lims.beans.LimsDataValidatorBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <session id="LimsOperation">
+         	<ejb-name>LimsOperation</ejb-name>
+         	<home>com.ardais.bigr.lims.beans.LimsOperationHome</home>
+         	<remote>com.ardais.bigr.lims.beans.LimsOperation</remote>
+         	<ejb-class>com.ardais.bigr.lims.beans.LimsOperationBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <entity id="PathologyEvaluation">
+         	<ejb-name>PathologyEvaluation</ejb-name>
+         	<home>com.ardais.bigr.lims.beans.PathologyEvaluationHome</home>
+         	<remote>com.ardais.bigr.lims.beans.PathologyEvaluation</remote>
+         	<ejb-class>com.ardais.bigr.lims.beans.PathologyEvaluationBean</ejb-class>
+         	<persistence-type>Container</persistence-type>
+         	<prim-key-class>java.lang.String</prim-key-class>
+         	<reentrant>False</reentrant>
+         	<cmp-field id="CMPAttribute_1038938616496">
+         		<field-name>evaluationId</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938621481">
+         		<field-name>slideId</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938641793">
+         		<field-name>sampleId</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938645028">
+         		<field-name>microscopicAppearance</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938654012">
+         		<field-name>reportedYN</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938660903">
+         		<field-name>createMethod</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938709668">
+         		<field-name>tumorCells</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938716700">
+         		<field-name>normalCells</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938720028">
+         		<field-name>hypoacellularstromaCells</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938782137">
+         		<field-name>necrosisCells</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938789028">
+         		<field-name>lesionCells</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938793559">
+         		<field-name>diagnosis</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938796746">
+         		<field-name>tissueOfOrigin</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938800137">
+         		<field-name>createDate</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938804871">
+         		<field-name>pathologist</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938809700">
+         		<field-name>migratedYN</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938815340">
+         		<field-name>tissueOfFinding</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938819981">
+         		<field-name>tissueOfFindingOther</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938827106">
+         		<field-name>diagnosisOther</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938831168">
+         		<field-name>tissueOfOriginOther</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938839153">
+         		<field-name>concatenatedExternalComments</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938842731">
+         		<field-name>concatenatedInternalComments</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938848918">
+         		<field-name>sourceEvaluationId</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1038938852153">
+         		<field-name>cellularstromaCells</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1043178585812">
+         		<field-name>reportedDate</field-name>
+         	</cmp-field>
+         	<primkey-field>evaluationId</primkey-field>
+         </entity>
+         <session id="BtxHistoryExceptionRecorder">
+         	<ejb-name>BtxHistoryExceptionRecorder</ejb-name>
+         	<home>com.ardais.bigr.iltds.beans.BtxHistoryExceptionRecorderHome</home>
+         	<remote>com.ardais.bigr.iltds.beans.BtxHistoryExceptionRecorder</remote>
+         	<ejb-class>com.ardais.bigr.iltds.beans.BtxHistoryExceptionRecorderBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <session id="SampleOperation">
+         	<ejb-name>SampleOperation</ejb-name>
+         	<home>com.ardais.bigr.iltds.beans.SampleOperationHome</home>
+         	<remote>com.ardais.bigr.iltds.beans.SampleOperation</remote>
+         	<ejb-class>com.ardais.bigr.iltds.beans.SampleOperationBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <session id="SequenceGenerator">
+         	<ejb-name>SequenceGenerator</ejb-name>
+         	<home>com.ardais.bigr.core.SequenceGeneratorHome</home>
+         	<remote>com.ardais.bigr.core.SequenceGenerator</remote>
+         	<ejb-class>com.ardais.bigr.core.SequenceGeneratorBean</ejb-class>
+         	<session-type>Stateless</session-type>
+         	<transaction-type>Container</transaction-type>
+         </session>
+         <entity id="Incident">
+         	<ejb-name>Incident</ejb-name>
+         	<home>com.ardais.bigr.lims.beans.IncidentHome</home>
+         	<remote>com.ardais.bigr.lims.beans.Incident</remote>
+         	<ejb-class>com.ardais.bigr.lims.beans.IncidentBean</ejb-class>
+         	<persistence-type>Container</persistence-type>
+         	<prim-key-class>java.lang.String</prim-key-class>
+         	<reentrant>False</reentrant>
+         	<cmp-field id="CMPAttribute_1055431453985">
+         		<field-name>incidentId</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1055431461969">
+         		<field-name>createUser</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1055431465563">
+         		<field-name>createDate</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1055431469297">
+         		<field-name>sampleId</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1055431474422">
+         		<field-name>consentId</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1055431482766">
+         		<field-name>action</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1055431486172">
+         		<field-name>reason</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1055431489578">
+         		<field-name>slideId</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1055431493265">
+         		<field-name>pathologist</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1055431499000">
+         		<field-name>rePVRequestorCode</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1055431503281">
+         		<field-name>actionOther</field-name>
+         	</cmp-field>
+         	<cmp-field id="CMPAttribute_1055431507390">
+         		<field-name>comments</field-name>
+         	</cmp-field>
+         	<primkey-field>incidentId</primkey-field>
+         </entity>
+         <session id="BtxTransaction">
+		 	<ejb-name>BtxTransaction</ejb-name>
+		 	<home>com.ardais.bigr.btx.framework.BtxTransactionHome</home>
+		 	<remote>com.ardais.bigr.btx.framework.BtxTransaction</remote>
+		 	<ejb-class>com.ardais.bigr.btx.framework.BtxTransactionBean</ejb-class>
+		 	<session-type>Stateless</session-type>
+		 	<transaction-type>Container</transaction-type>
+		 </session>
+      </enterprise-beans>
+      <assembly-descriptor id="AssemblyDescriptor_ID">
+      	<container-transaction>
+      		<method>
+      			<ejb-name>Ardaisaccount</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Ardaisaddress</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Ardaisorder</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Ardaisorderstatus</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Ardaisstaff</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Ardaisuser</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Asm</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Asmform</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Boxlocation</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Consent</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Geolocation</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Lineitem</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Manifest</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Objects</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Orderline</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>PathologyEvaluation</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Project</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Projectsample</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Revokedconsent</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Sample</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Samplebox</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Samplestatus</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Shoppingcart</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Shoppingcartdetail</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Slide</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Useraccessmodule</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Workorder</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>ASMOperation</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>AccountSrchSB</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>BTXHistoryReader</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>BTXHistoryRecorder</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>ConsentOperation</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>DDCDonor</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>DDCPathology</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>IcpOperation</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>LimsDataValidator</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>LimsOperation</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>ListGenerator</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Oce</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>OrmUserManagement</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>PathologyOperation</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>PtsOperation</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>SampleOperation</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>SequenceGen</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>SequenceGen_1</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>UserProf</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>BtxTransaction</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>SequenceGenerator</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<method>
+      			<ejb-name>Incident</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<trans-attribute>Required</trans-attribute>
+      	</container-transaction>
+      	<container-transaction>
+      		<method>
+      			<ejb-name>BtxHistoryExceptionRecorder</ejb-name>
+      			<method-name>*</method-name>
+      		</method>
+      		<trans-attribute>RequiresNew</trans-attribute>
+      	</container-transaction>
+      </assembly-descriptor>
+   </ejb-jar>

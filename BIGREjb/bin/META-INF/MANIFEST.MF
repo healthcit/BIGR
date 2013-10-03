@@ -1,0 +1,1132 @@
+Manifest-Version: 1.0
+Class-Path: lib/commons-beanutils.jar 
+ lib/commons-collections.jar 
+ lib/commons-lang.jar 
+ lib/commons-logging.jar 
+ BIGRCore.jar
+
+Name: com/ardais/bigr/iltds/beans/SamplestatusToSampleLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: DRZqhW0s95SrSodLz/lXnWlXnQI=
+MD5-Digest: kdDe0umRfumPRFENlTvdgg==
+
+Name: com/ardais/bigr/iltds/beans/GeolocationToArdaisstaffLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: dzzIt3NVh2iw4WoksEjc85YAXEc=
+MD5-Digest: 3PTfEYNc9qbrSKpLF4AWPQ==
+
+Name: com/ardais/bigr/iltds/beans/ArdaisstaffBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: unrJx99QuxU3HXnjWKNulfDezDM=
+MD5-Digest: SqK2MFBk2FEoJHiM31FnqQ==
+
+Name: com/ardais/bigr/iltds/beans/Asmform.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: L5a4AuIy28/3CrsBuw1MoUI6crE=
+MD5-Digest: e0BePiMjzK28herBkS6i4A==
+
+Name: com/ardais/bigr/iltds/beans/BoxlocationKey.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: SqrNQ3CMANJAO28imVaQMzIcufY=
+MD5-Digest: iWJHtYNOPX3Upk1G9v8uMA==
+
+Name: com/ardais/bigr/iltds/beans/GeolocationAccessBeanTable.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: fxKHAPyMyoOVw3XK/K0heq9MUcI=
+MD5-Digest: uCCJCo+Co+1ApuKpAgODEw==
+
+Name: com/ardais/bigr/iltds/beans/ManifestToGeolocationLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: B1Q2WFbKtWOzxR781O6ho/imTSc=
+MD5-Digest: PX9fheT5jUBT/GxlCpTPuw==
+
+Name: com/ardais/bigr/iltds/beans/SampleboxAccessBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: 3YHs+8HV5avdOkJg1TVLzpAL1rQ=
+MD5-Digest: i6QPdq7oMVnuKYB0yJ/m/A==
+
+Name: META-INF/ibm-ejb-jar-bnd.xmi
+Digest-Algorithms: SHA MD5
+SHA-Digest: UjgQ6cuuh/0QI3zUnUISsjmP3Wg=
+MD5-Digest: F3XC+gQcU7feOHvlcO8IOg==
+
+Name: com/ardais/bigr/iltds/beans/ConsentKey.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: 4zh9eUyk6ieEReMqdcD4gslOOWM=
+MD5-Digest: d8RoyQz+bkP2fqdyBx9Hhw==
+
+Name: com/ardais/bigr/iltds/beans/RevokedconsentAccessBeanData.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: ZXLVgwKZIgTPFlaB7NWbX0NfaXI=
+MD5-Digest: DJWbnOp78VafmF/EVEia5A==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/SampleAccessBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: BERwwIixYGPeZeAQFM83Onp0oJ8=
+MD5-Digest: waQfwOawZGHX7HXnZKLiew==
+
+Name: com/ardais/bigr/iltds/beans/RevokedconsentBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: xO8OgTO1d3lwE8t4kc60PlZmbk0=
+MD5-Digest: I02DZH+aEUn3m9CN0BNCRA==
+
+Name: META-INF/ibm-ejb-jar-ext.xmi
+Digest-Algorithms: SHA MD5
+SHA-Digest: 0PdNT2GGqS/QImfvFyJMoOidqUg=
+MD5-Digest: EFel77X+aqqAearztmdcGg==
+
+Name: com/ardais/bigr/iltds/beans/Boxlocation.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: L/0Bbn0DTaQMurNQsdWrSHe4fas=
+MD5-Digest: +rqXO28KRinZHKNSwwifew==
+
+Name: com/ardais/bigr/iltds/beans/ArdaisstaffAccessBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: hiwYI5SNtzTxoAePOw3RaHDyUYc=
+MD5-Digest: HEc+ZnSCiR32knxqBAAtVw==
+
+Name: com/ardais/bigr/iltds/beans/GeolocationAccessBeanData.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: cGST9ktAP9r9ZOqhyvH06ecOdHs=
+MD5-Digest: XvJYRpFNQ9ps/JpmgSbksg==
+
+Name: com/ardais/bigr/iltds/beans/ManifestToGeolocationLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: Ms3cULkNMMhukCI1YVYfQyw1074=
+MD5-Digest: aftNxK8B8ehlwnv/K1gS3A==
+
+Name: com/ardais/bigr/iltds/beans/AsmformAccessBeanData.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: Bm81VNznWkUVAcBolZo4+xsKDgE=
+MD5-Digest: b1W8Kw3WnU88KRYszc6HEA==
+
+Name: com/ardais/bigr/iltds/beans/Geolocation.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: zNL4itCCdFPjt6HYRt61xRIrcmw=
+MD5-Digest: YIgtxx7KHwyEy4zlo75HFw==
+
+Name: META-INF/ibm-ejb-access-bean.xmi
+Digest-Algorithms: SHA MD5
+SHA-Digest: lkt4Et0O/FZayYZithBxo7ZK3Gk=
+MD5-Digest: qp7ih/lPIOiuD6it146hmQ==
+
+Name: com/ardais/bigr/iltds/beans/ArdaisstaffHome.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: JW9CZ2et1CizQ2LxLWaEJXv+rrc=
+MD5-Digest: pJmW7yyfRShSjZU1rgXMcg==
+
+Name: com/ardais/bigr/iltds/beans/AsmformBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: DuJoJOWEBH3LpxktGhaPTeyPOyA=
+MD5-Digest: vWkb7foAbWZZzYj3VD7sPg==
+
+Name: com/ardais/bigr/iltds/beans/SampleToSampleboxLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: QjOpBn4LvuFM9Ye7lT5AB2pRNv0=
+MD5-Digest: cQ2hYfiSAgQZYYIuJiKWVg==
+
+
+Name: com/ardais/bigr/iltds/beans/SamplestatusHome.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: dbpU2uTs8KXkrW1YlEJtep5FZeA=
+MD5-Digest: IXqVST8MSUo5m1S7MZuSjw==
+
+Name: com/ardais/bigr/iltds/beans/AsmformKey.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: iFJKFiL3Ilul2+kpE2YQJfeU/+o=
+MD5-Digest: 0BsBLD+Zrd0qOt+5jPXE9g==
+
+Name: com/ardais/bigr/iltds/beans/Samplebox.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: poUnTk9a0/l/YT/8v0ym8cs6Tv4=
+MD5-Digest: LJW8qV0S8xgvA1JUjTzSSg==
+
+Name: com/ardais/bigr/iltds/beans/ManifestAccessBeanData.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: 5QOQvW4yUZmgn8bqn5jVqkluXDQ=
+MD5-Digest: UoMThrkdui3hPMiFH+nqlQ==
+
+Name: com/ardais/bigr/iltds/beans/SampleHome.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: SvzzAMQmy2DCqzkLjOtHw/OASGg=
+MD5-Digest: L0OsO65/7ZXF9hq0EqvjsA==
+
+Name: com/ardais/bigr/iltds/beans/ConsentAccessBeanData.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: +zqVkVXBHIbnQbh6TYaeimktrx0=
+MD5-Digest: 8mFZnDC/+RsNCZvfxTAWVA==
+
+Name: com/ardais/bigr/iltds/beans/ConsentToAsmformLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: lgG3XzWcrIRCeKrViTU6rgjl7zA=
+MD5-Digest: 9zGcHUm3TQyo4wxut+kTlA==
+
+Name: com/ardais/bigr/iltds/beans/GeolocationToManifest1Link.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: cRkKk90/0Py2HI4DnaiqphCtCX0=
+MD5-Digest: V94OownJolkCatZQbzAEIQ==
+
+Name: com/ardais/bigr/iltds/beans/RevokedconsentAccessBeanTable.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: XQ9AhWpfzbPToNOzzrjwWb6mW54=
+MD5-Digest: wgR8vXgJNmKrhe9M/i9Ryg==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/BoxlocationAccessBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: 1vnoA6VBWMQT9mR5wn5z5EJLWlk=
+MD5-Digest: Qvj/tLguLHlVNSfWL4o+5w==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/ManifestBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: 4P5y/ErRQc7N/3ujgvu1TE2YsBw=
+MD5-Digest: 3z1EIFgy8BuSc87M7nibPg==
+
+Name: com/ardais/bigr/iltds/beans/ConsentAccessBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: sYNZxAhzIDfkF6juz8bEajlr/uI=
+MD5-Digest: WTK7kLFTI09mSOON88xFIg==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/SampleboxToManifestLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: KBYcWKQPKxvQ1PZU3LopBrUt4fk=
+MD5-Digest: Sv8qGR6XMnRZB2SII4OZEg==
+
+Name: com/ardais/bigr/iltds/beans/SamplestatusAccessBeanData.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: WRMuycqnOsOegvwNnYUNdWmjwCU=
+MD5-Digest: px4pMGexkCwWMwHpwTZbbw==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/BoxlocationBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: E9LCFqPRXAQsneuFG+9cvN62cSE=
+MD5-Digest: T7BgJQrmQ8Jry+uHTEZ+FA==
+
+Name: com/ardais/bigr/iltds/beans/ConsentToGeolocationLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: 8b2Fqp0c8O0wg2DJB6GdMYfBKIY=
+MD5-Digest: IyNSaMUti+LqChzIFoCwLQ==
+
+Name: com/ardais/bigr/iltds/icp/ejb/session/DesirableSpecimensBean.jav
+ a
+Digest-Algorithms: SHA MD5
+SHA-Digest: 5RLQcAP2YBHGkw8CA1boZjsAkSk=
+MD5-Digest: uvdvdn/eprLIN9ZaHMrzWw==
+
+Name: com/ardais/bigr/iltds/beans/ArdaisstaffKey.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: CUqGGuNsPxe9Dx9WC4RJs34aCSA=
+MD5-Digest: v0CJp5M8O2OunauGTHOMfA==
+
+Name: com/ardais/bigr/iltds/beans/BoxlocationAccessBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: 0IpDFzZO6Z4GEARJWSltLjObkz0=
+MD5-Digest: W4nnQ2vLMespEYX+0ijVBw==
+
+Name: com/ardais/bigr/iltds/beans/GeolocationAccessBeanTable.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: DA7NWoscFWGMyxXgn/h1xp8gEps=
+MD5-Digest: sQ3C9zhc1oZYMRltthIr4A==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/SamplestatusKey.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: wMNzO+15wgirPizvpP4J7Sin6ls=
+MD5-Digest: VPOSi9mJQ+vVTybXKkDDYQ==
+
+Name: com/ardais/bigr/iltds/beans/SampleAccessBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: em/oaTBDX1wHNsSlJbtkDG73QyM=
+MD5-Digest: dg9+hZw/N8e77LIaWLJ0vA==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/BoxlocationAccessBeanData.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: vT4EHDUxks3Sm5TjAjfPJl91fQo=
+MD5-Digest: YCm/7ffbFGuxf6SU5e2PWg==
+
+Name: com/ardais/bigr/iltds/beans/BoxlocationAccessBeanTable.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: H0bClrsC1jUFwvnhH+XAxOlzEvA=
+MD5-Digest: P/AP78O0NITL7Q6x7CKzFA==
+
+Name: com/ardais/bigr/iltds/beans/SamplestatusToSampleLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: uiI79w+dyLrEQD5l5AhxZDXO7c4=
+MD5-Digest: AqRDJqbb4hsEgX7JrUe28Q==
+
+Name: com/ardais/bigr/iltds/beans/SampleAccessBeanData.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: mgUx2bXzPrK4D89EhhxsGBkJGJk=
+MD5-Digest: lsvK9iyn17S2UNoyMDhbBA==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/ConsentAccessBeanData.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: USbhxnJFrcP5qxl9S3WyeSfyEJk=
+MD5-Digest: QHr9G+CkOjvZ5pkdMepqxw==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/GeolocationAccessBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: Joc0odMZC24mYDKI8ycK72bC9/Y=
+MD5-Digest: D7phboZyza9AanJ650gpsg==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/SampleboxBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: jMUJCyluaecylnH+hudbRE+l5/g=
+MD5-Digest: QRZiZp5lOXXS4DOrreR+5w==
+
+
+Name: com/ardais/bigr/iltds/beans/GeolocationHome.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: rgzOPHkBgQZhIuJqM+KiePKyCdI=
+MD5-Digest: IIeAe7hnC/6awFTBYKp8Yw==
+
+Name: com/ardais/bigr/iltds/beans/ConsentBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: d69poPdFLJlHSVvvp+GYmXkTry0=
+MD5-Digest: Ht3/1cjqsmgZ/cHIcSp6jg==
+
+Name: com/ardais/bigr/iltds/beans/AsmformHome.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: NOSbNqvR1sKruqz5KV6fmuCzHEY=
+MD5-Digest: vaJ/g3JRMkmVTyC0C+vlIQ==
+
+Name: com/ardais/bigr/iltds/beans/ManifestAccessBeanTable.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: V5qAMnznohL+OlvKCyfV699ByQ8=
+MD5-Digest: hR5WFy2nWwYzTv1J93Qjrg==
+
+Name: com/ardais/bigr/iltds/beans/ConsentAccessBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: 7cKJpoGOXaY0g2jBriVb+tdolQM=
+MD5-Digest: sVyPwbHhp1SxpY7znqapZQ==
+
+Name: com/ardais/bigr/iltds/beans/AsmAccessBeanTable.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: et7bbP+gqVkTfpcNVPqV1XnqFMk=
+MD5-Digest: LyAV29vmqvoYv6BKqTQbwQ==
+
+Name: com/ardais/bigr/iltds/beans/AsmformAccessBeanData.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: 6kIJhUlehJKiVFEza49fikPdJlo=
+MD5-Digest: Wx+JDBXanQDJ0C0OZrePog==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/SampleboxToBoxlocationLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: NbdJW5wQMDsX9kYtZKzM3xI1ZeA=
+MD5-Digest: NAB0FFEf+PrKIRsipLaDqg==
+
+
+Name: com/ardais/bigr/iltds/beans/SamplestatusKey.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: s/kBZbNDNI0s1++r9qNgWn8hpME=
+MD5-Digest: SJzPiJEgGfrQ8LdrpSWQ3g==
+
+Name: com/ardais/bigr/iltds/icp/ejb/session/DesirableSpecimensBean.cla
+ ss
+Digest-Algorithms: SHA MD5
+SHA-Digest: Ay2QqHGTkEuygGd8N3nxbHXcxFM=
+MD5-Digest: J+oHliNqf+/r213iqel1yQ==
+
+Name: com/ardais/bigr/iltds/beans/AsmHome.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: 8hzWwcfzBVy4RYLV2qa/FnN4wYE=
+MD5-Digest: XOP9EBqM/QRjjjyovGAXWw==
+
+Name: com/ardais/bigr/iltds/beans/ConsentAccessBeanTable.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: xoO/iy9qaMYod4JF7ZmUToZE3Wc=
+MD5-Digest: cXUmnTTNgnblD8xPH1tzdQ==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/icp/ejb/session/DesirableSpecimensKey.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: tWtlIamxQqWno9pLbUH2370M63w=
+MD5-Digest: +kBIpiHxqys/lDgWl6RbVQ==
+
+Name: com/ardais/bigr/iltds/beans/SampleToAsmLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: yQ57op2ZNo+9LLu4IilAJuLGitM=
+MD5-Digest: 5gCTYAmaUviBSRWn/fGoNQ==
+
+Name: com/ardais/bigr/iltds/beans/ManifestToGeolocation1Link.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: F/RIbnYSg2CWwxKQaMgsE5P1PcA=
+MD5-Digest: VEdra6DemUpvdDy2U4fX8g==
+
+Name: com/ardais/bigr/iltds/beans/Revokedconsent.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: VW47oGL9SdVoQ8/xhI2UIxcxW0o=
+MD5-Digest: xQ85iVnE/cbJf2CQaETPdw==
+
+Name: com/ardais/bigr/iltds/beans/ManifestAccessBeanTable.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: 8EN2cEmEtPfDbwxWRmrFsl+mJCk=
+MD5-Digest: AdOXqzv4SOYralBtKTcXOw==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/ManifestHome.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: bpg2cQzSF6KbcQMhtDFNOCwwNyk=
+MD5-Digest: 45JT0PzZTowaBbt8IB4L+Q==
+
+Name: com/ardais/bigr/iltds/beans/SampleboxHome.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: wxp5m2LU1TWqGn2p2+UvP4SySVY=
+MD5-Digest: 6dRaaSuOaBijFxC5UXt++A==
+
+Name: com/ardais/bigr/iltds/beans/Sample.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: FGE1fjQ10jB34Xa2kCqGKz8uMcg=
+MD5-Digest: 0k56W3qhJSNcjtXEHJwJGQ==
+
+Name: com/ardais/bigr/iltds/beans/SampleboxAccessBeanTable.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: oYqlYsz7JRryJjF5uRQz0nUF4yY=
+MD5-Digest: poicUZonLL/Rhc7ybi22IA==
+
+Name: com/ardais/bigr/iltds/beans/AsmAccessBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: RUFYMbdkV52n0g8GAGz/H+JkSEw=
+MD5-Digest: V+YsHBi/ocPxuw/SmLa0gw==
+
+Name: com/ardais/bigr/iltds/beans/AsmformAccessBeanTable.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: laS8XWqZUQLDhdfynux7/KEf+0g=
+MD5-Digest: U1Dd3ToBag0qGaqig1Dmnw==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/SampleHome.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: CJIuO+34O3Mn4/awDLMy9gDlnFA=
+MD5-Digest: oRgVlpioDyl+L8GUJwoMOA==
+
+Name: com/ardais/bigr/iltds/beans/BoxlocationToSampleboxLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: /YCSEEilyaBrvlebsgSNSNWOdgQ=
+MD5-Digest: qgRH8fO9Liz5efRBTWiZRA==
+
+Name: com/ardais/bigr/iltds/beans/ArdaisstaffHome.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: 1k9BdeE8mezz5A4DZbijuDk0/wk=
+MD5-Digest: Hx61XXMNM2orYFv8NBfbrQ==
+
+Name: com/ardais/bigr/iltds/beans/SampleboxAccessBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: ouvwvNz/98VRutYvjA8MEeFwyw0=
+MD5-Digest: Ts9fwXMeH+dndqva9q66Vg==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/ConsentBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: n4EminrptAogFr31QNk/mlslfuw=
+MD5-Digest: r4l34v3Vy/l2C+hz81MEow==
+
+Name: com/ardais/bigr/iltds/beans/RevokedconsentAccessBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: etJa5zfqAC5DcLzTeEbF+9gkK1g=
+MD5-Digest: FflytBZg/G5SS3SW/Wix2w==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/ArdaisstaffAccessBeanData.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: ++dmVO8QJ5WoSmz0N4XfanRMork=
+MD5-Digest: NT3VEIK0Oovfofr/Pxk45A==
+
+Name: com/ardais/bigr/iltds/beans/GeolocationHome.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: 5GYyZnAQijo2yd5TKgr8Qi+q8cM=
+MD5-Digest: pfa3U6EETLAEB1dAsaTFZg==
+
+Name: com/ardais/bigr/iltds/beans/ArdaisstaffAccessBeanData.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: YVRxPL7289g3SGCZLX2JIPMqjjo=
+MD5-Digest: Rf4528YVkbnZ0Dx9vccZoA==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/Ardaisstaff.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: q03o9/W8ZT4wfjEc6ZJdqQFJ56Y=
+MD5-Digest: IkJp95qNc1TBLzqLm1wVQg==
+
+Name: com/ardais/bigr/iltds/beans/SampleboxToManifestLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: 5sQQVl03AdfVI8nv75sWOYpkxSo=
+MD5-Digest: OK47C+GuAohh0OBPX9zOvw==
+
+Name: com/ardais/bigr/iltds/beans/SamplestatusAccessBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: vStzufHh3QZhldVdXeh+HUoIfB4=
+MD5-Digest: 1XUoi/jTn+5HdLi7bn+dEA==
+
+Name: com/ardais/bigr/iltds/beans/ArdaisstaffBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: NQ5aYPgsF/Nzy7u+M5mb9wzN65o=
+MD5-Digest: /6jQuQSD22gC5+zO0CeMcw==
+
+Name: com/ardais/bigr/iltds/beans/AsmHome.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: 0nrJj4LU3I49NnyyTWA5e2fwnGg=
+MD5-Digest: 1n80NAa9dcYlwnUBBirPYA==
+
+Name: com/ardais/bigr/iltds/beans/RevokedconsentHome.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: QePadBubB3DB1u8UqPmTAzSl1PY=
+MD5-Digest: 2mZmcugdUXnD/X/iKhYLgA==
+
+Name: com/ardais/bigr/iltds/beans/GeolocationToBoxlocationLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: BiD5f+o7mlbU6gFbQ/pkevJ13sw=
+MD5-Digest: cxppShnT8MxLqYKoudYwZA==
+
+Name: com/ardais/bigr/iltds/beans/RevokedconsentHome.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: /WiZKmhx+dhatVsw2M53XLl/bw0=
+MD5-Digest: 0xbQVyRnwZ+UOJimSNFPcw==
+
+Name: com/ardais/bigr/iltds/beans/GeolocationKey.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: NMTClE5INiy8792BkK01bkApjD4=
+MD5-Digest: A8I9orIfa7FKtPQZ0jbsnQ==
+
+Name: com/ardais/bigr/iltds/beans/SamplestatusHome.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: zXg8dSiSVfBaN70CEoCU/Jybikw=
+MD5-Digest: c0aU3P5IJSahu3WqrD94PA==
+
+Name: com/ardais/bigr/iltds/beans/RevokedconsentAccessBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: p6K3y/pdBl9kaN+RIpqYwxRONAs=
+MD5-Digest: /4o+au0cy/7H2LoAe7J8zQ==
+
+Name: com/ardais/bigr/iltds/beans/SampleBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: MqCTnNOiGBlrjq2J8TCQHnk/SKo=
+MD5-Digest: E6Bf8DIKuG++jqtfQKF56A==
+
+Name: com/ardais/bigr/iltds/beans/SampleToSamplestatusLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: rGBjLBE5R2cIiP2psJjQRKWdiRE=
+MD5-Digest: JWQZ1bpfmd0RI4VlGoOJng==
+
+Name: com/ardais/bigr/iltds/beans/SampleboxToSampleLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: im/pq8jsgeWpmHkwQLGx1QfUizc=
+MD5-Digest: oEIrH/b8qPYiqZJYDpy0qw==
+
+Name: com/ardais/bigr/iltds/beans/BoxlocationToGeolocationLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: GorezRliSMqzDRexy4f9scrvI9s=
+MD5-Digest: OrCNPdNso97nAlMbhN/YKg==
+
+Name: com/ardais/bigr/iltds/beans/AsmformHome.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: OiXiJx8k9eLdsq0Jy/fcJaH5k78=
+MD5-Digest: wo4gKqgtYNqaCcZ9l8U6Mg==
+
+Name: com/ardais/bigr/iltds/beans/RevokedconsentAccessBeanTable.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: tOWbHwtXaWLK2oPEzGuFaxPqxQY=
+MD5-Digest: ZN9BCPaRA7lRXKL6L1xU3A==
+
+Name: com/ardais/bigr/iltds/beans/Geolocation.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: wbKSp5gzTLMnq3mS6YHO0QRO2co=
+MD5-Digest: tpVfY0B4RJrUDwfvkb1WhA==
+
+Name: com/ardais/bigr/iltds/beans/GeolocationToConsentLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: uPrlPvTi0Trd7zrhkzmTRJEzVEc=
+MD5-Digest: 8akYEaq3K6Xwwx45+jsOBQ==
+
+Name: com/ardais/bigr/iltds/beans/AsmformToAsmLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: Wtq2tmwgVNJRDAJkDK4Kn0eJls8=
+MD5-Digest: n6Cj87NlaMW/773B+vci7Q==
+
+Name: com/ardais/bigr/iltds/beans/ArdaisstaffToGeolocationLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: yrD458+p9KgzNq/8Aid7FFcSB3M=
+MD5-Digest: JhHPNXhteZDQlRPQST2i4g==
+
+Name: com/ardais/bigr/iltds/beans/Samplebox.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: BZ786OMzxVqF5+hyGSiUzlbHPfA=
+MD5-Digest: +DYTFBvD4QiMBhij04dmGw==
+
+Name: com/ardais/bigr/iltds/beans/ArdaisstaffToGeolocationLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: 3J8ZY8PqHG4zg58GLcW/s4BSpJ8=
+MD5-Digest: I1WaG2v4A/8mw9NhlUaDHg==
+
+Name: com/ardais/bigr/iltds/beans/AsmKey.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: p/EJ/l+LoPzUxxiufNTPakzjtMQ=
+MD5-Digest: VUoKAVQijM8WIBuQVW5N7A==
+
+Name: com/ardais/bigr/iltds/beans/BoxlocationHome.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: Ouvp3xQ1kAwldTlONdAicNKPoZ8=
+MD5-Digest: G3knCnHjOUXsYaGreVLnLQ==
+
+Name: com/ardais/bigr/iltds/beans/Consent.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: 4KMLA/NwzQ/r2OM53DSFV0mk38M=
+MD5-Digest: 0erp50NIGbQnRqsYq5mt2g==
+
+Name: META-INF/Schema/Ardais.dbxmi
+Digest-Algorithms: SHA MD5
+SHA-Digest: Bm4uMQsyu4kPhmXAKacf828IC3k=
+MD5-Digest: miIy9pRXYqFKSDj+SP/7iQ==
+
+Name: com/ardais/bigr/iltds/beans/ManifestToSampleboxLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: aDw0E7XtHW8aXj5fmFoD1WEJrus=
+MD5-Digest: wPMKlxmd7KZKkStKx/nAfg==
+
+Name: com/ardais/bigr/iltds/beans/ManifestHome.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: mtqq/EvV+HC5KP0Q73uRJ0+KbsM=
+MD5-Digest: TJOD8ZpusrpJR9d/XFhs8A==
+
+Name: com/ardais/bigr/iltds/beans/ManifestToSampleboxLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: CCqJY8xBEflLgU2q2Zr324hu7dA=
+MD5-Digest: xfe3UHF5phKvipBFE1bk9w==
+
+Name: com/ardais/bigr/iltds/beans/Revokedconsent.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: VozwE9P++wM6bslwqKnZjEfXTtQ=
+MD5-Digest: kAdRazArIM52qoZxu57QjA==
+
+Name: com/ardais/bigr/iltds/beans/SampleAccessBeanData.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: wqSykFSONlOSM5upT5TBgfvn7To=
+MD5-Digest: mj8nK+Qtc5sYu8IzdMmVMg==
+
+Name: com/ardais/bigr/iltds/beans/BoxlocationHome.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: nq807t6c2eDqFznMnMpJYRbjLE0=
+MD5-Digest: Go8ePPqgHIEEDm+sG9pTTQ==
+
+Name: com/ardais/bigr/iltds/beans/AsmformToAsmLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: k/wLaZiI7+v7dxEVS8NyBVMpA0o=
+MD5-Digest: Qk40qrWm1+65EkAOQ881Zg==
+
+Name: com/ardais/bigr/iltds/beans/SampleboxKey.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: Ia8hIHniEeeIAUB9Wq86FVKylK4=
+MD5-Digest: pbTetvCchIkNsmHiFhsqyQ==
+
+Name: com/ardais/bigr/iltds/beans/ManifestAccessBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: X3lJ5iqW6no2YwzfEWIM0HlAtGA=
+MD5-Digest: yGZoT/OhByUgNtqyt2vw9g==
+
+Name: com/ardais/bigr/iltds/beans/RevokedconsentKey.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: zomnsNz8zDAX5RtsFuDSDL/6fyg=
+MD5-Digest: t6Eg1BKv3P37u3FKCAO51A==
+
+Name: com/ardais/bigr/iltds/icp/ejb/session/DesirableSpecimensHome.jav
+ a
+Digest-Algorithms: SHA MD5
+SHA-Digest: mt1xaUe7y9r9xflqPxsxXZpmJLk=
+MD5-Digest: gif+cD6t9fl43rx7USKfHg==
+
+Name: com/ardais/bigr/iltds/beans/SampleKey.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: htxJF7UBBshRQ0/WJLob7OjnxBk=
+MD5-Digest: lQdm8JPaVvTMixCtDqP7NA==
+
+Name: com/ardais/bigr/iltds/beans/ManifestToGeolocation1Link.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: 40H/3myAJv4XnR4e4543w63tHFs=
+MD5-Digest: Z37P6F6pTB5mbWQ7HdJu/Q==
+
+
+Name: com/ardais/bigr/iltds/beans/Ardaisstaff.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: Adv3Bx4DAPxkPzdGqVN5K3tvtkA=
+MD5-Digest: kHD0K67xJlbgR1WWDSlgfw==
+
+Name: com/ardais/bigr/iltds/beans/GeolocationToArdaisstaffLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: Dzb4uCFM2YbmsHGecX4lD16Ly4M=
+MD5-Digest: 8WQr0aPLiBl6K2gzsekdWA==
+
+Name: com/ardais/bigr/iltds/beans/SamplestatusAccessBeanTable.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: 7PFeLxhZenDMu0H4Pxt4CWk/U3s=
+MD5-Digest: hnmYE0vLsTZ2Qty4lRfRkQ==
+
+Name: com/ardais/bigr/iltds/beans/SampleboxToBoxlocationLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: TQGZO3rsuNzz/ABeZfGsdglqbYQ=
+MD5-Digest: UzgwxgUbUsM/GGSDZxZIbA==
+
+Name: com/ardais/bigr/iltds/beans/Asm.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: vOmk8JUkaLVg0j1PYtl9MSnq7W8=
+MD5-Digest: f1Qo33HIrN8+ScUwSV9qsg==
+
+Name: com/ardais/bigr/iltds/beans/Boxlocation.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: ta4NILH767NySgSxAEUpDvoR8to=
+MD5-Digest: 8Cuh3TPIQgKvu//pZyoT0Q==
+
+Name: com/ardais/bigr/iltds/beans/ManifestAccessBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: n+4DJ58vFWNdKPiWqJsS5AxzhBE=
+MD5-Digest: 41u9WZy2M65Qh93DApbPGQ==
+Java-Bean: True
+
+Name: META-INF/Map.mapxmi
+Digest-Algorithms: SHA MD5
+SHA-Digest: yxkQa3AT0gyLFZn1Z/KbiS9A6N8=
+MD5-Digest: WNV/6mSbKvAuihmdKMQ9oQ==
+
+Name: com/ardais/bigr/iltds/beans/AsmformBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: l2KOn8rS5XPgoUfMTQc5cIGgiU8=
+MD5-Digest: JdDSTs9zVJpqz2SQE9YByg==
+
+Name: com/ardais/bigr/iltds/beans/BoxlocationAccessBeanTable.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: OaYvCTrNiaUf2N6/rhv79EURywM=
+MD5-Digest: ESYP6uRleLVTzToL4IIlNQ==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/GeolocationAccessBeanData.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: nq909BOktyhE50HvyZYrtlgcS+Q=
+MD5-Digest: 0E198ZVc0KvvLch72rxL/w==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/Asm.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: mzJDX4G0x8UzfkfaMiIXe/aUw4U=
+MD5-Digest: u8tmnb4ct8gdl6S5CbvzNA==
+
+Name: com/ardais/bigr/iltds/beans/ConsentKey.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: eoAL5sdzYXRqPv/55JmPMyitc8U=
+MD5-Digest: PsRkOzhXit3xAJ7/zOTSEA==
+
+Name: com/ardais/bigr/iltds/beans/RevokedconsentKey.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: TUI9w9uQUUHkPVj9pbaKWUycKak=
+MD5-Digest: Swl2yUI/ZshV2rj1aFq59g==
+
+Name: com/ardais/bigr/iltds/beans/AsmAccessBeanTable.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: DzTg+LNW+IIjXiLxnsFr+I1Olck=
+MD5-Digest: PuRI0iyx0kERAsNfoGIceQ==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/BoxlocationToGeolocationLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: Ypv2UgGM/vBhvMa+DPYywh+UOks=
+MD5-Digest: CqYFtlpABR6pfk2KRy2Anw==
+
+Name: com/ardais/bigr/iltds/beans/SampleAccessBeanTable.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: 4vcAs6F1fJGpZGyP3iYBwMLcUCY=
+MD5-Digest: F9jRbGZGuW0O1pTYLrPPRA==
+
+Name: com/ardais/bigr/iltds/beans/ConsentAccessBeanTable.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: NuWUN9pQ3Pbik7n/vFP+e0Svsz4=
+MD5-Digest: RXKMW39q9mWfVAol0BGwAA==
+
+Name: com/ardais/bigr/iltds/beans/RevokedconsentAccessBeanData.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: iDwpzdwOGuFL0Xg+X2GoVCQ7XUc=
+MD5-Digest: HcZF2LHeLGM3GDRLHhdHNQ==
+
+Name: com/ardais/bigr/iltds/beans/ManifestBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: H4FeQ0YsC9njRKA0TutI6txTKIY=
+MD5-Digest: 9O4/aTZO5YCasoS71avPzA==
+
+Name: com/ardais/bigr/iltds/beans/ArdaisstaffKey.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: Vdyp5ykBJY5dkpHKA9FKL49469k=
+MD5-Digest: NZfcV2Kujzg9s1zHd4CGHQ==
+
+Name: com/ardais/bigr/iltds/beans/Samplestatus.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: 8ZG3ROY+F3mgGHb/TaHWM63R/q4=
+MD5-Digest: KbFGbrAZsmjFWvirci1XTA==
+
+Name: com/ardais/bigr/iltds/beans/GeolocationToManifestLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: 459eEr2XpkxHKORTGlSC952mjC0=
+MD5-Digest: A9Jdwq+C4jJe4GB7Dc1KBA==
+
+Name: com/ardais/bigr/iltds/beans/SamplestatusAccessBeanTable.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: 6Rb88nfHJopJRYSru1gbrPPvRI4=
+MD5-Digest: 8NmzXVOghUGMkTdfNXgkww==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/Samplestatus.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: zsTJvsLJP6jhy/+VfvDqalZb7Ts=
+MD5-Digest: mN8re6yrgS5AoOwfvKb2hA==
+
+Name: com/ardais/bigr/iltds/beans/GeolocationKey.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: cM2W6sELCYbZVKKSbhY2LsR8+QM=
+MD5-Digest: L9WTGZhzfiXLIST+eKxANg==
+
+Name: com/ardais/bigr/iltds/beans/AsmformAccessBeanTable.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: cc4APfrCkRcMFx/NzVxOsI4uUNs=
+MD5-Digest: xcJy5DjBHOM1NHqj/6qlcw==
+
+Name: com/ardais/bigr/iltds/beans/AsmformAccessBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: EoQK0ZYUiEK1CX1ERzWRMgctNJc=
+MD5-Digest: ZGlLkX6vmCqDW+2FK357tg==
+
+Name: com/ardais/bigr/iltds/beans/AsmAccessBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: AlJmmjjj17B3PAkUrkybLLaAd20=
+MD5-Digest: FtGE/bmFHITQswKoe8Ssjg==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/AsmAccessBeanData.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: opIlTLfxuB/un5bkTgNI+3fCJng=
+MD5-Digest: FYyH+UyiEh2PHI2qLyyXjQ==
+
+Name: com/ardais/bigr/iltds/beans/AsmToAsmformLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: 189YzA+hyBSIvhgTuKn1VzM/2Vk=
+MD5-Digest: dgnRtJ1jSSPfQbx4NbweAA==
+
+Name: com/ardais/bigr/iltds/beans/Consent.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: 37ItJMjQpw6abA4lezT+bqsquDE=
+MD5-Digest: nBg7SMZ8M8qqlQujy7gKJw==
+
+Name: com/ardais/bigr/iltds/beans/ArdaisstaffAccessBeanTable.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: TlzmF2/LwezQ+RH0rc47x8izcIs=
+MD5-Digest: 55NS85jMOo+BU6XZP60srg==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/ManifestKey.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: 5OdW1MfmCKDVv9U0KbK2pX80dqk=
+MD5-Digest: HDZ9QveDZFubZ+DAGTPCZA==
+
+
+Name: com/ardais/bigr/iltds/beans/GeolocationToBoxlocationLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: wv6X3Ezt+No7yB111My8F9iMq0g=
+MD5-Digest: hdcQOb9DbZ/wY2q1Rto6Fw==
+
+Name: com/ardais/bigr/iltds/beans/GeolocationToManifest1Link.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: Ll3MiHol5oi1bVWvwN4BsTDV9gc=
+MD5-Digest: cOB6cSQGabyeXdKs3tYaIA==
+
+Name: com/ardais/bigr/iltds/beans/BoxlocationKey.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: nPpGEverPtm961aOPRQ6Hec69sw=
+MD5-Digest: 4ceFE22wx6Xw0+6S8Zfvbw==
+
+Name: com/ardais/bigr/iltds/beans/AsmToAsmformLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: khfqrSCp1yErnWkOT2ZGgTZOl3g=
+MD5-Digest: azFo871odYk0irtjAfNcHg==
+
+Name: META-INF/ejb-jar.xml
+Digest-Algorithms: SHA MD5
+SHA-Digest: 2UhQbg4A4DRdB9fhYp2trTc5C0c=
+MD5-Digest: k/bxu9b0PCXVRBwVKzpgCA==
+
+Name: com/ardais/bigr/iltds/beans/GeolocationToConsentLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: QkTiNXriqOwe/jrgYsB5xQTwSkE=
+MD5-Digest: /C7Y4lw+39YyEVmfchNfDg==
+
+Name: com/ardais/bigr/iltds/beans/AsmToSampleLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: Ydj7wxNNnm32NaKuoj3fTrnQLVY=
+MD5-Digest: /CimxC/MEeOQFtcKbOgPRA==
+
+Name: com/ardais/bigr/iltds/beans/SamplestatusBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: REJmqP06bmN7Gi40o06YD3cjeUg=
+MD5-Digest: 2tCccXxZH2LQgt2RCmDBJQ==
+
+Name: com/ardais/bigr/iltds/beans/GeolocationBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: q8gwaDikUzWkzvb31fvZ0BvspHc=
+MD5-Digest: FVBUQaVfHYkX7Xt6Z27QLQ==
+
+Name: com/ardais/bigr/iltds/beans/AsmformKey.class
+MD5-Digest: yEIc9rl1vjnShgbmhe1HRw==
+SHA-Digest: a+rgsP53AuzFq5tbFeEZliAyueg=
+Digest-Algorithms: SHA MD5
+
+Name: com/ardais/bigr/iltds/icp/ejb/session/DesirableSpecimensKey.clas
+ s
+Digest-Algorithms: SHA MD5
+SHA-Digest: QCn2OQvJeE6MUpjos+WNM8FGnn4=
+MD5-Digest: Bl6YR0rnzpPyuu1A+t0eaw==
+
+Name: com/ardais/bigr/iltds/beans/AsmformToConsentLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: LAEa3cdkInwSW6Be6gpoFTIfmHU=
+MD5-Digest: YlvzG9aomaRBPX8w1n2HOg==
+
+Name: com/ardais/bigr/iltds/beans/ConsentToGeolocationLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: L8OTykiN99dlPfqRl4CBvjJj7Wk=
+MD5-Digest: +1NjSXYn59UA7u5owIykmQ==
+
+Name: com/ardais/bigr/iltds/beans/ArdaisstaffAccessBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: 5UOBlGREbuJgIuOZ9WMLXTsS4YQ=
+MD5-Digest: p96fbVMDaholi7Oebcce+w==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/AsmBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: DSeQmTVw5c2LVdYjga11CipvHPs=
+MD5-Digest: bdugk192hA0eBBkki2vwww==
+
+Name: com/ardais/bigr/iltds/beans/SampleboxAccessBeanTable.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: MV73HIj9Gg8m3zMqsa+MpnJST7w=
+MD5-Digest: zXVxtyd0IC2kSEVwpsrXgQ==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/AsmformToConsentLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: M8cenPQHbhdl+3/dMOwMvJ0BiYc=
+MD5-Digest: rUPN+ggw4PPL8eGTZz6BkA==
+
+Name: com/ardais/bigr/iltds/beans/ManifestKey.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: GyCGHp0Lx2A2VRTyLDnVnB9DAR4=
+MD5-Digest: yb80f2SnhHzX/AqIwiClrg==
+
+Name: com/ardais/bigr/iltds/beans/RevokedconsentBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: Xw2DscI7YqobwcmfjDFTcOxNz8Y=
+MD5-Digest: eo3zeixFU2Y2/agmty7sqg==
+
+Name: com/ardais/bigr/iltds/beans/BoxlocationToSampleboxLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: Lv5Ej/HyLhf7eIyUbks7t4Vyhzo=
+MD5-Digest: HwC2BLYq2rOwxWyVp/W5tQ==
+
+Name: com/ardais/bigr/iltds/beans/Asmform.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: yTGRkIjrGGH99XUB9L/FWL2rj9c=
+MD5-Digest: ygVYO11JZtKkCQ5f4C2j+g==
+
+Name: com/ardais/bigr/iltds/beans/SamplestatusAccessBeanData.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: Xn/q7ZyXGsFaN4ultLXg71Ae4Hc=
+MD5-Digest: zbC3cGSiS7tudk7pn0nAQg==
+
+Name: com/ardais/bigr/iltds/beans/Manifest.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: E8UK+O/vz58UkKQh0Q94Pslspqs=
+MD5-Digest: xiFcp/MRK4z94QG0gO8MvQ==
+
+Name: com/ardais/bigr/iltds/beans/BoxlocationAccessBeanData.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: nAI/91thjuYd6WU4N9ylWWrwPys=
+MD5-Digest: rKReL4kQMdO0XiTtfbJqAA==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/SampleboxAccessBeanData.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: IArLmChwtItAOWsF3BhUbTYw3XY=
+MD5-Digest: uROKzc64RkovT3r/u8s2HA==
+
+Name: com/ardais/bigr/iltds/beans/SampleToSamplestatusLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: GGZJBMfnaZhVBAfjEI5wHj2JnCY=
+MD5-Digest: 2DlAIlLhdnqwqbeT9G49pw==
+
+Name: com/ardais/bigr/iltds/beans/ArdaisstaffAccessBeanTable.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: QGSBSE3f8OyDuGk+m4GWsKXQjOY=
+MD5-Digest: HttUQxH1RvYcXAzN8cKVNw==
+
+Name: com/ardais/bigr/iltds/beans/ConsentToAsmformLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: khQZODxNyOOW9HnGZJlyHMFr3Ic=
+MD5-Digest: snUBl6tTB44B9m445Tycvg==
+
+Name: com/ardais/bigr/iltds/beans/GeolocationToManifestLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: qpsBRdsyvt0q4u26eZKcQPWfH84=
+MD5-Digest: bkGD955vhkFJgMnCDGkBBg==
+
+Name: com/ardais/bigr/iltds/beans/BoxlocationBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: zXeUJ1+I37T04rrI10JNAz8U/bQ=
+MD5-Digest: DeVH8jLh2I+zPFQL6zOvyw==
+
+Name: com/ardais/bigr/iltds/beans/AsmformAccessBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: +g+Av2mstc3ERkiXtPAKBVD8owk=
+MD5-Digest: fWeaKuKtKMFt1gtzGgrRXg==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/ConsentHome.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: BK4HtcamrR8spzZsFq3S4J0tW3g=
+MD5-Digest: LxMgKHtNQGXkzGi3woKD9A==
+
+Name: com/ardais/bigr/iltds/beans/AsmBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: uKixxfzZEXahwbHAHGoxKnnArBY=
+MD5-Digest: 8DNdYcoeBxeqCSpdbmVHIw==
+
+Name: com/ardais/bigr/iltds/beans/ManifestAccessBeanData.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: 6XnfLWsNPdMXZjKFSBAHghuHN/o=
+MD5-Digest: NtbtKBFMOyJVa1OHFO36rQ==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/AsmAccessBeanData.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: Cd2cpNOLn8e5O+MrvuZ+F3MSy0Q=
+MD5-Digest: mycEnHaZgnz7Zb+fQXpbRg==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/SamplestatusBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: pWTW3mkwL27Z3qLQPH1eISQuDis=
+MD5-Digest: u51bq4q+G/sN8Xo7zXOhIA==
+
+Name: com/ardais/bigr/iltds/beans/SampleboxKey.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: 0vFPkXvncPd1f+b7llBsn8my9kE=
+MD5-Digest: NwmNbSqynyWRT3axIQ3cJQ==
+
+Name: com/ardais/bigr/iltds/beans/SampleToSampleboxLink.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: /rmf8Nbi0frBQVNbebywpHn7yqA=
+MD5-Digest: 53ViWZa0hONyD04C8vRh4A==
+
+Name: com/ardais/bigr/iltds/beans/GeolocationBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: f5GVZZR4TZB4Y0Dhid42LONihIA=
+MD5-Digest: KV/hXQ6n8rnkAgnFIoM61A==
+
+Name: com/ardais/bigr/iltds/beans/SamplestatusAccessBean.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: KNDE3VG96Koljmp15VIxSTpuYKE=
+MD5-Digest: 7km4KkVsmxR37d8tf5hn5w==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/AsmKey.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: e2xbZs6hsSA+mz5xElHGqQIK0R8=
+MD5-Digest: S/SyfhFf0tmNRD7vrdMrDg==
+
+Name: com/ardais/bigr/iltds/beans/Sample.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: mh9dNidxRnriqzbD1DOwz6J0Hss=
+MD5-Digest: ZIlGCaGvz7qx3bAeNmi+hA==
+
+Name: com/ardais/bigr/iltds/beans/SampleBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: 9CX9WKSPmq08NIZ2tl2cNMuz3OE=
+MD5-Digest: McHiJfsw/suPURbgSehpqQ==
+
+Name: com/ardais/bigr/iltds/beans/SampleboxHome.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: jdijCeO4N1ThrVvraqovTyOE9Sg=
+MD5-Digest: 1ksKAZQhzKW3d1ORgK/szw==
+
+Name: com/ardais/bigr/iltds/beans/GeolocationAccessBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: IksCf/ffnc9FNyMvYqtTQ1thyxo=
+MD5-Digest: xUcN6LQ0+qFr5ULjXTqJWg==
+
+Name: com/ardais/bigr/iltds/icp/ejb/session/DesirableSpecimens.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: 1Kj55qOLVGMrmrbm0VmFt+8qTCk=
+MD5-Digest: DTLSjr1302mwl95sfaERdw==
+
+Name: com/ardais/bigr/iltds/beans/SampleToAsmLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: oLpXA8Da5Ivm/IporpHthiUem1E=
+MD5-Digest: TuvOrukzfA5pKAbnmHlDOA==
+
+Name: com/ardais/bigr/iltds/beans/SampleboxToSampleLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: HRPHj60Iy0CvFX7v0cjeS0YDC8o=
+MD5-Digest: jgrZ9revoou4Yb25k9LjjQ==
+
+Name: com/ardais/bigr/iltds/beans/ConsentHome.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: qiEZK4fb8nSf8UwyVXLyHH+5O3E=
+MD5-Digest: jARkVMhG1TNLtjW4Yma/qg==
+
+Name: com/ardais/bigr/iltds/beans/SampleAccessBeanTable.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: oggkp5PpPTD/NNibx01yfPV0H1w=
+MD5-Digest: HfQJx3mp1V60ZpAQqbuTJw==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/SampleboxAccessBeanData.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: fG5Oy2Jd3lmVLR+LKz2syaT0y6A=
+MD5-Digest: RxOjMe5PMmH3+1xGj9I06A==
+Java-Bean: True
+
+Name: com/ardais/bigr/iltds/beans/AsmToSampleLink.class
+Digest-Algorithms: SHA MD5
+SHA-Digest: DI9fFluSpdJElpYYtaNlattWzKs=
+MD5-Digest: rPUgMZZY7v0FPacywnHIMA==
+
+Name: com/ardais/bigr/iltds/beans/SampleboxBean.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: Nfjl+SwoeJx4iEM8qHI8mWo0iSc=
+MD5-Digest: afVXUobskbSxXHbLvr2V3Q==
+
+Name: com/ardais/bigr/iltds/beans/Manifest.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: X4WC+djtu+snm4Xlf0qfLQrfdQk=
+MD5-Digest: L9WKbfLYV12BRgHAVRd0Tw==
+
+Name: com/ardais/bigr/iltds/beans/SampleKey.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: dcCXX/fOOSDwKcR7tc2/eQc/4hw=
+MD5-Digest: GG2GCnug+SM7ZaYlghc5Jg==
+
+Name: com/ardais/bigr/iltds/icp/ejb/session/DesirableSpecimensHome.cla
+ ss
+Digest-Algorithms: SHA MD5
+SHA-Digest: TLxWZuIzPLt3/tHNFOCNQrCZKl0=
+MD5-Digest: ABfAaA342zZfLGtpEYKahg==
+
+Name: com/ardais/bigr/iltds/icp/ejb/session/DesirableSpecimens.java
+Digest-Algorithms: SHA MD5
+SHA-Digest: iNPMtigmxYDmSvLetx9DzqNKrpg=
+MD5-Digest: UtdZCz5860t0pc2CZ1ErYA==
+
+
+

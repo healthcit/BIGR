@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="RDBTable_1053626315449" name="SAMPLESTATUS" primaryKey="SQLReference_1053626315886">
+  <database href="META-INF/Schema/ARDAIS.dbxmi#RDBDatabase_1035204447382"/>
+  <schema href="META-INF/Schema/ARDAIS_BIGR.schxmi#RDBSchema_1035204448253"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315449" name="STATUS_TYPE_CODE" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626315902" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315450" name="SAMPLE_STATUS_DATETIME" allowNull="true">
+    <type xmi:type="RDBSchema:SQLTimestamp" xmi:id="SQLTimestamp_1053626315902" precision="2" timezone="false">
+      <originatingType xmi:type="RDBSchema:SQLTimestamp" href="DB2UDBNT_V72_Primitives.xmi#SQLTimestamp_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315451" name="ID" allowNull="false">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1053626315902" precision="10" scale="2">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLNumeric_10_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RDBColumn_1053626315902" name="SAMPLE_SAMPLE_BARCODE_ID" allowNull="true">
+    <type xmi:type="RDBSchema:SQLCharacterStringType" xmi:id="SQLCharacterStringType_1053626315903" length="250">
+      <originatingType xmi:type="RDBSchema:SQLCharacterStringType" href="JavatoDB2UDBNT_V72TypeMaps.xmi#SQLCharacterStringType_250"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="SQLReference_1053626315886" name="PK_SAMPLESTATUS" members="RDBColumn_1053626315451" constraint="SQLConstraint_1053626315902"/>
+  <namedGroup xmi:type="RDBSchema:RDBReferenceByKey" xmi:id="RDBReferenceByKey_1053626315449" name="C5828683" members="RDBColumn_1053626315902" constraint="SQLConstraint_1053626315903">
+    <target href="META-INF/Schema/ARDAIS_USN_SAMPLE.tblxmi#SQLReference_1053626315839"/>
+  </namedGroup>
+  <constraints xmi:id="SQLConstraint_1053626315902" name="PK_SAMPLESTATUS" type="PRIMARYKEY" primaryKey="SQLReference_1053626315886"/>
+  <constraints xmi:id="SQLConstraint_1053626315903" name="C5828683" type="FOREIGNKEY" referenceByKey="RDBReferenceByKey_1053626315449"/>
+</RDBSchema:RDBTable>

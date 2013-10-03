@@ -1,0 +1,1760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejbrdbmapping:EjbRdbDocumentRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Mapping="Mapping.xmi" xmlns:RDBSchema="RDBSchema.xmi" xmlns:ejb="ejb.xmi" xmlns:ejbext="ejbext.xmi" xmlns:ejbrdbmapping="ejbrdbmapping.xmi" xmi:id="EjbRdbDocumentRoot_1035204637295" topToBottom="true" commandStack="">
+  <helper xmi:type="ejbrdbmapping:RdbSchemaProperies" xmi:id="RdbSchemaProperies_1035204637295" primitivesDocument="ORACLE_V8">
+    <vendorConfiguration href="RdbVendorConfigurations.xmi#ORACLE_V8_Config"/>
+  </helper>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207618673">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207618683">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ARDAIS_STAFF.tblxmi#RDBTable_1035204456085"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618683">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Ardaisstaff_ardais_staff_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ARDAIS_STAFF.tblxmi#RDBColumn_1035204456095"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618684">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Ardaisstaff_ardais_staff_lname"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ARDAIS_STAFF.tblxmi#RDBColumn_1035204456097"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618685">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Ardaisstaff_ardais_staff_fname"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ARDAIS_STAFF.tblxmi#RDBColumn_1035204456098"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618686">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Ardaisstaff_ardais_acct_key"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ARDAIS_STAFF.tblxmi#RDBColumn_1035204456099"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618687">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Ardaisstaff_ardais_user_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ARDAIS_STAFF.tblxmi#RDBColumn_1035204456100"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Ardaisstaff_geolocation---ILTDS_ARDAIS_STAFF_FK_GEO_LOC_ARDAIS_STAFF">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035207618693"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#Ardaisstaff_geolocation"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#Geolocation_ardaisstaff"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ARDAIS_STAFF.tblxmi#RDBReferenceByKey_1035204455344"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Ardaisstaff"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ARDAIS_STAFF.tblxmi#RDBTable_1035204456085"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207618693">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207618693">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM.tblxmi#RDBTable_1035204456125"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618693">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Asm_asm_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM.tblxmi#RDBColumn_1035204456125"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618694">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1034110173015"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM.tblxmi#RDBColumn_1035204456126"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618695">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1034110177752"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM.tblxmi#RDBColumn_1035204456127"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618696">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Asm_organ_site_concept_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM.tblxmi#RDBColumn_1035204456128"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618697">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Asm_specimen_type"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM.tblxmi#RDBColumn_1035204456129"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#String-CHAR(1)"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618703">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Asm_asm_entry_date"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM.tblxmi#RDBColumn_1035204456130"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618704">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1034110264727"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM.tblxmi#RDBColumn_1035204456131"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618705">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Asm_organ_site_concept_id_other"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM.tblxmi#RDBColumn_1035204456132"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1043241686780">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1043241666030"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM.tblxmi#RDBColumn_1043240974887"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1043241686781">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1043241670936"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM.tblxmi#RDBColumn_1043240974888"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Integer-INTEGER"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1043241686782">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1043241676045"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM.tblxmi#RDBColumn_1043240974889"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Asm"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM.tblxmi#RDBTable_1035204456125"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207618703">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207618703">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM_FORM.tblxmi#RDBTable_1035204456105"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618706">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Asmform_asm_form_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM_FORM.tblxmi#RDBColumn_1035204456107"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618707">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Asmform_ardais_staff_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM_FORM.tblxmi#RDBColumn_1035204456108"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618708">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Asmform_surgical_specimen_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM_FORM.tblxmi#RDBColumn_1035204456109"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618709">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Asmform_link_staff_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM_FORM.tblxmi#RDBColumn_1035204456110"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618710">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Asmform_grossing_date"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM_FORM.tblxmi#RDBColumn_1035204456111"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618711">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Asmform_removal_date"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM_FORM.tblxmi#RDBColumn_1035204456112"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618712">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Asmform_creation_time"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM_FORM.tblxmi#RDBColumn_1035204456113"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618713">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Asmform_surgical_specimen_id_other"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM_FORM.tblxmi#RDBColumn_1035204456114"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Asmform_consent---ILTDS_ASM_FORM_FK_INF_CONSENT_ASM_FORM">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035208564544"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#Asmform_consent"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#Consent_asmform"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM_FORM.tblxmi#RDBReferenceByKey_1035204456045"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035209974686">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1035209971171"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM_FORM.tblxmi#RDBColumn_1035204456106"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1040650280528">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1040650252200"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM_FORM.tblxmi#RDBColumn_1040650126972"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1073932397473">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1073932146879"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM_FORM.tblxmi#PROCEDURE_DATE"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Asmform"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_ASM_FORM.tblxmi#RDBTable_1035204456105"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207618713">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207618713">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ILTDS_BOX_LOCATION.tblxmi#RDBTable_1035204456075"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618714">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Boxlocation_room_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_BOX_LOCATION.tblxmi#RDBColumn_1035204456076"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618716">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Boxlocation_drawer_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_BOX_LOCATION.tblxmi#RDBColumn_1035204456078"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618717">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Boxlocation_slot_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_BOX_LOCATION.tblxmi#RDBColumn_1035204456079"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618718">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Boxlocation_available_ind"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_BOX_LOCATION.tblxmi#RDBColumn_1035204456081"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#String-CHAR(1)"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618723">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Boxlocation_location_status"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_BOX_LOCATION.tblxmi#RDBColumn_1035204456082"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Boxlocation_geolocation---ILTDS_BOX_LOCATION_FK_GEO_LOC_BOX_LOC">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035207618723"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#Boxlocation_geolocation"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#Geolocation_boxlocation"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_BOX_LOCATION.tblxmi#RDBReferenceByKey_1035204455344"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Boxlocation_samplebox---ILTDS_BOX_LOCATION_FK_SAMPLE_BOX_BOX_LOC">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035207618724"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#Boxlocation_samplebox"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#Samplebox_boxlocation"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_BOX_LOCATION.tblxmi#RDBReferenceByKey_1035204456065"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1118325111533">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1118262513861"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_BOX_LOCATION.tblxmi#UNIT_NAME"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1118325111534">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1118325101844"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_BOX_LOCATION.tblxmi#STORAGE_TYPE_CID"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Boxlocation"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_BOX_LOCATION.tblxmi#RDBTable_1035204456075"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207618723">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207618723">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBTable_1035204456025"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618725">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_consent_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456025"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618726">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_ardais_staff_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456036"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618727">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_disease_concept_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456037"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618743">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_linked"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456038"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#String-CHAR(1)"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618744">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_form_entry_staff_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456039"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618745">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_form_entry_datetime"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456040"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618746">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_form_signed_ind"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456041"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#String-CHAR(1)"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618748">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_consent_release_staff_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456043"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618750">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_consent_release_datetime"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456045"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618751">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_consent_pull_staff_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456046"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618752">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_consent_pull_request_by"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456047"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618753">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_consent_pull_datetime"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456048"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618754">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_consent_pull_reason_cd"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456049"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618755">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_consent_pull_comment"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456050"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618756">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_form_verified_by_staff_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456051"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618757">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_form_verified_datetime"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456052"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618758">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_form_verified_sign_ind"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456053"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#String-CHAR(1)"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618759">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_consent_version_num"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456054"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618761">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_consent_datetime"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456056"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618762">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_bankable_ind"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456057"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#String-CHAR(1)"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618763">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Consent_disease_concept_id_other"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456059"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Consent_geolocation---ILTDS_INFORMED_CONSENT_FK_GEO_LOC_INF_CONSENT">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035207618753"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#Consent_geolocation"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#Geolocation_consent"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBReferenceByKey_1035204455344"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035212963181">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1035212960628"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBColumn_1035204456026"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1071168118029">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1071166828342"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#POLICY_ID"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#BigDecimal-NUMBER"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1071168118030">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1071166833436"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#CONSENT_VERSION_ID"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#BigDecimal-NUMBER"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1081353303233">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1081353260999"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#COMMENTS"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1081353303234">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1081353267827"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#BLOOD_SAMPLE_YN"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1081353303235">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1081353277467"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#ADDITIONAL_NEEDLE_STICK_YN"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1081353303236">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1081353282686"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#FUTURE_CONTACT_YN"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1104338886184">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1104338843856"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#IMPORTED_YN"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1104338886185">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1104338866121"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#CUSTOMER_ID"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1104338886186">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1104338875637"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#ARDAIS_ACCT_KEY"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1119275476172">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1119275461859"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#PSA"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#BigDecimal-NUMBER"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1119275476173">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1119275466640"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#DRE_CID"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1119275476174">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1119275471234"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#CLINICAL_FINDING_NOTES"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1182189687728">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1182189599838"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#CASE_REGISTRATION_FORM"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Consent"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_INFORMED_CONSENT.tblxmi#RDBTable_1035204456025"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207618763">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207618763">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ILTDS_GEOGRAPHY_LOCATION.tblxmi#RDBTable_1035204455344"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618769">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Geolocation_location_address_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_GEOGRAPHY_LOCATION.tblxmi#RDBColumn_1035204455344"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618770">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Geolocation_location_name"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_GEOGRAPHY_LOCATION.tblxmi#RDBColumn_1035204455345"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618771">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Geolocation_location_address_1"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_GEOGRAPHY_LOCATION.tblxmi#RDBColumn_1035204455346"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618772">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Geolocation_location_address_2"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_GEOGRAPHY_LOCATION.tblxmi#RDBColumn_1035204455347"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618773">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Geolocation_location_city"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_GEOGRAPHY_LOCATION.tblxmi#RDBColumn_1035204455348"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618774">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Geolocation_location_state"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_GEOGRAPHY_LOCATION.tblxmi#RDBColumn_1035204455349"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618775">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Geolocation_location_zip"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_GEOGRAPHY_LOCATION.tblxmi#RDBColumn_1035204455350"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618777">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Geolocation_location_phone"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_GEOGRAPHY_LOCATION.tblxmi#RDBColumn_1035204455352"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1165868051611">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1165868021533"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_GEOGRAPHY_LOCATION.tblxmi#LOCATION_COUNTRY"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Geolocation"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_GEOGRAPHY_LOCATION.tblxmi#RDBTable_1035204455344"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207618764">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207618764">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ILTDS_MANIFEST.tblxmi#RDBTable_1035204455364"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618778">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Manifest_manifest_number"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_MANIFEST.tblxmi#RDBColumn_1035204455364"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618779">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Manifest_airbill_tracking_number"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_MANIFEST.tblxmi#RDBColumn_1035204455367"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618780">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Manifest_ship_datetime"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_MANIFEST.tblxmi#RDBColumn_1035204455368"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618781">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Manifest_ship_staff_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_MANIFEST.tblxmi#RDBColumn_1035204455369"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618782">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Manifest_shipment_status"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_MANIFEST.tblxmi#RDBColumn_1035204455370"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618783">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Manifest_mnft_create_staff_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_MANIFEST.tblxmi#RDBColumn_1035204455371"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618784">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Manifest_mnft_create_datetime"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_MANIFEST.tblxmi#RDBColumn_1035204455372"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618785">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Manifest_ship_verify_staff_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_MANIFEST.tblxmi#RDBColumn_1035204455373"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618786">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Manifest_ship_verify_datetime"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_MANIFEST.tblxmi#RDBColumn_1035204455374"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618787">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Manifest_receipt_by_staff_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_MANIFEST.tblxmi#RDBColumn_1035204455375"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618788">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Manifest_receipt_datetime"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_MANIFEST.tblxmi#RDBColumn_1035204455376"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618789">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Manifest_receipt_verify_staff_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_MANIFEST.tblxmi#RDBColumn_1035204455377"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618790">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Manifest_receipt_verify_datetime"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_MANIFEST.tblxmi#RDBColumn_1035204455378"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Manifest"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_MANIFEST.tblxmi#RDBTable_1035204455364"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207618773">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207618773">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ILTDS_REVOKED_CONSENT_ARCHIVE.tblxmi#RDBTable_1035204455995"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618791">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Revokedconsent_consent_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_REVOKED_CONSENT_ARCHIVE.tblxmi#RDBColumn_1035204455995"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618792">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Revokedconsent_ardais_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_REVOKED_CONSENT_ARCHIVE.tblxmi#RDBColumn_1035204455996"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618793">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Revokedconsent_revoked_by_staff_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_REVOKED_CONSENT_ARCHIVE.tblxmi#RDBColumn_1035204455997"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618794">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Revokedconsent_revoked_timestamp"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_REVOKED_CONSENT_ARCHIVE.tblxmi#RDBColumn_1035204455998"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618795">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Revokedconsent_revoked_reason"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_REVOKED_CONSENT_ARCHIVE.tblxmi#RDBColumn_1035204455999"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Revokedconsent"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_REVOKED_CONSENT_ARCHIVE.tblxmi#RDBTable_1035204455995"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207618783">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207618783">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBTable_1035204456145"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618796">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Sample_sample_barcode_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1035204456145"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618797">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Sample_cell_ref_location"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1035204456149"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618800">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Sample_asm_note"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1035204456156"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618801">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Sample_type_of_fixative"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1035204456157"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618802">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Sample_allocation_ind"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1035204456158"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#String-CHAR(1)"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618803">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Sample_barcode_scan_datetime"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1035204456159"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618804">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Sample_orphan_datetime"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1035204456160"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618807">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Sample_asm_position"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1035204456163"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618808">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Sample_ardais_acct_key"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1035204456164"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618809">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Sample_born_date"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1035204456176"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618810">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Sample_subdivision_date"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1035204456177"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618811">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Sample_parent_barcode_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1035204456178"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Sample_samplebox---ILTDS_SAMPLE_FK_SAMPLE_BOX_SAMPLE">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035207618803"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#Sample_samplebox"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#Samplebox_sample"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBReferenceByKey_1035204456065"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Sample_asm---ILTDS_SAMPLE_FK_ILTDS_ASM_ILTDS_SAMPLE">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035207618804"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#Sample_asm"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#Asm_sample"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBReferenceByKey_1035204456125"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1037732965902">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1037732846210"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1035204456181"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1037732965903">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1037732857917"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1035204456179"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1037732965904">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1037732869704"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1035204456182"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1037732965905">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1037732878687"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1035204456180"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1037733396420">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1037733388819"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1037733053508"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1042476459233">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1042476422061"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1042476025468"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1042569968617">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1042569871039"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1042553797923"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1042569968618">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1042569901507"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1042553797924"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1042570261539">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1042570237086"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1042570157023"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1042570261540">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1042570247367"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1042570157024"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1042570261541">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1042570254664"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1042570157025"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1043245692329">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1043245673547"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1043245385219"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1044645559109">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1044644905516"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1042553797925"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1044645559110">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1044644921141"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1042553797926"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1044645559111">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1044644938172"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1042553797927"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1044645559112">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1044644945578"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1042553797928"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1044645559113">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1044644954859"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1042553797929"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1044645559114">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1044644969844"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1042553797930"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1044646893000">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1044646888938"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1044642965391"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1050010320785">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1050010276707"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1050008355645"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1050010320786">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1050010293598"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1050008355646"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1079714355889">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1079708643402"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBColumn_1035204456175"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1080064809126">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1080064803969"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#LAST_KNOWN_LOCATION_ID"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1106598209479">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1106598179198"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#IMPORTED_YN"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1106598209480">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1106598191901"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#CUSTOMER_ID"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1117144339768">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1117144334612"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#SAMPLE_TYPE_CID"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1117722301041">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1117722273619"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#COLLECTION_DATE"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1117722301042">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1117722279698"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#PRESERVATION_DATE"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1117722301043">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1117722284698"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#VOLUME"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Integer-INTEGER"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1118427284676">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1118427261645"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#COLLECTION_DATETIME_DPC"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1118427284677">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1118427267754"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#PRESERVATION_DATETIME_DPC"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1127417336511">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1127417299011"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#BUFFER_TYPE_CUI"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1127417336512">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1127417309651"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#BUFFER_TYPE_OTHER"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1127417336513">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1127417315104"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#TOTAL_NUM_OF_CELLS"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#BigDecimal-NUMBER"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1127417336514">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1127417319464"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#TOTAL_NUM_OF_CELLS_EX_REP_CUI"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1127417336515">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1127417323183"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#CELLS_PER_ML"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#BigDecimal-NUMBER"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1127929740306">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1127929736274"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#PERCENT_VIABILITY"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Integer-INTEGER"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1143731162831">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1143731152425"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#SOURCE"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1150206091748">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1150206062482"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#CONCENTRATION"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#BigDecimal-NUMBER"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1150206091749">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1150206068951"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#YIELD"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#BigDecimal-NUMBER"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1181067755503">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1181067623079"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#VOLUME_UNIT_CUI"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1181174119578">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1181174051001"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#VOLUME_UL"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#BigDecimal-NUMBER"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1181174119579">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1181174058110"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#WEIGHT"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#BigDecimal-NUMBER"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1181174119580">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1181174062594"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#WEIGHT_MG"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#BigDecimal-NUMBER"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1181182933491">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1181174068688"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#WEIGHT_UNIT_CUI"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1182189687744">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1182189641557"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#SAMPLE_REGISTRATION_FORM"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Sample"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE.tblxmi#RDBTable_1035204456145"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207618813">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207618813">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE_BOX.tblxmi#RDBTable_1035204456055"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618813">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Samplebox_box_barcode_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE_BOX.tblxmi#RDBColumn_1035204456055"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618815">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Samplebox_box_check_in_date"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE_BOX.tblxmi#RDBColumn_1035204456058"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618816">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Samplebox_box_check_out_date"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE_BOX.tblxmi#RDBColumn_1035204456059"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618817">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Samplebox_box_check_out_reason"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE_BOX.tblxmi#RDBColumn_1035204456060"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618818">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Samplebox_box_checkout_request_staff_id"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE_BOX.tblxmi#RDBColumn_1035204456065"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618819">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Samplebox_box_status"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE_BOX.tblxmi#RDBColumn_1035204456066"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618820">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Samplebox_box_note"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE_BOX.tblxmi#RDBColumn_1035204456067"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Samplebox_manifest---ILTDS_SAMPLE_BOX_FK_MANIFEST_SAMPLE_BOX">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035207618813"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#Samplebox_manifest"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#Manifest_samplebox"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE_BOX.tblxmi#RDBReferenceByKey_1035204455374"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035217185801">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1035217180923"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE_BOX.tblxmi#RDBColumn_1035204456068"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1104782986164">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1104782966992"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE_BOX.tblxmi#BOX_LAYOUT_ID"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1118342482152">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1118342478511"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE_BOX.tblxmi#STORAGE_TYPE_CID"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Samplebox"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE_BOX.tblxmi#RDBTable_1035204456055"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207618823">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207618823">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE_STATUS.tblxmi#RDBTable_1035204455684"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618827">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Samplestatus_status_type_code"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE_STATUS.tblxmi#RDBColumn_1035204455685"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618828">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#Samplestatus_sample_status_datetime"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE_STATUS.tblxmi#RDBColumn_1035204455686"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Samplestatus_sample---ILTDS_SAMPLE_STATUS_FK_SAMPLE_SAMPLE_STATUS">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035207618824"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#Samplestatus_sample"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#Sample_samplestatus"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE_STATUS.tblxmi#RDBReferenceByKey_1035204455694"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035217282109">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1035217278584"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE_STATUS.tblxmi#RDBColumn_1035204455687"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Samplestatus"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ILTDS_SAMPLE_STATUS.tblxmi#RDBTable_1035204455684"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207618833">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207618833">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#RDBTable_1035204455243"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618837">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745180571"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#RDBColumn_1035204455243"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618840">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745180652"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#RDBColumn_1035204455246"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618841">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745180511"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#RDBColumn_1035204455247"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#String-CHAR(1)"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618843">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745180802"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#RDBColumn_1035204455248"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618844">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745180732"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#RDBColumn_1035204455249"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618845">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745180672"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#RDBColumn_1035204455250"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618846">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745180782"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#RDBColumn_1035204455251"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618847">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745178078"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#RDBColumn_1035204455252"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618848">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745180031"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#RDBColumn_1035204455253"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618849">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745179600"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#RDBColumn_1035204455254"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618850">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745180591"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#RDBColumn_1035204455255"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1078180136035">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1078180130316"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#REQUEST_MGR_EMAIL_ADDRESS"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1092078163238">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1092078147434"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#LINKED_CASES_ONLY_YN"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1095365860753">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1095365794003"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#PASSWORD_POLICY_CID"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1095365860754" optimistic="true">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1095365856347"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#PASSWORD_LIFE_SPAN"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#int-INTEGER"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1103142392711">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1103142363492"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#DEFAULT_BOX_LAYOUT_ID"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1123795100858">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1123795097124"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#RDBColumn_1035204455257"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1182188015566">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1182187819552"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#DONOR_REGISTRATION_FORM"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744215993"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ACCOUNT.tblxmi#RDBTable_1035204455243"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207618863">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207618883">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBTable_1035204456505"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618883">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182154"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456505"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618884">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182214"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456507"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618885">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182024"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456508"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618886">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745181703"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456509"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618893">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745181983"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456516"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618894">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182314"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456517"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618895">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182274"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456518"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618896">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745181923"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456519"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618897">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182354"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456520"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618898">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182194"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456521"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618899">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182114"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456522"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618900">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182174"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456523"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618901">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182254"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456524"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618902">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182004"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456525"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618904">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182234"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456527"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618905">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745181723"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456528"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618906">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182374"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456529"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618907">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182294"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456530"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618909">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745181953"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456532"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618910">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745181753"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456533"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#String-CHAR(1)"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Ardaisuser_ardaisaccount---ES_ARDAIS_USER_FK_ARDAIS_ACCT_ARDAIS_USER">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035207618903"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1034963170517"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1034963170497"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBReferenceByKey_1035204455253"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1095365764706">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1095365753222"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#PASSWORD_POLICY_CID"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1095365764707">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1095365759816"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#PASSWORD_LAST_CHANGE_DATE"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1155910287605">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1155910282136"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#USER_DEPARTMENT"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1157746460030">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1157746440468"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBColumn_1035204456534"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Integer-NUMBER"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1157746460031">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1157746450030"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#CONSECUTIVE_FAILED_ANSWERS"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Integer-NUMBER"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216043"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_USER.tblxmi#RDBTable_1035204456505"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207618903">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207618903">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER.tblxmi#RDBTable_1035204456535"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618911">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182414"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER.tblxmi#RDBColumn_1035204456535"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618912">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182624"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER.tblxmi#RDBColumn_1035204456538"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618914">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182825"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER.tblxmi#RDBColumn_1035204456539"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618915">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183055"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER.tblxmi#RDBColumn_1035204456540"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618916">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183025"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER.tblxmi#RDBColumn_1035204456541"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618917">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182715"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER.tblxmi#RDBColumn_1035204456543"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618918">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182394"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER.tblxmi#RDBColumn_1035204456544"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618924">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745182494"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER.tblxmi#RDBColumn_1035204456546"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Ardaisorder_ardaisuser---ES_ARDAIS_ORDER_FK_ARD_USER_ARD_ORDER">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035207618924"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1033744217235"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1033744217035"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER.tblxmi#RDBReferenceByKey_1035204456525"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035227961149">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1035227957755"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER.tblxmi#RDBColumn_1035204456545"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216073"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER.tblxmi#RDBTable_1035204456535"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207618924">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207618924">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ES_ORDER_LINE.tblxmi#RDBTable_1035204455534"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618925">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183085"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ORDER_LINE.tblxmi#RDBColumn_1035204455544"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618926">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183115"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ORDER_LINE.tblxmi#RDBColumn_1035204455546"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618927">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183065"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ORDER_LINE.tblxmi#RDBColumn_1035204455547"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618928">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183105"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ORDER_LINE.tblxmi#RDBColumn_1035204455548"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#String-CHAR(1)"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Orderline_ardaisorder---ES_ORDER_LINE_FK_ARD_ORDER_ORDER_LINE">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035207618934"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1033744217465"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1033744217425"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_ES_ORDER_LINE.tblxmi#RDBReferenceByKey_1035204455544"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216093"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ES_ORDER_LINE.tblxmi#RDBTable_1035204455534"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207618934">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207618934">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER_STATUS.tblxmi#RDBTable_1035204455584"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618934">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183285"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER_STATUS.tblxmi#RDBColumn_1035204455584"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618935">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183345"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER_STATUS.tblxmi#RDBColumn_1035204455585"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618936">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183265"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER_STATUS.tblxmi#RDBColumn_1035204455586"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618937">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183315"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER_STATUS.tblxmi#RDBColumn_1035204455588"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618938">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183295"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER_STATUS.tblxmi#RDBColumn_1035204455589"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Ardaisorderstatus_ardaisorder---ES_ARDAIS_ORDER_STATUS_FK_ARD_ORDER_ORDER_STATUS">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035207618935"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1033744217595"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1033744217426"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER_STATUS.tblxmi#RDBReferenceByKey_1035204455584"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216103"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ES_ARDAIS_ORDER_STATUS.tblxmi#RDBTable_1035204455584"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207618944">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207618944">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ARDAIS_ADDRESS.tblxmi#RDBTable_1035204455223"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618944">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183516"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARDAIS_ADDRESS.tblxmi#RDBColumn_1035204455223"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618945">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183496"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARDAIS_ADDRESS.tblxmi#RDBColumn_1035204455224"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618946">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183576"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARDAIS_ADDRESS.tblxmi#RDBColumn_1035204455225"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618947">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183556"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARDAIS_ADDRESS.tblxmi#RDBColumn_1035204455226"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618948">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183526"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARDAIS_ADDRESS.tblxmi#RDBColumn_1035204455227"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618949">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183596"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARDAIS_ADDRESS.tblxmi#RDBColumn_1035204455228"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618950">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183606"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARDAIS_ADDRESS.tblxmi#RDBColumn_1035204455229"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618951">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183586"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARDAIS_ADDRESS.tblxmi#RDBColumn_1035204455230"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618952">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745183566"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARDAIS_ADDRESS.tblxmi#RDBColumn_1035204455231"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033744216173"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ARDAIS_ADDRESS.tblxmi#RDBTable_1035204455223"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207618964">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207618964">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ARD_OBJECTS.tblxmi#RDBTable_1035204455464"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618974">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745699736"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARD_OBJECTS.tblxmi#RDBColumn_1035204455464"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618975">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745699716"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARD_OBJECTS.tblxmi#RDBColumn_1035204455465"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618976">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745699446"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARD_OBJECTS.tblxmi#RDBColumn_1035204455466"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618977">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745699356"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARD_OBJECTS.tblxmi#RDBColumn_1035204455467"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618978">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745699796"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARD_OBJECTS.tblxmi#RDBColumn_1035204455468"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618979">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745699466"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARD_OBJECTS.tblxmi#RDBColumn_1035204455469"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618980">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745699756"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARD_OBJECTS.tblxmi#RDBColumn_1035204455470"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618981">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745699776"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARD_OBJECTS.tblxmi#RDBColumn_1035204455471"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033745432091"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ARD_OBJECTS.tblxmi#RDBTable_1035204455464"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207618974">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207618974">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ARD_USER_ACCESS_MODULE.tblxmi#RDBTable_1035204455604"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618982">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745699876"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARD_USER_ACCESS_MODULE.tblxmi#RDBColumn_1035204455604"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618983">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745699936"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARD_USER_ACCESS_MODULE.tblxmi#RDBColumn_1035204455605"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618984">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745699816"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARD_USER_ACCESS_MODULE.tblxmi#RDBColumn_1035204455607"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618985">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745699967"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARD_USER_ACCESS_MODULE.tblxmi#RDBColumn_1035204455608"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618986">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745699836"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARD_USER_ACCESS_MODULE.tblxmi#RDBColumn_1035204455609"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618987">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745699896"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARD_USER_ACCESS_MODULE.tblxmi#RDBColumn_1035204455610"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618988">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745699856"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARD_USER_ACCESS_MODULE.tblxmi#RDBColumn_1035204455611"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618989">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745699987"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARD_USER_ACCESS_MODULE.tblxmi#RDBColumn_1035204455612"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618990">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745699916"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARD_USER_ACCESS_MODULE.tblxmi#RDBColumn_1035204455613"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207618991">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033745699947"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ARD_USER_ACCESS_MODULE.tblxmi#RDBColumn_1035204455614"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Useraccessmodule_objects---ARD_USER_ACCESS_MODULE_FK_ARD_OBJS_USER_ACCESS_MODULE">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035207618984"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1033745432812"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1033745432802"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_ARD_USER_ACCESS_MODULE.tblxmi#RDBReferenceByKey_1035204455464"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033745432111"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ARD_USER_ACCESS_MODULE.tblxmi#RDBTable_1035204455604"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207619105">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207619105">
+      <table href="META-INF/Schema/ARDAIS_BIGR_PTS_LINEITEM.tblxmi#RDBTable_1035204456185"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619119">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749531711"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_LINEITEM.tblxmi#RDBColumn_1035204456195"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619120">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749531661"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_LINEITEM.tblxmi#RDBColumn_1035204456197"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619121">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749531681"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_LINEITEM.tblxmi#RDBColumn_1035204456198"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619122">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749531731"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_LINEITEM.tblxmi#RDBColumn_1035204456199"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619123">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749531771"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_LINEITEM.tblxmi#RDBColumn_1035204456200"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619124">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749531751"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_LINEITEM.tblxmi#RDBColumn_1035204456201"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Lineitem_project---PTS_LINEITEM_FK_PTS_LINEITEM_PROJECT">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035207619114"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1033749430461"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1033749430492"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_PTS_LINEITEM.tblxmi#RDBReferenceByKey_1035204456195"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033749429930"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_PTS_LINEITEM.tblxmi#RDBTable_1035204456185"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207619114">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207619114">
+      <table href="META-INF/Schema/ARDAIS_BIGR_PTS_PROJECT.tblxmi#RDBTable_1035204456205"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619125">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749531911"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_PROJECT.tblxmi#RDBColumn_1035204456205"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619126">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749531831"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_PROJECT.tblxmi#RDBColumn_1035204456206"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619127">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749531791"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_PROJECT.tblxmi#RDBColumn_1035204456209"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619128">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749531811"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_PROJECT.tblxmi#RDBColumn_1035204456210"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619129">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749531881"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_PROJECT.tblxmi#RDBColumn_1035204456211"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619130">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749531861"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_PROJECT.tblxmi#RDBColumn_1035204456212"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619131">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749531891"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_PROJECT.tblxmi#RDBColumn_1035204456213"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619132">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749531851"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_PROJECT.tblxmi#RDBColumn_1035204456214"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619133">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749497512"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_PROJECT.tblxmi#RDBColumn_1035204456208"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619134">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749500916"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_PROJECT.tblxmi#RDBColumn_1035204456207"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033749429890"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_PTS_PROJECT.tblxmi#RDBTable_1035204456205"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207619115">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207619115">
+      <table href="META-INF/Schema/ARDAIS_BIGR_PTS_WORKORDER.tblxmi#RDBTable_1035204455664"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619135">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749531921"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_WORKORDER.tblxmi#RDBColumn_1035204455665"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619136">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749532091"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_WORKORDER.tblxmi#RDBColumn_1035204455666"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619137">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749531981"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_WORKORDER.tblxmi#RDBColumn_1035204455667"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619138">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749531961"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_WORKORDER.tblxmi#RDBColumn_1035204455668"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619139">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749531991"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_WORKORDER.tblxmi#RDBColumn_1035204455669"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619140">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749532021"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_WORKORDER.tblxmi#RDBColumn_1035204455670"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619141">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749532081"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_WORKORDER.tblxmi#RDBColumn_1035204455671"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619142">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749532041"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_WORKORDER.tblxmi#RDBColumn_1035204455672"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619143">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749532011"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_WORKORDER.tblxmi#RDBColumn_1035204455673"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619144">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749532061"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_WORKORDER.tblxmi#RDBColumn_1035204455674"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Workorder_project---PTS_WORKORDER_FK_PTS_WORKORDER_PROJECT">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035207619124"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1033749430501"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1033749430491"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_PTS_WORKORDER.tblxmi#RDBReferenceByKey_1035204455664"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033749429910"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_PTS_WORKORDER.tblxmi#RDBTable_1035204455664"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207619124">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207619124">
+      <table href="META-INF/Schema/ARDAIS_BIGR_PTS_SAMPLE.tblxmi#RDBTable_1035204456175"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619145">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1033749528416"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_PTS_SAMPLE.tblxmi#RDBColumn_1035204456177"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Projectsample_lineitem---PTS_SAMPLE_FK_PTS_SAMPLE_LINEITEM">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035207619125"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1033749430521"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1033749430481"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_PTS_SAMPLE.tblxmi#RDBReferenceByKey_1035204456175"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Projectsample_project---PTS_SAMPLE_FK_PTS_SAMPLE_PROJECT">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035207619126"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1033749430541"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1033749430493"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_PTS_SAMPLE.tblxmi#RDBReferenceByKey_1035204456176"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ContainerManagedEntity_1033749429950"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_PTS_SAMPLE.tblxmi#RDBTable_1035204456175"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207619154">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207619154">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ES_SHOPPING_CART_DETAIL.tblxmi#RDBTable_1035204455554"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619154">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1034087749316"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_SHOPPING_CART_DETAIL.tblxmi#RDBColumn_1035204455554"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619155">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1034088215857"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_SHOPPING_CART_DETAIL.tblxmi#RDBColumn_1035204455558"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619156">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1034088215877"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_SHOPPING_CART_DETAIL.tblxmi#RDBColumn_1035204455559"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619158">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1034166451073"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_SHOPPING_CART_DETAIL.tblxmi#RDBColumn_1035204455561"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619159">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1034088215897"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_SHOPPING_CART_DETAIL.tblxmi#RDBColumn_1035204455562"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Shoppingcartdetail_shoppingcart---ES_SHOPPING_CART_DETAIL_FK_SHOP_CART_CART_DETAIL">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035207619154"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1034369342198"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1034369342288"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_ES_SHOPPING_CART_DETAIL.tblxmi#RDBReferenceByKey_1035204455564"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1052426522320">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1052426514117"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_SHOPPING_CART_DETAIL.tblxmi#RDBColumn_1052426428352"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Integer-INTEGER"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1052426522321">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1052426519289"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_SHOPPING_CART_DETAIL.tblxmi#RDBColumn_1052426428353"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Shoppingcartdetail"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ES_SHOPPING_CART_DETAIL.tblxmi#RDBTable_1035204455554"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1035207619155">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1035207619155">
+      <table href="META-INF/Schema/ARDAIS_BIGR_ES_SHOPPING_CART.tblxmi#RDBTable_1035204455574"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619160">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1034369426770"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_SHOPPING_CART.tblxmi#RDBColumn_1035204455574"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619161">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1034369426790"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_SHOPPING_CART.tblxmi#RDBColumn_1035204455577"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1035207619164">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1034369403526"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_ES_SHOPPING_CART.tblxmi#RDBColumn_1035204455578"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="Shoppingcart_ardaisuser---ES_SHOPPING_CART_FK_ARD_USER_SHOPPING_CART">
+      <helper xmi:type="ejbrdbmapping:ForwardFlattenedFKComposer" xmi:id="ForwardFlattenedFKComposer_1035207619164"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1034369342248"/>
+      <inputs xmi:type="ejbext:EjbRelationshipRole" href="META-INF/ibm-ejb-jar-ext.xmi#EjbRelationshipRole_1034369342078"/>
+      <outputs xmi:type="RDBSchema:RDBReferenceByKey" href="META-INF/Schema/ARDAIS_BIGR_ES_SHOPPING_CART.tblxmi#RDBReferenceByKey_1035204455574"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Shoppingcart"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_ES_SHOPPING_CART.tblxmi#RDBTable_1035204455574"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1037135214252">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1037135214252">
+      <table href="META-INF/Schema/ARDAIS_BIGR_LIMS_SLIDE.tblxmi#RDBTable_1037051202660"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1037135214252">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1037135081551"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_LIMS_SLIDE.tblxmi#RDBColumn_1037051214938"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1037135214253" optimistic="true">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1037135105646"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_LIMS_SLIDE.tblxmi#RDBColumn_1037051214949"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#int-INTEGER"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1037135214254">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1037135121609"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_LIMS_SLIDE.tblxmi#RDBColumn_1037051214939"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1037135214255">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1037135152894"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_LIMS_SLIDE.tblxmi#RDBColumn_1037051214948"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1037135214256" optimistic="true">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1037135161006"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_LIMS_SLIDE.tblxmi#RDBColumn_1037051214950"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#int-INTEGER"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1037135214257">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1037135171250"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_LIMS_SLIDE.tblxmi#RDBColumn_1037051214951"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1037135214258">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1037135178531"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_LIMS_SLIDE.tblxmi#RDBColumn_1037051214952"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1037135214259">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1037135185491"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_LIMS_SLIDE.tblxmi#RDBColumn_1037051214953"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1037135214260">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1037135204568"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_BIGR_LIMS_SLIDE.tblxmi#RDBColumn_1037051214958"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Slide"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_BIGR_LIMS_SLIDE.tblxmi#RDBTable_1037051202660"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1038938900965">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1038938900965">
+      <table href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBTable_1038937847359"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900965">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938616496"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848687"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900966">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938621481"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848688"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900967">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938641793"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848689"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900968">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938645028"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848690"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900969">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938654012"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848691"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900970">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938660903"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848692"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900971" optimistic="true">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938709668"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848693"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900972" optimistic="true">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938716700"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848694"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900973" optimistic="true">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938720028"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848695"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900974" optimistic="true">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938782137"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848696"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900975" optimistic="true">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938789028"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848697"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900976">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938793559"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848698"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900977">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938796746"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848703"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900978">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938800137"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848704"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900979">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938804871"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848705"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900981">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938809700"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848706"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900982">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938815340"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848707"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900983">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938819981"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848708"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900984">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938827106"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848709"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900985">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938831168"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848710"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900986">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938839153"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848711"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900987">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938842731"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848712"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900988">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938848918"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848713"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1038938900989" optimistic="true">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1038938852153"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1038937848714"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1043178592062">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1043178585812"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBColumn_1043175819654"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#PathologyEvaluation"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_USN_LIMS_PATHOLOGY_EVALUATION.tblxmi#RDBTable_1038937847359"/>
+  </nested>
+  <nested xmi:type="ejbrdbmapping:RDBEjbMapper" xmi:id="RDBEjbMapper_1055431510281">
+    <helper xmi:type="ejbrdbmapping:PrimaryTableStrategy" xmi:id="PrimaryTableStrategy_1055431510281">
+      <table href="META-INF/Schema/ARDAIS_USN_LIMS_INCIDENTS.tblxmi#RDBTable_1055354850939"/>
+    </helper>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1055431510281">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1055431453985"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_INCIDENTS.tblxmi#RDBColumn_1055354851126"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1055431510282">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1055431461969"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_INCIDENTS.tblxmi#RDBColumn_1055354851127"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1055431510283">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1055431465563"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_INCIDENTS.tblxmi#RDBColumn_1055354851142"/>
+      <typeMapping href="JavatoORACLE_V8TypeMaps.xmi#Timestamp-TIMESTAMP"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1055431510284">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1055431469297"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_INCIDENTS.tblxmi#RDBColumn_1055354851143"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1055431510285">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1055431474422"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_INCIDENTS.tblxmi#RDBColumn_1055354851144"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1055431510286">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1055431482766"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_INCIDENTS.tblxmi#RDBColumn_1055354851145"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1055431510287">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1055431486172"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_INCIDENTS.tblxmi#RDBColumn_1055354851146"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1055431510296">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1055431489578"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_INCIDENTS.tblxmi#RDBColumn_1055354851147"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1055431510297">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1055431493265"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_INCIDENTS.tblxmi#RDBColumn_1055354851148"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1055431510298">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1055431499000"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_INCIDENTS.tblxmi#RDBColumn_1055354851149"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1055431510299">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1055431503281"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_INCIDENTS.tblxmi#RDBColumn_1055354851150"/>
+    </nested>
+    <nested xmi:type="ejbrdbmapping:RDBEjbFieldMapper" xmi:id="RDBEjbFieldMapper_1055431510300">
+      <inputs xmi:type="ejb:CMPAttribute" href="META-INF/ejb-jar.xml#CMPAttribute_1055431507390"/>
+      <outputs xmi:type="RDBSchema:RDBColumn" href="META-INF/Schema/ARDAIS_USN_LIMS_INCIDENTS.tblxmi#RDBColumn_1055354851151"/>
+    </nested>
+    <inputs xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Incident"/>
+    <outputs xmi:type="RDBSchema:RDBTable" href="META-INF/Schema/ARDAIS_USN_LIMS_INCIDENTS.tblxmi#RDBTable_1055354850939"/>
+  </nested>
+  <inputs xmi:type="ejb:EJBJar" href="META-INF/ejb-jar.xml#ejb-jar_ID"/>
+  <outputs xmi:type="RDBSchema:RDBDatabase" href="META-INF/Schema/ARDAIS.dbxmi#RDBDatabase_1035204447382"/>
+  <typeMapping xmi:type="Mapping:MappingRoot" href="JavatoORACLE_V8TypeMaps.xmi#Java_to_ORACLE_V8_TypeMaps"/>
+  <deploymentOptions xmi:id="WASDeploymentOptions_1189778064496"/>
+</ejbrdbmapping:EjbRdbDocumentRoot>
